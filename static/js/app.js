@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapPaths = document.querySelectorAll('.wijk-map-path');
 
   let activeTheme = 'all';
+  let activeWijk = 'all';
   let searchQuery = '';
   let detectedWijk = '';
 
@@ -63,14 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let visibleCount = 0;
     cards.forEach(card => {
       const cardTheme = card.dataset.theme || '';
+      const cardWijk = card.dataset.wijk || '';
       const titleText = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
       const summaryText = card.querySelector('.card-summary')?.textContent.toLowerCase() || '';
       const tagsText = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent.toLowerCase()).join(' ');
 
       const matchesTheme = (activeTheme === 'all' || cardTheme.includes(activeTheme) || tagsText.includes(activeTheme));
-      const matchesSearch = !searchQuery || titleText.includes(searchQuery) || summaryText.includes(searchQuery) || tagsText.includes(searchQuery) || (detectedWijk && tagsText.includes(detectedWijk.toLowerCase()));
+      
+      const targetWijk = activeWijk !== 'all' ? activeWijk.toLowerCase() : (detectedWijk ? detectedWijk.toLowerCase() : '');
+      const matchesWijk = !targetWijk || cardWijk.includes(targetWijk) || tagsText.includes(targetWijk);
 
-      if (matchesTheme && matchesSearch) {
+      const matchesSearch = !searchQuery || titleText.includes(searchQuery) || summaryText.includes(searchQuery) || tagsText.includes(searchQuery);
+
+      if (matchesTheme && matchesWijk && matchesSearch) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
@@ -93,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Filter Chips Event
+  // Theme Filter Chips Event
   filterChips.forEach(chip => {
     chip.addEventListener('click', () => {
       filterChips.forEach(c => c.classList.remove('active'));
@@ -103,18 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Interactive Map Clicks
+  // Neighborhood Filter Clicks
   mapPaths.forEach(path => {
     path.addEventListener('click', () => {
-      const wijkName = path.dataset.wijk;
-      mapPaths.forEach(p => p.classList.remove('selected'));
-      path.classList.add('selected');
-      
-      if (searchInput) {
-        searchInput.value = wijkName;
-        searchQuery = wijkName.toLowerCase();
-        filterCards();
-      }
+      mapPaths.forEach(p => p.classList.remove('active', 'selected'));
+      path.classList.add('active', 'selected');
+      activeWijk = path.dataset.wijk || 'all';
+      filterCards();
     });
   });
 });
