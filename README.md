@@ -1,4 +1,6 @@
-# 🥇 Utrecht Beslist
+<p align="center">
+  <img src="static/img/logo-nl.svg" alt="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal" width="450">
+</p>
 
 > Plain-language summaries (B1 Dutch + English) of official **Gemeente Utrecht** city council documents and decisions.
 > Open source, 0 €/month, 100% static, privacy-first & automated.
