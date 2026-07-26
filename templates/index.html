@@ -79,12 +79,24 @@
         {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
       </p>
 
-      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern (Rendered only if content exists) -->
+      {% set bullet_1 = item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en %}
+      {% set bullet_2 = item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en %}
+      {% set bullet_3 = item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en %}
+
+      {% if bullet_1 or bullet_2 or bullet_3 %}
       <ul class="bullet-list">
-        <li class="bullet-item">{{ item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en }}</li>
-        <li class="bullet-item">{{ item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en }}</li>
-        <li class="bullet-item">{{ item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en }}</li>
+        {% if bullet_1 %}
+          <li class="bullet-item">{{ bullet_1 }}</li>
+        {% endif %}
+        {% if bullet_2 %}
+          <li class="bullet-item">{{ bullet_2 }}</li>
+        {% endif %}
+        {% if bullet_3 %}
+          <li class="bullet-item">{{ bullet_3 }}</li>
+        {% endif %}
       </ul>
+      {% endif %}
 
       <span class="model-badge">🤖 {{ "AI Model:" if lang == "nl" else "AI Model:" }} {{ item.ai_model if item.ai_model else "Degraded Mode (Fallback)" }}</span>
 
