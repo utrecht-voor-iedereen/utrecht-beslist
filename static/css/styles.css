@@ -1,23 +1,25 @@
 /* ==========================================================================
-   Utrecht Beslist — Minimal White Studio Theme (Opción 3)
-   Official Utrecht Flag Identity + Serene Minimalist Palette
+   Utrecht Beslist — Warm Cream & Slate Identity Theme
+   Combines Warm Cream/Grey Tones + Dark Navy Header + Official Utrecht Flag Accent
    ========================================================================== */
 
 :root {
-  /* Official Utrecht Identity Color Accent */
-  --utrecht-rood: #CC0000;           /* Utrecht Flag Red (Precision Accent & Flag Emblem) */
-  --utrecht-blanco: #FFFFFF;         /* Main Page Background */
-  --utrecht-negro: #0F172A;          /* Deep Mineral Slate Primary Text */
-  --utrecht-gris-secundario: #64748B;/* Subtitles, Metadata, Dates */
-  --utrecht-gris-superficie: #F8FAFC;/* Section backgrounds & box fills */
-  --utrecht-borde-suave: #E2E8F0;    /* Soft clean borders */
-  --utrecht-borde-medio: #CBD5E1;    /* Input borders */
-  --utrecht-azul-enlace: #1E3A8A;    /* Deep Slate Blue links & primary actions */
+  /* Warm Cream & Surface Grey Palette */
+  --utrecht-rood: #CC0000;           /* Utrecht Flag Red (Precision Accent) */
+  --utrecht-crema-fondo: #F4F3EF;    /* Main Body Warm Cream/Grey Background */
+  --utrecht-blanco-tarjeta: #FFFFFF; /* Clean White for Cards & Controls */
+  --utrecht-superficie: #EAE7E0;     /* Soft Warm Grey/Cream Fills & Filters */
+  --utrecht-negro: #1A1D20;          /* Deep Body Text */
+  --utrecht-azul-oscuro: #162436;    /* Dark Navy/Slate Header & Footer */
+  --utrecht-gris-secundario: #5A6578;/* Subtitles, Metadata, Dates */
+  --utrecht-borde-suave: #E2DFD7;    /* Warm Soft Borders */
+  --utrecht-borde-medio: #C8C4B7;    /* Input Borders */
+  --utrecht-azul-enlace: #1E3A8A;    /* Deep Blue Links & Primary Actions */
   --utrecht-foco: #2563EB;          /* Keyboard focus ring */
 
   /* Status Colors */
-  --utrecht-verde-exito: #16A34A;
-  --utrecht-naranja-aviso: #EA580C;
+  --utrecht-verde-exito: #15803D;
+  --utrecht-naranja-aviso: #C2410C;
 
   /* Typography */
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -27,8 +29,8 @@
   --radius-md: 6px;
   --radius-lg: 8px;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.08);
   --transition: all 0.2s ease-in-out;
 }
 
@@ -40,7 +42,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   color: var(--utrecht-negro);
   line-height: 1.6;
   min-height: 100vh;
@@ -64,26 +66,16 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Header Component (Minimal White Studio with Utrecht Flag Ribbon)
+   Header Component (Dark Navy #162436 + Utrecht Flag Red Accent Stripe)
    -------------------------------------------------------------------------- */
 header {
-  background-color: var(--utrecht-blanco);
-  color: var(--utrecht-negro);
-  border-bottom: 1px solid var(--utrecht-borde-suave);
+  background-color: var(--utrecht-azul-oscuro);
+  color: #FFFFFF;
+  border-bottom: 3px solid var(--utrecht-rood);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
-}
-
-/* Top Accent Stripe: Official Utrecht Flag (White & Red #CC0000 Split Line) */
-header::before {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(90deg, #FFFFFF 50%, var(--utrecht-rood) 50%);
-  border-bottom: 1px solid var(--utrecht-borde-suave);
 }
 
 .header-container {
@@ -101,14 +93,14 @@ header::before {
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
-  color: var(--utrecht-negro);
+  color: #FFFFFF;
 }
 
 .brand-flag-icon {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--utrecht-borde-medio);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   display: flex;
@@ -142,15 +134,15 @@ header::before {
 }
 
 .brand-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  color: var(--utrecht-negro);
+  color: #FFFFFF;
   line-height: 1.2;
 }
 
 .brand-subtitle {
   font-size: 0.78rem;
-  color: var(--utrecht-gris-secundario);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
 }
 
@@ -161,7 +153,7 @@ header::before {
 }
 
 .nav-link {
-  color: var(--utrecht-negro);
+  color: #FFFFFF;
   font-weight: 600;
   font-size: 0.92rem;
   text-decoration: none;
@@ -171,15 +163,15 @@ header::before {
 }
 
 .nav-link:hover {
-  background-color: var(--utrecht-gris-superficie);
-  color: var(--utrecht-rood);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 .lang-switch {
   display: flex;
-  background-color: var(--utrecht-gris-superficie);
-  border: 1px solid var(--utrecht-borde-medio);
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   padding: 2px;
 }
@@ -189,7 +181,7 @@ header::before {
   border-radius: 16px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--utrecht-gris-secundario);
+  color: rgba(255, 255, 255, 0.8);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -202,10 +194,10 @@ header::before {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Banner / PageHeader Component (Minimal White)
+   Hero Banner / PageHeader Component (Warm Cream Surface)
    -------------------------------------------------------------------------- */
 .hero-banner {
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-crema-fondo);
   border-bottom: 1px solid var(--utrecht-borde-suave);
   padding: 2.5rem 1.5rem;
 }
@@ -218,7 +210,7 @@ header::before {
 .hero-banner h1 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--utrecht-negro);
+  color: var(--utrecht-azul-oscuro);
   margin-bottom: 0.5rem;
   line-height: 1.25;
 }
@@ -234,7 +226,7 @@ header::before {
    NoticeBox Component Pattern (Utrecht Red Left Border)
    -------------------------------------------------------------------------- */
 .notice-box {
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-suave);
   border-left: 4px solid var(--utrecht-rood);
   border-radius: var(--radius-sm);
@@ -243,6 +235,7 @@ header::before {
   font-size: 0.9rem;
   color: var(--utrecht-negro);
   display: inline-block;
+  box-shadow: var(--shadow-sm);
 }
 
 .notice-box.warning {
@@ -272,7 +265,7 @@ header::before {
 }
 
 .controls-card {
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.5rem;
@@ -294,7 +287,7 @@ header::before {
   flex: 1;
   min-width: 220px;
   padding: 0.75rem 1rem;
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
@@ -306,15 +299,15 @@ header::before {
 }
 
 .human-impact-btn:hover {
-  border-color: var(--utrecht-rood);
-  color: var(--utrecht-rood);
-  background-color: #FEF2F2;
+  border-color: var(--utrecht-azul-enlace);
+  color: var(--utrecht-azul-enlace);
+  background-color: #EBF4FF;
 }
 
 .human-impact-btn.active {
-  background-color: var(--utrecht-rood);
+  background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
-  border-color: var(--utrecht-rood);
+  border-color: var(--utrecht-azul-oscuro);
   box-shadow: var(--shadow-sm);
 }
 
@@ -327,14 +320,14 @@ header::before {
   display: block;
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--utrecht-negro);
+  color: var(--utrecht-azul-oscuro);
   margin-bottom: 0.5rem;
 }
 
 .search-input {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.8rem;
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
@@ -343,7 +336,7 @@ header::before {
 }
 
 .search-input:focus {
-  border-color: var(--utrecht-rood);
+  border-color: var(--utrecht-azul-enlace);
 }
 
 .search-icon {
@@ -363,7 +356,7 @@ header::before {
 
 .filter-chip {
   padding: 0.4rem 0.85rem;
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
@@ -374,19 +367,19 @@ header::before {
 }
 
 .filter-chip:hover {
-  border-color: var(--utrecht-rood);
-  color: var(--utrecht-rood);
+  border-color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-azul-oscuro);
 }
 
 .filter-chip.active {
-  background-color: var(--utrecht-negro);
+  background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
-  border-color: var(--utrecht-negro);
+  border-color: var(--utrecht-azul-oscuro);
 }
 
 /* Map Selector Block */
 .map-section {
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.25rem;
@@ -397,7 +390,7 @@ header::before {
 .map-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--utrecht-negro);
+  color: var(--utrecht-azul-oscuro);
   margin-bottom: 0.75rem;
 }
 
@@ -408,7 +401,7 @@ header::before {
 }
 
 .wijk-map-path {
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   color: var(--utrecht-negro);
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-sm);
@@ -436,12 +429,12 @@ header::before {
 .view-header-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--utrecht-negro);
+  color: var(--utrecht-azul-oscuro);
 }
 
 .view-toggle-group {
   display: flex;
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   overflow: hidden;
@@ -459,12 +452,12 @@ header::before {
 }
 
 .view-toggle-btn.active {
-  background-color: var(--utrecht-negro);
+  background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
 }
 
 /* --------------------------------------------------------------------------
-   Card Component Pattern (Minimal White Studio)
+   Card Component Pattern (Warm Cream & White Card Contrast)
    -------------------------------------------------------------------------- */
 .cards-grid {
   display: grid;
@@ -509,7 +502,7 @@ header::before {
 }
 
 .card {
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.5rem;
@@ -521,7 +514,7 @@ header::before {
 }
 
 .card:hover {
-  border-color: var(--utrecht-rood);
+  border-color: var(--utrecht-azul-enlace);
   box-shadow: var(--shadow-card);
 }
 
@@ -557,25 +550,25 @@ header::before {
 .impact-gemiddeld {
   background-color: #FFF7ED;
   color: var(--utrecht-naranja-aviso);
-  border: 1px solid rgba(234, 88, 12, 0.2);
+  border: 1px solid rgba(194, 65, 12, 0.2);
 }
 
 .impact-laag {
   background-color: #F0FDF4;
   color: var(--utrecht-verde-exito);
-  border: 1px solid rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(21, 128, 61, 0.2);
 }
 
 .card-title {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--utrecht-negro);
+  color: var(--utrecht-azul-oscuro);
   margin-bottom: 0.75rem;
   line-height: 1.35;
 }
 
 .card-title a:hover {
-  color: var(--utrecht-rood);
+  color: var(--utrecht-azul-enlace);
   text-decoration: underline;
 }
 
@@ -588,7 +581,7 @@ header::before {
 
 /* Bullet list (NoticeBox inside Card) */
 .bullet-list {
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   border: 1px solid var(--utrecht-borde-suave);
   border-left: 3px solid var(--utrecht-rood);
   border-radius: var(--radius-sm);
@@ -623,7 +616,7 @@ header::before {
 }
 
 .tag {
-  background-color: var(--utrecht-gris-superficie);
+  background-color: var(--utrecht-crema-fondo);
   color: var(--utrecht-negro);
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
@@ -653,7 +646,7 @@ header::before {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: var(--utrecht-rood);
+  color: var(--utrecht-azul-enlace);
   font-weight: 700;
   text-decoration: none;
 }
@@ -663,7 +656,7 @@ header::before {
 }
 
 .share-btn {
-  background-color: var(--utrecht-blanco);
+  background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   padding: 0.25rem 0.5rem;
@@ -675,8 +668,8 @@ header::before {
 }
 
 .share-btn:hover {
-  border-color: var(--utrecht-rood);
-  color: var(--utrecht-rood);
+  border-color: var(--utrecht-azul-enlace);
+  color: var(--utrecht-azul-enlace);
 }
 
 .report-issue-link {
@@ -686,10 +679,10 @@ header::before {
 }
 
 /* --------------------------------------------------------------------------
-   Footer Component (Dark Slate Mineral #0F172A)
+   Footer Component (Dark Navy Slate #162436)
    -------------------------------------------------------------------------- */
 footer {
-  background-color: var(--utrecht-negro);
+  background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
   padding: 3rem 1.5rem 2rem;
   margin-top: auto;
@@ -712,7 +705,7 @@ footer {
 }
 
 .footer-column p {
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
 }
 
@@ -730,16 +723,16 @@ footer {
 }
 
 .footer-column a:hover {
-  color: var(--utrecht-rood);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-bottom {
   max-width: 1140px;
   margin: 2rem auto 0;
   padding-top: 1.5rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.82rem;
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.75);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
