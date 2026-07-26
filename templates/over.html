@@ -14,11 +14,11 @@
   {% if lang == "nl" %}
   <div>
     <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">Wat is Utrecht Beslist?</h2>
-    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke taal (B1-niveau).</p>
+    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke taal (B1-niveau opgesteld in het Nederlands en Engels).</p>
 
     <!-- NoticeBox Component for Transparency -->
     <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
-      <strong>💡 100% Open Data & Transparantie:</strong> Alle gegevens zijn afkomstig van openbare overheidsbronnen. Elke samenvatting bevat een directe verwijzing naar het originele raadsdocument van de Gemeente Utrecht.
+      <strong>💡 100% Open Data & Transparantie:</strong> Alle gegevens zijn afkomstig van openbare overheidsbronnen. Elke samenvatting bevat een directe verwijzing naar het originele raadsdocument van de Gemeente Utrecht en functionaliteiten voor audio-voorlezen (TTS), donkere modus en export naar PDF.
     </div>
 
     <!-- Data Retention Policy Section -->
@@ -26,7 +26,7 @@
     <div style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood); margin-bottom: 2rem;">
       <p style="margin-bottom: 0.75rem;"><strong>Hoe lang blijven documenten op de website staan?</strong></p>
       <p style="margin-bottom: 0.75rem;">In overeenstemming met de Nederlandse <em>Archiefwet 1995</em> en de <em>Wet open overheid (Woo)</em> zijn raadsbesluiten en gemeentelijke voorstellen openbare historische feiten. Documenten worden <strong>permanent bewaard</strong> in het archief en worden <strong>nooit verwijderd</strong>.</p>
-      <p>Om de hoofdwebpagina snel en overzichtelijk te houden, toont het hoofdoverzicht de meest recente raadsbesluiten, terwijl alle eerdere besluiten via het maandarchief (bv. <code>/nl/archief/2026/07/</code>) en de openbare JSON API (<code>/data/latest.json</code>) permanent doorzoekbaar blijven.</p>
+      <p>Om de hoofdwebpagina snel en overzichtelijk te houden, toont het hoofdoverzicht de meest recente raadsbesluiten, terwijl alle eerdere besluiten via het maandarchief (bv. <code>/nl/archief/2026/07/</code>) en de openbare JSON API (<code>{{ root_path if root_path else '../' }}data/latest.json</code>) permanent doorzoekbaar blijven.</p>
     </div>
 
     <!-- Official Sources Section -->
@@ -64,7 +64,7 @@
 
       <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
         <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">4. Statische Publicatie</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">De website wordt direct opgebouwd als statische HTML-pagina's met een open JSON API (<a href="../data/latest.json">latest.json</a>) zonder cookies of tracking.</p>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">De website wordt direct opgebouwd als statische HTML-pagina's met een open JSON API (<a href="{{ root_path if root_path else '../' }}data/latest.json">latest.json</a>) zonder cookies of tracking.</p>
       </div>
     </div>
 
@@ -78,7 +78,7 @@
 
     <!-- NoticeBox Component for Transparency -->
     <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
-      <strong>💡 100% Open Data & Transparency:</strong> All data is sourced from public government APIs. Every summary includes a direct link to the original council document from the Municipality of Utrecht.
+      <strong>💡 100% Open Data & Transparency:</strong> All data is sourced from public government APIs. Every summary includes a direct link to the original council document, audio TTS narration, dark mode, and PDF printing.
     </div>
 
     <!-- Data Retention Policy Section -->
@@ -86,7 +86,7 @@
     <div style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood); margin-bottom: 2rem;">
       <p style="margin-bottom: 0.75rem;"><strong>How long do documents stay on the website?</strong></p>
       <p style="margin-bottom: 0.75rem;">Pursuant to the Dutch <em>Archives Act 1995</em> and the <em>Open Government Act (Woo)</em>, council decisions and municipal proposals are public historical facts. Documents are <strong>permanently preserved</strong> in the repository and are <strong>never deleted</strong>.</p>
-      <p>To keep the main homepage fast and accessible, the primary view displays recent decisions, while all historical decisions remain permanently searchable via monthly archives (e.g. <code>/en/archive/2026/07/</code>) and the public JSON API (<code>/data/latest.json</code>).</p>
+      <p>To keep the main homepage fast and accessible, the primary view displays recent decisions, while all historical decisions remain permanently searchable via monthly archives (e.g. <code>/en/archief/2026/07/</code>) and the public JSON API (<code>{{ root_path if root_path else '../' }}data/latest.json</code>).</p>
     </div>
 
     <!-- Official Sources Section -->
@@ -124,7 +124,7 @@
 
       <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
         <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">4. Static Publishing</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">The site compiles into 100% static HTML pages with a public open JSON API (<a href="../data/latest.json">latest.json</a>), requiring zero cookies or tracking.</p>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">The site compiles into 100% static HTML pages with a public open JSON API (<a href="{{ root_path if root_path else '../' }}data/latest.json">latest.json</a>), requiring zero cookies or tracking.</p>
       </div>
     </div>
 
