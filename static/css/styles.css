@@ -1,35 +1,41 @@
 /* ==========================================================================
-   Design System - Utrecht Beslist
-   Based on OpoAlerta DESIGN.md Visual Specification (Rijkshuisstijl aesthetic)
+   Utrecht Beslist — Official City Visual Identity (huisstijl.utrecht.nl)
+   Combined with OpoAlerta DESIGN.md Component System Architecture
    ========================================================================== */
 
 :root {
-  /* Colors from DESIGN.md Palette */
-  --color-blanco: #ffffff;
-  --color-superficie: #f3f5f6;
-  --color-texto-principal: #1a1a1a;
-  --color-texto-secundario: #595959;
-  --color-primario: #01689b;
-  --color-azul-oscuro: #154273;
-  --color-acento-amarillo: #f9e11e;
-  --color-verde-exito: #39870c;
-  --color-rojo-advertencia: #d52b1e;
-  --color-naranja: #e17000;
-  --color-borde-suave: #e5e5e5;
-  --color-borde-medio: #cccccc;
-  --color-foco: #2b7bb9;
+  /* Official Utrecht Color Identity Tokens (huisstijl.utrecht.nl/basiselementen/kleur) */
+  --utrecht-rood: #CC0000;           /* Primary Identity (Header, NoticeBox border, Badges) */
+  --utrecht-blanco: #FFFFFF;         /* Main background & cards */
+  --utrecht-negro: #000000;          /* Primary body text */
+  --utrecht-azul-marino: #1C4181;    /* Footer and dark blocks */
+  --utrecht-azul-digital: #006DFF;   /* Links, primary buttons, interactive focus */
+  --utrecht-geel: #FFCC00;           /* Header bottom accent stripe & highlights */
+  --utrecht-gris-secundario: #757575;/* Metadata, dates, subtitles */
+  --utrecht-gris-superficie: #F3F5F6;/* Section backgrounds & box fills */
+  --utrecht-borde-suave: #E5E5E5;    /* Card & table soft borders */
+  --utrecht-borde-medio: #CCCCCC;    /* Input borders */
+  --utrecht-foco: #006DFF;          /* Visible focus outline */
 
-  /* Typography */
+  /* Support Palette for Category Chips (Kleurbanen) */
+  --utrecht-paars: #762CD1;
+  --utrecht-roze: #F02198;
+  --utrecht-oranje: #FF6E00;
+  --utrecht-groen-licht: #99D000;
+  --utrecht-groen-donker: #32AB27;
+  --utrecht-hemelblauw: #009ED4;
+  --utrecht-bruin: #AD643B;
+
+  /* Typography (OpoAlerta System Architecture) */
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  /* Radius & Spacing */
+  /* Radii & Shadows */
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 8px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.09);
   --transition: all 0.2s ease-in-out;
 }
 
@@ -41,22 +47,22 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--color-superficie);
-  color: var(--color-texto-principal);
+  background-color: var(--utrecht-gris-superficie);
+  color: var(--utrecht-negro);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Accessible Focus Ring */
+/* Accessible Focus Ring (WCAG AA Verified) */
 :focus-visible {
-  outline: 3px solid var(--color-foco) !important;
+  outline: 3px solid var(--utrecht-foco) !important;
   outline-offset: 2px !important;
 }
 
 a {
-  color: var(--color-primario);
+  color: var(--utrecht-azul-digital);
   text-decoration: none;
 }
 
@@ -65,12 +71,13 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Header Component (Dark Blue + 4px Yellow Accent Stripe)
+   Header Component (Rojo Utrecht #CC0000 + 4px Yellow #FFCC00 Accent Stripe)
+   Includes Sint Maarten Diagonal Red/White Motif Accent
    -------------------------------------------------------------------------- */
 header {
-  background-color: var(--color-azul-oscuro);
-  color: var(--color-blanco);
-  border-bottom: 4px solid var(--color-acento-amarillo);
+  background-color: var(--utrecht-rood);
+  color: var(--utrecht-blanco);
+  border-bottom: 4px solid var(--utrecht-geel);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
@@ -86,25 +93,29 @@ header {
   justify-content: space-between;
 }
 
+/* Sint Maarten Diagonal Emblem (Red/White Mantel) */
 .brand {
   display: flex;
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
-  color: var(--color-blanco);
+  color: var(--utrecht-blanco);
 }
 
-.brand-emblem {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
+.brand-emblem-sint-maarten {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #CC0000 50%, #FFFFFF 50%);
+  border: 2px solid var(--utrecht-blanco);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--utrecht-blanco);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-sm);
 }
 
 .brand-text {
@@ -114,15 +125,15 @@ header {
 
 .brand-title {
   font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--color-blanco);
+  font-weight: 800;
+  color: var(--utrecht-blanco);
   line-height: 1.2;
 }
 
 .brand-subtitle {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 
 .nav-links {
@@ -132,8 +143,8 @@ header {
 }
 
 .nav-link {
-  color: var(--color-blanco);
-  font-weight: 600;
+  color: var(--utrecht-blanco);
+  font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   padding: 0.4rem 0.75rem;
@@ -142,14 +153,14 @@ header {
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.18);
   text-decoration: none;
 }
 
 .lang-switch {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   padding: 2px;
 }
@@ -158,8 +169,8 @@ header {
   padding: 4px 12px;
   border-radius: 16px;
   font-size: 0.82rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -167,15 +178,29 @@ header {
 }
 
 .lang-btn.active {
-  background-color: var(--color-acento-amarillo);
-  color: var(--color-azul-oscuro);
+  background-color: var(--utrecht-geel);
+  color: var(--utrecht-negro);
 }
 
-/* PageHeader / Hero Banner Component */
+/* --------------------------------------------------------------------------
+   Hero Banner / PageHeader Component
+   -------------------------------------------------------------------------- */
 .hero-banner {
-  background-color: var(--color-blanco);
-  border-bottom: 1px solid var(--color-borde-suave);
+  background-color: var(--utrecht-blanco);
+  border-bottom: 1px solid var(--utrecht-borde-suave);
   padding: 2.5rem 1.5rem;
+  position: relative;
+}
+
+/* Subtle Sint Maarten Diagonal Accent Bar on Hero */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--utrecht-rood) 50%, var(--utrecht-geel) 100%);
 }
 
 .hero-content {
@@ -186,42 +211,51 @@ header {
 .hero-banner h1 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--color-azul-oscuro);
+  color: var(--utrecht-rood);
   margin-bottom: 0.5rem;
   line-height: 1.25;
 }
 
 .hero-banner p {
   font-size: 1.1rem;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   max-width: 800px;
   line-height: 1.6;
 }
 
-/* NoticeBox Component Pattern */
+/* --------------------------------------------------------------------------
+   NoticeBox Component Pattern (Rojo Utrecht Left Border)
+   -------------------------------------------------------------------------- */
 .notice-box {
-  background-color: var(--color-superficie);
-  border: 1px solid var(--color-borde-suave);
-  border-left: 4px solid var(--color-primario);
+  background-color: var(--utrecht-gris-superficie);
+  border: 1px solid var(--utrecht-borde-suave);
+  border-left: 4px solid var(--utrecht-rood);
   border-radius: var(--radius-sm);
   padding: 1rem 1.25rem;
   margin-top: 1.25rem;
   font-size: 0.9rem;
-  color: var(--color-texto-principal);
+  color: var(--utrecht-negro);
   display: inline-block;
 }
 
 .notice-box.warning {
-  border-left-color: var(--color-rojo-advertencia);
-  background-color: #fdf2f2;
+  border-left-color: var(--utrecht-rood);
+  background-color: #FDF2F2;
 }
 
 .notice-box.success {
-  border-left-color: var(--color-verde-exito);
-  background-color: #f2f9ed;
+  border-left-color: var(--utrecht-groen-donker);
+  background-color: #F2F9ED;
 }
 
-/* Layout Container & Filter Controls */
+.notice-box.info {
+  border-left-color: var(--utrecht-azul-digital);
+  background-color: #EBF4FF;
+}
+
+/* --------------------------------------------------------------------------
+   Main Container & Controls
+   -------------------------------------------------------------------------- */
 .main-wrapper {
   max-width: 1140px;
   margin: 2rem auto 4rem;
@@ -231,32 +265,32 @@ header {
 }
 
 .controls-card {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-suave);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
   margin-bottom: 2rem;
 }
 
-/* Human Impact Group Buttons (Opción 3) */
+/* Human Impact Buttons (Opción 3) */
 .human-impact-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-borde-suave);
+  border-bottom: 1px solid var(--utrecht-borde-suave);
 }
 
 .human-impact-btn {
   flex: 1;
   min-width: 220px;
   padding: 0.75rem 1rem;
-  background-color: var(--color-superficie);
-  border: 2px solid var(--color-borde-suave);
+  background-color: var(--utrecht-gris-superficie);
+  border: 2px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-sm);
-  color: var(--color-azul-oscuro);
+  color: var(--utrecht-negro);
   font-weight: 700;
   font-size: 0.95rem;
   text-align: center;
@@ -265,14 +299,14 @@ header {
 }
 
 .human-impact-btn:hover {
-  border-color: var(--color-primario);
-  background-color: #e6eef4;
+  border-color: var(--utrecht-azul-digital);
+  background-color: #EBF4FF;
 }
 
 .human-impact-btn.active {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  border-color: var(--color-primario);
+  background-color: var(--utrecht-azul-digital);
+  color: var(--utrecht-blanco);
+  border-color: var(--utrecht-azul-digital);
   box-shadow: var(--shadow-sm);
 }
 
@@ -285,30 +319,30 @@ header {
   display: block;
   font-weight: 700;
   font-size: 0.92rem;
-  color: var(--color-azul-oscuro);
+  color: var(--utrecht-rood);
   margin-bottom: 0.5rem;
 }
 
 .search-input {
   width: 100%;
   padding: 0.8rem 1rem 0.8rem 2.8rem;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-medio);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
-  color: var(--color-texto-principal);
+  color: var(--utrecht-negro);
   font-size: 1rem;
   transition: var(--transition);
 }
 
 .search-input:focus {
-  border-color: var(--color-primario);
+  border-color: var(--utrecht-azul-digital);
 }
 
 .search-icon {
   position: absolute;
   left: 0.9rem;
   bottom: 0.8rem;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   font-size: 1.1rem;
 }
 
@@ -321,10 +355,10 @@ header {
 
 .filter-chip {
   padding: 0.45rem 0.9rem;
-  background-color: var(--color-superficie);
-  border: 1px solid var(--color-borde-suave);
+  background-color: var(--utrecht-gris-superficie);
+  border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-sm);
-  color: var(--color-texto-principal);
+  color: var(--utrecht-negro);
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
@@ -332,20 +366,20 @@ header {
 }
 
 .filter-chip:hover {
-  border-color: var(--color-primario);
-  color: var(--color-primario);
+  border-color: var(--utrecht-rood);
+  color: var(--utrecht-rood);
 }
 
 .filter-chip.active {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  border-color: var(--color-primario);
+  background-color: var(--utrecht-rood);
+  color: var(--utrecht-blanco);
+  border-color: var(--utrecht-rood);
 }
 
 /* Map Selector Block */
 .map-section {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-suave);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.25rem;
   margin-bottom: 2rem;
@@ -355,7 +389,7 @@ header {
 .map-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-azul-oscuro);
+  color: var(--utrecht-rood);
   margin-bottom: 0.75rem;
 }
 
@@ -366,21 +400,21 @@ header {
 }
 
 .wijk-map-path {
-  background-color: var(--color-superficie);
-  color: var(--color-primario);
+  background-color: var(--utrecht-gris-superficie);
+  color: var(--utrecht-azul-digital);
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
-  border: 1px solid var(--color-borde-suave);
+  border: 1px solid var(--utrecht-borde-suave);
   transition: var(--transition);
 }
 
-.wijk-map-path:hover, .wijk-map-path.selected {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  border-color: var(--color-primario);
+.wijk-map-path:hover, .wijk-map-path.selected, .wijk-map-path.active {
+  background-color: var(--utrecht-rood);
+  color: var(--utrecht-blanco);
+  border-color: var(--utrecht-rood);
 }
 
 /* View Switcher Header (Opción 4) */
@@ -394,13 +428,13 @@ header {
 .view-header-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-azul-oscuro);
+  color: var(--utrecht-rood);
 }
 
 .view-toggle-group {
   display: flex;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-medio);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
@@ -409,7 +443,7 @@ header {
   padding: 0.4rem 0.85rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -417,11 +451,13 @@ header {
 }
 
 .view-toggle-btn.active {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
+  background-color: var(--utrecht-azul-digital);
+  color: var(--utrecht-blanco);
 }
 
-/* Card Component Pattern */
+/* --------------------------------------------------------------------------
+   Card Component Pattern (OpoAlerta System + Utrecht Colors)
+   -------------------------------------------------------------------------- */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -429,7 +465,7 @@ header {
   transition: var(--transition);
 }
 
-/* Compact List View Mode (Opción 4) */
+/* Compact List View Mode */
 .cards-grid.view-list-mode {
   display: flex;
   flex-direction: column;
@@ -465,8 +501,8 @@ header {
 }
 
 .card {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-suave);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
@@ -477,7 +513,7 @@ header {
 }
 
 .card:hover {
-  border-color: var(--color-primario);
+  border-color: var(--utrecht-azul-digital);
   box-shadow: var(--shadow-card);
 }
 
@@ -491,7 +527,7 @@ header {
 
 .card-date {
   font-size: 0.82rem;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   font-weight: 600;
 }
 
@@ -499,39 +535,44 @@ header {
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 .impact-hoog {
-  background-color: #fde8e8;
-  color: var(--color-rojo-advertencia);
-  border: 1px solid rgba(213, 43, 30, 0.2);
+  background-color: #FDF2F2;
+  color: var(--utrecht-rood);
+  border: 1px solid rgba(204, 0, 0, 0.25);
 }
 
 .impact-gemiddeld {
-  background-color: #fef3e6;
-  color: var(--color-naranja);
-  border: 1px solid rgba(225, 112, 0, 0.2);
+  background-color: #FEF3E6;
+  color: var(--utrecht-oranje);
+  border: 1px solid rgba(255, 110, 0, 0.25);
 }
 
 .impact-laag {
-  background-color: #f2f9ed;
-  color: var(--color-verde-exito);
-  border: 1px solid rgba(57, 135, 12, 0.2);
+  background-color: #F2F9ED;
+  color: var(--utrecht-groen-donker);
+  border: 1px solid rgba(50, 171, 39, 0.25);
 }
 
 .card-title {
   font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-azul-oscuro);
+  font-weight: 800;
+  color: var(--utrecht-rood);
   margin-bottom: 0.75rem;
   line-height: 1.35;
 }
 
+.card-title a:hover {
+  color: var(--utrecht-azul-digital);
+  text-decoration: underline;
+}
+
 .card-summary {
-  color: var(--color-texto-principal);
+  color: var(--utrecht-negro);
   font-size: 0.95rem;
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -539,9 +580,9 @@ header {
 
 /* Bullet list (NoticeBox inside Card) */
 .bullet-list {
-  background-color: var(--color-superficie);
-  border: 1px solid var(--color-borde-suave);
-  border-left: 3px solid var(--color-primario);
+  background-color: var(--utrecht-gris-superficie);
+  border: 1px solid var(--utrecht-borde-suave);
+  border-left: 4px solid var(--utrecht-rood);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -551,7 +592,7 @@ header {
 
 .bullet-item {
   margin-bottom: 0.35rem;
-  color: var(--color-texto-principal);
+  color: var(--utrecht-negro);
 }
 
 .bullet-item:last-child {
@@ -561,7 +602,7 @@ header {
 .model-badge {
   display: inline-block;
   font-size: 0.75rem;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   margin-bottom: 0.75rem;
   font-weight: 600;
 }
@@ -574,18 +615,18 @@ header {
 }
 
 .tag {
-  background-color: var(--color-superficie);
-  color: var(--color-primario);
+  background-color: var(--utrecht-gris-superficie);
+  color: var(--utrecht-azul-digital);
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
   font-size: 0.78rem;
-  font-weight: 600;
-  border: 1px solid var(--color-borde-suave);
+  font-weight: 700;
+  border: 1px solid var(--utrecht-borde-suave);
 }
 
 .card-footer {
   padding-top: 1rem;
-  border-top: 1px solid var(--color-borde-suave);
+  border-top: 1px solid var(--utrecht-borde-suave);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -604,7 +645,7 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: var(--color-primario);
+  color: var(--utrecht-azul-digital);
   font-weight: 700;
   text-decoration: none;
 }
@@ -614,32 +655,34 @@ header {
 }
 
 .share-btn {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde-medio);
+  background-color: var(--utrecht-blanco);
+  border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   padding: 0.25rem 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   cursor: pointer;
   transition: var(--transition);
 }
 
 .share-btn:hover {
-  border-color: var(--color-primario);
-  color: var(--color-primario);
+  border-color: var(--utrecht-azul-digital);
+  color: var(--utrecht-azul-digital);
 }
 
 .report-issue-link {
   font-size: 0.75rem;
-  color: var(--color-texto-secundario);
+  color: var(--utrecht-gris-secundario);
   text-decoration: underline;
 }
 
-/* Footer Component */
+/* --------------------------------------------------------------------------
+   Footer Component (Azul Marino Utrecht #1C4181 + 3 Columns)
+   -------------------------------------------------------------------------- */
 footer {
-  background-color: var(--color-azul-oscuro);
-  color: var(--color-blanco);
+  background-color: var(--utrecht-azul-marino);
+  color: var(--utrecht-blanco);
   padding: 3rem 1.5rem 2rem;
   margin-top: auto;
   font-size: 0.9rem;
@@ -655,13 +698,13 @@ footer {
 
 .footer-column h3 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.75rem;
-  color: var(--color-blanco);
+  color: var(--utrecht-blanco);
 }
 
 .footer-column p {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.6;
 }
 
@@ -674,21 +717,21 @@ footer {
 }
 
 .footer-column a {
-  color: var(--color-blanco);
+  color: var(--utrecht-blanco);
   text-decoration: underline;
 }
 
 .footer-column a:hover {
-  color: var(--color-acento-amarillo);
+  color: var(--utrecht-geel);
 }
 
 .footer-bottom {
   max-width: 1140px;
   margin: 2rem auto 0;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
