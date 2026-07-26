@@ -171,9 +171,7 @@ header {
   color: var(--color-azul-oscuro);
 }
 
-/* --------------------------------------------------------------------------
-   PageHeader / Hero Banner Component
-   -------------------------------------------------------------------------- */
+/* PageHeader / Hero Banner Component */
 .hero-banner {
   background-color: var(--color-blanco);
   border-bottom: 1px solid var(--color-borde-suave);
@@ -200,9 +198,7 @@ header {
   line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   NoticeBox Component Pattern (OpoAlerta DESIGN.md)
-   -------------------------------------------------------------------------- */
+/* NoticeBox Component Pattern */
 .notice-box {
   background-color: var(--color-superficie);
   border: 1px solid var(--color-borde-suave);
@@ -225,9 +221,7 @@ header {
   background-color: #f2f9ed;
 }
 
-/* --------------------------------------------------------------------------
-   Layout Container & Filter Controls
-   -------------------------------------------------------------------------- */
+/* Layout Container & Filter Controls */
 .main-wrapper {
   max-width: 1140px;
   margin: 2rem auto 4rem;
@@ -243,6 +237,43 @@ header {
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
   margin-bottom: 2rem;
+}
+
+/* Human Impact Group Buttons (Opción 3) */
+.human-impact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-borde-suave);
+}
+
+.human-impact-btn {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde-suave);
+  border-radius: var(--radius-sm);
+  color: var(--color-azul-oscuro);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.human-impact-btn:hover {
+  border-color: var(--color-primario);
+  background-color: #e6eef4;
+}
+
+.human-impact-btn.active {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-color: var(--color-primario);
+  box-shadow: var(--shadow-sm);
 }
 
 .search-box {
@@ -352,13 +383,85 @@ header {
   border-color: var(--color-primario);
 }
 
-/* --------------------------------------------------------------------------
-   Card Component Pattern (OpoAlerta DESIGN.md)
-   -------------------------------------------------------------------------- */
+/* View Switcher Header (Opción 4) */
+.view-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.view-header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+}
+
+.view-toggle-group {
+  display: flex;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde-medio);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.view-toggle-btn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-texto-secundario);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.view-toggle-btn.active {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+/* Card Component Pattern */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1.5rem;
+  transition: var(--transition);
+}
+
+/* Compact List View Mode (Opción 4) */
+.cards-grid.view-list-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cards-grid.view-list-mode .card {
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  gap: 1.5rem;
+}
+
+.cards-grid.view-list-mode .card-summary,
+.cards-grid.view-list-mode .bullet-list,
+.cards-grid.view-list-mode .model-badge {
+  display: none;
+}
+
+.cards-grid.view-list-mode .card-title {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.cards-grid.view-list-mode .card-tags {
+  margin-bottom: 0;
+}
+
+.cards-grid.view-list-mode .card-footer {
+  border-top: none;
+  padding-top: 0;
 }
 
 .card {
@@ -533,9 +636,7 @@ header {
   text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   Footer Component (Dark Blue 3-Column Layout from OpoAlerta DESIGN.md)
-   -------------------------------------------------------------------------- */
+/* Footer Component */
 footer {
   background-color: var(--color-azul-oscuro);
   color: var(--color-blanco);
@@ -597,6 +698,13 @@ footer {
 @media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+  .cards-grid.view-list-mode .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .human-impact-bar {
+    flex-direction: column;
   }
   .header-container {
     flex-direction: column;

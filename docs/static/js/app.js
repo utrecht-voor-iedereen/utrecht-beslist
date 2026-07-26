@@ -1,5 +1,5 @@
 /**
- * Client-side interaction, search, postal code lookup & sharing for Utrecht Beslist
+ * Client-side interaction, search, postal code lookup, view mode & sharing for Utrecht Beslist
  */
 
 const UTRECHT_POSTAL_MAP = {
@@ -15,15 +15,25 @@ const UTRECHT_POSTAL_MAP = {
   "3583": "Oost", "3584": "Oost", "3585": "Oost"
 };
 
+const HUMAN_IMPACT_THEMES = {
+  "casa": ["wonen", "groen-klimaat", "jeugd-onderwijs"],
+  "bolsillo": ["bestuur-financien", "zorg"],
+  "movilidad": ["verkeer", "veiligheid", "cultuur-evenementen"]
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const filterChips = document.querySelectorAll('.filter-chip');
+  const humanImpactBtns = document.querySelectorAll('.human-impact-btn');
+  const cardsGrid = document.getElementById('cards-grid');
   const cards = document.querySelectorAll('.card');
   const langBtns = document.querySelectorAll('.lang-btn');
   const postalBadge = document.getElementById('postal-badge');
   const mapPaths = document.querySelectorAll('.wijk-map-path');
+  const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
 
   let activeTheme = 'all';
+  let activeHumanImpactGroup = 'all';
   let activeWijk = 'all';
   let searchQuery = '';
   let detectedWijk = '';
@@ -69,14 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const summaryText = card.querySelector('.card-summary')?.textContent.toLowerCase() || '';
       const tagsText = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent.toLowerCase()).join(' ');
 
+      // Theme Filter
       const matchesTheme = (activeTheme === 'all' || cardTheme.includes(activeTheme) || tagsText.includes(activeTheme));
       
+      // Human Impact Group Filter (Opción 3)
+      let matchesHumanImpact = true;
+      if (activeHumanImpactGroup !== 'all') {
+        const allowedThemes = HUMAN_IMPACT_THEMES[activeHumanImpactGroup] || [];
+        matchesHumanImpact = allowedThemes.some(th => cardTheme.includes(th));
+      }
+
+      // Wijk Filter
       const targetWijk = activeWijk !== 'all' ? activeWijk.toLowerCase() : (detectedWijk ? detectedWijk.toLowerCase() : '');
       const matchesWijk = !targetWijk || cardWijk.includes(targetWijk) || tagsText.includes(targetWijk);
 
+      // Search Query Filter
       const matchesSearch = !searchQuery || titleText.includes(searchQuery) || summaryText.includes(searchQuery) || tagsText.includes(searchQuery);
 
-      if (matchesTheme && matchesWijk && matchesSearch) {
+      if (matchesTheme && matchesHumanImpact && matchesWijk && matchesSearch) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
@@ -99,7 +119,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Theme Filter Chips Event
+  // Human Impact Group Buttons Event (Opción 3)
+  humanImpactBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      humanImpactBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeHumanImpactGroup = btn.dataset.impactGroup || 'all';
+      filterCards();
+    });
+  });
+
+  // Specific Theme Filter Chips Event
   filterChips.forEach(chip => {
     chip.addEventListener('click', () => {
       filterChips.forEach(c => c.classList.remove('active'));
@@ -116,6 +146,22 @@ document.addEventListener('DOMContentLoaded', () => {
       path.classList.add('active', 'selected');
       activeWijk = path.dataset.wijk || 'all';
       filterCards();
+    });
+  });
+
+  // View Mode Switcher Event (Opción 4)
+  viewToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      viewToggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const viewMode = btn.dataset.viewMode;
+      if (cardsGrid) {
+        if (viewMode === 'list') {
+          cardsGrid.classList.add('view-list-mode');
+        } else {
+          cardsGrid.classList.remove('view-list-mode');
+        }
+      }
     });
   });
 });
