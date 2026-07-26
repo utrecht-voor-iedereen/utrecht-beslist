@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="static/img/logo-nl.svg" alt="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal" width="450">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="static/img/logo-dark-mode.svg">
+    <img src="static/img/logo-nl.svg" alt="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal" width="450">
+  </picture>
 </p>
 
 > Plain-language summaries (B1 Dutch + English) of official **Gemeente Utrecht** city council documents and decisions.
@@ -37,6 +40,7 @@ Utrecht Beslist features a dedicated custom geometric shield logo inspired by th
 
 - `static/img/logo.svg`: Main horizontal SVG logo (English subtitle)
 - `static/img/logo-nl.svg`: Main horizontal SVG logo (Dutch subtitle)
+- `static/img/logo-dark-mode.svg`: High-contrast variant for dark backgrounds & GitHub Dark Mode
 - `static/img/favicon.svg` & `icon.svg`: 1:1 Icon-only SVG variant
 - `static/img/logo-monochrome.svg`: Single-color printable & footer variant
 

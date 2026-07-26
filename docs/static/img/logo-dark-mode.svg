@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal">
+  <defs>
+    <!-- Upper-Left Red Half Clip Polygon -->
+    <clipPath id="clip-top-left-dark">
+      <polygon points="0,0 80,0 0,80" />
+    </clipPath>
+
+    <!-- Lower-Right White Half Clip Polygon -->
+    <clipPath id="clip-bottom-right-dark">
+      <polygon points="80,0 80,80 0,80" />
+    </clipPath>
+
+    <!-- Shield Outline Path -->
+    <path id="shield-path-dark" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+  </defs>
+
+  <!-- Shield Red Upper-Left Fill -->
+  <use href="#shield-path-dark" fill="#CC0000" clip-path="url(#clip-top-left-dark)" />
+
+  <!-- Shield White Lower-Right Fill -->
+  <use href="#shield-path-dark" fill="#FFFFFF" clip-path="url(#clip-bottom-right-dark)" />
+
+  <!-- Shield White Contour Outline -->
+  <use href="#shield-path-dark" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Checkmark on Red Half (White Stroke) -->
+  <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-dark)" />
+
+  <!-- Checkmark on White Half (Black Stroke) -->
+  <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-dark)" />
+
+  <!-- Wordmark Title (White "Utrecht" for Dark Backgrounds) -->
+  <text x="84" y="42" font-family="system-ui, Arial, sans-serif" font-size="30" font-weight="700" xml:space="preserve"><tspan fill="#FFFFFF">Utrecht </tspan><tspan fill="#CC0000">Beslist</tspan><tspan fill="#FFCC00">.</tspan></text>
+
+  <!-- Subtitle (White Subtitle for Dark Backgrounds) -->
+  <text x="85" y="63" font-family="system-ui, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#FFFFFF" opacity="0.9">GEMEENTERAAD IN BEGRIJPELIJKE TAAL</text>
+</svg>
