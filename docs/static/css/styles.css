@@ -1,38 +1,32 @@
-/* Design System & Aesthetics - Utrecht Beslist */
-:root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-utrecht: #cc0000;
-  --accent-utrecht-hover: #e60000;
-  --accent-blue: #38bdf8;
-  --badge-bg: rgba(56, 189, 248, 0.15);
-  --badge-text: #38bdf8;
-  --impact-high-bg: rgba(239, 68, 68, 0.2);
-  --impact-high-text: #f87171;
-  --impact-med-bg: rgba(245, 158, 11, 0.2);
-  --impact-med-text: #fbbf24;
-  --impact-low-bg: rgba(16, 185, 129, 0.2);
-  --impact-low-text: #34d399;
-  --radius-lg: 16px;
-  --radius-md: 10px;
-  --radius-sm: 6px;
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* ==========================================================================
+   Rijkshuisstijl / Belastingdienst Style System - Utrecht Beslist
+   Authentic Dutch Government Civic Aesthetic
+   ========================================================================== */
 
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --border-color: rgba(0, 0, 0, 0.08);
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+:root {
+  --rijk-blue-dark: #002b40;
+  --rijk-blue-primary: #01689b;
+  --rijk-blue-light: #e6eef4;
+  --rijk-blue-hover: #00486c;
+  --rijk-red: #d52b1e;
+  --rijk-orange: #e17000;
+  --rijk-green: #007c59;
+  --rijk-grey-bg: #f3f6f8;
+  --rijk-card-bg: #ffffff;
+  --rijk-border: #d8e2e9;
+  --rijk-text-dark: #1b2631;
+  --rijk-text-muted: #536b7d;
+
+  --font-sans: "RO Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "RO Serif", Georgia, "Times New Roman", serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-sm: 0 2px 4px rgba(0, 43, 64, 0.06);
+  --shadow-card: 0 4px 16px rgba(0, 43, 64, 0.08);
+  --transition: all 0.2s ease-in-out;
 }
 
 * {
@@ -42,39 +36,51 @@
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--bg-primary);
-  color: var(--text-main);
+  font-family: var(--font-sans);
+  background-color: var(--rijk-grey-bg);
+  color: var(--rijk-text-dark);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-a {
-  color: var(--accent-blue);
-  text-decoration: none;
-  transition: var(--transition);
+/* --------------------------------------------------------------------------
+   Rijksoverheid / Belastingdienst Top Header
+   -------------------------------------------------------------------------- */
+.top-ribbon {
+  background: var(--rijk-blue-dark);
+  color: #ffffff;
+  padding: 0.4rem 1.5rem;
+  font-size: 0.82rem;
+  border-bottom: 3px solid var(--rijk-red);
 }
 
-a:hover {
-  text-decoration: underline;
+.top-ribbon-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-/* Header & Navigation */
+.top-ribbon-flag {
+  font-size: 1rem;
+}
+
 header {
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
-  backdrop-filter: blur(12px);
+  background: #ffffff;
+  border-bottom: 2px solid var(--rijk-border);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1.1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,46 +89,79 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--text-main);
+  gap: 1rem;
   text-decoration: none;
 }
 
-.brand-icon {
-  background: var(--accent-utrecht);
-  color: white;
-  width: 38px;
-  height: 38px;
+.brand-emblem {
+  background: var(--rijk-blue-primary);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 12px rgba(204, 0, 0, 0.4);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--rijk-blue-dark);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: var(--rijk-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--rijk-blue-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background: var(--rijk-blue-light);
+  color: var(--rijk-blue-primary);
 }
 
 .lang-switch {
   display: flex;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
+  background: var(--rijk-grey-bg);
+  border: 1px solid var(--rijk-border);
   border-radius: 20px;
-  padding: 3px;
+  padding: 2px;
 }
 
 .lang-btn {
   padding: 4px 12px;
   border-radius: 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rijk-text-muted);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -130,39 +169,58 @@ header {
 }
 
 .lang-btn.active {
-  background: var(--accent-utrecht);
-  color: white;
+  background: var(--rijk-blue-primary);
+  color: #ffffff;
 }
 
-/* Hero Section */
-.hero {
-  padding: 3rem 1.5rem 2rem;
-  text-align: center;
-  max-width: 800px;
+/* --------------------------------------------------------------------------
+   Hero & Header Section
+   -------------------------------------------------------------------------- */
+.hero-banner {
+  background: linear-gradient(135deg, var(--rijk-blue-primary) 0%, var(--rijk-blue-dark) 100%);
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  border-bottom: 4px solid var(--rijk-orange);
+}
+
+.hero-content {
+  max-width: 1140px;
   margin: 0 auto;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+.hero-banner h1 {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, var(--text-main), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 1.25;
 }
 
-.hero p {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  margin-bottom: 1.75rem;
+.hero-banner p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  opacity: 0.92;
+  line-height: 1.6;
 }
 
-/* Controls Section */
-.controls-container {
-  max-width: 1200px;
-  margin: 0 auto 2rem;
+/* --------------------------------------------------------------------------
+   Controls / Filter Panel (Belastingdienst Style)
+   -------------------------------------------------------------------------- */
+.main-wrapper {
+  max-width: 1140px;
+  margin: -1.5rem auto 3rem;
   padding: 0 1.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.controls-card {
+  background: var(--rijk-card-bg);
+  border: 1px solid var(--rijk-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
 }
 
 .search-box {
@@ -170,76 +228,85 @@ header {
   margin-bottom: 1.25rem;
 }
 
+.search-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--rijk-blue-dark);
+  margin-bottom: 0.4rem;
+}
+
 .search-input {
   width: 100%;
-  padding: 1rem 1.25rem 1rem 3rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  color: var(--text-main);
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  background: var(--rijk-card-bg);
+  border: 2px solid var(--rijk-border);
+  border-radius: var(--radius-sm);
+  color: var(--rijk-text-dark);
   font-size: 1rem;
   outline: none;
   transition: var(--transition);
 }
 
 .search-input:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+  border-color: var(--rijk-blue-primary);
+  box-shadow: 0 0 0 3px rgba(1, 104, 155, 0.15);
 }
 
 .search-icon {
   position: absolute;
-  left: 1.1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
+  left: 0.9rem;
+  bottom: 0.85rem;
+  color: var(--rijk-text-muted);
   font-size: 1.1rem;
 }
 
-.filters-wrapper {
+.filters-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
 .filter-chip {
-  padding: 0.5rem 1rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  color: var(--text-muted);
+  padding: 0.45rem 0.9rem;
+  background: var(--rijk-grey-bg);
+  border: 1px solid var(--rijk-border);
+  border-radius: var(--radius-sm);
+  color: var(--rijk-blue-dark);
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
 }
 
-.filter-chip:hover, .filter-chip.active {
-  background: var(--accent-blue);
-  color: #0f172a;
-  border-color: var(--accent-blue);
-  font-weight: 600;
+.filter-chip:hover {
+  background: var(--rijk-blue-light);
+  border-color: var(--rijk-blue-primary);
 }
 
-/* Cards Grid */
-.cards-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+.filter-chip.active {
+  background: var(--rijk-blue-primary);
+  color: #ffffff;
+  border-color: var(--rijk-blue-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Cards Grid & Decision Cards (Belastingdienst Style)
+   -------------------------------------------------------------------------- */
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1.5rem;
-  flex: 1;
 }
 
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  background: var(--rijk-card-bg);
+  border: 1px solid var(--rijk-border);
+  border-left: 5px solid var(--rijk-blue-primary);
+  border-radius: var(--radius-sm);
   padding: 1.5rem;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -247,8 +314,9 @@ header {
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: var(--shadow-card);
+  border-left-color: var(--rijk-blue-dark);
+  transform: translateY(-2px);
 }
 
 .card-header {
@@ -259,57 +327,76 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.card-meta {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-
+.card-date {
+  font-size: 0.82rem;
+  color: var(--rijk-text-muted);
+  font-weight: 600;
 }
 
 .badge-impact {
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.impact-hoog { background: var(--impact-high-bg); color: var(--impact-high-text); }
-.impact-gemiddeld { background: var(--impact-med-bg); color: var(--impact-med-text); }
-.impact-laag { background: var(--impact-low-bg); color: var(--impact-low-text); }
+.impact-hoog {
+  background: #fde8e8;
+  color: var(--rijk-red);
+  border: 1px solid rgba(213, 43, 30, 0.2);
+}
+
+.impact-gemiddeld {
+  background: #fef3e6;
+  color: var(--rijk-orange);
+  border: 1px solid rgba(225, 112, 0, 0.2);
+}
+
+.impact-laag {
+  background: #e6f4ea;
+  color: var(--rijk-green);
+  border: 1px solid rgba(0, 124, 89, 0.2);
+}
 
 .card-title {
+  font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 700;
+  color: var(--rijk-blue-dark);
   margin-bottom: 0.75rem;
   line-height: 1.35;
 }
 
 .card-summary {
-  color: var(--text-muted);
+  color: var(--rijk-text-dark);
   font-size: 0.95rem;
   margin-bottom: 1.25rem;
   flex: 1;
+  line-height: 1.6;
 }
 
 .card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .tag {
-  background: var(--badge-bg);
-  color: var(--badge-text);
-  padding: 0.25rem 0.6rem;
+  background: var(--rijk-blue-light);
+  color: var(--rijk-blue-primary);
+  padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
   font-size: 0.78rem;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid rgba(1, 104, 155, 0.15);
 }
 
 .card-footer {
   padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--rijk-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -317,48 +404,67 @@ header {
 }
 
 .pdf-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: var(--accent-utrecht);
-  font-weight: 600;
+  color: var(--rijk-blue-primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 .pdf-link:hover {
-  color: var(--accent-utrecht-hover);
+  color: var(--rijk-blue-hover);
+  text-decoration: underline;
 }
 
-/* Footer */
+/* --------------------------------------------------------------------------
+   Rijksoverheid Style Footer
+   -------------------------------------------------------------------------- */
 footer {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-  padding: 2.5rem 1.5rem;
+  background: var(--rijk-blue-dark);
+  color: #ffffff;
+  padding: 3rem 1.5rem 2rem;
   margin-top: auto;
+  border-top: 4px solid var(--rijk-red);
   font-size: 0.88rem;
-  color: var(--text-muted);
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
 }
 
-.disclaimer {
-  max-width: 600px;
-  line-height: 1.5;
+.footer-disclaimer h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.footer-disclaimer p {
+  color: #cce2ee;
+  line-height: 1.6;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: var(--rijk-blue-light);
 }
 
 @media (max-width: 768px) {
-  .cards-container {
+  .cards-grid {
     grid-template-columns: 1fr;
   }
-  .hero h1 {
-    font-size: 1.85rem;
+  .footer-content {
+    grid-template-columns: 1fr;
   }
   .header-container {
     flex-direction: column;

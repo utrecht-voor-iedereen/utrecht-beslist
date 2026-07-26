@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
-{% block content %}
-<section class="hero">
-  <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
-  <p>{{ "Belangrijke raadsvoorstellen en besluiten in heldere taal, met directe link naar het officiële document." if lang == "nl" else "Important council proposals and decisions explained in plain language, with direct links to official documents." }}</p>
+{% block hero %}
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
+    <p>{{ "Overzicht van raadsvoorstellen en besluiten van de gemeenteraad van Utrecht in heldere taal, met rechtstreekse link naar het officiële stuk." if lang == "nl" else "Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents." }}</p>
+  </div>
 </section>
+{% endblock %}
 
-<section class="controls-container">
+{% block content %}
+<section class="controls-card">
   <div class="search-box">
+    <label for="search-input" class="search-label">{{ "Zoeken in gemeentestukken" if lang == "nl" else "Search council documents" }}</label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, wijk of onderwerp...' if lang == 'nl' else 'Search by keyword, neighborhood or topic...' }}">
   </div>
 
-  <div class="filters-wrapper">
+  <div class="filters-group">
     <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
     {% for key, theme_info in themes.items() %}
       {% if key != "overig" %}
@@ -22,12 +27,12 @@
   </div>
 </section>
 
-<section class="cards-container" id="cards-grid">
+<section class="cards-grid" id="cards-grid">
   {% for item in items %}
   <article class="card" data-theme="{{ item.thema | join(' ') }}">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
+        <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
         <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }}</span>
       </div>
 
@@ -53,7 +58,7 @@
       <span>Bron: Gemeente Utrecht</span>
       {% if item.pdf_url %}
         <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
-          📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ↗
+          📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ➔
         </a>
       {% else %}
         <span>PDF niet beschikbaar</span>
@@ -63,7 +68,7 @@
   {% endfor %}
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--rijk-text-muted);">
   <p>{{ "Geen resultaten gevonden voor de opgegeven zoekopdracht." if lang == "nl" else "No matching decisions found for your query." }}</p>
 </div>
 {% endblock %}

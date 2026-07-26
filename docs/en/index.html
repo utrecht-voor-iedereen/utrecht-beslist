@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🥇 Utrecht Beslist — Utrecht City Council Summaries</title>
+  <title>Utrecht Beslist — Gemeente Utrecht Raadsbesluiten</title>
   <meta name="description" content="Utrecht city council decisions and documents explained in plain English.">
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../en/feed.xml">
 </head>
 <body>
 
+  <!-- Official Dutch Government Rijkshuisstijl Top Bar -->
+  <div class="top-ribbon">
+    <div class="top-ribbon-content">
+      <span class="top-ribbon-flag">👑</span>
+      <span>Gemeente Utrecht · Raadsinformatie &amp; Besluitvorming</span>
+    </div>
+  </div>
+
   <header>
     <div class="header-container">
       <a href="../en/index.html" class="brand">
-        <div class="brand-icon">🏛️</div>
-        <span>Utrecht Beslist</span>
+        <div class="brand-emblem">U</div>
+        <div class="brand-text">
+          <span class="brand-title">Utrecht Beslist</span>
+          <span class="brand-subtitle">Gemeenteraad in Begrijpelijke Taal</span>
+        </div>
       </a>
       <nav class="nav-links">
-        <a href="../en/index.html">Overview</a>
-        <a href="../en/over.html">About &amp; Transparency</a>
+        <a href="../en/index.html" class="nav-link">Overview</a>
+        <a href="../en/over.html" class="nav-link">About &amp; Transparency</a>
         
         <div class="lang-switch">
           <button class="lang-btn " data-lang="nl">NL</button>
@@ -28,20 +39,25 @@
     </div>
   </header>
 
-  <main>
-    
-<section class="hero">
-  <h1>What did Utrecht City Council decide this week?</h1>
-  <p>Important council proposals and decisions explained in plain language, with direct links to official documents.</p>
+  
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1>What did Utrecht City Council decide this week?</h1>
+    <p>Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents.</p>
+  </div>
 </section>
 
-<section class="controls-container">
+
+  <div class="main-wrapper">
+    
+<section class="controls-card">
   <div class="search-box">
+    <label for="search-input" class="search-label">Search council documents</label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="Search by keyword, neighborhood or topic...">
   </div>
 
-  <div class="filters-wrapper">
+  <div class="filters-group">
     <button class="filter-chip active" data-theme="all">All Topics</button>
     
       
@@ -81,12 +97,12 @@
   </div>
 </section>
 
-<section class="cards-container" id="cards-grid">
+<section class="cards-grid" id="cards-grid">
   
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-09</span>
+        <span class="card-date">📅 2026-07-09</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -119,7 +135,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-09</span>
+        <span class="card-date">📅 2026-07-09</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -152,7 +168,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-09</span>
+        <span class="card-date">📅 2026-07-09</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -185,7 +201,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-09</span>
+        <span class="card-date">📅 2026-07-09</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -218,7 +234,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-09</span>
+        <span class="card-date">📅 2026-07-09</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -251,7 +267,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-02</span>
+        <span class="card-date">📅 2026-07-02</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -284,7 +300,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-02</span>
+        <span class="card-date">📅 2026-07-02</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -317,7 +333,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-02</span>
+        <span class="card-date">📅 2026-07-02</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -350,7 +366,7 @@
   <article class="card" data-theme="bestuur-financien">
     <div>
       <div class="card-header">
-        <span class="card-meta">📅 2026-07-02</span>
+        <span class="card-date">📅 2026-07-02</span>
         <span class="badge-impact impact-gemiddeld">gemiddeld</span>
       </div>
 
@@ -382,19 +398,19 @@
   
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--rijk-text-muted);">
   <p>No matching decisions found for your query.</p>
 </div>
 
-  </main>
+  </div>
 
   <footer>
     <div class="footer-content">
-      <div class="disclaimer">
-        <p><strong>Disclaimers &amp; Data:</strong></p>
-        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult the original council document.</p>
+      <div class="footer-disclaimer">
+        <h3>Disclaimers &amp; Data Sources</h3>
+        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult the official municipal document.</p>
       </div>
-      <div>
+      <div class="footer-links">
         <p>© 2026 Utrecht Beslist · Open Source (<a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a>)</p>
         <p><a href="../en/feed.xml">RSS Feed (EN)</a> · <a href="../data/latest.json">JSON API</a></p>
       </div>
