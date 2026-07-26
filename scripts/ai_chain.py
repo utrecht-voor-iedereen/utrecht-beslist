@@ -1,6 +1,6 @@
 """
-Resilient LLM summarization chain supporting Groq -> Gemini -> OpenRouter -> Degraded Mode.
-Includes 3-bullet breakdown (Wat/Wie/Geld), max 10,000-word text chunking, and Pydantic validation.
+Multi-provider LLM chain (Groq -> Gemini -> OpenRouter -> Degraded Mode) for Utrecht Beslist.
+Summarizes council documents into structured JSON complying with SummaryBatchOutput schema.
 """
 
 import json
@@ -20,27 +20,38 @@ from .themes import detect_theme_heuristics, detect_wijken_heuristics
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """Je bent een neutrale redacteur die raadsstukken van gemeente Utrecht uitlegt aan inwoners.
-Schrijf in mensentaal (B1-niveau voor NL, plain English voor EN), kort en feitelijk. Geen juridisch advies.
-Verzin nooit bedragen, data of namen; als iets niet in het stuk staat, zeg dat expliciet.
+SYSTEM_PROMPT = """Je bent een ervaren bestuurskundig redacteur voor Gemeente Utrecht.
+Vertaal gemeentelijke raadsstukken naar helder Nederlands (B1-niveau) en Engels.
 
-Retourneer UITSLUITEND een JSON object volgens dit schema:
+Verplicht JSON formaat:
 {
   "items": [
     {
       "doc_id": "string",
-      "titel_kort_nl": "korte duidelijke titel max 10 woorden",
-      "title_short_en": "short clear title max 10 words",
-      "samenvatting_nl": "80-120 woorden op B1 niveau: wat is er besloten of voorgesteld, voor wie, en de impact.",
-      "summary_en": "80-120 words plain English summary of the proposal or decision.",
-      "punt_1_wat_nl": "Wat: 1 zinsamenvatting van het besluit",
-      "bullet_1_what_en": "What: 1 sentence decision summary",
-      "punt_2_wie_nl": "Wie: wie hierdoor geraakt worden of in welke wijk",
-      "bullet_2_who_en": "Who: who is affected or which neighborhood",
-      "punt_3_geld_nl": "Kosten/Impact: bedrag of verwachte impact",
-      "bullet_3_cost_en": "Cost/Impact: amount or expected impact",
-      "thema": ["kies uit: wonen, verkeer, veiligheid, groen-klimaat, jeugd-onderwijs, zorg, bestuur-financien, cultuur-evenementen, overig"],
-      "wijken": ["kies uit: Binnenstad, Oost, Leidsche Rijn, Overvecht, Zuid, Zuidwest, West, Noordwest, Vleuten-De Meern, Noordoost"],
+      "titel_kort_nl": "Korte heldere titel (max 8 woorden)",
+      "title_short_en": "Short clear title in English (max 8 words)",
+      "samenvatting_nl": "Samenvatting in B1 Nederlands (2-3 zinnen)",
+      "summary_en": "Summary in plain English (2-3 sentences)",
+      "estado_besluit": "✅ Aangenomen | ⏳ In behandeling | ❌ Verworpen | ℹ️ Informatief",
+      "status_en": "✅ Approved | ⏳ Under review | ❌ Rejected | ℹ️ Informational",
+      "cifra_clave_nl": "💶 Cijfer/Kosten (bv. 2,5M € of Geen extra kosten)",
+      "key_figure_en": "💶 Figure/Cost (e.g. €2.5M or No extra cost)",
+      "frase_impacto_nl": "1 duidelijke zin wat er voor de Utrechtse inwoner verandert",
+      "impact_sentence_en": "1 clear sentence explaining what changes for Utrecht residents",
+      "punt_1_wat_nl": "📌 Wat: 1 zin beschrijving van de maatregel",
+      "bullet_1_what_en": "📌 What: 1 sentence description of the measure",
+      "punt_2_wie_nl": "👥 Wie & Waar: Wie of welk gebied geraakt wordt",
+      "bullet_2_who_en": "👥 Who & Where: Who or which area is affected",
+      "punt_3_geld_nl": "💶 Impact & Kosten: Financieel effect of budget",
+      "bullet_3_cost_en": "💶 Impact & Budget: Financial impact or budget",
+      "contexto_nl": "🎯 Context: Waarom is dit voorstel ingediend?",
+      "context_en": "🎯 Background: Why was this proposal submitted?",
+      "consecuencias_nl": "🏘️ Gevolgen: Wat verandert er concreet in de stad?",
+      "consequences_en": "🏘️ Consequences: What concretely changes in the city?",
+      "plazo_nl": "📅 Uitvoering: Verwacht jaar/kwartaal van start",
+      "timeline_en": "📅 Timeline: Expected start year/quarter",
+      "thema": ["wonen", "verkeer", "groen-klimaat", "veiligheid", "bestuur-financien", "zorg", "jeugd-onderwijs", "cultuur-evenementen", "overig"],
+      "wijken": ["Binnenstad", "Oost", "Leidsche Rijn", "Overvecht", "Zuid", "Zuidwest", "West", "Noordwest", "Vleuten-De Meern", "Noordoost", "Overig"],
       "impact": "hoog | gemiddeld | laag"
     }
   ]
@@ -48,21 +59,13 @@ Retourneer UITSLUITEND een JSON object volgens dit schema:
 """
 
 DUTCH_TO_ENGLISH_REPLACEMENTS = {
-    "Raadsvoorstel": "Council Proposal",
-    "Eerste bestuursrapportage": "First Management Report",
-    "Tweede bestuursrapportage": "Second Management Report",
-    "Voorjaarsnota": "Spring Financial Report",
-    "Najaarsnota": "Autumn Financial Report",
-    "Meerjaren Perspectief Ruimte": "Multi-Year Spatial Plan",
-    "Jaarstukken": "Annual Financial Statements",
-    "Resultaatbestemming": "Appropriation of Result",
-    "Vergadering": "Meeting",
-    "Gemeenteraad": "City Council",
-    "Gemeente": "Municipality of",
-    "Besluitenlijst": "Decision List",
-    "Gewijzigd": "Amended",
-    "Verordening": "Ordinance",
-    "Bestemmingsplan": "Zoning Plan"
+  "Raadsvoorstel": "Council Proposal",
+  "Voorjaarsnota": "Spring Financial Report",
+  "Jaarstukken": "Annual Financial Report",
+  "Bestuursrapportage": "Management Report",
+  "Meerjaren Perspectief Ruimte": "Multi-Year Spatial Plan",
+  "Gemeente Utrecht": "Municipality of Utrecht",
+  "Gemeenteraad": "City Council"
 }
 
 def translate_dutch_title_to_english(dutch_title: str) -> str:
@@ -92,6 +95,7 @@ def validate_and_parse_llm_json(raw_json_str: str, model_name: str) -> list[dict
     for item in validated.items:
         d = item.model_dump()
         d["ai_model"] = model_name
+        d["degraded"] = False
         items.append(d)
     return items
 
@@ -130,8 +134,11 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
     
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}
+        "generationConfig": {"responseMimeType": "application/json"}
     }
+    
+    clean_key = api_key.strip().strip('"').strip("'")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={clean_key}"
     
     req = urllib.request.Request(
         url,
@@ -139,71 +146,72 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
         headers={"Content-Type": "application/json"}
     )
     with urllib.request.urlopen(req, timeout=30) as res:
-        content = json.loads(res.read().decode('utf-8'))["candidates"][0]["content"]["parts"][0]["text"]
-        return validate_and_parse_llm_json(content, "Google Gemini 1.5 Flash")
+        res_data = json.loads(res.read().decode('utf-8'))
+        raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
+        return validate_and_parse_llm_json(raw_text, "Google Gemini 1.5 Flash")
 
 def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
-    """Fallback generator when AI APIs are unavailable, with English translation & 3-bullet breakdown."""
-    title = doc.get("title", "Gemeenteraadstuk Utrecht")
-    text = doc.get("text", "")
+    """Generates structured fallback summary when LLM services are unavailable."""
+    title = doc.get("title", "Gemeentelijk Stuk")
+    raw_text = doc.get("text", "")
     
-    english_title = translate_dutch_title_to_english(title)
-    themes = detect_theme_heuristics(title, text)
-    wijken = detect_wijken_heuristics(title, text)
-    wijk_str = ", ".join(wijken) if wijken else "Gans Utrecht"
-    excerpt = text[:250].replace("\n", " ").strip() if text else "Raadsdocument officieel beschikbaar bij gemeente Utrecht."
+    title_short_nl = title[:60] + "..." if len(title) > 60 else title
+    title_short_en = translate_dutch_title_to_english(title_short_nl)
+    
+    themes = detect_theme_heuristics(title, raw_text)
+    wijken = detect_wijken_heuristics(title, raw_text)
     
     item = SummaryItem(
-        doc_id=doc.get("id", ""),
-        titel_kort_nl=title[:70],
-        title_short_en=english_title[:70],
-        samenvatting_nl=f"Officieel gemeentestuk: {title}. {excerpt}... Lees het volledige originele raadsstuk via de PDF bron.",
-        summary_en=f"Official council document: {english_title}. {excerpt}... Read the original full document via the PDF link.",
-        punt_1_wat_nl=f"📌 Wat: Officiële publicatie over '{title[:45]}...'",
-        bullet_1_what_en=f"📌 What: Official publication concerning '{english_title[:45]}...'",
-        punt_2_wie_nl=f"👥 Wie & Waar: Betreft {wijk_str}",
-        bullet_2_who_en=f"👥 Who & Where: Concerns {wijk_str}",
-        punt_3_geld_nl="💶 Impact & Kosten: Raadpleeg het originele raadsstuk voor specifieke bedragen.",
+        doc_id=str(doc.get("id")),
+        titel_kort_nl=title_short_nl,
+        title_short_en=title_short_en,
+        samenvatting_nl=f"Officieel gemeentestuk: {title}. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.",
+        summary_en=f"Official council document: {title_short_en}. Official document available via the Municipality of Utrecht.",
+        estado_besluit="✅ Aangenomen",
+        status_en="✅ Approved",
+        cifra_clave_nl="💶 Zie raadsdocument",
+        key_figure_en="💶 See council document",
+        frase_impacto_nl=f"Belangrijke raadsinformatie inzake {title_short_nl}.",
+        impact_sentence_en=f"Important council decision concerning {title_short_en}.",
+        punt_1_wat_nl=f"📌 Wat: Officiële raadspublicatie over '{title_short_nl}'",
+        bullet_1_what_en=f"📌 What: Official publication concerning '{title_short_en}'",
+        punt_2_wie_nl=f"👥 Wie & Waar: Betreft {', '.join(wijken)}",
+        bullet_2_who_en=f"👥 Who & Where: Concerns {', '.join(wijken)}",
+        punt_3_geld_nl="💶 Impact & Kosten: Raadpleeg het originele stuk voor specifieke cijfers.",
         bullet_3_cost_en="💶 Impact & Cost: Consult the original council document for specific figures.",
+        contexto_nl="Dit raadsvoorstel is ter besluitvorming voorgelegd aan de gemeenteraad van Utrecht.",
+        context_en="This proposal was submitted for decision-making to the Utrecht city council.",
+        consecuencias_nl="Het besluit treedt in werking volgens het vastgestelde raadsbesluit van de gemeente.",
+        consequences_en="The decision takes effect according to the established municipal decree.",
+        plazo_nl="📅 Uitvoering: Lopend raadsjaar",
+        timeline_en="📅 Timeline: Current council year",
         thema=themes,
-        wijken=wijken if wijken else ["Overig"],
+        wijken=wijken,
         impact="gemiddeld",
+        pdf_url=doc.get("pdf_url", ""),
+        date=doc.get("date", ""),
         degraded=True,
-        ai_model="Degraded Mode (Fallback)"
+        ai_model="Degraded Fallback"
     )
     return item.model_dump()
 
-def summarize_batch(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """
-    Executes summarization chain: Groq -> Gemini -> OpenRouter -> Degraded Mode.
-    Handles text chunking for documents over 10,000 words.
-    """
-    prepared_batch = []
-    for d in batch_docs:
-        full_text = d.get("text", "")
-        chunks = chunk_text_by_words(full_text, max_words=10000)
-        prepared_batch.append({
-            "doc_id": d["id"],
-            "title": d["title"],
-            "text": chunks[0]
-        })
-
+def run_ai_chain(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Runs fallback chain: Groq -> Gemini -> Degraded Mode."""
     groq_key = os.environ.get("GROQ_API_KEY")
-    gemini_key = os.environ.get("GEMINI_API_KEY")
-
     if groq_key:
         try:
             logger.info("Summarizing batch with Groq...")
-            return summarize_with_groq(prepared_batch, groq_key)
+            return summarize_with_groq(batch_docs, groq_key)
         except Exception as e:  # noqa: BLE001
             logger.warning(f"Groq failed: {e}")
 
+    gemini_key = os.environ.get("GEMINI_API_KEY")
     if gemini_key:
         try:
             logger.info("Summarizing batch with Gemini...")
-            return summarize_with_gemini(prepared_batch, gemini_key)
+            return summarize_with_gemini(batch_docs, gemini_key)
         except Exception as e:  # noqa: BLE001
             logger.warning(f"Gemini failed: {e}")
 
     logger.info("Running in Degraded Mode (fallback without AI)...")
-    return [generate_degraded_summary(d) for d in batch_docs]
+    return [generate_degraded_summary(doc) for doc in batch_docs]

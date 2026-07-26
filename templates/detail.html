@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.titel_kort_nl if lang == "nl" else item.title_short_en }} — Utrecht Beslist{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+  <a href="../../index.html" style="color: var(--color-primario); font-weight: 600;">{{ "← Terug naar overzicht" if lang == "nl" else "← Back to overview" }}</a>
+</nav>
+
+<!-- Main Detail Card Container -->
+<article class="controls-card" style="padding: 2.25rem;">
+  <!-- Header Badges -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--color-borde-suave); padding-bottom: 1rem;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
+        {{ item.estado_besluit if lang == "nl" else item.status_en }}
+      </span>
+
+      {% if lang == "en" %}
+        {% if item.impact == "hoog" %}
+          <span class="badge-impact impact-hoog">High Impact</span>
+        {% elif item.impact == "gemiddeld" %}
+          <span class="badge-impact impact-gemiddeld">Medium Impact</span>
+        {% else %}
+          <span class="badge-impact impact-laag">Low Impact</span>
+        {% endif %}
+      {% else %}
+        <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }} Impact</span>
+      {% endif %}
+    </div>
+
+    <span style="font-size: 0.9rem; color: var(--color-texto-secundario); font-weight: 600;">
+      📅 {{ item.date[:10] if item.date else "Recent" }}
+    </span>
+  </div>
+
+  <!-- Document Title -->
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--color-azul-oscuro); margin-bottom: 1rem; line-height: 1.25;">
+    {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+  </h1>
+
+  <!-- One Line Key Impact Highlight NoticeBox -->
+  <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
+    💡 {{ item.frase_impacto_nl if lang == "nl" else item.impact_sentence_en }}
+  </div>
+
+  <!-- 4 Deep Detailed Sections -->
+  <div style="display: flex; flex-direction: column; gap: 2rem;">
+    <!-- Section 1: Context -->
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🎯 {{ "Context & Achtergrond" if lang == "nl" else "Context & Background" }}
+      </h2>
+      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7;">
+        {{ item.contexto_nl if lang == "nl" else item.context_en }}
+      </p>
+    </section>
+
+    <!-- Section 2: Decision & Agreements -->
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        📋 {{ "Besluit & Afspraken" if lang == "nl" else "Decision & Agreements" }}
+      </h2>
+      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7; margin-bottom: 1rem;">
+        {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
+      </p>
+      
+      <!-- Bullet list breakdown -->
+      <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
+        <li class="bullet-item">{{ item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en }}</li>
+        <li class="bullet-item">{{ item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en }}</li>
+        <li class="bullet-item">{{ item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en }}</li>
+      </ul>
+    </section>
+
+    <!-- Section 3: Consequences for Residents -->
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ {{ "Gevolgen voor Inwoners" if lang == "nl" else "Impact on Residents" }}
+      </h2>
+      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7;">
+        {{ item.consecuencias_nl if lang == "nl" else item.consequences_en }}
+      </p>
+    </section>
+
+    <!-- Section 4: Budget & Timeline -->
+    <section style="background-color: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+      <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">
+        💶 {{ "Budget & Planning" if lang == "nl" else "Budget & Timeline" }}
+      </h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
+        <div>
+          <strong>{{ "Cijfer/Kosten:" if lang == "nl" else "Budget/Cost:" }}</strong>
+          <span>{{ item.cifra_clave_nl if lang == "nl" else item.key_figure_en }}</span>
+        </div>
+        <div>
+          <strong>{{ "Planning:" if lang == "nl" else "Timeline:" }}</strong>
+          <span>{{ item.plazo_nl if lang == "nl" else item.timeline_en }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tags & Area -->
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+      {% for t in item.thema %}
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">{{ themes[t][lang] if t in themes else t }}</span>
+      {% endfor %}
+      {% for w in item.wijken %}
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 {{ w }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Official PDF Source Action Card -->
+  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: #e6eef4; border-radius: var(--radius-sm); border-left: 4px solid var(--color-primario); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+    <div>
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.25rem;">
+        📄 {{ "Officieel Raadsdocument (Gemeente Utrecht)" if lang == "nl" else "Official Council Document (Municipality of Utrecht)" }}
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">
+        {{ "Document ID:" if lang == "nl" else "Document ID:" }} {{ item.doc_id }}
+      </p>
+    </div>
+
+    {% if item.pdf_url %}
+      <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+        📄 {{ "Download / Open PDF" if lang == "nl" else "Download / Open PDF" }} ➔
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- Transparency Footer -->
+  <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--color-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--color-texto-secundario);">
+    <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
+    
+    <div style="display: flex; gap: 1rem;">
+      <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', window.location.href)">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
+        ⚠️ {{ "Meld fout" if lang == "nl" else "Report error" }}
+      </a>
+    </div>
+  </div>
+</article>
+{% endblock %}

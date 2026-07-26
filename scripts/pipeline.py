@@ -15,7 +15,7 @@ load_dotenv()
 
 from dateutil.parser import parse as parse_date
 
-from .ai_chain import summarize_batch
+from .ai_chain import run_ai_chain
 from .build_site import build_static_site
 from .source_ori import fetch_utrecht_documents, filter_documents
 
@@ -93,7 +93,7 @@ def run_pipeline():
         batch_size = 5
         for i in range(0, len(docs_to_process), batch_size):
             batch = docs_to_process[i:i+batch_size]
-            summarized_items = summarize_batch(batch)
+            summarized_items = run_ai_chain(batch)
 
             doc_map = {d["id"]: d for d in batch}
             for sum_item in summarized_items:

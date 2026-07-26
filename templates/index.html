@@ -71,10 +71,16 @@
 
 <section class="cards-grid" id="cards-grid">
   {% for item in items %}
+  {% set detail_link = "besluit/" ~ item.doc_id ~ "/index.html" if lang == "nl" else "decision/" ~ item.doc_id ~ "/index.html" %}
   <article class="card" data-theme="{{ item.thema | join(' ') }}" data-wijk="{{ item.wijken | join(' ') | lower }}">
     <div>
       <div class="card-header">
-        <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+            {{ item.estado_besluit if lang == "nl" else item.status_en }}
+          </span>
+          <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
+        </div>
         
         {% if lang == "en" %}
           {% if item.impact == "hoog" %}
@@ -89,36 +95,25 @@
         {% endif %}
       </div>
 
+      <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+        <a href="{{ detail_link }}" style="color: inherit; text-decoration: none;">
+          {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+        </a>
       </h2>
 
-      <p class="card-summary">
-        {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
+      <!-- One-line Human Impact Highlight -->
+      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+        💡 {{ item.frase_impacto_nl if lang == "nl" else item.impact_sentence_en }}
       </p>
 
-      <!-- 3 Bullet Breakdown NoticeBox Pattern (Rendered only if content exists) -->
-      {% set bullet_1 = item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en %}
-      {% set bullet_2 = item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en %}
-      {% set bullet_3 = item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en %}
-
-      {% if bullet_1 or bullet_2 or bullet_3 %}
-      <ul class="bullet-list">
-        {% if bullet_1 %}
-          <li class="bullet-item">{{ bullet_1 }}</li>
-        {% endif %}
-        {% if bullet_2 %}
-          <li class="bullet-item">{{ bullet_2 }}</li>
-        {% endif %}
-        {% if bullet_3 %}
-          <li class="bullet-item">{{ bullet_3 }}</li>
-        {% endif %}
-      </ul>
-      {% endif %}
-
-      <span class="model-badge">🤖 {{ "AI Model:" if lang == "nl" else "AI Model:" }} {{ item.ai_model if item.ai_model else "Degraded Mode (Fallback)" }}</span>
-
+      <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
+        {% if item.cifra_clave_nl or item.key_figure_en %}
+          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+            {{ item.cifra_clave_nl if lang == "nl" else item.key_figure_en }}
+          </span>
+        {% endif %}
         {% for t in item.thema %}
           <span class="tag">{{ themes[t][lang] if t in themes else t }}</span>
         {% endfor %}
@@ -132,18 +127,11 @@
       <span>{{ "Bron: Gemeente Utrecht" if lang == "nl" else "Source: Municipality of Utrecht" }}</span>
       
       <div class="card-actions">
+        <a href="{{ detail_link }}" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+          📄 {{ "Bekijk details" if lang == "nl" else "View details" }} ➔
+        </a>
         <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', '{{ item.pdf_url }}')">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
-        
-        {% if item.pdf_url %}
-          <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
-            📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ➔
-          </a>
-        {% endif %}
       </div>
-      
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
-        ⚠️ {{ "Meld fout" if lang == "nl" else "Report error" }}
-      </a>
     </div>
   </article>
   {% endfor %}

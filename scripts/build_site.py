@@ -1,6 +1,6 @@
 """
 Site generator module rendering Jinja2 templates to docs/ static directory for GitHub Pages.
-Generates main pages, theme/wijk RSS feeds, and static month archives.
+Generates main pages, theme/wijk RSS feeds, month archives, and individual decision detail pages.
 """
 
 import json
@@ -89,6 +89,7 @@ def build_static_site(items: list):
     # Render Main NL & EN Pages
     index_template = env.get_template("index.html")
     over_template = env.get_template("over.html")
+    detail_template = env.get_template("detail.html")
 
     nl_index_html = index_template.render(lang="nl", items=items, themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "nl", "index.html"), "w", encoding="utf-8") as f:
@@ -105,6 +106,25 @@ def build_static_site(items: list):
     en_over_html = over_template.render(lang="en", themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "en", "over.html"), "w", encoding="utf-8") as f:
         f.write(en_over_html)
+
+    # Render Individual Decision Detail Pages
+    for item in items:
+        doc_id = item.get("doc_id")
+        if not doc_id:
+            continue
+        
+        nl_detail_dir = os.path.join(DOCS_DIR, "nl", "besluit", doc_id)
+        en_detail_dir = os.path.join(DOCS_DIR, "en", "decision", doc_id)
+        os.makedirs(nl_detail_dir, exist_ok=True)
+        os.makedirs(en_detail_dir, exist_ok=True)
+
+        nl_detail_html = detail_template.render(lang="nl", item=item, themes=THEMES, root_path="../../../")
+        with open(os.path.join(nl_detail_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(nl_detail_html)
+
+        en_detail_html = detail_template.render(lang="en", item=item, themes=THEMES, root_path="../../../")
+        with open(os.path.join(en_detail_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(en_detail_html)
 
     # Render Static Archives (2026/07)
     with open(os.path.join(DOCS_DIR, "nl", "archief", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
@@ -131,4 +151,4 @@ def build_static_site(items: list):
     with open(os.path.join(DOCS_DIR, "data", "latest.json"), "w", encoding="utf-8") as f:
         json.dump({"items": items, "count": len(items)}, f, indent=2, ensure_ascii=False)
 
-    logger.info(f"Successfully generated static site in {DOCS_DIR} with {len(items)} items, RSS feeds, and month archives.")
+    logger.info(f"Successfully generated static site in {DOCS_DIR} with {len(items)} items, RSS feeds, month archives, and individual detail pages.")
