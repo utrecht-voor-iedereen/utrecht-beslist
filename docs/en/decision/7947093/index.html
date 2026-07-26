@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Header Component: Minimal White Studio with Authentic Utrecht Flag Emblem -->
+  <!-- Header Component: Dark Navy Slate + Authentic Utrecht Flag Emblem + Dark Mode Toggle -->
   <header>
     <div class="header-container">
       <a href="../../../en/index.html" class="brand">
@@ -30,9 +30,13 @@
         <a href="../../../en/index.html" class="nav-link">Overview</a>
         <a href="../../../en/over.html" class="nav-link">About &amp; Transparency</a>
         
-        <div class="lang-switch">
-          <button class="lang-btn " data-lang="nl">NL</button>
-          <button class="lang-btn active" data-lang="en">EN</button>
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+
+          <div class="lang-switch">
+            <button class="lang-btn " data-lang="nl">NL</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
+          </div>
         </div>
       </nav>
     </div>
@@ -44,15 +48,15 @@
     
 <!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
-  <a href="../../../en/index.html" style="color: var(--color-primario); font-weight: 600;">
+  <a href="../../../en/index.html" style="color: var(--utrecht-azul-enlace); font-weight: 600;">
     ← Back to overview
   </a>
 </nav>
 
 <!-- Main Detail Card Container -->
 <article class="controls-card" style="padding: 2.25rem;">
-  <!-- Header Badges -->
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--color-borde-suave); padding-bottom: 1rem;">
+  <!-- Header Badges & Actions (Print + Audio TTS) -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
         ⏳ Under review
@@ -65,13 +69,24 @@
       
     </div>
 
-    <span style="font-size: 0.9rem; color: var(--color-texto-secundario); font-weight: 600;">
-      📅 2026-07-02
-    </span>
+    <!-- UI-UX Pro Max Audio TTS & Print-to-PDF Controls -->
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <button class="audio-btn" onclick="speakText('Utrecht residents may potentially get an alderman who does not live in Utrecht.. The city council discusses a proposal to exempt the residence requirement for aldermen.', 'en')">
+        🔊 Listen Audio
+      </button>
+
+      <button class="share-btn" onclick="window.print()">
+        🖨️ Print / PDF
+      </button>
+
+      <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
+        📅 2026-07-02
+      </span>
+    </div>
   </div>
 
   <!-- Document Title -->
-  <h1 style="font-size: 2rem; font-weight: 800; color: var(--color-azul-oscuro); margin-bottom: 1rem; line-height: 1.25;">
+  <h1 style="font-size: 2rem; font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
     Exemption of residence requirement
   </h1>
 
@@ -84,20 +99,20 @@
   <div style="display: flex; flex-direction: column; gap: 2rem;">
     <!-- Section 1: Context -->
     <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         🎯 Context &amp; Background
       </h2>
-      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7;">
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
         This proposal was submitted to offer more opportunities for finding suitable candidates for the alderman position.
       </p>
     </section>
 
     <!-- Section 2: Decision & Agreements -->
     <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         📋 Decision &amp; Agreements
       </h2>
-      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7; margin-bottom: 1rem;">
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
         The city council discusses a proposal to exempt the residence requirement for aldermen.
       </p>
       
@@ -111,17 +126,17 @@
 
     <!-- Section 3: Consequences for Residents -->
     <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         🏘️ Impact on Residents
       </h2>
-      <p style="font-size: 1rem; color: var(--color-texto-principal); line-height: 1.7;">
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
         It is possible that an alderman who does not live in Utrecht may be less connected to the local community.
       </p>
     </section>
 
     <!-- Section 4: Budget & Timeline -->
-    <section style="background-color: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
-      <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">
+    <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+      <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         💶 Budget &amp; Timeline
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
@@ -148,29 +163,29 @@
   </div>
 
   <!-- Official PDF Source & Verification Box -->
-  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: #e6eef4; border-radius: var(--radius-sm); border-left: 4px solid var(--color-primario);">
-    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">
+  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
+    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
       🏛️ Official Verification &amp; Sources
     </h3>
-    <p style="font-size: 0.9rem; color: var(--color-texto-principal); margin-bottom: 1rem;">
+    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 1rem;">
       This document was automatically retrieved from official public government registers. You can consult the original council document directly via the official portals below:
     </p>
 
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
       
       
-      <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--color-blanco);">
+      <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ Utrecht Council Portal 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--color-blanco);">
+      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🌐 Open Raadsinformatie API 🔗
       </a>
     </div>
   </div>
 
   <!-- Transparency Footer -->
-  <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--color-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--color-texto-secundario);">
+  <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <span>🤖 AI Transparency: Groq (llama-3.3-70b-versatile) · Automated via Open Data</span>
     
     <div style="display: flex; gap: 1rem;">
@@ -184,7 +199,7 @@
 
   </main>
 
-  <!-- 3-Column Footer Component: Dark Mineral Slate #0F172A -->
+  <!-- 3-Column Footer Component -->
   <footer>
     <div class="footer-content">
       <div class="footer-column">

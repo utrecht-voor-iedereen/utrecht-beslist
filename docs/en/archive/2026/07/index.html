@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Header Component: Minimal White Studio with Authentic Utrecht Flag Emblem -->
+  <!-- Header Component: Dark Navy Slate + Authentic Utrecht Flag Emblem + Dark Mode Toggle -->
   <header>
     <div class="header-container">
       <a href="../../../../en/index.html" class="brand">
@@ -30,9 +30,13 @@
         <a href="../../../../en/index.html" class="nav-link">Overview</a>
         <a href="../../../../en/over.html" class="nav-link">About &amp; Transparency</a>
         
-        <div class="lang-switch">
-          <button class="lang-btn " data-lang="nl">NL</button>
-          <button class="lang-btn active" data-lang="en">EN</button>
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+
+          <div class="lang-switch">
+            <button class="lang-btn " data-lang="nl">NL</button>
+            <button class="lang-btn active" data-lang="en">EN</button>
+          </div>
         </div>
       </nav>
     </div>
@@ -55,7 +59,7 @@
   <main class="main-wrapper">
     
 <section class="controls-card">
-  <!-- Opción 3: Prominent Human Impact Filters -->
+  <!-- Prominent Human Impact Filters -->
   <div class="human-impact-bar">
     <button class="human-impact-btn active" data-impact-group="all">🌐 All Decisions</button>
     <button class="human-impact-btn" data-impact-group="casa">🏠 My House &amp; Neighborhood</button>
@@ -64,7 +68,10 @@
   </div>
 
   <div class="search-box">
-    <label for="search-input" class="search-label">Search council documents or postal code (e.g. 3511, 3544)</label>
+    <label for="search-input" class="search-label">
+      Search council documents or postal code (e.g. 3511, 3544)
+      <span class="shortcut-hint" title="Snelkoppeling: Druk op '/' of Ctrl+K">/</span>
+    </label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="Search by keyword, postal code or topic...">
   </div>
@@ -129,12 +136,20 @@
   </div>
 </section>
 
-<!-- Opción 4: View Mode Switcher Header -->
+<!-- View Mode Switcher Header with Counter Badge & Shortcut Hint -->
 <div class="view-header-bar">
-  <span class="view-header-title">Council Decisions</span>
+  <span class="view-header-title">
+    Council Decisions
+    <span id="results-counter-badge" class="results-counter-badge"></span>
+  </span>
+  
   <div class="view-toggle-group">
-    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn">🃏 Cards</button>
-    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn">📋 Compact List</button>
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Druk op 'L' om te wisselen">
+      🃏 Cards <span class="shortcut-hint">L</span>
+    </button>
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Druk op 'L' om te wisselen">
+      📋 Compact List
+    </button>
   </div>
 </div>
 
@@ -145,7 +160,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -160,20 +175,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7961870/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7961870/index.html">
           Multi-Year Spatial Perspective
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect better spatial development.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -190,7 +205,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7961870/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7961870/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Multi-Year Spatial Perspective', '')">🔗 Share</button>
@@ -203,7 +218,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -218,20 +233,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7961871/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7961871/index.html">
           Spring Memorandum 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect better financial development.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -248,7 +263,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7961871/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7961871/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Spring Memorandum 2026', '')">🔗 Share</button>
@@ -261,7 +276,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -276,20 +291,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7961872/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7961872/index.html">
           First Administrative Report 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect better administrative development.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -306,7 +321,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7961872/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7961872/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('First Administrative Report 2026', '')">🔗 Share</button>
@@ -319,7 +334,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -334,20 +349,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7961873/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7961873/index.html">
           Result Destination 2025
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect better financial results.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -364,7 +379,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7961873/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7961873/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Result Destination 2025', '')">🔗 Share</button>
@@ -377,7 +392,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -392,20 +407,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7961874/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7961874/index.html">
           Annual Reports 2025
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect better financial reports.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -422,7 +437,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7961874/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7961874/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Annual Reports 2025', '')">🔗 Share</button>
@@ -435,7 +450,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -450,20 +465,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7947062/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7947062/index.html">
           Exemption of residence requirement
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents may potentially get an alderman who does not live in Utrecht.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -480,7 +495,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7947062/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7947062/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Exemption of residence requirement', '')">🔗 Share</button>
@@ -493,7 +508,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -508,20 +523,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7947071/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7947071/index.html">
           Spring Memorandum 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect the municipality to have its finances in order.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             €2.5M
           </span>
         
@@ -538,7 +553,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7947071/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7947071/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Spring Memorandum 2026', '')">🔗 Share</button>
@@ -551,7 +566,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -566,20 +581,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7947092/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7947092/index.html">
           Appointment of Aldermen
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents can expect new aldermen to be appointed.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -596,7 +611,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7947092/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7947092/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Appointment of Aldermen', '')">🔗 Share</button>
@@ -609,7 +624,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ Under review
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -624,20 +639,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="decision/7947093/index.html" style="color: inherit; text-decoration: none;">
+        <a href="decision/7947093/index.html">
           Exemption of residence requirement
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Utrecht residents may potentially get an alderman who does not live in Utrecht.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             No extra cost
           </span>
         
@@ -654,7 +669,7 @@
       <span>Source: Municipality of Utrecht</span>
       
       <div class="card-actions">
-        <a href="decision/7947093/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="decision/7947093/index.html" class="pdf-link">
           📄 View details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Exemption of residence requirement', '')">🔗 Share</button>
@@ -664,13 +679,13 @@
   
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--color-texto-secundario);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--utrecht-gris-secundario);">
   <p>No matching decisions found for your query.</p>
 </div>
 
   </main>
 
-  <!-- 3-Column Footer Component: Dark Mineral Slate #0F172A -->
+  <!-- 3-Column Footer Component -->
   <footer>
     <div class="footer-content">
       <div class="footer-column">

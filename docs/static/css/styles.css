@@ -1,21 +1,21 @@
 /* ==========================================================================
-   Utrecht Beslist — Warm Cream & Slate Identity Theme
-   Combines Warm Cream/Grey Tones + Dark Navy Header + Official Utrecht Flag Accent
+   Utrecht Beslist — UI-UX Pro Max Theme Architecture
+   Includes Dark Mode, Smooth Motion Animations, Print Stylesheet & Accessibility
    ========================================================================== */
 
 :root {
-  /* Warm Cream & Surface Grey Palette */
+  /* Warm Cream & Surface Palette (Light Mode Default) */
   --utrecht-rood: #CC0000;           /* Utrecht Flag Red (Precision Accent) */
-  --utrecht-crema-fondo: #F4F3EF;    /* Main Body Warm Cream/Grey Background */
-  --utrecht-blanco-tarjeta: #FFFFFF; /* Clean White for Cards & Controls */
-  --utrecht-superficie: #EAE7E0;     /* Soft Warm Grey/Cream Fills & Filters */
-  --utrecht-negro: #1A1D20;          /* Deep Body Text */
-  --utrecht-azul-oscuro: #162436;    /* Dark Navy/Slate Header & Footer */
-  --utrecht-gris-secundario: #5A6578;/* Subtitles, Metadata, Dates */
+  --utrecht-crema-fondo: #F4F3EF;    /* Main Body Background */
+  --utrecht-blanco-tarjeta: #FFFFFF; /* Clean White Cards & Controls */
+  --utrecht-superficie: #EAE7E0;     /* Soft Surface Fills & Filters */
+  --utrecht-negro: #1A1D20;          /* Primary Body Text */
+  --utrecht-azul-oscuro: #162436;    /* Dark Navy Header & Footer */
+  --utrecht-gris-secundario: #5A6578;/* Subtitles & Dates */
   --utrecht-borde-suave: #E2DFD7;    /* Warm Soft Borders */
   --utrecht-borde-medio: #C8C4B7;    /* Input Borders */
   --utrecht-azul-enlace: #1E3A8A;    /* Deep Blue Links & Primary Actions */
-  --utrecht-foco: #2563EB;          /* Keyboard focus ring */
+  --utrecht-foco: #2563EB;          /* Keyboard Focus Ring */
 
   /* Status Colors */
   --utrecht-verde-exito: #15803D;
@@ -31,7 +31,22 @@
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.08);
-  --transition: all 0.2s ease-in-out;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   UI-UX Pro Max Dark Mode Palette ([data-theme="dark"])
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  --utrecht-crema-fondo: #0F172A;
+  --utrecht-blanco-tarjeta: #1E293B;
+  --utrecht-superficie: #334155;
+  --utrecht-negro: #F8FAFC;
+  --utrecht-azul-oscuro: #090E17;
+  --utrecht-gris-secundario: #94A3B8;
+  --utrecht-borde-suave: #334155;
+  --utrecht-borde-medio: #475569;
+  --utrecht-azul-enlace: #60A5FA;
 }
 
 * {
@@ -48,6 +63,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Accessible Focus Ring (WCAG AA Verified) */
@@ -66,7 +82,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Header Component (Dark Navy #162436 + Utrecht Flag Red Accent Stripe)
+   Header Component
    -------------------------------------------------------------------------- */
 header {
   background-color: var(--utrecht-azul-oscuro);
@@ -149,7 +165,7 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .nav-link {
@@ -166,6 +182,28 @@ header {
   background-color: rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle-btn {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .lang-switch {
@@ -194,7 +232,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Banner / PageHeader Component (Warm Cream Surface)
+   Hero Banner / PageHeader Component
    -------------------------------------------------------------------------- */
 .hero-banner {
   background-color: var(--utrecht-crema-fondo);
@@ -210,7 +248,7 @@ header {
 .hero-banner h1 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-negro);
   margin-bottom: 0.5rem;
   line-height: 1.25;
 }
@@ -222,9 +260,7 @@ header {
   line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   NoticeBox Component Pattern (Utrecht Red Left Border)
-   -------------------------------------------------------------------------- */
+/* NoticeBox Component Pattern */
 .notice-box {
   background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-suave);
@@ -240,17 +276,50 @@ header {
 
 .notice-box.warning {
   border-left-color: var(--utrecht-rood);
-  background-color: #FEF2F2;
+  background-color: rgba(204, 0, 0, 0.08);
 }
 
 .notice-box.success {
   border-left-color: var(--utrecht-verde-exito);
-  background-color: #F0FDF4;
+  background-color: rgba(21, 128, 61, 0.08);
 }
 
 .notice-box.info {
   border-left-color: var(--utrecht-azul-enlace);
-  background-color: #F0F9FF;
+  background-color: rgba(30, 58, 138, 0.08);
+}
+
+/* Shortcut Badge Hint */
+.shortcut-hint {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  background-color: var(--utrecht-superficie);
+  border: 1px solid var(--utrecht-borde-suave);
+  border-radius: var(--radius-sm);
+  color: var(--utrecht-gris-secundario);
+  margin-left: 0.4rem;
+}
+
+/* Audio Player Button */
+.audio-btn {
+  background-color: var(--utrecht-crema-fondo);
+  border: 1px solid var(--utrecht-borde-suave);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--utrecht-azul-enlace);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.audio-btn:hover {
+  background-color: var(--utrecht-azul-enlace);
+  color: #FFFFFF;
 }
 
 /* --------------------------------------------------------------------------
@@ -273,7 +342,7 @@ header {
   margin-bottom: 2rem;
 }
 
-/* Human Impact Buttons (Opción 3) */
+/* Human Impact Buttons */
 .human-impact-bar {
   display: flex;
   flex-wrap: wrap;
@@ -301,7 +370,6 @@ header {
 .human-impact-btn:hover {
   border-color: var(--utrecht-azul-enlace);
   color: var(--utrecht-azul-enlace);
-  background-color: #EBF4FF;
 }
 
 .human-impact-btn.active {
@@ -317,10 +385,11 @@ header {
 }
 
 .search-label {
-  display: block;
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-negro);
   margin-bottom: 0.5rem;
 }
 
@@ -367,14 +436,14 @@ header {
 }
 
 .filter-chip:hover {
-  border-color: var(--utrecht-azul-oscuro);
-  color: var(--utrecht-azul-oscuro);
+  border-color: var(--utrecht-rood);
+  color: var(--utrecht-rood);
 }
 
 .filter-chip.active {
-  background-color: var(--utrecht-azul-oscuro);
+  background-color: var(--utrecht-rood);
   color: #FFFFFF;
-  border-color: var(--utrecht-azul-oscuro);
+  border-color: var(--utrecht-rood);
 }
 
 /* Map Selector Block */
@@ -390,7 +459,7 @@ header {
 .map-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-negro);
   margin-bottom: 0.75rem;
 }
 
@@ -418,7 +487,7 @@ header {
   border-color: var(--utrecht-rood);
 }
 
-/* View Switcher Header (Opción 4) */
+/* View Switcher Header */
 .view-header-bar {
   display: flex;
   align-items: center;
@@ -429,7 +498,19 @@ header {
 .view-header-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-negro);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.results-counter-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--utrecht-superficie);
+  border-radius: 12px;
+  color: var(--utrecht-gris-secundario);
 }
 
 .view-toggle-group {
@@ -457,8 +538,19 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   Card Component Pattern (Warm Cream & White Card Contrast)
+   Card Motion & Layout Animation
    -------------------------------------------------------------------------- */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -511,6 +603,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   transition: var(--transition);
+  animation: fadeInCard 0.25s ease-out forwards;
 }
 
 .card:hover {
@@ -542,27 +635,27 @@ header {
 }
 
 .impact-hoog {
-  background-color: #FEF2F2;
+  background-color: rgba(204, 0, 0, 0.12);
   color: var(--utrecht-rood);
-  border: 1px solid rgba(204, 0, 0, 0.2);
+  border: 1px solid rgba(204, 0, 0, 0.25);
 }
 
 .impact-gemiddeld {
-  background-color: #FFF7ED;
+  background-color: rgba(194, 65, 12, 0.12);
   color: var(--utrecht-naranja-aviso);
-  border: 1px solid rgba(194, 65, 12, 0.2);
+  border: 1px solid rgba(194, 65, 12, 0.25);
 }
 
 .impact-laag {
-  background-color: #F0FDF4;
+  background-color: rgba(21, 128, 61, 0.12);
   color: var(--utrecht-verde-exito);
-  border: 1px solid rgba(21, 128, 61, 0.2);
+  border: 1px solid rgba(21, 128, 61, 0.25);
 }
 
 .card-title {
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--utrecht-azul-oscuro);
+  color: var(--utrecht-negro);
   margin-bottom: 0.75rem;
   line-height: 1.35;
 }
@@ -679,7 +772,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   Footer Component (Dark Navy Slate #162436)
+   Footer Component
    -------------------------------------------------------------------------- */
 footer {
   background-color: var(--utrecht-azul-oscuro);
@@ -737,6 +830,34 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   UI-UX Pro Max Print-to-PDF Stylesheet (@media print)
+   -------------------------------------------------------------------------- */
+@media print {
+  header, footer, nav, .controls-card, .map-section, .view-header-bar, .card-actions, .share-btn, .report-issue-link, .lang-switch, .theme-toggle-btn, .header-tools {
+    display: none !important;
+  }
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+  .main-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .controls-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .notice-box {
+    border-left: 3pt solid #000000 !important;
+    background-color: #F8F8F8 !important;
+  }
 }
 
 @media (max-width: 768px) {

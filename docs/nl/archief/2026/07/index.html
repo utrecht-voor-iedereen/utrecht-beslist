@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Header Component: Minimal White Studio with Authentic Utrecht Flag Emblem -->
+  <!-- Header Component: Dark Navy Slate + Authentic Utrecht Flag Emblem + Dark Mode Toggle -->
   <header>
     <div class="header-container">
       <a href="../../../../nl/index.html" class="brand">
@@ -30,9 +30,13 @@
         <a href="../../../../nl/index.html" class="nav-link">Overzicht</a>
         <a href="../../../../nl/over.html" class="nav-link">Over &amp; Transparantie</a>
         
-        <div class="lang-switch">
-          <button class="lang-btn active" data-lang="nl">NL</button>
-          <button class="lang-btn " data-lang="en">EN</button>
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang="nl">NL</button>
+            <button class="lang-btn " data-lang="en">EN</button>
+          </div>
         </div>
       </nav>
     </div>
@@ -55,7 +59,7 @@
   <main class="main-wrapper">
     
 <section class="controls-card">
-  <!-- Opción 3: Prominent Human Impact Filters -->
+  <!-- Prominent Human Impact Filters -->
   <div class="human-impact-bar">
     <button class="human-impact-btn active" data-impact-group="all">🌐 Alle Besluiten</button>
     <button class="human-impact-btn" data-impact-group="casa">🏠 Mijn Huis &amp; Buurt</button>
@@ -64,7 +68,10 @@
   </div>
 
   <div class="search-box">
-    <label for="search-input" class="search-label">Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)</label>
+    <label for="search-input" class="search-label">
+      Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)
+      <span class="shortcut-hint" title="Snelkoppeling: Druk op '/' of Ctrl+K">/</span>
+    </label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="Zoek op trefwoord, postcode of onderwerp...">
   </div>
@@ -129,12 +136,20 @@
   </div>
 </section>
 
-<!-- Opción 4: View Mode Switcher Header -->
+<!-- View Mode Switcher Header with Counter Badge & Shortcut Hint -->
 <div class="view-header-bar">
-  <span class="view-header-title">Gemeenteraadsbesluiten</span>
+  <span class="view-header-title">
+    Gemeenteraadsbesluiten
+    <span id="results-counter-badge" class="results-counter-badge"></span>
+  </span>
+  
   <div class="view-toggle-group">
-    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn">🃏 Kaarten</button>
-    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn">📋 Compacte Lijst</button>
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Druk op 'L' om te wisselen">
+      🃏 Kaarten <span class="shortcut-hint">L</span>
+    </button>
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Druk op 'L' om te wisselen">
+      📋 Compacte Lijst
+    </button>
   </div>
 </div>
 
@@ -145,7 +160,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -158,20 +173,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7961870/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7961870/index.html">
           Meerjaren Perspectief Ruimte
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 De Utrechtse inwoner kan rekenen op een betere ruimtelijke ontwikkeling.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -188,7 +203,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7961870/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7961870/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Meerjaren Perspectief Ruimte', '')">🔗 Delen</button>
@@ -201,7 +216,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -214,20 +229,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7961871/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7961871/index.html">
           Voorjaarsnota 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 De Utrechtse inwoner kan rekenen op een betere financiële ontwikkeling.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -244,7 +259,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7961871/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7961871/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Voorjaarsnota 2026', '')">🔗 Delen</button>
@@ -257,7 +272,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -270,20 +285,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7961872/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7961872/index.html">
           Eerste bestuursrapportage 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 De Utrechtse inwoner kan rekenen op een betere bestuurlijke ontwikkeling.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -300,7 +315,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7961872/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7961872/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Eerste bestuursrapportage 2026', '')">🔗 Delen</button>
@@ -313,7 +328,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -326,20 +341,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7961873/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7961873/index.html">
           Resultaatbestemming 2025
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 De Utrechtse inwoner kan rekenen op een betere financiële resultaat.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -356,7 +371,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7961873/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7961873/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Resultaatbestemming 2025', '')">🔗 Delen</button>
@@ -369,7 +384,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳
           </span>
           <span class="card-date">📅 2026-07-09</span>
@@ -382,20 +397,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7961874/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7961874/index.html">
           Jaarstukken 2025
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 De Utrechtse inwoner kan rekenen op een betere financiële verslag.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -412,7 +427,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7961874/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7961874/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Jaarstukken 2025', '')">🔗 Delen</button>
@@ -425,7 +440,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ In behandeling
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -438,20 +453,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7947062/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7947062/index.html">
           Ontheffing woonplaatsvereiste
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Inwoners van Utrecht kunnen mogelijk een wethouder krijgen die niet in Utrecht woont.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -468,7 +483,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7947062/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7947062/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Ontheffing woonplaatsvereiste', '')">🔗 Delen</button>
@@ -481,7 +496,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ In behandeling
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -494,20 +509,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7947071/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7947071/index.html">
           Voorjaarsnota 2026
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Inwoners van Utrecht kunnen verwachten dat de gemeente haar financiën op orde heeft.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             2,5M €
           </span>
         
@@ -524,7 +539,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7947071/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7947071/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Voorjaarsnota 2026', '')">🔗 Delen</button>
@@ -537,7 +552,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ In behandeling
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -550,20 +565,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7947092/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7947092/index.html">
           Benoeming Wethouders
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Inwoners van Utrecht kunnen verwachten dat er nieuwe wethouders worden benoemd.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -580,7 +595,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7947092/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7947092/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Benoeming Wethouders', '')">🔗 Delen</button>
@@ -593,7 +608,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             ⏳ In behandeling
           </span>
           <span class="card-date">📅 2026-07-02</span>
@@ -606,20 +621,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="besluit/7947093/index.html" style="color: inherit; text-decoration: none;">
+        <a href="besluit/7947093/index.html">
           Ontheffing woonplaatsvereiste
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 Inwoners van Utrecht kunnen mogelijk een wethouder krijgen die niet in Utrecht woont.
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             Geen extra kosten
           </span>
         
@@ -636,7 +651,7 @@
       <span>Bron: Gemeente Utrecht</span>
       
       <div class="card-actions">
-        <a href="besluit/7947093/index.html" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="besluit/7947093/index.html" class="pdf-link">
           📄 Bekijk details ➔
         </a>
         <button class="share-btn" onclick="shareCard('Ontheffing woonplaatsvereiste', '')">🔗 Delen</button>
@@ -646,13 +661,13 @@
   
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--color-texto-secundario);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--utrecht-gris-secundario);">
   <p>Geen resultaten gevonden voor de opgegeven zoekopdracht.</p>
 </div>
 
   </main>
 
-  <!-- 3-Column Footer Component: Dark Mineral Slate #0F172A -->
+  <!-- 3-Column Footer Component -->
   <footer>
     <div class="footer-content">
       <div class="footer-column">

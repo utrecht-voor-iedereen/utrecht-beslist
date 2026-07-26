@@ -16,7 +16,7 @@
 
 {% block content %}
 <section class="controls-card">
-  <!-- Opción 3: Prominent Human Impact Filters -->
+  <!-- Prominent Human Impact Filters -->
   <div class="human-impact-bar">
     <button class="human-impact-btn active" data-impact-group="all">🌐 {{ "Alle Besluiten" if lang == "nl" else "All Decisions" }}</button>
     <button class="human-impact-btn" data-impact-group="casa">🏠 {{ "Mijn Huis & Buurt" if lang == "nl" else "My House & Neighborhood" }}</button>
@@ -25,7 +25,10 @@
   </div>
 
   <div class="search-box">
-    <label for="search-input" class="search-label">{{ "Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)" if lang == "nl" else "Search council documents or postal code (e.g. 3511, 3544)" }}</label>
+    <label for="search-input" class="search-label">
+      {{ "Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)" if lang == "nl" else "Search council documents or postal code (e.g. 3511, 3544)" }}
+      <span class="shortcut-hint" title="Snelkoppeling: Druk op '/' of Ctrl+K">/</span>
+    </label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, postcode of onderwerp...' if lang == 'nl' else 'Search by keyword, postal code or topic...' }}">
   </div>
@@ -60,12 +63,20 @@
   </div>
 </section>
 
-<!-- Opción 4: View Mode Switcher Header -->
+<!-- View Mode Switcher Header with Counter Badge & Shortcut Hint -->
 <div class="view-header-bar">
-  <span class="view-header-title">{{ "Gemeenteraadsbesluiten" if lang == "nl" else "Council Decisions" }}</span>
+  <span class="view-header-title">
+    {{ "Gemeenteraadsbesluiten" if lang == "nl" else "Council Decisions" }}
+    <span id="results-counter-badge" class="results-counter-badge"></span>
+  </span>
+  
   <div class="view-toggle-group">
-    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn">🃏 {{ "Kaarten" if lang == "nl" else "Cards" }}</button>
-    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn">📋 {{ "Compacte Lijst" if lang == "nl" else "Compact List" }}</button>
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Druk op 'L' om te wisselen">
+      🃏 {{ "Kaarten" if lang == "nl" else "Cards" }} <span class="shortcut-hint">L</span>
+    </button>
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Druk op 'L' om te wisselen">
+      📋 {{ "Compacte Lijst" if lang == "nl" else "Compact List" }}
+    </button>
   </div>
 </div>
 
@@ -76,7 +87,7 @@
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-primario); background: var(--color-superficie); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             {{ item.estado_besluit if lang == "nl" else item.status_en }}
           </span>
           <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
@@ -97,20 +108,20 @@
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
-        <a href="{{ detail_link }}" style="color: inherit; text-decoration: none;">
+        <a href="{{ detail_link }}">
           {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
-      <p class="card-summary" style="font-weight: 600; color: var(--color-texto-principal); margin-bottom: 0.75rem;">
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
         💡 {{ item.frase_impacto_nl if lang == "nl" else item.impact_sentence_en }}
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
         {% if item.cifra_clave_nl or item.key_figure_en %}
-          <span class="tag" style="font-weight: 700; color: var(--color-azul-oscuro);">
+          <span class="tag" style="font-weight: 700;">
             {{ item.cifra_clave_nl if lang == "nl" else item.key_figure_en }}
           </span>
         {% endif %}
@@ -127,7 +138,7 @@
       <span>{{ "Bron: Gemeente Utrecht" if lang == "nl" else "Source: Municipality of Utrecht" }}</span>
       
       <div class="card-actions">
-        <a href="{{ detail_link }}" class="pdf-link" style="color: var(--color-primario); font-weight: 700;">
+        <a href="{{ detail_link }}" class="pdf-link">
           📄 {{ "Bekijk details" if lang == "nl" else "View details" }} ➔
         </a>
         <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', '{{ item.pdf_url }}')">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
@@ -137,7 +148,7 @@
   {% endfor %}
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--color-texto-secundario);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--utrecht-gris-secundario);">
   <p>{{ "Geen resultaten gevonden voor de opgegeven zoekopdracht." if lang == "nl" else "No matching decisions found for your query." }}</p>
 </div>
 {% endblock %}
