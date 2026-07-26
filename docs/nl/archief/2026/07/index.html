@@ -58,8 +58,9 @@
 
   <main class="main-wrapper">
     
+<!-- Option A UX Control Panel (Clean, Hierarchical, 0 Visual Clutter) -->
 <section class="controls-card">
-  <!-- Prominent Human Impact Filters -->
+  <!-- Row 1: Prominent Human Impact Buttons -->
   <div class="human-impact-bar">
     <button class="human-impact-btn active" data-impact-group="all">🌐 Alle Besluiten</button>
     <button class="human-impact-btn" data-impact-group="casa">🏠 Mijn Huis &amp; Buurt</button>
@@ -67,6 +68,7 @@
     <button class="human-impact-btn" data-impact-group="movilidad">🚲 Mijn Mobiliteit &amp; Dagelijks Leven</button>
   </div>
 
+  <!-- Row 2: Clean Search Input -->
   <div class="search-box">
     <label for="search-input" class="search-label">
       Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)
@@ -78,68 +80,67 @@
 
   <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
 
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-    <div class="filters-group">
-      <button class="filter-chip active" data-theme="all">Alle onderwerpen</button>
+  <!-- Row 3: Option A Smart Selectors (Wijk & Theme Dropdowns) -->
+  <div class="smart-selectors-row">
+    <!-- Wijk Selector -->
+    <select id="wijk-select" class="filter-select">
+      <option value="all">📍 Alle Wijken in Utrecht</option>
+      <option value="Binnenstad">🏰 Binnenstad</option>
+      <option value="Oost">🌳 Oost</option>
+      <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
+      <option value="Overvecht">🏢 Overvecht</option>
+      <option value="Zuid">estation Zuid</option>
+      <option value="Zuidwest">🚲 Zuidwest</option>
+      <option value="West">🛠️ West</option>
+      <option value="Noordwest">🏞️ Noordwest</option>
+      <option value="Vleuten-De Meern">🌾 Vleuten-De Meern</option>
+      <option value="Noordoost">🎓 Noordoost</option>
+    </select>
+
+    <!-- Specific Theme Selector -->
+    <select id="theme-select" class="filter-select">
+      <option value="all">🏷️ Alle Onderwerpen</option>
       
         
-          <button class="filter-chip" data-theme="wonen">🏠 Wonen &amp; Huisvesting</button>
-        
-      
-        
-          <button class="filter-chip" data-theme="verkeer">🚲 Verkeer &amp; Mobiliteit</button>
-        
-      
-        
-          <button class="filter-chip" data-theme="veiligheid">🛡️ Veiligheid &amp; Handhaving</button>
-        
-      
-        
-          <button class="filter-chip" data-theme="groen-klimaat">🌿 Groen &amp; Klimaat</button>
-        
-      
-        
-          <button class="filter-chip" data-theme="jeugd-onderwijs">🎓 Jeugd &amp; Onderwijs</button>
-        
-      
-        
-          <button class="filter-chip" data-theme="zorg">❤️ Zorg &amp; Welzijn</button>
+          <option value="wonen">🏠 Wonen &amp; Huisvesting</option>
         
       
         
-          <button class="filter-chip" data-theme="bestuur-financien">🏛️ Bestuur &amp; Financiën</button>
+          <option value="verkeer">🚲 Verkeer &amp; Mobiliteit</option>
         
       
         
-          <button class="filter-chip" data-theme="cultuur-evenementen">🎨 Cultuur &amp; Sport</button>
+          <option value="veiligheid">🛡️ Veiligheid &amp; Handhaving</option>
+        
+      
+        
+          <option value="groen-klimaat">🌿 Groen &amp; Klimaat</option>
+        
+      
+        
+          <option value="jeugd-onderwijs">🎓 Jeugd &amp; Onderwijs</option>
+        
+      
+        
+          <option value="zorg">❤️ Zorg &amp; Welzijn</option>
+        
+      
+        
+          <option value="bestuur-financien">🏛️ Bestuur &amp; Financiën</option>
+        
+      
+        
+          <option value="cultuur-evenementen">🎨 Cultuur &amp; Sport</option>
         
       
         
       
-    </div>
+    </select>
 
     <!-- Active Filter Reset Button -->
-    <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood);">
+    <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
       ❌ Reset filters <span class="shortcut-hint">Esc</span>
     </button>
-  </div>
-</section>
-
-<!-- Interactive Selector for Utrecht Wijken -->
-<section class="map-section">
-  <h2 class="map-title">📍 Filter op Wijk in Utrecht</h2>
-  <div class="map-grid">
-    <button class="wijk-map-path active" data-wijk="all">🌐 Alle Wijken</button>
-    <button class="wijk-map-path" data-wijk="Binnenstad">🏰 Binnenstad</button>
-    <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
-    <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
-    <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
-    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
-    <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
-    <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
-    <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
-    <button class="wijk-map-path" data-wijk="Vleuten-De Meern">🌾 Vleuten-De Meern</button>
-    <button class="wijk-map-path" data-wijk="Noordoost">🎓 Noordoost</button>
   </div>
 </section>
 

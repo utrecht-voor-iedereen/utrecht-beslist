@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Utrecht Beslist — UI-UX Pro Max Theme Architecture
-   Includes Dark Mode, Smooth Motion Animations, Print Stylesheet & Accessibility
+   Utrecht Beslist — Option A UX Control Panel Theme Architecture
+   Includes Smart Dropdown Selectors, Dark Mode, Animations & Accessibility
    ========================================================================== */
 
 :root {
@@ -34,9 +34,7 @@
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --------------------------------------------------------------------------
-   UI-UX Pro Max Dark Mode Palette ([data-theme="dark"])
-   -------------------------------------------------------------------------- */
+/* UI-UX Pro Max Dark Mode Palette ([data-theme="dark"]) */
 [data-theme="dark"] {
   --utrecht-crema-fondo: #0F172A;
   --utrecht-blanco-tarjeta: #1E293B;
@@ -323,7 +321,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   Main Layout & Filter Controls
+   Main Layout & Option A Smart Control Panel
    -------------------------------------------------------------------------- */
 .main-wrapper {
   max-width: 1140px;
@@ -416,75 +414,30 @@ header {
   font-size: 1.1rem;
 }
 
-.filters-group {
+/* Smart Selector Row (Option A) */
+.smart-selectors-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
-.filter-chip {
-  padding: 0.4rem 0.85rem;
+.filter-select {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.65rem 1rem;
   background-color: var(--utrecht-crema-fondo);
-  border: 1px solid var(--utrecht-borde-suave);
+  border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.filter-chip:hover {
-  border-color: var(--utrecht-rood);
-  color: var(--utrecht-rood);
-}
-
-.filter-chip.active {
-  background-color: var(--utrecht-rood);
-  color: #FFFFFF;
-  border-color: var(--utrecht-rood);
-}
-
-/* Map Selector Block */
-.map-section {
-  background-color: var(--utrecht-blanco-tarjeta);
-  border: 1px solid var(--utrecht-borde-suave);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.map-title {
-  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--utrecht-negro);
-  margin-bottom: 0.75rem;
-}
-
-.map-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.wijk-map-path {
-  background-color: var(--utrecht-crema-fondo);
-  color: var(--utrecht-negro);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  border: 1px solid var(--utrecht-borde-suave);
   transition: var(--transition);
 }
 
-.wijk-map-path:hover, .wijk-map-path.selected, .wijk-map-path.active {
-  background-color: var(--utrecht-rood);
-  color: #FFFFFF;
-  border-color: var(--utrecht-rood);
+.filter-select:focus {
+  border-color: var(--utrecht-azul-enlace);
 }
 
 /* View Switcher Header */
@@ -771,9 +724,7 @@ header {
   text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   Footer Component
-   -------------------------------------------------------------------------- */
+/* Footer Component */
 footer {
   background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
@@ -832,11 +783,8 @@ footer {
   gap: 1rem;
 }
 
-/* --------------------------------------------------------------------------
-   UI-UX Pro Max Print-to-PDF Stylesheet (@media print)
-   -------------------------------------------------------------------------- */
 @media print {
-  header, footer, nav, .controls-card, .map-section, .view-header-bar, .card-actions, .share-btn, .report-issue-link, .lang-switch, .theme-toggle-btn, .header-tools {
+  header, footer, nav, .controls-card, .view-header-bar, .card-actions, .share-btn, .report-issue-link, .lang-switch, .theme-toggle-btn, .header-tools {
     display: none !important;
   }
   body {
@@ -854,10 +802,6 @@ footer {
     box-shadow: none !important;
     padding: 0 !important;
   }
-  .notice-box {
-    border-left: 3pt solid #000000 !important;
-    background-color: #F8F8F8 !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -869,6 +813,9 @@ footer {
     align-items: flex-start;
   }
   .human-impact-bar {
+    flex-direction: column;
+  }
+  .smart-selectors-row {
     flex-direction: column;
   }
   .header-container {

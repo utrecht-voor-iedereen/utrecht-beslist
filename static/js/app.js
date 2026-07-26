@@ -29,13 +29,13 @@ const HUMAN_IMPACT_THEMES = {
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
-  const filterChips = document.querySelectorAll('.filter-chip');
   const humanImpactBtns = document.querySelectorAll('.human-impact-btn');
+  const wijkSelect = document.getElementById('wijk-select');
+  const themeSelect = document.getElementById('theme-select');
   const cardsGrid = document.getElementById('cards-grid');
   const cards = document.querySelectorAll('.card');
   const langBtns = document.querySelectorAll('.lang-btn');
   const postalBadge = document.getElementById('postal-badge');
-  const mapPaths = document.querySelectorAll('.wijk-map-path');
   const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const resultsCounterBadge = document.getElementById('results-counter-badge');
@@ -109,14 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     activeWijk = 'all';
     detectedWijk = '';
     
-    filterChips.forEach(c => c.classList.remove('active'));
-    document.querySelector('.filter-chip[data-theme="all"]')?.classList.add('active');
+    if (wijkSelect) wijkSelect.value = 'all';
+    if (themeSelect) themeSelect.value = 'all';
 
     humanImpactBtns.forEach(b => b.classList.remove('active'));
     document.querySelector('.human-impact-btn[data-impact-group="all"]')?.classList.add('active');
-
-    mapPaths.forEach(p => p.classList.remove('active', 'selected'));
-    document.querySelector('.wijk-map-path[data-wijk="all"]')?.classList.add('active');
 
     if (postalBadge) postalBadge.style.display = 'none';
 
@@ -197,25 +194,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Specific Theme Filter Chips Event
-  filterChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      filterChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      activeTheme = chip.dataset.theme || 'all';
+  // Wijk Select Event (Option A)
+  if (wijkSelect) {
+    wijkSelect.addEventListener('change', (e) => {
+      activeWijk = e.target.value;
       filterCards();
     });
-  });
+  }
 
-  // Neighborhood Filter Clicks
-  mapPaths.forEach(path => {
-    path.addEventListener('click', () => {
-      mapPaths.forEach(p => p.classList.remove('active', 'selected'));
-      path.classList.add('active', 'selected');
-      activeWijk = path.dataset.wijk || 'all';
+  // Theme Select Event (Option A)
+  if (themeSelect) {
+    themeSelect.addEventListener('change', (e) => {
+      activeTheme = e.target.value;
       filterCards();
     });
-  });
+  }
 
   // View Mode Switcher Event
   viewToggleBtns.forEach(btn => {
