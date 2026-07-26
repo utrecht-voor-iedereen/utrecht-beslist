@@ -69,7 +69,7 @@
       
     </div>
 
-    <!-- UI-UX Pro Max Audio TTS & Print-to-PDF Controls -->
+    <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
       <button class="audio-btn" onclick="speakText('Utrecht residents can expect the municipality to have its finances in order.. The Spring Memorandum 2026 is a financial overview of the municipality of Utrecht.', 'en')">
         🔊 Listen Audio
@@ -162,14 +162,19 @@
     </div>
   </div>
 
-  <!-- Official PDF Source & Verification Box -->
+  <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ Official Verification &amp; Sources
+      🏛️ Official Verification &amp; Woo Rights (Open Government Act)
     </h3>
-    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 1rem;">
-      This document was automatically retrieved from official public government registers. You can consult the original council document directly via the official portals below:
+    
+    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+      This council document is an official government record. Pursuant to the Dutch Open Government Act (Woo) and Archives Act, these records are permanently preserved and made publicly accessible.
     </p>
+
+    <div style="font-size: 0.85rem; color: var(--utrecht-gris-secundario); margin-bottom: 1.25rem;">
+      💡 <strong>Woo Right:</strong> Need to inspect internal background correspondence or annexes? You have the legal right to submit a Woo request to the Municipality of Utrecht.
+    </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
       
@@ -184,9 +189,12 @@
     </div>
   </div>
 
-  <!-- Transparency Footer -->
+  <!-- Transparency Footer with Persistence & Freshness Info -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
-    <span>🤖 AI Transparency: Groq (llama-3.3-70b-versatile) · Automated via Open Data</span>
+    <div>
+      <span>🤖 AI Transparency: Groq (llama-3.3-70b-versatile)</span>
+      <span style="margin-left: 0.75rem;">📦 Permanently archived (Archives Act)</span>
+    </div>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Spring Memorandum 2026', window.location.href)">🔗 Share</button>

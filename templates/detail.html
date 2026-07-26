@@ -32,7 +32,7 @@
       {% endif %}
     </div>
 
-    <!-- UI-UX Pro Max Audio TTS & Print-to-PDF Controls -->
+    <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
       <button class="audio-btn" onclick="speakText('{{ item.frase_impacto_nl if lang == 'nl' else item.impact_sentence_en }}. {{ item.samenvatting_nl if lang == 'nl' else item.summary_en }}', '{{ lang }}')">
         🔊 {{ "Voorlezen" if lang == "nl" else "Listen Audio" }}
@@ -125,14 +125,19 @@
     </div>
   </div>
 
-  <!-- Official PDF Source & Verification Box -->
+  <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ {{ "Officiële Verificatie & Bronnen" if lang == "nl" else "Official Verification & Sources" }}
+      🏛️ {{ "Officiële Verificatie & Woo-Rechten (Wet open overheid)" if lang == "nl" else "Official Verification & Woo Rights (Open Government Act)" }}
     </h3>
-    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 1rem;">
-      {{ "Dit document is geautomatiseerd opgehaald uit de openbare registers van de overheid. Je kunt het originele raadsstuk rechtstreeks raadplegen via onderstaande officiële portalen:" if lang == "nl" else "This document was automatically retrieved from official public government registers. You can consult the original council document directly via the official portals below:" }}
+    
+    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+      {{ "Dit raadsdocument is een officieel overheidsstuk. Op grond van de Nederlandse Wet open overheid (Woo) en de Archiefwet worden deze raadsstukken permanent bewaard en openbaar gemaakt." if lang == "nl" else "This council document is an official government record. Pursuant to the Dutch Open Government Act (Woo) and Archives Act, these records are permanently preserved and made publicly accessible." }}
     </p>
+
+    <div style="font-size: 0.85rem; color: var(--utrecht-gris-secundario); margin-bottom: 1.25rem;">
+      💡 <strong>{{ "Woo-Recht:" if lang == "nl" else "Woo Right:" }}</strong> {{ "Wil je de achterliggende ambtelijke correspondentie of bijlagen inzien? Dan kun je een Woo-verzoek indienen bij Gemeente Utrecht." if lang == "nl" else "Need to inspect internal background correspondence or annexes? You have the legal right to submit a Woo request to the Municipality of Utrecht." }}
+    </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
       {% if item.pdf_url %}
@@ -151,9 +156,12 @@
     </div>
   </div>
 
-  <!-- Transparency Footer -->
+  <!-- Transparency Footer with Persistence & Freshness Info -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
-    <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }} · {{ "Geautomatiseerd op basis van Open Data" if lang == "nl" else "Automated via Open Data" }}</span>
+    <div>
+      <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
+      <span style="margin-left: 0.75rem;">📦 {{ "Permanent gearchiveerd (Archiefwet 1995)" if lang == "nl" else "Permanently archived (Archives Act)" }}</span>
+    </div>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', window.location.href)">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>

@@ -67,7 +67,7 @@
       
     </div>
 
-    <!-- UI-UX Pro Max Audio TTS & Print-to-PDF Controls -->
+    <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
       <button class="audio-btn" onclick="speakText('Inwoners van Utrecht kunnen verwachten dat er nieuwe wethouders worden benoemd.. De gemeenteraad bespreekt de benoeming van nieuwe wethouders.', 'nl')">
         🔊 Voorlezen
@@ -160,14 +160,19 @@
     </div>
   </div>
 
-  <!-- Official PDF Source & Verification Box -->
+  <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ Officiële Verificatie &amp; Bronnen
+      🏛️ Officiële Verificatie &amp; Woo-Rechten (Wet open overheid)
     </h3>
-    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 1rem;">
-      Dit document is geautomatiseerd opgehaald uit de openbare registers van de overheid. Je kunt het originele raadsstuk rechtstreeks raadplegen via onderstaande officiële portalen:
+    
+    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+      Dit raadsdocument is een officieel overheidsstuk. Op grond van de Nederlandse Wet open overheid (Woo) en de Archiefwet worden deze raadsstukken permanent bewaard en openbaar gemaakt.
     </p>
+
+    <div style="font-size: 0.85rem; color: var(--utrecht-gris-secundario); margin-bottom: 1.25rem;">
+      💡 <strong>Woo-Recht:</strong> Wil je de achterliggende ambtelijke correspondentie of bijlagen inzien? Dan kun je een Woo-verzoek indienen bij Gemeente Utrecht.
+    </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
       
@@ -182,9 +187,12 @@
     </div>
   </div>
 
-  <!-- Transparency Footer -->
+  <!-- Transparency Footer with Persistence & Freshness Info -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
-    <span>🤖 AI Transparantie: Groq (llama-3.3-70b-versatile) · Geautomatiseerd op basis van Open Data</span>
+    <div>
+      <span>🤖 AI Transparantie: Groq (llama-3.3-70b-versatile)</span>
+      <span style="margin-left: 0.75rem;">📦 Permanent gearchiveerd (Archiefwet 1995)</span>
+    </div>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Benoeming Wethouders', window.location.href)">🔗 Delen</button>
