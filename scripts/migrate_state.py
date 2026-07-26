@@ -3,7 +3,9 @@ Migration script to backfill existing state items with 3-bullet breakdown and En
 """
 
 import json
+
 from scripts.ai_chain import generate_degraded_summary
+
 
 def migrate():
     state_file = "state/processed.json"

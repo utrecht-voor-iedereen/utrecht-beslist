@@ -9,6 +9,10 @@ import os
 from datetime import datetime, timezone
 from typing import Any
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from dateutil.parser import parse as parse_date
 
 from .ai_chain import summarize_batch
@@ -70,14 +74,19 @@ def run_pipeline():
     raw_hits = fetch_utrecht_documents(size=30)
     filtered_docs = filter_documents(raw_hits)
 
+    has_ai_keys = bool(os.environ.get("GROQ_API_KEY") or os.environ.get("GEMINI_API_KEY"))
     docs_to_process = []
     for doc in filtered_docs:
         doc_id = doc["id"]
-        # Upsert rule: process if new OR if date/content has updated
-        if doc_id not in existing_map or existing_map[doc_id].get("date") != doc.get("date"):
+        is_existing = doc_id in existing_map
+        is_degraded = is_existing and existing_map[doc_id].get("degraded", False)
+        date_changed = is_existing and existing_map[doc_id].get("date") != doc.get("date")
+
+        # Process if new, date changed, or upgrading from degraded mode with AI keys
+        if not is_existing or date_changed or (is_degraded and has_ai_keys):
             docs_to_process.append(doc)
 
-    logger.info(f"Discovered {len(docs_to_process)} new/updated documents to process.")
+    logger.info(f"Discovered {len(docs_to_process)} new/updated/upgradeable documents to process.")
 
     new_summaries = []
     if docs_to_process:

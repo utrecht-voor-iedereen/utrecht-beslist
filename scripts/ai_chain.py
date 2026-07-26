@@ -10,6 +10,10 @@ import urllib.error
 import urllib.request
 from typing import Any
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from .schemas import SummaryBatchOutput, SummaryItem
 from .themes import detect_theme_heuristics, detect_wijken_heuristics
 
@@ -105,10 +109,15 @@ def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[
         ]
     }
     
+    clean_key = api_key.strip().strip('"').strip("'")
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode('utf-8'),
-        headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {clean_key}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) UtrechtBeslist/1.0"
+        }
     )
     with urllib.request.urlopen(req, timeout=30) as res:
         content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
