@@ -142,10 +142,12 @@ def build_static_site(items: list):
     # RSS Feeds per Theme
     for key, theme_data in THEMES.items():
         theme_items = [it for it in items if key in it.get("thema", [])]
+        nl_title = str(theme_data["nl"])
+        en_title = str(theme_data["en"])
         with open(os.path.join(DOCS_DIR, "nl", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
-            f.write(generate_rss_xml(theme_items, "nl", theme_data["nl"]))
+            f.write(generate_rss_xml(theme_items, "nl", nl_title))
         with open(os.path.join(DOCS_DIR, "en", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
-            f.write(generate_rss_xml(theme_items, "en", theme_data["en"]))
+            f.write(generate_rss_xml(theme_items, "en", en_title))
 
     # Write Public Data API JSON
     with open(os.path.join(DOCS_DIR, "data", "latest.json"), "w", encoding="utf-8") as f:

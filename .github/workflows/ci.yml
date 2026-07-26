@@ -30,7 +30,7 @@ jobs:
 
       - name: Type Check with Mypy
         run: |
-          mypy scripts/ --ignore-missing-imports
+          mypy scripts --explicit-package-bases --ignore-missing-imports
 
       - name: Run Pytest
         run: |
