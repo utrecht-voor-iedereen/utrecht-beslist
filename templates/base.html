@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Utrecht Beslist — {{ "Gemeente Utrecht Raadsbesluiten" if lang == "nl" else "Utrecht City Council Decisions" }}{% endblock %}</title>
   <meta name="description" content="{{ 'Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).' if lang == 'nl' else 'Utrecht city council decisions and documents explained in plain English.' }}">
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="feed.xml">
+  <link rel="stylesheet" href="{{ root_path if root_path else '../' }}static/css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="{{ root_path if root_path else '../' }}{{ lang }}/feed.xml">
 </head>
 <body>
 
   <!-- Header Component with 4px Yellow Identity Stripe -->
   <header>
     <div class="header-container">
-      <a href="index.html" class="brand">
+      <a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html" class="brand">
         <div class="brand-emblem">U</div>
         <div class="brand-text">
           <span class="brand-title">Utrecht Beslist</span>
@@ -21,8 +21,8 @@
         </div>
       </a>
       <nav class="nav-links" aria-label="Principal">
-        <a href="index.html" class="nav-link">{{ "Overzicht" if lang == "nl" else "Overview" }}</a>
-        <a href="over.html" class="nav-link">{{ "Over & Transparantie" if lang == "nl" else "About & Transparency" }}</a>
+        <a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html" class="nav-link">{{ "Overzicht" if lang == "nl" else "Overview" }}</a>
+        <a href="{{ root_path if root_path else '../' }}{{ lang }}/over.html" class="nav-link">{{ "Over & Transparantie" if lang == "nl" else "About & Transparency" }}</a>
         
         <div class="lang-switch">
           <button class="lang-btn {{ 'active' if lang == 'nl' else '' }}" data-lang="nl">NL</button>
@@ -49,10 +49,10 @@
       <div class="footer-column">
         <h3>{{ "Navigatie & Feeds" if lang == "nl" else "Navigation & Feeds" }}</h3>
         <ul>
-          <li><a href="index.html">{{ "Overzicht besluiten" if lang == "nl" else "Decisions Overview" }}</a></li>
-          <li><a href="over.html">{{ "Over & Transparantie" if lang == "nl" else "About & Transparency" }}</a></li>
-          <li><a href="feed.xml">RSS Feed ({{ lang | upper }})</a></li>
-          <li><a href="../data/latest.json">JSON API</a></li>
+          <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html">{{ "Overzicht besluiten" if lang == "nl" else "Decisions Overview" }}</a></li>
+          <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/over.html">{{ "Over & Transparantie" if lang == "nl" else "About & Transparency" }}</a></li>
+          <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/feed.xml">RSS Feed ({{ lang | upper }})</a></li>
+          <li><a href="{{ root_path if root_path else '../' }}data/latest.json">JSON API</a></li>
         </ul>
       </div>
 
@@ -68,6 +68,6 @@
     </div>
   </footer>
 
-  <script src="../static/js/app.js"></script>
+  <script src="{{ root_path if root_path else '../' }}static/js/app.js"></script>
 </body>
 </html>

@@ -38,16 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
   let searchQuery = '';
   let detectedWijk = '';
 
-  // Language Switcher Logic
+  // Language Switcher Logic (supporting detail subpages)
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetLang = btn.dataset.lang;
       const currentPath = window.location.pathname;
       
-      if (targetLang === 'en' && currentPath.includes('/nl/')) {
-        window.location.href = currentPath.replace('/nl/', '/en/');
-      } else if (targetLang === 'nl' && currentPath.includes('/en/')) {
-        window.location.href = currentPath.replace('/en/', '/nl/');
+      if (targetLang === 'en') {
+        if (currentPath.includes('/nl/besluit/')) {
+          window.location.href = currentPath.replace('/nl/besluit/', '/en/decision/');
+        } else if (currentPath.includes('/nl/')) {
+          window.location.href = currentPath.replace('/nl/', '/en/');
+        }
+      } else if (targetLang === 'nl') {
+        if (currentPath.includes('/en/decision/')) {
+          window.location.href = currentPath.replace('/en/decision/', '/nl/besluit/');
+        } else if (currentPath.includes('/en/')) {
+          window.location.href = currentPath.replace('/en/', '/nl/');
+        }
       }
     });
   });

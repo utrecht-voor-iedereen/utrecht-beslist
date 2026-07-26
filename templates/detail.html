@@ -5,7 +5,9 @@
 {% block content %}
 <!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
-  <a href="../../index.html" style="color: var(--color-primario); font-weight: 600;">{{ "← Terug naar overzicht" if lang == "nl" else "← Back to overview" }}</a>
+  <a href="{{ root_path if root_path else '../../../' }}{{ lang }}/index.html" style="color: var(--color-primario); font-weight: 600;">
+    {{ "← Terug naar overzicht" if lang == "nl" else "← Back to overview" }}
+  </a>
 </nav>
 
 <!-- Main Detail Card Container -->
