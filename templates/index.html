@@ -5,6 +5,9 @@
   <div class="hero-content">
     <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
     <p>{{ "Overzicht van raadsvoorstellen en besluiten van de gemeenteraad van Utrecht in heldere taal, met rechtstreekse link naar het officiële stuk." if lang == "nl" else "Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents." }}</p>
+    <div style="margin-top: 1rem; display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.88rem; font-weight: 600;">
+      {{ "📊 Archief:" if lang == "nl" else "📊 Archive:" }} {{ items | length }} {{ "raadsbesluiten permanent bewaard (historische data blijft bewaard)" if lang == "nl" else "council decisions permanently preserved (historical data never expires)" }}
+    </div>
   </div>
 </section>
 {% endblock %}
@@ -32,8 +35,19 @@
   <article class="card" data-theme="{{ item.thema | join(' ') }}">
     <div>
       <div class="card-header">
-        <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
-        <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }}</span>
+        <span class="card-date">📅 {{ item.date[:10] if item.date else ("Recent" if lang == "nl" else "Recent") }}</span>
+        
+        {% if lang == "en" %}
+          {% if item.impact == "hoog" %}
+            <span class="badge-impact impact-hoog">High</span>
+          {% elif item.impact == "gemiddeld" %}
+            <span class="badge-impact impact-gemiddeld">Medium</span>
+          {% else %}
+            <span class="badge-impact impact-laag">Low</span>
+          {% endif %}
+        {% else %}
+          <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }}</span>
+        {% endif %}
       </div>
 
       <h2 class="card-title">
@@ -55,13 +69,13 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span>{{ "Bron: Gemeente Utrecht" if lang == "nl" else "Source: Municipality of Utrecht" }}</span>
       {% if item.pdf_url %}
         <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
           📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ➔
         </a>
       {% else %}
-        <span>PDF niet beschikbaar</span>
+        <span>{{ "PDF niet beschikbaar" if lang == "nl" else "PDF unavailable" }}</span>
       {% endif %}
     </div>
   </article>

@@ -11,15 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeTheme = 'all';
   let searchQuery = '';
 
-  // Language Switcher Logic
+  // Language Switcher Logic (preserves current page subpath)
   langBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const targetLang = btn.dataset.lang;
       const currentPath = window.location.pathname;
-      if (targetLang === 'en' && !currentPath.includes('/en/')) {
-        window.location.href = '../en/index.html';
-      } else if (targetLang === 'nl' && !currentPath.includes('/nl/')) {
-        window.location.href = '../nl/index.html';
+      
+      if (targetLang === 'en' && currentPath.includes('/nl/')) {
+        window.location.href = currentPath.replace('/nl/', '/en/');
+      } else if (targetLang === 'nl' && currentPath.includes('/en/')) {
+        window.location.href = currentPath.replace('/en/', '/nl/');
       }
     });
   });

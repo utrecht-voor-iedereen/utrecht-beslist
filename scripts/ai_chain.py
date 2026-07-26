@@ -1,6 +1,6 @@
 """
 Resilient LLM summarization chain supporting Groq -> Gemini -> OpenRouter -> Degraded Mode.
-Includes max 10,000-word text chunking and Pydantic validation.
+Includes max 10,000-word text chunking, English title translation for fallback mode, and Pydantic validation.
 """
 
 import json
@@ -36,6 +36,31 @@ Retourneer UITSLUITEND een JSON object volgens dit schema:
   ]
 }
 """
+
+DUTCH_TO_ENGLISH_REPLACEMENTS = {
+    "Raadsvoorstel": "Council Proposal",
+    "Eerste bestuursrapportage": "First Management Report",
+    "Tweede bestuursrapportage": "Second Management Report",
+    "Voorjaarsnota": "Spring Financial Report",
+    "Najaarsnota": "Autumn Financial Report",
+    "Meerjaren Perspectief Ruimte": "Multi-Year Spatial Plan",
+    "Jaarstukken": "Annual Financial Statements",
+    "Resultaatbestemming": "Appropriation of Result",
+    "Vergadering": "Meeting",
+    "Gemeenteraad": "City Council",
+    "Gemeente": "Municipality of",
+    "Besluitenlijst": "Decision List",
+    "Gewijzigd": "Amended",
+    "Verordening": "Ordinance",
+    "Bestemmingsplan": "Zoning Plan"
+}
+
+def translate_dutch_title_to_english(dutch_title: str) -> str:
+    """Translates key Dutch municipal administrative terms into clear English."""
+    eng_title = dutch_title
+    for nl_term, en_term in DUTCH_TO_ENGLISH_REPLACEMENTS.items():
+        eng_title = eng_title.replace(nl_term, en_term)
+    return eng_title
 
 def chunk_text_by_words(text: str, max_words: int = 10000) -> list[str]:
     """Divides text into chunks of at most max_words."""
@@ -97,9 +122,11 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
         return validate_and_parse_llm_json(content)
 
 def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
-    """Fallback generator when AI APIs are unavailable."""
+    """Fallback generator when AI APIs are unavailable, with English translation helper."""
     title = doc.get("title", "Gemeenteraadstuk Utrecht")
     text = doc.get("text", "")
+    
+    english_title = translate_dutch_title_to_english(title)
     
     themes = detect_theme_heuristics(title, text)
     wijken = detect_wijken_heuristics(title, text)
@@ -107,10 +134,10 @@ def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
     
     item = SummaryItem(
         doc_id=doc.get("id", ""),
-        titel_kort_nl=title[:60],
-        title_short_en=title[:60],
+        titel_kort_nl=title[:70],
+        title_short_en=english_title[:70],
         samenvatting_nl=f"Officieel gemeentestuk: {title}. {excerpt}... Lees het volledige originele raadsstuk via de PDF bron.",
-        summary_en=f"Official council document: {title}. {excerpt}... Read the original full document via the PDF link.",
+        summary_en=f"Official council document: {english_title}. {excerpt}... Read the original full document via the PDF link.",
         thema=themes,
         wijken=wijken if wijken else ["Overig"],
         impact="gemiddeld",
@@ -126,12 +153,11 @@ def summarize_batch(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
     prepared_batch = []
     for d in batch_docs:
         full_text = d.get("text", "")
-        # Apply 10,000-word chunking limit if necessary
         chunks = chunk_text_by_words(full_text, max_words=10000)
         prepared_batch.append({
             "doc_id": d["id"],
             "title": d["title"],
-            "text": chunks[0] # Primary chunk
+            "text": chunks[0]
         })
 
     groq_key = os.environ.get("GROQ_API_KEY")
