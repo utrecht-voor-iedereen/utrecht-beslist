@@ -81,7 +81,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Header Component & Vector Logo
+   Header Component & Vector Logo Contrast Rules
    -------------------------------------------------------------------------- */
 header {
   background-color: var(--utrecht-azul-oscuro);
@@ -115,6 +115,15 @@ header {
   max-width: 100%;
   width: auto;
   display: block;
+}
+
+/* High Contrast Override for Header SVG Logo on Dark Navy Background */
+header .brand-logo-svg text tspan.title-utrecht {
+  fill: #FFFFFF !important;
+}
+
+header .brand-logo-svg text.subtitle-text {
+  fill: rgba(255, 255, 255, 0.85) !important;
 }
 
 .nav-links {
