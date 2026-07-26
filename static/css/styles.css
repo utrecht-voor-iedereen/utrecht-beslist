@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Utrecht Beslist — Option A UX Control Panel Theme Architecture
-   Includes Vector SVG Logo, Dark Mode, Animations & Ko-fi Support Button
+   Utrecht Beslist — Impeccable Mobile Responsive & Theme Architecture
+   Fully optimized for iOS/Android Mobile Viewports, Touch Targets & Accessibility
    ========================================================================== */
 
 :root {
@@ -62,6 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 /* Accessible Focus Ring (WCAG AA Verified) */
@@ -106,10 +107,12 @@ header {
   align-items: center;
   text-decoration: none;
   color: #FFFFFF;
+  max-width: 100%;
 }
 
 .brand-logo-svg {
-  height: 48px;
+  height: 44px;
+  max-width: 100%;
   width: auto;
   display: block;
 }
@@ -125,9 +128,12 @@ header {
   font-weight: 600;
   font-size: 0.92rem;
   text-decoration: none;
-  padding: 0.4rem 0.75rem;
+  padding: 0.45rem 0.75rem;
   border-radius: var(--radius-sm);
   transition: var(--transition);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -146,12 +152,15 @@ header {
   background-color: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 16px;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .theme-toggle-btn:hover {
@@ -167,7 +176,7 @@ header {
 }
 
 .lang-btn {
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 16px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -176,6 +185,9 @@ header {
   border: none;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .lang-btn.active {
@@ -184,7 +196,7 @@ header {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Banner / PageHeader Component
+   Hero Banner Component
    -------------------------------------------------------------------------- */
 .hero-banner {
   background-color: var(--utrecht-crema-fondo);
@@ -258,8 +270,8 @@ header {
   background-color: var(--utrecht-crema-fondo);
   border: 1px solid var(--utrecht-borde-suave);
   border-radius: var(--radius-sm);
-  padding: 0.35rem 0.7rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--utrecht-azul-enlace);
   cursor: pointer;
@@ -267,6 +279,7 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-height: 44px;
 }
 
 .audio-btn:hover {
@@ -317,6 +330,10 @@ header {
   text-align: center;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .human-impact-btn:hover {
@@ -352,7 +369,8 @@ header {
   border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
-  font-size: 0.95rem;
+  font-size: 1rem; /* 16px font-size prevents iOS Safari auto-zoom */
+  min-height: 44px;
   transition: var(--transition);
 }
 
@@ -385,7 +403,8 @@ header {
   border-radius: var(--radius-sm);
   color: var(--utrecht-negro);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem; /* 16px font-size prevents iOS Safari auto-zoom */
+  min-height: 44px;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -429,7 +448,7 @@ header {
 }
 
 .view-toggle-btn {
-  padding: 0.35rem 0.8rem;
+  padding: 0.4rem 0.85rem;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--utrecht-gris-secundario);
@@ -437,6 +456,9 @@ header {
   border: none;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .view-toggle-btn.active {
@@ -649,6 +671,7 @@ header {
   color: var(--utrecht-azul-enlace);
   font-weight: 700;
   text-decoration: none;
+  min-height: 40px;
 }
 
 .pdf-link:hover {
@@ -659,12 +682,15 @@ header {
   background-color: var(--utrecht-blanco-tarjeta);
   border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-sm);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--utrecht-gris-secundario);
   cursor: pointer;
   transition: var(--transition);
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .share-btn:hover {
@@ -676,15 +702,16 @@ header {
   background-color: #FFCC00;
   color: #162436 !important;
   font-weight: 700;
-  padding: 0.45rem 0.9rem;
+  padding: 0.55rem 1rem;
   border-radius: var(--radius-sm);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  min-height: 44px;
 }
 
 .kofi-btn:hover {
@@ -778,25 +805,96 @@ footer {
   }
 }
 
+/* --------------------------------------------------------------------------
+   Impeccable Mobile Responsive Breakpoints (< 768px & < 480px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .brand-logo-svg {
+    height: 38px;
+    max-width: 100%;
+  }
+
+  .hero-banner {
+    padding: 1.75rem 1rem;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.65rem;
+  }
+
+  .main-wrapper {
+    margin: 1rem auto 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .controls-card {
+    padding: 1rem;
+  }
+
+  .human-impact-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .human-impact-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .smart-selectors-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-select {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .cards-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
   .cards-grid.view-list-mode .card {
     flex-direction: column;
     align-items: flex-start;
   }
-  .human-impact-bar {
-    flex-direction: column;
+
+  .card {
+    padding: 1.15rem 1rem;
   }
-  .smart-selectors-row {
+
+  .card-footer {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
-  .header-container {
-    flex-direction: column;
-    gap: 1rem;
+
+  .card-actions {
+    width: 100%;
+    justify-content: space-between;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .footer-bottom {
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
