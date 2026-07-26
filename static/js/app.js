@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const resultsCounterBadge = document.getElementById('results-counter-badge');
+  const resetFiltersBtn = document.getElementById('reset-filters-btn');
 
   let activeTheme = 'all';
   let activeHumanImpactGroup = 'all';
@@ -99,6 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Reset Filters Function
+  function resetAllFilters() {
+    if (searchInput) searchInput.value = '';
+    searchQuery = '';
+    activeTheme = 'all';
+    activeHumanImpactGroup = 'all';
+    activeWijk = 'all';
+    detectedWijk = '';
+    
+    filterChips.forEach(c => c.classList.remove('active'));
+    document.querySelector('.filter-chip[data-theme="all"]')?.classList.add('active');
+
+    humanImpactBtns.forEach(b => b.classList.remove('active'));
+    document.querySelector('.human-impact-btn[data-impact-group="all"]')?.classList.add('active');
+
+    mapPaths.forEach(p => p.classList.remove('active', 'selected'));
+    document.querySelector('.wijk-map-path[data-wijk="all"]')?.classList.add('active');
+
+    if (postalBadge) postalBadge.style.display = 'none';
+
+    filterCards();
+  }
+
+  if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', resetAllFilters);
+  }
+
   // Filter Cards Logic
   function filterCards() {
     let visibleCount = 0;
@@ -141,6 +169,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (resultsCounterBadge) {
       resultsCounterBadge.textContent = `${visibleCount} ${visibleCount === 1 ? 'item' : 'items'}`;
+    }
+
+    // Toggle Reset Button
+    const isFiltered = (activeTheme !== 'all' || activeHumanImpactGroup !== 'all' || activeWijk !== 'all' || searchQuery !== '');
+    if (resetFiltersBtn) {
+      resetFiltersBtn.style.display = isFiltered ? 'inline-flex' : 'none';
     }
   }
 
@@ -199,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Keyboard Shortcuts (UI-UX Pro Max)
+  // Keyboard Shortcuts
   document.addEventListener('keydown', (e) => {
     // Focus Search with '/' or 'Ctrl+K' / 'Cmd+K'
     if (e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) {
@@ -211,25 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Clear Filters with 'Esc'
     if (e.key === 'Escape') {
-      if (searchInput) searchInput.value = '';
-      searchQuery = '';
-      activeTheme = 'all';
-      activeHumanImpactGroup = 'all';
-      activeWijk = 'all';
-      detectedWijk = '';
-      
-      filterChips.forEach(c => c.classList.remove('active'));
-      document.querySelector('.filter-chip[data-theme="all"]')?.classList.add('active');
-
-      humanImpactBtns.forEach(b => b.classList.remove('active'));
-      document.querySelector('.human-impact-btn[data-impact-group="all"]')?.classList.add('active');
-
-      mapPaths.forEach(p => p.classList.remove('active', 'selected'));
-      document.querySelector('.wijk-map-path[data-wijk="all"]')?.classList.add('active');
-
-      if (postalBadge) postalBadge.style.display = 'none';
-
-      filterCards();
+      resetAllFilters();
     }
 
     // Toggle View Mode with 'L' key (when not typing in search)
@@ -259,10 +275,10 @@ function shareCard(title, url) {
   }
 }
 
-// Text-to-Speech (TTS Audio Read-Aloud) Function (UI-UX Pro Max)
+// Text-to-Speech (TTS Audio Read-Aloud) Function
 function speakText(text, lang = 'nl-NL') {
   if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel(); // Stop ongoing speech
+    window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang === 'en' ? 'en-US' : 'nl-NL';
     utterance.rate = 0.95;

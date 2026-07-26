@@ -78,43 +78,50 @@
 
   <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
 
-  <div class="filters-group">
-    <button class="filter-chip active" data-theme="all">Alle onderwerpen</button>
-    
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <div class="filters-group">
+      <button class="filter-chip active" data-theme="all">Alle onderwerpen</button>
       
-        <button class="filter-chip" data-theme="wonen">🏠 Wonen &amp; Huisvesting</button>
+        
+          <button class="filter-chip" data-theme="wonen">🏠 Wonen &amp; Huisvesting</button>
+        
       
-    
+        
+          <button class="filter-chip" data-theme="verkeer">🚲 Verkeer &amp; Mobiliteit</button>
+        
       
-        <button class="filter-chip" data-theme="verkeer">🚲 Verkeer &amp; Mobiliteit</button>
+        
+          <button class="filter-chip" data-theme="veiligheid">🛡️ Veiligheid &amp; Handhaving</button>
+        
       
-    
+        
+          <button class="filter-chip" data-theme="groen-klimaat">🌿 Groen &amp; Klimaat</button>
+        
       
-        <button class="filter-chip" data-theme="veiligheid">🛡️ Veiligheid &amp; Handhaving</button>
+        
+          <button class="filter-chip" data-theme="jeugd-onderwijs">🎓 Jeugd &amp; Onderwijs</button>
+        
       
-    
+        
+          <button class="filter-chip" data-theme="zorg">❤️ Zorg &amp; Welzijn</button>
+        
       
-        <button class="filter-chip" data-theme="groen-klimaat">🌿 Groen &amp; Klimaat</button>
+        
+          <button class="filter-chip" data-theme="bestuur-financien">🏛️ Bestuur &amp; Financiën</button>
+        
       
-    
+        
+          <button class="filter-chip" data-theme="cultuur-evenementen">🎨 Cultuur &amp; Sport</button>
+        
       
-        <button class="filter-chip" data-theme="jeugd-onderwijs">🎓 Jeugd &amp; Onderwijs</button>
+        
       
-    
-      
-        <button class="filter-chip" data-theme="zorg">❤️ Zorg &amp; Welzijn</button>
-      
-    
-      
-        <button class="filter-chip" data-theme="bestuur-financien">🏛️ Bestuur &amp; Financiën</button>
-      
-    
-      
-        <button class="filter-chip" data-theme="cultuur-evenementen">🎨 Cultuur &amp; Sport</button>
-      
-    
-      
-    
+    </div>
+
+    <!-- Active Filter Reset Button -->
+    <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood);">
+      ❌ Reset filters <span class="shortcut-hint">Esc</span>
+    </button>
   </div>
 </section>
 
@@ -127,7 +134,7 @@
     <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
     <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
     <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
-    <button class="wijk-map-path" data-wijk="Zuid">estation Zuid</button>
+    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
     <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
     <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
     <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
@@ -200,7 +207,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7961870
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7961870/index.html" class="pdf-link">
@@ -256,7 +265,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7961871
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7961871/index.html" class="pdf-link">
@@ -312,7 +323,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7961872
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7961872/index.html" class="pdf-link">
@@ -368,7 +381,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7961873
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7961873/index.html" class="pdf-link">
@@ -424,7 +439,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7961874
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7961874/index.html" class="pdf-link">
@@ -480,7 +497,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7947062
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7947062/index.html" class="pdf-link">
@@ -536,7 +555,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7947071
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7947071/index.html" class="pdf-link">
@@ -592,7 +613,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7947092
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7947092/index.html" class="pdf-link">
@@ -648,7 +671,9 @@
     </div>
 
     <div class="card-footer">
-      <span>Bron: Gemeente Utrecht</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Gemeentestuk #7947093
+      </span>
       
       <div class="card-actions">
         <a href="besluit/7947093/index.html" class="pdf-link">

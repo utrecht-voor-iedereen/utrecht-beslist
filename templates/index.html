@@ -35,13 +35,20 @@
 
   <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
 
-  <div class="filters-group">
-    <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
-    {% for key, theme_info in themes.items() %}
-      {% if key != "overig" %}
-        <button class="filter-chip" data-theme="{{ key }}">{{ theme_info.icon }} {{ theme_info[lang] }}</button>
-      {% endif %}
-    {% endfor %}
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <div class="filters-group">
+      <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
+      {% for key, theme_info in themes.items() %}
+        {% if key != "overig" %}
+          <button class="filter-chip" data-theme="{{ key }}">{{ theme_info.icon }} {{ theme_info[lang] }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Active Filter Reset Button -->
+    <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood);">
+      ❌ {{ "Reset filters" if lang == "nl" else "Reset filters" }} <span class="shortcut-hint">Esc</span>
+    </button>
   </div>
 </section>
 
@@ -54,7 +61,7 @@
     <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
     <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
     <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
-    <button class="wijk-map-path" data-wijk="Zuid">estation Zuid</button>
+    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
     <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
     <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
     <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
@@ -135,7 +142,9 @@
     </div>
 
     <div class="card-footer">
-      <span>{{ "Bron: Gemeente Utrecht" if lang == "nl" else "Source: Municipality of Utrecht" }}</span>
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 {{ "Gemeentestuk" if lang == "nl" else "Council Doc" }} #{{ item.doc_id }}
+      </span>
       
       <div class="card-actions">
         <a href="{{ detail_link }}" class="pdf-link">
