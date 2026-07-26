@@ -3,8 +3,8 @@
 {% block hero %}
 <section class="hero-banner">
   <div class="hero-content">
-    <h1>{{ "Over Utrecht Beslist & Methodologie" if lang == "nl" else "About Utrecht Beslist & Methodology" }}</h1>
-    <p>{{ "Transparante verantwoording over het verwerken van gemeentelijke informatie en het gebruik van AI." if lang == "nl" else "Transparent methodology regarding processing municipal open data and AI summarization." }}</p>
+    <h1>{{ "Over Utrecht Beslist & Officiële Bronnen" if lang == "nl" else "About Utrecht Beslist & Official Sources" }}</h1>
+    <p>{{ "Transparante verantwoording over het geautomatiseerd verzamelen van open gemeentedata en de werking van de pipeline." if lang == "nl" else "Transparent overview of automated municipal open data collection and pipeline operations." }}</p>
   </div>
 </section>
 {% endblock %}
@@ -14,42 +14,106 @@
   {% if lang == "nl" %}
   <div>
     <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Wat is Utrecht Beslist?</h2>
-    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch samenvat in begrijpelijke taal (B1-niveau Neerlandés en Engels).</p>
+    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke taal (B1-niveau).</p>
 
+    <!-- NoticeBox Component for Transparency -->
     <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
-      <strong>💡 Transparantie & Open Data:</strong> Elk raadsbesluit bevat een rechtstreekse link naar het officiële originele PDF-document gepubliceerd door de Gemeente Utrecht.
+      <strong>💡 100% Open Data & Transparantie:</strong> Alle gegevens zijn afkomstig van openbare overheidsbronnen. Elke samenvatting bevat een directe verwijzing naar het originele raadsdocument van de Gemeente Utrecht.
     </div>
 
-    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Hoe werkt de pipeline?</h2>
-    <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-      <li style="margin-bottom: 0.5rem;"><strong>Data ophalen:</strong> Dagelijks worden nieuwe documenten (raadsvoorstellen, besluiten, moties) opgehaald via de openbare API van <em>Open Raadsinformatie</em>.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Filteren:</strong> Trivialiteiten zoals presentielijsten en blanco sjablonen worden automatisch gefilterd.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>AI-samenvatting:</strong> Documenten worden samengevat via een keten van AI-modellen (Groq, Gemini, OpenRouter). Indien AI onbeschikbaar is, treedt de degradatiemodus in werking.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Transparantie:</strong> Elk artikel bevat ALTIJD een rechtstreekse link naar het officiële originele PDF-document van de gemeente Utrecht.</li>
-    </ol>
+    <!-- Official Sources Section -->
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">🌐 Officiële Bronnen & Partners</h2>
+    <p style="margin-bottom: 1rem;">Utrecht Beslist maakt rechtstreeks gebruik van de open API's en portalen van de overheid:</p>
+    <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Open Raadsinformatie (ORI):</strong> <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener">openraadsinformatie.nl</a> — Het landelijke platform voor open gemeentelijke raadsstukken.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Gemeente Utrecht Raadsinformatie:</strong> <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener">utrecht.bestuurlijkeinformatie.nl</a> — Het officiële raadsinformatiesysteem van de Gemeente Utrecht.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Officiële Website Utrecht:</strong> <a href="https://www.utrecht.nl/" target="_blank" rel="noopener">utrecht.nl</a> — Portaal van de gemeente Utrecht.
+      </li>
+    </ul>
 
-    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
-    <p>Dit project is 100% open source gelicentieerd onder <strong>EUPL-1.2</strong>. Er worden geen cookies, tracking scripts of persoonlijke gegevens verzameld.</p>
+    <!-- Automated Pipeline Explanation -->
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">🔄 Hoe werkt de automatische gegevensverzameling?</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">1. Dagelijkse Ophaal (06:00 UTC)</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Via geautomatiseerde GitHub Actions scripts wordt dagelijks de nieuwste raadsinformatie van Utrecht opgevraagd via de ElasticSearch API van Open Raadsinformatie.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">2. Automatische Filtering</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Niet-relevante administratieve stukken (zoals presentielijsten) worden automatisch gefilterd om alleen inhoudelijke raadsvoorstellen te tonen.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">3. AI-Vertaling B1</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Taalmodellen (Groq / Llama 3) vertalen het ambtelijke jargon naar begrijpelijke B1-taal, zonder de juridische strekking te veranderen.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">4. Statische Publicatie</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">De website wordt direct opgebouwd als statische HTML-pagina's met een open JSON API (<a href="../data/latest.json">latest.json</a>) zonder cookies of tracking.</p>
+      </div>
+    </div>
+
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Licentie</h2>
+    <p>Code en algoritmen zijn 100% open source gelicentieerd onder <strong>EUPL-1.2</strong>. Bekijk de broncode op <a href="https://github.com/zaswear/utrecht-beslist" target="_blank" rel="noopener">GitHub</a>.</p>
   </div>
   {% else %}
   <div>
     <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
-    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically summarizes Utrecht city council documents and decisions into plain language (B1 Dutch and English).</p>
+    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically collects and summarizes Utrecht city council documents into plain language (B1 Dutch and English).</p>
 
+    <!-- NoticeBox Component for Transparency -->
     <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
-      <strong>💡 Transparency & Open Data:</strong> Every council decision includes a direct link to the official original PDF document published by the Municipality of Utrecht.
+      <strong>💡 100% Open Data & Transparency:</strong> All data is sourced from public government APIs. Every summary includes a direct link to the original council document from the Municipality of Utrecht.
     </div>
 
-    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">How does the pipeline work?</h2>
-    <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-      <li style="margin-bottom: 0.5rem;"><strong>Fetch Data:</strong> New documents (council proposals, decisions, motions) are queried daily via the public <em>Open Raadsinformatie</em> API.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Filtering:</strong> Routine administrative items such as attendance logs are automatically filtered out.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>AI Summarization:</strong> Documents are summarized using a resilient chain of LLMs (Groq, Gemini, OpenRouter).</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Transparency:</strong> Every summary ALWAYS contains a direct link to the official original PDF document published by the Municipality of Utrecht.</li>
-    </ol>
+    <!-- Official Sources Section -->
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">🌐 Official Sources & Partners</h2>
+    <p style="margin-bottom: 1rem;">Utrecht Beslist interfaces directly with official government open data portals:</p>
+    <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Open Raadsinformatie (ORI):</strong> <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener">openraadsinformatie.nl</a> — National platform for municipal open council documents.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Municipality of Utrecht Council Information:</strong> <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener">utrecht.bestuurlijkeinformatie.nl</a> — Official council portal of Utrecht.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Official Utrecht Portal:</strong> <a href="https://www.utrecht.nl/" target="_blank" rel="noopener">utrecht.nl</a> — Municipality of Utrecht website.
+      </li>
+    </ul>
 
-    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
-    <p>This project is 100% open source under the <strong>EUPL-1.2</strong> license. It uses zero tracking cookies, third-party analytics, or data collection.</p>
+    <!-- Automated Pipeline Explanation -->
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">🔄 How does the automated pipeline work?</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">1. Daily Fetch (06:00 UTC)</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Automated GitHub Actions workflows query the Open Raadsinformatie ElasticSearch API daily for new Utrecht council documents.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">2. Automatic Filtering</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Administrative routine files (such as attendance lists) are filtered out automatically to retain only substantive council proposals.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">3. AI B1 Translation</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">Open-weights LLMs (Groq / Llama 3) translate administrative jargon into accessible B1 plain language without altering legal meaning.</p>
+      </div>
+
+      <div style="background: var(--color-superficie); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">4. Static Publishing</h3>
+        <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">The site compiles into 100% static HTML pages with a public open JSON API (<a href="../data/latest.json">latest.json</a>), requiring zero cookies or tracking.</p>
+      </div>
+    </div>
+
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & License</h2>
+    <p>Code and algorithms are 100% open source licensed under <strong>EUPL-1.2</strong>. Inspect the source code on <a href="https://github.com/zaswear/utrecht-beslist" target="_blank" rel="noopener">GitHub</a>.</p>
   </div>
   {% endif %}
 </section>

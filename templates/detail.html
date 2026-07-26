@@ -114,27 +114,35 @@
     </div>
   </div>
 
-  <!-- Official PDF Source Action Card -->
-  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: #e6eef4; border-radius: var(--radius-sm); border-left: 4px solid var(--color-primario); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
-    <div>
-      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.25rem;">
-        📄 {{ "Officieel Raadsdocument (Gemeente Utrecht)" if lang == "nl" else "Official Council Document (Municipality of Utrecht)" }}
-      </h3>
-      <p style="font-size: 0.88rem; color: var(--color-texto-secundario);">
-        {{ "Document ID:" if lang == "nl" else "Document ID:" }} {{ item.doc_id }}
-      </p>
-    </div>
+  <!-- Official PDF Source & Verification Box -->
+  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: #e6eef4; border-radius: var(--radius-sm); border-left: 4px solid var(--color-primario);">
+    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-azul-oscuro); margin-bottom: 0.5rem;">
+      🏛️ {{ "Officiële Verificatie & Bronnen" if lang == "nl" else "Official Verification & Sources" }}
+    </h3>
+    <p style="font-size: 0.9rem; color: var(--color-texto-principal); margin-bottom: 1rem;">
+      {{ "Dit document is geautomatiseerd opgehaald uit de openbare registers van de overheid. Je kunt het originele raadsstuk rechtstreeks raadplegen via onderstaande officiële portalen:" if lang == "nl" else "This document was automatically retrieved from official public government registers. You can consult the original council document directly via the official portals below:" }}
+    </p>
 
-    {% if item.pdf_url %}
-      <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
-        📄 {{ "Download / Open PDF" if lang == "nl" else "Download / Open PDF" }} ➔
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+      {% if item.pdf_url %}
+        <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 {{ "Download Origineel PDF" if lang == "nl" else "Download Original PDF" }} ➔
+        </a>
+      {% endif %}
+      
+      <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--color-blanco);">
+        🏛️ {{ "Gemeente Utrecht Raadsportaal" if lang == "nl" else "Utrecht Council Portal" }} 🔗
       </a>
-    {% endif %}
+
+      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--color-blanco);">
+        🌐 {{ "Open Raadsinformatie (ORI)" if lang == "nl" else "Open Raadsinformatie API" }} 🔗
+      </a>
+    </div>
   </div>
 
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--color-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--color-texto-secundario);">
-    <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
+    <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }} · {{ "Geautomatiseerd op basis van Open Data" if lang == "nl" else "Automated via Open Data" }}</span>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', window.location.href)">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
