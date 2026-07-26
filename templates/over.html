@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero" style="text-align: left; max-width: 900px;">
+  <h1>{{ "Over Utrecht Beslist & Methodologie" if lang == "nl" else "About Utrecht Beslist & Methodology" }}</h1>
+  
+  {% if lang == "nl" %}
+  <div style="line-height: 1.8; color: var(--text-muted);">
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">Wat is Utrecht Beslist?</h2>
+    <p>Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch samenvat in begrijpelijke taal (B1-niveau Neerlandés en Engels).</p>
+
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">Hoe werkt de pipeline?</h2>
+    <ol style="padding-left: 1.25rem;">
+      <li><strong>Data ophalen:</strong> Dagelijks worden nieuwe documenten (raadsvoorstellen, besluiten, moties) opgehaald via de openbare API van <em>Open Raadsinformatie</em>.</li>
+      <li><strong>Filteren:</strong> Trivialiteiten zoals presentielijsten en blanco sjablonen worden automatisch gefilterd.</li>
+      <li><strong>AI-samenvatting:</strong> Documenten worden samengevat via een keten van AI-modellen (Groq, Gemini, OpenRouter). Indien AI onbeschikbaar is, treedt de degradatiemodus in werking en wordt het originele document direct gelinkt.</li>
+      <li><strong>Transparantie:</strong> Elk artikel bevat ALTIJD een rechtstreekse link naar het officiële originele PDF-document van de gemeente Utrecht.</li>
+    </ol>
+
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">Open Source & Privacy</h2>
+    <p>Dit project is 100% open source gelicentieerd onder <strong>EUPL-1.2</strong>. Er worden geen cookies, tracking scripts of persoonlijke gegevens verzameld.</p>
+  </div>
+  {% else %}
+  <div style="line-height: 1.8; color: var(--text-muted);">
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">What is Utrecht Beslist?</h2>
+    <p>Utrecht Beslist is an independent, open-source civic project that automatically summarizes Utrecht city council documents and decisions into plain language (B1 Dutch and English).</p>
+
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">How does the pipeline work?</h2>
+    <ol style="padding-left: 1.25rem;">
+      <li><strong>Fetch Data:</strong> New documents (council proposals, decisions, motions) are queried daily via the public <em>Open Raadsinformatie</em> API.</li>
+      <li><strong>Filtering:</strong> Routine administrative items such as attendance logs are automatically filtered out.</li>
+      <li><strong>AI Summarization:</strong> Documents are summarized using a resilient chain of LLMs (Groq, Gemini, OpenRouter). If AI services are offline, degraded fallback mode links the original text.</li>
+      <li><strong>Transparency:</strong> Every summary ALWAYS contains a direct link to the official original PDF document published by the Municipality of Utrecht.</li>
+    </ol>
+
+    <h2 style="color: var(--text-main); margin: 1.5rem 0 0.5rem;">Open Source & Privacy</h2>
+    <p>This project is 100% open source under the <strong>EUPL-1.2</strong> license. It uses zero tracking cookies, third-party analytics, or data collection.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

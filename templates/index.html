@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
+  <p>{{ "Belangrijke raadsvoorstellen en besluiten in heldere taal, met directe link naar het officiële document." if lang == "nl" else "Important council proposals and decisions explained in plain language, with direct links to official documents." }}</p>
+</section>
+
+<section class="controls-container">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, wijk of onderwerp...' if lang == 'nl' else 'Search by keyword, neighborhood or topic...' }}">
+  </div>
+
+  <div class="filters-wrapper">
+    <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
+    {% for key, theme_info in themes.items() %}
+      {% if key != "overig" %}
+        <button class="filter-chip" data-theme="{{ key }}">{{ theme_info.icon }} {{ theme_info[lang] }}</button>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cards-container" id="cards-grid">
+  {% for item in items %}
+  <article class="card" data-theme="{{ item.thema | join(' ') }}">
+    <div>
+      <div class="card-header">
+        <span class="card-meta">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
+        <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }}</span>
+      </div>
+
+      <h2 class="card-title">
+        {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+      </h2>
+
+      <p class="card-summary">
+        {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
+      </p>
+
+      <div class="card-tags">
+        {% for t in item.thema %}
+          <span class="tag">{{ themes[t][lang] if t in themes else t }}</span>
+        {% endfor %}
+        {% for w in item.wijken %}
+          <span class="tag">📍 {{ w }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span>Bron: Gemeente Utrecht</span>
+      {% if item.pdf_url %}
+        <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
+          📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ↗
+        </a>
+      {% else %}
+        <span>PDF niet beschikbaar</span>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+  <p>{{ "Geen resultaten gevonden voor de opgegeven zoekopdracht." if lang == "nl" else "No matching decisions found for your query." }}</p>
+</div>
+{% endblock %}
