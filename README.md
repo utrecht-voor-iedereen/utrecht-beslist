@@ -3,6 +3,8 @@
 > Plain-language summaries (B1 Dutch + English) of official **Gemeente Utrecht** city council documents and decisions.
 > Open source, 0 €/month, 100% static, privacy-first & automated.
 
+![Utrecht Beslist Web Preview](static/img/preview.png)
+
 ---
 
 ## 🇳🇱 Nederlands
@@ -59,9 +61,9 @@ utrecht-beslist/
 ├── static/
 │   ├── css/styles.css     # Utrecht visual identity tokens & print stylesheet
 │   ├── js/app.js          # Filtering, shortcuts, Dark Mode, TTS & search engine
-│   └── img/               # Vector SVG logo suite
+│   └── img/               # Vector SVG logo suite & preview screenshot
 ├── state/
-│   └── processed.json     # Permanent document database record (26 items)
+│   └── processed.json     # Permanent document database record (30 items)
 ├── docs/                  # Generated GitHub Pages production site
 ├── tests/                 # Pytest test suite (100% passing)
 ├── IMPECCABLE_AUDIT.md    # 360° Impeccable Audit Report (Grade: 98/100)
@@ -100,3 +102,4 @@ utrecht-beslist/
 ## 📜 License
 
 Licensed under the **European Union Public Licence v1.2 (EUPL-1.2)**.
+Full license text available in [LICENSE](LICENSE).
