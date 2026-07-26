@@ -4,9 +4,9 @@ Client module for Open Raadsinformatie (ORI) ElasticSearch API for Utrecht munic
 
 import json
 import logging
-import urllib.request
 import urllib.error
-from typing import List, Dict, Any
+import urllib.request
+from typing import Any
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -23,7 +23,7 @@ EXCLUDE_TITLE_KEYWORDS = [
     "vaststelling agenda"
 ]
 
-def fetch_utrecht_documents(size: int = 40) -> List[Dict[str, Any]]:
+def fetch_utrecht_documents(size: int = 40) -> list[dict[str, Any]]:
     """
     Fetch latest documents from Open Raadsinformatie for Utrecht.
     """
@@ -51,11 +51,11 @@ def fetch_utrecht_documents(size: int = 40) -> List[Dict[str, Any]]:
             hits = data.get("hits", {}).get("hits", [])
             logger.info(f"Fetched {len(hits)} raw documents from Open Raadsinformatie.")
             return hits
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         logger.error(f"Error fetching from Open Raadsinformatie: {e}")
         return []
 
-def normalize_document(raw_hit: Dict[str, Any]) -> Dict[str, Any]:
+def normalize_document(raw_hit: dict[str, Any]) -> dict[str, Any]:
     """
     Normalizes Elastic raw hit into standard document dict.
     """
@@ -88,7 +88,7 @@ def normalize_document(raw_hit: Dict[str, Any]) -> Dict[str, Any]:
         "text": text_content.strip()
     }
 
-def filter_documents(raw_hits: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def filter_documents(raw_hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Filters raw document hits to keep relevant, non-trivial documents.
     """

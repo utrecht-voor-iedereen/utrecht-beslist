@@ -2,12 +2,14 @@
 Site generator module rendering Jinja2 templates to docs/ static directory for GitHub Pages.
 """
 
-import os
 import json
-import shutil
 import logging
+import os
+import shutil
 from xml.sax.saxutils import escape
+
 from jinja2 import Environment, FileSystemLoader
+
 from .themes import THEMES
 
 logging.basicConfig(level=logging.INFO)

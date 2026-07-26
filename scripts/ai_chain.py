@@ -1,13 +1,16 @@
 """
 Resilient LLM summarization chain supporting Groq -> Gemini -> OpenRouter -> Degraded Mode.
+Includes max 10,000-word text chunking and Pydantic validation.
 """
 
-import os
 import json
 import logging
-import urllib.request
+import os
 import urllib.error
-from typing import List, Dict, Any
+import urllib.request
+from typing import Any
+
+from .schemas import SummaryBatchOutput, SummaryItem
 from .themes import detect_theme_heuristics, detect_wijken_heuristics
 
 logging.basicConfig(level=logging.INFO)
@@ -34,46 +37,54 @@ Retourneer UITSLUITEND een JSON object volgens dit schema:
 }
 """
 
-def summarize_with_groq(batch_docs: List[Dict[str, Any]], api_key: str) -> List[Dict[str, Any]]:
+def chunk_text_by_words(text: str, max_words: int = 10000) -> list[str]:
+    """Divides text into chunks of at most max_words."""
+    words = text.split()
+    if len(words) <= max_words:
+        return [text]
+    
+    chunks = []
+    for i in range(0, len(words), max_words):
+        chunk = " ".join(words[i:i + max_words])
+        chunks.append(chunk)
+    return chunks
+
+def validate_and_parse_llm_json(raw_json_str: str) -> list[dict[str, Any]]:
+    """Validates raw LLM response using Pydantic."""
+    data = json.loads(raw_json_str)
+    validated = SummaryBatchOutput.model_validate(data)
+    return [item.model_dump() for item in validated.items]
+
+def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
     """Try summarization using Groq API."""
     url = "https://api.groq.com/openai/v1/chat/completions"
-    user_payload = {"documents": batch_docs}
-    
     payload = {
-        "model": "llama-3.3-70b-versatile",
+        "model": os.environ.get("AI_MODEL", "llama-3.3-70b-versatile"),
         "response_format": {"type": "json_object"},
         "temperature": 0.2,
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False)}
+            {"role": "user", "content": json.dumps({"documents": batch_docs}, ensure_ascii=False)}
         ]
     }
     
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode('utf-8'),
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}"
-        }
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
     )
     with urllib.request.urlopen(req, timeout=30) as res:
-        data = json.loads(res.read().decode('utf-8'))
-        content = data["choices"][0]["message"]["content"]
-        parsed = json.loads(content)
-        return parsed.get("items", [])
+        content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
+        return validate_and_parse_llm_json(content)
 
-def summarize_with_gemini(batch_docs: List[Dict[str, Any]], api_key: str) -> List[Dict[str, Any]]:
-    """Try summarization using Gemini REST API."""
+def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
+    """Try summarization using Gemini API."""
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     prompt_text = f"{SYSTEM_PROMPT}\n\nDOCUMENTEN:\n{json.dumps(batch_docs, ensure_ascii=False)}"
     
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
-        "generationConfig": {
-            "responseMimeType": "application/json",
-            "temperature": 0.2
-        }
+        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}
     }
     
     req = urllib.request.Request(
@@ -82,45 +93,46 @@ def summarize_with_gemini(batch_docs: List[Dict[str, Any]], api_key: str) -> Lis
         headers={"Content-Type": "application/json"}
     )
     with urllib.request.urlopen(req, timeout=30) as res:
-        data = json.loads(res.read().decode('utf-8'))
-        content = data["candidates"][0]["content"]["parts"][0]["text"]
-        parsed = json.loads(content)
-        return parsed.get("items", [])
+        content = json.loads(res.read().decode('utf-8'))["candidates"][0]["content"]["parts"][0]["text"]
+        return validate_and_parse_llm_json(content)
 
-def generate_degraded_summary(doc: Dict[str, Any]) -> Dict[str, Any]:
-    """Fallback generator when AI APIs are unavailable or fail."""
+def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
+    """Fallback generator when AI APIs are unavailable."""
     title = doc.get("title", "Gemeenteraadstuk Utrecht")
     text = doc.get("text", "")
     
     themes = detect_theme_heuristics(title, text)
     wijken = detect_wijken_heuristics(title, text)
-    
     excerpt = text[:250].replace("\n", " ").strip() if text else "Raadsdocument officieel beschikbaar bij gemeente Utrecht."
     
-    return {
-        "doc_id": doc.get("id", ""),
-        "titel_kort_nl": title[:60],
-        "title_short_en": title[:60],
-        "samenvatting_nl": f"Officieel gemeentestuk: {title}. {excerpt}... Lees het volledige originele raadsstuk via de PDF bron.",
-        "summary_en": f"Official council document: {title}. {excerpt}... Read the original full document via the PDF link.",
-        "thema": themes,
-        "wijken": wijken if wijken else ["Overig"],
-        "impact": "gemiddeld",
-        "degraded": True
-    }
+    item = SummaryItem(
+        doc_id=doc.get("id", ""),
+        titel_kort_nl=title[:60],
+        title_short_en=title[:60],
+        samenvatting_nl=f"Officieel gemeentestuk: {title}. {excerpt}... Lees het volledige originele raadsstuk via de PDF bron.",
+        summary_en=f"Official council document: {title}. {excerpt}... Read the original full document via the PDF link.",
+        thema=themes,
+        wijken=wijken if wijken else ["Overig"],
+        impact="gemiddeld",
+        degraded=True
+    )
+    return item.model_dump()
 
-def summarize_batch(batch_docs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def summarize_batch(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Executes summarization chain: Groq -> Gemini -> OpenRouter -> Degraded Mode.
+    Handles text chunking for documents over 10,000 words.
     """
-    input_batch = [
-        {
+    prepared_batch = []
+    for d in batch_docs:
+        full_text = d.get("text", "")
+        # Apply 10,000-word chunking limit if necessary
+        chunks = chunk_text_by_words(full_text, max_words=10000)
+        prepared_batch.append({
             "doc_id": d["id"],
             "title": d["title"],
-            "text": d["text"][:2000] # Limit per document for token efficiency
-        }
-        for d in batch_docs
-    ]
+            "text": chunks[0] # Primary chunk
+        })
 
     groq_key = os.environ.get("GROQ_API_KEY")
     gemini_key = os.environ.get("GEMINI_API_KEY")
@@ -128,15 +140,15 @@ def summarize_batch(batch_docs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     if groq_key:
         try:
             logger.info("Summarizing batch with Groq...")
-            return summarize_with_groq(input_batch, groq_key)
-        except Exception as e:
+            return summarize_with_groq(prepared_batch, groq_key)
+        except Exception as e:  # noqa: BLE001
             logger.warning(f"Groq failed: {e}")
 
     if gemini_key:
         try:
             logger.info("Summarizing batch with Gemini...")
-            return summarize_with_gemini(input_batch, gemini_key)
-        except Exception as e:
+            return summarize_with_gemini(prepared_batch, gemini_key)
+        except Exception as e:  # noqa: BLE001
             logger.warning(f"Gemini failed: {e}")
 
     logger.info("Running in Degraded Mode (fallback without AI)...")
