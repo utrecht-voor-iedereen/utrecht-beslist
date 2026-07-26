@@ -5,27 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spring Memorandum 2026 — Utrecht Beslist</title>
   <meta name="description" content="Utrecht city council decisions and documents explained in plain English.">
+  <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../../../en/feed.xml">
 </head>
 <body>
 
-  <!-- Header Component: Dark Navy Slate + Authentic Utrecht Flag Emblem + Dark Mode Toggle -->
+  <!-- Header Component: Dark Navy Slate + Vector Shield Logo -->
   <header>
     <div class="header-container">
-      <a href="../../../en/index.html" class="brand">
-        <!-- Authentic Utrecht Flag Emblem (White Top, Red #CC0000 Bottom, Sint Maarten Diagonal Square) -->
-        <div class="brand-flag-icon" title="Vlag van Utrecht">
-          <div class="flag-top">
-            <div class="flag-canton"></div>
-          </div>
-          <div class="flag-bottom"></div>
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">Utrecht Beslist</span>
-          <span class="brand-subtitle">City Council in Plain Language</span>
-        </div>
+      <a href="../../../en/index.html" class="brand" title="Utrecht Beslist">
+        <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — City Council in Plain Language">
+          <defs>
+            <clipPath id="clip-top-left-hdr">
+              <polygon points="0,0 80,0 0,80" />
+            </clipPath>
+            <clipPath id="clip-bottom-right-hdr">
+              <polygon points="80,0 80,80 0,80" />
+            </clipPath>
+            <path id="shield-hdr" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+          </defs>
+
+          <!-- Red Upper-Left Half -->
+          <use href="#shield-hdr" fill="#CC0000" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- White Lower-Right Half -->
+          <use href="#shield-hdr" fill="#FFFFFF" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Black Contour Outline -->
+          <use href="#shield-hdr" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+          <!-- Checkmark on Red Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- Checkmark on White Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Wordmark Title -->
+          <text x="84" y="42" font-family="system-ui, Arial, sans-serif" font-size="30" font-weight="700" xml:space="preserve"><tspan fill="#FFFFFF">Utrecht </tspan><tspan fill="#CC0000">Beslist</tspan><tspan fill="#FFCC00">.</tspan></text>
+
+          <!-- Subtitle -->
+          <text x="85" y="63" font-family="system-ui, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2" fill="rgba(255,255,255,0.85)">CITY COUNCIL IN PLAIN LANGUAGE</text>
+        </svg>
       </a>
+
       <nav class="nav-links" aria-label="Principal">
         <a href="../../../en/index.html" class="nav-link">Overview</a>
         <a href="../../../en/over.html" class="nav-link">About &amp; Transparency</a>

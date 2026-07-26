@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 0 64 80" role="img" aria-label="Utrecht Beslist Logo Icon">
+  <defs>
+    <clipPath id="clip-top-left-icon">
+      <polygon points="0,0 80,0 0,80" />
+    </clipPath>
+    <clipPath id="clip-bottom-right-icon">
+      <polygon points="80,0 80,80 0,80" />
+    </clipPath>
+    <path id="shield-icon" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+  </defs>
+
+  <!-- Red Upper-Left Half -->
+  <use href="#shield-icon" fill="#CC0000" clip-path="url(#clip-top-left-icon)" />
+
+  <!-- White Lower-Right Half -->
+  <use href="#shield-icon" fill="#FFFFFF" clip-path="url(#clip-bottom-right-icon)" />
+
+  <!-- Black Contour Outline -->
+  <use href="#shield-icon" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Checkmark on Red Half -->
+  <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-icon)" />
+
+  <!-- Checkmark on White Half -->
+  <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-icon)" />
+</svg>

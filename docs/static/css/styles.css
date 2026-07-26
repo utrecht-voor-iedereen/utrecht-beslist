@@ -1,6 +1,6 @@
 /* ==========================================================================
    Utrecht Beslist — Option A UX Control Panel Theme Architecture
-   Includes Smart Dropdown Selectors, Dark Mode, Animations & Accessibility
+   Includes Vector SVG Logo, Dark Mode, Animations & Accessibility
    ========================================================================== */
 
 :root {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Header Component
+   Header Component & Vector Logo
    -------------------------------------------------------------------------- */
 header {
   background-color: var(--utrecht-azul-oscuro);
@@ -95,69 +95,23 @@ header {
 .header-container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0.9rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Authentic Utrecht Flag SVG Emblem */
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
   text-decoration: none;
   color: #FFFFFF;
 }
 
-.brand-flag-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.flag-top {
-  height: 50%;
-  background-color: #FFFFFF;
-  position: relative;
-}
-
-/* Sint Maarten Diagonal Red Square in Canton */
-.flag-canton {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(135deg, var(--utrecht-rood) 50%, #FFFFFF 50%);
-}
-
-.flag-bottom {
-  height: 50%;
-  background-color: var(--utrecht-rood);
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1.2;
-}
-
-.brand-subtitle {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
+.brand-logo-svg {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -414,7 +368,7 @@ header {
   font-size: 1.1rem;
 }
 
-/* Smart Selector Row (Option A) */
+/* Smart Selector Row */
 .smart-selectors-row {
   display: flex;
   flex-wrap: wrap;
