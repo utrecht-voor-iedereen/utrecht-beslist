@@ -10,14 +10,7 @@
 </head>
 <body>
 
-  <!-- Official Dutch Government Rijkshuisstijl Top Bar -->
-  <div class="top-ribbon">
-    <div class="top-ribbon-content">
-      <span class="top-ribbon-flag">👑</span>
-      <span>Municipality of Utrecht · Council Intelligence &amp; Governance</span>
-    </div>
-  </div>
-
+  <!-- Header Component with 4px Yellow Identity Stripe -->
   <header>
     <div class="header-container">
       <a href="index.html" class="brand">
@@ -27,7 +20,7 @@
           <span class="brand-subtitle">City Council in Plain Language</span>
         </div>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Principal">
         <a href="index.html" class="nav-link">Overview</a>
         <a href="over.html" class="nav-link">About &amp; Transparency</a>
         
@@ -44,14 +37,16 @@
   <div class="hero-content">
     <h1>What did Utrecht City Council decide this week?</h1>
     <p>Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents.</p>
-    <div style="margin-top: 1rem; display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.88rem; font-weight: 600;">
-      📊 Archive: 9 council decisions permanently preserved (historical data never expires)
+    
+    <!-- NoticeBox Component Pattern -->
+    <div class="notice-box">
+      📊 Archive: <strong>9</strong> council decisions permanently preserved
     </div>
   </div>
 </section>
 
 
-  <div class="main-wrapper">
+  <main class="main-wrapper">
     
 <section class="controls-card">
   <div class="search-box">
@@ -60,7 +55,7 @@
     <input type="text" id="search-input" class="search-input" placeholder="Search by keyword, postal code or topic...">
   </div>
 
-  <div id="postal-badge" class="postal-badge" style="display: none;"></div>
+  <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
 
   <div class="filters-group">
     <button class="filter-chip active" data-theme="all">All Topics</button>
@@ -110,7 +105,7 @@
     <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
     <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
     <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
-    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
+    <button class="wijk-map-path" data-wijk="Zuid">estation Zuid</button>
     <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
     <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
     <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
@@ -141,7 +136,7 @@
         Official council document: Raadsvoorstel Meerjaren Perspectief Ruimte 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -195,7 +190,7 @@
         Official council document: Raadsvoorstel Voorjaarsnota 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -249,7 +244,7 @@
         Official council document: Raadsvoorstel Eerste bestuursrapportage 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -303,7 +298,7 @@
         Official council document: Raadsvoorstel Resultaatbestemming 2025. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -357,7 +352,7 @@
         Official council document: Raadsvoorstel Jaarstukken 2025. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -411,7 +406,7 @@
         Official council document: Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juli 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -465,7 +460,7 @@
         Official council document: Raadsvoorstel Voorjaarsnota 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -519,7 +514,7 @@
         Official council document: Raadsvoorstel Benoeming Wethouders na raadsverkiezingen 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -573,7 +568,7 @@
         Official council document: Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juli 2026. Raadsdocument officieel beschikbaar bij gemeente Utrecht.... Read the original full document via the PDF link.
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item"></li>
         <li class="bullet-item"></li>
@@ -609,22 +604,39 @@
   
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--rijk-text-muted);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--color-texto-secundario);">
   <p>No matching decisions found for your query.</p>
 </div>
 
-  </div>
+  </main>
 
+  <!-- 3-Column Footer Component (OpoAlerta DESIGN.md Pattern) -->
   <footer>
     <div class="footer-content">
-      <div class="footer-disclaimer">
-        <h3>Disclaimers &amp; Data Sources</h3>
-        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult the official municipal document of Utrecht.</p>
+      <div class="footer-column">
+        <h3>Utrecht Beslist</h3>
+        <p>Independent civic project automatically summarizing Utrecht city council documents and decisions into plain language.</p>
       </div>
-      <div class="footer-links">
-        <p>© 2026 Utrecht Beslist · Open Source (<a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a>)</p>
-        <p><a href="feed.xml">RSS Feed (EN)</a> · <a href="../data/latest.json">JSON API</a></p>
+
+      <div class="footer-column">
+        <h3>Navigation &amp; Feeds</h3>
+        <ul>
+          <li><a href="index.html">Decisions Overview</a></li>
+          <li><a href="over.html">About &amp; Transparency</a></li>
+          <li><a href="feed.xml">RSS Feed (EN)</a></li>
+          <li><a href="../data/latest.json">JSON API</a></li>
+        </ul>
       </div>
+
+      <div class="footer-column">
+        <h3>Disclaimers &amp; Data</h3>
+        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>Civic Project · 100% Static &amp; Free</span>
     </div>
   </footer>
 

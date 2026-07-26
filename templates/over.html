@@ -13,10 +13,14 @@
 <section class="controls-card" style="line-height: 1.8;">
   {% if lang == "nl" %}
   <div>
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">Wat is Utrecht Beslist?</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Wat is Utrecht Beslist?</h2>
     <p style="margin-bottom: 1.5rem;">Utrecht Beslist is een onafhankelijk, open-source burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch samenvat in begrijpelijke taal (B1-niveau Neerlandés en Engels).</p>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">Hoe werkt de pipeline?</h2>
+    <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
+      <strong>💡 Transparantie & Open Data:</strong> Elk raadsbesluit bevat een rechtstreekse link naar het officiële originele PDF-document gepubliceerd door de Gemeente Utrecht.
+    </div>
+
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Hoe werkt de pipeline?</h2>
     <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
       <li style="margin-bottom: 0.5rem;"><strong>Data ophalen:</strong> Dagelijks worden nieuwe documenten (raadsvoorstellen, besluiten, moties) opgehaald via de openbare API van <em>Open Raadsinformatie</em>.</li>
       <li style="margin-bottom: 0.5rem;"><strong>Filteren:</strong> Trivialiteiten zoals presentielijsten en blanco sjablonen worden automatisch gefilterd.</li>
@@ -24,15 +28,19 @@
       <li style="margin-bottom: 0.5rem;"><strong>Transparantie:</strong> Elk artikel bevat ALTIJD een rechtstreekse link naar het officiële originele PDF-document van de gemeente Utrecht.</li>
     </ol>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
     <p>Dit project is 100% open source gelicentieerd onder <strong>EUPL-1.2</strong>. Er worden geen cookies, tracking scripts of persoonlijke gegevens verzameld.</p>
   </div>
   {% else %}
   <div>
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
     <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically summarizes Utrecht city council documents and decisions into plain language (B1 Dutch and English).</p>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">How does the pipeline work?</h2>
+    <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
+      <strong>💡 Transparency & Open Data:</strong> Every council decision includes a direct link to the official original PDF document published by the Municipality of Utrecht.
+    </div>
+
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">How does the pipeline work?</h2>
     <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
       <li style="margin-bottom: 0.5rem;"><strong>Fetch Data:</strong> New documents (council proposals, decisions, motions) are queried daily via the public <em>Open Raadsinformatie</em> API.</li>
       <li style="margin-bottom: 0.5rem;"><strong>Filtering:</strong> Routine administrative items such as attendance logs are automatically filtered out.</li>
@@ -40,7 +48,7 @@
       <li style="margin-bottom: 0.5rem;"><strong>Transparency:</strong> Every summary ALWAYS contains a direct link to the official original PDF document published by the Municipality of Utrecht.</li>
     </ol>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
     <p>This project is 100% open source under the <strong>EUPL-1.2</strong> license. It uses zero tracking cookies, third-party analytics, or data collection.</p>
   </div>
   {% endif %}

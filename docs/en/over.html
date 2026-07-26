@@ -10,14 +10,7 @@
 </head>
 <body>
 
-  <!-- Official Dutch Government Rijkshuisstijl Top Bar -->
-  <div class="top-ribbon">
-    <div class="top-ribbon-content">
-      <span class="top-ribbon-flag">👑</span>
-      <span>Municipality of Utrecht · Council Intelligence &amp; Governance</span>
-    </div>
-  </div>
-
+  <!-- Header Component with 4px Yellow Identity Stripe -->
   <header>
     <div class="header-container">
       <a href="index.html" class="brand">
@@ -27,7 +20,7 @@
           <span class="brand-subtitle">City Council in Plain Language</span>
         </div>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Principal">
         <a href="index.html" class="nav-link">Overview</a>
         <a href="over.html" class="nav-link">About &amp; Transparency</a>
         
@@ -48,15 +41,19 @@
 </section>
 
 
-  <div class="main-wrapper">
+  <main class="main-wrapper">
     
 <section class="controls-card" style="line-height: 1.8;">
   
   <div>
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
     <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically summarizes Utrecht city council documents and decisions into plain language (B1 Dutch and English).</p>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">How does the pipeline work?</h2>
+    <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
+      <strong>💡 Transparency & Open Data:</strong> Every council decision includes a direct link to the official original PDF document published by the Municipality of Utrecht.
+    </div>
+
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">How does the pipeline work?</h2>
     <ol style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
       <li style="margin-bottom: 0.5rem;"><strong>Fetch Data:</strong> New documents (council proposals, decisions, motions) are queried daily via the public <em>Open Raadsinformatie</em> API.</li>
       <li style="margin-bottom: 0.5rem;"><strong>Filtering:</strong> Routine administrative items such as attendance logs are automatically filtered out.</li>
@@ -64,24 +61,41 @@
       <li style="margin-bottom: 0.5rem;"><strong>Transparency:</strong> Every summary ALWAYS contains a direct link to the official original PDF document published by the Municipality of Utrecht.</li>
     </ol>
 
-    <h2 style="color: var(--rijk-blue-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
+    <h2 style="color: var(--color-azul-oscuro); margin-bottom: 0.75rem;">Open Source & Privacy</h2>
     <p>This project is 100% open source under the <strong>EUPL-1.2</strong> license. It uses zero tracking cookies, third-party analytics, or data collection.</p>
   </div>
   
 </section>
 
-  </div>
+  </main>
 
+  <!-- 3-Column Footer Component (OpoAlerta DESIGN.md Pattern) -->
   <footer>
     <div class="footer-content">
-      <div class="footer-disclaimer">
-        <h3>Disclaimers &amp; Data Sources</h3>
-        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult the official municipal document of Utrecht.</p>
+      <div class="footer-column">
+        <h3>Utrecht Beslist</h3>
+        <p>Independent civic project automatically summarizing Utrecht city council documents and decisions into plain language.</p>
       </div>
-      <div class="footer-links">
-        <p>© 2026 Utrecht Beslist · Open Source (<a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a>)</p>
-        <p><a href="feed.xml">RSS Feed (EN)</a> · <a href="../data/latest.json">JSON API</a></p>
+
+      <div class="footer-column">
+        <h3>Navigation &amp; Feeds</h3>
+        <ul>
+          <li><a href="index.html">Decisions Overview</a></li>
+          <li><a href="over.html">About &amp; Transparency</a></li>
+          <li><a href="feed.xml">RSS Feed (EN)</a></li>
+          <li><a href="../data/latest.json">JSON API</a></li>
+        </ul>
       </div>
+
+      <div class="footer-column">
+        <h3>Disclaimers &amp; Data</h3>
+        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>Civic Project · 100% Static &amp; Free</span>
     </div>
   </footer>
 

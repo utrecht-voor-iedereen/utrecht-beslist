@@ -5,8 +5,10 @@
   <div class="hero-content">
     <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
     <p>{{ "Overzicht van raadsvoorstellen en besluiten van de gemeenteraad van Utrecht in heldere taal, met rechtstreekse link naar het officiële stuk." if lang == "nl" else "Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents." }}</p>
-    <div style="margin-top: 1rem; display: inline-block; background: rgba(255, 255, 255, 0.15); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.88rem; font-weight: 600;">
-      {{ "📊 Archief:" if lang == "nl" else "📊 Archive:" }} {{ items | length }} {{ "raadsbesluiten permanent bewaard (historische data blijft bewaard)" if lang == "nl" else "council decisions permanently preserved (historical data never expires)" }}
+    
+    <!-- NoticeBox Component Pattern -->
+    <div class="notice-box">
+      {{ "📊 Archief:" if lang == "nl" else "📊 Archive:" }} <strong>{{ items | length }}</strong> {{ "raadsbesluiten permanent bewaard" if lang == "nl" else "council decisions permanently preserved" }}
     </div>
   </div>
 </section>
@@ -20,7 +22,7 @@
     <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, postcode of onderwerp...' if lang == 'nl' else 'Search by keyword, postal code or topic...' }}">
   </div>
 
-  <div id="postal-badge" class="postal-badge" style="display: none;"></div>
+  <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
 
   <div class="filters-group">
     <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
@@ -40,7 +42,7 @@
     <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
     <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
     <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
-    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
+    <button class="wijk-map-path" data-wijk="Zuid">estation Zuid</button>
     <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
     <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
     <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
@@ -77,7 +79,7 @@
         {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
       </p>
 
-      <!-- 3 Bullet Breakdown -->
+      <!-- 3 Bullet Breakdown NoticeBox Pattern -->
       <ul class="bullet-list">
         <li class="bullet-item">{{ item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en }}</li>
         <li class="bullet-item">{{ item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en }}</li>
@@ -117,7 +119,7 @@
   {% endfor %}
 </section>
 
-<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--rijk-text-muted);">
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--color-texto-secundario);">
   <p>{{ "Geen resultaten gevonden voor de opgegeven zoekopdracht." if lang == "nl" else "No matching decisions found for your query." }}</p>
 </div>
 {% endblock %}
