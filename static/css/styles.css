@@ -1,6 +1,6 @@
 /* ==========================================================================
    Utrecht Beslist — Option A UX Control Panel Theme Architecture
-   Includes Vector SVG Logo, Dark Mode, Animations & Accessibility
+   Includes Vector SVG Logo, Dark Mode, Animations & Ko-fi Support Button
    ========================================================================== */
 
 :root {
@@ -670,6 +670,26 @@ header {
 .share-btn:hover {
   border-color: var(--utrecht-azul-enlace);
   color: var(--utrecht-azul-enlace);
+}
+
+.kofi-btn {
+  background-color: #FFCC00;
+  color: #162436 !important;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.kofi-btn:hover {
+  background-color: #E6B800;
+  text-decoration: none !important;
 }
 
 .report-issue-link {
