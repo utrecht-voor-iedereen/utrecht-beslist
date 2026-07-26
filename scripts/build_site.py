@@ -27,7 +27,7 @@ def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
     """Generates valid RSS XML feed."""
     base_title = "Utrecht Beslist — Raadsbesluiten" if lang == "nl" else "Utrecht Beslist — City Council Decisions"
     title = f"{base_title} ({category_title})" if category_title else base_title
-    link = "https://zaswear.github.io/utrecht-beslist/"
+    link = "https://utrechtbeslist.eu.org/"
     description = "Volg besluiten van de gemeenteraad van Utrecht" if lang == "nl" else "Follow Utrecht city council decisions"
     
     xml_items = []
@@ -71,6 +71,11 @@ def build_static_site(items: list):
     if os.path.exists(target_static):
         shutil.rmtree(target_static)
     shutil.copytree(STATIC_DIR, target_static)
+
+    # Copy CNAME file for custom domain if present
+    cname_src = os.path.join(PROJECT_ROOT, "CNAME")
+    if os.path.exists(cname_src):
+        shutil.copy(cname_src, os.path.join(DOCS_DIR, "CNAME"))
 
     # Render Root Redirect index.html
     root_redirect = """<!DOCTYPE html>
