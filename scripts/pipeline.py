@@ -70,8 +70,8 @@ def run_pipeline():
     existing_items = load_state()
     existing_map = {item["doc_id"]: item for item in existing_items if "doc_id" in item}
 
-    # Fetch recent raw documents from Open Raadsinformatie API
-    raw_hits = fetch_utrecht_documents(size=30)
+    # Fetch up to 150 recent raw documents from Open Raadsinformatie API
+    raw_hits = fetch_utrecht_documents(size=150)
     filtered_docs = filter_documents(raw_hits)
 
     has_ai_keys = bool(os.environ.get("GROQ_API_KEY") or os.environ.get("GEMINI_API_KEY"))

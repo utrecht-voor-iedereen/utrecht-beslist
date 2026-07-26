@@ -5,6 +5,17 @@
     <link>https://zaswear.github.io/utrecht-beslist/</link>
     <description>Volg besluiten van de gemeenteraad van Utrecht</description>
     <language>nl</language>
-
+    <item>
+      <title>Meerjaren Perspectief Ruimte 2026</title>
+      <link></link>
+      <description>Het college van B en W stelt de raad voor om het Meerjaren Perspectief Ruimte 2026 vast te stellen. Dit perspectief geeft aan hoe de gemeente Utrecht de komende jaren omgaat met ruimte.</description>
+      <guid isPermaLink="false">7912169</guid>
+    </item>
+    <item>
+      <title>TAM-omgevingsplan Jan van Galenstraat</title>
+      <link></link>
+      <description>Het college van B en W stelt de raad voor om het TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan vast te stellen.</description>
+      <guid isPermaLink="false">7912175</guid>
+    </item>
   </channel>
 </rss>

@@ -23,7 +23,7 @@ EXCLUDE_TITLE_KEYWORDS = [
     "vaststelling agenda"
 ]
 
-def fetch_utrecht_documents(size: int = 40) -> list[dict[str, Any]]:
+def fetch_utrecht_documents(size: int = 150) -> list[dict[str, Any]]:
     """
     Fetch latest documents from Open Raadsinformatie for Utrecht.
     """
@@ -46,7 +46,7 @@ def fetch_utrecht_documents(size: int = 40) -> list[dict[str, Any]]:
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=15) as response:
+        with urllib.request.urlopen(req, timeout=20) as response:
             data = json.loads(response.read().decode('utf-8'))
             hits = data.get("hits", {}).get("hits", [])
             logger.info(f"Fetched {len(hits)} raw documents from Open Raadsinformatie.")

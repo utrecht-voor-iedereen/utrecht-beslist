@@ -5,6 +5,11 @@
     <link>https://zaswear.github.io/utrecht-beslist/</link>
     <description>Volg besluiten van de gemeenteraad van Utrecht</description>
     <language>nl</language>
-
+    <item>
+      <title>Wijziging Algemene Plaatselijke Verordening</title>
+      <link></link>
+      <description>De gemeenteraad stelt een wijziging voor van de Algemene Plaatselijke Verordening (APV).</description>
+      <guid isPermaLink="false">7926192</guid>
+    </item>
   </channel>
 </rss>
