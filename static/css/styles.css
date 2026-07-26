@@ -173,9 +173,7 @@ header {
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   Hero & Header Section
-   -------------------------------------------------------------------------- */
+/* Hero Section */
 .hero-banner {
   background: linear-gradient(135deg, var(--rijk-blue-primary) 0%, var(--rijk-blue-dark) 100%);
   color: #ffffff;
@@ -203,9 +201,7 @@ header {
   line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   Controls / Filter Panel (Belastingdienst Style)
-   -------------------------------------------------------------------------- */
+/* Controls / Filter Panel */
 .main-wrapper {
   max-width: 1140px;
   margin: -1.5rem auto 3rem;
@@ -225,7 +221,7 @@ header {
 
 .search-box {
   position: relative;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .search-label {
@@ -261,6 +257,18 @@ header {
   font-size: 1.1rem;
 }
 
+.postal-badge {
+  display: inline-block;
+  background: var(--rijk-blue-light);
+  color: var(--rijk-blue-primary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(1, 104, 155, 0.2);
+}
+
 .filters-group {
   display: flex;
   flex-wrap: wrap;
@@ -291,9 +299,48 @@ header {
   border-color: var(--rijk-blue-primary);
 }
 
-/* --------------------------------------------------------------------------
-   Cards Grid & Decision Cards (Belastingdienst Style)
-   -------------------------------------------------------------------------- */
+/* Interactive SVG Map Component */
+.map-section {
+  background: var(--rijk-card-bg);
+  border: 1px solid var(--rijk-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rijk-blue-dark);
+  margin-bottom: 0.75rem;
+}
+
+.map-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wijk-map-path {
+  background: var(--rijk-blue-light);
+  color: var(--rijk-blue-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgba(1, 104, 155, 0.2);
+  transition: var(--transition);
+}
+
+.wijk-map-path:hover, .wijk-map-path.selected {
+  background: var(--rijk-blue-primary);
+  color: #ffffff;
+}
+
+/* Cards Grid & Decision Cards */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -372,9 +419,36 @@ header {
 .card-summary {
   color: var(--rijk-text-dark);
   font-size: 0.95rem;
-  margin-bottom: 1.25rem;
-  flex: 1;
+  margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+/* 3-Bullet Points Component */
+.bullet-list {
+  background: var(--rijk-grey-bg);
+  border: 1px solid var(--rijk-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  list-style: none;
+  font-size: 0.88rem;
+}
+
+.bullet-item {
+  margin-bottom: 0.4rem;
+  color: var(--rijk-text-dark);
+}
+
+.bullet-item:last-child {
+  margin-bottom: 0;
+}
+
+.model-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--rijk-text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .card-tags {
@@ -398,9 +472,17 @@ header {
   padding-top: 1rem;
   border-top: 1px solid var(--rijk-border);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   font-size: 0.85rem;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .pdf-link {
@@ -418,9 +500,30 @@ header {
   text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   Rijksoverheid Style Footer
-   -------------------------------------------------------------------------- */
+.share-btn {
+  background: transparent;
+  border: 1px solid var(--rijk-border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--rijk-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.share-btn:hover {
+  background: var(--rijk-blue-light);
+  color: var(--rijk-blue-primary);
+}
+
+.report-issue-link {
+  font-size: 0.75rem;
+  color: var(--rijk-text-muted);
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   background: var(--rijk-blue-dark);
   color: #ffffff;

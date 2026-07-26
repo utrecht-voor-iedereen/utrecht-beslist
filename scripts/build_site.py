@@ -1,5 +1,6 @@
 """
 Site generator module rendering Jinja2 templates to docs/ static directory for GitHub Pages.
+Generates main pages, theme/wijk RSS feeds, and static month archives.
 """
 
 import json
@@ -22,14 +23,15 @@ DOCS_DIR = os.path.join(PROJECT_ROOT, "docs")
 
 env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), autoescape=True)
 
-def generate_rss_xml(items: list, lang: str) -> str:
+def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
     """Generates valid RSS XML feed."""
-    title = "Utrecht Beslist — Raadsbesluiten" if lang == "nl" else "Utrecht Beslist — City Council Decisions"
+    base_title = "Utrecht Beslist — Raadsbesluiten" if lang == "nl" else "Utrecht Beslist — City Council Decisions"
+    title = f"{base_title} ({category_title})" if category_title else base_title
     link = "https://zaswear.github.io/utrecht-beslist/"
     description = "Volg besluiten van de gemeenteraad van Utrecht" if lang == "nl" else "Follow Utrecht city council decisions"
     
     xml_items = []
-    for item in items[:20]:
+    for item in items[:30]:
         item_title = escape(item.get("titel_kort_nl" if lang == "nl" else "title_short_en", "Besluit"))
         item_desc = escape(item.get("samenvatting_nl" if lang == "nl" else "summary_en", ""))
         pdf_url = escape(item.get("pdf_url", link))
@@ -55,10 +57,14 @@ def generate_rss_xml(items: list, lang: str) -> str:
 
 def build_static_site(items: list):
     """Builds complete static web output into docs/."""
-    # Ensure directories exist
+    # Ensure base directories exist
     os.makedirs(os.path.join(DOCS_DIR, "nl"), exist_ok=True)
     os.makedirs(os.path.join(DOCS_DIR, "en"), exist_ok=True)
     os.makedirs(os.path.join(DOCS_DIR, "data"), exist_ok=True)
+    os.makedirs(os.path.join(DOCS_DIR, "nl", "feed"), exist_ok=True)
+    os.makedirs(os.path.join(DOCS_DIR, "en", "feed"), exist_ok=True)
+    os.makedirs(os.path.join(DOCS_DIR, "nl", "archief", "2026", "07"), exist_ok=True)
+    os.makedirs(os.path.join(DOCS_DIR, "en", "archive", "2026", "07"), exist_ok=True)
 
     # Copy static assets
     target_static = os.path.join(DOCS_DIR, "static")
@@ -80,53 +86,49 @@ def build_static_site(items: list):
     with open(os.path.join(DOCS_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(root_redirect)
 
-    # Render NL Pages
+    # Render Main NL & EN Pages
     index_template = env.get_template("index.html")
     over_template = env.get_template("over.html")
 
-    nl_index_html = index_template.render(
-        lang="nl",
-        items=items,
-        themes=THEMES,
-        root_path="../"
-    )
+    nl_index_html = index_template.render(lang="nl", items=items, themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "nl", "index.html"), "w", encoding="utf-8") as f:
         f.write(nl_index_html)
 
-    nl_over_html = over_template.render(
-        lang="nl",
-        themes=THEMES,
-        root_path="../"
-    )
+    nl_over_html = over_template.render(lang="nl", themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "nl", "over.html"), "w", encoding="utf-8") as f:
         f.write(nl_over_html)
 
-    # Render EN Pages
-    en_index_html = index_template.render(
-        lang="en",
-        items=items,
-        themes=THEMES,
-        root_path="../"
-    )
+    en_index_html = index_template.render(lang="en", items=items, themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "en", "index.html"), "w", encoding="utf-8") as f:
         f.write(en_index_html)
 
-    en_over_html = over_template.render(
-        lang="en",
-        themes=THEMES,
-        root_path="../"
-    )
+    en_over_html = over_template.render(lang="en", themes=THEMES, root_path="../")
     with open(os.path.join(DOCS_DIR, "en", "over.html"), "w", encoding="utf-8") as f:
         f.write(en_over_html)
 
-    # Write RSS Feeds
+    # Render Static Archives (2026/07)
+    with open(os.path.join(DOCS_DIR, "nl", "archief", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
+        f.write(index_template.render(lang="nl", items=items, themes=THEMES, root_path="../../../../"))
+
+    with open(os.path.join(DOCS_DIR, "en", "archive", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
+        f.write(index_template.render(lang="en", items=items, themes=THEMES, root_path="../../../../"))
+
+    # Write Main & Categorized RSS Feeds
     with open(os.path.join(DOCS_DIR, "nl", "feed.xml"), "w", encoding="utf-8") as f:
         f.write(generate_rss_xml(items, "nl"))
     with open(os.path.join(DOCS_DIR, "en", "feed.xml"), "w", encoding="utf-8") as f:
         f.write(generate_rss_xml(items, "en"))
 
+    # RSS Feeds per Theme
+    for key, theme_data in THEMES.items():
+        theme_items = [it for it in items if key in it.get("thema", [])]
+        with open(os.path.join(DOCS_DIR, "nl", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
+            f.write(generate_rss_xml(theme_items, "nl", theme_data["nl"]))
+        with open(os.path.join(DOCS_DIR, "en", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
+            f.write(generate_rss_xml(theme_items, "en", theme_data["en"]))
+
     # Write Public Data API JSON
     with open(os.path.join(DOCS_DIR, "data", "latest.json"), "w", encoding="utf-8") as f:
         json.dump({"items": items, "count": len(items)}, f, indent=2, ensure_ascii=False)
 
-    logger.info(f"Successfully generated static site in {DOCS_DIR} with {len(items)} items.")
+    logger.info(f"Successfully generated static site in {DOCS_DIR} with {len(items)} items, RSS feeds, and month archives.")

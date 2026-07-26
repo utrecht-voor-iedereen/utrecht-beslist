@@ -15,10 +15,12 @@
 {% block content %}
 <section class="controls-card">
   <div class="search-box">
-    <label for="search-input" class="search-label">{{ "Zoeken in gemeentestukken" if lang == "nl" else "Search council documents" }}</label>
+    <label for="search-input" class="search-label">{{ "Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)" if lang == "nl" else "Search council documents or postal code (e.g. 3511, 3544)" }}</label>
     <span class="search-icon">🔍</span>
-    <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, wijk of onderwerp...' if lang == 'nl' else 'Search by keyword, neighborhood or topic...' }}">
+    <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, postcode of onderwerp...' if lang == 'nl' else 'Search by keyword, postal code or topic...' }}">
   </div>
+
+  <div id="postal-badge" class="postal-badge" style="display: none;"></div>
 
   <div class="filters-group">
     <button class="filter-chip active" data-theme="all">{{ "Alle onderwerpen" if lang == "nl" else "All Topics" }}</button>
@@ -30,12 +32,29 @@
   </div>
 </section>
 
+<!-- Interactive Map Selector for Utrecht Wijken -->
+<section class="map-section">
+  <h2 class="map-title">📍 {{ "Filter op Wijk in Utrecht" if lang == "nl" else "Filter by Utrecht Neighborhood" }}</h2>
+  <div class="map-grid">
+    <button class="wijk-map-path" data-wijk="Binnenstad">🏰 Binnenstad</button>
+    <button class="wijk-map-path" data-wijk="Oost">🌳 Oost</button>
+    <button class="wijk-map-path" data-wijk="Leidsche Rijn">🏡 Leidsche Rijn</button>
+    <button class="wijk-map-path" data-wijk="Overvecht">🏢 Overvecht</button>
+    <button class="wijk-map-path" data-wijk="Zuid">🚉 Zuid</button>
+    <button class="wijk-map-path" data-wijk="Zuidwest">🚲 Zuidwest</button>
+    <button class="wijk-map-path" data-wijk="West">🛠️ West</button>
+    <button class="wijk-map-path" data-wijk="Noordwest">🏞️ Noordwest</button>
+    <button class="wijk-map-path" data-wijk="Vleuten-De Meern">🌾 Vleuten-De Meern</button>
+    <button class="wijk-map-path" data-wijk="Noordoost">🎓 Noordoost</button>
+  </div>
+</section>
+
 <section class="cards-grid" id="cards-grid">
   {% for item in items %}
   <article class="card" data-theme="{{ item.thema | join(' ') }}">
     <div>
       <div class="card-header">
-        <span class="card-date">📅 {{ item.date[:10] if item.date else ("Recent" if lang == "nl" else "Recent") }}</span>
+        <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
         
         {% if lang == "en" %}
           {% if item.impact == "hoog" %}
@@ -58,6 +77,15 @@
         {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
       </p>
 
+      <!-- 3 Bullet Breakdown -->
+      <ul class="bullet-list">
+        <li class="bullet-item">{{ item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en }}</li>
+        <li class="bullet-item">{{ item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en }}</li>
+        <li class="bullet-item">{{ item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en }}</li>
+      </ul>
+
+      <span class="model-badge">🤖 {{ "AI Model:" if lang == "nl" else "AI Model:" }} {{ item.ai_model if item.ai_model else "Degraded Mode (Fallback)" }}</span>
+
       <div class="card-tags">
         {% for t in item.thema %}
           <span class="tag">{{ themes[t][lang] if t in themes else t }}</span>
@@ -70,13 +98,20 @@
 
     <div class="card-footer">
       <span>{{ "Bron: Gemeente Utrecht" if lang == "nl" else "Source: Municipality of Utrecht" }}</span>
-      {% if item.pdf_url %}
-        <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
-          📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ➔
-        </a>
-      {% else %}
-        <span>{{ "PDF niet beschikbaar" if lang == "nl" else "PDF unavailable" }}</span>
-      {% endif %}
+      
+      <div class="card-actions">
+        <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', '{{ item.pdf_url }}')">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
+        
+        {% if item.pdf_url %}
+          <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="pdf-link">
+            📄 {{ "Origineel PDF" if lang == "nl" else "Original PDF" }} ➔
+          </a>
+        {% endif %}
+      </div>
+      
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
+        ⚠️ {{ "Meld fout" if lang == "nl" else "Report error" }}
+      </a>
     </div>
   </article>
   {% endfor %}

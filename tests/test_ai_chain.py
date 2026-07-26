@@ -44,7 +44,7 @@ def test_validate_and_parse_llm_json():
         }
       ]
     }"""
-    parsed = validate_and_parse_llm_json(json_str)
+    parsed = validate_and_parse_llm_json(json_str, "Test Model")
     assert len(parsed) == 1
     assert parsed[0]["doc_id"] == "test_1"
     assert parsed[0]["impact"] == "hoog"
