@@ -1,12 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}{{ item.titel_kort_nl if lang == "nl" else item.title_short_en }} — Utrecht Beslist{% endblock %}
+{% set title_text = get_item_lang_field(item, "title_short", lang) %}
+{% set summary_text = get_item_lang_field(item, "summary", lang) %}
+{% set status_text = get_item_lang_field(item, "status", lang) %}
+{% set key_figure_text = get_item_lang_field(item, "key_figure", lang) %}
+{% set impact_sentence_text = get_item_lang_field(item, "impact_sentence", lang) %}
+{% set bullet1_text = get_item_lang_field(item, "bullet_1_what", lang) %}
+{% set bullet2_text = get_item_lang_field(item, "bullet_2_who", lang) %}
+{% set bullet3_text = get_item_lang_field(item, "bullet_3_cost", lang) %}
+{% set context_text = get_item_lang_field(item, "context", lang) %}
+{% set consequences_text = get_item_lang_field(item, "consequences", lang) %}
+{% set timeline_text = get_item_lang_field(item, "timeline", lang) %}
+
+{% block title %}{{ title_text }} — Utrecht Beslist{% endblock %}
 
 {% block content %}
 <!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
   <a href="{{ root_path if root_path else '../../../' }}{{ lang }}/index.html" style="color: var(--utrecht-azul-enlace); font-weight: 600;">
-    {{ "← Terug naar overzicht" if lang == "nl" else "← Back to overview" }}
+    {{ t("back_to_overview", lang) }}
   </a>
 </nav>
 
@@ -16,30 +28,26 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        {{ item.estado_besluit if lang == "nl" else item.status_en }}
+        {{ status_text }}
       </span>
 
-      {% if lang == "en" %}
-        {% if item.impact == "hoog" %}
-          <span class="badge-impact impact-hoog">High Impact</span>
-        {% elif item.impact == "gemiddeld" %}
-          <span class="badge-impact impact-gemiddeld">Medium Impact</span>
-        {% else %}
-          <span class="badge-impact impact-laag">Low Impact</span>
-        {% endif %}
+      {% if item.impact == "hoog" %}
+        <span class="badge-impact impact-hoog">{{ t("high_impact", lang) }}</span>
+      {% elif item.impact == "gemiddeld" %}
+        <span class="badge-impact impact-gemiddeld">{{ t("medium_impact", lang) }}</span>
       {% else %}
-        <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }} Impact</span>
+        <span class="badge-impact impact-laag">{{ t("low_impact", lang) }}</span>
       {% endif %}
     </div>
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('{{ item.frase_impacto_nl if lang == 'nl' else item.impact_sentence_en }}. {{ item.samenvatting_nl if lang == 'nl' else item.summary_en }}', '{{ lang }}')">
-        🔊 {{ "Voorlezen" if lang == "nl" else "Listen Audio" }}
+      <button class="audio-btn" onclick="speakText('{{ impact_sentence_text | escape }}. {{ summary_text | escape }}', '{{ lang }}')">
+        🔊 {{ t("listen_audio", lang) }}
       </button>
 
       <button class="share-btn" onclick="window.print()">
-        🖨️ {{ "Afdrukken / PDF" if lang == "nl" else "Print / PDF" }}
+        🖨️ {{ t("print_pdf", lang) }}
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
@@ -50,12 +58,12 @@
 
   <!-- Document Title -->
   <h1 style="font-size: 2rem; font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+    {{ title_text }}
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 {{ item.frase_impacto_nl if lang == "nl" else item.impact_sentence_en }}
+    💡 {{ impact_sentence_text }}
   </div>
 
   <!-- 4 Deep Detailed Sections -->
@@ -63,61 +71,61 @@
     <!-- Section 1: Context -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 {{ "Context & Achtergrond" if lang == "nl" else "Context & Background" }}
+        🎯 {{ t("context_title", lang) }}
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        {{ item.contexto_nl if lang == "nl" else item.context_en }}
+        {{ context_text }}
       </p>
     </section>
 
     <!-- Section 2: Decision & Agreements -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 {{ "Besluit & Afspraken" if lang == "nl" else "Decision & Agreements" }}
+        📋 {{ t("summary_title", lang) }}
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        {{ item.samenvatting_nl if lang == "nl" else item.summary_en }}
+        {{ summary_text }}
       </p>
       
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">{{ item.punt_1_wat_nl if lang == "nl" else item.bullet_1_what_en }}</li>
-        <li class="bullet-item">{{ item.punt_2_wie_nl if lang == "nl" else item.bullet_2_who_en }}</li>
-        <li class="bullet-item">{{ item.punt_3_geld_nl if lang == "nl" else item.bullet_3_cost_en }}</li>
+        <li class="bullet-item">{{ bullet1_text }}</li>
+        <li class="bullet-item">{{ bullet2_text }}</li>
+        <li class="bullet-item">{{ bullet3_text }}</li>
       </ul>
     </section>
 
     <!-- Section 3: Consequences for Residents -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ {{ "Gevolgen voor Inwoners" if lang == "nl" else "Impact on Residents" }}
+        🏘️ {{ t("consequences_title", lang) }}
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        {{ item.consecuencias_nl if lang == "nl" else item.consequences_en }}
+        {{ consequences_text }}
       </p>
     </section>
 
     <!-- Section 4: Budget & Timeline -->
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-        💶 {{ "Budget & Planning" if lang == "nl" else "Budget & Timeline" }}
+        💶 Budget & Timeline
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
         <div>
-          <strong>{{ "Cijfer/Kosten:" if lang == "nl" else "Budget/Cost:" }}</strong>
-          <span>{{ item.cifra_clave_nl if lang == "nl" else item.key_figure_en }}</span>
+          <strong>Cijfer/Kosten:</strong>
+          <span>{{ key_figure_text }}</span>
         </div>
         <div>
-          <strong>{{ "Planning:" if lang == "nl" else "Timeline:" }}</strong>
-          <span>{{ item.plazo_nl if lang == "nl" else item.timeline_en }}</span>
+          <strong>Planning:</strong>
+          <span>{{ timeline_text }}</span>
         </div>
       </div>
     </section>
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-      {% for t in item.thema %}
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">{{ themes[t][lang] if t in themes else t }}</span>
+      {% for t_key in item.thema %}
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">{{ themes[t_key][lang] if t_key in themes and lang in themes[t_key] else (themes[t_key]['nl'] if t_key in themes else t_key) }}</span>
       {% endfor %}
       {% for w in item.wijken %}
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 {{ w }}</span>
@@ -128,45 +136,36 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ {{ "Officiële Verificatie & Woo-Rechten (Wet open overheid)" if lang == "nl" else "Official Verification & Woo Rights (Open Government Act)" }}
+      🏛️ {{ t("woo_rights_link", lang) }}
     </h3>
     
-    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-      {{ "Dit raadsdocument is een officieel overheidsstuk. Op grond van de Nederlandse Wet open overheid (Woo) en de Archiefwet worden deze raadsstukken permanent bewaard en openbaar gemaakt." if lang == "nl" else "This council document is an official government record. Pursuant to the Dutch Open Government Act (Woo) and Archives Act, these records are permanently preserved and made publicly accessible." }}
-    </p>
-
-    <div style="font-size: 0.85rem; color: var(--utrecht-gris-secundario); margin-bottom: 1.25rem;">
-      💡 <strong>{{ "Woo-Recht:" if lang == "nl" else "Woo Right:" }}</strong> {{ "Wil je de achterliggende ambtelijke correspondentie of bijlagen inzien? Dan kun je een Woo-verzoek indienen bij Gemeente Utrecht." if lang == "nl" else "Need to inspect internal background correspondence or annexes? You have the legal right to submit a Woo request to the Municipality of Utrecht." }}
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       {% if item.pdf_url %}
         <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
-          📄 {{ "Download Origineel PDF" if lang == "nl" else "Download Original PDF" }} ➔
+          📄 {{ t("official_pdf_link", lang) }} ➔
         </a>
       {% endif %}
       
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🏛️ {{ "Gemeente Utrecht Raadsportaal" if lang == "nl" else "Utrecht Council Portal" }} 🔗
+        {{ t("raadsportaal_link", lang) }} 🔗
       </a>
 
       <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 {{ "Open Raadsinformatie (ORI)" if lang == "nl" else "Open Raadsinformatie API" }} 🔗
+        🌐 Open Raadsinformatie (ORI) 🔗
       </a>
     </div>
   </div>
 
-  <!-- Transparency Footer with Persistence & Freshness Info -->
+  <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 {{ "AI Transparantie:" if lang == "nl" else "AI Transparency:" }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
-      <span style="margin-left: 0.75rem;">📦 {{ "Permanent gearchiveerd (Archiefwet 1995)" if lang == "nl" else "Permanently archived (Archives Act)" }}</span>
+      <span>🤖 AI Transparantie: {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', window.location.href)">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
+      <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', window.location.href)">🔗 {{ t("share", lang) }}</button>
       <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
-        ⚠️ {{ "Meld fout" if lang == "nl" else "Report error" }}
+        ⚠️ {{ t("share", lang) }}
       </a>
     </div>
   </div>

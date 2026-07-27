@@ -8,6 +8,30 @@
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../../../nl/feed.xml">
+  <style>
+    .lang-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .lang-btn {
+      padding: 0.25rem 0.45rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--utrecht-rood, #CC0000);
+      color: #FFFFFF;
+      border-color: var(--utrecht-rood, #CC0000);
+    }
+  </style>
 </head>
 <body>
 
@@ -16,7 +40,7 @@
     <div class="header-container">
       <a href="../../../nl/index.html" class="brand" title="Utrecht Beslist">
         <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
-        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal">
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — GEMEENTERAAD IN BEGRIJPELIJKE TAAL">
           <defs>
             <clipPath id="clip-top-left-hdr">
               <polygon points="0,0 80,0 0,80" />
@@ -58,8 +82,23 @@
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
           <div class="lang-switch">
-            <button class="lang-btn active" data-lang="nl">NL</button>
-            <button class="lang-btn " data-lang="en">EN</button>
+            
+              <a href="../../../nl/index.html" class="lang-btn active" title="Nederlands">🇳🇱 NL</a>
+            
+              <a href="../../../en/index.html" class="lang-btn " title="English">🇬🇧 EN</a>
+            
+              <a href="../../../es/index.html" class="lang-btn " title="Español">🇪🇸 ES</a>
+            
+              <a href="../../../tr/index.html" class="lang-btn " title="Türkçe">🇹🇷 TR</a>
+            
+              <a href="../../../pt-br/index.html" class="lang-btn " title="Português (Brasil)">🇧🇷 PT-BR</a>
+            
+              <a href="../../../pt-pt/index.html" class="lang-btn " title="Português (Portugal)">🇵🇹 PT-PT</a>
+            
+              <a href="../../../fr/index.html" class="lang-btn " title="Français">🇫🇷 FR</a>
+            
+              <a href="../../../de/index.html" class="lang-btn " title="Deutsch">🇩🇪 DE</a>
+            
           </div>
         </div>
       </nav>
@@ -87,7 +126,7 @@
       </span>
 
       
-        <span class="badge-impact impact-laag">laag Impact</span>
+        <span class="badge-impact impact-laag">Laag Impact</span>
       
     </div>
 
@@ -122,7 +161,7 @@
     <!-- Section 1: Context -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 Context &amp; Achtergrond
+        🎯 🎯 Waarom is dit besluit ingediend?
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
         Dit voorstel is ingediend om nieuwe wethouders te benoemen.
@@ -132,7 +171,7 @@
     <!-- Section 2: Decision & Agreements -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 Besluit &amp; Afspraken
+        📋 💡 Samenvatting in Begrijpelijke Taal (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
         De gemeenteraad bespreekt de benoeming van nieuwe wethouders.
@@ -149,7 +188,7 @@
     <!-- Section 3: Consequences for Residents -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ Gevolgen voor Inwoners
+        🏘️ 🏘️ Wat verandert er in Utrecht?
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
         Het kan zijn dat de nieuwe wethouders veranderingen brengen in het beleid van de gemeente.
@@ -159,7 +198,7 @@
     <!-- Section 4: Budget & Timeline -->
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-        💶 Budget &amp; Planning
+        💶 Budget & Timeline
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
         <div>
@@ -187,22 +226,14 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ Officiële Verificatie &amp; Woo-Rechten (Wet open overheid)
+      🏛️ ⚖️ Woo-Rechten &amp; Transparantie
     </h3>
     
-    <p style="font-size: 0.9rem; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-      Dit raadsdocument is een officieel overheidsstuk. Op grond van de Nederlandse Wet open overheid (Woo) en de Archiefwet worden deze raadsstukken permanent bewaard en openbaar gemaakt.
-    </p>
-
-    <div style="font-size: 0.85rem; color: var(--utrecht-gris-secundario); margin-bottom: 1.25rem;">
-      💡 <strong>Woo-Recht:</strong> Wil je de achterliggende ambtelijke correspondentie of bijlagen inzien? Dan kun je een Woo-verzoek indienen bij Gemeente Utrecht.
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
       
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🏛️ Gemeente Utrecht Raadsportaal 🔗
+        🏛️ Bekijk in Utrecht Raadsportaal 🔗
       </a>
 
       <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
@@ -211,17 +242,16 @@
     </div>
   </div>
 
-  <!-- Transparency Footer with Persistence & Freshness Info -->
+  <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
       <span>🤖 AI Transparantie: Groq (llama-3.3-70b-versatile)</span>
-      <span style="margin-left: 0.75rem;">📦 Permanent gearchiveerd (Archiefwet 1995)</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Benoeming Wethouders', window.location.href)">🔗 Delen</button>
       <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207947092" target="_blank" rel="noopener" class="report-issue-link">
-        ⚠️ Meld fout
+        ⚠️ Delen
       </a>
     </div>
   </div>
@@ -240,7 +270,7 @@
           Het project is 100% gratis en zonder reclame. Vind je dit nuttig? Steun het onderhoud met een kop koffie:
         </p>
 
-        <!-- Ko-fi Support Button (Multilingual NL / EN) -->
+        <!-- Ko-fi Support Button -->
         <a href="https://ko-fi.com/I2I31CXQVM" target="_blank" rel="noopener noreferrer" class="kofi-btn" style="margin-top: 0.75rem;">
           <span aria-hidden="true">☕</span> Trakteer ons op een kop koffie
         </a>
@@ -249,7 +279,7 @@
       <div class="footer-column">
         <h3>Navigatie &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../nl/index.html">Overzicht besluiten</a></li>
+          <li><a href="../../../nl/index.html">Overzicht</a></li>
           <li><a href="../../../nl/over.html">Over &amp; Transparantie</a></li>
           <li><a href="../../../nl/feed.xml">RSS Feed (NL)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -257,7 +287,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers &amp; Bronnen</h3>
+        <h3>Disclaimers & Data</h3>
         <p>Geautomatiseerd samengevat met AI op basis van open data van Open Raadsinformatie. Geen juridisch advies — raadpleeg altijd het originele raadsstuk van Gemeente Utrecht.</p>
       </div>
     </div>

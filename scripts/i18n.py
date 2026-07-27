@@ -1,0 +1,502 @@
+"""
+Internationalization (i18n) definitions, metadata, UI strings, and field helpers for Utrecht Beslist.
+Supports: NL, EN, ES, TR, PT-BR, PT-PT, FR, DE.
+"""
+from typing import Any
+
+LANGUAGES = {
+    'nl': {'code': 'nl', 'name': 'Nederlands', 'flag': '🇳🇱', 'label': 'NL'},
+    'en': {'code': 'en', 'name': 'English', 'flag': '🇬🇧', 'label': 'EN'},
+    'es': {'code': 'es', 'name': 'Español', 'flag': '🇪🇸', 'label': 'ES'},
+    'tr': {'code': 'tr', 'name': 'Türkçe', 'flag': '🇹🇷', 'label': 'TR'},
+    'pt-br': {'code': 'pt-br', 'name': 'Português (Brasil)', 'flag': '🇧🇷', 'label': 'PT-BR'},
+    'pt-pt': {'code': 'pt-pt', 'name': 'Português (Portugal)', 'flag': '🇵🇹', 'label': 'PT-PT'},
+    'fr': {'code': 'fr', 'name': 'Français', 'flag': '🇫🇷', 'label': 'FR'},
+    'de': {'code': 'de', 'name': 'Deutsch', 'flag': '🇩🇪', 'label': 'DE'},
+}
+
+DEFAULT_LANG = 'nl'
+
+UI = {
+    'site_title': {
+        'nl': 'Utrecht Beslist — Gemeente Utrecht Raadsbesluiten',
+        'en': 'Utrecht Beslist — City Council Decisions',
+        'es': 'Utrecht Beslist — Decisiones del Ayuntamiento de Utrecht',
+        'tr': 'Utrecht Beslist — Utrecht Belediye Meclisi Kararları',
+        'pt-br': 'Utrecht Beslist — Decisões do Conselho Municipal de Utrecht',
+        'pt-pt': 'Utrecht Beslist — Decisões da Câmara Municipal de Utrecht',
+        'fr': "Utrecht Beslist — Décisions du Conseil Municipal d'Utrecht",
+        'de': 'Utrecht Beslist — Beschlüsse des Stadtrats Utrecht',
+    },
+    'meta_description': {
+        'nl': 'Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).',
+        'en': 'Utrecht city council decisions and documents explained in plain language.',
+        'es': 'Decisiones y documentos del ayuntamiento de Utrecht explicados en lenguaje claro.',
+        'tr': 'Utrecht belediye meclisi kararları ve belgeleri sade bir dille açıklanmaktadır.',
+        'pt-br': 'Decisões e documentos do conselho municipal de Utrecht explicados em linguagem clara.',
+        'pt-pt': 'Decisões e documentos da câmara municipal de Utrecht explicados em linguagem clara.',
+        'fr': "Décisions et documents du conseil municipal d'Utrecht expliqués en langage simple.",
+        'de': 'Beschlüsse und Dokumente des Stadtrats Utrecht in verständlicher Sprache erklärt.',
+    },
+    'subtitle': {
+        'nl': 'GEMEENTERAAD IN BEGRIJPELIJKE TAAL',
+        'en': 'CITY COUNCIL IN PLAIN LANGUAGE',
+        'es': 'AYUNTAMIENTO EN LENGUAJE CLARO',
+        'tr': 'SADE DİLLE BELEDİYE MECLİSİ',
+        'pt-br': 'CONSELHO MUNICIPAL EM LINGUAGEM CLARA',
+        'pt-pt': 'CÂMARA MUNICIPAL EM LINGUAGEM CLARA',
+        'fr': 'CONSEIL MUNICIPAL EN LANGAGE SIMPLE',
+        'de': 'STADTRAT IN VERSTÄNDLICHER SPRACHE',
+    },
+    'nav_overview': {
+        'nl': 'Overzicht',
+        'en': 'Overview',
+        'es': 'Resumen',
+        'tr': 'Genel Bakış',
+        'pt-br': 'Visão Geral',
+        'pt-pt': 'Vista Geral',
+        'fr': 'Aperçu',
+        'de': 'Übersicht',
+    },
+    'nav_about': {
+        'nl': 'Over & Transparantie',
+        'en': 'About & Transparency',
+        'es': 'Sobre el Proyecto & Transparencia',
+        'tr': 'Hakkında & Şeffaflık',
+        'pt-br': 'Sobre & Transparência',
+        'pt-pt': 'Sobre & Transparência',
+        'fr': 'À propos & Transparence',
+        'de': 'Über uns & Transparenz',
+    },
+    'hero_title': {
+        'nl': 'Wat besloot de gemeenteraad deze week?',
+        'en': 'What did Utrecht City Council decide this week?',
+        'es': '¿Qué decidió el ayuntamiento de Utrecht esta semana?',
+        'tr': 'Utrecht Belediye Meclisi bu hafta ne karar aldı?',
+        'pt-br': 'O que o Conselho Municipal de Utrecht decidiu esta semana?',
+        'pt-pt': 'O que a Câmara Municipal de Utrecht decidiu esta semana?',
+        'fr': "Qu'a décidé le conseil municipal d'Utrecht cette semaine ?",
+        'de': 'Was hat der Stadtrat Utrecht diese Woche beschlossen?',
+    },
+    'hero_subtitle': {
+        'nl': 'Overzicht van raadsvoorstellen en besluiten van de gemeenteraad van Utrecht in heldere taal, met rechtstreekse link naar het officiële stuk.',
+        'en': 'Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents.',
+        'es': 'Resumen de propuestas y decisiones del ayuntamiento de Utrecht en lenguaje claro, con enlaces directos a los documentos oficiales.',
+        'tr': 'Utrecht belediye meclisi kararlarının ve tekliflerinin sade bir dille özeti, resmi belgelere doğrudan bağlantılarla.',
+        'pt-br': 'Visão geral das decisões e propostas do conselho municipal de Utrecht em linguagem clara, com links diretos para documentos oficiais.',
+        'pt-pt': 'Visão geral das decisões e propostas da câmara municipal de Utrecht em linguagem clara, com ligações diretas para documentos oficiais.',
+        'fr': "Aperçu des décisions et propositions du conseil municipal d'Utrecht en langage simple, avec des liens directs vers les documents officiels.",
+        'de': 'Übersicht der Beschlüsse und Anträge des Stadtrats Utrecht in klarer Sprache, mit direkten Links zu den offiziellen Dokumenten.',
+    },
+    'archive_notice_prefix': {
+        'nl': '📊 Archief:',
+        'en': '📊 Archive:',
+        'es': '📊 Archivo:',
+        'tr': '📊 Arşiv:',
+        'pt-br': '📊 Arquivo:',
+        'pt-pt': '📊 Arquivo:',
+        'fr': '📊 Archives :',
+        'de': '📊 Archiv:',
+    },
+    'archive_notice_suffix': {
+        'nl': 'raadsbesluiten permanent bewaard',
+        'en': 'council decisions permanently preserved',
+        'es': 'decisiones municipales conservadas permanentemente',
+        'tr': 'belediye meclisi kararları kalıcı olarak saklanmaktadır',
+        'pt-br': 'decisões municipais preservadas permanentemente',
+        'pt-pt': 'decisões municipais preservadas permanentemente',
+        'fr': 'décisions du conseil conservées en permanence',
+        'de': 'Stadtratsbeschlüsse dauerhaft aufbewahrt',
+    },
+    'impact_all': {
+        'nl': '🌐 Alle Besluiten',
+        'en': '🌐 All Decisions',
+        'es': '🌐 Todas las Decisiones',
+        'tr': '🌐 Tüm Kararlar',
+        'pt-br': '🌐 Todas as Decisões',
+        'pt-pt': '🌐 Todas as Decisões',
+        'fr': '🌐 Toutes les Décisions',
+        'de': '🌐 Alle Beschlüsse',
+    },
+    'impact_casa': {
+        'nl': '🏠 Mijn Huis & Buurt',
+        'en': '🏠 My House & Neighborhood',
+        'es': '🏠 Mi Casa & Barrio',
+        'tr': '🏠 Evim & Mahallem',
+        'pt-br': '🏠 Minha Casa & Bairro',
+        'pt-pt': '🏠 A Minha Casa & Bairro',
+        'fr': '🏠 Ma Maison & Mon Quartier',
+        'de': '🏠 Mein Haus & Kiez',
+    },
+    'impact_bolsillo': {
+        'nl': '💶 Mijn Portemonnee & Belastingen',
+        'en': '💶 My Wallet & Taxes',
+        'es': '💶 Mi Bolsillo e Impuestos',
+        'tr': '💶 Cüzdanım & Vergiler',
+        'pt-br': '💶 Meu Bolso & Impostos',
+        'pt-pt': '💶 O Meu Bolso & Impostos',
+        'fr': '💶 Mon Portefeuille & Impôts',
+        'de': '💶 Mein Portemonnaie & Steuern',
+    },
+    'impact_movilidad': {
+        'nl': '🚲 Mijn Mobiliteit & Dagelijks Leven',
+        'en': '🚲 My Mobility & Daily Life',
+        'es': '🚲 Mi Movilidad & Vida Diaria',
+        'tr': '🚲 Ulaşımım & Günlük Yaşamım',
+        'pt-br': '🚲 Minha Mobilidade & Vida Diária',
+        'pt-pt': '🚲 A Minha Mobilidade & Dia a Dia',
+        'fr': '🚲 Ma Mobilité & Vie Quotidienne',
+        'de': '🚲 Meine Mobilität & Alltag',
+    },
+    'search_label': {
+        'nl': 'Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)',
+        'en': 'Search council documents or postal code (e.g. 3511, 3544)',
+        'es': 'Buscar en documentos municipales o por código postal (ej. 3511, 3544)',
+        'tr': 'Belediye belgelerinde veya posta koduna göre arayın (örn. 3511, 3544)',
+        'pt-br': 'Buscar em documentos municipais ou por código postal (ex. 3511, 3544)',
+        'pt-pt': 'Pesquisar em documentos municipais ou por código postal (ex. 3511, 3544)',
+        'fr': 'Rechercher dans les documents municipaux ou par code postal (ex. 3511, 3544)',
+        'de': 'In Ratsdokumenten oder nach PLZ suchen (z. B. 3511, 3544)',
+    },
+    'search_placeholder': {
+        'nl': 'Zoek op trefwoord, postcode of onderwerp...',
+        'en': 'Search by keyword, postal code or topic...',
+        'es': 'Buscar por palabra clave, código postal o tema...',
+        'tr': 'Anahtar kelime, posta kodu veya konuya göre ara...',
+        'pt-br': 'Buscar por palavra-chave, código postal ou tópico...',
+        'pt-pt': 'Pesquisar por palavra-chave, código postal ou tópico...',
+        'fr': 'Rechercher par mot-clé, code postal ou sujet...',
+        'de': 'Suche nach Stichwort, PLZ oder Thema...',
+    },
+    'wijk_all': {
+        'nl': '📍 Alle Wijken in Utrecht',
+        'en': '📍 All Utrecht Neighborhoods',
+        'es': '📍 Todos los Barrios de Utrecht',
+        'tr': '📍 Tüm Utrecht Mahalleleri',
+        'pt-br': '📍 Todos os Bairros de Utrecht',
+        'pt-pt': '📍 Todos os Bairros de Utrecht',
+        'fr': "📍 Tous les Quartiers d'Utrecht",
+        'de': '📍 Alle Stadtteile in Utrecht',
+    },
+    'theme_all': {
+        'nl': '🏷️ Alle Onderwerpen',
+        'en': '🏷️ All Topics',
+        'es': '🏷️ Todos los Temas',
+        'tr': '🏷️ Tüm Konular',
+        'pt-br': '🏷️ Todos os Tópicos',
+        'pt-pt': '🏷️ Todos os Tópicos',
+        'fr': '🏷️ Tous les Sujets',
+        'de': '🏷️ Alle Themen',
+    },
+    'reset_filters': {
+        'nl': 'Reset filters',
+        'en': 'Reset filters',
+        'es': 'Restablecer filtros',
+        'tr': 'Filtreleri sıfırla',
+        'pt-br': 'Redefinir filtros',
+        'pt-pt': 'Repor filtros',
+        'fr': 'Réinitialiser les filtres',
+        'de': 'Filter zurücksetzen',
+    },
+    'decisions_title': {
+        'nl': 'Gemeenteraadsbesluiten',
+        'en': 'Council Decisions',
+        'es': 'Acuerdos del Ayuntamiento',
+        'tr': 'Belediye Meclis Kararları',
+        'pt-br': 'Decisões do Conselho Municipal',
+        'pt-pt': 'Decisões da Câmara Municipal',
+        'fr': 'Décisions du Conseil Municipal',
+        'de': 'Stadtratsbeschlüsse',
+    },
+    'view_cards': {
+        'nl': 'Kaarten',
+        'en': 'Cards',
+        'es': 'Tarjetas',
+        'tr': 'Kartlar',
+        'pt-br': 'Cartões',
+        'pt-pt': 'Cartões',
+        'fr': 'Cartes',
+        'de': 'Karten',
+    },
+    'view_list': {
+        'nl': 'Compacte Lijst',
+        'en': 'Compact List',
+        'es': 'Lista Compacta',
+        'tr': 'Kullanışlı Liste',
+        'pt-br': 'Lista Compacta',
+        'pt-pt': 'Lista Compacta',
+        'fr': 'Liste Compacte',
+        'de': 'Kompaktliste',
+    },
+    'high_impact': {
+        'nl': 'Hoog Impact',
+        'en': 'High Impact',
+        'es': 'Alto Impacto',
+        'tr': 'Yüksek Etki',
+        'pt-br': 'Alto Impacto',
+        'pt-pt': 'Alto Impacto',
+        'fr': 'Impact Élevé',
+        'de': 'Hohe Wirkung',
+    },
+    'medium_impact': {
+        'nl': 'Gemiddeld Impact',
+        'en': 'Medium Impact',
+        'es': 'Impacto Medio',
+        'tr': 'Orta Etki',
+        'pt-br': 'Médio Impacto',
+        'pt-pt': 'Médio Impacto',
+        'fr': 'Impact Moyen',
+        'de': 'Mittlere Wirkung',
+    },
+    'low_impact': {
+        'nl': 'Laag Impact',
+        'en': 'Low Impact',
+        'es': 'Bajo Impacto',
+        'tr': 'Düşük Etki',
+        'pt-br': 'Baixo Impacto',
+        'pt-pt': 'Baixo Impacto',
+        'fr': 'Faible Impact',
+        'de': 'Geringe Wirkung',
+    },
+    'council_doc': {
+        'nl': 'Gemeentestuk',
+        'en': 'Council Doc',
+        'es': 'Doc Municipal',
+        'tr': 'Meclis Belgesi',
+        'pt-br': 'Doc Municipal',
+        'pt-pt': 'Doc Municipal',
+        'fr': 'Doc Municipal',
+        'de': 'Ratsdokument',
+    },
+    'view_details': {
+        'nl': 'Bekijk details',
+        'en': 'View details',
+        'es': 'Ver detalles',
+        'tr': 'Detayları gör',
+        'pt-br': 'Ver detalhes',
+        'pt-pt': 'Ver detalhes',
+        'fr': 'Voir les détails',
+        'de': 'Details anzeigen',
+    },
+    'share': {
+        'nl': 'Delen',
+        'en': 'Share',
+        'es': 'Compartir',
+        'tr': 'Paylaş',
+        'pt-br': 'Compartilhar',
+        'pt-pt': 'Partilhar',
+        'fr': 'Partager',
+        'de': 'Teilen',
+    },
+    'no_results': {
+        'nl': 'Geen resultaten gevonden voor de opgegeven zoekopdracht.',
+        'en': 'No matching decisions found for your query.',
+        'es': 'No se encontraron decisiones para la búsqueda indicada.',
+        'tr': 'Aramanız için eşleşen karar bulunamadı.',
+        'pt-br': 'Nenhuma decisão encontrada para a sua busca.',
+        'pt-pt': 'Nenhuma decisão encontrada para a sua pesquisa.',
+        'fr': 'Aucune décision trouvée pour votre recherche.',
+        'de': 'Keine Beschlüsse für Ihre Suche gefunden.',
+    },
+    'back_to_overview': {
+        'nl': '← Terug naar overzicht',
+        'en': '← Back to overview',
+        'es': '← Volver al resumen',
+        'tr': '← Genel bakışa dön',
+        'pt-br': '← Voltar à visão geral',
+        'pt-pt': '← Voltar à vista geral',
+        'fr': "← Retour à l'aperçu",
+        'de': '← Zurück zur Übersicht',
+    },
+    'listen_audio': {
+        'nl': 'Voorlezen',
+        'en': 'Listen Audio',
+        'es': 'Escuchar Audio',
+        'tr': 'Dinle',
+        'pt-br': 'Ouvir Áudio',
+        'pt-pt': 'Ouvir Áudio',
+        'fr': "Écouter l'Audio",
+        'de': 'Vorlesen',
+    },
+    'print_pdf': {
+        'nl': 'Afdrukken / PDF',
+        'en': 'Print / PDF',
+        'es': 'Imprimir / PDF',
+        'tr': 'Yazdır / PDF',
+        'pt-br': 'Imprimir / PDF',
+        'pt-pt': 'Imprimir / PDF',
+        'fr': 'Imprimer / PDF',
+        'de': 'Drucken / PDF',
+    },
+    'official_pdf_link': {
+        'nl': '📄 Origineel PDF Stuk',
+        'en': '📄 Original PDF Document',
+        'es': '📄 Documento PDF Original',
+        'tr': '📄 Orijinal PDF Belgesi',
+        'pt-br': '📄 Documento PDF Original',
+        'pt-pt': '📄 Documento PDF Original',
+        'fr': '📄 Document PDF Original',
+        'de': '📄 Originales PDF-Dokument',
+    },
+    'raadsportaal_link': {
+        'nl': '🏛️ Bekijk in Utrecht Raadsportaal',
+        'en': '🏛️ View in Utrecht Council Portal',
+        'es': '🏛️ Ver en Portal del Ayuntamiento de Utrecht',
+        'tr': '🏛️ Utrecht Meclis Portalında Gör',
+        'pt-br': '🏛️ Ver no Portal do Conselho de Utrecht',
+        'pt-pt': '🏛️ Ver no Portal da Câmara de Utrecht',
+        'fr': "🏛️ Voir sur le Portail du Conseil d'Utrecht",
+        'de': '🏛️ Im Ratsportal Utrecht ansehen',
+    },
+    'woo_rights_link': {
+        'nl': '⚖️ Woo-Rechten & Transparantie',
+        'en': '⚖️ Woo Freedom of Information Rights',
+        'es': '⚖️ Derechos de Información Pública (Woo)',
+        'tr': '⚖️ Kamu Bilgi Edinme Hakları (Woo)',
+        'pt-br': '⚖️ Direitos de Acesso à Informação Pública (Woo)',
+        'pt-pt': '⚖️ Direitos de Acesso à Informação Pública (Woo)',
+        'fr': "⚖️ Droits d'Accès à l'Information Publique (Woo)",
+        'de': '⚖️ Informationsfreiheitsrechte (Woo)',
+    },
+    'summary_title': {
+        'nl': '💡 Samenvatting in Begrijpelijke Taal (B1)',
+        'en': '💡 Plain Language Summary (B1)',
+        'es': '💡 Resumen en Lenguaje Claro (B1)',
+        'tr': '💡 Sade Dille Özet (B1)',
+        'pt-br': '💡 Resumo em Linguagem Clara (B1)',
+        'pt-pt': '💡 Resumo em Linguagem Clara (B1)',
+        'fr': '💡 Résumé en Langage Simple (B1)',
+        'de': '💡 Zusammenfassung in verständlicher Sprache (B1)',
+    },
+    'context_title': {
+        'nl': '🎯 Waarom is dit besluit ingediend?',
+        'en': '🎯 Background & Context',
+        'es': '🎯 Contexto y Razones de la Propuesta',
+        'tr': '🎯 Gerekçe ve Arka Plan',
+        'pt-br': '🎯 Contexto e Razões da Proposta',
+        'pt-pt': '🎯 Contexto e Razões da Proposta',
+        'fr': '🎯 Contexte & Raisons de la Proposition',
+        'de': '🎯 Hintergrund & Kontext',
+    },
+    'consequences_title': {
+        'nl': '🏘️ Wat verandert er in Utrecht?',
+        'en': '🏘️ Consequences & City Changes',
+        'es': '🏘️ Consecuencias y Cambios en la Ciudad',
+        'tr': '🏘️ Şehirde Ne Değişecek?',
+        'pt-br': '🏘️ Consequências e Mudanças na Cidade',
+        'pt-pt': '🏘️ Consequências e Mudanças na Cidade',
+        'fr': '🏘️ Conséquences et Changements dans la Ville',
+        'de': '🏘️ Konsequenzen & Änderungen in der Stadt',
+    },
+    'footer_desc': {
+        'nl': 'Onafhankelijk burgerinitiatief dat documenten en besluiten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke taal.',
+        'en': 'Independent civic project automatically summarizing Utrecht city council documents and decisions into plain language.',
+        'es': 'Iniciativa ciudadana independiente que recopila y resume automáticamente documentos y acuerdos del ayuntamiento de Utrecht en lenguaje claro.',
+        'tr': 'Utrecht belediye meclisi belgelerini ve kararlarını otomatik olarak toplayan ve sade bir dille özetleyen bağımsız sivil girişim.',
+        'pt-br': 'Iniciativa cidadã independente que reúne e resume automaticamente documentos e decisões do conselho municipal de Utrecht em linguagem clara.',
+        'pt-pt': 'Iniciativa de cidadãos independente que recolhe e resume automaticamente documentos e decisões da câmara municipal de Utrecht em linguagem clara.',
+        'fr': "Initiative citoyenne indépendante qui rassemble et résume automatiquement les documents et décisions du conseil municipal d'Utrecht en langage simple.",
+        'de': 'Unabhängige Bürgerinitiative, die Dokumente und Beschlüsse des Stadtrats Utrecht automatisch sammelt und verständlich zusammenfasst.',
+    },
+    'footer_kofi': {
+        'nl': 'Het project is 100% gratis en zonder reclame. Vind je dit nuttig? Steun het onderhoud met een kop koffie:',
+        'en': 'The project is 100% free and open source. If you find this useful, consider buying us a coffee:',
+        'es': 'El proyecto es 100% gratuito y sin publicidad. ¿Te resulta útil? Apoya el mantenimiento con un café:',
+        'tr': 'Bu proje %100 ücretsiz ve reklamsızdır. Yararlı buluyor musunuz? Bir kahve ısmarla:',
+        'pt-br': 'O projeto é 100% gratuito e sem anúncios. Achou útil? Apoie a manutenção com um café:',
+        'pt-pt': 'O projeto é 100% gratuito e sem anúncios. Achou útil? Apoie a manutenção com um café:',
+        'fr': 'Le projet est 100% gratuit et sans publicité. Le trouvez-vous utile ? Offrez-nous un café :',
+        'de': 'Das Projekt ist zu 100% kostenlos und werbefrei. Finden Sie es nützlich? Unterstützen Sie uns mit einem Kaffee:',
+    },
+    'kofi_btn': {
+        'nl': 'Trakteer ons op een kop koffie',
+        'en': 'Buy us a coffee',
+        'es': 'Invítanos a un café',
+        'tr': 'Bize bir kahve ısmarla',
+        'pt-br': 'Pague um café para nós',
+        'pt-pt': 'Pague-nos um café',
+        'fr': 'Offrez-nous un café',
+        'de': 'Spendieren Sie uns einen Kaffee',
+    },
+    'footer_nav': {
+        'nl': 'Navigatie & Feeds',
+        'en': 'Navigation & Feeds',
+        'es': 'Navegación & Feeds',
+        'tr': 'Gezinme & Beslemeler',
+        'pt-br': 'Navegação & Feeds',
+        'pt-pt': 'Navegação & Feeds',
+        'fr': 'Navigation & Flux',
+        'de': 'Navigation & Feeds',
+    },
+    'footer_disclaimer': {
+        'nl': 'Geautomatiseerd samengevat met AI op basis van open data van Open Raadsinformatie. Geen juridisch advies — raadpleeg altijd het originele raadsstuk van Gemeente Utrecht.',
+        'en': 'Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.',
+        'es': 'Resumido automáticamente mediante IA a partir de datos abiertos de Open Raadsinformatie. Sin valor de asesoramiento legal; consulte siempre el documento oficial.',
+        'tr': 'Open Raadsinformatie açık verileri kullanılarak yapay zeka ile otomatik özetlenmiştir. Hukuki tavsiye niteliği taşımaz; her zaman resmi belgeye başvurun.',
+        'pt-br': 'Resumido automaticamente com IA a partir dos dados abertos do Open Raadsinformatie. Sem aconselhamento jurídico — consulte sempre o documento oficial.',
+        'pt-pt': 'Resumido automaticamente com IA a partir dos dados abertos do Open Raadsinformatie. Sem aconselhamento jurídico — consulte sempre o documento oficial.',
+        'fr': "Résumés automatisés par IA à partir des données ouvertes d'Open Raadsinformatie. Pas de conseil juridique — consultez toujours le document officiel.",
+        'de': 'Automatisch mit KI auf Basis offener Daten von Open Raadsinformatie zusammengefasst. Keine Rechtsberatung — konsultieren Sie stets das offizielle Ratsdokument.',
+    },
+    'footer_rights': {
+        'nl': 'Burgerinitiatief · 100% Statisch & Kosteloos',
+        'en': 'Civic Project · 100% Static & Free',
+        'es': 'Iniciativa Ciudadana · 100% Estática y Gratuita',
+        'tr': 'Sivil Girişim · %100 Statik ve Ücretsiz',
+        'pt-br': 'Iniciativa Cidadã · 100% Estática e Gratuita',
+        'pt-pt': 'Iniciativa de Cidadãos · 100% Estática e Gratuita',
+        'fr': 'Initiative Citoyenne · 100% Statique & Gratuite',
+        'de': 'Bürgerinitiative · 100% Statisch & Kostenlos',
+    },
+}
+
+def t(key: str, lang: str = 'nl') -> str:
+    """Helper function to fetch translated UI text safely."""
+    l = lang if lang in LANGUAGES else DEFAULT_LANG
+    if key in UI:
+        return UI[key].get(l, UI[key].get(DEFAULT_LANG, key))
+    return key
+
+def normalize_lang_code(lang: str) -> str:
+    """Normalizes language code format."""
+    return lang.replace('-', '_').lower()
+
+def get_item_lang_field(item: dict[str, Any], field_base: str, lang: str = 'nl') -> str:
+    """
+    Safely retrieves a language-specific field from a decision item.
+    Tries lang-specific key, then fallback to en, then nl, then empty string.
+    """
+    code_u = normalize_lang_code(lang)
+    candidates = [
+        f"{field_base}_{code_u}",
+        f"{field_base}_{lang}",
+    ]
+    if field_base == "title_short":
+        candidates.extend(["title_short_" + code_u, "titel_kort_nl" if lang == "nl" else "title_short_en", "titel_kort_nl", "title_short_en"])
+    elif field_base == "summary":
+        candidates.extend(["summary_" + code_u, "samenvatting_nl" if lang == "nl" else "summary_en", "samenvatting_nl", "summary_en"])
+    elif field_base == "status":
+        candidates.extend(["status_" + code_u, "estado_besluit" if lang == "nl" else "status_en", "estado_besluit", "status_en"])
+    elif field_base == "key_figure":
+        candidates.extend(["key_figure_" + code_u, "cifra_clave_nl" if lang == "nl" else "key_figure_en", "cifra_clave_nl", "key_figure_en"])
+    elif field_base == "impact_sentence":
+        candidates.extend(["impact_sentence_" + code_u, "frase_impacto_nl" if lang == "nl" else "impact_sentence_en", "frase_impacto_nl", "impact_sentence_en"])
+    elif field_base == "bullet_1_what":
+        candidates.extend(["bullet_1_what_" + code_u, "punt_1_wat_nl" if lang == "nl" else "bullet_1_what_en", "punt_1_wat_nl", "bullet_1_what_en"])
+    elif field_base == "bullet_2_who":
+        candidates.extend(["bullet_2_who_" + code_u, "punt_2_wie_nl" if lang == "nl" else "bullet_2_who_en", "punt_2_wie_nl", "bullet_2_who_en"])
+    elif field_base == "bullet_3_cost":
+        candidates.extend(["bullet_3_cost_" + code_u, "punt_3_geld_nl" if lang == "nl" else "bullet_3_cost_en", "punt_3_geld_nl", "bullet_3_cost_en"])
+    elif field_base == "context":
+        candidates.extend(["context_" + code_u, "contexto_nl" if lang == "nl" else "context_en", "contexto_nl", "context_en"])
+    elif field_base == "consequences":
+        candidates.extend(["consequences_" + code_u, "consecuencias_nl" if lang == "nl" else "consequences_en", "consecuencias_nl", "consequences_en"])
+    elif field_base == "timeline":
+        candidates.extend(["timeline_" + code_u, "plazo_nl" if lang == "nl" else "timeline_en", "plazo_nl", "timeline_en"])
+
+    for cand in candidates:
+        val = item.get(cand)
+        if val and isinstance(val, str) and val.strip():
+            return val.strip()
+
+    return ""

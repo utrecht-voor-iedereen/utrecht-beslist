@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Utrecht Beslist — Decisões do Conselho Municipal de Utrecht (Meio Ambiente &amp; Clima)</title>
+    <link>https://utrecht-voor-iedereen.github.io/utrecht-beslist/</link>
+    <description>Decisões e documentos do conselho municipal de Utrecht explicados em linguagem clara.</description>
+    <language>pt-br</language>
+    <item>
+      <title>Multi-Year Spatial Perspective 2026</title>
+      <link></link>
+      <description>The college of B and W proposes to the council to adopt the Multi-Year Spatial Perspective 2026. This perspective outlines how the municipality of Utrecht will deal with space in the coming years.</description>
+      <guid isPermaLink="false">7912169</guid>
+    </item>
+    <item>
+      <title>TAM Environmental Plan Jan van Galenstraat</title>
+      <link></link>
+      <description>The college of B and W proposes to the council to adopt the TAM Environmental Plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan.</description>
+      <guid isPermaLink="false">7912175</guid>
+    </item>
+  </channel>
+</rss>

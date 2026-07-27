@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utrecht Beslist — Decisiones del Ayuntamiento de Utrecht</title>
+  <meta name="description" content="Decisiones y documentos del ayuntamiento de Utrecht explicados en lenguaje claro.">
+  <link rel="icon" type="image/svg+xml" href="../static/img/favicon.svg">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../es/feed.xml">
+  <style>
+    .lang-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .lang-btn {
+      padding: 0.25rem 0.45rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--utrecht-rood, #CC0000);
+      color: #FFFFFF;
+      border-color: var(--utrecht-rood, #CC0000);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Component: Dark Navy Slate + Vector Shield Logo -->
+  <header>
+    <div class="header-container">
+      <a href="../es/index.html" class="brand" title="Utrecht Beslist">
+        <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — AYUNTAMIENTO EN LENGUAJE CLARO">
+          <defs>
+            <clipPath id="clip-top-left-hdr">
+              <polygon points="0,0 80,0 0,80" />
+            </clipPath>
+            <clipPath id="clip-bottom-right-hdr">
+              <polygon points="0,0 80,80 0,80" />
+            </clipPath>
+            <path id="shield-hdr" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+          </defs>
+
+          <!-- Red Upper-Left Half -->
+          <use href="#shield-hdr" fill="#CC0000" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- White Lower-Right Half -->
+          <use href="#shield-hdr" fill="#FFFFFF" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Black Contour Outline -->
+          <use href="#shield-hdr" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+          <!-- Checkmark on Red Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- Checkmark on White Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Wordmark Title -->
+          <text x="84" y="42" font-family="system-ui, Arial, sans-serif" font-size="30" font-weight="700" xml:space="preserve"><tspan fill="#FFFFFF">Utrecht </tspan><tspan fill="#CC0000">Beslist</tspan><tspan fill="#FFCC00">.</tspan></text>
+
+          <!-- Subtitle -->
+          <text x="85" y="63" font-family="system-ui, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2" fill="rgba(255,255,255,0.85)">AYUNTAMIENTO EN LENGUAJE CLARO</text>
+        </svg>
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../es/index.html" class="nav-link">Resumen</a>
+        <a href="../es/over.html" class="nav-link">Sobre el Proyecto &amp; Transparencia</a>
+        
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+
+          <div class="lang-switch">
+            
+              <a href="../nl/index.html" class="lang-btn " title="Nederlands">🇳🇱 NL</a>
+            
+              <a href="../en/index.html" class="lang-btn " title="English">🇬🇧 EN</a>
+            
+              <a href="../es/index.html" class="lang-btn active" title="Español">🇪🇸 ES</a>
+            
+              <a href="../tr/index.html" class="lang-btn " title="Türkçe">🇹🇷 TR</a>
+            
+              <a href="../pt-br/index.html" class="lang-btn " title="Português (Brasil)">🇧🇷 PT-BR</a>
+            
+              <a href="../pt-pt/index.html" class="lang-btn " title="Português (Portugal)">🇵🇹 PT-PT</a>
+            
+              <a href="../fr/index.html" class="lang-btn " title="Français">🇫🇷 FR</a>
+            
+              <a href="../de/index.html" class="lang-btn " title="Deutsch">🇩🇪 DE</a>
+            
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1>About Utrecht Beslist &amp; Data Retention</h1>
+    <p>Transparent methodology concerning public open data collection, Woo rights, and permanent archiving policy.</p>
+  </div>
+</section>
+
+
+  <main class="main-wrapper">
+    
+<section class="controls-card" style="line-height: 1.8;">
+  
+  <div>
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
+    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically collects and summarizes Utrecht city council documents into plain language (B1 Dutch and English).</p>
+
+    <!-- NoticeBox Component for Transparency -->
+    <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
+      <strong>💡 100% Open Data & Transparency:</strong> All data is sourced from public government APIs. Every summary includes a direct link to the original council document, audio TTS narration, dark mode, and PDF printing.
+    </div>
+
+    <!-- Data Retention Policy Section -->
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">📜 Data Retention & Permanent Archiving (Archives Act)</h2>
+    <div style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood); margin-bottom: 2rem;">
+      <p style="margin-bottom: 0.75rem;"><strong>How long do documents stay on the website?</strong></p>
+      <p style="margin-bottom: 0.75rem;">Pursuant to the Dutch <em>Archives Act 1995</em> and the <em>Open Government Act (Woo)</em>, council decisions and municipal proposals are public historical facts. Documents are <strong>permanently preserved</strong> in the repository and are <strong>never deleted</strong>.</p>
+      <p>To keep the main homepage fast and accessible, the primary view displays recent decisions, while all historical decisions remain permanently searchable via monthly archives (e.g. <code>/en/archief/2026/07/</code>) and the public JSON API (<code>../data/latest.json</code>).</p>
+    </div>
+
+    <!-- Official Sources Section -->
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">🌐 Official Sources & Woo Rights</h2>
+    <p style="margin-bottom: 1rem;">Utrecht Beslist interfaces directly with official government open data portals:</p>
+    <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Open Raadsinformatie (ORI):</strong> <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener">openraadsinformatie.nl</a> — National platform for municipal open council documents.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Municipality of Utrecht Council Information:</strong> <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener">utrecht.bestuurlijkeinformatie.nl</a> — Official council portal of Utrecht.
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <strong>Open Government Act (Woo):</strong> Citizens have the legal right to request additional background government records or annexes directly from the Municipality of Utrecht.
+      </li>
+    </ul>
+
+    <!-- Automated Pipeline Explanation -->
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">🔄 How does the automated pipeline work?</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">1. Daily Fetch (06:00 UTC)</h3>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Automated GitHub Actions workflows query the Open Raadsinformatie ElasticSearch API daily for new Utrecht council documents.</p>
+      </div>
+
+      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">2. Automatic Filtering</h3>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Administrative routine files (such as attendance lists) are filtered out automatically to retain only substantive council proposals.</p>
+      </div>
+
+      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">3. AI B1 Translation</h3>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Open-weights LLMs (Groq / Llama 3) translate administrative jargon into accessible B1 plain language without altering legal meaning.</p>
+      </div>
+
+      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">4. Static Publishing</h3>
+        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">The site compiles into 100% static HTML pages with a public open JSON API (<a href="../data/latest.json">latest.json</a>), requiring zero cookies or tracking.</p>
+      </div>
+    </div>
+
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">Open Source & License</h2>
+    <p>Code and algorithms are 100% open source licensed under <strong>EUPL-1.2</strong>. Inspect the source code on <a href="https://github.com/zaswear/utrecht-beslist" target="_blank" rel="noopener">GitHub</a>.</p>
+  </div>
+  
+</section>
+
+  </main>
+
+  <!-- 3-Column Footer Component -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Utrecht Beslist</h3>
+        <p>Iniciativa ciudadana independiente que recopila y resume automáticamente documentos y acuerdos del ayuntamiento de Utrecht en lenguaje claro.</p>
+        
+        <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8);">
+          El proyecto es 100% gratuito y sin publicidad. ¿Te resulta útil? Apoya el mantenimiento con un café:
+        </p>
+
+        <!-- Ko-fi Support Button -->
+        <a href="https://ko-fi.com/I2I31CXQVM" target="_blank" rel="noopener noreferrer" class="kofi-btn" style="margin-top: 0.75rem;">
+          <span aria-hidden="true">☕</span> Invítanos a un café
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navegación &amp; Feeds</h3>
+        <ul>
+          <li><a href="../es/index.html">Resumen</a></li>
+          <li><a href="../es/over.html">Sobre el Proyecto &amp; Transparencia</a></li>
+          <li><a href="../es/feed.xml">RSS Feed (ES)</a></li>
+          <li><a href="../data/latest.json">JSON API</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Disclaimers & Data</h3>
+        <p>Resumido automáticamente mediante IA a partir de datos abiertos de Open Raadsinformatie. Sin valor de asesoramiento legal; consulte siempre el documento oficial.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>Iniciativa Ciudadana · 100% Estática y Gratuita</span>
+    </div>
+  </footer>
+
+  <script src="../static/js/app.js"></script>
+</body>
+</html>

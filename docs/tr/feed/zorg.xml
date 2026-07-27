@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Utrecht Beslist — Utrecht Belediye Meclisi Kararları (Sağlık &amp; Sosyal Yardım)</title>
+    <link>https://utrecht-voor-iedereen.github.io/utrecht-beslist/</link>
+    <description>Utrecht belediye meclisi kararları ve belgeleri sade bir dille açıklanmaktadır.</description>
+    <language>tr</language>
+    <item>
+      <title>Social Support Regulation</title>
+      <link></link>
+      <description>The city council is establishing a new regulation for social support in Utrecht.</description>
+      <guid isPermaLink="false">7926189</guid>
+    </item>
+  </channel>
+</rss>

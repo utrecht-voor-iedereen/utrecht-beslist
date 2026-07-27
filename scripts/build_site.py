@@ -1,42 +1,54 @@
 """
 Site generator module rendering Jinja2 templates to docs/ static directory for GitHub Pages.
 Generates main pages, theme/wijk RSS feeds, month archives, and individual decision detail pages.
+Supports 8 languages: NL, EN, ES, TR, PT-BR, PT-PT, FR, DE.
 """
 
 import json
 import logging
 import os
 import shutil
+import sys
 from xml.sax.saxutils import escape
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from jinja2 import Environment, FileSystemLoader
 
-from .themes import THEMES
+from scripts.i18n import LANGUAGES, get_item_lang_field, t
+from scripts.themes import THEMES
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 TEMPLATES_DIR = os.path.join(PROJECT_ROOT, "templates")
 STATIC_DIR = os.path.join(PROJECT_ROOT, "static")
 DOCS_DIR = os.path.join(PROJECT_ROOT, "docs")
 
+SUPPORTED_LANGUAGES = ["nl", "en", "es", "tr", "pt-br", "pt-pt", "fr", "de"]
+
 env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), autoescape=True)
+env.globals["t"] = t
+env.globals["get_item_lang_field"] = get_item_lang_field
+env.globals["LANGUAGES"] = LANGUAGES
+
 
 def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
     """Generates valid RSS XML feed."""
-    base_title = "Utrecht Beslist — Raadsbesluiten" if lang == "nl" else "Utrecht Beslist — City Council Decisions"
+    base_title = t("site_title", lang)
     title = f"{base_title} ({category_title})" if category_title else base_title
-    link = "https://utrecht-beslist.github.io/utrecht-beslist/"
-    description = "Volg besluiten van de gemeenteraad van Utrecht" if lang == "nl" else "Follow Utrecht city council decisions"
-    
+    link = "https://utrecht-voor-iedereen.github.io/utrecht-beslist/"
+    description = t("meta_description", lang)
+
     xml_items = []
     for item in items[:30]:
-        item_title = escape(item.get("titel_kort_nl" if lang == "nl" else "title_short_en", "Besluit"))
-        item_desc = escape(item.get("samenvatting_nl" if lang == "nl" else "summary_en", ""))
+        item_title = escape(get_item_lang_field(item, "title_short", lang) or "Besluit")
+        item_desc = escape(get_item_lang_field(item, "summary", lang) or "")
         pdf_url = escape(item.get("pdf_url", link))
         doc_id = item.get("doc_id", "")
-        
+
         xml_items.append(f"""    <item>
       <title>{item_title}</title>
       <link>{pdf_url}</link>
@@ -55,16 +67,17 @@ def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
   </channel>
 </rss>"""
 
+
 def build_static_site(items: list):
-    """Builds complete static web output into docs/."""
-    # Ensure base directories exist
-    os.makedirs(os.path.join(DOCS_DIR, "nl"), exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "en"), exist_ok=True)
+    """Builds complete static web output into docs/ for all 8 supported languages."""
+    # Ensure data directory exists
     os.makedirs(os.path.join(DOCS_DIR, "data"), exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "nl", "feed"), exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "en", "feed"), exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "nl", "archief", "2026", "07"), exist_ok=True)
-    os.makedirs(os.path.join(DOCS_DIR, "en", "archive", "2026", "07"), exist_ok=True)
+
+    # Prepare directories for all languages
+    for lang in SUPPORTED_LANGUAGES:
+        os.makedirs(os.path.join(DOCS_DIR, lang), exist_ok=True)
+        os.makedirs(os.path.join(DOCS_DIR, lang, "feed"), exist_ok=True)
+        os.makedirs(os.path.join(DOCS_DIR, lang, "archief", "2026", "07"), exist_ok=True)
 
     # Copy static assets
     target_static = os.path.join(DOCS_DIR, "static")
@@ -86,71 +99,70 @@ def build_static_site(items: list):
     with open(os.path.join(DOCS_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(root_redirect)
 
-    # Render Main NL & EN Pages
+    # Templates
     index_template = env.get_template("index.html")
     over_template = env.get_template("over.html")
     detail_template = env.get_template("detail.html")
 
-    nl_index_html = index_template.render(lang="nl", items=items, themes=THEMES, root_path="../")
-    with open(os.path.join(DOCS_DIR, "nl", "index.html"), "w", encoding="utf-8") as f:
-        f.write(nl_index_html)
+    # Render main index and over pages for all 8 languages
+    for lang in SUPPORTED_LANGUAGES:
+        index_html = index_template.render(lang=lang, items=items, themes=THEMES, root_path="../")
+        with open(os.path.join(DOCS_DIR, lang, "index.html"), "w", encoding="utf-8") as f:
+            f.write(index_html)
 
-    nl_over_html = over_template.render(lang="nl", themes=THEMES, root_path="../")
-    with open(os.path.join(DOCS_DIR, "nl", "over.html"), "w", encoding="utf-8") as f:
-        f.write(nl_over_html)
+        over_html = over_template.render(lang=lang, themes=THEMES, root_path="../")
+        with open(os.path.join(DOCS_DIR, lang, "over.html"), "w", encoding="utf-8") as f:
+            f.write(over_html)
 
-    en_index_html = index_template.render(lang="en", items=items, themes=THEMES, root_path="../")
-    with open(os.path.join(DOCS_DIR, "en", "index.html"), "w", encoding="utf-8") as f:
-        f.write(en_index_html)
+        # Render month archive
+        archive_html = index_template.render(lang=lang, items=items, themes=THEMES, root_path="../../../../")
+        with open(os.path.join(DOCS_DIR, lang, "archief", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
+            f.write(archive_html)
 
-    en_over_html = over_template.render(lang="en", themes=THEMES, root_path="../")
-    with open(os.path.join(DOCS_DIR, "en", "over.html"), "w", encoding="utf-8") as f:
-        f.write(en_over_html)
+        # Write main RSS feed
+        with open(os.path.join(DOCS_DIR, lang, "feed.xml"), "w", encoding="utf-8") as f:
+            f.write(generate_rss_xml(items, lang))
 
-    # Render Individual Decision Detail Pages
+        # Write theme RSS feeds
+        for key, theme_data in THEMES.items():
+            theme_items = [it for it in items if key in it.get("thema", [])]
+            t_title = str(theme_data.get(lang, theme_data.get("nl", key)))
+            with open(os.path.join(DOCS_DIR, lang, "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
+                f.write(generate_rss_xml(theme_items, lang, t_title))
+
+    # Render Individual Decision Detail Pages for all 8 languages
     for item in items:
         doc_id = item.get("doc_id")
         if not doc_id:
             continue
-        
-        nl_detail_dir = os.path.join(DOCS_DIR, "nl", "besluit", doc_id)
-        en_detail_dir = os.path.join(DOCS_DIR, "en", "decision", doc_id)
-        os.makedirs(nl_detail_dir, exist_ok=True)
-        os.makedirs(en_detail_dir, exist_ok=True)
 
-        nl_detail_html = detail_template.render(lang="nl", item=item, themes=THEMES, root_path="../../../")
-        with open(os.path.join(nl_detail_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(nl_detail_html)
+        for lang in SUPPORTED_LANGUAGES:
+            detail_dir = os.path.join(DOCS_DIR, lang, "besluit", doc_id)
+            os.makedirs(detail_dir, exist_ok=True)
 
-        en_detail_html = detail_template.render(lang="en", item=item, themes=THEMES, root_path="../../../")
-        with open(os.path.join(en_detail_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(en_detail_html)
-
-    # Render Static Archives (2026/07)
-    with open(os.path.join(DOCS_DIR, "nl", "archief", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
-        f.write(index_template.render(lang="nl", items=items, themes=THEMES, root_path="../../../../"))
-
-    with open(os.path.join(DOCS_DIR, "en", "archive", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
-        f.write(index_template.render(lang="en", items=items, themes=THEMES, root_path="../../../../"))
-
-    # Write Main & Categorized RSS Feeds
-    with open(os.path.join(DOCS_DIR, "nl", "feed.xml"), "w", encoding="utf-8") as f:
-        f.write(generate_rss_xml(items, "nl"))
-    with open(os.path.join(DOCS_DIR, "en", "feed.xml"), "w", encoding="utf-8") as f:
-        f.write(generate_rss_xml(items, "en"))
-
-    # RSS Feeds per Theme
-    for key, theme_data in THEMES.items():
-        theme_items = [it for it in items if key in it.get("thema", [])]
-        nl_title = str(theme_data["nl"])
-        en_title = str(theme_data["en"])
-        with open(os.path.join(DOCS_DIR, "nl", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
-            f.write(generate_rss_xml(theme_items, "nl", nl_title))
-        with open(os.path.join(DOCS_DIR, "en", "feed", f"{key}.xml"), "w", encoding="utf-8") as f:
-            f.write(generate_rss_xml(theme_items, "en", en_title))
+            detail_html = detail_template.render(lang=lang, item=item, themes=THEMES, root_path="../../../")
+            with open(os.path.join(detail_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(detail_html)
 
     # Write Public Data API JSON
     with open(os.path.join(DOCS_DIR, "data", "latest.json"), "w", encoding="utf-8") as f:
         json.dump({"items": items, "count": len(items)}, f, indent=2, ensure_ascii=False)
 
-    logger.info(f"Successfully generated static site in {DOCS_DIR} with {len(items)} items, RSS feeds, month archives, and individual detail pages.")
+    logger.info(
+        f"Successfully generated static site in {DOCS_DIR} for {len(SUPPORTED_LANGUAGES)} languages "
+        f"with {len(items)} items, RSS feeds, month archives, and individual detail pages."
+    )
+
+
+if __name__ == "__main__":
+    state_file = os.path.join(PROJECT_ROOT, "state", "processed.json")
+    if os.path.exists(state_file):
+        with open(state_file, "r", encoding="utf-8") as f:
+            state_data = json.load(f)
+            if isinstance(state_data, dict):
+                items = state_data.get("items", [])
+            elif isinstance(state_data, list):
+                items = state_data
+            else:
+                items = []
+            build_static_site(items)

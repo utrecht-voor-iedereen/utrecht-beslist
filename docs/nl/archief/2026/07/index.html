@@ -8,6 +8,30 @@
   <link rel="icon" type="image/svg+xml" href="../../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../../static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../../../../nl/feed.xml">
+  <style>
+    .lang-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .lang-btn {
+      padding: 0.25rem 0.45rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--utrecht-rood, #CC0000);
+      color: #FFFFFF;
+      border-color: var(--utrecht-rood, #CC0000);
+    }
+  </style>
 </head>
 <body>
 
@@ -16,7 +40,7 @@
     <div class="header-container">
       <a href="../../../../nl/index.html" class="brand" title="Utrecht Beslist">
         <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
-        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal">
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — GEMEENTERAAD IN BEGRIJPELIJKE TAAL">
           <defs>
             <clipPath id="clip-top-left-hdr">
               <polygon points="0,0 80,0 0,80" />
@@ -58,8 +82,23 @@
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
           <div class="lang-switch">
-            <button class="lang-btn active" data-lang="nl">NL</button>
-            <button class="lang-btn " data-lang="en">EN</button>
+            
+              <a href="../../../../nl/index.html" class="lang-btn active" title="Nederlands">🇳🇱 NL</a>
+            
+              <a href="../../../../en/index.html" class="lang-btn " title="English">🇬🇧 EN</a>
+            
+              <a href="../../../../es/index.html" class="lang-btn " title="Español">🇪🇸 ES</a>
+            
+              <a href="../../../../tr/index.html" class="lang-btn " title="Türkçe">🇹🇷 TR</a>
+            
+              <a href="../../../../pt-br/index.html" class="lang-btn " title="Português (Brasil)">🇧🇷 PT-BR</a>
+            
+              <a href="../../../../pt-pt/index.html" class="lang-btn " title="Português (Portugal)">🇵🇹 PT-PT</a>
+            
+              <a href="../../../../fr/index.html" class="lang-btn " title="Français">🇫🇷 FR</a>
+            
+              <a href="../../../../de/index.html" class="lang-btn " title="Deutsch">🇩🇪 DE</a>
+            
           </div>
         </div>
       </nav>
@@ -82,7 +121,7 @@
 
   <main class="main-wrapper">
     
-<!-- Option A UX Control Panel (Clean, Hierarchical, 0 Visual Clutter) -->
+<!-- Option A UX Control Panel -->
 <section class="controls-card">
   <!-- Row 1: Prominent Human Impact Buttons -->
   <div class="human-impact-bar">
@@ -96,7 +135,7 @@
   <div class="search-box">
     <label for="search-input" class="search-label">
       Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)
-      <span class="shortcut-hint" title="Snelkoppeling: Druk op '/' of Ctrl+K">/</span>
+      <span class="shortcut-hint" title="Shortcut: Press '/' or Ctrl+K">/</span>
     </label>
     <span class="search-icon">🔍</span>
     <input type="text" id="search-input" class="search-input" placeholder="Zoek op trefwoord, postcode of onderwerp...">
@@ -176,10 +215,10 @@
   </span>
   
   <div class="view-toggle-group">
-    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Druk op 'L' om te wisselen">
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Press 'L' to switch view">
       🃏 Kaarten <span class="shortcut-hint">L</span>
     </button>
-    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Druk op 'L' om te wisselen">
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Press 'L' to switch view">
       📋 Compacte Lijst
     </button>
   </div>
@@ -188,6 +227,11 @@
 <section class="cards-grid" id="cards-grid">
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -199,7 +243,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -246,6 +290,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -257,7 +306,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -304,6 +353,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -315,7 +369,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -362,6 +416,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -373,7 +432,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -420,6 +479,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -431,7 +495,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -478,6 +542,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -489,7 +558,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -536,6 +605,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -547,7 +621,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -594,6 +668,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -605,7 +684,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -652,6 +731,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -663,7 +747,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -710,6 +794,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -721,7 +810,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -768,6 +857,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="zorg" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -779,7 +873,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -826,6 +920,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -837,7 +936,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -884,6 +983,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -895,7 +999,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -942,6 +1046,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="veiligheid" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -953,7 +1062,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1000,6 +1109,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen" data-wijk="binnenstad">
     <div>
       <div class="card-header">
@@ -1011,7 +1125,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1058,6 +1172,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1069,7 +1188,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1116,6 +1235,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="noordoost">
     <div>
       <div class="card-header">
@@ -1127,7 +1251,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1174,6 +1298,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen" data-wijk="oost">
     <div>
       <div class="card-header">
@@ -1185,7 +1314,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1232,6 +1361,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="noordoost">
     <div>
       <div class="card-header">
@@ -1243,7 +1377,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1290,6 +1424,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1301,7 +1440,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -1348,6 +1487,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1359,7 +1503,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -1406,6 +1550,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen groen-klimaat" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1417,7 +1566,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -1466,6 +1615,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1477,7 +1631,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1524,6 +1678,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="wonen groen-klimaat" data-wijk="oost">
     <div>
       <div class="card-header">
@@ -1535,7 +1694,7 @@
         </div>
         
         
-          <span class="badge-impact impact-gemiddeld">gemiddeld</span>
+          <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
         
       </div>
 
@@ -1584,6 +1743,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1595,7 +1759,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1642,6 +1806,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1653,7 +1822,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1700,6 +1869,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1711,7 +1885,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1758,6 +1932,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1769,7 +1948,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1816,6 +1995,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1827,7 +2011,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1874,6 +2058,11 @@
   </article>
   
   
+  
+  
+  
+  
+
   <article class="card" data-theme="bestuur-financien" data-wijk="overig">
     <div>
       <div class="card-header">
@@ -1885,7 +2074,7 @@
         </div>
         
         
-          <span class="badge-impact impact-laag">laag</span>
+          <span class="badge-impact impact-laag">Laag Impact</span>
         
       </div>
 
@@ -1950,7 +2139,7 @@
           Het project is 100% gratis en zonder reclame. Vind je dit nuttig? Steun het onderhoud met een kop koffie:
         </p>
 
-        <!-- Ko-fi Support Button (Multilingual NL / EN) -->
+        <!-- Ko-fi Support Button -->
         <a href="https://ko-fi.com/I2I31CXQVM" target="_blank" rel="noopener noreferrer" class="kofi-btn" style="margin-top: 0.75rem;">
           <span aria-hidden="true">☕</span> Trakteer ons op een kop koffie
         </a>
@@ -1959,7 +2148,7 @@
       <div class="footer-column">
         <h3>Navigatie &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../../nl/index.html">Overzicht besluiten</a></li>
+          <li><a href="../../../../nl/index.html">Overzicht</a></li>
           <li><a href="../../../../nl/over.html">Over &amp; Transparantie</a></li>
           <li><a href="../../../../nl/feed.xml">RSS Feed (NL)</a></li>
           <li><a href="../../../../data/latest.json">JSON API</a></li>
@@ -1967,7 +2156,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers &amp; Bronnen</h3>
+        <h3>Disclaimers & Data</h3>
         <p>Geautomatiseerd samengevat met AI op basis van open data van Open Raadsinformatie. Geen juridisch advies — raadpleeg altijd het originele raadsstuk van Gemeente Utrecht.</p>
       </div>
     </div>

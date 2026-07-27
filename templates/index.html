@@ -3,36 +3,36 @@
 {% block hero %}
 <section class="hero-banner">
   <div class="hero-content">
-    <h1>{{ "Wat besloot de gemeenteraad deze week?" if lang == "nl" else "What did Utrecht City Council decide this week?" }}</h1>
-    <p>{{ "Overzicht van raadsvoorstellen en besluiten van de gemeenteraad van Utrecht in heldere taal, met rechtstreekse link naar het officiële stuk." if lang == "nl" else "Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents." }}</p>
+    <h1>{{ t("hero_title", lang) }}</h1>
+    <p>{{ t("hero_subtitle", lang) }}</p>
     
     <!-- NoticeBox Component Pattern -->
     <div class="notice-box">
-      {{ "📊 Archief:" if lang == "nl" else "📊 Archive:" }} <strong>{{ items | length }}</strong> {{ "raadsbesluiten permanent bewaard" if lang == "nl" else "council decisions permanently preserved" }}
+      {{ t("archive_notice_prefix", lang) }} <strong>{{ items | length }}</strong> {{ t("archive_notice_suffix", lang) }}
     </div>
   </div>
 </section>
 {% endblock %}
 
 {% block content %}
-<!-- Option A UX Control Panel (Clean, Hierarchical, 0 Visual Clutter) -->
+<!-- Option A UX Control Panel -->
 <section class="controls-card">
   <!-- Row 1: Prominent Human Impact Buttons -->
   <div class="human-impact-bar">
-    <button class="human-impact-btn active" data-impact-group="all">🌐 {{ "Alle Besluiten" if lang == "nl" else "All Decisions" }}</button>
-    <button class="human-impact-btn" data-impact-group="casa">🏠 {{ "Mijn Huis & Buurt" if lang == "nl" else "My House & Neighborhood" }}</button>
-    <button class="human-impact-btn" data-impact-group="bolsillo">💶 {{ "Mijn Portemonnee & Belastingen" if lang == "nl" else "My Wallet & Taxes" }}</button>
-    <button class="human-impact-btn" data-impact-group="movilidad">🚲 {{ "Mijn Mobiliteit & Dagelijks Leven" if lang == "nl" else "My Mobility & Daily Life" }}</button>
+    <button class="human-impact-btn active" data-impact-group="all">{{ t("impact_all", lang) }}</button>
+    <button class="human-impact-btn" data-impact-group="casa">{{ t("impact_casa", lang) }}</button>
+    <button class="human-impact-btn" data-impact-group="bolsillo">{{ t("impact_bolsillo", lang) }}</button>
+    <button class="human-impact-btn" data-impact-group="movilidad">{{ t("impact_movilidad", lang) }}</button>
   </div>
 
   <!-- Row 2: Clean Search Input -->
   <div class="search-box">
     <label for="search-input" class="search-label">
-      {{ "Zoeken in gemeentestukken of op postcodenummer (bv. 3511, 3544)" if lang == "nl" else "Search council documents or postal code (e.g. 3511, 3544)" }}
-      <span class="shortcut-hint" title="Snelkoppeling: Druk op '/' of Ctrl+K">/</span>
+      {{ t("search_label", lang) }}
+      <span class="shortcut-hint" title="Shortcut: Press '/' or Ctrl+K">/</span>
     </label>
     <span class="search-icon">🔍</span>
-    <input type="text" id="search-input" class="search-input" placeholder="{{ 'Zoek op trefwoord, postcode of onderwerp...' if lang == 'nl' else 'Search by keyword, postal code or topic...' }}">
+    <input type="text" id="search-input" class="search-input" placeholder="{{ t('search_placeholder', lang) }}">
   </div>
 
   <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
@@ -41,7 +41,7 @@
   <div class="smart-selectors-row">
     <!-- Wijk Selector -->
     <select id="wijk-select" class="filter-select">
-      <option value="all">📍 {{ "Alle Wijken in Utrecht" if lang == "nl" else "All Utrecht Neighborhoods" }}</option>
+      <option value="all">{{ t("wijk_all", lang) }}</option>
       <option value="Binnenstad">🏰 Binnenstad</option>
       <option value="Oost">🌳 Oost</option>
       <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
@@ -56,17 +56,17 @@
 
     <!-- Specific Theme Selector -->
     <select id="theme-select" class="filter-select">
-      <option value="all">🏷️ {{ "Alle Onderwerpen" if lang == "nl" else "All Topics" }}</option>
+      <option value="all">{{ t("theme_all", lang) }}</option>
       {% for key, theme_info in themes.items() %}
         {% if key != "overig" %}
-          <option value="{{ key }}">{{ theme_info.icon }} {{ theme_info[lang] }}</option>
+          <option value="{{ key }}">{{ theme_info.icon }} {{ theme_info[lang] if lang in theme_info else theme_info['nl'] }}</option>
         {% endif %}
       {% endfor %}
     </select>
 
     <!-- Active Filter Reset Button -->
     <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
-      ❌ {{ "Reset filters" if lang == "nl" else "Reset filters" }} <span class="shortcut-hint">Esc</span>
+      ❌ {{ t("reset_filters", lang) }} <span class="shortcut-hint">Esc</span>
     </button>
   </div>
 </section>
@@ -74,67 +74,68 @@
 <!-- View Mode Switcher Header with Counter Badge & Shortcut Hint -->
 <div class="view-header-bar">
   <span class="view-header-title">
-    {{ "Gemeenteraadsbesluiten" if lang == "nl" else "Council Decisions" }}
+    {{ t("decisions_title", lang) }}
     <span id="results-counter-badge" class="results-counter-badge"></span>
   </span>
   
   <div class="view-toggle-group">
-    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Druk op 'L' om te wisselen">
-      🃏 {{ "Kaarten" if lang == "nl" else "Cards" }} <span class="shortcut-hint">L</span>
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Press 'L' to switch view">
+      🃏 {{ t("view_cards", lang) }} <span class="shortcut-hint">L</span>
     </button>
-    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Druk op 'L' om te wisselen">
-      📋 {{ "Compacte Lijst" if lang == "nl" else "Compact List" }}
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Press 'L' to switch view">
+      📋 {{ t("view_list", lang) }}
     </button>
   </div>
 </div>
 
 <section class="cards-grid" id="cards-grid">
   {% for item in items %}
-  {% set detail_link = "besluit/" ~ item.doc_id ~ "/index.html" if lang == "nl" else "decision/" ~ item.doc_id ~ "/index.html" %}
+  {% set detail_link = "besluit/" ~ item.doc_id ~ "/index.html" %}
+  {% set title_text = get_item_lang_field(item, "title_short", lang) %}
+  {% set summary_text = get_item_lang_field(item, "impact_sentence", lang) %}
+  {% set status_text = get_item_lang_field(item, "status", lang) %}
+  {% set key_figure_text = get_item_lang_field(item, "key_figure", lang) %}
+
   <article class="card" data-theme="{{ item.thema | join(' ') }}" data-wijk="{{ item.wijken | join(' ') | lower }}">
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
           <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-            {{ item.estado_besluit if lang == "nl" else item.status_en }}
+            {{ status_text }}
           </span>
           <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
         </div>
         
-        {% if lang == "en" %}
-          {% if item.impact == "hoog" %}
-            <span class="badge-impact impact-hoog">High</span>
-          {% elif item.impact == "gemiddeld" %}
-            <span class="badge-impact impact-gemiddeld">Medium</span>
-          {% else %}
-            <span class="badge-impact impact-laag">Low</span>
-          {% endif %}
+        {% if item.impact == "hoog" %}
+          <span class="badge-impact impact-hoog">{{ t("high_impact", lang) }}</span>
+        {% elif item.impact == "gemiddeld" %}
+          <span class="badge-impact impact-gemiddeld">{{ t("medium_impact", lang) }}</span>
         {% else %}
-          <span class="badge-impact impact-{{ item.impact }}">{{ item.impact }}</span>
+          <span class="badge-impact impact-laag">{{ t("low_impact", lang) }}</span>
         {% endif %}
       </div>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="{{ detail_link }}">
-          {{ item.titel_kort_nl if lang == "nl" else item.title_short_en }}
+          {{ title_text }}
         </a>
       </h2>
 
       <!-- One-line Human Impact Highlight -->
       <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
-        💡 {{ item.frase_impacto_nl if lang == "nl" else item.impact_sentence_en }}
+        💡 {{ summary_text }}
       </p>
 
       <!-- Key tags (Figure, Neighborhoods, Themes) -->
       <div class="card-tags">
-        {% if item.cifra_clave_nl or item.key_figure_en %}
+        {% if key_figure_text %}
           <span class="tag" style="font-weight: 700;">
-            {{ item.cifra_clave_nl if lang == "nl" else item.key_figure_en }}
+            {{ key_figure_text }}
           </span>
         {% endif %}
-        {% for t in item.thema %}
-          <span class="tag">{{ themes[t][lang] if t in themes else t }}</span>
+        {% for t_key in item.thema %}
+          <span class="tag">{{ themes[t_key][lang] if t_key in themes and lang in themes[t_key] else (themes[t_key]['nl'] if t_key in themes else t_key) }}</span>
         {% endfor %}
         {% for w in item.wijken %}
           <span class="tag">📍 {{ w }}</span>
@@ -144,14 +145,14 @@
 
     <div class="card-footer">
       <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
-        📄 {{ "Gemeentestuk" if lang == "nl" else "Council Doc" }} #{{ item.doc_id }}
+        📄 {{ t("council_doc", lang) }} #{{ item.doc_id }}
       </span>
       
       <div class="card-actions">
         <a href="{{ detail_link }}" class="pdf-link">
-          📄 {{ "Bekijk details" if lang == "nl" else "View details" }} ➔
+          📄 {{ t("view_details", lang) }} ➔
         </a>
-        <button class="share-btn" onclick="shareCard('{{ item.titel_kort_nl if lang == 'nl' else item.title_short_en }}', '{{ item.pdf_url }}')">🔗 {{ "Delen" if lang == "nl" else "Share" }}</button>
+        <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', '{{ item.pdf_url }}')">🔗 {{ t("share", lang) }}</button>
       </div>
     </div>
   </article>
@@ -159,6 +160,6 @@
 </section>
 
 <div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--utrecht-gris-secundario);">
-  <p>{{ "Geen resultaten gevonden voor de opgegeven zoekopdracht." if lang == "nl" else "No matching decisions found for your query." }}</p>
+  <p>{{ t("no_results", lang) }}</p>
 </div>
 {% endblock %}
