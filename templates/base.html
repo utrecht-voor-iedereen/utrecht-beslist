@@ -8,30 +8,6 @@
   <link rel="icon" type="image/svg+xml" href="{{ root_path if root_path else '../' }}static/img/favicon.svg">
   <link rel="stylesheet" href="{{ root_path if root_path else '../' }}static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="{{ root_path if root_path else '../' }}{{ lang }}/feed.xml">
-  <style>
-    .lang-switch {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      align-items: center;
-    }
-    .lang-btn {
-      padding: 0.25rem 0.45rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: transparent;
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .lang-btn:hover, .lang-btn.active {
-      background: var(--utrecht-rood, #CC0000);
-      color: #FFFFFF;
-      border-color: var(--utrecht-rood, #CC0000);
-    }
-  </style>
 </head>
 <body>
 
@@ -81,10 +57,29 @@
         <div class="header-tools">
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
-          <div class="lang-switch">
-            {% for l_code, l_info in LANGUAGES.items() %}
-              <a href="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" class="lang-btn {{ 'active' if lang == l_code else '' }}" title="{{ l_info.name }}">{{ l_info.flag }} {{ l_info.label }}</a>
-            {% endfor %}
+          <!-- Redesigned Compact Language Selector Dropdown -->
+          <div class="lang-dropdown">
+            <button type="button" class="lang-dropdown-btn" id="lang-dropdown-btn" aria-expanded="false" aria-haspopup="true" title="Language / Taal">
+              <span class="lang-globe" aria-hidden="true">🌐</span>
+              <span class="lang-code-current">{{ LANGUAGES[lang].label }}</span>
+              <span class="lang-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <div class="lang-dropdown-header">Language / Taal</div>
+              {% for l_code, l_info in LANGUAGES.items() %}
+                <a href="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" 
+                   class="lang-dropdown-item {{ 'active' if lang == l_code else '' }}" 
+                   data-lang="{{ l_code }}"
+                   role="menuitem">
+                  <span class="lang-badge">{{ l_info.label }}</span>
+                  <span class="lang-name">{{ l_info.name }}</span>
+                  {% if lang == l_code %}
+                    <span class="lang-active-check" aria-hidden="true">✓</span>
+                  {% endif %}
+                </a>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </nav>

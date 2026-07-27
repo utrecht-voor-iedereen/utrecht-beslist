@@ -61,27 +61,32 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.textContent = initialTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
   }
 
-  // Language Switcher Logic
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetLang = btn.dataset.lang;
-      const currentPath = window.location.pathname;
-      
-      if (targetLang === 'en') {
-        if (currentPath.includes('/nl/besluit/')) {
-          window.location.href = currentPath.replace('/nl/besluit/', '/en/decision/');
-        } else if (currentPath.includes('/nl/')) {
-          window.location.href = currentPath.replace('/nl/', '/en/');
-        }
-      } else if (targetLang === 'nl') {
-        if (currentPath.includes('/en/decision/')) {
-          window.location.href = currentPath.replace('/en/decision/', '/nl/besluit/');
-        } else if (currentPath.includes('/en/')) {
-          window.location.href = currentPath.replace('/en/', '/nl/');
-        }
+  // Redesigned Custom Language Dropdown Toggle
+  const langDropdown = document.querySelector('.lang-dropdown');
+  const langDropdownBtn = document.getElementById('lang-dropdown-btn');
+
+  if (langDropdown && langDropdownBtn) {
+    langDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langDropdown.classList.toggle('open');
+      langDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('open');
+        langDropdownBtn.setAttribute('aria-expanded', 'false');
       }
     });
-  });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && langDropdown.classList.contains('open')) {
+        langDropdown.classList.remove('open');
+        langDropdownBtn.setAttribute('aria-expanded', 'false');
+        langDropdownBtn.focus();
+      }
+    });
+  }
 
   // Postal Code Lookup
   function checkPostalCode(query) {

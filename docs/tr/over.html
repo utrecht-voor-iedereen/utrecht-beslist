@@ -8,30 +8,6 @@
   <link rel="icon" type="image/svg+xml" href="../static/img/favicon.svg">
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../tr/feed.xml">
-  <style>
-    .lang-switch {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      align-items: center;
-    }
-    .lang-btn {
-      padding: 0.25rem 0.45rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: transparent;
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .lang-btn:hover, .lang-btn.active {
-      background: var(--utrecht-rood, #CC0000);
-      color: #FFFFFF;
-      border-color: var(--utrecht-rood, #CC0000);
-    }
-  </style>
 </head>
 <body>
 
@@ -81,24 +57,92 @@
         <div class="header-tools">
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
-          <div class="lang-switch">
-            
-              <a href="../nl/index.html" class="lang-btn " title="Nederlands">🇳🇱 NL</a>
-            
-              <a href="../en/index.html" class="lang-btn " title="English">🇬🇧 EN</a>
-            
-              <a href="../es/index.html" class="lang-btn " title="Español">🇪🇸 ES</a>
-            
-              <a href="../tr/index.html" class="lang-btn active" title="Türkçe">🇹🇷 TR</a>
-            
-              <a href="../pt-br/index.html" class="lang-btn " title="Português (Brasil)">🇧🇷 PT-BR</a>
-            
-              <a href="../pt-pt/index.html" class="lang-btn " title="Português (Portugal)">🇵🇹 PT-PT</a>
-            
-              <a href="../fr/index.html" class="lang-btn " title="Français">🇫🇷 FR</a>
-            
-              <a href="../de/index.html" class="lang-btn " title="Deutsch">🇩🇪 DE</a>
-            
+          <!-- Redesigned Compact Language Selector Dropdown -->
+          <div class="lang-dropdown">
+            <button type="button" class="lang-dropdown-btn" id="lang-dropdown-btn" aria-expanded="false" aria-haspopup="true" title="Language / Taal">
+              <span class="lang-globe" aria-hidden="true">🌐</span>
+              <span class="lang-code-current">TR</span>
+              <span class="lang-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
+              <div class="lang-dropdown-header">Language / Taal</div>
+              
+                <a href="../nl/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="nl"
+                   role="menuitem">
+                  <span class="lang-badge">NL</span>
+                  <span class="lang-name">Nederlands</span>
+                  
+                </a>
+              
+                <a href="../en/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="en"
+                   role="menuitem">
+                  <span class="lang-badge">EN</span>
+                  <span class="lang-name">English</span>
+                  
+                </a>
+              
+                <a href="../es/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="es"
+                   role="menuitem">
+                  <span class="lang-badge">ES</span>
+                  <span class="lang-name">Español</span>
+                  
+                </a>
+              
+                <a href="../tr/index.html" 
+                   class="lang-dropdown-item active" 
+                   data-lang="tr"
+                   role="menuitem">
+                  <span class="lang-badge">TR</span>
+                  <span class="lang-name">Türkçe</span>
+                  
+                    <span class="lang-active-check" aria-hidden="true">✓</span>
+                  
+                </a>
+              
+                <a href="../pt-br/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="pt-br"
+                   role="menuitem">
+                  <span class="lang-badge">PT-BR</span>
+                  <span class="lang-name">Português (Brasil)</span>
+                  
+                </a>
+              
+                <a href="../pt-pt/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="pt-pt"
+                   role="menuitem">
+                  <span class="lang-badge">PT-PT</span>
+                  <span class="lang-name">Português (Portugal)</span>
+                  
+                </a>
+              
+                <a href="../fr/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="fr"
+                   role="menuitem">
+                  <span class="lang-badge">FR</span>
+                  <span class="lang-name">Français</span>
+                  
+                </a>
+              
+                <a href="../de/index.html" 
+                   class="lang-dropdown-item " 
+                   data-lang="de"
+                   role="menuitem">
+                  <span class="lang-badge">DE</span>
+                  <span class="lang-name">Deutsch</span>
+                  
+                </a>
+              
+            </div>
           </div>
         </div>
       </nav>
