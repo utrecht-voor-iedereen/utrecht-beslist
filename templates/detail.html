@@ -108,15 +108,15 @@
     <!-- Section 4: Budget & Timeline -->
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-        💶 Budget & Timeline
+        {{ t("budget_timeline_title", lang) }}
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
         <div>
-          <strong>Cijfer/Kosten:</strong>
+          <strong>{{ t("label_cost", lang) }}</strong>
           <span>{{ key_figure_text }}</span>
         </div>
         <div>
-          <strong>Planning:</strong>
+          <strong>{{ t("label_timeline", lang) }}</strong>
           <span>{{ timeline_text }}</span>
         </div>
       </div>
@@ -159,13 +159,14 @@
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 AI Transparantie: {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
+      <span>🤖 {{ t("ai_transparency", lang) }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
+      <span style="margin-left: 0.75rem;">📦 {{ t("permanent_archive", lang) }}</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', window.location.href)">🔗 {{ t("share", lang) }}</button>
       <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
-        ⚠️ {{ t("share", lang) }}
+        ⚠️ {{ t("report_error", lang) }}
       </a>
     </div>
   </div>

@@ -104,8 +104,10 @@
   
 <section class="hero-banner">
   <div class="hero-content">
-    <h1>About Utrecht Beslist &amp; Data Retention</h1>
-    <p>Transparent methodology concerning public open data collection, Woo rights, and permanent archiving policy.</p>
+    
+      <h1>Utrecht Beslist ve Veri Arşivleme Hakkında</h1>
+      <p>Açık belediye verilerinin toplanması, kamu bilgi edinme hakları (Woo) ve kalıcı arşiv politikasına ilişkin şeffaf açıklama.</p>
+    
   </div>
 </section>
 
@@ -115,63 +117,17 @@
 <section class="controls-card" style="line-height: 1.8;">
   
   <div>
-    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">What is Utrecht Beslist?</h2>
-    <p style="margin-bottom: 1.5rem;">Utrecht Beslist is an independent, open-source civic project that automatically collects and summarizes Utrecht city council documents into plain language (B1 Dutch and English).</p>
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">Utrecht Beslist Nedir?</h2>
+    <p style="margin-bottom: 1.5rem;">Utrecht Beslist, Utrecht belediye meclisi kararlarını ve belgelerini otomatik olarak toplayıp sade bir dille (8 dilde B1 seviyesinde) özetleyen bağımsız bir açık kaynak sivil girişimdir.</p>
 
-    <!-- NoticeBox Component for Transparency -->
     <div class="notice-box info" style="margin-bottom: 1.5rem; display: block;">
-      <strong>💡 100% Open Data & Transparency:</strong> All data is sourced from public government APIs. Every summary includes a direct link to the original council document, audio TTS narration, dark mode, and PDF printing.
+      <strong>💡 %100 Açık Veri ve Şeffaflık:</strong> Tüm veriler resmi kamu kaynaklarından alınmaktadır. Her özet resmi belediye belgesine doğrudan bağlantı içerir.
     </div>
 
-    <!-- Data Retention Policy Section -->
-    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">📜 Data Retention & Permanent Archiving (Archives Act)</h2>
+    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">📜 Saklama Süresi ve Kalıcı Arşiv (Arşiv Yasası)</h2>
     <div style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood); margin-bottom: 2rem;">
-      <p style="margin-bottom: 0.75rem;"><strong>How long do documents stay on the website?</strong></p>
-      <p style="margin-bottom: 0.75rem;">Pursuant to the Dutch <em>Archives Act 1995</em> and the <em>Open Government Act (Woo)</em>, council decisions and municipal proposals are public historical facts. Documents are <strong>permanently preserved</strong> in the repository and are <strong>never deleted</strong>.</p>
-      <p>To keep the main homepage fast and accessible, the primary view displays recent decisions, while all historical decisions remain permanently searchable via monthly archives (e.g. <code>/en/archief/2026/07/</code>) and the public JSON API (<code>../data/latest.json</code>).</p>
+      <p style="margin-bottom: 0.75rem;">Hollanda <em>1995 Arşiv Yasası</em> ve <em>Açık Yönetim Yasası (Woo)</em> uyarınca meclis kararları <strong>kalıcı olarak saklanır</strong> ve <strong>asla silinmez</strong>.</p>
     </div>
-
-    <!-- Official Sources Section -->
-    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">🌐 Official Sources & Woo Rights</h2>
-    <p style="margin-bottom: 1rem;">Utrecht Beslist interfaces directly with official government open data portals:</p>
-    <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-      <li style="margin-bottom: 0.5rem;">
-        <strong>Open Raadsinformatie (ORI):</strong> <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener">openraadsinformatie.nl</a> — National platform for municipal open council documents.
-      </li>
-      <li style="margin-bottom: 0.5rem;">
-        <strong>Municipality of Utrecht Council Information:</strong> <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener">utrecht.bestuurlijkeinformatie.nl</a> — Official council portal of Utrecht.
-      </li>
-      <li style="margin-bottom: 0.5rem;">
-        <strong>Open Government Act (Woo):</strong> Citizens have the legal right to request additional background government records or annexes directly from the Municipality of Utrecht.
-      </li>
-    </ul>
-
-    <!-- Automated Pipeline Explanation -->
-    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">🔄 How does the automated pipeline work?</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
-      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">1. Daily Fetch (06:00 UTC)</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Automated GitHub Actions workflows query the Open Raadsinformatie ElasticSearch API daily for new Utrecht council documents.</p>
-      </div>
-
-      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">2. Automatic Filtering</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Administrative routine files (such as attendance lists) are filtered out automatically to retain only substantive council proposals.</p>
-      </div>
-
-      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">3. AI B1 Translation</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">Open-weights LLMs (Groq / Llama 3) translate administrative jargon into accessible B1 plain language without altering legal meaning.</p>
-      </div>
-
-      <div style="background: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-        <h3 style="font-size: 1rem; color: var(--utrecht-azul-oscuro); margin-bottom: 0.5rem;">4. Static Publishing</h3>
-        <p style="font-size: 0.88rem; color: var(--utrecht-gris-secundario);">The site compiles into 100% static HTML pages with a public open JSON API (<a href="../data/latest.json">latest.json</a>), requiring zero cookies or tracking.</p>
-      </div>
-    </div>
-
-    <h2 style="color: var(--utrecht-azul-oscuro); margin-bottom: 0.75rem;">Open Source & License</h2>
-    <p>Code and algorithms are 100% open source licensed under <strong>EUPL-1.2</strong>. Inspect the source code on <a href="https://github.com/zaswear/utrecht-beslist" target="_blank" rel="noopener">GitHub</a>.</p>
   </div>
   
 </section>
