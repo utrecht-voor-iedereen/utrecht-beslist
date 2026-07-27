@@ -57,92 +57,44 @@
         <div class="header-tools">
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
-          <!-- Redesigned Compact Language Selector Dropdown -->
-          <div class="lang-dropdown">
-            <button type="button" class="lang-dropdown-btn" id="lang-dropdown-btn" aria-expanded="false" aria-haspopup="true" title="Language / Taal">
-              <span class="lang-globe" aria-hidden="true">🌐</span>
-              <span class="lang-code-current">FR</span>
-              <span class="lang-caret" aria-hidden="true">▾</span>
-            </button>
-
-            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
-              <div class="lang-dropdown-header">Language / Taal</div>
+          <!-- Native Custom-Styled Compact Language Selector -->
+          <div class="lang-select-wrapper">
+            <span class="lang-globe-icon" aria-hidden="true">🌐</span>
+            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
               
-                <a href="../../../nl/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="nl"
-                   role="menuitem">
-                  <span class="lang-badge">NL</span>
-                  <span class="lang-name">Nederlands</span>
-                  
-                </a>
+                <option value="../../../nl/index.html" >
+                  NL — Nederlands
+                </option>
               
-                <a href="../../../en/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="en"
-                   role="menuitem">
-                  <span class="lang-badge">EN</span>
-                  <span class="lang-name">English</span>
-                  
-                </a>
+                <option value="../../../en/index.html" >
+                  EN — English
+                </option>
               
-                <a href="../../../es/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="es"
-                   role="menuitem">
-                  <span class="lang-badge">ES</span>
-                  <span class="lang-name">Español</span>
-                  
-                </a>
+                <option value="../../../es/index.html" >
+                  ES — Español
+                </option>
               
-                <a href="../../../tr/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="tr"
-                   role="menuitem">
-                  <span class="lang-badge">TR</span>
-                  <span class="lang-name">Türkçe</span>
-                  
-                </a>
+                <option value="../../../tr/index.html" >
+                  TR — Türkçe
+                </option>
               
-                <a href="../../../pt-br/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="pt-br"
-                   role="menuitem">
-                  <span class="lang-badge">PT-BR</span>
-                  <span class="lang-name">Português (Brasil)</span>
-                  
-                </a>
+                <option value="../../../pt-br/index.html" >
+                  PT-BR — Português (Brasil)
+                </option>
               
-                <a href="../../../pt-pt/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="pt-pt"
-                   role="menuitem">
-                  <span class="lang-badge">PT-PT</span>
-                  <span class="lang-name">Português (Portugal)</span>
-                  
-                </a>
+                <option value="../../../pt-pt/index.html" >
+                  PT-PT — Português (Portugal)
+                </option>
               
-                <a href="../../../fr/index.html" 
-                   class="lang-dropdown-item active" 
-                   data-lang="fr"
-                   role="menuitem">
-                  <span class="lang-badge">FR</span>
-                  <span class="lang-name">Français</span>
-                  
-                    <span class="lang-active-check" aria-hidden="true">✓</span>
-                  
-                </a>
+                <option value="../../../fr/index.html" selected>
+                  FR — Français
+                </option>
               
-                <a href="../../../de/index.html" 
-                   class="lang-dropdown-item " 
-                   data-lang="de"
-                   role="menuitem">
-                  <span class="lang-badge">DE</span>
-                  <span class="lang-name">Deutsch</span>
-                  
-                </a>
+                <option value="../../../de/index.html" >
+                  DE — Deutsch
+                </option>
               
-            </div>
+            </select>
           </div>
         </div>
       </nav>

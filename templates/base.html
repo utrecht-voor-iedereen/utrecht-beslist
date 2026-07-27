@@ -57,29 +57,16 @@
         <div class="header-tools">
           <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
 
-          <!-- Redesigned Compact Language Selector Dropdown -->
-          <div class="lang-dropdown">
-            <button type="button" class="lang-dropdown-btn" id="lang-dropdown-btn" aria-expanded="false" aria-haspopup="true" title="Language / Taal">
-              <span class="lang-globe" aria-hidden="true">🌐</span>
-              <span class="lang-code-current">{{ LANGUAGES[lang].label }}</span>
-              <span class="lang-caret" aria-hidden="true">▾</span>
-            </button>
-
-            <div class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu">
-              <div class="lang-dropdown-header">Language / Taal</div>
+          <!-- Native Custom-Styled Compact Language Selector -->
+          <div class="lang-select-wrapper">
+            <span class="lang-globe-icon" aria-hidden="true">🌐</span>
+            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
               {% for l_code, l_info in LANGUAGES.items() %}
-                <a href="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" 
-                   class="lang-dropdown-item {{ 'active' if lang == l_code else '' }}" 
-                   data-lang="{{ l_code }}"
-                   role="menuitem">
-                  <span class="lang-badge">{{ l_info.label }}</span>
-                  <span class="lang-name">{{ l_info.name }}</span>
-                  {% if lang == l_code %}
-                    <span class="lang-active-check" aria-hidden="true">✓</span>
-                  {% endif %}
-                </a>
+                <option value="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" {% if lang == l_code %}selected{% endif %}>
+                  {{ l_info.label }} — {{ l_info.name }}
+                </option>
               {% endfor %}
-            </div>
+            </select>
           </div>
         </div>
       </nav>
