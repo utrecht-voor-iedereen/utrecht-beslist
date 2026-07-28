@@ -115,6 +115,7 @@ header {
   max-width: 100%;
   width: auto;
   display: block;
+  overflow: visible;
 }
 
 .nav-links {
@@ -746,7 +747,21 @@ header {
   text-decoration: underline;
 }
 
-/* Footer Component */
+.detail-title {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .detail-title {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-title {
+    font-size: 1.25rem;
+  }
+}
 footer {
   background-color: var(--utrecht-azul-oscuro);
   color: #FFFFFF;
@@ -826,33 +841,77 @@ footer {
   }
 }
 
+.view-toggle-text {
+  display: inline;
+}
+
 /* --------------------------------------------------------------------------
    Impeccable Mobile Responsive Breakpoints (< 768px & < 480px)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.85rem;
-    padding: 0.75rem 1rem;
+    align-items: stretch;
+    gap: 0.4rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .brand {
+    align-self: flex-start;
+    padding-top: 0.15rem;
+  }
+
+  .brand-logo-svg {
+    height: 32px;
+    max-width: 100%;
   }
 
   .nav-links {
     width: 100%;
     justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  .brand-logo-svg {
-    height: 38px;
-    max-width: 100%;
+  .nav-link {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+
+  .header-tools {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .theme-toggle-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    min-height: 38px;
+  }
+
+  .lang-select-native {
+    padding: 0.35rem 1.4rem 0.35rem 1.7rem;
+    font-size: 0.8rem;
+    min-height: 38px;
+  }
+
+  .lang-globe-icon {
+    left: 0.5rem;
+    font-size: 0.82rem;
   }
 
   .hero-banner {
-    padding: 1.75rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .hero-banner h1 {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
   }
 
   .main-wrapper {
@@ -867,11 +926,32 @@ footer {
   .human-impact-bar {
     flex-direction: column;
     gap: 0.5rem;
+    padding-bottom: 1rem;
   }
 
   .human-impact-btn {
     width: 100%;
     min-width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .search-box {
+    margin-bottom: 1rem;
+  }
+
+  .search-label {
+    font-size: 0.85rem;
+  }
+
+  .search-input {
+    padding: 0.65rem 1rem 0.65rem 2.4rem;
+    font-size: 1rem;
+  }
+
+  .search-icon {
+    left: 0.75rem;
+    bottom: 0.65rem;
   }
 
   .smart-selectors-row {
@@ -882,6 +962,35 @@ footer {
   .filter-select {
     width: 100%;
     min-width: 100%;
+    padding: 0.6rem 0.85rem;
+  }
+
+  .view-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .view-header-title {
+    font-size: 1rem;
+  }
+
+  .view-toggle-btn {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.78rem;
+    min-height: 36px;
+  }
+
+  .view-toggle-text {
+    display: none;
+  }
+
+  .view-toggle-btn.active .view-toggle-text {
+    display: inline;
+  }
+
+  .view-toggle-btn .shortcut-hint {
+    display: none;
   }
 
   .cards-grid {
@@ -892,10 +1001,24 @@ footer {
   .cards-grid.view-list-mode .card {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem;
   }
 
   .card {
-    padding: 1.15rem 1rem;
+    padding: 1rem;
+  }
+
+  .card-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-summary {
+    font-size: 0.92rem;
   }
 
   .card-footer {
@@ -917,5 +1040,31 @@ footer {
   .footer-bottom {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-svg {
+    height: 30px;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.35rem;
+  }
+
+  .human-impact-btn {
+    font-size: 0.85rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-date {
+    font-size: 0.78rem;
+  }
+
+  .badge-impact {
+    font-size: 0.68rem;
   }
 }
