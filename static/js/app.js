@@ -286,14 +286,8 @@ function initReportForms() {
     const sendLabel = form.dataset.sendLabel || 'Send email';
     const waitTemplate = form.dataset.waitMsg || 'Wait %s seconds';
     const cooldownMsg = form.dataset.cooldownMsg || 'Please wait before sending again.';
-    const fallbackLink = form.querySelector('.report-email');
     const submitBtn = form.querySelector('.report-submit-btn');
     const honeypot = form.querySelector('.report-honeypot');
-
-    if (fallbackLink) {
-      fallbackLink.href = `mailto:${REPORT_EMAIL}`;
-      fallbackLink.textContent = REPORT_EMAIL;
-    }
 
     function updateButton() {
       if (!submitBtn) return;

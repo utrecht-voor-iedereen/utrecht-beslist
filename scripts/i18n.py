@@ -568,16 +568,6 @@ UI = {
         'fr': 'Erreur ou suggestion concernant Utrecht Beslist',
         'de': 'Fehler oder Vorschlag zu Utrecht Beslist',
     },
-    'report_error_fallback': {
-        'nl': 'Werkt de knop niet? Stuur een e-mail naar',
-        'en': "Button doesn't work? Email us at",
-        'es': '¿No funciona el botón? Escríbenos a',
-        'tr': 'Düğme çalışmazsa bize şu adresten yazın:',
-        'pt-br': 'O botão não funciona? Envie um e-mail para',
-        'pt-pt': 'O botão não funciona? Envie um e-mail para',
-        'fr': 'Le bouton ne fonctionne pas ? Écrivez-nous à',
-        'de': 'Funktioniert der Button nicht? Schreiben Sie uns an',
-    },
     'report_error_cooldown': {
         'nl': 'Even wachten voordat je opnieuw kunt versturen.',
         'en': 'Please wait before sending again.',
