@@ -2160,8 +2160,7 @@
         <h3>¿Error o sugerencia?</h3>
         <p>Cuéntanos. Leemos todos los mensajes y respondemos por correo.</p>
         <form class="report-form" data-subject="Error o sugerencia sobre Utrecht Beslist" data-cooldown-msg="Espera un momento antes de enviar de nuevo." data-wait-msg="Espera %s segundos" data-send-label="Enviar correo">
-          <label for="report-message">Tu mensaje</label>
-          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Escribe aquí el error o sugerencia..." required></textarea>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Escribe aquí el error o sugerencia..." aria-label="Tu mensaje" required></textarea>
           <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
           <button type="submit" class="report-submit-btn">Enviar correo</button>
         </form>

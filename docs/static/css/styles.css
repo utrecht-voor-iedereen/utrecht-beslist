@@ -1079,20 +1079,16 @@ footer {
   margin-top: 0.75rem;
 }
 
-.report-form label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #FFFFFF;
-}
-
 .report-textarea {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   padding: 0.85rem 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--utrecht-borde-medio);
   border-radius: var(--radius-md);
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
-  font-size: 1.05rem;
+  background-color: var(--utrecht-blanco-tarjeta);
+  color: var(--utrecht-negro);
+  font-size: 1rem; /* 16px prevents iOS Safari auto-zoom */
   font-family: inherit;
   line-height: 1.5;
   resize: vertical;
@@ -1101,16 +1097,12 @@ footer {
 }
 
 .report-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--utrecht-gris-secundario);
 }
 
-.report-textarea:hover {
-  border-color: rgba(255, 255, 255, 0.55);
-}
-
+.report-textarea:hover,
 .report-textarea:focus {
-  border-color: var(--utrecht-rood);
-  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--utrecht-azul-enlace);
 }
 
 .report-submit-btn {
@@ -1135,28 +1127,6 @@ footer {
   transform: translateY(1px);
 }
 
-.report-fallback {
-  margin-top: 0.75rem;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.report-fallback a {
-  color: #FFFFFF;
-  text-decoration: underline;
-}
-
-.report-fallback a:hover {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-@media (max-width: 768px) {
-  .report-submit-btn {
-    font-size: 1rem;
-    min-height: 48px;
-  }
-}
-
 .report-submit-btn:disabled {
   background-color: rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.7);
@@ -1174,4 +1144,11 @@ footer {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media (max-width: 768px) {
+  .report-submit-btn {
+    font-size: 1rem;
+    min-height: 48px;
+  }
 }
