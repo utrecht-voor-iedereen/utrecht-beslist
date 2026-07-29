@@ -247,9 +247,9 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Resultaatbestemming 2025', window.location.href)">🔗 Delen</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207903410" target="_blank" rel="noopener" class="report-issue-link">
+      <button type="button" class="share-btn" onclick="openReportMailto('Resultaatbestemming 2025', '7903410', 'Fout of suggestie voor Utrecht Beslist')">
         ⚠️ Meld fout
-      </a>
+      </button>
     </div>
   </div>
 </article>
@@ -276,7 +276,7 @@
       <div class="footer-column">
         <h3>Navigatie &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../nl/index.html">Overzicht</a></li>
+          <li><a href="../../../nl/index.html">Start</a></li>
           <li><a href="../../../nl/over.html">Over &amp; Transparantie</a></li>
           <li><a href="../../../nl/feed.xml">RSS Feed (NL)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -286,6 +286,20 @@
       <div class="footer-column">
         <h3>Disclaimers & Data</h3>
         <p>Geautomatiseerd samengevat met AI op basis van open data van Open Raadsinformatie. Geen juridisch advies — raadpleeg altijd het originele raadsstuk van Gemeente Utrecht.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Fout of suggestie?</h3>
+        <p>Laat het ons weten. We lezen elk bericht en reageren per e-mail.</p>
+        <form class="report-form" data-subject="Fout of suggestie voor Utrecht Beslist" data-cooldown-msg="Even wachten voordat je opnieuw kunt versturen." data-wait-msg="Wacht nog %s seconden" data-send-label="Verstuur e-mail">
+          <label for="report-message">Uw bericht</label>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Typ hier uw fout of suggestie..." required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">Verstuur e-mail</button>
+        </form>
+        <p class="report-fallback">
+          Werkt de knop niet? Stuur een e-mail naar <a class="report-email" href="mailto:ipereferr@gmail.com">ipereferr@gmail.com</a>
+        </p>
       </div>
     </div>
 

@@ -247,9 +247,9 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Amendment Re-integration Regulation', window.location.href)">🔗 Paylaş</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207926270" target="_blank" rel="noopener" class="report-issue-link">
+      <button type="button" class="share-btn" onclick="openReportMailto('Amendment Re-integration Regulation', '7926270', 'Utrecht Beslist için hata veya öneri')">
         ⚠️ Hata bildir
-      </a>
+      </button>
     </div>
   </div>
 </article>
@@ -276,7 +276,7 @@
       <div class="footer-column">
         <h3>Gezinme &amp; Beslemeler</h3>
         <ul>
-          <li><a href="../../../tr/index.html">Genel Bakış</a></li>
+          <li><a href="../../../tr/index.html">Ana Sayfa</a></li>
           <li><a href="../../../tr/over.html">Hakkında &amp; Şeffaflık</a></li>
           <li><a href="../../../tr/feed.xml">RSS Feed (TR)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -286,6 +286,20 @@
       <div class="footer-column">
         <h3>Disclaimers & Data</h3>
         <p>Open Raadsinformatie açık verileri kullanılarak yapay zeka ile otomatik özetlenmiştir. Hukuki tavsiye niteliği taşımaz; her zaman resmi belgeye başvurun.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Hata veya öneri?</h3>
+        <p>Bize bildirin. Her mesajı okuyor ve e-posta ile yanıtlıyoruz.</p>
+        <form class="report-form" data-subject="Utrecht Beslist için hata veya öneri" data-cooldown-msg="Tekrar göndermeden önce lütfen bekleyin." data-wait-msg="%s saniye bekleyin" data-send-label="E-posta gönder">
+          <label for="report-message">Mesajınız</label>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Hata veya önerinizi buraya yazın..." required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">E-posta gönder</button>
+        </form>
+        <p class="report-fallback">
+          Düğme çalışmazsa bize şu adresten yazın: <a class="report-email" href="mailto:ipereferr@gmail.com">ipereferr@gmail.com</a>
+        </p>
       </div>
     </div>
 

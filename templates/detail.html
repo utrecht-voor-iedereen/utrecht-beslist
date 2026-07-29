@@ -165,9 +165,9 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', window.location.href)">🔗 {{ t("share", lang) }}</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
+      <button type="button" class="share-btn" onclick="openReportMailto('{{ title_text | escape }}', '{{ item.doc_id }}', '{{ t('report_error_subject', lang) | escape }}')">
         ⚠️ {{ t("report_error", lang) }}
-      </a>
+      </button>
     </div>
   </div>
 </article>

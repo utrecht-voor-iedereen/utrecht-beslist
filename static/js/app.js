@@ -21,6 +21,11 @@ const HUMAN_IMPACT_THEMES = {
   "movilidad": ["verkeer", "veiligheid", "cultuur-evenementen"]
 };
 
+// Contact address for error / suggestion reports (change this before deploying)
+const REPORT_EMAIL = "ipereferr@gmail.com";
+const REPORT_COOLDOWN_MS = 60000; // 1 minute client-side cooldown between reports
+const REPORT_COOLDOWN_KEY = 'utrecht_report_last_sent';
+
 // Dark Mode Initialization
 (function initTheme() {
   const savedTheme = localStorage.getItem('utrecht_theme') || 'light';
@@ -260,3 +265,88 @@ function speakText(text, lang = 'nl-NL') {
     alert('Audio read-aloud is not supported on this browser.');
   }
 }
+
+// --- Simple feedback via the user's own email client ---
+function buildMailto(subject, body) {
+  return `mailto:${encodeURIComponent(REPORT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function getRemainingCooldownSeconds() {
+  const last = parseInt(localStorage.getItem(REPORT_COOLDOWN_KEY) || '0', 10);
+  return Math.max(0, Math.ceil((REPORT_COOLDOWN_MS - (Date.now() - last)) / 1000));
+}
+
+function startCooldown() {
+  localStorage.setItem(REPORT_COOLDOWN_KEY, Date.now().toString());
+}
+
+function initReportForms() {
+  document.querySelectorAll('.report-form').forEach((form) => {
+    const subject = form.dataset.subject || 'Feedback Utrecht Beslist';
+    const sendLabel = form.dataset.sendLabel || 'Send email';
+    const waitTemplate = form.dataset.waitMsg || 'Wait %s seconds';
+    const cooldownMsg = form.dataset.cooldownMsg || 'Please wait before sending again.';
+    const fallbackLink = form.querySelector('.report-email');
+    const submitBtn = form.querySelector('.report-submit-btn');
+    const honeypot = form.querySelector('.report-honeypot');
+
+    if (fallbackLink) {
+      fallbackLink.href = `mailto:${REPORT_EMAIL}`;
+      fallbackLink.textContent = REPORT_EMAIL;
+    }
+
+    function updateButton() {
+      if (!submitBtn) return;
+      const remaining = getRemainingCooldownSeconds();
+      if (remaining > 0) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = waitTemplate.replace('%s', remaining);
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = sendLabel;
+      }
+    }
+
+    updateButton();
+    setInterval(updateButton, 1000);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Very basic bot trap: if the hidden field is filled, do nothing
+      if (honeypot && honeypot.value.trim()) return;
+
+      const remaining = getRemainingCooldownSeconds();
+      if (remaining > 0) {
+        alert(cooldownMsg);
+        return;
+      }
+
+      const textarea = form.querySelector('.report-textarea');
+      const message = textarea.value.trim();
+      if (!message) return;
+
+      startCooldown();
+      const body = `${message}\n\n---\n${window.location.href}`;
+      window.location.href = buildMailto(subject, body);
+      updateButton();
+    });
+  });
+}
+
+function openReportMailto(title, docId, subject) {
+  const remaining = getRemainingCooldownSeconds();
+  if (remaining > 0) {
+    const form = document.querySelector('.report-form');
+    const cooldownMsg = form?.dataset.cooldownMsg || 'Please wait before sending again.';
+    alert(cooldownMsg);
+    return;
+  }
+
+  const pageLabel = title ? `${title}${docId ? ' (#' + docId + ')' : ''}` : '';
+  const body = `${pageLabel}\n\n${window.location.href}`;
+  startCooldown();
+  window.location.href = buildMailto(subject || 'Feedback Utrecht Beslist', body);
+}
+
+document.addEventListener('DOMContentLoaded', initReportForms);

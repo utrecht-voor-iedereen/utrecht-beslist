@@ -247,9 +247,9 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Amendment Joint Regulation BghU', window.location.href)">🔗 Share</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207926182" target="_blank" rel="noopener" class="report-issue-link">
+      <button type="button" class="share-btn" onclick="openReportMailto('Amendment Joint Regulation BghU', '7926182', 'Error or suggestion for Utrecht Beslist')">
         ⚠️ Report error
-      </a>
+      </button>
     </div>
   </div>
 </article>
@@ -276,7 +276,7 @@
       <div class="footer-column">
         <h3>Navigation &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../en/index.html">Overview</a></li>
+          <li><a href="../../../en/index.html">Home</a></li>
           <li><a href="../../../en/over.html">About &amp; Transparency</a></li>
           <li><a href="../../../en/feed.xml">RSS Feed (EN)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -286,6 +286,20 @@
       <div class="footer-column">
         <h3>Disclaimers & Data</h3>
         <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Error or suggestion?</h3>
+        <p>Let us know. We read every message and reply by email.</p>
+        <form class="report-form" data-subject="Error or suggestion for Utrecht Beslist" data-cooldown-msg="Please wait before sending again." data-wait-msg="Wait %s seconds" data-send-label="Send email">
+          <label for="report-message">Your message</label>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Type your error or suggestion here..." required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">Send email</button>
+        </form>
+        <p class="report-fallback">
+          Button doesn&#39;t work? Email us at <a class="report-email" href="mailto:ipereferr@gmail.com">ipereferr@gmail.com</a>
+        </p>
       </div>
     </div>
 

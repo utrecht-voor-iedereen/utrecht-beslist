@@ -247,9 +247,9 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" onclick="shareCard('Answer to Written Council Questions', window.location.href)">🔗 Compartir</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207903412" target="_blank" rel="noopener" class="report-issue-link">
+      <button type="button" class="share-btn" onclick="openReportMailto('Answer to Written Council Questions', '7903412', 'Error o sugerencia sobre Utrecht Beslist')">
         ⚠️ Notificar error
-      </a>
+      </button>
     </div>
   </div>
 </article>
@@ -276,7 +276,7 @@
       <div class="footer-column">
         <h3>Navegación &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../es/index.html">Resumen</a></li>
+          <li><a href="../../../es/index.html">Inicio</a></li>
           <li><a href="../../../es/over.html">Sobre el Proyecto &amp; Transparencia</a></li>
           <li><a href="../../../es/feed.xml">RSS Feed (ES)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -286,6 +286,20 @@
       <div class="footer-column">
         <h3>Disclaimers & Data</h3>
         <p>Resumido automáticamente mediante IA a partir de datos abiertos de Open Raadsinformatie. Sin valor de asesoramiento legal; consulte siempre el documento oficial.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>¿Error o sugerencia?</h3>
+        <p>Cuéntanos. Leemos todos los mensajes y respondemos por correo.</p>
+        <form class="report-form" data-subject="Error o sugerencia sobre Utrecht Beslist" data-cooldown-msg="Espera un momento antes de enviar de nuevo." data-wait-msg="Espera %s segundos" data-send-label="Enviar correo">
+          <label for="report-message">Tu mensaje</label>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Escribe aquí el error o sugerencia..." required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">Enviar correo</button>
+        </form>
+        <p class="report-fallback">
+          ¿No funciona el botón? Escríbenos a <a class="report-email" href="mailto:ipereferr@gmail.com">ipereferr@gmail.com</a>
+        </p>
       </div>
     </div>
 

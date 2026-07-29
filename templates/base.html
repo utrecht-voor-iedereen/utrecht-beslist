@@ -99,7 +99,7 @@
       <div class="footer-column">
         <h3>{{ t('footer_nav', lang) }}</h3>
         <ul>
-          <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html">{{ t('nav_overview', lang) }}</a></li>
+          <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html">{{ t('footer_nav_overview', lang) }}</a></li>
           <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/over.html">{{ t('nav_about', lang) }}</a></li>
           <li><a href="{{ root_path if root_path else '../' }}{{ lang }}/feed.xml">RSS Feed ({{ lang | upper }})</a></li>
           <li><a href="{{ root_path if root_path else '../' }}data/latest.json">JSON API</a></li>
@@ -109,6 +109,20 @@
       <div class="footer-column">
         <h3>Disclaimers & Data</h3>
         <p>{{ t('footer_disclaimer', lang) }}</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>{{ t('report_error_title', lang) }}</h3>
+        <p>{{ t('report_error_intro', lang) }}</p>
+        <form class="report-form" data-subject="{{ t('report_error_subject', lang) }}" data-cooldown-msg="{{ t('report_error_cooldown', lang) }}" data-wait-msg="{{ t('report_error_wait_seconds', lang) }}" data-send-label="{{ t('report_error_send', lang) }}">
+          <label for="report-message">{{ t('report_error_label', lang) }}</label>
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="{{ t('report_error_placeholder', lang) }}" required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">{{ t('report_error_send', lang) }}</button>
+        </form>
+        <p class="report-fallback">
+          {{ t('report_error_fallback', lang) }} <a class="report-email" href="mailto:ipereferr@gmail.com">ipereferr@gmail.com</a>
+        </p>
       </div>
     </div>
 
