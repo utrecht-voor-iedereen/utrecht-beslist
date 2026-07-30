@@ -17,6 +17,17 @@ LANGUAGES = {
 
 DEFAULT_LANG = 'nl'
 
+# The project's own addresses. Written by hand in two files under two different
+# organisations before this: every "report an error" link pointed at a repo
+# that no longer exists, on all 29 documents in all 8 languages.
+REPO_URL = 'https://github.com/utrecht-voor-iedereen/utrecht-beslist'
+SITE_URL = 'https://utrecht-voor-iedereen.github.io/utrecht-beslist/'
+
+
+def issue_url(doc_id: str, lang: str) -> str:
+    """Link that opens a prefilled bug report about one decision page."""
+    return f"{REPO_URL}/issues/new?title=Document%20{doc_id}%20({lang})"
+
 # Months are spelled out rather than formatted with the C library: the build
 # runs on GitHub Actions, where only the C locale is installed, so
 # locale.setlocale(LC_TIME, 'tr_TR') raises and every date silently falls back

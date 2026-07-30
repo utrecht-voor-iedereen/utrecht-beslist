@@ -212,7 +212,7 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" data-share-title="{{ title_text }}">🔗 {{ t("share", lang) }}</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%20{{ item.doc_id }}%20({{ lang }})" target="_blank" rel="noopener" class="report-issue-link">
+      <a href="{{ issue_url(item.doc_id, lang) }}" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ {{ t("report_error", lang) }}
       </a>
     </div>
