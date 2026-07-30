@@ -28,7 +28,12 @@ logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 STATE_FILE = os.path.join(PROJECT_ROOT, "state", "processed.json")
-ANOMALY_THRESHOLD_DAYS = 90
+# Days without a newer document before the run says something is wrong. It was
+# 90, which is long enough for the upstream harvester to stop and the site to
+# sit frozen for a quarter without anyone being told. Dutch councils take a
+# summer recess of roughly six weeks, so the message has to allow for that
+# rather than claim a fault it cannot prove.
+ANOMALY_THRESHOLD_DAYS = int(os.environ.get("ANOMALY_THRESHOLD_DAYS", "21"))
 
 # Seconds to wait between summarization batches, to stay inside the provider's
 # per-minute token budget. Overridable for local runs on a paid key.
@@ -75,7 +80,13 @@ def check_inactivity_anomaly(items: list[dict[str, Any]]):
             
         days_diff = (now_dt - latest_dt).days
         if days_diff > ANOMALY_THRESHOLD_DAYS:
-            logger.critical(f"ANOMALY DETECTED: No new documents processed for {days_diff} days (Threshold: {ANOMALY_THRESHOLD_DAYS} days). Check ORI API mapping!")
+            logger.critical(
+                "STALE: the newest document is %d days old (threshold %d). Either the "
+                "council is in recess or Open Raadsinformatie has stopped harvesting "
+                "Utrecht. Check the newest start_date in ori_utrecht* against the "
+                "council's own agenda before assuming the pipeline is at fault.",
+                days_diff, ANOMALY_THRESHOLD_DAYS,
+            )
     except Exception as e:  # noqa: BLE001
         logger.warning(f"Could not calculate inactivity days: {e}")
 
