@@ -295,9 +295,13 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" data-share-title="Beschluss der Frühjahrsnote 2026">🔗 Teilen</button>
-      <a href="https://github.com/utrecht-voor-iedereen/utrecht-beslist/issues/new?title=Document%207961871%20(de)" target="_blank" rel="noopener" class="report-issue-link">
+      
+      <button type="button" class="share-btn"
+              data-report-title="Beschluss der Frühjahrsnote 2026"
+              data-report-doc="7961871"
+              data-report-subject="Fehler oder Vorschlag zu Utrecht Beslist">
         ⚠️ Fehler melden
-      </a>
+      </button>
     </div>
   </div>
 </article>
@@ -324,7 +328,7 @@
       <div class="footer-column">
         <h3>Navigation &amp; Feeds</h3>
         <ul>
-          <li><a href="../../../de/index.html">Übersicht</a></li>
+          <li><a href="../../../de/index.html">Startseite</a></li>
           <li><a href="../../../de/over.html">Über uns &amp; Transparenz</a></li>
           <li><a href="../../../de/feed.xml">RSS Feed (DE)</a></li>
           <li><a href="../../../data/latest.json">JSON API</a></li>
@@ -334,6 +338,16 @@
       <div class="footer-column">
         <h3>Haftungsausschluss &amp; Daten</h3>
         <p>Automatisch mit KI auf Basis offener Daten von Open Raadsinformatie zusammengefasst. Keine Rechtsberatung — konsultieren Sie stets das offizielle Ratsdokument.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Fehler oder Vorschlag?</h3>
+        <p>Sagen Sie uns Bescheid. Wir lesen jede Nachricht und antworten per E-Mail.</p>
+        <form class="report-form" data-subject="Fehler oder Vorschlag zu Utrecht Beslist" data-cooldown-msg="Bitte warten Sie einen Moment, bevor Sie erneut senden." data-wait-msg="Warten Sie %s Sekunden" data-send-label="E-Mail senden">
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Geben Sie hier den Fehler oder Vorschlag ein..." aria-label="Ihre Nachricht" required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">E-Mail senden</button>
+        </form>
       </div>
     </div>
 

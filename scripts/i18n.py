@@ -17,16 +17,10 @@ LANGUAGES = {
 
 DEFAULT_LANG = 'nl'
 
-# The project's own addresses. Written by hand in two files under two different
-# organisations before this: every "report an error" link pointed at a repo
-# that no longer exists, on all 29 documents in all 8 languages.
-REPO_URL = 'https://github.com/utrecht-voor-iedereen/utrecht-beslist'
+# The published address of the site, used in the RSS channel link. It was
+# typed into build_site by hand; keeping it here stops it drifting from the
+# repository it is served from.
 SITE_URL = 'https://utrecht-voor-iedereen.github.io/utrecht-beslist/'
-
-
-def issue_url(doc_id: str, lang: str) -> str:
-    """Link that opens a prefilled bug report about one decision page."""
-    return f"{REPO_URL}/issues/new?title=Document%20{doc_id}%20({lang})"
 
 # Months are spelled out rather than formatted with the C library: the build
 # runs on GitHub Actions, where only the C locale is installed, so
@@ -747,6 +741,96 @@ UI = {
         'pt-pt': 'Tratado em',
         'fr': 'Traité le',
         'de': 'Behandelt am',
+    },
+    'report_error_title': {
+        'nl': 'Fout of suggestie?',
+        'en': 'Error or suggestion?',
+        'es': '¿Error o sugerencia?',
+        'tr': 'Hata veya öneri?',
+        'pt-br': 'Erro ou sugestão?',
+        'pt-pt': 'Erro ou sugestão?',
+        'fr': 'Erreur ou suggestion ?',
+        'de': 'Fehler oder Vorschlag?',
+    },
+    'report_error_intro': {
+        'nl': 'Laat het ons weten. We lezen elk bericht en reageren per e-mail.',
+        'en': 'Let us know. We read every message and reply by email.',
+        'es': 'Cuéntanos. Leemos todos los mensajes y respondemos por correo.',
+        'tr': 'Bize bildirin. Her mesajı okuyor ve e-posta ile yanıtlıyoruz.',
+        'pt-br': 'Nos avise. Lemos todas as mensagens e respondemos por e-mail.',
+        'pt-pt': 'Diga-nos. Lemos todas as mensagens e respondemos por e-mail.',
+        'fr': 'Faites-nous savoir. Nous lisons chaque message et répondons par e-mail.',
+        'de': 'Sagen Sie uns Bescheid. Wir lesen jede Nachricht und antworten per E-Mail.',
+    },
+    'report_error_label': {
+        'nl': 'Uw bericht',
+        'en': 'Your message',
+        'es': 'Tu mensaje',
+        'tr': 'Mesajınız',
+        'pt-br': 'Sua mensagem',
+        'pt-pt': 'A sua mensagem',
+        'fr': 'Votre message',
+        'de': 'Ihre Nachricht',
+    },
+    'report_error_placeholder': {
+        'nl': 'Typ hier uw fout of suggestie...',
+        'en': 'Type your error or suggestion here...',
+        'es': 'Escribe aquí el error o sugerencia...',
+        'tr': 'Hata veya önerinizi buraya yazın...',
+        'pt-br': 'Digite aqui o erro ou sugestão...',
+        'pt-pt': 'Escreva aqui o erro ou sugestão...',
+        'fr': 'Écrivez ici l’erreur ou la suggestion...',
+        'de': 'Geben Sie hier den Fehler oder Vorschlag ein...',
+    },
+    'report_error_send': {
+        'nl': 'Verstuur e-mail',
+        'en': 'Send email',
+        'es': 'Enviar correo',
+        'tr': 'E-posta gönder',
+        'pt-br': 'Enviar e-mail',
+        'pt-pt': 'Enviar e-mail',
+        'fr': 'Envoyer un e-mail',
+        'de': 'E-Mail senden',
+    },
+    'report_error_subject': {
+        'nl': 'Fout of suggestie voor Utrecht Beslist',
+        'en': 'Error or suggestion for Utrecht Beslist',
+        'es': 'Error o sugerencia sobre Utrecht Beslist',
+        'tr': 'Utrecht Beslist için hata veya öneri',
+        'pt-br': 'Erro ou sugestão sobre o Utrecht Beslist',
+        'pt-pt': 'Erro ou sugestão sobre o Utrecht Beslist',
+        'fr': 'Erreur ou suggestion concernant Utrecht Beslist',
+        'de': 'Fehler oder Vorschlag zu Utrecht Beslist',
+    },
+    'report_error_cooldown': {
+        'nl': 'Even wachten voordat je opnieuw kunt versturen.',
+        'en': 'Please wait before sending again.',
+        'es': 'Espera un momento antes de enviar de nuevo.',
+        'tr': 'Tekrar göndermeden önce lütfen bekleyin.',
+        'pt-br': 'Aguarde um momento antes de enviar novamente.',
+        'pt-pt': 'Aguarde um momento antes de enviar novamente.',
+        'fr': 'Veuillez attendre avant de renvoyer un message.',
+        'de': 'Bitte warten Sie einen Moment, bevor Sie erneut senden.',
+    },
+    'report_error_wait_seconds': {
+        'nl': 'Wacht nog %s seconden',
+        'en': 'Wait %s seconds',
+        'es': 'Espera %s segundos',
+        'tr': '%s saniye bekleyin',
+        'pt-br': 'Aguarde %s segundos',
+        'pt-pt': 'Aguarde %s segundos',
+        'fr': 'Attendez %s secondes',
+        'de': 'Warten Sie %s Sekunden',
+    },
+    'footer_nav_overview': {
+        'nl': 'Start',
+        'en': 'Home',
+        'es': 'Inicio',
+        'tr': 'Ana Sayfa',
+        'pt-br': 'Início',
+        'pt-pt': 'Início',
+        'fr': 'Accueil',
+        'de': 'Startseite',
     },
 }
 

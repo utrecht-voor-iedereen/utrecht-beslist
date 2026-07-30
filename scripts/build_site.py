@@ -23,7 +23,6 @@ from scripts.i18n import (
     client_strings,
     format_date,
     get_item_lang_field,
-    issue_url,
     strip_leading_icon,
     t,
     wijk_label,
@@ -47,7 +46,6 @@ env.globals["client_strings"] = client_strings
 env.globals["format_date"] = format_date
 env.globals["strip_leading_icon"] = strip_leading_icon
 env.globals["wijk_label"] = wijk_label
-env.globals["issue_url"] = issue_url
 
 
 def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:

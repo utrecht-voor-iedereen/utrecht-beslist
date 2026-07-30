@@ -212,9 +212,15 @@
     
     <div style="display: flex; gap: 1rem;">
       <button class="share-btn" data-share-title="{{ title_text }}">🔗 {{ t("share", lang) }}</button>
-      <a href="{{ issue_url(item.doc_id, lang) }}" target="_blank" rel="noopener" class="report-issue-link">
+      {# Both buttons carry their text in data attributes rather than in an
+         onclick: an apostrophe in a title used to decode back into a quote and
+         break the handler on every page whose summary contained one. #}
+      <button type="button" class="share-btn"
+              data-report-title="{{ title_text }}"
+              data-report-doc="{{ item.doc_id }}"
+              data-report-subject="{{ t('report_error_subject', lang) }}">
         ⚠️ {{ t("report_error", lang) }}
-      </a>
+      </button>
     </div>
   </div>
 </article>
