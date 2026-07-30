@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# Regenerable hand-off material for an external model, plus its replies.
+translation-tasks/
