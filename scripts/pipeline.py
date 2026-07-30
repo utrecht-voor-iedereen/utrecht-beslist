@@ -114,6 +114,7 @@ def apply_source_facts(summary: dict[str, Any], doc: dict[str, Any]) -> dict[str
     summary["pdf_url"] = doc.get("pdf_url", "")
     summary["date"] = doc.get("date", "")
     summary["state"] = doc.get("state", "agenda")
+    summary["official_title"] = doc.get("title", "")
     summary["doc_type"] = doc.get("doc_type", "")
     summary["classification"] = doc.get("classification", "")
     summary["source_url"] = doc.get("source_url", "")

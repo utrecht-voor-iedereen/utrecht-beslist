@@ -6,46 +6,34 @@
     <description>Beschlüsse und Dokumente des Stadtrats Utrecht in verständlicher Sprache erklärt.</description>
     <language>de</language>
     <item>
-      <title>Feststellung der Jahresrechnung 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>Der Rat hat die Jahresrechnung 2025 festgestellt und dem College Entlastung erteilt. Das Jahr schließt mit einem Überschuss von 54,6 Millionen Euro ab, der der allgemeinen Deckungsreserve zugeführt wird.</description>
-      <guid isPermaLink="false">7961874</guid>
-    </item>
-    <item>
-      <title>Beschluss der Ergebnisverwendung 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
-      <description>Der Rat hat die Ergebnisverwendung 2025 beschlossen. Der Beschluss regelt die Übertragung von 20,5 Millionen Euro an verbleibenden einmaligen Budgets in das Haushaltsjahr 2026 zum Abschluss laufender Projekte.</description>
-      <guid isPermaLink="false">7961873</guid>
-    </item>
-    <item>
-      <title>Beschluss des Ersten Verwaltungsberichts 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>Der Rat hat den Ersten Verwaltungsbericht 2026 beschlossen. Damit werden die Investitionskredite um 26,2 Millionen Euro erhöht und Verschiebungen im Sozialbereich umgesetzt.</description>
-      <guid isPermaLink="false">7961872</guid>
-    </item>
-    <item>
       <title>Beschluss der Frühjahrsnote 2026</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
       <description>Der Rat hat die politikneutrale Frühjahrsnote 2026 beschlossen. Der Beschluss bestätigt das aktualisierte Finanzbild mit unvermeidbaren Engpässen als Grundlage für die neue Koalitionsvereinbarung.</description>
-      <guid isPermaLink="false">7961871</guid>
+      <guid isPermaLink="false">7947071</guid>
     </item>
     <item>
       <title>Beschluss der Mehrjährigen räumlichen Perspektive 2026</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
       <description>Der Gemeenteraad hat die Mehrjährige räumliche Perspektive 2026 beschlossen. Der Beschluss umfasst die Programmierung von Investitionen in bezahlbaren Wohnraum, nachhaltige Mobilität, Grünflächen und die Freigabe von Vorbereitungskrediten.</description>
-      <guid isPermaLink="false">7961870</guid>
+      <guid isPermaLink="false">7912169</guid>
     </item>
     <item>
-      <title>Voorjaarsnota 2026 verabschieden</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
-      <description>Der Gemeinderat beschließt die Verabschiedung der politikarmen Voorjaarsnota 2026. Das Dokument gibt ein aktuelles Finanzbild mit unvermeidlichen Entwicklungen und Engpässen wieder. Es enthält keine politischen Entscheidungen, weil es vor den Wahlen erstellt wurde.</description>
-      <guid isPermaLink="false">7947071</guid>
+      <title>Beschluss des Ersten Verwaltungsberichts 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>Der Rat hat den Ersten Verwaltungsbericht 2026 beschlossen. Damit werden die Investitionskredite um 26,2 Millionen Euro erhöht und Verschiebungen im Sozialbereich umgesetzt.</description>
+      <guid isPermaLink="false">7912167</guid>
     </item>
     <item>
-      <title>Ausnahme von der Wohnsitzanforderung</title>
-      <link></link>
-      <description>Der Gemeenteraad diskutiert einen Vorschlag, die Wohnsitzanforderung für das Amt des Wethouders aufzuheben. Das bedeutet, dass jemand, der nicht in Utrecht wohnt, dennoch Wethouder werden kann.</description>
-      <guid isPermaLink="false">7947062</guid>
+      <title>Beschluss der Ergebnisverwendung 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
+      <description>Der Rat hat die Ergebnisverwendung 2025 beschlossen. Der Beschluss regelt die Übertragung von 20,5 Millionen Euro an verbleibenden einmaligen Budgets in das Haushaltsjahr 2026 zum Abschluss laufender Projekte.</description>
+      <guid isPermaLink="false">7903410</guid>
+    </item>
+    <item>
+      <title>Feststellung der Jahresrechnung 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>Der Rat hat die Jahresrechnung 2025 festgestellt und dem College Entlastung erteilt. Das Jahr schließt mit einem Überschuss von 54,6 Millionen Euro ab, der der allgemeinen Deckungsreserve zugeführt wird.</description>
+      <guid isPermaLink="false">7903396</guid>
     </item>
     <item>
       <title>Ausnahme von der Wohnsitzanforderung</title>
@@ -87,7 +75,19 @@
       <title>Änderung der Führungsstruktur der Steuerkooperation BghU</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
       <description>Der College bittet den Gemeenteraad um Zustimmung zur Änderung der Gemeenschappelijke Regeling BghU. Dadurch wird BghU von einer Betriebsorganisation in eine öffentlich-rechtliche Körperschaft mit Algemeen Bestuur und Dagelijks Bestuur umgewandelt.</description>
-      <guid isPermaLink="false">7926182</guid>
+      <guid isPermaLink="false">7912171</guid>
+    </item>
+    <item>
+      <title>Anpassung der Verlängerung der Anmeldedauer für Prioritätsgruppen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>Der College passt den Rahmen des Flexwohnen-Experiments für Bewohner von Place2BU und Goeie Buur an. Die Verlängerung der Anmeldezeit wird nun variabel anhand aktueller Vergabezahlen festgelegt, um den Umzug in eine neue Wohnung zu ermöglichen.</description>
+      <guid isPermaLink="false">7944278</guid>
+    </item>
+    <item>
+      <title>Erklärung des Einvernehmens zur Erweiterung Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>Der College schlägt dem Rat vor, eine spezifische Erklärung des Einvernehmens für Theo Pouw am Isotopenweg 29 abzugeben. Dies ermöglicht der Provinz Utrecht die Erteilung einer Genehmigung für zwei neue Abfallverarbeitungsaktivitäten.</description>
+      <guid isPermaLink="false">7944277</guid>
     </item>
     <item>
       <title>Aktualisierung des Umweltplans Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
@@ -96,88 +96,16 @@
       <guid isPermaLink="false">7926275</guid>
     </item>
     <item>
-      <title>Erklärung des Einvernehmens zur Erweiterung Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>Der College schlägt dem Rat vor, eine spezifische Erklärung des Einvernehmens für Theo Pouw am Isotopenweg 29 abzugeben. Dies ermöglicht der Provinz Utrecht die Erteilung einer Genehmigung für zwei neue Abfallverarbeitungsaktivitäten.</description>
-      <guid isPermaLink="false">7926272</guid>
-    </item>
-    <item>
-      <title>Anpassung der Verlängerung der Anmeldedauer für Prioritätsgruppen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>Der College passt den Rahmen des Flexwohnen-Experiments für Bewohner von Place2BU und Goeie Buur an. Die Verlängerung der Anmeldezeit wird nun variabel anhand aktueller Vergabezahlen festgelegt, um den Umzug in eine neue Wohnung zu ermöglichen.</description>
-      <guid isPermaLink="false">7926267</guid>
-    </item>
-    <item>
-      <title>Umweltplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
-      <description>Der Gemeenteraad entscheidet über den TAM-Umweltplan für Jan van Galenstraat, Huizingalaan und Van Ginnekenlaan. Dies ermöglicht den Bau von 102 Mietwohnungen, einem Supermarkt, Gewerbeeinheiten und einer Tiefgarage.</description>
-      <guid isPermaLink="false">7926168</guid>
-    </item>
-    <item>
-      <title>Anpassung der Verlängerung der Anmeldedauer für Prioritätsgruppen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>Der Rat hat beschlossen, die Regeln des Flexwohnen-Experiments für Bewohner von Place2BU und Goeie Buur anzupassen. Die Verlängerung der Anmeldezeit wird nun flexibel anhand aktueller Vergabezahlen festgelegt, um den Umzug in eine neue Wohnung zu ermöglichen.</description>
-      <guid isPermaLink="false">7944279</guid>
-    </item>
-    <item>
-      <title>Anpassung der Verlängerung der Anmeldedauer für Prioritätsgruppen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>Der Rat hat beschlossen, die Regeln des Flexwohnen-Experiments für Bewohner von Place2BU und Goeie Buur anzupassen. Die Verlängerung der Anmeldezeit wird nun flexibel anhand aktueller Vergabezahlen festgelegt, um den Umzug in eine neue Wohnung zu ermöglichen.</description>
-      <guid isPermaLink="false">7944278</guid>
-    </item>
-    <item>
-      <title>Erklärung des Einvernehmens zur Erweiterung Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>Der Rat hat beschlossen, eine spezifische Erklärung des Einvernehmens für Theo Pouw am Isotopenweg 29 abzugeben. Dies ermöglicht der Provinz Utrecht die Erteilung einer Genehmigung für zwei neue Abfallverarbeitungsaktivitäten.</description>
-      <guid isPermaLink="false">7944277</guid>
-    </item>
-    <item>
       <title>Umweltplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>Der Gemeenteraad entscheidet über den TAM-Umweltplan für Jan van Galenstraat, Huizingalaan und Van Ginnekenlaan. Dies ermöglicht den Bau von 102 Mietwohnungen, einem Supermarkt, Gewerbeeinheiten und einer Tiefgarage.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
-      <title>Änderung der Führungsstruktur der Steuerkooperation BghU</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
-      <description>Der College bittet den Gemeenteraad um Zustimmung zur Änderung der Gemeenschappelijke Regeling BghU. Dadurch wird BghU von einer Betriebsorganisation in eine öffentlich-rechtliche Körperschaft mit Algemeen Bestuur und Dagelijks Bestuur umgewandelt.</description>
-      <guid isPermaLink="false">7912171</guid>
-    </item>
-    <item>
-      <title>Mehrjährige räumliche Perspektive 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
-      <description>Der College legt die Mehrjährige räumliche Perspektive 2026 mit dem Stand der räumlichen Investitionen vor. Sie enthält Budgets für bezahlbaren Wohnraum, Erreichbarkeit, Grünflächen und Vorbereitungskredite für Neugestaltungsprojekte.</description>
-      <guid isPermaLink="false">7912169</guid>
-    </item>
-    <item>
-      <title>Erster Verwaltungsbericht 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>Der Erste Verwaltungsbericht 2026 informiert den Rat über den Fortschritt des Programmhaushalts. Erhöhungen der Investitionskredite um 26,2 Millionen Euro und Reformen im Sozialbereich werden vorgeschlagen.</description>
-      <guid isPermaLink="false">7912167</guid>
-    </item>
-    <item>
-      <title>Jahresrechnung 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>Der College legt mit der Jahresrechnung 2025 Rechenschaft über Politik und Gemeindefinanzen ab. Das Jahr schließt mit einem positiven Ergebnis von 54,6 Millionen Euro ab, das der allgemeinen Deckungsreserve zugeführt wird.</description>
-      <guid isPermaLink="false">7912165</guid>
-    </item>
-    <item>
       <title>Beantwortung von Ratsfragen und Errata zu Finanzdokumenten</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
       <description>Der College übermittelt die Antworten auf schriftliche Fragen zur Jahresrechnung 2025 und zu Verwaltungsberichten samt Errata. Der Brief enthält auch einen Aufruf der G4-Städte zu Tierschutz und Tierarztkosten.</description>
       <guid isPermaLink="false">7903412</guid>
-    </item>
-    <item>
-      <title>Ergebnisverwendung 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
-      <description>Der College schlägt vor, 20,5 Millionen Euro an verbleibenden einmaligen Budgets aus der Jahresrechnung 2025 nach 2026 zu übertragen, um laufende Projekte und Programme abzuschließen.</description>
-      <guid isPermaLink="false">7903410</guid>
-    </item>
-    <item>
-      <title>Jahresrechnung 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>Der College legt mit der Jahresrechnung 2025 Rechenschaft über Politik und Gemeindefinanzen ab. Das Jahr schließt mit einem positiven Ergebnis von 54,6 Millionen Euro ab, das der allgemeinen Deckungsreserve zugeführt wird.</description>
-      <guid isPermaLink="false">7903396</guid>
     </item>
   </channel>
 </rss>

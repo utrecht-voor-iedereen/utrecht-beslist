@@ -127,6 +127,7 @@ class SummaryItem(BaseModel):
     # Provenance, filled from the Open Raadsinformatie record rather than the
     # model, so the detail page can show where every claim comes from.
     state: str = Field(default="agenda")
+    official_title: str = Field(default="")
     doc_type: str = Field(default="")
     classification: str = Field(default="")
     source_url: str = Field(default="")

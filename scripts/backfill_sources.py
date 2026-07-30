@@ -92,6 +92,7 @@ def main() -> int:
         before_pdf = item.get("pdf_url", "")
 
         item["state"] = doc["state"]
+        item["official_title"] = doc["title"]
         item["doc_type"] = doc["doc_type"]
         item["classification"] = doc["classification"]
         item["source_url"] = doc["source_url"] or ORI_PERMALINK.format(doc_id=doc_id)

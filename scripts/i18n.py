@@ -732,6 +732,16 @@ UI = {
         'fr': "Ceci est la décision enregistrée ; les documents ci-dessous relèvent de la proposition sur laquelle elle porte.",
         'de': 'Dies ist der Ratsbeschluss; die Dokumente unten gehören zu dem Antrag, über den entschieden wurde.',
     },
+    'dossier_history': {
+        'nl': 'Verloop van dit dossier',
+        'en': 'How this dossier progressed',
+        'es': 'Recorrido de este expediente',
+        'tr': 'Bu dosyanın seyri',
+        'pt-br': 'Percurso deste processo',
+        'pt-pt': 'Percurso deste processo',
+        'fr': 'Parcours de ce dossier',
+        'de': 'Verlauf dieses Vorgangs',
+    },
     'published_on': {
         'nl': 'Behandeld op',
         'en': 'Discussed on',

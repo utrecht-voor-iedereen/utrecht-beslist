@@ -23,6 +23,7 @@ from scripts.i18n import (
     client_strings,
     format_date,
     get_item_lang_field,
+    status_text,
     strip_leading_icon,
     t,
     wijk_label,
@@ -46,6 +47,7 @@ env.globals["client_strings"] = client_strings
 env.globals["format_date"] = format_date
 env.globals["strip_leading_icon"] = strip_leading_icon
 env.globals["wijk_label"] = wijk_label
+env.globals["state_label"] = status_text
 
 
 def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
@@ -81,6 +83,80 @@ def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
 </rss>"""
 
 
+# How much a record settles what happened to a dossier. ORI publishes the same
+# proposal as an agenda item when it is tabled and again as a Report when the
+# council decides, so the site was showing Jaarstukken 2025 three times, twice
+# as "on the agenda" and once as "passed".
+STATE_AUTHORITY = {"passed": 3, "failed": 3, "agenda": 2, "informational": 1}
+
+
+def authority(item: dict) -> tuple:
+    """Ranks records of one dossier; the highest describes its current state."""
+    return (STATE_AUTHORITY.get(item.get("state", ""), 0), item.get("date") or "")
+
+
+def consolidate(items: list) -> tuple[list, dict[str, str]]:
+    """
+    Collapses the records of one dossier into a single article.
+
+    Returns the articles plus a map of retired doc_id -> canonical doc_id, so
+    the build can leave a redirect where a page used to be. State is left
+    alone: it stays a faithful copy of the register, and this is a decision
+    about presentation.
+
+    The canonical id is the earliest record, so a dossier keeps one address
+    from the day it is tabled and does not move when the decision lands. What
+    the article says comes from the most authoritative record, because that is
+    the one that knows the outcome.
+    """
+    groups: dict[str, list] = {}
+    for item in items:
+        # Fall back to the id so a record with no official title stays its own
+        # dossier rather than joining every other untitled one.
+        key = (item.get("official_title") or "").strip() or f"#{item.get('doc_id')}"
+        groups.setdefault(key, []).append(item)
+
+    articles, redirects = [], {}
+    for records in groups.values():
+        by_date = sorted(records, key=lambda r: (r.get("date") or "", r.get("doc_id") or ""))
+        canonical_id = by_date[0]["doc_id"]
+        leading = max(records, key=authority)
+
+        article = dict(leading)
+        article["doc_id"] = canonical_id
+        # Sort and date the dossier by its latest activity, so one that was
+        # just decided rises to the top rather than sinking to its tabling date.
+        article["date"] = by_date[-1].get("date") or leading.get("date") or ""
+
+        seen, merged = set(), []
+        for record in by_date:
+            for attachment in record.get("attachments") or []:
+                url = attachment.get("url")
+                if url and url not in seen:
+                    seen.add(url)
+                    merged.append(attachment)
+        article["attachments"] = merged
+
+        article["history"] = [
+            {
+                "doc_id": r["doc_id"],
+                "date": r.get("date") or "",
+                "state": r.get("state") or "",
+                "doc_type": r.get("doc_type") or "",
+                "source_url": r.get("source_url") or "",
+            }
+            for r in by_date
+        ]
+
+        for record in records:
+            if record["doc_id"] != canonical_id:
+                redirects[record["doc_id"]] = canonical_id
+
+        articles.append(article)
+
+    return articles, redirects
+
+
 def sort_key(item: dict) -> tuple:
     """
     Newest first, and stable when several items share a date.
@@ -101,8 +177,24 @@ def month_key(item: dict) -> tuple[str, str] | None:
     return raw[0:4], raw[5:7]
 
 
+REDIRECT_PAGE = """<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url={target}">
+  <link rel="canonical" href="{target}">
+  <meta name="robots" content="noindex">
+  <title>Utrecht Beslist</title>
+</head>
+<body>
+  <p><a href="{target}">Utrecht Beslist</a></p>
+</body>
+</html>"""
+
+
 def build_static_site(items: list):
     """Builds complete static web output into docs/ for all 8 supported languages."""
+    items, redirects = consolidate(items)
     items = sorted(items, key=sort_key, reverse=True)
 
     # Wipe the per-language trees first. Renaming a route used to leave the old
@@ -198,13 +290,24 @@ def build_static_site(items: list):
             with open(os.path.join(detail_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(detail_html)
 
+    # A dossier that used to have a page per record keeps those addresses
+    # working. They were published, and a consolidation is no reason to hand
+    # someone a 404.
+    for retired_id, canonical_id in redirects.items():
+        for lang in SUPPORTED_LANGUAGES:
+            retired_dir = os.path.join(DOCS_DIR, lang, "besluit", retired_id)
+            os.makedirs(retired_dir, exist_ok=True)
+            with open(os.path.join(retired_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(REDIRECT_PAGE.format(lang=lang, target=f"../{canonical_id}/index.html"))
+
     # Write Public Data API JSON
     with open(os.path.join(DOCS_DIR, "data", "latest.json"), "w", encoding="utf-8") as f:
         json.dump({"items": items, "count": len(items)}, f, indent=2, ensure_ascii=False)
 
     logger.info(
         f"Successfully generated static site in {DOCS_DIR} for {len(SUPPORTED_LANGUAGES)} languages "
-        f"with {len(items)} items, RSS feeds, month archives, and individual detail pages."
+        f"with {len(items)} dossiers ({len(redirects)} redirected records), RSS feeds, "
+        f"month archives, and individual detail pages."
     )
 
 

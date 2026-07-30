@@ -151,6 +151,28 @@
     </div>
   </div>
 
+  {# One dossier is tabled, discussed and decided on different days, and ORI
+     files each step as its own record. Showing only the last one hid that a
+     decision had a history; showing them as separate articles was worse. #}
+  {% if item.history and item.history | length > 1 %}
+  <div style="margin-top: 2rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+      🗓️ {{ t("dossier_history", lang) }}
+    </h3>
+    <ol style="margin: 0 0 0 1.1rem; font-size: 0.9rem; line-height: 1.9; color: var(--utrecht-gris-secundario);">
+      {% for step in item.history %}
+        <li>
+          <time datetime="{{ step.date[:10] }}">{{ format_date(step.date, lang) }}</time>
+          — {{ state_label(step.state, lang) }}
+          {% if step.source_url %}
+            · <a href="{{ step.source_url }}" target="_blank" rel="noopener">ORI {{ step.doc_id }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">

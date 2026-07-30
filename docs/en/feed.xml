@@ -6,46 +6,34 @@
     <description>Utrecht city council decisions and documents explained in plain language.</description>
     <language>en</language>
     <item>
-      <title>Adoption of Annual Accounts 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>The council has adopted the Annual Accounts 2025 and granted discharge to the college. The year ends with a surplus of 54.6 million euros added to the general coverage reserve.</description>
-      <guid isPermaLink="false">7961874</guid>
-    </item>
-    <item>
-      <title>Adoption of Result Allocation 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
-      <description>The council has adopted the Result Allocation 2025. The decision regulates carrying over 20.5 million euros in remaining incidental budgets to the 2026 budget year to complete ongoing projects.</description>
-      <guid isPermaLink="false">7961873</guid>
-    </item>
-    <item>
-      <title>Adoption of First Management Report 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>The council has adopted the First Management Report 2026. This increases investment credits by 26.2 million euros and implements shifts in the social domain.</description>
-      <guid isPermaLink="false">7961872</guid>
-    </item>
-    <item>
       <title>Adoption of Spring Memorandum 2026</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
       <description>The council has adopted the policy-neutral Spring Memorandum 2026. The decision confirms the updated financial picture with unavoidable bottlenecks as the basis for the new coalition agreement.</description>
-      <guid isPermaLink="false">7961871</guid>
+      <guid isPermaLink="false">7947071</guid>
     </item>
     <item>
       <title>Adoption of Multi-Year Spatial Perspective 2026</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
       <description>The Gemeenteraad has adopted the Multi-Year Spatial Perspective 2026. The decision includes programming investments in affordable housing, sustainable mobility, green spaces, and allocating preparation credits for redevelopments.</description>
-      <guid isPermaLink="false">7961870</guid>
+      <guid isPermaLink="false">7912169</guid>
     </item>
     <item>
-      <title>Adopt Voorjaarsnota 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
-      <description>The council is deciding to adopt the policy-light Voorjaarsnota 2026. The document gives an up-to-date financial picture with unavoidable developments and bottlenecks. It contains no policy choices because it was drawn up before the elections.</description>
-      <guid isPermaLink="false">7947071</guid>
+      <title>Adoption of First Management Report 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>The council has adopted the First Management Report 2026. This increases investment credits by 26.2 million euros and implements shifts in the social domain.</description>
+      <guid isPermaLink="false">7912167</guid>
     </item>
     <item>
-      <title>Exemption of residence requirement</title>
-      <link></link>
-      <description>The city council discusses a proposal to exempt the residence requirement for aldermen. This means that someone who does not live in Utrecht can still become an alderman.</description>
-      <guid isPermaLink="false">7947062</guid>
+      <title>Adoption of Result Allocation 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
+      <description>The council has adopted the Result Allocation 2025. The decision regulates carrying over 20.5 million euros in remaining incidental budgets to the 2026 budget year to complete ongoing projects.</description>
+      <guid isPermaLink="false">7903410</guid>
+    </item>
+    <item>
+      <title>Adoption of Annual Accounts 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>The council has adopted the Annual Accounts 2025 and granted discharge to the college. The year ends with a surplus of 54.6 million euros added to the general coverage reserve.</description>
+      <guid isPermaLink="false">7903396</guid>
     </item>
     <item>
       <title>Exemption of residence requirement</title>
@@ -87,7 +75,19 @@
       <title>Governance change for BghU tax cooperation</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
       <description>The college requests permission from the Gemeenteraad to amend the Gemeenschappelijke Regeling BghU. This changes BghU from an operational organization into a public body with an Algemeen Bestuur and Dagelijks Bestuur.</description>
-      <guid isPermaLink="false">7926182</guid>
+      <guid isPermaLink="false">7912171</guid>
+    </item>
+    <item>
+      <title>Adjustment to registration duration extension for priority groups</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>The college is adjusting the flex-housing experiment framework for residents of Place2BU and Goeie Buur. Registration duration extension will now be variably determined based on allocation figures to enable moving to a new home.</description>
+      <guid isPermaLink="false">7944278</guid>
+    </item>
+    <item>
+      <title>Declaration of no objection expansion Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>The college proposes that the council issue a specific declaration of no objection for Theo Pouw at Isotopenweg 29. This enables the Province of Utrecht to grant a permit for two new waste processing activities.</description>
+      <guid isPermaLink="false">7944277</guid>
     </item>
     <item>
       <title>Environmental plan update Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
@@ -96,88 +96,16 @@
       <guid isPermaLink="false">7926275</guid>
     </item>
     <item>
-      <title>Declaration of no objection expansion Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>The college proposes that the council issue a specific declaration of no objection for Theo Pouw at Isotopenweg 29. This enables the Province of Utrecht to grant a permit for two new waste processing activities.</description>
-      <guid isPermaLink="false">7926272</guid>
-    </item>
-    <item>
-      <title>Adjustment to registration duration extension for priority groups</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>The college is adjusting the flex-housing experiment framework for residents of Place2BU and Goeie Buur. Registration duration extension will now be variably determined based on allocation figures to enable moving to a new home.</description>
-      <guid isPermaLink="false">7926267</guid>
-    </item>
-    <item>
-      <title>Environmental plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
-      <description>The Gemeenteraad is deciding on the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan. This enables the construction of 102 rental homes, a supermarket, retail units, and an underground parking garage.</description>
-      <guid isPermaLink="false">7926168</guid>
-    </item>
-    <item>
-      <title>Adjustment to registration duration extension for priority groups</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>The council has decided to adjust the flex-housing experiment rules for residents of Place2BU and Goeie Buur. Registration duration extension will now be flexibly determined by the college based on current allocation figures to enable moving to a new home.</description>
-      <guid isPermaLink="false">7944279</guid>
-    </item>
-    <item>
-      <title>Adjustment to registration duration extension for priority groups</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>The council has decided to adjust the flex-housing experiment rules for residents of Place2BU and Goeie Buur. Registration duration extension will now be flexibly determined by the college based on current allocation figures to enable moving to a new home.</description>
-      <guid isPermaLink="false">7944278</guid>
-    </item>
-    <item>
-      <title>Declaration of no objection expansion Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>The council has decided to issue a specific declaration of no objection for Theo Pouw at Isotopenweg 29. This enables the Province of Utrecht to grant a permit for two new waste processing activities.</description>
-      <guid isPermaLink="false">7944277</guid>
-    </item>
-    <item>
       <title>Environmental plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>The Gemeenteraad is deciding on the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan. This enables the construction of 102 rental homes, a supermarket, retail units, and an underground parking garage.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
-      <title>Governance change for BghU tax cooperation</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
-      <description>The college requests permission from the Gemeenteraad to amend the Gemeenschappelijke Regeling BghU. This changes BghU from an operational organization into a public body with an Algemeen Bestuur and Dagelijks Bestuur.</description>
-      <guid isPermaLink="false">7912171</guid>
-    </item>
-    <item>
-      <title>Multi-Year Spatial Perspective 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
-      <description>The college presents the Multi-Year Spatial Perspective 2026 detailing spatial investments. It includes budgets for affordable housing, accessibility, green spaces, and preparation credits for redevelopment projects.</description>
-      <guid isPermaLink="false">7912169</guid>
-    </item>
-    <item>
-      <title>First Management Report 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>The First Management Report 2026 informs council on program budget progress. Increases of investment credits by 26.2 million euros and social domain reforms are proposed.</description>
-      <guid isPermaLink="false">7912167</guid>
-    </item>
-    <item>
-      <title>Annual Accounts 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>The college presents the Annual Accounts 2025 accounting for policy and municipal finances. The year concludes with a positive result of 54.6 million euros added to the general coverage reserve.</description>
-      <guid isPermaLink="false">7912165</guid>
-    </item>
-    <item>
       <title>Answers to council questions and financial document errata</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
       <description>The college sends responses to written questions regarding the Annual Accounts 2025 and management reports, including errata. The letter also contains a call from G4 cities regarding animal welfare and vet costs.</description>
       <guid isPermaLink="false">7903412</guid>
-    </item>
-    <item>
-      <title>Result Allocation 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
-      <description>The college proposes carrying over 20.5 million euros in remaining incidental budgets from the Annual Accounts 2025 to 2026 to complete ongoing projects and programs.</description>
-      <guid isPermaLink="false">7903410</guid>
-    </item>
-    <item>
-      <title>Annual Accounts 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
-      <description>The college presents the Annual Accounts 2025 accounting for policy and municipal finances. The year concludes with a positive result of 54.6 million euros added to the general coverage reserve.</description>
-      <guid isPermaLink="false">7903396</guid>
     </item>
   </channel>
 </rss>
