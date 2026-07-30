@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aanpassing Huisvestingsverordening — Utrecht Beslist</title>
+  <title>Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen — Utrecht Beslist</title>
   <meta name="description" content="Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).">
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Hoofdnavigatie">
         <a href="../../../nl/index.html" class="nav-link">Overzicht</a>
         <a href="../../../nl/over.html" class="nav-link">Over &amp; Transparantie</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Wissel tussen donkere en lichte modus">🌙 Donker</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Taal kiezen" onchange="window.location.href=this.value;">
               
                 <option value="../../../nl/index.html" selected>
                   NL — Nederlands
@@ -118,17 +118,20 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        ⏳
+        ⏳ Op de agenda
       </span>
 
       
-        <span class="badge-impact impact-laag">Laag Impact</span>
+        <span class="badge-impact impact-gemiddeld">Gemiddeld Impact</span>
       
     </div>
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('De inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen wordt aangepast.. Het college stelt voor om de Huisvestingsverordening aan te passen. Deze aanpassing heeft betrekking op de inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen.', 'nl')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="Kwetsbare huurders en jongeren uit tijdelijke woonprojecten krijgen betere mogelijkheden om door te stromen naar een zelfstandige woning. Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.">
         🔊 Voorlezen
       </button>
 
@@ -137,76 +140,86 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 2026-06-25
+        📅 Behandeld op <time datetime="2026-06-25">25 juni 2026</time>
       </span>
     </div>
   </div>
 
   <!-- Document Title -->
   <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    Aanpassing Huisvestingsverordening
+    Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 De inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen wordt aangepast.
+    💡 Kwetsbare huurders en jongeren uit tijdelijke woonprojecten krijgen betere mogelijkheden om door te stromen naar een zelfstandige woning.
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 🎯 Waarom is dit besluit ingediend?
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        Het college wil de Huisvestingsverordening aanpassen.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 💡 Samenvatting in Begrijpelijke Taal (B1)
+        💡 Samenvatting in Begrijpelijke Taal (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        Het college stelt voor om de Huisvestingsverordening aan te passen. Deze aanpassing heeft betrekking op de inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen.
+        Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">Het aanpassen van de Huisvestingsverordening.</li>
-        <li class="bullet-item">Inwoners die gebruik maken van de Huisvestingsverordening.</li>
-        <li class="bullet-item">Geen extra kosten.</li>
+        <li class="bullet-item">📌 Aanpassing van de kaders voor inschrijfduurverlenging in het experiment Huisvestingsverordening.</li>
+        <li class="bullet-item">👥 Kwetsbare huurders van Place2BU en jongeren uit de jeugdzorg bij Goeie Buur.</li>
+        <li class="bullet-item">💶 Het document vermeldt geen specifieke financiële bedragen.</li>
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ 🏘️ Wat verandert er in Utrecht?
+        🎯 Waarom is dit besluit ingediend?
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        De inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen wordt aangepast.
+        De eerdere maximale verlenging tot 11 jaar bleek door de krappe woningmarkt onvoldoende om daadwerkelijk een woning te vinden.
       </p>
     </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Wat verandert er in Utrecht?
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        Het college stelt de verlenging flexibel vast op basis van toewijzingscijfers en zet verhuiscoaches in om dreigende dakloosheid te voorkomen.
+      </p>
+    </section>
+    
 
     <!-- Section 4: Budget & Timeline -->
+    
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         💶 Budget &amp; Planning
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
-        <div>
-          <strong>Cijfer/Kosten:</strong>
-          <span>Geen extra kosten</span>
-        </div>
+        
+        
         <div>
           <strong>Planning:</strong>
-          <span>2026</span>
+          <span>16 juli 2026</span>
         </div>
+        
       </div>
     </section>
+    
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -214,7 +227,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Wonen &amp; Huisvesting</span>
       
       
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Overig</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Hele stad</span>
       
     </div>
   </div>
@@ -222,32 +235,59 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ ⚖️ Woo-Rechten &amp; Transparantie
+      🏛️ Bron &amp; Woo-rechten
     </h3>
+
     
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
+        <a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 Origineel PDF Stuk ➔
+        </a>
       
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ Bekijk in Utrecht Raadsportaal 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="https://id.openraadsinformatie.nl/7926267" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 ORI-registratie van dit stuk 🔗
       </a>
     </div>
+
+    
+    
+      <details style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          Onderliggende stukken (4)
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885" target="_blank" rel="noopener">Raadsvoorstel Aanpassing ‘Experiment in kader van Huisvestingsverordening inschrijfduurverlenging doorstroom na tijdelijkheid van aandachtsgroepen&#39;</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=e13a6201-a0c6-423c-b7d7-fc73939f50ab" target="_blank" rel="noopener">Collegevoorstel Conceptwijziging nadere regel inschrijfduurverlenging &#39;Experiment in kader van Huisvestingsverordening</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36c1a559-9d8d-40f3-87b2-54797251ac42" target="_blank" rel="noopener">Concept Besluit tot wijziging van Nadere regel Experiment inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=47413301-ffdd-480a-8c14-5f25d258be8d" target="_blank" rel="noopener">Dossier 5279 voorblad.pdf</a></li>
+          
+        </ul>
+      </details>
+    
   </div>
 
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 AI Transparantie: Groq (llama-3.3-70b-versatile)</span>
+      <span>🤖 AI Transparantie: External model (manual hand-off)</span>
       <span style="margin-left: 0.75rem;">📦 Permanent gearchiveerd (Archiefwet 1995)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Woo-Rechten &amp; Transparantie</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('Aanpassing Huisvestingsverordening', window.location.href)">🔗 Delen</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207926267" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen">🔗 Delen</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%207926267%20(nl)" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ Meld fout
       </a>
     </div>
@@ -284,17 +324,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Voorbehoud &amp; Data</h3>
         <p>Geautomatiseerd samengevat met AI op basis van open data van Open Raadsinformatie. Geen juridisch advies — raadpleeg altijd het originele raadsstuk van Gemeente Utrecht.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Burgerinitiatief · 100% Statisch &amp; Kosteloos</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link gekopieerd naar klembord!", "lang": "nl", "postal_badge": "\ud83d\udccd Postcode {code} \u2192 wijk {wijk}", "results_many": "besluiten", "results_one": "besluit", "speech": "nl-NL", "theme_to_dark": "\ud83c\udf19 Donker", "theme_to_light": "\u2600\ufe0f Licht", "tts_unsupported": "Voorlezen wordt niet ondersteund door deze browser."}</script>
   <script src="../../../static/js/app.js"></script>
 </body>
 </html>

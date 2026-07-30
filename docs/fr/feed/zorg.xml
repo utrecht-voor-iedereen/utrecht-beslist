@@ -6,10 +6,16 @@
     <description>Décisions et documents du conseil municipal d'Utrecht expliqués en langage simple.</description>
     <language>fr</language>
     <item>
-      <title>Social Support Regulation</title>
-      <link></link>
-      <description>The city council is establishing a new regulation for social support in Utrecht.</description>
+      <title>Adopter la Verordening Wmo 2027</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
+      <description>Le conseil municipal décide de la nouvelle Verordening maatschappelijke ondersteuning 2027. Les règles deviennent plus claires et accessibles pour les habitants et les professionnels. Des critères clairs et de nouvelles règles pour la contribution personnelle sont introduits.</description>
       <guid isPermaLink="false">7926189</guid>
+    </item>
+    <item>
+      <title>Rapport d'audit sur l'aide ménagère</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>La Rekenkamer a enquêté sur les services d'aide ménagère à Utrecht. Le rapport 'Stof tot nadenken' contient sept recommandations pour améliorer les services. Le conseil est invité à demander à l'exécutif municipal de mettre en œuvre ces recommandations.</description>
+      <guid isPermaLink="false">7926175</guid>
     </item>
   </channel>
 </rss>

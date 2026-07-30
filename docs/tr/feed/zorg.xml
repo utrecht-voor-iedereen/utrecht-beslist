@@ -6,10 +6,16 @@
     <description>Utrecht belediye meclisi kararları ve belgeleri sade bir dille açıklanmaktadır.</description>
     <language>tr</language>
     <item>
-      <title>Social Support Regulation</title>
-      <link></link>
-      <description>The city council is establishing a new regulation for social support in Utrecht.</description>
+      <title>Wmo Verordening 2027'yi kabul et</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
+      <description>Belediye meclisi, yeni Verordening maatschappelijke ondersteuning 2027 hakkında karar veriyor. Kurallar sakinler ve profesyoneller için daha net ve erişilebilir hale geliyor. Net kriterler ve kendi katkısı için yeni kurallar getiriliyor.</description>
       <guid isPermaLink="false">7926189</guid>
+    </item>
+    <item>
+      <title>Ev yardımı denetim raporu</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>Rekenkamer, Utrecht'teki ev yardımı hizmetlerini araştırdı. 'Stof tot nadenken' raporu, hizmetleri iyileştirmek için yedi öneri içeriyor. Meclisten belediye yönetimine bu önerileri uygulaması isteniyor.</description>
+      <guid isPermaLink="false">7926175</guid>
     </item>
   </channel>
 </rss>

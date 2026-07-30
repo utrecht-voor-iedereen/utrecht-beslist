@@ -6,10 +6,16 @@
     <description>Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).</description>
     <language>nl</language>
     <item>
-      <title>Verordening maatschappelijke ondersteuning</title>
-      <link></link>
-      <description>De gemeenteraad stelt een nieuwe verordening vast voor maatschappelijke ondersteuning in Utrecht.</description>
+      <title>Wmo-verordening 2027 vaststellen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
+      <description>De raad beslist over de nieuwe Verordening maatschappelijke ondersteuning 2027. De regels worden duidelijker en toegankelijker voor inwoners en professionals. Er komen heldere criteria en nieuwe regels voor de eigen bijdrage.</description>
       <guid isPermaLink="false">7926189</guid>
+    </item>
+    <item>
+      <title>Rekenkamerrapport huishoudelijke hulp</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>De Rekenkamer deed onderzoek naar huishoudelijke hulp in Utrecht. Het rapport 'Stof tot nadenken' bevat zeven aanbevelingen om de dienstverlening te verbeteren. De raad wordt verzocht het college te vragen deze aanbevelingen uit te voeren.</description>
+      <guid isPermaLink="false">7926175</guid>
     </item>
   </channel>
 </rss>

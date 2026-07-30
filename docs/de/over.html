@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="../de/index.html" class="nav-link">Übersicht</a>
         <a href="../de/over.html" class="nav-link">Über uns &amp; Transparenz</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Zwischen dunklem und hellem Modus wechseln">🌙 Dunkel</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Sprache wählen" onchange="window.location.href=this.value;">
               
                 <option value="../nl/index.html" >
                   NL — Nederlands
@@ -162,17 +162,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Haftungsausschluss &amp; Daten</h3>
         <p>Automatisch mit KI auf Basis offener Daten von Open Raadsinformatie zusammengefasst. Keine Rechtsberatung — konsultieren Sie stets das offizielle Ratsdokument.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Lizenz: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Bürgerinitiative · 100% Statisch &amp; Kostenlos</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link in die Zwischenablage kopiert!", "lang": "de", "postal_badge": "\ud83d\udccd PLZ {code} \u2192 Stadtteil {wijk}", "results_many": "Beschl\u00fcsse", "results_one": "Beschluss", "speech": "de-DE", "theme_to_dark": "\ud83c\udf19 Dunkel", "theme_to_light": "\u2600\ufe0f Hell", "tts_unsupported": "Vorlesen wird von diesem Browser nicht unterst\u00fctzt."}</script>
   <script src="../static/js/app.js"></script>
 </body>
 </html>

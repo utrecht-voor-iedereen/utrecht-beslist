@@ -6,22 +6,10 @@
     <description>Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).</description>
     <language>nl</language>
     <item>
-      <title>Meerjaren Perspectief Ruimte</title>
+      <title>Jaarstukken 2025</title>
       <link></link>
-      <description>Dit raadsvoorstel gaat over de meerjaren perspectief ruimte voor 2026. Het heeft betrekking op de ruimtelijke ontwikkeling van de gemeente.</description>
-      <guid isPermaLink="false">7961870</guid>
-    </item>
-    <item>
-      <title>Voorjaarsnota 2026</title>
-      <link></link>
-      <description>Dit raadsvoorstel gaat over de voorjaarsnota voor 2026. Het heeft betrekking op de financiële ontwikkeling van de gemeente.</description>
-      <guid isPermaLink="false">7961871</guid>
-    </item>
-    <item>
-      <title>Eerste bestuursrapportage 2026</title>
-      <link></link>
-      <description>Dit raadsvoorstel gaat over de eerste bestuursrapportage voor 2026. Het heeft betrekking op de bestuurlijke ontwikkeling van de gemeente.</description>
-      <guid isPermaLink="false">7961872</guid>
+      <description>Dit raadsvoorstel gaat over de jaarstukken voor 2025. Het heeft betrekking op de financiële verslagen van de gemeente.</description>
+      <guid isPermaLink="false">7961874</guid>
     </item>
     <item>
       <title>Resultaatbestemming 2025</title>
@@ -30,10 +18,28 @@
       <guid isPermaLink="false">7961873</guid>
     </item>
     <item>
-      <title>Jaarstukken 2025</title>
+      <title>Eerste bestuursrapportage 2026</title>
       <link></link>
-      <description>Dit raadsvoorstel gaat over de jaarstukken voor 2025. Het heeft betrekking op de financiële verslagen van de gemeente.</description>
-      <guid isPermaLink="false">7961874</guid>
+      <description>Dit raadsvoorstel gaat over de eerste bestuursrapportage voor 2026. Het heeft betrekking op de bestuurlijke ontwikkeling van de gemeente.</description>
+      <guid isPermaLink="false">7961872</guid>
+    </item>
+    <item>
+      <title>Voorjaarsnota 2026</title>
+      <link></link>
+      <description>Dit raadsvoorstel gaat over de voorjaarsnota voor 2026. Het heeft betrekking op de financiële ontwikkeling van de gemeente.</description>
+      <guid isPermaLink="false">7961871</guid>
+    </item>
+    <item>
+      <title>Meerjaren Perspectief Ruimte</title>
+      <link></link>
+      <description>Dit raadsvoorstel gaat over de meerjaren perspectief ruimte voor 2026. Het heeft betrekking op de ruimtelijke ontwikkeling van de gemeente.</description>
+      <guid isPermaLink="false">7961870</guid>
+    </item>
+    <item>
+      <title>Voorjaarsnota 2026 vaststellen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>De raad beslist over het vaststellen van de beleidsarme Voorjaarsnota 2026. Het document geeft een actueel financieel beeld met onvermijdelijke ontwikkelingen en knelpunten. Het bevat geen beleidskeuzes omdat het is opgesteld vóór de verkiezingen.</description>
+      <guid isPermaLink="false">7947071</guid>
     </item>
     <item>
       <title>Ontheffing woonplaatsvereiste</title>
@@ -42,10 +48,10 @@
       <guid isPermaLink="false">7947062</guid>
     </item>
     <item>
-      <title>Voorjaarsnota 2026</title>
+      <title>Ontheffing woonplaatsvereiste</title>
       <link></link>
-      <description>De Voorjaarsnota 2026 is een financieel overzicht van de gemeente Utrecht.</description>
-      <guid isPermaLink="false">7947071</guid>
+      <description>De gemeenteraad bespreekt het voorstel om de woonplaatsvereiste voor wethouderschap te laten vallen.</description>
+      <guid isPermaLink="false">7947093</guid>
     </item>
     <item>
       <title>Benoeming Wethouders</title>
@@ -54,34 +60,22 @@
       <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
-      <title>Ontheffing woonplaatsvereiste</title>
-      <link></link>
-      <description>De gemeenteraad bespreekt het voorstel om de woonplaatsvereiste voor wethouderschap te laten vallen.</description>
-      <guid isPermaLink="false">7947093</guid>
-    </item>
-    <item>
-      <title>Rekenkamerrapport</title>
-      <link></link>
-      <description>De gemeenteraad bespreekt het Rekenkamerrapport 'Stof tot nadenken'. Het rapport bevat aanbevelingen voor verbetering van de gemeentelijke dienstverlening.</description>
-      <guid isPermaLink="false">7926175</guid>
-    </item>
-    <item>
-      <title>Verordening maatschappelijke ondersteuning</title>
-      <link></link>
-      <description>De gemeenteraad stelt een nieuwe verordening vast voor maatschappelijke ondersteuning in Utrecht.</description>
-      <guid isPermaLink="false">7926189</guid>
-    </item>
-    <item>
-      <title>Wijziging Verordening re-integratie</title>
-      <link></link>
-      <description>De gemeenteraad stelt een wijziging voor van de Verordening re-integratie en tegenprestatie Participatiewet.</description>
+      <title>Wijziging verordening Participatiewet en re-integratie</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>De Gemeenteraad past de Verordening re-integratie en tegenprestatie Participatiewet aan. Hierdoor krijgen jongeren tot 27 jaar betere begeleiding van school naar werk en komt er een nieuw Ontwikkeltraject.</description>
       <guid isPermaLink="false">7926270</guid>
     </item>
     <item>
-      <title>Wijziging Gemeenschappelijke Regeling BghU</title>
-      <link></link>
-      <description>De gemeenteraad stelt een wijziging voor van de Gemeenschappelijke Regeling BghU.</description>
-      <guid isPermaLink="false">7926182</guid>
+      <title>Wmo-verordening 2027 vaststellen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
+      <description>De raad beslist over de nieuwe Verordening maatschappelijke ondersteuning 2027. De regels worden duidelijker en toegankelijker voor inwoners en professionals. Er komen heldere criteria en nieuwe regels voor de eigen bijdrage.</description>
+      <guid isPermaLink="false">7926189</guid>
+    </item>
+    <item>
+      <title>Rekenkamerrapport huishoudelijke hulp</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>De Rekenkamer deed onderzoek naar huishoudelijke hulp in Utrecht. Het rapport 'Stof tot nadenken' bevat zeven aanbevelingen om de dienstverlening te verbeteren. De raad wordt verzocht het college te vragen deze aanbevelingen uit te voeren.</description>
+      <guid isPermaLink="false">7926175</guid>
     </item>
     <item>
       <title>Wijziging Algemene Plaatselijke Verordening</title>
@@ -90,40 +84,34 @@
       <guid isPermaLink="false">7926192</guid>
     </item>
     <item>
-      <title>TAM-omgevingsplan Jan van Galenstraat</title>
-      <link></link>
-      <description>Het college stelt voor om het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan vast te stellen. Dit plan heeft betrekking op de ontwikkeling van de openbare ruimte.</description>
-      <guid isPermaLink="false">7926168</guid>
+      <title>Wijziging bestuursstructuur Belastingsamenwerking BghU</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
+      <description>Het college vraagt de Gemeenteraad toestemming voor het wijzigen van de Gemeenschappelijke Regeling BghU. Hiermee verandert BghU van een bedrijfsvoeringsorganisatie in een openbaar lichaam met een Algemeen en Dagelijks Bestuur.</description>
+      <guid isPermaLink="false">7926182</guid>
     </item>
     <item>
-      <title>Aanpassing Huisvestingsverordening</title>
-      <link></link>
-      <description>Het college stelt voor om de Huisvestingsverordening aan te passen. Deze aanpassing heeft betrekking op de inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen.</description>
-      <guid isPermaLink="false">7926267</guid>
-    </item>
-    <item>
-      <title>Ontwerp Specifieke Verklaring van Geen Bedenkingen</title>
-      <link></link>
-      <description>Het college stelt voor om een ontwerp Specifieke Verklaring van Geen Bedenkingen voor de Isotopenweg 29 vast te stellen.</description>
-      <guid isPermaLink="false">7926272</guid>
-    </item>
-    <item>
-      <title>Wijziging omgevingsplan</title>
-      <link></link>
-      <description>Het college stelt voor om het omgevingsplan voor de Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt en Tuinwijk te wijzigen.</description>
+      <title>Omzetting omgevingsplan Pijlsweerd, Lauwerecht, Vogelenbuurt en Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>De raad stelt de tweede wijziging van het omgevingsplan Utrecht vast. Hiermee worden tien bestemmingsplannen in Noordwest en Noordoost omgezet naar het definitieve omgevingsplan en worden regels over bodemfunctieklassen en archeologie toegevoegd.</description>
       <guid isPermaLink="false">7926275</guid>
     </item>
     <item>
-      <title>Ontwerp Specifieke Verklaring van Geen Bedenkingen</title>
-      <link></link>
-      <description>Het college stelt voor om een ontwerp Specifieke Verklaring van Geen Bedenkingen voor de Isotopenweg 29 vast te stellen.</description>
-      <guid isPermaLink="false">7944277</guid>
+      <title>Verklaring van geen bedenkingen uitbreiding Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>Het college stelt de raad voor een specifieke verklaring van geen bedenkingen af te geven voor Theo Pouw aan de Isotopenweg 29. Dit maakt het mogelijk dat de provincie Utrecht een vergunning verleent voor twee nieuwe afvalverwerkingsactiviteiten.</description>
+      <guid isPermaLink="false">7926272</guid>
     </item>
     <item>
-      <title>Aanpassing Huisvestingsverordening</title>
-      <link></link>
-      <description>De gemeente Utrecht wil de Huisvestingsverordening aanpassen. Dit betekent dat mensen die tijdelijk in een woning wonen, langer de tijd krijgen om een nieuwe woning te vinden.</description>
-      <guid isPermaLink="false">7944278</guid>
+      <title>Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.</description>
+      <guid isPermaLink="false">7926267</guid>
+    </item>
+    <item>
+      <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
+      <guid isPermaLink="false">7926168</guid>
     </item>
     <item>
       <title>Aanpassing Huisvestingsverordening</title>
@@ -132,58 +120,64 @@
       <guid isPermaLink="false">7944279</guid>
     </item>
     <item>
-      <title>Meerjaren Perspectief Ruimte 2026</title>
+      <title>Aanpassing Huisvestingsverordening</title>
       <link></link>
-      <description>Het college van B en W stelt de raad voor om het Meerjaren Perspectief Ruimte 2026 vast te stellen. Dit perspectief geeft aan hoe de gemeente Utrecht de komende jaren omgaat met ruimte.</description>
-      <guid isPermaLink="false">7912169</guid>
+      <description>De gemeente Utrecht wil de Huisvestingsverordening aanpassen. Dit betekent dat mensen die tijdelijk in een woning wonen, langer de tijd krijgen om een nieuwe woning te vinden.</description>
+      <guid isPermaLink="false">7944278</guid>
     </item>
     <item>
-      <title>Wijziging Gemeenschappelijke Regeling BghU</title>
+      <title>Ontwerp Specifieke Verklaring van Geen Bedenkingen</title>
       <link></link>
-      <description>Het college van B en W stelt de raad voor om toestemming te geven voor een wijziging van de Gemeenschappelijke Regeling BghU.</description>
-      <guid isPermaLink="false">7912171</guid>
+      <description>Het college stelt voor om een ontwerp Specifieke Verklaring van Geen Bedenkingen voor de Isotopenweg 29 vast te stellen.</description>
+      <guid isPermaLink="false">7944277</guid>
     </item>
     <item>
-      <title>TAM-omgevingsplan Jan van Galenstraat</title>
-      <link></link>
-      <description>Het college van B en W stelt de raad voor om het TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan vast te stellen.</description>
+      <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
-      <title>Raadsvoorstellen weekoverzicht</title>
-      <link></link>
-      <description>Overzicht van de raadsvoorstellen van de afgelopen week.</description>
-      <guid isPermaLink="false">7912164</guid>
+      <title>Wijziging bestuursstructuur Belastingsamenwerking BghU</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
+      <description>Het college vraagt de Gemeenteraad toestemming voor het wijzigen van de Gemeenschappelijke Regeling BghU. Hiermee verandert BghU van een bedrijfsvoeringsorganisatie in een openbaar lichaam met een Algemeen en Dagelijks Bestuur.</description>
+      <guid isPermaLink="false">7912171</guid>
     </item>
     <item>
-      <title>Jaarstukken 2025</title>
-      <link></link>
-      <description>De jaarstukken van 2025 zijn beschikbaar.</description>
-      <guid isPermaLink="false">7912165</guid>
+      <title>Meerjarenperspectief Ruimte 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Het college presenteert het Meerjarenperspectief Ruimte 2026 met de stand van zaken van de ruimtelijke investeringen. Het omvat budgetten voor betaalbaar wonen, bereikbaarheid, groen en voorbereidingskredieten voor herontwikkelingsprojecten.</description>
+      <guid isPermaLink="false">7912169</guid>
     </item>
     <item>
       <title>Eerste bestuursrapportage 2026</title>
-      <link></link>
-      <description>De eerste bestuursrapportage van 2026 is beschikbaar.</description>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>De Eerste bestuursrapportage 2026 informeert de raad over de voortgang van de programmabegroting. Er worden verhogingen van investeringskredieten met 26,2 miljoen euro en hervormingen in het sociaal domein voorgesteld.</description>
       <guid isPermaLink="false">7912167</guid>
     </item>
     <item>
       <title>Jaarstukken 2025</title>
-      <link></link>
-      <description>Het college van B en W stelt de raad voor om de Jaarstukken 2025 vast te stellen.</description>
-      <guid isPermaLink="false">7903396</guid>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>Het college legt met de Jaarstukken 2025 verantwoording af over het gevoerde beleid en de gemeentelijke financiën. Het jaar sluit af met een positief resultaat van 54,6 miljoen euro dat wordt toegevoegd aan de algemene dekkingsreserve.</description>
+      <guid isPermaLink="false">7912165</guid>
+    </item>
+    <item>
+      <title>Beantwoording raadsvraag en errata financiële stukken</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
+      <description>Het college stuurt de antwoorden op schriftelijke vragen over de Jaarstukken 2025 en bestuursrapportages, inclusief errata. Tevens bevat de brief een oproep van de G4-steden over dierenwelzijn en dierenartskosten.</description>
+      <guid isPermaLink="false">7903412</guid>
     </item>
     <item>
       <title>Resultaatbestemming 2025</title>
-      <link></link>
-      <description>Het college van B en W stelt de raad voor om de resultaatbestemming 2025 vast te stellen.</description>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
+      <description>Het college stelt voor om 20,5 miljoen euro aan resterende incidentele budgetten uit de Jaarstukken 2025 over te hevelen naar 2026 om lopende projecten en programma's af te ronden.</description>
       <guid isPermaLink="false">7903410</guid>
     </item>
     <item>
-      <title>Beantwoording schriftelijke raadsvragen</title>
-      <link></link>
-      <description>De gemeente Utrecht beantwoordt schriftelijke raadsvragen.</description>
-      <guid isPermaLink="false">7903412</guid>
+      <title>Jaarstukken 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>Het college legt met de Jaarstukken 2025 verantwoording af over het gevoerde beleid en de gemeentelijke financiën. Het jaar sluit af met een positief resultaat van 54,6 miljoen euro dat wordt toegevoegd aan de algemene dekkingsreserve.</description>
+      <guid isPermaLink="false">7903396</guid>
     </item>
   </channel>
 </rss>

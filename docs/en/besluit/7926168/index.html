@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TAM Environmental Plan Jan van Galenstraat — Utrecht Beslist</title>
+  <title>Environmental plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan — Utrecht Beslist</title>
   <meta name="description" content="Utrecht city council decisions and documents explained in plain language.">
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="../../../en/index.html" class="nav-link">Overview</a>
         <a href="../../../en/over.html" class="nav-link">About &amp; Transparency</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle dark and light mode">🌙 Dark</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Select language" onchange="window.location.href=this.value;">
               
                 <option value="../../../nl/index.html" >
                   NL — Nederlands
@@ -118,17 +118,20 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        ⏳ Under review
+        ⏳ On the agenda
       </span>
 
       
-        <span class="badge-impact impact-laag">Low Impact</span>
+        <span class="badge-impact impact-gemiddeld">Medium Impact</span>
       
     </div>
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('The public space in Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan will be developed.. The college proposes to adopt the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan, which concerns the development of public space.', 'en')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="There will be 102 new rental homes, an 850 m² neighborhood supermarket, retail space, and 15 new trees in the area. The Gemeenteraad is deciding on the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan. This enables the construction of 102 rental homes, a supermarket, retail units, and an underground parking garage.">
         🔊 Listen Audio
       </button>
 
@@ -137,76 +140,71 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 2026-06-25
+        📅 Discussed on <time datetime="2026-06-25">25 June 2026</time>
       </span>
     </div>
   </div>
 
   <!-- Document Title -->
   <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    TAM Environmental Plan Jan van Galenstraat
+    Environmental plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 The public space in Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan will be developed.
+    💡 There will be 102 new rental homes, an 850 m² neighborhood supermarket, retail space, and 15 new trees in the area.
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 🎯 Background &amp; Context
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        The college wants to develop the public space in Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 💡 Plain Language Summary (B1)
+        💡 Plain Language Summary (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        The college proposes to adopt the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan, which concerns the development of public space.
+        The Gemeenteraad is deciding on the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan. This enables the construction of 102 rental homes, a supermarket, retail units, and an underground parking garage.
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">The adoption of the TAM environmental plan.</li>
-        <li class="bullet-item">Residents and visitors of Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan.</li>
-        <li class="bullet-item">No extra cost.</li>
+        <li class="bullet-item">📌 Adoption of the TAM environmental plan for 102 rental homes, supermarket, shops, and parking garage.</li>
+        <li class="bullet-item">👥 Local residents of Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan, as well as house hunters.</li>
+        <li class="bullet-item">💶 The document states no specific financial amounts.</li>
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ 🏘️ Consequences &amp; City Changes
+        🎯 Background &amp; Context
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        The public space will be developed.
+        The plan follows the Stedenbouwkundig Programma van Eisen adopted in December 2024 and incorporates 11 submitted views.
       </p>
     </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Consequences &amp; City Changes
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        Redevelopment with 40 social rental homes, 34 middle-rent homes, 28 free sector rental homes, 50 parking spots, and 15 new trees.
+      </p>
+    </section>
+    
 
     <!-- Section 4: Budget & Timeline -->
-    <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
-      <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
-        💶 Budget &amp; Timeline
-      </h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
-        <div>
-          <strong>Budget/Cost:</strong>
-          <span>No extra cost</span>
-        </div>
-        <div>
-          <strong>Timeline:</strong>
-          <span>2026</span>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -214,7 +212,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Housing &amp; Living</span>
       
       
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Binnenstad</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 City-wide</span>
       
     </div>
   </div>
@@ -222,32 +220,67 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ ⚖️ Woo Freedom of Information Rights
+      🏛️ Source &amp; Woo rights
     </h3>
+
     
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
+        <a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 Original PDF Document ➔
+        </a>
       
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ View in Utrecht Council Portal 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="https://id.openraadsinformatie.nl/7926168" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 ORI record for this document 🔗
       </a>
     </div>
+
+    
+    
+      <details style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          Underlying documents (8)
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174" target="_blank" rel="noopener">Raadsvoorstel TAM-omgevingsplan Jan van Galenstraat</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=e2b85413-715c-40d2-b180-97647f87f0de" target="_blank" rel="noopener">TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan_Motivering wijzigingsbesluit</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=971a6d2c-4a80-49d5-a22c-13f7d809457a" target="_blank" rel="noopener">Vaststellingsrapport Omgevingplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f8fba17c-7644-4ad2-99b9-cd93b89049d7" target="_blank" rel="noopener">TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan_Regels</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=5dadf7c5-54dc-4184-96e9-e054049b0559" target="_blank" rel="noopener">TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan_Verbeelding</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=62fced8b-7de7-436d-9a08-bcdb23c40cbf" target="_blank" rel="noopener">Link naar RO publiceer definitief TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=358cf656-6e62-4441-8cb3-db35fd96d3eb" target="_blank" rel="noopener">TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan_Bijlagen motivering</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=aa45584e-d545-440b-a674-6328f9a59103" target="_blank" rel="noopener">Dossier 5185 voorblad.pdf</a></li>
+          
+        </ul>
+      </details>
+    
   </div>
 
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 AI Transparency: Groq (llama-3.3-70b-versatile)</span>
+      <span>🤖 AI Transparency: External model (manual hand-off)</span>
       <span style="margin-left: 0.75rem;">📦 Permanently archived (Archives Act 1995)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Woo Freedom of Information Rights</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('TAM Environmental Plan Jan van Galenstraat', window.location.href)">🔗 Share</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207926168" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="Environmental plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan">🔗 Share</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%207926168%20(en)" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ Report error
       </a>
     </div>
@@ -284,17 +317,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Disclaimers &amp; Data</h3>
         <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Licence: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Civic Project · 100% Static &amp; Free</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link copied to clipboard!", "lang": "en", "postal_badge": "\ud83d\udccd Postcode {code} \u2192 district {wijk}", "results_many": "decisions", "results_one": "decision", "speech": "en-GB", "theme_to_dark": "\ud83c\udf19 Dark", "theme_to_light": "\u2600\ufe0f Light", "tts_unsupported": "Read-aloud is not supported by this browser."}</script>
   <script src="../../../static/js/app.js"></script>
 </body>
 </html>

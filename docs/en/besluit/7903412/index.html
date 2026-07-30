@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Answer to Written Council Questions — Utrecht Beslist</title>
+  <title>Answers to council questions and financial document errata — Utrecht Beslist</title>
   <meta name="description" content="Utrecht city council decisions and documents explained in plain language.">
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="../../../en/index.html" class="nav-link">Overview</a>
         <a href="../../../en/over.html" class="nav-link">About &amp; Transparency</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle dark and light mode">🌙 Dark</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Select language" onchange="window.location.href=this.value;">
               
                 <option value="../../../nl/index.html" >
                   NL — Nederlands
@@ -118,7 +118,7 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        ℹ️ Informational
+        ⏳ On the agenda
       </span>
 
       
@@ -128,7 +128,10 @@
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('Residents get answers to their questions.. The city of Utrecht answers written council questions.', 'en')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="Errata in financial reports are corrected without altering the financial outcome. The college sends responses to written questions regarding the Annual Accounts 2025 and management reports, including errata. The letter also contains a call from G4 cities regarding animal welfare and vet costs.">
         🔊 Listen Audio
       </button>
 
@@ -137,76 +140,86 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 2026-06-18
+        📅 Discussed on <time datetime="2026-06-18">18 June 2026</time>
       </span>
     </div>
   </div>
 
   <!-- Document Title -->
   <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    Answer to Written Council Questions
+    Answers to council questions and financial document errata
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 Residents get answers to their questions.
+    💡 Errata in financial reports are corrected without altering the financial outcome.
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 🎯 Background &amp; Context
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        The city of Utrecht wants to be transparent about its activities.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 💡 Plain Language Summary (B1)
+        💡 Plain Language Summary (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        The city of Utrecht answers written council questions.
+        The college sends responses to written questions regarding the Annual Accounts 2025 and management reports, including errata. The letter also contains a call from G4 cities regarding animal welfare and vet costs.
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">Answer to written council questions</li>
-        <li class="bullet-item">Residents of Utrecht</li>
-        <li class="bullet-item">None</li>
+        <li class="bullet-item">📌 Submission of answers to council questions, financial document errata, and G4 letter on animal welfare.</li>
+        <li class="bullet-item">👥 The Gemeenteraad of Utrecht, Ministry of Agriculture, and pet owners.</li>
+        <li class="bullet-item">💶 The errata corrections have no financial consequences for the result.</li>
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ 🏘️ Consequences &amp; City Changes
+        🎯 Background &amp; Context
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        Residents are better informed about the municipality&#39;s activities.
+        Written questions from council members on budget documents sometimes prompt clarifications and textual errata.
       </p>
     </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Consequences &amp; City Changes
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        The council receives corrected information and cities advocate for national measures on lower vet costs.
+      </p>
+    </section>
+    
 
     <!-- Section 4: Budget & Timeline -->
+    
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         💶 Budget &amp; Timeline
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
-        <div>
-          <strong>Budget/Cost:</strong>
-          <span>None</span>
-        </div>
+        
+        
         <div>
           <strong>Timeline:</strong>
-          <span>Expected year: 2026</span>
+          <span>10 February 2025</span>
         </div>
+        
       </div>
     </section>
+    
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -214,7 +227,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Governance &amp; Finance</span>
       
       
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Overig</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 City-wide</span>
       
     </div>
   </div>
@@ -222,32 +235,67 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ ⚖️ Woo Freedom of Information Rights
+      🏛️ Source &amp; Woo rights
     </h3>
+
     
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
+        <a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 Original PDF Document ➔
+        </a>
       
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ View in Utrecht Council Portal 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="https://id.openraadsinformatie.nl/7903412" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 ORI record for this document 🔗
       </a>
     </div>
+
+    
+    
+      <details style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          Underlying documents (8)
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6" target="_blank" rel="noopener">Raadsbrief Beantwoording schriftelijke raadsvragen en errata Jaarstukken 2025, Voorjaarsnota 2026 en Eerste bestuursrapportage 2026</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=23fb983c-14b3-41ae-9a0f-4d09dad82f83" target="_blank" rel="noopener">Bijlage bij antwoord SV 196 G4-brief voorstellen versterken dierenwelzijn (februari 2025)</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=06cd43c8-09f0-4997-903a-e5a27530463a" target="_blank" rel="noopener">Beantwoording Schriftelijke raadsvragen Jaarstukken 2025, Voorjaarsnota 2026 en Eerste bestuursrapportage 2026</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f71ed694-7e94-4014-9aca-00370552c6c2" target="_blank" rel="noopener">Erratum Jaarstukken 2025</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f6178880-5c61-408b-a070-25af8ea90400" target="_blank" rel="noopener">Beantwoording nagekomen schriftelijke raadsvragen Voorjaarsnota 2026</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2571a7b3-c04b-4029-a50f-255d22ee7ab1" target="_blank" rel="noopener">Erratum Eerste bestuursrapportage 2026 en Meerjaren Perspectief Ruimte 2026</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=937f4f5b-cc6a-4f86-982e-0ad8c6b50bc6" target="_blank" rel="noopener">Bijlage bij antwoord 277 Besluiten verlening subsidie_geanonimiseerd</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=824fac75-8656-4728-8cfd-97aa48209ffc" target="_blank" rel="noopener">Bijlage bij antwoord 280 Cijfers Initiatievenfonds 2025 op buurtniveau</a></li>
+          
+        </ul>
+      </details>
+    
   </div>
 
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 AI Transparency: Groq (llama-3.3-70b-versatile)</span>
+      <span>🤖 AI Transparency: External model (manual hand-off)</span>
       <span style="margin-left: 0.75rem;">📦 Permanently archived (Archives Act 1995)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Woo Freedom of Information Rights</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('Answer to Written Council Questions', window.location.href)">🔗 Share</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207903412" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="Answers to council questions and financial document errata">🔗 Share</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%207903412%20(en)" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ Report error
       </a>
     </div>
@@ -284,17 +332,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Disclaimers &amp; Data</h3>
         <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Licence: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Civic Project · 100% Static &amp; Free</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link copied to clipboard!", "lang": "en", "postal_badge": "\ud83d\udccd Postcode {code} \u2192 district {wijk}", "results_many": "decisions", "results_one": "decision", "speech": "en-GB", "theme_to_dark": "\ud83c\udf19 Dark", "theme_to_light": "\u2600\ufe0f Light", "tts_unsupported": "Read-aloud is not supported by this browser."}</script>
   <script src="../../../static/js/app.js"></script>
 </body>
 </html>

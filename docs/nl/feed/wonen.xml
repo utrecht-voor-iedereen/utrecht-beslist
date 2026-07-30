@@ -6,28 +6,22 @@
     <description>Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).</description>
     <language>nl</language>
     <item>
-      <title>TAM-omgevingsplan Jan van Galenstraat</title>
-      <link></link>
-      <description>Het college stelt voor om het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan vast te stellen. Dit plan heeft betrekking op de ontwikkeling van de openbare ruimte.</description>
-      <guid isPermaLink="false">7926168</guid>
-    </item>
-    <item>
-      <title>Aanpassing Huisvestingsverordening</title>
-      <link></link>
-      <description>Het college stelt voor om de Huisvestingsverordening aan te passen. Deze aanpassing heeft betrekking op de inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen.</description>
-      <guid isPermaLink="false">7926267</guid>
-    </item>
-    <item>
-      <title>Wijziging omgevingsplan</title>
-      <link></link>
-      <description>Het college stelt voor om het omgevingsplan voor de Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt en Tuinwijk te wijzigen.</description>
+      <title>Omzetting omgevingsplan Pijlsweerd, Lauwerecht, Vogelenbuurt en Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>De raad stelt de tweede wijziging van het omgevingsplan Utrecht vast. Hiermee worden tien bestemmingsplannen in Noordwest en Noordoost omgezet naar het definitieve omgevingsplan en worden regels over bodemfunctieklassen en archeologie toegevoegd.</description>
       <guid isPermaLink="false">7926275</guid>
     </item>
     <item>
-      <title>Aanpassing Huisvestingsverordening</title>
-      <link></link>
-      <description>De gemeente Utrecht wil de Huisvestingsverordening aanpassen. Dit betekent dat mensen die tijdelijk in een woning wonen, langer de tijd krijgen om een nieuwe woning te vinden.</description>
-      <guid isPermaLink="false">7944278</guid>
+      <title>Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.</description>
+      <guid isPermaLink="false">7926267</guid>
+    </item>
+    <item>
+      <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
+      <guid isPermaLink="false">7926168</guid>
     </item>
     <item>
       <title>Aanpassing Huisvestingsverordening</title>
@@ -36,16 +30,22 @@
       <guid isPermaLink="false">7944279</guid>
     </item>
     <item>
-      <title>Meerjaren Perspectief Ruimte 2026</title>
+      <title>Aanpassing Huisvestingsverordening</title>
       <link></link>
-      <description>Het college van B en W stelt de raad voor om het Meerjaren Perspectief Ruimte 2026 vast te stellen. Dit perspectief geeft aan hoe de gemeente Utrecht de komende jaren omgaat met ruimte.</description>
-      <guid isPermaLink="false">7912169</guid>
+      <description>De gemeente Utrecht wil de Huisvestingsverordening aanpassen. Dit betekent dat mensen die tijdelijk in een woning wonen, langer de tijd krijgen om een nieuwe woning te vinden.</description>
+      <guid isPermaLink="false">7944278</guid>
     </item>
     <item>
-      <title>TAM-omgevingsplan Jan van Galenstraat</title>
-      <link></link>
-      <description>Het college van B en W stelt de raad voor om het TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan vast te stellen.</description>
+      <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
       <guid isPermaLink="false">7912175</guid>
+    </item>
+    <item>
+      <title>Meerjarenperspectief Ruimte 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Het college presenteert het Meerjarenperspectief Ruimte 2026 met de stand van zaken van de ruimtelijke investeringen. Het omvat budgetten voor betaalbaar wonen, bereikbaarheid, groen en voorbereidingskredieten voor herontwikkelingsprojecten.</description>
+      <guid isPermaLink="false">7912169</guid>
     </item>
   </channel>
 </rss>

@@ -6,46 +6,46 @@
     <description>Décisions et documents du conseil municipal d'Utrecht expliqués en langage simple.</description>
     <language>fr</language>
     <item>
-      <title>TAM Environmental Plan Jan van Galenstraat</title>
-      <link></link>
-      <description>The college proposes to adopt the TAM environmental plan for Jan van Galenstraat, Huizingalaan, and Van Ginnekenlaan, which concerns the development of public space.</description>
-      <guid isPermaLink="false">7926168</guid>
-    </item>
-    <item>
-      <title>Adjustment Housing Ordinance</title>
-      <link></link>
-      <description>The college proposes to adjust the Housing Ordinance. This adjustment concerns the extension of the registration period for flow-through after temporary attention groups.</description>
-      <guid isPermaLink="false">7926267</guid>
-    </item>
-    <item>
-      <title>Change Environmental Plan</title>
-      <link></link>
-      <description>The college proposes to change the environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk.</description>
+      <title>Mise à jour du plan environnemental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>Le conseil adopte la deuxième modification du plan environnemental d'Utrecht. Cela convertit dix plans d'urbanisme de Noordwest et Noordoost en plan environnemental définitif et ajoute des règles sur la qualité des sols et l'archéologie.</description>
       <guid isPermaLink="false">7926275</guid>
     </item>
     <item>
-      <title>Adjustment Housing Ordinance</title>
-      <link></link>
-      <description>The city of Utrecht wants to adjust the Housing Ordinance. This means that people who live temporarily in a house will have more time to find a new home.</description>
-      <guid isPermaLink="false">7944278</guid>
+      <title>Ajustement de la prolongation de la durée d'inscription pour les groupes prioritaires</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>Le college adapte le cadre de l'expérimentation de logement flexible pour les résidents de Place2BU et Goeie Buur. La prolongation de la durée d'inscription sera désormais fixée de manière variable selon les données d'attribution pour permitir el acceso a un nuevo hogar.</description>
+      <guid isPermaLink="false">7926267</guid>
     </item>
     <item>
-      <title>Adjustment Housing Ordinance</title>
+      <title>Plan environnemental Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>Le Gemeenteraad se prononce sur le plan environnemental TAM pour Jan van Galenstraat, Huizingalaan et Van Ginnekenlaan. Cela permet la construction de 102 logements locatifs, un supermarché, des commerces et un garage souterrain.</description>
+      <guid isPermaLink="false">7926168</guid>
+    </item>
+    <item>
+      <title>Ajustement de l'ordonnance sur le logement</title>
       <link></link>
-      <description>The city of Utrecht wants to adjust the Housing Ordinance. This is related to the registration period for progression after temporary attention groups.</description>
+      <description>La ville d'Utrecht veut ajuster l'ordonnance sur le logement. Cela concerne la durée d'inscription pour la progression après les groupes temporaires de personnes à attention particulière.</description>
       <guid isPermaLink="false">7944279</guid>
     </item>
     <item>
-      <title>Multi-Year Spatial Perspective 2026</title>
+      <title>Ajustement de l'Ordonnance sur l'habitation</title>
       <link></link>
-      <description>The college of B and W proposes to the council to adopt the Multi-Year Spatial Perspective 2026. This perspective outlines how the municipality of Utrecht will deal with space in the coming years.</description>
-      <guid isPermaLink="false">7912169</guid>
+      <description>La ville d'Utrecht veut ajuster l'Ordonnance sur l'habitation. Cela signifie que les personnes qui vivent temporairement dans une maison auront plus de temps pour trouver un nouveau logement.</description>
+      <guid isPermaLink="false">7944278</guid>
     </item>
     <item>
-      <title>TAM Environmental Plan Jan van Galenstraat</title>
-      <link></link>
-      <description>The college of B and W proposes to the council to adopt the TAM Environmental Plan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan.</description>
+      <title>Plan environnemental Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>Le Gemeenteraad se prononce sur le plan environnemental TAM pour Jan van Galenstraat, Huizingalaan et Van Ginnekenlaan. Cela permet la construction de 102 logements locatifs, un supermarché, des commerces et un garage souterrain.</description>
       <guid isPermaLink="false">7912175</guid>
+    </item>
+    <item>
+      <title>Perspective spatiale pluriannuelle 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Le college présente la Perspective spatiale pluriannuelle 2026 détaillant les investissements spatiaux. Elle comprend des budgets pour le logement abordable, l'accessibilité, les espaces verts et des crédits de préparation pour la réaménagement.</description>
+      <guid isPermaLink="false">7912169</guid>
     </item>
   </channel>
 </rss>

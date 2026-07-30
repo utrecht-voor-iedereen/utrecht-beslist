@@ -6,130 +6,106 @@
     <description>Beschlüsse und Dokumente des Stadtrats Utrecht in verständlicher Sprache erklärt.</description>
     <language>de</language>
     <item>
-      <title>Multi-Year Spatial Perspective</title>
+      <title>Jahresberichte 2025</title>
       <link></link>
-      <description>This council proposal is about the multi-year spatial perspective for 2026, concerning the spatial development of the municipality.</description>
-      <guid isPermaLink="false">7961870</guid>
-    </item>
-    <item>
-      <title>Spring Memorandum 2026</title>
-      <link></link>
-      <description>This council proposal is about the spring memorandum for 2026, concerning the financial development of the municipality.</description>
-      <guid isPermaLink="false">7961871</guid>
-    </item>
-    <item>
-      <title>First Administrative Report 2026</title>
-      <link></link>
-      <description>This council proposal is about the first administrative report for 2026, concerning the administrative development of the municipality.</description>
-      <guid isPermaLink="false">7961872</guid>
-    </item>
-    <item>
-      <title>Result Destination 2025</title>
-      <link></link>
-      <description>This council proposal is about the result destination for 2025, concerning the financial results of the municipality.</description>
-      <guid isPermaLink="false">7961873</guid>
-    </item>
-    <item>
-      <title>Annual Reports 2025</title>
-      <link></link>
-      <description>This council proposal is about the annual reports for 2025, concerning the financial reports of the municipality.</description>
+      <description>Dieser Ratsvorschlag geht über die Jahresberichte für 2025, die die Finanzberichte der Gemeinde betreffen.</description>
       <guid isPermaLink="false">7961874</guid>
     </item>
     <item>
-      <title>Exemption of residence requirement</title>
+      <title>Ergebnisziel 2025</title>
       <link></link>
-      <description>The city council discusses a proposal to exempt the residence requirement for aldermen. This means that someone who does not live in Utrecht can still become an alderman.</description>
-      <guid isPermaLink="false">7947062</guid>
+      <description>Dieser Ratsvorschlag geht über das Ergebnisziel für 2025, das die finanziellen Ergebnisse der Gemeinde betrifft.</description>
+      <guid isPermaLink="false">7961873</guid>
     </item>
     <item>
-      <title>Spring Memorandum 2026</title>
+      <title>Erster Verwaltungsbericht 2026</title>
       <link></link>
-      <description>The Spring Memorandum 2026 is a financial overview of the municipality of Utrecht.</description>
+      <description>Dieser Ratsvorschlag geht über den ersten Verwaltungsbericht für 2026, der die Verwaltungsentwicklung der Gemeinde betrifft.</description>
+      <guid isPermaLink="false">7961872</guid>
+    </item>
+    <item>
+      <title>Frühjahrsmemorandum 2026</title>
+      <link></link>
+      <description>Dieser Ratsvorschlag geht über das Frühjahrsmemorandum für 2026, das die finanzielle Entwicklung der Gemeinde betrifft.</description>
+      <guid isPermaLink="false">7961871</guid>
+    </item>
+    <item>
+      <title>Mehrjährige räumliche Perspektive</title>
+      <link></link>
+      <description>Dieser Ratsvorschlag geht über die mehrjährige räumliche Perspektive für 2026, die die räumliche Entwicklung der Gemeinde betrifft.</description>
+      <guid isPermaLink="false">7961870</guid>
+    </item>
+    <item>
+      <title>Voorjaarsnota 2026 verabschieden</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>Der Gemeinderat beschließt die Verabschiedung der politikarmen Voorjaarsnota 2026. Das Dokument gibt ein aktuelles Finanzbild mit unvermeidlichen Entwicklungen und Engpässen wieder. Es enthält keine politischen Entscheidungen, weil es vor den Wahlen erstellt wurde.</description>
       <guid isPermaLink="false">7947071</guid>
     </item>
     <item>
-      <title>Appointment of Aldermen</title>
+      <title>Ausnahme von der Wohnsitzanforderung</title>
       <link></link>
-      <description>The city council discusses the appointment of new aldermen.</description>
-      <guid isPermaLink="false">7947092</guid>
+      <description>Der Gemeenteraad diskutiert einen Vorschlag, die Wohnsitzanforderung für das Amt des Wethouders aufzuheben. Das bedeutet, dass jemand, der nicht in Utrecht wohnt, dennoch Wethouder werden kann.</description>
+      <guid isPermaLink="false">7947062</guid>
     </item>
     <item>
-      <title>Exemption of residence requirement</title>
+      <title>Ausnahme von der Wohnsitzanforderung</title>
       <link></link>
-      <description>The city council discusses a proposal to exempt the residence requirement for aldermen.</description>
+      <description>Der Gemeinderat diskutiert einen Vorschlag, die Wohnsitzanforderung für Beigeordnete aufzuheben.</description>
       <guid isPermaLink="false">7947093</guid>
     </item>
     <item>
-      <title>Audit Report</title>
+      <title>Ernennung von Beigeordneten</title>
       <link></link>
-      <description>The city council discusses the audit report 'Food for Thought'. The report contains recommendations for improving municipal services.</description>
-      <guid isPermaLink="false">7926175</guid>
+      <description>Die Stadtverordnetenversammlung diskutiert die Ernennung neuer Beigeordneter.</description>
+      <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
-      <title>Amendment Re-integration Regulation</title>
-      <link></link>
-      <description>The city council is proposing an amendment to the Re-integration Regulation and counter-performance Participation Act.</description>
-      <guid isPermaLink="false">7926270</guid>
-    </item>
-    <item>
-      <title>Amendment Joint Regulation BghU</title>
-      <link></link>
-      <description>The city council is proposing an amendment to the Joint Regulation BghU.</description>
+      <title>Änderung der Führungsstruktur der Steuerkooperation BghU</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
+      <description>Der College bittet den Gemeenteraad um Zustimmung zur Änderung der Gemeenschappelijke Regeling BghU. Dadurch wird BghU von einer Betriebsorganisation in eine öffentlich-rechtliche Körperschaft mit Algemeen Bestuur und Dagelijks Bestuur umgewandelt.</description>
       <guid isPermaLink="false">7926182</guid>
     </item>
     <item>
-      <title>Draft Specific Statement of No Objections</title>
+      <title>Entwurf Spezifische Erklärung von Keiner Bedenken</title>
       <link></link>
-      <description>The college proposes to adopt a draft Specific Statement of No Objections for Isotopenweg 29.</description>
-      <guid isPermaLink="false">7926272</guid>
-    </item>
-    <item>
-      <title>Draft Specific Statement of No Objections</title>
-      <link></link>
-      <description>The college proposes to adopt a draft Specific Statement of No Objections for Isotopenweg 29.</description>
+      <description>Das College schlägt vor, einen Entwurf einer Spezifischen Erklärung von Keiner Bedenken für die Isotopenweg 29 festzulegen.</description>
       <guid isPermaLink="false">7944277</guid>
     </item>
     <item>
-      <title>Amendment to BghU Joint Regulation</title>
-      <link></link>
-      <description>The college of B and W proposes to the council to grant approval for an amendment to the BghU Joint Regulation.</description>
+      <title>Änderung der Führungsstruktur der Steuerkooperation BghU</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
+      <description>Der College bittet den Gemeenteraad um Zustimmung zur Änderung der Gemeenschappelijke Regeling BghU. Dadurch wird BghU von einer Betriebsorganisation in eine öffentlich-rechtliche Körperschaft mit Algemeen Bestuur und Dagelijks Bestuur umgewandelt.</description>
       <guid isPermaLink="false">7912171</guid>
     </item>
     <item>
-      <title>Council Proposals Weekly Overview</title>
-      <link></link>
-      <description>Overview of the council proposals from the past week.</description>
-      <guid isPermaLink="false">7912164</guid>
-    </item>
-    <item>
-      <title>Annual Reports 2025</title>
-      <link></link>
-      <description>The annual reports of 2025 are available.</description>
-      <guid isPermaLink="false">7912165</guid>
-    </item>
-    <item>
-      <title>First Administrative Report 2026</title>
-      <link></link>
-      <description>The first administrative report of 2026 is available.</description>
+      <title>Erster Verwaltungsbericht 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>Der Erste Verwaltungsbericht 2026 informiert den Rat über den Fortschritt des Programmhaushalts. Erhöhungen der Investitionskredite um 26,2 Millionen Euro und Reformen im Sozialbereich werden vorgeschlagen.</description>
       <guid isPermaLink="false">7912167</guid>
     </item>
     <item>
-      <title>Annual Report 2025</title>
-      <link></link>
-      <description>The college of B and W proposes to the council to adopt the Annual Report 2025.</description>
-      <guid isPermaLink="false">7903396</guid>
+      <title>Jahresrechnung 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>Der College legt mit der Jahresrechnung 2025 Rechenschaft über Politik und Gemeindefinanzen ab. Das Jahr schließt mit einem positiven Ergebnis von 54,6 Millionen Euro ab, das der allgemeinen Deckungsreserve zugeführt wird.</description>
+      <guid isPermaLink="false">7912165</guid>
     </item>
     <item>
-      <title>Result Allocation 2025</title>
-      <link></link>
-      <description>The college of B and W proposes to the council to adopt the Result Allocation 2025.</description>
+      <title>Beantwortung von Ratsfragen und Errata zu Finanzdokumenten</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
+      <description>Der College übermittelt die Antworten auf schriftliche Fragen zur Jahresrechnung 2025 und zu Verwaltungsberichten samt Errata. Der Brief enthält auch einen Aufruf der G4-Städte zu Tierschutz und Tierarztkosten.</description>
+      <guid isPermaLink="false">7903412</guid>
+    </item>
+    <item>
+      <title>Ergebnisverwendung 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
+      <description>Der College schlägt vor, 20,5 Millionen Euro an verbleibenden einmaligen Budgets aus der Jahresrechnung 2025 nach 2026 zu übertragen, um laufende Projekte und Programme abzuschließen.</description>
       <guid isPermaLink="false">7903410</guid>
     </item>
     <item>
-      <title>Answer to Written Council Questions</title>
-      <link></link>
-      <description>The city of Utrecht answers written council questions.</description>
-      <guid isPermaLink="false">7903412</guid>
+      <title>Jahresrechnung 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
+      <description>Der College legt mit der Jahresrechnung 2025 Rechenschaft über Politik und Gemeindefinanzen ab. Das Jahr schließt mit einem positiven Ergebnis von 54,6 Millionen Euro ab, das der allgemeinen Deckungsreserve zugeführt wird.</description>
+      <guid isPermaLink="false">7903396</guid>
     </item>
   </channel>
 </rss>

@@ -5,6 +5,11 @@
     <link>https://utrecht-voor-iedereen.github.io/utrecht-beslist/</link>
     <description>Beschlüsse und Dokumente des Stadtrats Utrecht in verständlicher Sprache erklärt.</description>
     <language>de</language>
-
+    <item>
+      <title>Änderung der Verordnung zur Reintegration der Participatiewet</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>Der Gemeenteraad passt die Verordening re-integratie en tegenprestatie Participatiewet an. Dadurch erhalten Jugendliche bis 27 Jahre bessere Unterstützung beim Übergang von der Schule in den Beruf und es wird ein neues Ontwikkeltraject eingeführt.</description>
+      <guid isPermaLink="false">7926270</guid>
+    </item>
   </channel>
 </rss>

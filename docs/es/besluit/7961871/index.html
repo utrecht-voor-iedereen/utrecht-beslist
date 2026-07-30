@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Memorandum 2026 — Utrecht Beslist</title>
+  <title>Memorandum de primavera 2026 — Utrecht Beslist</title>
   <meta name="description" content="Decisiones y documentos del ayuntamiento de Utrecht explicados en lenguaje claro.">
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Navegación principal">
         <a href="../../../es/index.html" class="nav-link">Resumen</a>
         <a href="../../../es/over.html" class="nav-link">Sobre el Proyecto &amp; Transparencia</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Alternar modo oscuro y claro">🌙 Oscuro</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Seleccionar idioma" onchange="window.location.href=this.value;">
               
                 <option value="../../../nl/index.html" >
                   NL — Nederlands
@@ -118,7 +118,7 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        ⏳ Under review
+        ✅ Aprobado
       </span>
 
       
@@ -128,7 +128,10 @@
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('Utrecht residents can expect better financial development.. This council proposal is about the spring memorandum for 2026, concerning the financial development of the municipality.', 'es')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="Los residentes de Utrecht pueden esperar un mejor desarrollo financiero. Esta propuesta del consejo se refiere al memorandum de primavera para 2026, relativo al desarrollo financiero del municipio.">
         🔊 Escuchar Audio
       </button>
 
@@ -137,76 +140,91 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 2026-07-09
+        📅 Tratado el <time datetime="2026-07-09">9 de julio de 2026</time>
       </span>
     </div>
   </div>
 
   <!-- Document Title -->
   <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    Spring Memorandum 2026
+    Memorandum de primavera 2026
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 Utrecht residents can expect better financial development.
+    💡 Los residentes de Utrecht pueden esperar un mejor desarrollo financiero.
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 🎯 Contexto y Razones de la Propuesta
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        🎯 This proposal was submitted to improve the financial development of the municipality.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 💡 Resumen en Lenguaje Claro (B1)
+        💡 Resumen en Lenguaje Claro (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        This council proposal is about the spring memorandum for 2026, concerning the financial development of the municipality.
+        Esta propuesta del consejo se refiere al memorandum de primavera para 2026, relativo al desarrollo financiero del municipio.
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">📌 It&#39;s about the spring memorandum.</li>
-        <li class="bullet-item">👥 The entire municipality is affected.</li>
-        <li class="bullet-item">💶 No extra cost.</li>
+        <li class="bullet-item">📌 Se trata del memorandum de primavera.</li>
+        <li class="bullet-item">👥 Todo el municipio se ve afectado.</li>
+        <li class="bullet-item">💶 Ningún costo adicional.</li>
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ 🏘️ Consecuencias y Cambios en la Ciudad
+        🎯 Contexto y Razones de la Propuesta
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        🏘️ The municipality will get better financial development.
+        Esta propuesta se presentó para mejorar el desarrollo financiero del municipio.
       </p>
     </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Consecuencias y Cambios en la Ciudad
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        El municipio obtendrá un mejor desarrollo financiero.
+      </p>
+    </section>
+    
 
     <!-- Section 4: Budget & Timeline -->
+    
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         💶 Presupuesto y Plazos
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
+        
         <div>
           <strong>Cifra/Coste:</strong>
-          <span>No extra cost</span>
+          <span>Ningún costo adicional</span>
         </div>
+        
+        
         <div>
           <strong>Plazo/Planificación:</strong>
-          <span>📅 Implementation starts in 2026.</span>
+          <span>La implementación comienza en 2026.</span>
         </div>
+        
       </div>
     </section>
+    
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -214,7 +232,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Gobernanza &amp; Finanzas</span>
       
       
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Overig</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Toda la ciudad</span>
       
     </div>
   </div>
@@ -222,20 +240,30 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ ⚖️ Derechos de Información Pública (Woo)
+      🏛️ Fuente y derechos Woo
     </h3>
+
     
+      <!-- Saying nothing here read as if the source had been withheld. -->
+      <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">
+        Open Raadsinformatie no publica ningún PDF para este punto del orden del día. Búsquelo en el portal del ayuntamiento.
+      </p>
+    
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
-      
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ Ver en Portal del Ayuntamiento de Utrecht 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="https://id.openraadsinformatie.nl/7961871" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 Registro ORI de este documento 🔗
       </a>
     </div>
+
+    
+    
   </div>
 
   <!-- Transparency Footer -->
@@ -243,11 +271,12 @@
     <div>
       <span>🤖 Transparencia IA: Groq (llama-3.3-70b-versatile)</span>
       <span style="margin-left: 0.75rem;">📦 Archivado permanentemente (Ley de Archivos)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Derechos de Información Pública (Woo)</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('Spring Memorandum 2026', window.location.href)">🔗 Compartir</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207961871" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="Memorandum de primavera 2026">🔗 Compartir</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%207961871%20(es)" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ Notificar error
       </a>
     </div>
@@ -284,17 +313,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Aviso legal y datos</h3>
         <p>Resumido automáticamente mediante IA a partir de datos abiertos de Open Raadsinformatie. Sin valor de asesoramiento legal; consulte siempre el documento oficial.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Licencia: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Iniciativa Ciudadana · 100% Estática y Gratuita</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "\u00a1Enlace copiado al portapapeles!", "lang": "es", "postal_badge": "\ud83d\udccd C\u00f3digo postal {code} \u2192 barrio {wijk}", "results_many": "decisiones", "results_one": "decisi\u00f3n", "speech": "es-ES", "theme_to_dark": "\ud83c\udf19 Oscuro", "theme_to_light": "\u2600\ufe0f Claro", "tts_unsupported": "Este navegador no admite la lectura en voz alta."}</script>
   <script src="../../../static/js/app.js"></script>
 </body>
 </html>

@@ -5,6 +5,11 @@
     <link>https://utrecht-voor-iedereen.github.io/utrecht-beslist/</link>
     <description>Decisões e documentos da câmara municipal de Utrecht explicados em linguagem clara.</description>
     <language>pt-pt</language>
-
+    <item>
+      <title>Alteração à regulamentação de reintegração da Participatiewet</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>O Gemeenteraad está a atualizar a Verordening re-integratie en tegenprestatie Participatiewet. Isto proporciona aos jovens até aos 27 anos um melhor apoio da escola para o trabalho e introduz um novo Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7926270</guid>
+    </item>
   </channel>
 </rss>

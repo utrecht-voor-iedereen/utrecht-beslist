@@ -5,6 +5,11 @@
     <link>https://utrecht-voor-iedereen.github.io/utrecht-beslist/</link>
     <description>Utrecht city council decisions and documents explained in plain language.</description>
     <language>en</language>
-
+    <item>
+      <title>Amendment to Participatiewet re-integration ordinance</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>The Gemeenteraad is updating the Verordening re-integratie en tegenprestatie Participatiewet. This provides young people up to 27 with better support from school to work and introduces a new Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7926270</guid>
+    </item>
   </channel>
 </rss>

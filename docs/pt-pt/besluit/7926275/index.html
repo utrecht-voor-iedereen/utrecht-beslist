@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Environmental Plan — Utrecht Beslist</title>
+  <title>Atualização do plano ambiental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk — Utrecht Beslist</title>
   <meta name="description" content="Decisões e documentos da câmara municipal de Utrecht explicados em linguagem clara.">
   <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
   <link rel="stylesheet" href="../../../static/css/styles.css">
@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="../../../pt-pt/index.html" class="nav-link">Vista Geral</a>
         <a href="../../../pt-pt/over.html" class="nav-link">Sobre &amp; Transparência</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Alternar entre modo escuro e claro">🌙 Escuro</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="Selecionar idioma" onchange="window.location.href=this.value;">
               
                 <option value="../../../nl/index.html" >
                   NL — Nederlands
@@ -118,17 +118,20 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
-        ⏳ Under review
+        ⏳ Na ordem de trabalhos
       </span>
 
       
-        <span class="badge-impact impact-laag">Baixo Impacto</span>
+        <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
       
     </div>
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('The environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk will be changed.. The college proposes to change the environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk.', 'pt-pt')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="As regras de construção existentes para Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt e Tuinwijk são convertidas para a Omgevingswet. O conselho está a adotar a segunda alteração ao plano ambiental de Utrecht. Isto converte dez planos de urbanismo em Noordwest e Noordoost para o plano ambiental definitivo e adiciona regras sobre qualidade do solo e arqueologia.">
         🔊 Ouvir Áudio
       </button>
 
@@ -137,76 +140,86 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 2026-06-25
+        📅 Tratado em <time datetime="2026-06-25">25 de junho de 2026</time>
       </span>
     </div>
   </div>
 
   <!-- Document Title -->
   <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
-    Change Environmental Plan
+    Atualização do plano ambiental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk
   </h1>
 
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
-    💡 The environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk will be changed.
+    💡 As regras de construção existentes para Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt e Tuinwijk são convertidas para a Omgevingswet.
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 🎯 Contexto e Razões da Proposta
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        The college wants to change the environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 💡 Resumo em Linguagem Clara (B1)
+        💡 Resumo em Linguagem Clara (B1)
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
-        The college proposes to change the environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk.
+        O conselho está a adotar a segunda alteração ao plano ambiental de Utrecht. Isto converte dez planos de urbanismo em Noordwest e Noordoost para o plano ambiental definitivo e adiciona regras sobre qualidade do solo e arqueologia.
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">The change of the environmental plan.</li>
-        <li class="bullet-item">Residents and businesses in the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk.</li>
-        <li class="bullet-item">No extra cost.</li>
+        <li class="bullet-item">📌 Conversão de 10 planos de urbanismo e regras temporárias no plano ambiental definitivo de Utrecht.</li>
+        <li class="bullet-item">👥 Residentes e proprietários em Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt e Tuinwijk.</li>
+        <li class="bullet-item">💶 O documento não menciona montantes financeiros específicos.</li>
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ 🏘️ Consequências e Mudanças na Cidade
+        🎯 Contexto e Razões da Proposta
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        The environmental plan for the Pijlsweerd, Lauwerecht, Vogelenbuurt, Staatsliedenbuurt, and Tuinwijk will be changed.
+        Desde a entrada em vigor da Omgevingswet em 2024, todos os planos temporários têm de ser convertidos definitivamente antes de 2032.
       </p>
     </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Consequências e Mudanças na Cidade
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        Regras atualizadas para qualidade do solo e arqueologia aplicam-se a toda a cidade; a transição não impacta árvores ou espaços verdes.
+      </p>
+    </section>
+    
 
     <!-- Section 4: Budget & Timeline -->
+    
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         💶 Orçamento e Calendário
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
-        <div>
-          <strong>Valor/Custo:</strong>
-          <span>No extra cost</span>
-        </div>
+        
+        
         <div>
           <strong>Prazo/Planeamento:</strong>
-          <span>2026</span>
+          <span>2032</span>
         </div>
+        
       </div>
     </section>
+    
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -214,7 +227,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Habitação &amp; Moradia</span>
       
       
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Oost</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Toda a cidade</span>
       
     </div>
   </div>
@@ -222,32 +235,59 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ ⚖️ Direitos de Acesso à Informação Pública (Woo)
+      🏛️ Fonte e direitos Woo
     </h3>
+
     
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       
+        <a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 Documento PDF Original ➔
+        </a>
       
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         🏛️ Ver no Portal da Câmara de Utrecht 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="https://id.openraadsinformatie.nl/7926275" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 Registo ORI deste documento 🔗
       </a>
     </div>
+
+    
+    
+      <details style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          Documentos de origem (4)
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202" target="_blank" rel="noopener">Raadsvoorstel wijziging omgevingsplan Pijlsweerd e.o.</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=e5d2cc0a-3960-4669-9a31-b651cdd4da39" target="_blank" rel="noopener">Vaststellingsrapport Pijlsweerd e.o.</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=49f50e46-d033-492a-83fe-ecf800ee76b0" target="_blank" rel="noopener">Link naar wijziging omgevingsplan</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=ea2209c0-b7c5-4cd1-99ad-a8ead1819009" target="_blank" rel="noopener">Dossier 5207 voorblad.pdf</a></li>
+          
+        </ul>
+      </details>
+    
   </div>
 
   <!-- Transparency Footer -->
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
-      <span>🤖 Transparência de IA: Groq (llama-3.3-70b-versatile)</span>
+      <span>🤖 Transparência de IA: External model (manual hand-off)</span>
       <span style="margin-left: 0.75rem;">📦 Arquivado permanentemente (Lei dos Arquivos)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Direitos de Acesso à Informação Pública (Woo)</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('Change Environmental Plan', window.location.href)">🔗 Partilhar</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%207926275" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="Atualização do plano ambiental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk">🔗 Partilhar</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%207926275%20(pt-pt)" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ Reportar erro
       </a>
     </div>
@@ -284,17 +324,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>Aviso legal &amp; Dados</h3>
         <p>Resumido automaticamente com IA a partir dos dados abertos do Open Raadsinformatie. Sem aconselhamento jurídico — consulte sempre o documento oficial.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · Licença: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>Iniciativa de Cidadãos · 100% Estática e Gratuita</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Liga\u00e7\u00e3o copiada para a \u00e1rea de transfer\u00eancia!", "lang": "pt-pt", "postal_badge": "\ud83d\udccd C\u00f3digo postal {code} \u2192 bairro {wijk}", "results_many": "decis\u00f5es", "results_one": "decis\u00e3o", "speech": "pt-PT", "theme_to_dark": "\ud83c\udf19 Escuro", "theme_to_light": "\u2600\ufe0f Claro", "tts_unsupported": "A leitura em voz alta n\u00e3o \u00e9 suportada neste navegador."}</script>
   <script src="../../../static/js/app.js"></script>
 </body>
 </html>
