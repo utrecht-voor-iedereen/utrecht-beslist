@@ -3,6 +3,8 @@ Taxonomy definition for themes, neighborhoods (wijken), and heuristic classifica
 Supports 8 languages: NL, EN, ES, TR, PT-BR, PT-PT, FR, DE.
 """
 
+import re
+
 THEMES = {
     "wonen": {
         "nl": "Wonen & Huisvesting",
@@ -141,10 +143,20 @@ def detect_theme_heuristics(title: str, text: str) -> list[str]:
     return matches if matches else ["overig"]
 
 def detect_wijken_heuristics(title: str, text: str) -> list[str]:
-    """Detect Utrecht neighborhoods based on occurrences in text."""
-    content = f"{title} {text}"
+    """
+    Detect Utrecht neighborhoods based on occurrences in text.
+
+    Matching is on whole words: a plain substring test tagged every document
+    mentioning Noordoost as Oost as well, and every Zuidwest document as Zuid.
+    Longer names are tried first so Vleuten-De Meern is not shadowed.
+    """
+    content = f"{title} {text}".lower()
     found = []
-    for wijk in WIJKEN:
-        if wijk.lower() in content.lower():
+    for wijk in sorted(WIJKEN, key=len, reverse=True):
+        pattern = r"(?<![\w-])" + re.escape(wijk.lower()) + r"(?![\w-])"
+        if re.search(pattern, content):
             found.append(wijk)
-    return found
+
+    # Keep the declared order so output does not depend on name length.
+    ordered = [w for w in WIJKEN if w in found]
+    return ordered if ordered else ["Overig"]

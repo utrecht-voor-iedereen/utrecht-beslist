@@ -24,6 +24,17 @@ logger = logging.getLogger(__name__)
 SYSTEM_PROMPT = """Je bent een ervaren bestuurskundig redacteur voor Gemeente Utrecht.
 Vertaal gemeentelijke raadsstukken naar helder Nederlands (B1-niveau), Engels, Spaans, Turks, Portugees (Brasil & Portugal), Frans en Duits.
 
+HARDE REGELS — deze gaan voor op het formaat hieronder:
+1. Verzin niets. Elk bedrag, elke datum en elk aantal moet letterlijk in het
+   aangeleverde document staan. Staat het er niet, laat het veld dan LEEG ("").
+2. Neem NOOIT een voorbeeldwaarde uit dit formaat over als antwoord. De
+   placeholders hieronder beschrijven wat het veld moet bevatten; ze zijn geen
+   toegestane uitkomst.
+3. Schrijf "geen extra kosten" alleen als het document dat zelf zegt. Weet je
+   het niet, dan blijft cifra_clave_nl leeg.
+4. Zeg niets over de uitkomst van een stemming. De status wordt buiten dit
+   model om uit het register gehaald.
+
 Verplicht JSON formaat:
 {
   "items": [
@@ -45,22 +56,14 @@ Verplicht JSON formaat:
       "summary_pt_pt": "Resumo em português de Portugal (2-3 frases)",
       "summary_fr": "Résumé en français simple (2-3 phrases)",
       "summary_de": "Zusammenfassung in einfachem Deutsch (2-3 Sätze)",
-      "estado_besluit": "✅ Aangenomen | ⏳ In behandeling | ❌ Verworpen | ℹ️ Informatief",
-      "status_en": "✅ Approved | ⏳ Under review | ❌ Rejected | ℹ️ Informational",
-      "status_es": "✅ Aprobado | ⏳ En tramitación | ❌ Rechazado | ℹ️ Informativo",
-      "status_tr": "✅ Kabul Edildi | ⏳ İncelemede | ❌ Reddedildi | ℹ️ Bilgilendirme",
-      "status_pt_br": "✅ Aprovado | ⏳ Em análise | ❌ Rejeitado | ℹ️ Informativo",
-      "status_pt_pt": "✅ Aprovado | ⏳ Em análise | ❌ Rejeitado | ℹ️ Informativo",
-      "status_fr": "✅ Adopté | ⏳ En cours d'examen | ❌ Rejeté | ℹ️ Information",
-      "status_de": "✅ Angenommen | ⏳ In Bearbeitung | ❌ Abgelehnt | ℹ️ Informativ",
-      "cifra_clave_nl": "💶 Cijfer/Kosten (bv. 2,5M € of Geen extra kosten)",
-      "key_figure_en": "💶 Figure/Cost (e.g. €2.5M or No extra cost)",
-      "key_figure_es": "💶 Cifra/Coste (ej. 2,5M € o Sin costes extra)",
-      "key_figure_tr": "💶 Rakam/Maliyet (örn. 2,5M € veya Ek maliyet yok)",
-      "key_figure_pt_br": "💶 Valor/Custo (ex. 2,5M € ou Sem custo extra)",
-      "key_figure_pt_pt": "💶 Valor/Custo (ex. 2,5M € ou Sem custo adicional)",
-      "key_figure_fr": "💶 Chiffre/Coût (ex. 2,5M € ou Pas de coût supplémentaire)",
-      "key_figure_de": "💶 Betrag/Kosten (z.B. 2,5M € oder Keine Zusatzkosten)",
+      "cifra_clave_nl": "Het bedrag zoals het in het stuk staat, of \"\" als er geen bedrag in staat",
+      "key_figure_en": "The amount exactly as the document states it, or \"\" if it states none",
+      "key_figure_es": "El importe tal como consta en el documento, o \"\" si no consta",
+      "key_figure_tr": "Belgede geçtiği haliyle tutar, belgede yoksa \"\"",
+      "key_figure_pt_br": "O valor como consta no documento, ou \"\" se não constar",
+      "key_figure_pt_pt": "O valor como consta no documento, ou \"\" se não constar",
+      "key_figure_fr": "Le montant tel qu'il figure dans le document, ou \"\" s'il n'y figure pas",
+      "key_figure_de": "Der Betrag genau wie im Dokument angegeben, sonst \"\"",
       "frase_impacto_nl": "1 duidelijke zin wat er voor de Utrechtse inwoner verandert",
       "impact_sentence_en": "1 clear sentence explaining what changes for Utrecht residents",
       "impact_sentence_es": "1 frase clara que explique qué cambia para el vecino de Utrecht",
@@ -245,14 +248,10 @@ def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
         summary_pt_pt=f"Documento oficial da câmara municipal: {title_short_en}.",
         summary_fr=f"Document officiel du conseil municipal : {title_short_en}.",
         summary_de=f"Offizielles Ratsdokument: {title_short_en}.",
-        estado_besluit="✅ Aangenomen",
-        status_en="✅ Approved",
-        status_es="✅ Aprobado",
-        status_tr="✅ Kabul Edildi",
-        status_pt_br="✅ Aprovado",
-        status_pt_pt="✅ Aprovado",
-        status_fr="✅ Adopté",
-        status_de="✅ Angenommen",
+        # Left blank on purpose: apply_source_facts() fills these from the
+        # ORI record. Declaring a decision approved here was a guess.
+        estado_besluit="",
+        status_en="",
         cifra_clave_nl="💶 Zie raadsdocument",
         key_figure_en="💶 See council document",
         key_figure_es="💶 Ver documento municipal",

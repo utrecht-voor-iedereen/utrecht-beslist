@@ -14,8 +14,11 @@ class SummaryItem(BaseModel):
     summary_en: str
 
     # Dutch (nl) & English (en) fields
-    estado_besluit: str = Field(default="✅ Aangenomen")
-    status_en: str = Field(default="✅ Approved")
+    # Overwritten from the ORI record in pipeline.py. Defaulting these to an
+    # approval meant any field the model omitted claimed the council had
+    # passed the proposal.
+    estado_besluit: str = Field(default="")
+    status_en: str = Field(default="")
     cifra_clave_nl: str = Field(default="💶 Geen extra kosten")
     key_figure_en: str = Field(default="💶 No extra costs")
     frase_impacto_nl: str = Field(default="Belangrijk besluit voor de ontwikkeling van Utrecht.")
@@ -38,7 +41,7 @@ class SummaryItem(BaseModel):
     # Spanish (es)
     title_short_es: str = Field(default="")
     summary_es: str = Field(default="")
-    status_es: str = Field(default="✅ Aprobado")
+    status_es: str = Field(default="")
     key_figure_es: str = Field(default="💶 Sin costes extra")
     impact_sentence_es: str = Field(default="Decisión importante para el desarrollo de Utrecht.")
     bullet_1_what_es: str = Field(default="📌 Qué: Acuerdo o propuesta del ayuntamiento.")
@@ -51,7 +54,7 @@ class SummaryItem(BaseModel):
     # Turkish (tr)
     title_short_tr: str = Field(default="")
     summary_tr: str = Field(default="")
-    status_tr: str = Field(default="✅ Kabul Edildi")
+    status_tr: str = Field(default="")
     key_figure_tr: str = Field(default="💶 Ek maliyet yok")
     impact_sentence_tr: str = Field(default="Utrecht sakinleri için önemli karar.")
     bullet_1_what_tr: str = Field(default="📌 Ne: Belediye meclis kararı veya teklifi.")
@@ -64,7 +67,7 @@ class SummaryItem(BaseModel):
     # Brazilian Portuguese (pt-br)
     title_short_pt_br: str = Field(default="")
     summary_pt_br: str = Field(default="")
-    status_pt_br: str = Field(default="✅ Aprovado")
+    status_pt_br: str = Field(default="")
     key_figure_pt_br: str = Field(default="💶 Sem custos extras")
     impact_sentence_pt_br: str = Field(default="Decisão importante para o desenvolvimento de Utrecht.")
     bullet_1_what_pt_br: str = Field(default="📌 O que: Decisão ou proposta municipal.")
@@ -77,7 +80,7 @@ class SummaryItem(BaseModel):
     # European Portuguese (pt-pt)
     title_short_pt_pt: str = Field(default="")
     summary_pt_pt: str = Field(default="")
-    status_pt_pt: str = Field(default="✅ Aprovado")
+    status_pt_pt: str = Field(default="")
     key_figure_pt_pt: str = Field(default="💶 Sem custos adicionais")
     impact_sentence_pt_pt: str = Field(default="Decisão importante para o desenvolvimento de Utrecht.")
     bullet_1_what_pt_pt: str = Field(default="📌 O que: Decisão ou proposta municipal.")
@@ -90,7 +93,7 @@ class SummaryItem(BaseModel):
     # French (fr)
     title_short_fr: str = Field(default="")
     summary_fr: str = Field(default="")
-    status_fr: str = Field(default="✅ Adopté")
+    status_fr: str = Field(default="")
     key_figure_fr: str = Field(default="💶 Pas de coûts supplémentaires")
     impact_sentence_fr: str = Field(default="Décision importante pour le développement d'Utrecht.")
     bullet_1_what_fr: str = Field(default="📌 Quoi : Décision ou proposition municipale.")
@@ -103,7 +106,7 @@ class SummaryItem(BaseModel):
     # German (de)
     title_short_de: str = Field(default="")
     summary_de: str = Field(default="")
-    status_de: str = Field(default="✅ Angenommen")
+    status_de: str = Field(default="")
     key_figure_de: str = Field(default="💶 Keine Zusatzkosten")
     impact_sentence_de: str = Field(default="Wichtiger Beschluss für die Entwicklung von Utrecht.")
     bullet_1_what_de: str = Field(default="📌 Was: Stadtratsbeschluss oder Ratsantrag.")
@@ -120,6 +123,14 @@ class SummaryItem(BaseModel):
     date: str | None = ""
     degraded: bool | None = False
     ai_model: str | None = "Degraded Fallback"
+
+    # Provenance, filled from the Open Raadsinformatie record rather than the
+    # model, so the detail page can show where every claim comes from.
+    state: str = Field(default="agenda")
+    doc_type: str = Field(default="")
+    classification: str = Field(default="")
+    source_url: str = Field(default="")
+    attachments: list[dict] = Field(default_factory=list)
 
 
 class SummaryBatchOutput(BaseModel):
