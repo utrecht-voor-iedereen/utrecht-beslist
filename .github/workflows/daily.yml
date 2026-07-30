@@ -36,6 +36,21 @@ jobs:
         run: |
           python -m scripts.pipeline
 
+      # The summarizer only reliably returns Dutch and English, and the site
+      # silently falls back to English for the rest, so this ran only by hand
+      # and the six other editions drifted out of date. Failing here would
+      # throw away a good pipeline run, so the site is rebuilt either way.
+      - name: Fill Missing Translations
+        continue-on-error: true
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python -m scripts.translate_missing
+
+      - name: Rebuild Site With Translations
+        run: |
+          python -m scripts.build_site
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'

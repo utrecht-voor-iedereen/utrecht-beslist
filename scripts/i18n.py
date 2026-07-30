@@ -5,17 +5,45 @@ Supports: NL, EN, ES, TR, PT-BR, PT-PT, FR, DE.
 from typing import Any
 
 LANGUAGES = {
-    'nl': {'code': 'nl', 'name': 'Nederlands', 'flag': '🇳🇱', 'label': 'NL'},
-    'en': {'code': 'en', 'name': 'English', 'flag': '🇬🇧', 'label': 'EN'},
-    'es': {'code': 'es', 'name': 'Español', 'flag': '🇪🇸', 'label': 'ES'},
-    'tr': {'code': 'tr', 'name': 'Türkçe', 'flag': '🇹🇷', 'label': 'TR'},
-    'pt-br': {'code': 'pt-br', 'name': 'Português (Brasil)', 'flag': '🇧🇷', 'label': 'PT-BR'},
-    'pt-pt': {'code': 'pt-pt', 'name': 'Português (Portugal)', 'flag': '🇵🇹', 'label': 'PT-PT'},
-    'fr': {'code': 'fr', 'name': 'Français', 'flag': '🇫🇷', 'label': 'FR'},
-    'de': {'code': 'de', 'name': 'Deutsch', 'flag': '🇩🇪', 'label': 'DE'},
+    'nl': {'code': 'nl', 'name': 'Nederlands', 'flag': '🇳🇱', 'label': 'NL', 'speech': 'nl-NL', 'locale': 'nl-NL'},
+    'en': {'code': 'en', 'name': 'English', 'flag': '🇬🇧', 'label': 'EN', 'speech': 'en-GB', 'locale': 'en-GB'},
+    'es': {'code': 'es', 'name': 'Español', 'flag': '🇪🇸', 'label': 'ES', 'speech': 'es-ES', 'locale': 'es-ES'},
+    'tr': {'code': 'tr', 'name': 'Türkçe', 'flag': '🇹🇷', 'label': 'TR', 'speech': 'tr-TR', 'locale': 'tr-TR'},
+    'pt-br': {'code': 'pt-br', 'name': 'Português (Brasil)', 'flag': '🇧🇷', 'label': 'PT-BR', 'speech': 'pt-BR', 'locale': 'pt-BR'},
+    'pt-pt': {'code': 'pt-pt', 'name': 'Português (Portugal)', 'flag': '🇵🇹', 'label': 'PT-PT', 'speech': 'pt-PT', 'locale': 'pt-PT'},
+    'fr': {'code': 'fr', 'name': 'Français', 'flag': '🇫🇷', 'label': 'FR', 'speech': 'fr-FR', 'locale': 'fr-FR'},
+    'de': {'code': 'de', 'name': 'Deutsch', 'flag': '🇩🇪', 'label': 'DE', 'speech': 'de-DE', 'locale': 'de-DE'},
 }
 
 DEFAULT_LANG = 'nl'
+
+# Months are spelled out rather than formatted with the C library: the build
+# runs on GitHub Actions, where only the C locale is installed, so
+# locale.setlocale(LC_TIME, 'tr_TR') raises and every date silently falls back
+# to English.
+MONTHS = {
+    'nl': ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'],
+    'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    'es': ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+    'tr': ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
+    'pt-br': ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
+    'pt-pt': ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'],
+    'fr': ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+    'de': ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+}
+
+# "{day} {month} {year}" for most; Turkish and English put the pieces in a
+# different order.
+DATE_PATTERNS = {
+    'nl': '{day} {month} {year}',
+    'en': '{day} {month} {year}',
+    'es': '{day} de {month} de {year}',
+    'tr': '{day} {month} {year}',
+    'pt-br': '{day} de {month} de {year}',
+    'pt-pt': '{day} de {month} de {year}',
+    'fr': '{day} {month} {year}',
+    'de': '{day}. {month} {year}',
+}
 
 UI = {
     'site_title': {
@@ -508,7 +536,248 @@ UI = {
         'fr': 'Archivé en permanence (Loi sur les Archives)',
         'de': 'Dauerhaft archiviert (Archivgesetz)',
     },
+    'nav_aria': {
+        'nl': 'Hoofdnavigatie',
+        'en': 'Main navigation',
+        'es': 'Navegación principal',
+        'tr': 'Ana gezinme',
+        'pt-br': 'Navegação principal',
+        'pt-pt': 'Navegação principal',
+        'fr': 'Navigation principale',
+        'de': 'Hauptnavigation',
+    },
+    'lang_select_aria': {
+        'nl': 'Taal kiezen',
+        'en': 'Select language',
+        'es': 'Seleccionar idioma',
+        'tr': 'Dil seçin',
+        'pt-br': 'Selecionar idioma',
+        'pt-pt': 'Selecionar idioma',
+        'fr': 'Choisir la langue',
+        'de': 'Sprache wählen',
+    },
+    'theme_to_dark': {
+        'nl': '🌙 Donker',
+        'en': '🌙 Dark',
+        'es': '🌙 Oscuro',
+        'tr': '🌙 Koyu',
+        'pt-br': '🌙 Escuro',
+        'pt-pt': '🌙 Escuro',
+        'fr': '🌙 Sombre',
+        'de': '🌙 Dunkel',
+    },
+    'theme_to_light': {
+        'nl': '☀️ Licht',
+        'en': '☀️ Light',
+        'es': '☀️ Claro',
+        'tr': '☀️ Açık',
+        'pt-br': '☀️ Claro',
+        'pt-pt': '☀️ Claro',
+        'fr': '☀️ Clair',
+        'de': '☀️ Hell',
+    },
+    'theme_toggle_aria': {
+        'nl': 'Wissel tussen donkere en lichte modus',
+        'en': 'Toggle dark and light mode',
+        'es': 'Alternar modo oscuro y claro',
+        'tr': 'Koyu ve açık mod arasında geçiş yap',
+        'pt-br': 'Alternar entre modo escuro e claro',
+        'pt-pt': 'Alternar entre modo escuro e claro',
+        'fr': 'Basculer entre le mode sombre et clair',
+        'de': 'Zwischen dunklem und hellem Modus wechseln',
+    },
+    'footer_disclaimers': {
+        'nl': 'Voorbehoud & Data',
+        'en': 'Disclaimers & Data',
+        'es': 'Aviso legal y datos',
+        'tr': 'Yasal Uyarı & Veri',
+        'pt-br': 'Aviso legal & Dados',
+        'pt-pt': 'Aviso legal & Dados',
+        'fr': 'Avertissement & Données',
+        'de': 'Haftungsausschluss & Daten',
+    },
+    'license_label': {
+        'nl': 'Licentie:',
+        'en': 'Licence:',
+        'es': 'Licencia:',
+        'tr': 'Lisans:',
+        'pt-br': 'Licença:',
+        'pt-pt': 'Licença:',
+        'fr': 'Licence :',
+        'de': 'Lizenz:',
+    },
+    # {code} and {wijk} are substituted in app.js.
+    'postal_badge': {
+        'nl': '📍 Postcode {code} → wijk {wijk}',
+        'en': '📍 Postcode {code} → district {wijk}',
+        'es': '📍 Código postal {code} → barrio {wijk}',
+        'tr': '📍 Posta kodu {code} → mahalle {wijk}',
+        'pt-br': '📍 CEP {code} → bairro {wijk}',
+        'pt-pt': '📍 Código postal {code} → bairro {wijk}',
+        'fr': '📍 Code postal {code} → quartier {wijk}',
+        'de': '📍 PLZ {code} → Stadtteil {wijk}',
+    },
+    'results_one': {
+        'nl': 'besluit',
+        'en': 'decision',
+        'es': 'decisión',
+        'tr': 'karar',
+        'pt-br': 'decisão',
+        'pt-pt': 'decisão',
+        'fr': 'décision',
+        'de': 'Beschluss',
+    },
+    'results_many': {
+        'nl': 'besluiten',
+        'en': 'decisions',
+        'es': 'decisiones',
+        'tr': 'karar',
+        'pt-br': 'decisões',
+        'pt-pt': 'decisões',
+        'fr': 'décisions',
+        'de': 'Beschlüsse',
+    },
+    'copied_to_clipboard': {
+        'nl': 'Link gekopieerd naar klembord!',
+        'en': 'Link copied to clipboard!',
+        'es': '¡Enlace copiado al portapapeles!',
+        'tr': 'Bağlantı panoya kopyalandı!',
+        'pt-br': 'Link copiado para a área de transferência!',
+        'pt-pt': 'Ligação copiada para a área de transferência!',
+        'fr': 'Lien copié dans le presse-papiers !',
+        'de': 'Link in die Zwischenablage kopiert!',
+    },
+    'tts_unsupported': {
+        'nl': 'Voorlezen wordt niet ondersteund door deze browser.',
+        'en': 'Read-aloud is not supported by this browser.',
+        'es': 'Este navegador no admite la lectura en voz alta.',
+        'tr': 'Sesli okuma bu tarayıcıda desteklenmiyor.',
+        'pt-br': 'A leitura em voz alta não é suportada neste navegador.',
+        'pt-pt': 'A leitura em voz alta não é suportada neste navegador.',
+        'fr': "La lecture à voix haute n'est pas prise en charge par ce navigateur.",
+        'de': 'Vorlesen wird von diesem Browser nicht unterstützt.',
+    },
+    'wijk_overig': {
+        'nl': 'Hele stad',
+        'en': 'City-wide',
+        'es': 'Toda la ciudad',
+        'tr': 'Şehir geneli',
+        'pt-br': 'Toda a cidade',
+        'pt-pt': 'Toda a cidade',
+        'fr': "Toute la ville",
+        'de': 'Stadtweit',
+    },
+    'date_unknown': {
+        'nl': 'Datum onbekend',
+        'en': 'Date unknown',
+        'es': 'Fecha desconocida',
+        'tr': 'Tarih bilinmiyor',
+        'pt-br': 'Data desconhecida',
+        'pt-pt': 'Data desconhecida',
+        'fr': 'Date inconnue',
+        'de': 'Datum unbekannt',
+    },
+    'source_title': {
+        'nl': 'Bron & Woo-rechten',
+        'en': 'Source & Woo rights',
+        'es': 'Fuente y derechos Woo',
+        'tr': 'Kaynak ve Woo hakları',
+        'pt-br': 'Fonte e direitos Woo',
+        'pt-pt': 'Fonte e direitos Woo',
+        'fr': 'Source et droits Woo',
+        'de': 'Quelle & Woo-Rechte',
+    },
+    'no_pdf_available': {
+        'nl': 'Voor dit agendapunt publiceert Open Raadsinformatie geen PDF. Zoek het stuk in het Raadsportaal.',
+        'en': 'Open Raadsinformatie publishes no PDF for this agenda item. Look the document up in the council portal.',
+        'es': 'Open Raadsinformatie no publica ningún PDF para este punto del orden del día. Búsquelo en el portal del ayuntamiento.',
+        'tr': 'Open Raadsinformatie bu gündem maddesi için PDF yayımlamıyor. Belgeyi meclis portalında arayın.',
+        'pt-br': 'O Open Raadsinformatie não publica PDF para este item da pauta. Procure o documento no portal do conselho.',
+        'pt-pt': 'O Open Raadsinformatie não publica PDF para este ponto da ordem de trabalhos. Procure o documento no portal da câmara.',
+        'fr': "Open Raadsinformatie ne publie pas de PDF pour ce point de l'ordre du jour. Cherchez le document sur le portail du conseil.",
+        'de': 'Open Raadsinformatie veröffentlicht für diesen Tagesordnungspunkt kein PDF. Suchen Sie das Dokument im Ratsportal.',
+    },
+    'source_documents': {
+        'nl': 'Onderliggende stukken',
+        'en': 'Underlying documents',
+        'es': 'Documentos de origen',
+        'tr': 'Dayanak belgeler',
+        'pt-br': 'Documentos de origem',
+        'pt-pt': 'Documentos de origem',
+        'fr': 'Documents sources',
+        'de': 'Zugrunde liegende Dokumente',
+    },
+    'ori_record': {
+        'nl': 'ORI-registratie van dit stuk',
+        'en': 'ORI record for this document',
+        'es': 'Registro ORI de este documento',
+        'tr': 'Bu belgenin ORI kaydı',
+        'pt-br': 'Registro ORI deste documento',
+        'pt-pt': 'Registo ORI deste documento',
+        'fr': 'Fiche ORI de ce document',
+        'de': 'ORI-Eintrag zu diesem Dokument',
+    },
+    'published_on': {
+        'nl': 'Behandeld op',
+        'en': 'Discussed on',
+        'es': 'Tratado el',
+        'tr': 'Görüşülme tarihi',
+        'pt-br': 'Tratado em',
+        'pt-pt': 'Tratado em',
+        'fr': 'Traité le',
+        'de': 'Behandelt am',
+    },
 }
+
+# Canonical decision states, derived from Open Raadsinformatie rather than
+# asked of the model. The summarizer was returning a bare "⏳" for twenty of
+# thirty entries, and it labelled six documents that ORI records as
+# opengov#ResultPassed as still under review.
+STATUS_LABELS = {
+    'passed': {
+        'symbol': '✅',
+        'nl': 'Aangenomen', 'en': 'Passed', 'es': 'Aprobado', 'tr': 'Kabul edildi',
+        'pt-br': 'Aprovado', 'pt-pt': 'Aprovado', 'fr': 'Adopté', 'de': 'Angenommen',
+    },
+    'failed': {
+        'symbol': '❌',
+        'nl': 'Verworpen', 'en': 'Rejected', 'es': 'Rechazado', 'tr': 'Reddedildi',
+        'pt-br': 'Rejeitado', 'pt-pt': 'Rejeitado', 'fr': 'Rejeté', 'de': 'Abgelehnt',
+    },
+    'agenda': {
+        'symbol': '⏳',
+        'nl': 'Op de agenda', 'en': 'On the agenda', 'es': 'En el orden del día',
+        'tr': 'Gündemde', 'pt-br': 'Na pauta', 'pt-pt': 'Na ordem de trabalhos',
+        'fr': "À l'ordre du jour", 'de': 'Auf der Tagesordnung',
+    },
+    'informational': {
+        'symbol': 'ℹ️',
+        'nl': 'Informatief', 'en': 'Informational', 'es': 'Informativo',
+        'tr': 'Bilgilendirme', 'pt-br': 'Informativo', 'pt-pt': 'Informativo',
+        'fr': 'Information', 'de': 'Informativ',
+    },
+}
+
+# Field name per language for the status text, matching the irregular keys the
+# rest of the state file uses.
+STATUS_FIELDS = {
+    'nl': 'estado_besluit',
+    'en': 'status_en',
+    'es': 'status_es',
+    'tr': 'status_tr',
+    'pt-br': 'status_pt_br',
+    'pt-pt': 'status_pt_pt',
+    'fr': 'status_fr',
+    'de': 'status_de',
+}
+
+
+def status_text(state: str, lang: str = 'nl') -> str:
+    """Renders a canonical state as "<symbol> <label>" in one language."""
+    entry = STATUS_LABELS.get(state, STATUS_LABELS['agenda'])
+    l = lang if lang in LANGUAGES else DEFAULT_LANG
+    return f"{entry['symbol']} {entry[l]}"
+
 
 def t(key: str, lang: str = 'nl') -> str:
     """Helper function to fetch translated UI text safely."""
@@ -516,6 +785,72 @@ def t(key: str, lang: str = 'nl') -> str:
     if key in UI:
         return UI[key].get(l, UI[key].get(DEFAULT_LANG, key))
     return key
+
+def format_date(raw: str, lang: str = 'nl') -> str:
+    """
+    Renders an ISO timestamp as a date in the reader's language.
+
+    Pages used to print item.date[:10], so a Turkish reader got
+    "2026-06-25" and, when the field was empty, the English word "Recent".
+    """
+    l = lang if lang in LANGUAGES else DEFAULT_LANG
+    if not raw or not isinstance(raw, str) or len(raw) < 10:
+        return t('date_unknown', l)
+    try:
+        year, month, day = int(raw[0:4]), int(raw[5:7]), int(raw[8:10])
+        month_name = MONTHS[l][month - 1]
+    except (ValueError, IndexError):
+        return t('date_unknown', l)
+    return DATE_PATTERNS[l].format(day=day, month=month_name, year=year)
+
+
+def strip_leading_icon(text: str) -> str:
+    """
+    Drops a leading emoji (and a following label like "Context:") from a field.
+
+    The model is asked to prefix these fields with an icon, and the section
+    headings carry the same icon, so the detail page printed "🎯 🎯 Context:
+    ..." before this.
+    """
+    if not text:
+        return ""
+    out = text.lstrip()
+    # Emoji ranges the prompt actually uses, plus the variation selector and
+    # zero-width joiner that follow some of them.
+    while out and (
+        ord(out[0]) > 0x2000 and not out[0].isalnum() and out[0] not in "¿¡\"'(«—-"
+    ):
+        out = out[1:].lstrip()
+    return out or text.strip()
+
+
+def wijk_label(wijk: str, lang: str = 'nl') -> str:
+    """Translates the catch-all district; real district names stay as they are."""
+    if wijk == 'Overig':
+        return t('wijk_overig', lang)
+    return wijk
+
+
+# Strings app.js builds at runtime, so they cannot go through t() at build time.
+CLIENT_KEYS = [
+    'postal_badge',
+    'results_one',
+    'results_many',
+    'copied_to_clipboard',
+    'tts_unsupported',
+    'theme_to_dark',
+    'theme_to_light',
+]
+
+
+def client_strings(lang: str = 'nl') -> dict[str, str]:
+    """The subset of UI text app.js needs, plus the voice code for read-aloud."""
+    l = lang if lang in LANGUAGES else DEFAULT_LANG
+    out = {key: t(key, l) for key in CLIENT_KEYS}
+    out['lang'] = l
+    out['speech'] = str(LANGUAGES[l]['speech'])
+    return out
+
 
 def normalize_lang_code(lang: str) -> str:
     """Normalizes language code format."""

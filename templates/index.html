@@ -90,7 +90,9 @@
 
 <section class="cards-grid" id="cards-grid">
   {% for item in items %}
-  {% set detail_link = "besluit/" ~ item.doc_id ~ "/index.html" %}
+  {# Built from root_path so the archive pages, which sit four levels down,
+     link to the real detail page instead of a 404 below themselves. #}
+  {% set detail_link = (root_path if root_path else '../') ~ lang ~ "/besluit/" ~ item.doc_id ~ "/index.html" %}
   {% set title_text = get_item_lang_field(item, "title_short", lang) %}
   {% set summary_text = get_item_lang_field(item, "impact_sentence", lang) %}
   {% set status_text = get_item_lang_field(item, "status", lang) %}
@@ -103,7 +105,7 @@
           <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
             {{ status_text }}
           </span>
-          <span class="card-date">📅 {{ item.date[:10] if item.date else "Recent" }}</span>
+          <span class="card-date">📅 <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time></span>
         </div>
         
         {% if item.impact == "hoog" %}
@@ -138,7 +140,7 @@
           <span class="tag">{{ themes[t_key][lang] if t_key in themes and lang in themes[t_key] else (themes[t_key]['nl'] if t_key in themes else t_key) }}</span>
         {% endfor %}
         {% for w in item.wijken %}
-          <span class="tag">📍 {{ w }}</span>
+          <span class="tag">📍 {{ wijk_label(w, lang) }}</span>
         {% endfor %}
       </div>
     </div>
@@ -152,7 +154,7 @@
         <a href="{{ detail_link }}" class="pdf-link">
           📄 {{ t("view_details", lang) }} ➔
         </a>
-        <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', '{{ item.pdf_url }}')">🔗 {{ t("share", lang) }}</button>
+        <button class="share-btn" data-share-title="{{ title_text }}" data-share-url="{{ item.pdf_url or '' }}">🔗 {{ t("share", lang) }}</button>
       </div>
     </div>
   </article>

@@ -17,7 +17,15 @@ if PROJECT_ROOT not in sys.path:
 
 from jinja2 import Environment, FileSystemLoader
 
-from scripts.i18n import LANGUAGES, get_item_lang_field, t
+from scripts.i18n import (
+    LANGUAGES,
+    client_strings,
+    format_date,
+    get_item_lang_field,
+    strip_leading_icon,
+    t,
+    wijk_label,
+)
 from scripts.themes import THEMES
 
 logging.basicConfig(level=logging.INFO)
@@ -33,6 +41,10 @@ env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), autoescape=True)
 env.globals["t"] = t
 env.globals["get_item_lang_field"] = get_item_lang_field
 env.globals["LANGUAGES"] = LANGUAGES
+env.globals["client_strings"] = client_strings
+env.globals["format_date"] = format_date
+env.globals["strip_leading_icon"] = strip_leading_icon
+env.globals["wijk_label"] = wijk_label
 
 
 def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
@@ -68,16 +80,44 @@ def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
 </rss>"""
 
 
+def sort_key(item: dict) -> tuple:
+    """
+    Newest first, and stable when several items share a date.
+
+    Twelve of the thirty entries carry the same date, so ordering used to fall
+    back to whatever order the state dict happened to iterate in and the list
+    reshuffled between builds. The document id breaks the tie: at ORI it
+    increases over time, so the newest document of a day comes first.
+    """
+    return (item.get("date") or "", item.get("doc_id") or "")
+
+
+def month_key(item: dict) -> tuple[str, str] | None:
+    """(year, month) of an item, or None when the date is unusable."""
+    raw = item.get("date") or ""
+    if len(raw) < 7 or raw[4] != "-":
+        return None
+    return raw[0:4], raw[5:7]
+
+
 def build_static_site(items: list):
     """Builds complete static web output into docs/ for all 8 supported languages."""
-    # Ensure data directory exists
+    items = sorted(items, key=sort_key, reverse=True)
+
+    # Wipe the per-language trees first. Renaming a route used to leave the old
+    # one published forever: docs/en/decision and docs/en/archive were still
+    # being served months after they stopped being generated.
+    for lang in SUPPORTED_LANGUAGES:
+        lang_dir = os.path.join(DOCS_DIR, lang)
+        if os.path.exists(lang_dir):
+            shutil.rmtree(lang_dir)
+
     os.makedirs(os.path.join(DOCS_DIR, "data"), exist_ok=True)
 
     # Prepare directories for all languages
     for lang in SUPPORTED_LANGUAGES:
         os.makedirs(os.path.join(DOCS_DIR, lang), exist_ok=True)
         os.makedirs(os.path.join(DOCS_DIR, lang, "feed"), exist_ok=True)
-        os.makedirs(os.path.join(DOCS_DIR, lang, "archief", "2026", "07"), exist_ok=True)
 
     # Copy static assets
     target_static = os.path.join(DOCS_DIR, "static")
@@ -99,6 +139,12 @@ def build_static_site(items: list):
     with open(os.path.join(DOCS_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(root_redirect)
 
+    months: dict[tuple[str, str], list] = {}
+    for item in items:
+        bucket = month_key(item)
+        if bucket:
+            months.setdefault(bucket, []).append(item)
+
     # Templates
     index_template = env.get_template("index.html")
     over_template = env.get_template("over.html")
@@ -114,10 +160,17 @@ def build_static_site(items: list):
         with open(os.path.join(DOCS_DIR, lang, "over.html"), "w", encoding="utf-8") as f:
             f.write(over_html)
 
-        # Render month archive
-        archive_html = index_template.render(lang=lang, items=items, themes=THEMES, root_path="../../../../")
-        with open(os.path.join(DOCS_DIR, lang, "archief", "2026", "07", "index.html"), "w", encoding="utf-8") as f:
-            f.write(archive_html)
+        # Render one archive page per month that actually has entries. The
+        # build used to write every item into a single hardcoded 2026/07 page,
+        # so June decisions were filed under July.
+        for (year, month), month_items in sorted(months.items(), reverse=True):
+            month_dir = os.path.join(DOCS_DIR, lang, "archief", year, month)
+            os.makedirs(month_dir, exist_ok=True)
+            archive_html = index_template.render(
+                lang=lang, items=month_items, themes=THEMES, root_path="../../../../"
+            )
+            with open(os.path.join(month_dir, "index.html"), "w", encoding="utf-8") as f:
+                f.write(archive_html)
 
         # Write main RSS feed
         with open(os.path.join(DOCS_DIR, lang, "feed.xml"), "w", encoding="utf-8") as f:

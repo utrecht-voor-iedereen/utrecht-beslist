@@ -42,7 +42,10 @@
 
     <!-- Audio TTS & Print-to-PDF Controls -->
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <button class="audio-btn" onclick="speakText('{{ impact_sentence_text | escape }}. {{ summary_text | escape }}', '{{ lang }}')">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="{{ impact_sentence_text }} {{ summary_text }}">
         🔊 {{ t("listen_audio", lang) }}
       </button>
 
@@ -51,7 +54,7 @@
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
-        📅 {{ item.date[:10] if item.date else "Recent" }}
+        📅 {{ t("published_on", lang) }} <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time>
       </span>
     </div>
   </div>
@@ -66,61 +69,76 @@
     💡 {{ impact_sentence_text }}
   </div>
 
-  <!-- 4 Deep Detailed Sections -->
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
   <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <!-- Section 1: Context -->
+    <!-- Section 1: The decision itself -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🎯 {{ t("context_title", lang) }}
-      </h2>
-      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        {{ context_text }}
-      </p>
-    </section>
-
-    <!-- Section 2: Decision & Agreements -->
-    <section>
-      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📋 {{ t("summary_title", lang) }}
+        {{ t("summary_title", lang) }}
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
         {{ summary_text }}
       </p>
-      
+
       <!-- Bullet list breakdown -->
       <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
-        <li class="bullet-item">{{ bullet1_text }}</li>
-        <li class="bullet-item">{{ bullet2_text }}</li>
-        <li class="bullet-item">{{ bullet3_text }}</li>
+        {% if bullet1_text %}<li class="bullet-item">{{ bullet1_text }}</li>{% endif %}
+        {% if bullet2_text %}<li class="bullet-item">{{ bullet2_text }}</li>{% endif %}
+        {% if bullet3_text %}<li class="bullet-item">{{ bullet3_text }}</li>{% endif %}
       </ul>
     </section>
 
-    <!-- Section 3: Consequences for Residents -->
+    <!-- Section 2: Why it was tabled -->
+    {% if context_text %}
     <section>
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        🏘️ {{ t("consequences_title", lang) }}
+        {{ t("context_title", lang) }}
       </h2>
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
-        {{ consequences_text }}
+        {{ strip_leading_icon(context_text) }}
       </p>
     </section>
+    {% endif %}
+
+    <!-- Section 3: Consequences for Residents -->
+    {% if consequences_text %}
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        {{ t("consequences_title", lang) }}
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        {{ strip_leading_icon(consequences_text) }}
+      </p>
+    </section>
+    {% endif %}
 
     <!-- Section 4: Budget & Timeline -->
+    {% if key_figure_text or timeline_text %}
     <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
       <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
         {{ t("budget_timeline_title", lang) }}
       </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
+        {% if key_figure_text %}
         <div>
           <strong>{{ t("label_cost", lang) }}</strong>
-          <span>{{ key_figure_text }}</span>
+          <span>{{ strip_leading_icon(key_figure_text) }}</span>
         </div>
+        {% endif %}
+        {% if timeline_text %}
         <div>
           <strong>{{ t("label_timeline", lang) }}</strong>
-          <span>{{ timeline_text }}</span>
+          <span>{{ strip_leading_icon(timeline_text) }}</span>
         </div>
+        {% endif %}
       </div>
     </section>
+    {% endif %}
 
     <!-- Tags & Area -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
@@ -128,7 +146,7 @@
         <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">{{ themes[t_key][lang] if t_key in themes and lang in themes[t_key] else (themes[t_key]['nl'] if t_key in themes else t_key) }}</span>
       {% endfor %}
       {% for w in item.wijken %}
-        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 {{ w }}</span>
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 {{ wijk_label(w, lang) }}</span>
       {% endfor %}
     </div>
   </div>
@@ -136,24 +154,46 @@
   <!-- Official Source & Woo Rights Box -->
   <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
-      🏛️ {{ t("woo_rights_link", lang) }}
+      🏛️ {{ t("source_title", lang) }}
     </h3>
-    
+
+    {% if not item.pdf_url %}
+      <!-- Saying nothing here read as if the source had been withheld. -->
+      <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">
+        {{ t("no_pdf_available", lang) }}
+      </p>
+    {% endif %}
+
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
       {% if item.pdf_url %}
         <a href="{{ item.pdf_url }}" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
-          📄 {{ t("official_pdf_link", lang) }} ➔
+          {{ t("official_pdf_link", lang) }} ➔
         </a>
       {% endif %}
-      
+
       <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
         {{ t("raadsportaal_link", lang) }} 🔗
       </a>
 
-      <a href="https://openraadsinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 Open Raadsinformatie (ORI) 🔗
+      <a href="{{ item.source_url or 'https://openraadsinformatie.nl/' }}" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 {{ t("ori_record", lang) }} 🔗
       </a>
     </div>
+
+    {# Every PDF behind the decision, so a reader can check the summary against
+       the record instead of taking one linked file on trust. #}
+    {% if item.attachments and item.attachments | length > 1 %}
+      <details style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          {{ t("source_documents", lang) }} ({{ item.attachments | length }})
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          {% for att in item.attachments %}
+            <li><a href="{{ att.url }}" target="_blank" rel="noopener">{{ att.name or att.url }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endif %}
   </div>
 
   <!-- Transparency Footer -->
@@ -161,11 +201,12 @@
     <div>
       <span>🤖 {{ t("ai_transparency", lang) }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
       <span style="margin-left: 0.75rem;">📦 {{ t("permanent_archive", lang) }}</span>
+      <span style="margin-left: 0.75rem;">{{ t("woo_rights_link", lang) }}</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" onclick="shareCard('{{ title_text | escape }}', window.location.href)">🔗 {{ t("share", lang) }}</button>
-      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Fout%20in%20document%20{{ item.doc_id }}" target="_blank" rel="noopener" class="report-issue-link">
+      <button class="share-btn" data-share-title="{{ title_text }}">🔗 {{ t("share", lang) }}</button>
+      <a href="https://github.com/zaswear/utrecht-beslist/issues/new?title=Document%20{{ item.doc_id }}%20({{ lang }})" target="_blank" rel="noopener" class="report-issue-link">
         ⚠️ {{ t("report_error", lang) }}
       </a>
     </div>

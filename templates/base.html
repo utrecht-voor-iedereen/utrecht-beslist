@@ -50,17 +50,17 @@
         </svg>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <nav class="nav-links" aria-label="{{ t('nav_aria', lang) }}">
         <a href="{{ root_path if root_path else '../' }}{{ lang }}/index.html" class="nav-link">{{ t('nav_overview', lang) }}</a>
         <a href="{{ root_path if root_path else '../' }}{{ lang }}/over.html" class="nav-link">{{ t('nav_about', lang) }}</a>
-        
+
         <div class="header-tools">
-          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙 Dark</button>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="{{ t('theme_toggle_aria', lang) }}">{{ t('theme_to_dark', lang) }}</button>
 
           <!-- Native Custom-Styled Compact Language Selector -->
           <div class="lang-select-wrapper">
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
-            <select class="lang-select-native" aria-label="Select Language" onchange="window.location.href=this.value;">
+            <select class="lang-select-native" aria-label="{{ t('lang_select_aria', lang) }}" onchange="window.location.href=this.value;">
               {% for l_code, l_info in LANGUAGES.items() %}
                 <option value="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" {% if lang == l_code %}selected{% endif %}>
                   {{ l_info.label }} — {{ l_info.name }}
@@ -107,17 +107,20 @@
       </div>
 
       <div class="footer-column">
-        <h3>Disclaimers & Data</h3>
+        <h3>{{ t('footer_disclaimers', lang) }}</h3>
         <p>{{ t('footer_disclaimer', lang) }}</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Utrecht Beslist · Open source · Licentie: <a href="https://eupl.eu/1.2/en/" target="_blank">EUPL-1.2</a></span>
+      <span>© 2026 Utrecht Beslist · Open source · {{ t('license_label', lang) }} <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
       <span>{{ t('footer_rights', lang) }}</span>
     </div>
   </footer>
 
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{{ client_strings(lang) | tojson }}</script>
   <script src="{{ root_path if root_path else '../' }}static/js/app.js"></script>
 </body>
 </html>

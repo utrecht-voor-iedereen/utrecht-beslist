@@ -2,6 +2,29 @@
  * Client-side interaction, search, dark mode, keyboard shortcuts, TTS audio & sharing for Utrecht Beslist
  */
 
+// Rendered per page by base.html. The fallback keeps the file usable if the
+// block is missing, but every published page carries it.
+const UB = (() => {
+  const fallback = {
+    postal_badge: '📍 Postcode {code} → district {wijk}',
+    results_one: 'decision',
+    results_many: 'decisions',
+    copied_to_clipboard: 'Link copied to clipboard!',
+    tts_unsupported: 'Read-aloud is not supported by this browser.',
+    theme_to_dark: '🌙 Dark',
+    theme_to_light: '☀️ Light',
+    lang: 'nl',
+    speech: 'nl-NL'
+  };
+  const el = document.getElementById('ub-i18n');
+  if (!el) return fallback;
+  try {
+    return Object.assign(fallback, JSON.parse(el.textContent));
+  } catch (err) {
+    return fallback;
+  }
+})();
+
 const UTRECHT_POSTAL_MAP = {
   "3511": "Binnenstad", "3512": "Binnenstad", "3513": "Binnenstad", "3514": "Noordoost",
   "3515": "Noordoost", "3521": "Zuid", "3522": "Zuid", "3523": "Zuid", "3524": "Zuid",
@@ -34,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeSelect = document.getElementById('theme-select');
   const cardsGrid = document.getElementById('cards-grid');
   const cards = document.querySelectorAll('.card');
-  const langBtns = document.querySelectorAll('.lang-btn');
   const postalBadge = document.getElementById('postal-badge');
   const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
@@ -54,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('utrecht_theme', newTheme);
-      themeToggleBtn.textContent = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      themeToggleBtn.textContent = newTheme === 'dark' ? UB.theme_to_light : UB.theme_to_dark;
     });
-    
+
     const initialTheme = localStorage.getItem('utrecht_theme') || 'light';
-    themeToggleBtn.textContent = initialTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    themeToggleBtn.textContent = initialTheme === 'dark' ? UB.theme_to_light : UB.theme_to_dark;
   }
 
 
@@ -70,7 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
       detectedWijk = UTRECHT_POSTAL_MAP[match[1]];
       if (postalBadge) {
         postalBadge.style.display = 'inline-block';
-        postalBadge.textContent = `📍 Postcode ${match[1]} → Wijk ${detectedWijk}`;
+        postalBadge.textContent = UB.postal_badge
+          .replace('{code}', match[1])
+          .replace('{wijk}', detectedWijk);
       }
     } else {
       detectedWijk = '';
@@ -145,7 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (resultsCounterBadge) {
-      resultsCounterBadge.textContent = `${visibleCount} ${visibleCount === 1 ? 'item' : 'items'}`;
+      resultsCounterBadge.textContent =
+        `${visibleCount} ${visibleCount === 1 ? UB.results_one : UB.results_many}`;
     }
 
     // Toggle Reset Button
@@ -230,6 +255,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Read-aloud and share buttons carry their text in data attributes, so a
+  // quote in a summary can no longer break the handler.
+  document.addEventListener('click', (e) => {
+    const speaker = e.target.closest('[data-speak]');
+    if (speaker) {
+      speakText(speaker.dataset.speak);
+      return;
+    }
+    const sharer = e.target.closest('[data-share-title]');
+    if (sharer) {
+      shareCard(sharer.dataset.shareTitle, sharer.dataset.shareUrl);
+    }
+  });
+
   // Initial filter run to populate badge count
   filterCards();
 });
@@ -244,19 +283,21 @@ function shareCard(title, url) {
     }).catch(() => {});
   } else {
     navigator.clipboard.writeText(`${title} - ${url || window.location.href}`);
-    alert('Link gekopieerd naar klembord! / Link copied to clipboard!');
+    alert(UB.copied_to_clipboard);
   }
 }
 
-// Text-to-Speech (TTS Audio Read-Aloud) Function
-function speakText(text, lang = 'nl-NL') {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang === 'en' ? 'en-US' : 'nl-NL';
-    utterance.rate = 0.95;
-    window.speechSynthesis.speak(utterance);
-  } else {
-    alert('Audio read-aloud is not supported on this browser.');
+// Text-to-Speech (TTS Audio Read-Aloud) Function.
+// The voice used to be nl-NL for everything except English, so the Turkish and
+// Portuguese pages were read aloud by a Dutch voice.
+function speakText(text) {
+  if (!('speechSynthesis' in window)) {
+    alert(UB.tts_unsupported);
+    return;
   }
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = UB.speech;
+  utterance.rate = 0.95;
+  window.speechSynthesis.speak(utterance);
 }
