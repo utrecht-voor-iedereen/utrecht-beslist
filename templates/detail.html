@@ -157,6 +157,12 @@
       🏛️ {{ t("source_title", lang) }}
     </h3>
 
+    {% if item.source_borrowed_from %}
+      <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">
+        {{ t("borrowed_source", lang) }}
+      </p>
+    {% endif %}
+
     {% if not item.pdf_url %}
       <!-- Saying nothing here read as if the source had been withheld. -->
       <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">

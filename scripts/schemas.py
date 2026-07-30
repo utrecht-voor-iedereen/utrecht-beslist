@@ -131,6 +131,9 @@ class SummaryItem(BaseModel):
     classification: str = Field(default="")
     source_url: str = Field(default="")
     attachments: list[dict] = Field(default_factory=list)
+    # doc_id whose papers this record shows, when ORI files the decision and
+    # the proposal separately and only the proposal carries the PDFs.
+    source_borrowed_from: str = Field(default="")
 
 
 class SummaryBatchOutput(BaseModel):

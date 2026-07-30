@@ -30,7 +30,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7929a332-17e5-4837-a552-2d0d1e2d63a5",
     "date": "2026-07-09T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -104,7 +104,39 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7961870",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Meerjaren Perspectief Ruimte 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7929a332-17e5-4837-a552-2d0d1e2d63a5",
+        "size": 217563
+      },
+      {
+        "name": "Meerjaren Perspectief Ruimte 2026 (na verwerking erratum)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3fe7e4a4-817e-4a8d-a49a-198d2b50a3b2",
+        "size": 13361759
+      },
+      {
+        "name": "Lijst projecten sociale huur en middenhuur projecten 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=78969897-a2c5-482f-b025-4999374e95bf",
+        "size": 112033
+      },
+      {
+        "name": "Mandaat mer-beoordelingsbeslissing 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d5c30357-318d-4fb2-bbe9-ea7b9baecdb1",
+        "size": 61827
+      },
+      {
+        "name": "Bijlage voortgang woningbouwprojecten 100+ MPR 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=608b47b8-575b-41d4-96e2-e2d2b4e9b396",
+        "size": 158937
+      },
+      {
+        "name": "Bijlage Projectenlijst 6e tranche maatregelen",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4f9f19ea-77c2-465f-a03a-d6571927fb2c",
+        "size": 74150
+      }
+    ],
+    "source_borrowed_from": "7912169"
   },
   {
     "doc_id": "7961871",
@@ -137,7 +169,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf7cc2ce-7a68-4131-a37b-b97651bd7171",
     "date": "2026-07-09T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -211,7 +243,34 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7961871",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Voorjaarsnota 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf7cc2ce-7a68-4131-a37b-b97651bd7171",
+        "size": 177766
+      },
+      {
+        "name": "Voorjaarsnota 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=779bcccf-8fcb-485a-8e73-248aeeb8e9f1",
+        "size": 427621
+      },
+      {
+        "name": "Subsidiestaat 2026 gemeente Utrecht",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3d7e3fb1-8583-4d3f-b490-b108b3b1232e",
+        "size": 258692
+      },
+      {
+        "name": "Subsidiestaat 2027 gemeente Utrecht",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5411263b-65eb-44c5-9d4e-857b95aa8a9d",
+        "size": 192611
+      },
+      {
+        "name": "Dossier 5245 voorblad.pdf",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=27c9fb32-5762-429f-ae9b-8e58c34d4a2f",
+        "size": 18976
+      }
+    ],
+    "source_borrowed_from": "7947071"
   },
   {
     "doc_id": "7961872",
@@ -244,7 +303,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf",
     "date": "2026-07-09T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -318,7 +377,19 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7961872",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Eerste bestuursrapportage 2026",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf",
+        "size": 175384
+      },
+      {
+        "name": "Eerste Bestuursrapportage 2026 (na verwerking erratum)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ba9ff29f-3b73-45bc-a61b-d89ac7834f63",
+        "size": 914205
+      }
+    ],
+    "source_borrowed_from": "7912167"
   },
   {
     "doc_id": "7961873",
@@ -351,7 +422,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358",
     "date": "2026-07-09T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -425,7 +496,19 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7961873",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Resultaatbestemming 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358",
+        "size": 137480
+      },
+      {
+        "name": "Resultaatbestemming 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d3e435ac-57b4-4de5-9fa8-5a0feaff1f67",
+        "size": 139494
+      }
+    ],
+    "source_borrowed_from": "7903410"
   },
   {
     "doc_id": "7961874",
@@ -458,7 +541,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=674ea077-db85-4451-a0ad-e3c4a543d6be",
     "date": "2026-07-09T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -532,7 +615,39 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7961874",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Jaarstukken 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=674ea077-db85-4451-a0ad-e3c4a543d6be",
+        "size": 156702
+      },
+      {
+        "name": "Subsidiemonitor 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=afe0b8e5-064b-4098-96cc-5b2699d61495",
+        "size": 16290220
+      },
+      {
+        "name": "Jaarstukken 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=921a4fe7-e21e-4a20-8c0b-6f116421163d",
+        "size": 8444848
+      },
+      {
+        "name": "Utrecht Monitor 2026 - samenvatting",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=98c7dc58-5565-4657-b81f-2e1ddaf09e59",
+        "size": 5321510
+      },
+      {
+        "name": "Bewonerssamenvatting Jaarstukken 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b72827c8-bad1-442f-bc31-a29e8dc37f1e",
+        "size": 289614
+      },
+      {
+        "name": "Advies van de adviescommissie Controle en Financiën bij Jaarstukken 2025",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a2881396-1595-4384-8be7-727df46c5de2",
+        "size": 108198
+      }
+    ],
+    "source_borrowed_from": "7903396"
   },
   {
     "doc_id": "7947062",
@@ -639,7 +754,8 @@
     "doc_type": "AgendaItem",
     "classification": "",
     "source_url": "https://id.openraadsinformatie.nl/7947062",
-    "attachments": []
+    "attachments": [],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7947071",
@@ -772,7 +888,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=27c9fb32-5762-429f-ae9b-8e58c34d4a2f",
         "size": 18976
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7947092",
@@ -879,7 +996,8 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7947092",
-    "attachments": []
+    "attachments": [],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7947093",
@@ -986,7 +1104,8 @@
     "doc_type": "Report",
     "classification": "Raadsbesluit",
     "source_url": "https://id.openraadsinformatie.nl/7947093",
-    "attachments": []
+    "attachments": [],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926175",
@@ -1129,7 +1248,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e022c534-5041-4c48-9ace-f329767a0a46",
         "size": 15880
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926189",
@@ -1267,7 +1387,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=be7c717e-70a3-4c12-8335-72bb70b8bce2",
         "size": 16243
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926270",
@@ -1395,7 +1516,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=447f34eb-33f9-40b8-8d0b-35fb9407ec36",
         "size": 16966
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926182",
@@ -1523,7 +1645,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6e6fb050-973a-4b28-8fd3-36ab134f7fd4",
         "size": 16742
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926192",
@@ -1630,7 +1753,8 @@
     "doc_type": "AgendaItem",
     "classification": "",
     "source_url": "https://id.openraadsinformatie.nl/7926192",
-    "attachments": []
+    "attachments": [],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926168",
@@ -1778,7 +1902,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=aa45584e-d545-440b-a674-6328f9a59103",
         "size": 16567
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926267",
@@ -1906,7 +2031,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=47413301-ffdd-480a-8c14-5f25d258be8d",
         "size": 17148
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926272",
@@ -2029,7 +2155,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf0992c3-cfd9-4447-81b1-d332f959ae8b",
         "size": 17289
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7926275",
@@ -2157,7 +2284,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ea2209c0-b7c5-4cd1-99ad-a8ead1819009",
         "size": 17809
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7944277",
@@ -2190,7 +2318,7 @@
       "Noordoost"
     ],
     "impact": "laag",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8",
     "date": "2026-06-25T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -2264,7 +2392,24 @@
     "doc_type": "Report",
     "classification": "Toezeggingen",
     "source_url": "https://id.openraadsinformatie.nl/7944277",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Ontwerp Specifieke Verklaring van Geen Bedenkingen Isotopenweg 29",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8",
+        "size": 151450
+      },
+      {
+        "name": "Ontwerp Specifieke Verklaring van Geen Bedenkingen Isotopenweg 29",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=34cec33d-a15f-4927-a251-93a08801f404",
+        "size": 91691
+      },
+      {
+        "name": "Dossier 5298 voorblad.pdf",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf0992c3-cfd9-4447-81b1-d332f959ae8b",
+        "size": 17289
+      }
+    ],
+    "source_borrowed_from": "7926272"
   },
   {
     "doc_id": "7944278",
@@ -2297,7 +2442,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885",
     "date": "2026-06-25T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -2371,7 +2516,29 @@
     "doc_type": "Report",
     "classification": "Toezeggingen",
     "source_url": "https://id.openraadsinformatie.nl/7944278",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Aanpassing ‘Experiment in kader van Huisvestingsverordening inschrijfduurverlenging doorstroom na tijdelijkheid van aandachtsgroepen'",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885",
+        "size": 177578
+      },
+      {
+        "name": "Collegevoorstel Conceptwijziging nadere regel inschrijfduurverlenging 'Experiment in kader van Huisvestingsverordening",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e13a6201-a0c6-423c-b7d7-fc73939f50ab",
+        "size": 138019
+      },
+      {
+        "name": "Concept Besluit tot wijziging van Nadere regel Experiment inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=36c1a559-9d8d-40f3-87b2-54797251ac42",
+        "size": 38679
+      },
+      {
+        "name": "Dossier 5279 voorblad.pdf",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=47413301-ffdd-480a-8c14-5f25d258be8d",
+        "size": 17148
+      }
+    ],
+    "source_borrowed_from": "7926267"
   },
   {
     "doc_id": "7944279",
@@ -2404,7 +2571,7 @@
       "Overig"
     ],
     "impact": "gemiddeld",
-    "pdf_url": "",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885",
     "date": "2026-06-25T00:00:00+02:00",
     "degraded": false,
     "ai_model": "Groq (llama-3.3-70b-versatile)",
@@ -2478,7 +2645,29 @@
     "doc_type": "Report",
     "classification": "Toezeggingen",
     "source_url": "https://id.openraadsinformatie.nl/7944279",
-    "attachments": []
+    "attachments": [
+      {
+        "name": "Raadsvoorstel Aanpassing ‘Experiment in kader van Huisvestingsverordening inschrijfduurverlenging doorstroom na tijdelijkheid van aandachtsgroepen'",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885",
+        "size": 177578
+      },
+      {
+        "name": "Collegevoorstel Conceptwijziging nadere regel inschrijfduurverlenging 'Experiment in kader van Huisvestingsverordening",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e13a6201-a0c6-423c-b7d7-fc73939f50ab",
+        "size": 138019
+      },
+      {
+        "name": "Concept Besluit tot wijziging van Nadere regel Experiment inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=36c1a559-9d8d-40f3-87b2-54797251ac42",
+        "size": 38679
+      },
+      {
+        "name": "Dossier 5279 voorblad.pdf",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=47413301-ffdd-480a-8c14-5f25d258be8d",
+        "size": 17148
+      }
+    ],
+    "source_borrowed_from": "7926267"
   },
   {
     "doc_id": "7912169",
@@ -2617,7 +2806,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4f9f19ea-77c2-465f-a03a-d6571927fb2c",
         "size": 74150
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7912171",
@@ -2740,7 +2930,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=31e9ac1c-09af-4f6e-bd1e-fe61b2bec30a",
         "size": 334280
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7912175",
@@ -2883,7 +3074,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=358cf656-6e62-4441-8cb3-db35fd96d3eb",
         "size": 67985155
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7912165",
@@ -3016,7 +3208,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b72827c8-bad1-442f-bc31-a29e8dc37f1e",
         "size": 289614
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7912167",
@@ -3134,7 +3327,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ba9ff29f-3b73-45bc-a61b-d89ac7834f63",
         "size": 914205
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7903396",
@@ -3272,7 +3466,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a2881396-1595-4384-8be7-727df46c5de2",
         "size": 108198
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7903410",
@@ -3390,7 +3585,8 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d3e435ac-57b4-4de5-9fa8-5a0feaff1f67",
         "size": 139494
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   },
   {
     "doc_id": "7903412",
@@ -3538,6 +3734,7 @@
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=824fac75-8656-4728-8cfd-97aa48209ffc",
         "size": 565193
       }
-    ]
+    ],
+    "source_borrowed_from": ""
   }
 ]

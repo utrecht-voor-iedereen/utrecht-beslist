@@ -717,6 +717,16 @@ UI = {
         'fr': 'Fiche ORI de ce document',
         'de': 'ORI-Eintrag zu diesem Dokument',
     },
+    'borrowed_source': {
+        'nl': 'Dit is het raadsbesluit; de stukken hieronder horen bij het raadsvoorstel dat eraan voorafging.',
+        'en': 'This is the recorded decision; the documents below belong to the proposal it decided on.',
+        'es': 'Esta es la decisión registrada; los documentos de abajo pertenecen a la propuesta sobre la que se decidió.',
+        'tr': 'Bu, kayda geçen karardır; aşağıdaki belgeler kararın konusu olan teklife aittir.',
+        'pt-br': 'Esta é a decisão registrada; os documentos abaixo pertencem à proposta sobre a qual se decidiu.',
+        'pt-pt': 'Esta é a decisão registada; os documentos abaixo pertencem à proposta sobre a qual se decidiu.',
+        'fr': "Ceci est la décision enregistrée ; les documents ci-dessous relèvent de la proposition sur laquelle elle porte.",
+        'de': 'Dies ist der Ratsbeschluss; die Dokumente unten gehören zu dem Antrag, über den entschieden wurde.',
+    },
     'published_on': {
         'nl': 'Behandeld op',
         'en': 'Discussed on',

@@ -118,6 +118,7 @@ def apply_source_facts(summary: dict[str, Any], doc: dict[str, Any]) -> dict[str
     summary["classification"] = doc.get("classification", "")
     summary["source_url"] = doc.get("source_url", "")
     summary["attachments"] = doc.get("attachments", [])
+    summary["source_borrowed_from"] = doc.get("source_borrowed_from", "")
 
     for lang, field in STATUS_FIELDS.items():
         summary[field] = status_text(summary["state"], lang)

@@ -96,6 +96,7 @@ def main() -> int:
         item["classification"] = doc["classification"]
         item["source_url"] = doc["source_url"] or ORI_PERMALINK.format(doc_id=doc_id)
         item["attachments"] = doc["attachments"]
+        item["source_borrowed_from"] = doc.get("source_borrowed_from", "")
         if doc["date"]:
             item["date"] = doc["date"]
         if doc["pdf_url"]:

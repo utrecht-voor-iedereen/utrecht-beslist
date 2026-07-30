@@ -33,6 +33,9 @@ OUT_DIR = PROJECT_ROOT / "translation-tasks"
 
 MIN_USABLE_CHARS = 500
 
+# Written by import_summaries; entries carrying it have already been done.
+EXTERNAL_MODEL_LABEL = "External model (manual hand-off)"
+
 LANG_SUFFIXES = ["nl", "en", "es", "tr", "pt_br", "pt_pt", "fr", "de"]
 
 # base name -> the key each language uses. The Dutch keys are irregular; they
@@ -158,6 +161,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--per-batch", type=int, default=3, help="documents per file (default 3)")
     parser.add_argument("--max-chars", type=int, default=12000, help="source text per document")
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="also re-export entries already summarized from their source",
+    )
     args = parser.parse_args()
 
     state = {item["doc_id"]: item for item in json.loads(STATE_FILE.read_text(encoding="utf-8"))}
@@ -167,13 +175,20 @@ def main() -> int:
         d["id"]: d for d in filter_documents(fetch_utrecht_documents(size=150))
     }
 
-    usable, no_source = [], []
-    for doc_id in state:
+    usable, no_source, done = [], [], []
+    for doc_id, entry in state.items():
         doc = docs.get(doc_id)
-        if doc and len(doc.get("text", "")) >= MIN_USABLE_CHARS:
-            usable.append(doc)
-        else:
+        if not doc or len(doc.get("text", "")) < MIN_USABLE_CHARS:
             no_source.append(doc_id)
+        elif not args.all and entry.get("ai_model") == EXTERNAL_MODEL_LABEL:
+            # Already written from this text; re-exporting it would spend the
+            # effort again for the same result.
+            done.append(doc_id)
+        else:
+            usable.append(doc)
+
+    if done:
+        logger.info("%d entry(ies) already summarized from source, skipped (--all to redo)", len(done))
 
     usable.sort(key=lambda d: d.get("date", ""), reverse=True)
 
@@ -204,6 +219,14 @@ def main() -> int:
                 f"- **Official title:** {doc['title']}",
                 f"- **Date:** {(doc.get('date') or '')[:10]}",
                 f"- **Register record:** {doc.get('source_url', '')}",
+            ]
+            if doc.get("source_borrowed_from"):
+                parts.append(
+                    "- **Note:** this is the council's recorded decision on the proposal "
+                    f"below (ORI publishes the papers under `{doc['source_borrowed_from']}`). "
+                    "Write it as a decision that was taken, not as a proposal being tabled."
+                )
+            parts += [
                 "",
                 "### Source text",
                 "",

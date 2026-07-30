@@ -217,6 +217,52 @@ def enrich_with_attachments(docs: list[dict[str, Any]], max_text_chars: int = MA
             body = "\n\n".join(a["text"] for a in resolved if a["text"])
             doc["text"] = body[:max_text_chars]
 
+    return share_text_between_siblings(docs)
+
+
+def share_text_between_siblings(docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """
+    Lets a decision record read the documents of the proposal it decided.
+
+    ORI publishes a dossier twice: once as the AgendaItem for the meeting,
+    which carries the PDFs, and once as a Report classified Raadsbesluit that
+    records the outcome and carries nothing at all. Both share an official
+    `name`. Without this the decision — the more important of the two — was
+    summarized from its title, which is how five council decisions ended up
+    described as "this proposal concerns the multi-year spatial perspective".
+
+    Only the source material is shared. The state, date and register link of
+    each record stay its own, because they are what differs between them.
+    """
+    donors: dict[str, dict[str, Any]] = {}
+    for doc in docs:
+        name = (doc.get("title") or "").strip()
+        if not name or not doc.get("text"):
+            continue
+        # Prefer the donor with the most attachments: dossiers are sometimes
+        # tabled twice and the later agenda has the fuller set.
+        current = donors.get(name)
+        if current is None or len(doc.get("attachments", [])) > len(current.get("attachments", [])):
+            donors[name] = doc
+
+    borrowed = 0
+    for doc in docs:
+        if doc.get("text"):
+            continue
+        donor = donors.get((doc.get("title") or "").strip())
+        if not donor or donor is doc:
+            continue
+
+        doc["text"] = donor["text"]
+        doc["attachments"] = list(donor.get("attachments", []))
+        if not doc.get("pdf_url"):
+            doc["pdf_url"] = donor.get("pdf_url", "")
+        # Recorded so the page can say whose documents these are.
+        doc["source_borrowed_from"] = donor["id"]
+        borrowed += 1
+
+    if borrowed:
+        logger.info("%d record(s) took their source documents from a matching dossier.", borrowed)
     return docs
 
 def filter_documents(raw_hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
