@@ -34,6 +34,14 @@ ANOMALY_THRESHOLD_DAYS = 90
 # per-minute token budget. Overridable for local runs on a paid key.
 BATCH_PAUSE_SECONDS = float(os.environ.get("BATCH_PAUSE_SECONDS", "45"))
 
+# How many previously unseen documents one run may summarize. ORI's window
+# holds far more than a day's allowance: 46 unprocessed documents were waiting
+# at roughly 159,000 tokens, against a free-tier limit of 100,000 a day. Left
+# uncapped, the run burns its budget, the rest fall through to degraded mode,
+# and the backlog is published as filler. Capped, it drains over a few days
+# with every entry written from its actual source.
+MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN", "12"))
+
 def load_state() -> list[dict[str, Any]]:
     """Loads existing processed items from state file."""
     if os.path.exists(STATE_FILE):
@@ -152,7 +160,18 @@ def run_pipeline():
 
     logger.info(f"Discovered {len(docs_to_process)} new/updated/upgradeable documents to process.")
 
-    new_summaries = []
+    # Newest first, so the backlog drains from the most recent decisions.
+    docs_to_process.sort(key=lambda d: d.get("date") or "", reverse=True)
+    if len(docs_to_process) > MAX_NEW_PER_RUN:
+        logger.warning(
+            "Summarizing the %d most recent of %d; the rest wait for the next run "
+            "so this one stays inside the provider's daily token budget.",
+            MAX_NEW_PER_RUN, len(docs_to_process),
+        )
+        docs_to_process = docs_to_process[:MAX_NEW_PER_RUN]
+
+    new_summaries: list[dict[str, Any]] = []
+    skipped_degraded: list[str] = []
     if docs_to_process:
         # Two documents per call, paced to the minute. Batches of five were fine
         # while every document was an empty title, but now that attachment text
@@ -170,6 +189,15 @@ def run_pipeline():
                 doc_id = sum_item.get("doc_id")
                 orig_doc = doc_map.get(doc_id, {})
                 apply_source_facts(sum_item, orig_doc)
+
+                # A degraded summary says nothing the title does not. Publishing
+                # it is how thirty entries came to read "this proposal concerns
+                # X"; leaving it out means the document simply waits for a run
+                # that can summarize it properly.
+                if sum_item.get("degraded"):
+                    skipped_degraded.append(doc_id)
+                    continue
+
                 new_summaries.append(sum_item)
 
     # Upsert into state dictionary. Merging rather than replacing: a plain
@@ -184,6 +212,13 @@ def run_pipeline():
             existing_map[doc_id] = merged
         else:
             existing_map[doc_id] = item
+
+    if skipped_degraded:
+        logger.warning(
+            "%d document(s) left unpublished because no AI provider answered: %s. "
+            "They are retried on the next run.",
+            len(skipped_degraded), ", ".join(skipped_degraded[:10]),
+        )
 
     all_items = list(existing_map.values())
     all_items.sort(key=lambda x: x.get("date", ""), reverse=True)

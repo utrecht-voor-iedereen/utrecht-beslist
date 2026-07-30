@@ -56,7 +56,7 @@ utrecht-beslist/
 ├── scripts/
 │   ├── pipeline.py        # Master pipeline orchestrator
 │   ├── source_ori.py      # Open Raadsinformatie ElasticSearch client
-│   ├── ai_chain.py        # Groq -> Gemini -> OpenRouter -> Degraded AI chain
+│   ├── ai_chain.py        # Groq -> Gemini -> Degraded AI chain
 │   ├── build_site.py      # Jinja2 static HTML renderer & detail page generator
 │   ├── schemas.py         # Pydantic summary item schema
 │   ├── themes.py          # Themes & Utrecht neighborhood taxonomy
