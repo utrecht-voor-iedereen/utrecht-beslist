@@ -1,3 +1,26 @@
+> [!WARNING]
+> **Historical snapshot — superseded on 30 July 2026.**
+>
+> This report describes the project as of 26 July 2026 and several of its
+> findings did not hold up:
+>
+> - **Accessibility 98/100** — 74 interactive elements on the overview and 17
+>   on the detail pages were under the 44px minimum touch target. Since fixed;
+>   what remains is a 1×1 spam honeypot and one inline link WCAG 2.2 exempts.
+> - **Architecture 100/100** — the OpenRouter step it credits has never been
+>   implemented. The chain is Groq → Gemini → degraded mode.
+> - **B1 Language & Civic Utility 96/100** — the summaries it rates were
+>   written from document titles alone, because agenda-item attachments were
+>   never fetched. Two decisions carried an invented figure of 2,5M € copied
+>   out of the prompt's own example, and six that the register records as
+>   passed were displayed as still under review.
+> - **Dual NL/EN** — the site publishes eight languages, and six of them were
+>   serving English text through a silent fallback.
+>
+> Kept for the record. Do not cite its scores as current.
+
+---
+
 # 🛡️ Impeccable Audit — Utrecht Beslist
 
 **Project**: 🥇 Utrecht Beslist (Gemeenteraad in Begrijpelijke Taal)  

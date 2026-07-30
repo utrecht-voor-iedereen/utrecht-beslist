@@ -120,8 +120,16 @@ def normalize_document(raw_hit: dict[str, Any]) -> dict[str, Any]:
     date_str = source.get("start_date") or source.get("last_discussed_at") or ""
     pdf_url = source.get("original_url") or source.get("url") or ""
 
-    attachment_ids = source.get("attachment")
-    if not isinstance(attachment_ids, list):
+    # ORI returns a bare string when a record has exactly one attachment, and a
+    # list when it has several. Treating only the list case as valid dropped
+    # the single-attachment documents, which is why two entries appeared to
+    # have no source at all.
+    raw_attachments = source.get("attachment")
+    if isinstance(raw_attachments, str):
+        attachment_ids = [raw_attachments] if raw_attachments.strip() else []
+    elif isinstance(raw_attachments, list):
+        attachment_ids = [str(a) for a in raw_attachments if a]
+    else:
         attachment_ids = []
 
     return {
@@ -134,7 +142,7 @@ def normalize_document(raw_hit: dict[str, Any]) -> dict[str, Any]:
         "doc_type": str(source.get("@type") or ""),
         "classification": str(source.get("classification") or ""),
         "source_url": ORI_PERMALINK.format(doc_id=doc_id),
-        "attachment_ids": [str(a) for a in attachment_ids],
+        "attachment_ids": attachment_ids,
         "attachments": [],
     }
 

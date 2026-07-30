@@ -1152,3 +1152,108 @@ footer {
     min-height: 48px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Touch target sizes
+
+   Measured on the built pages: the language selector, view toggles, "view
+   details" links and share buttons all came out at 40px, and the footer links
+   at 18px — under the 44px a finger needs. Applied unconditionally rather than
+   behind `pointer: coarse`, because 40 to 44 is barely visible on a desktop
+   and a media query nobody can measure is a rule nobody can check.
+
+   .report-honeypot is deliberately 1x1 and invisible; it catches form-filling
+   bots and must stay out of this.
+   --------------------------------------------------------------------------- */
+
+.lang-select-native,
+.view-toggle-btn,
+.pdf-link,
+.share-btn,
+.audio-btn,
+.theme-toggle-btn,
+.human-impact-btn,
+.report-submit-btn,
+.filter-select,
+.nav-link,
+.footer-column a,
+.report-issue-link {
+  min-height: 44px;
+}
+
+.pdf-link,
+.share-btn,
+.audio-btn,
+.nav-link,
+.footer-column a,
+.report-issue-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-column ul li {
+  padding: 0.1rem 0;
+}
+
+/* The card title is the only way into a decision, so it gets a full 44px of
+   hit area. The negative margin cancels the padding again, so cards keep the
+   spacing they had. */
+.card-title a {
+  display: block;
+  padding: 0.6rem 0;
+  margin: -0.6rem 0;
+}
+
+/* Navigation links on the detail page: the breadcrumb, the dossier history and
+   the list of source documents. Each is a link on its own line, not prose, so
+   the row itself becomes the target. */
+[aria-label="Breadcrumb"] a,
+.dossier-history a,
+.source-documents a,
+.source-documents summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.dossier-history li,
+.source-documents li {
+  line-height: 1.5;
+}
+
+/* The EUPL link in the footer sentence is left alone on purpose: WCAG 2.2
+   exempts a link inside a block of text, and padding it out would break the
+   line it sits in. */
+
+/* Measured again at 390px, where the layout is tighter: the brand link, the
+   compact-list toggle and the footer links fall under 44px in one dimension or
+   the other. Width matters as much as height for a thumb. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.view-toggle-btn,
+.footer-column a,
+.nav-link {
+  min-width: 44px;
+  justify-content: center;
+}
+
+.footer-column a {
+  justify-content: flex-start;
+  padding-inline: 0.15rem;
+}
+
+/* 0.6rem left the card title 3px short once the mobile line-height kicked in. */
+.card-title a {
+  padding: 0.75rem 0;
+  margin: -0.75rem 0;
+}
+
+/* The spam trap must not become tappable. */
+.report-honeypot,
+.report-honeypot:focus {
+  min-height: 0;
+}

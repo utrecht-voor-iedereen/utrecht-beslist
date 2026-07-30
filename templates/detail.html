@@ -159,7 +159,7 @@
     <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
       🗓️ {{ t("dossier_history", lang) }}
     </h3>
-    <ol style="margin: 0 0 0 1.1rem; font-size: 0.9rem; line-height: 1.9; color: var(--utrecht-gris-secundario);">
+    <ol class="dossier-history" style="margin: 0 0 0 1.1rem; font-size: 0.9rem; line-height: 1.9; color: var(--utrecht-gris-secundario);">
       {% for step in item.history %}
         <li>
           <time datetime="{{ step.date[:10] }}">{{ format_date(step.date, lang) }}</time>
@@ -211,7 +211,7 @@
     {# Every PDF behind the decision, so a reader can check the summary against
        the record instead of taking one linked file on trust. #}
     {% if item.attachments and item.attachments | length > 1 %}
-      <details style="margin-top: 1.25rem;">
+      <details class="source-documents" style="margin-top: 1.25rem;">
         <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
           {{ t("source_documents", lang) }} ({{ item.attachments | length }})
         </summary>
