@@ -45,7 +45,13 @@ BATCH_PAUSE_SECONDS = float(os.environ.get("BATCH_PAUSE_SECONDS", "45"))
 # uncapped, the run burns its budget, the rest fall through to degraded mode,
 # and the backlog is published as filler. Capped, it drains over a few days
 # with every entry written from its actual source.
-MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN", "12"))
+# End to end a document costs roughly 5,000 tokens to summarize plus 9,000 to
+# translate into the six remaining languages, so about seven fit in Groq's
+# 100,000 a day. Twelve overran the budget and the job's wall clock: the run of
+# 31 July summarized twelve, then spent fifteen minutes on translations, was
+# cancelled at the twenty-minute job timeout, and skipped the commit — paying
+# for the work and publishing none of it.
+MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN", "6"))
 
 def load_state() -> list[dict[str, Any]]:
     """Loads existing processed items from state file."""

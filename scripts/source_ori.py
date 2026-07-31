@@ -4,6 +4,7 @@ Client module for Open Raadsinformatie (ORI) ElasticSearch API for Utrecht munic
 
 import json
 import logging
+import os
 import urllib.error
 import urllib.request
 from typing import Any
@@ -273,6 +274,32 @@ def share_text_between_siblings(docs: list[dict[str, Any]]) -> list[dict[str, An
         logger.info("%d record(s) took their source documents from a matching dossier.", borrowed)
     return docs
 
+# Titles that introduce something the council decides on. Everything else the
+# register carries — Raadsbrief, memos, B&W minutes, commitment lists — is the
+# material around a decision rather than a decision.
+DECISION_TITLE_PREFIXES = (
+    "raadsvoorstel",
+    "initiatiefvoorstel",
+    "motie",
+    "amendement",
+)
+
+# Publish only what the council decides on. The site is called Utrecht Beslist
+# and asks "what did the council decide"; of the 93 unpublished documents in
+# ORI's window, 40 were letters from the executive and not one was a proposal.
+# Set UTRECHT_BESLIST_ALL_DOCS=1 to widen it back to everything the register
+# carries.
+DECISIONS_ONLY = os.environ.get("UTRECHT_BESLIST_ALL_DOCS", "") not in ("1", "true", "yes")
+
+
+def is_decision(doc: dict[str, Any]) -> bool:
+    """Whether a document is something the council decides, not reports on."""
+    title = doc.get("title", "").lower().lstrip("'\"“‘ ")
+    if title.startswith(DECISION_TITLE_PREFIXES):
+        return True
+    return doc.get("classification") == "Raadsbesluit"
+
+
 def filter_documents(raw_hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Filters raw document hits to keep relevant, non-trivial documents.
@@ -290,6 +317,9 @@ def filter_documents(raw_hits: list[dict[str, Any]]) -> list[dict[str, Any]]:
         # one produced an article titled "Raadsvoorstellen weekoverzicht" with
         # nothing behind it.
         if doc["doc_type"] == "Meeting":
+            continue
+
+        if DECISIONS_ONLY and not is_decision(doc):
             continue
 
         # Keep anything that either has text of its own or points at documents

@@ -11,7 +11,11 @@ permissions:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Was 20, which the run of 31 July hit: the job was cancelled mid-translation
+    # and skipped the commit, so the tokens it had already spent summarizing were
+    # thrown away. The steps below carry their own budgets and finish well inside
+    # this; it is a backstop, not the schedule.
+    timeout-minutes: 45
 
     steps:
       - name: Checkout Repository
@@ -38,20 +42,31 @@ jobs:
 
       # The summarizer only reliably returns Dutch and English, and the site
       # silently falls back to English for the rest, so this ran only by hand
-      # and the six other editions drifted out of date. Failing here would
-      # throw away a good pipeline run, so the site is rebuilt either way.
+      # and the six other editions drifted out of date.
+      #
+      # TRANSLATE_MAX_SECONDS makes it stop cleanly with time to spare rather
+      # than being killed by the job timeout: a cancelled job skips the commit,
+      # and anything it did not reach is simply picked up tomorrow.
+      # continue-on-error covers a genuine failure; it does not cover a
+      # cancellation, which is why the budget is needed as well.
       - name: Fill Missing Translations
         continue-on-error: true
+        timeout-minutes: 20
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TRANSLATE_MAX_SECONDS: '900'
         run: |
           python -m scripts.translate_missing
 
       - name: Rebuild Site With Translations
+        if: always()
         run: |
           python -m scripts.build_site
 
+      # Runs even if a step above failed: a partial day of work is still worth
+      # publishing, and losing it silently is how 31 July produced nothing.
       - name: Commit and Push Changes
+        if: always()
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'

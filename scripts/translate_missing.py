@@ -209,6 +209,12 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0, help="stop after N items")
     parser.add_argument("--dry-run", action="store_true", help="report what is missing and exit")
     parser.add_argument(
+        "--max-seconds",
+        type=float,
+        default=float(os.environ.get("TRANSLATE_MAX_SECONDS", "0")),
+        help="stop cleanly after this long, keeping what is already saved",
+    )
+    parser.add_argument(
         "--recheck",
         action="store_true",
         help="also redo fields the model returned verbatim in English or Dutch",
@@ -236,8 +242,21 @@ def main() -> int:
 
     done = 0
     incomplete: list[str] = []
+    deadline = time.monotonic() + args.max_seconds if args.max_seconds > 0 else None
+    ran_out = False
 
     for index, langs in pending:
+        # A GitHub job that is cancelled mid-step skips the commit, so a run
+        # that overruns throws away the summarizing it already paid for. This
+        # stops while there is still time to save and push.
+        if deadline and time.monotonic() > deadline:
+            ran_out = True
+            logger.warning(
+                "out of time after %.0fs; the rest is picked up on the next run",
+                args.max_seconds,
+            )
+            break
+
         item = items[index]
         label = item.get("titel_kort_nl") or item.get("doc_id", "?")
 
@@ -294,6 +313,8 @@ def main() -> int:
         logger.info("saved after %s", label[:50])
 
     logger.info("completed %d of %d language passes", done, total)
+    if ran_out:
+        return 0
     if incomplete:
         logger.warning("still incomplete (%d): %s", len(incomplete), ", ".join(incomplete[:20]))
         return 1
