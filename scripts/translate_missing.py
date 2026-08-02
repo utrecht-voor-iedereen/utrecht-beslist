@@ -7,6 +7,11 @@ PT-BR, PT-PT, FR and DE falls back to English through get_item_lang_field().
 This translates the existing Dutch and English text into the missing languages
 and, unlike the summarization step, refuses to accept a partial answer.
 
+"Partial" means partial against what the entry actually has: a field the
+summarizer left empty in Dutch and English has nothing to translate and is not
+counted. Measuring against all ten regardless is what kept the nightly run
+retrying the same ninety impossible passes until the job timed out.
+
     python -m scripts.translate_missing              # only what is missing
     python -m scripts.translate_missing --recheck    # also redo English leftovers
     python -m scripts.translate_missing --force      # redo every language
@@ -22,7 +27,7 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Any
+from typing import Any, TypeGuard
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -82,9 +87,29 @@ def save_state(items: list[dict[str, Any]]) -> None:
         json.dump(items, fh, ensure_ascii=False, indent=2)
 
 
+def has_text(value: Any) -> TypeGuard[str]:
+    return isinstance(value, str) and bool(value.strip())
+
+
+def translatable_fields(item: dict[str, Any]) -> list[tuple[str, str, str]]:
+    """
+    The fields this entry can actually produce: the ones with Dutch or English
+    source text.
+
+    The summarizer leaves `key_figure` empty on 15 of the 29 entries — a report
+    with no headline number — and `timeline` on four. Measuring completeness
+    against all ten regardless meant those language passes could never finish:
+    every attempt came back "8 of 10", burned its four retries, and the entry
+    stayed on the pending list for the next night to redo. That is the loop the
+    cron run was stuck in.
+    """
+    return [f for f in FIELDS if has_text(item.get(f[1])) or has_text(item.get(f[2]))]
+
+
 def missing_langs(item: dict[str, Any], force: bool, recheck: bool = False) -> list[str]:
     """
-    Languages for which at least one field is absent, blank, or still English.
+    Languages for which at least one translatable field is absent, blank, or
+    still English.
 
     With `recheck`, text the model returned verbatim from the source counts as
     missing too, so an entry that slipped through before this check existed is
@@ -92,11 +117,12 @@ def missing_langs(item: dict[str, Any], force: bool, recheck: bool = False) -> l
     """
     if force:
         return list(TARGETS)
+    wanted = translatable_fields(item)
     out = []
     for suffix in TARGETS:
-        for base, nl_key, en_key in FIELDS:
+        for base, nl_key, en_key in wanted:
             value = item.get(f"{base}_{suffix}")
-            if not (isinstance(value, str) and value.strip()):
+            if not has_text(value):
                 out.append(suffix)
                 break
             if recheck and is_untranslated(
@@ -145,10 +171,20 @@ def call_groq(payload: dict[str, Any], api_key: str) -> str:
     return body["choices"][0]["message"]["content"]
 
 
-def translate(item: dict[str, Any], suffix: str, api_key: str, model: str) -> dict[str, str]:
+def translate(
+    item: dict[str, Any],
+    suffix: str,
+    api_key: str,
+    model: str,
+    fields: list[tuple[str, str, str]] | None = None,
+) -> dict[str, str]:
     """Asks for one language at a time: a short answer is far likelier to arrive whole."""
+    fields = fields if fields is not None else translatable_fields(item)
+
+    # Only the fields with source text are sent. Asking for a key with an empty
+    # body invited the model to invent a figure that is not in the document.
     source = {}
-    for base, nl_key, en_key in FIELDS:
+    for base, nl_key, en_key in fields:
         source[base] = {
             "nl": item.get(nl_key, ""),
             "en": item.get(en_key, ""),
@@ -156,7 +192,7 @@ def translate(item: dict[str, Any], suffix: str, api_key: str, model: str) -> di
 
     user = {
         "target_language": TARGETS[suffix],
-        "required_keys": [base for base, _n, _e in FIELDS],
+        "required_keys": [base for base, _n, _e in fields],
         "source": source,
     }
 
@@ -182,14 +218,14 @@ def translate(item: dict[str, Any], suffix: str, api_key: str, model: str) -> di
     data = json.loads(raw)
 
     # The model sometimes nests the answer under the language name.
-    if not any(base in data for base, _n, _e in FIELDS):
+    if not any(base in data for base, _n, _e in fields):
         for value in data.values():
-            if isinstance(value, dict) and any(base in value for base, _n, _e in FIELDS):
+            if isinstance(value, dict) and any(base in value for base, _n, _e in fields):
                 data = value
                 break
 
     result = {}
-    for base, _nl, en_key in FIELDS:
+    for base, _nl, en_key in fields:
         value = data.get(base)
         if not (isinstance(value, str) and value.strip()):
             continue
@@ -245,11 +281,22 @@ def main() -> int:
     deadline = time.monotonic() + args.max_seconds if args.max_seconds > 0 else None
     ran_out = False
 
+    def out_of_time() -> bool:
+        return deadline is not None and time.monotonic() > deadline
+
+    def capped_sleep(seconds: float) -> float:
+        """Sleeps, but never past the deadline."""
+        if deadline is not None:
+            seconds = max(0.0, min(seconds, deadline - time.monotonic()))
+        if seconds > 0:
+            time.sleep(seconds)
+        return seconds
+
     for index, langs in pending:
         # A GitHub job that is cancelled mid-step skips the commit, so a run
         # that overruns throws away the summarizing it already paid for. This
         # stops while there is still time to save and push.
-        if deadline and time.monotonic() > deadline:
+        if out_of_time():
             ran_out = True
             logger.warning(
                 "out of time after %.0fs; the rest is picked up on the next run",
@@ -259,14 +306,23 @@ def main() -> int:
 
         item = items[index]
         label = item.get("titel_kort_nl") or item.get("doc_id", "?")
+        wanted = translatable_fields(item)
+        target = len(wanted)
 
         for suffix in langs:
+            if out_of_time():
+                ran_out = True
+                break
+
             filled: dict[str, str] = {}
             # Groq's free tier throttles hard, and giving up after two tries is
             # what left 70 of 174 passes empty on the first run.
             for attempt in (1, 2, 3, 4):
+                if out_of_time():
+                    ran_out = True
+                    break
                 try:
-                    filled = translate(item, suffix, api_key, model)
+                    got = translate(item, suffix, api_key, model, wanted)
                 except urllib.error.HTTPError as exc:
                     if exc.code == 429:
                         # Groq tells you exactly how long to wait; guessing wastes
@@ -278,39 +334,59 @@ def main() -> int:
                             wait = 30 * attempt
                     else:
                         wait = 5
+                    # Never sleep past the deadline: the point of the budget is
+                    # to leave time for the commit, and a 120s back-off inside
+                    # the retry loop used to sail straight through it.
+                    wait = capped_sleep(wait)
                     logger.warning(
                         "%s/%s HTTP %s, waiting %.0fs (attempt %d)",
                         label[:40], suffix, exc.code, wait, attempt,
                     )
-                    time.sleep(wait)
                     continue
                 except Exception as exc:  # noqa: BLE001
                     logger.warning("%s/%s failed: %s", label[:40], suffix, exc)
-                    time.sleep(5)
+                    capped_sleep(5)
                     continue
 
-                if len(filled) == len(FIELDS):
+                # Keep the union across attempts. Overwriting meant a second
+                # answer that happened to be shorter threw away good fields.
+                before = len(filled)
+                filled.update(got)
+
+                if len(filled) >= target:
+                    break
+                if len(filled) == before:
+                    # The model is not going to produce those keys from this
+                    # source; four identical answers cost a quarter of an hour.
+                    logger.warning(
+                        "%s/%s stuck at %d of %d fields, moving on",
+                        label[:40], suffix, len(filled), target,
+                    )
                     break
                 logger.warning(
                     "%s/%s returned %d of %d fields on attempt %d",
-                    label[:40], suffix, len(filled), len(FIELDS), attempt,
+                    label[:40], suffix, len(filled), target, attempt,
                 )
 
             # Write whatever came back, but never overwrite good text with nothing.
             for base, value in filled.items():
                 item[f"{base}_{suffix}"] = value
 
-            if len(filled) < len(FIELDS):
-                incomplete.append(f"{item.get('doc_id')}/{suffix} ({len(filled)}/{len(FIELDS)})")
+            if len(filled) < target:
+                incomplete.append(f"{item.get('doc_id')}/{suffix} ({len(filled)}/{target})")
             else:
                 done += 1
 
             # Pacing below the free-tier limit costs less time overall than
             # burning retries on 429s.
-            time.sleep(float(os.environ.get("TRANSLATE_DELAY", "4")))
+            capped_sleep(float(os.environ.get("TRANSLATE_DELAY", "4")))
 
         save_state(items)
         logger.info("saved after %s", label[:50])
+
+        if ran_out:
+            logger.warning("out of time; the rest is picked up on the next run")
+            break
 
     logger.info("completed %d of %d language passes", done, total)
     if ran_out:
