@@ -2,7 +2,9 @@
 Unit tests for Open Raadsinformatie source parsing and filtering.
 """
 
-from scripts.source_ori import filter_documents, normalize_document
+from datetime import date
+
+from scripts.source_ori import filter_documents, newest_past_date, normalize_document
 
 
 def test_normalize_document():
@@ -40,3 +42,24 @@ def test_filter_documents_exclusions():
     filtered = filter_documents(raw_hits)
     assert len(filtered) == 1
     assert filtered[0]["id"] == "2"
+
+
+def _hit(start_date):
+    return {"_source": {"start_date": start_date}}
+
+
+def test_newest_past_date_ignores_future_records():
+    # Registers hold forward-dated material: Rotterdam publishes replies due in
+    # 2027 and one ori_* record is dated 2099. Taking the top of the sort would
+    # report a harvest as current when it stopped months ago.
+    hits = [_hit("2099-01-01"), _hit("2027-04-29"), _hit("2026-07-09T10:00:00+02:00")]
+    assert newest_past_date(hits, today=date(2026, 8, 5)) == date(2026, 7, 9)
+
+
+def test_newest_past_date_skips_unparseable_dates():
+    hits = [_hit(None), _hit("onbekend"), _hit("2026-06-25")]
+    assert newest_past_date(hits, today=date(2026, 8, 5)) == date(2026, 6, 25)
+
+
+def test_newest_past_date_without_usable_hits():
+    assert newest_past_date([], today=date(2026, 8, 5)) is None

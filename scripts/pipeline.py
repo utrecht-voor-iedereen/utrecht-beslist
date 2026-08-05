@@ -19,7 +19,7 @@ from dateutil.parser import parse as parse_date
 from .ai_chain import run_ai_chain
 from .build_site import build_static_site
 from .i18n import STATUS_FIELDS, status_text
-from .source_ori import fetch_utrecht_documents, filter_documents
+from .source_ori import fetch_utrecht_documents, filter_documents, peer_newest_dates
 from .translate_missing import FIELDS as TRANSLATABLE_FIELDS
 from .translate_missing import TARGETS as TRANSLATION_TARGETS
 
@@ -28,11 +28,12 @@ logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 STATE_FILE = os.path.join(PROJECT_ROOT, "state", "processed.json")
-# Days without a newer document before the run says something is wrong. It was
-# 90, which is long enough for the upstream harvester to stop and the site to
-# sit frozen for a quarter without anyone being told. Dutch councils take a
-# summer recess of roughly six weeks, so the message has to allow for that
-# rather than claim a fault it cannot prove.
+# Days without a newer document before the run looks into why. It was 90, which
+# is long enough for the upstream harvester to stop and the site to sit frozen
+# for a quarter without anyone being told. It stays short — shorter than a
+# recess — because crossing it no longer asserts a fault: diagnose_staleness()
+# compares Utrecht against the other councils in the register and only calls it
+# a fault when they are still publishing.
 ANOMALY_THRESHOLD_DAYS = int(os.environ.get("ANOMALY_THRESHOLD_DAYS", "21"))
 
 # Seconds to wait between summarization batches, to stay inside the provider's
@@ -69,30 +70,66 @@ def save_state(items: list[dict[str, Any]]):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(items, f, indent=2, ensure_ascii=False)
 
+def diagnose_staleness(days_diff: int, peers: dict[str, Any] | None = None) -> tuple[int, str]:
+    """
+    Says whether a quiet register means a recess or a broken harvest.
+
+    The threshold alone cannot tell those apart, so it cried fault every day of
+    a six-week summer recess and would have been ignored by the time a real
+    outage arrived. The other councils in the register answer the question:
+    Dutch councils recess together, so if Amsterdam and The Hague are just as
+    quiet the silence is the calendar, and only Utrecht falling behind while its
+    peers keep publishing is Open Raadsinformatie losing Utrecht.
+
+    Returns the log level to use and the line to log at it.
+    """
+    peers = peer_newest_dates() if peers is None else peers
+    today = datetime.now(timezone.utc).date()
+    ages = {index: (today - seen).days for index, seen in peers.items() if seen}
+    detail = ", ".join(f"{index.rstrip('*')}: {age}d" for index, age in sorted(ages.items()))
+
+    if not ages:
+        return logging.ERROR, (
+            f"STALE: the newest document is {days_diff} days old (threshold "
+            f"{ANOMALY_THRESHOLD_DAYS}) and no peer register answered, so this run "
+            "cannot tell a recess from a stopped harvest. Check "
+            "https://api.openraadsinformatie.nl by hand."
+        )
+
+    quiet = [index for index, age in ages.items() if age > ANOMALY_THRESHOLD_DAYS]
+    if len(quiet) * 2 >= len(ages):
+        return logging.INFO, (
+            f"Quiet for {days_diff} days, and so are {len(quiet)} of {len(ages)} peer "
+            f"councils ({detail}) — a recess, not a fault. Nothing to do; the run "
+            "picks up again when the council does."
+        )
+
+    return logging.CRITICAL, (
+        f"STALE: Utrecht is {days_diff} days behind while its peers are current "
+        f"({detail}). The council is sitting and Open Raadsinformatie is not "
+        "harvesting Utrecht — report it upstream rather than waiting it out."
+    )
+
+
 def check_inactivity_anomaly(items: list[dict[str, Any]]):
-    """Checks if no documents have been added or updated in > 90 days."""
+    """Warns when the register has gone quiet, and says whether that is expected."""
     if not items:
         return
-    
+
     latest_date_str = items[0].get("date")
     if not latest_date_str:
         return
-    
+
     try:
         latest_dt = parse_date(latest_date_str)
         now_dt = datetime.now(timezone.utc)
         if latest_dt.tzinfo is None:
             latest_dt = latest_dt.replace(tzinfo=timezone.utc)
-            
+
         days_diff = (now_dt - latest_dt).days
         if days_diff > ANOMALY_THRESHOLD_DAYS:
-            logger.critical(
-                "STALE: the newest document is %d days old (threshold %d). Either the "
-                "council is in recess or Open Raadsinformatie has stopped harvesting "
-                "Utrecht. Check the newest start_date in ori_utrecht* against the "
-                "council's own agenda before assuming the pipeline is at fault.",
-                days_diff, ANOMALY_THRESHOLD_DAYS,
-            )
+            level, message = diagnose_staleness(days_diff)
+            logger.log(level, message)
     except Exception as e:  # noqa: BLE001
         logger.warning(f"Could not calculate inactivity days: {e}")
 

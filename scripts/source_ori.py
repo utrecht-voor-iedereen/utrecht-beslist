@@ -7,12 +7,21 @@ import logging
 import os
 import urllib.error
 import urllib.request
+from datetime import date, datetime, timezone
 from typing import Any
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 ORI_ELASTIC_ENDPOINT = "https://api.openraadsinformatie.nl/v1/elastic/ori_utrecht*/_search"
+ORI_INDEX_ENDPOINT = "https://api.openraadsinformatie.nl/v1/elastic/{index}/_search"
+
+# Other councils in the same register, used to tell a recess from a fault. A run
+# looking only at Utrecht cannot distinguish "the council has stopped meeting"
+# from "Open Raadsinformatie has stopped harvesting Utrecht", and those need
+# opposite responses: one is waited out, the other is reported upstream. Four is
+# enough to make a majority meaningful without spending the run's time on it.
+PEER_INDEXES = ("ori_amsterdam*", "ori_den_haag*", "ori_eindhoven*", "ori_groningen*")
 
 EXCLUDE_TITLE_KEYWORDS = [
     "presentielijst",
@@ -55,6 +64,52 @@ def fetch_utrecht_documents(size: int = 150) -> list[dict[str, Any]]:
     except Exception as e:  # noqa: BLE001
         logger.error(f"Error fetching from Open Raadsinformatie: {e}")
         return []
+
+def newest_past_date(hits: list[dict[str, Any]], today: date | None = None) -> date | None:
+    """
+    The newest start_date among hits that is not in the future.
+
+    A register carries forward-dated material — Rotterdam publishes replies due
+    in 2027, and one ori_* record is dated 2099 — so the first hit of a
+    descending sort is not the point the harvest actually reached.
+    """
+    today = today or datetime.now(timezone.utc).date()
+    for hit in hits:
+        raw = str(hit.get("_source", {}).get("start_date") or "")[:10]
+        try:
+            parsed = date.fromisoformat(raw)
+        except ValueError:
+            continue
+        if parsed <= today:
+            return parsed
+    return None
+
+
+def newest_document_date(index_pattern: str, size: int = 50) -> date | None:
+    """Date of the most recent document a register holds, or None if unreachable."""
+    payload = {
+        "size": size,
+        "sort": [{"start_date": {"order": "desc", "unmapped_type": "keyword"}}],
+    }
+    req = urllib.request.Request(
+        ORI_INDEX_ENDPOINT.format(index=index_pattern),
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json", "User-Agent": "UtrechtBeslistBot/1.0"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception as e:  # noqa: BLE001
+        logger.warning(f"Could not read {index_pattern} from Open Raadsinformatie: {e}")
+        return None
+
+    return newest_past_date(data.get("hits", {}).get("hits", []))
+
+
+def peer_newest_dates(indexes: tuple[str, ...] = PEER_INDEXES) -> dict[str, date | None]:
+    """The high-water mark of each peer register, keyed by index pattern."""
+    return {index: newest_document_date(index) for index in indexes}
+
 
 ORI_PERMALINK = "https://id.openraadsinformatie.nl/{doc_id}"
 
