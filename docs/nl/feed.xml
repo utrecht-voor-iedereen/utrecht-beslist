@@ -6,24 +6,6 @@
     <description>Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).</description>
     <language>nl</language>
     <item>
-      <title>Vaststelling Voorjaarsnota 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
-      <description>De raad heeft de beleidsarme Voorjaarsnota 2026 vastgesteld. Het besluit bevestigt het geactualiseerde financiële beeld met onvermijdelijke knelpunten als basis voor het nieuwe coalitieakkoord.</description>
-      <guid isPermaLink="false">7947071</guid>
-    </item>
-    <item>
-      <title>Vaststelling Meerjarenperspectief Ruimte 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
-      <description>De Gemeenteraad heeft het Meerjarenperspectief Ruimte 2026 vastgesteld. Het besluit omvat de programmering van investeringen in betaalbaar wonen, duurzame mobiliteit, groen en de toewijzing van voorbereidingskredieten voor herontwikkelingen.</description>
-      <guid isPermaLink="false">7912169</guid>
-    </item>
-    <item>
-      <title>Vaststelling Eerste bestuursrapportage 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>De raad heeft de Eerste bestuursrapportage 2026 vastgesteld. Hiermee worden de investeringskredieten met 26,2 miljoen euro verhoogd en verschuivingen in het sociaal domein doorgevoerd.</description>
-      <guid isPermaLink="false">7912167</guid>
-    </item>
-    <item>
       <title>Vaststelling Resultaatbestemming 2025</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
       <description>De raad heeft de Resultaatbestemming 2025 vastgesteld. Het besluit regelt de overheveling van 20,5 miljoen euro aan resterende incidentele budgetten naar het begrotingsjaar 2026 voor het afronden van lopende projecten.</description>
@@ -34,6 +16,24 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
       <description>De raad heeft de Jaarstukken 2025 vastgesteld en het college décharge verleend. Het jaar sluit af met een overschot van 54,6 miljoen euro dat wordt toegevoegd aan de algemene dekkingsreserve.</description>
       <guid isPermaLink="false">7903396</guid>
+    </item>
+    <item>
+      <title>Vaststelling Meerjarenperspectief Ruimte 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>De Gemeenteraad heeft het Meerjarenperspectief Ruimte 2026 vastgesteld. Het besluit omvat de programmering van investeringen in betaalbaar wonen, duurzame mobiliteit, groen en de toewijzing van voorbereidingskredieten voor herontwikkelingen.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>Vaststelling Eerste bestuursrapportage 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>De raad heeft de Eerste bestuursrapportage 2026 vastgesteld. Hiermee worden de investeringskredieten met 26,2 miljoen euro verhoogd en verschuivingen in het sociaal domein doorgevoerd.</description>
+      <guid isPermaLink="false">7825093</guid>
+    </item>
+    <item>
+      <title>Vaststelling Voorjaarsnota 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>De raad heeft de beleidsarme Voorjaarsnota 2026 vastgesteld. Het besluit bevestigt het geactualiseerde financiële beeld met onvermijdelijke knelpunten als basis voor het nieuwe coalitieakkoord.</description>
+      <guid isPermaLink="false">7756188</guid>
     </item>
     <item>
       <title>Ontheffing woonplaatsvereiste</title>
@@ -48,22 +48,22 @@
       <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
-      <title>Wijziging verordening Participatiewet en re-integratie</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
-      <description>De Gemeenteraad past de Verordening re-integratie en tegenprestatie Participatiewet aan. Hierdoor krijgen jongeren tot 27 jaar betere begeleiding van school naar werk en komt er een nieuw Ontwikkeltraject.</description>
-      <guid isPermaLink="false">7926270</guid>
+      <title>Rekenkamerrapport huishoudelijke hulp</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>De Rekenkamer deed onderzoek naar huishoudelijke hulp in Utrecht. Het rapport 'Stof tot nadenken' bevat zeven aanbevelingen om de dienstverlening te verbeteren. De raad wordt verzocht het college te vragen deze aanbevelingen uit te voeren.</description>
+      <guid isPermaLink="false">7896265</guid>
     </item>
     <item>
       <title>Wmo-verordening 2027 vaststellen</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
       <description>De raad beslist over de nieuwe Verordening maatschappelijke ondersteuning 2027. De regels worden duidelijker en toegankelijker voor inwoners en professionals. Er komen heldere criteria en nieuwe regels voor de eigen bijdrage.</description>
-      <guid isPermaLink="false">7926189</guid>
+      <guid isPermaLink="false">7875413</guid>
     </item>
     <item>
-      <title>Rekenkamerrapport huishoudelijke hulp</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
-      <description>De Rekenkamer deed onderzoek naar huishoudelijke hulp in Utrecht. Het rapport 'Stof tot nadenken' bevat zeven aanbevelingen om de dienstverlening te verbeteren. De raad wordt verzocht het college te vragen deze aanbevelingen uit te voeren.</description>
-      <guid isPermaLink="false">7926175</guid>
+      <title>Wijziging verordening Participatiewet en re-integratie</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>De Gemeenteraad past de Verordening re-integratie en tegenprestatie Participatiewet aan. Hierdoor krijgen jongeren tot 27 jaar betere begeleiding van school naar werk en komt er een nieuw Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7817769</guid>
     </item>
     <item>
       <title>Wijziging Algemene Plaatselijke Verordening</title>
@@ -78,40 +78,112 @@
       <guid isPermaLink="false">7912171</guid>
     </item>
     <item>
-      <title>Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.</description>
-      <guid isPermaLink="false">7944278</guid>
-    </item>
-    <item>
-      <title>Verklaring van geen bedenkingen uitbreiding Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>Het college stelt de raad voor een specifieke verklaring van geen bedenkingen af te geven voor Theo Pouw aan de Isotopenweg 29. Dit maakt het mogelijk dat de provincie Utrecht een vergunning verleent voor twee nieuwe afvalverwerkingsactiviteiten.</description>
-      <guid isPermaLink="false">7944277</guid>
-    </item>
-    <item>
-      <title>Omzetting omgevingsplan Pijlsweerd, Lauwerecht, Vogelenbuurt en Tuinwijk</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
-      <description>De raad stelt de tweede wijziging van het omgevingsplan Utrecht vast. Hiermee worden tien bestemmingsplannen in Noordwest en Noordoost omgezet naar het definitieve omgevingsplan en worden regels over bodemfunctieklassen en archeologie toegevoegd.</description>
-      <guid isPermaLink="false">7926275</guid>
-    </item>
-    <item>
-      <title>Openbaarmaking geheime bijlagen over schadevergoeding Klépierre</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
-      <description>Dit initiatiefvoorstel beoogt de raad het voornemen te laten vaststellen om de geheimhouding op bijlagen bij de vaststellingsovereenkomst met Klépierre over de trappen van de Moreelsebrug op te heffen en deze openbaar te maken.</description>
-      <guid isPermaLink="false">7926256</guid>
-    </item>
-    <item>
       <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
+      <title>Aanpassing inschrijfduurverlenging voor doorstroom van aandachtsgroepen</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>Het college past de kaders van het flexwonen-experiment aan voor bewoners van Place2BU en Goeie Buur. De verlenging van de inschrijftijd wordt nu variabel vastgesteld op basis van actuele toewijzingscijfers om doorstroom naar een nieuwe woning mogelijk te maken.</description>
+      <guid isPermaLink="false">7849679</guid>
+    </item>
+    <item>
+      <title>Omzetting omgevingsplan Pijlsweerd, Lauwerecht, Vogelenbuurt en Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>De raad stelt de tweede wijziging van het omgevingsplan Utrecht vast. Hiermee worden tien bestemmingsplannen in Noordwest en Noordoost omgezet naar het definitieve omgevingsplan en worden regels over bodemfunctieklassen en archeologie toegevoegd.</description>
+      <guid isPermaLink="false">7842627</guid>
+    </item>
+    <item>
+      <title>Verklaring van geen bedenkingen uitbreiding Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>Het college stelt de raad voor een specifieke verklaring van geen bedenkingen af te geven voor Theo Pouw aan de Isotopenweg 29. Dit maakt het mogelijk dat de provincie Utrecht een vergunning verleent voor twee nieuwe afvalverwerkingsactiviteiten.</description>
+      <guid isPermaLink="false">7817759</guid>
+    </item>
+    <item>
+      <title>Openbaarmaking geheime bijlagen over schadevergoeding Klépierre</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
+      <description>Dit initiatiefvoorstel beoogt de raad het voornemen te laten vaststellen om de geheimhouding op bijlagen bij de vaststellingsovereenkomst met Klépierre over de trappen van de Moreelsebrug op te heffen en deze openbaar te maken.</description>
+      <guid isPermaLink="false">7680201</guid>
+    </item>
+    <item>
       <title>Beantwoording raadsvraag en errata financiële stukken</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
       <description>Het college stuurt de antwoorden op schriftelijke vragen over de Jaarstukken 2025 en bestuursrapportages, inclusief errata. Tevens bevat de brief een oproep van de G4-steden over dierenwelzijn en dierenartskosten.</description>
       <guid isPermaLink="false">7903412</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel zienswijze VRU: jaarstukken '25, geactualiseer...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8439067a-f043-4cc5-8300-47a26950a923</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel zienswijze VRU: jaarstukken '25, geactualiseerde begroting '26, ontwerpbegroting '27. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7842617</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel zienswijze ontwerpbegroting 2027-2030 GR Het Utrechts Archief (HUA). Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7830823</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Vaststellen subsidie Stadsbelang Utrecht 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c8d9d15-e699-49f4-a141-dd623d075773</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Vaststellen subsidie Stadsbelang Utrecht 2025. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7892817</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Zienswijze ontwerpbegroting 2027-2030 GR Het Utrechts Archief (HUA). Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7892807</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Ontheffing woonplaatsvereiste voor wethoudersc...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b5ed6309-8a04-4253-b0a3-99c2930d9680</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juni 2026. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7875411</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel herbenoeming lid RvT NUOVO</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=5791bff0-72b4-4cb4-b6de-aef8d3c88cbd</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel herbenoeming lid RvT NUOVO. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7849697</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Afzien bindend advies voor twee buitenplanse a...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=77b70c06-5944-4d78-ade0-6adf35bf76fc</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Afzien bindend advies voor twee buitenplanse afwijkvergunningen in Cartesius. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7842625</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Zienswijze Ontwerpbegroting GGDrU 2027</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dd3906a7-fb65-4d70-baa0-c22ea0a4b6f7</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Zienswijze Ontwerpbegroting GGDrU 2027. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7830817</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Zienswijze Ontwerp Programmabegroting Omgeving...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=46b828cf-687d-4569-8f7f-b1612577f5dd</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Zienswijze Ontwerp Programmabegroting Omgevingsdienst Utrecht 2027. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7830812</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Zienswijze Ontwerpbegroting BghU 2027, inclusi...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=71b70940-6194-4ba7-b31b-cd20d694d0f1</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Zienswijze Ontwerpbegroting BghU 2027, inclusief meerjarenperspectief 2028-2030. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7817762</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Zienswijze gemeenteraad Utrecht op Ontwerpbegr...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2760ae7d-5163-457e-9d15-40abe7ab1774</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Zienswijze gemeenteraad Utrecht op Ontwerpbegroting 2027 recreatieschap Stichtse Groenlanden. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7786897</guid>
+    </item>
+    <item>
+      <title>Raadsvoorstel Vaststellen TAM omgevingsplan extra woningen i...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8deaceed-b20d-4731-a544-d546ca173b99</link>
+      <description>Officieel gemeentestuk: Raadsvoorstel Vaststellen TAM omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
+      <guid isPermaLink="false">7778097</guid>
     </item>
   </channel>
 </rss>

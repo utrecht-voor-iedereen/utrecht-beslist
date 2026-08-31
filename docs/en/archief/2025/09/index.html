@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utrecht Beslist — City Council Decisions</title>
+  <meta name="description" content="Utrecht city council decisions and documents explained in plain language.">
+  <link rel="icon" type="image/svg+xml" href="../../../../static/img/favicon.svg">
+  <link rel="stylesheet" href="../../../../static/css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../../../../en/feed.xml">
+</head>
+<body>
+
+  <!-- Header Component: Dark Navy Slate + Vector Shield Logo -->
+  <header>
+    <div class="header-container">
+      <a href="../../../../en/index.html" class="brand" title="Utrecht Beslist">
+        <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — CITY COUNCIL IN PLAIN LANGUAGE">
+          <defs>
+            <clipPath id="clip-top-left-hdr">
+              <polygon points="0,0 80,0 0,80" />
+            </clipPath>
+            <clipPath id="clip-bottom-right-hdr">
+              <polygon points="0,0 80,80 0,80" />
+            </clipPath>
+            <path id="shield-hdr" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+          </defs>
+
+          <!-- Red Upper-Left Half -->
+          <use href="#shield-hdr" fill="#CC0000" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- White Lower-Right Half -->
+          <use href="#shield-hdr" fill="#FFFFFF" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Black Contour Outline -->
+          <use href="#shield-hdr" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+          <!-- Checkmark on Red Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- Checkmark on White Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Wordmark Title -->
+          <text x="84" y="42" font-family="system-ui, Arial, sans-serif" font-size="30" font-weight="700" xml:space="preserve"><tspan fill="#FFFFFF">Utrecht </tspan><tspan fill="#CC0000">Beslist</tspan><tspan fill="#FFCC00">.</tspan></text>
+
+          <!-- Subtitle -->
+          <text x="85" y="63" font-family="system-ui, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2" fill="rgba(255,255,255,0.85)">CITY COUNCIL IN PLAIN LANGUAGE</text>
+        </svg>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../../../../en/index.html" class="nav-link">Overview</a>
+        <a href="../../../../en/over.html" class="nav-link">About &amp; Transparency</a>
+
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle dark and light mode">🌙 Dark</button>
+
+          <!-- Native Custom-Styled Compact Language Selector -->
+          <div class="lang-select-wrapper">
+            <span class="lang-globe-icon" aria-hidden="true">🌐</span>
+            <select class="lang-select-native" aria-label="Select language" onchange="window.location.href=this.value;">
+              
+                <option value="../../../../nl/index.html" >
+                  NL — Nederlands
+                </option>
+              
+                <option value="../../../../en/index.html" selected>
+                  EN — English
+                </option>
+              
+                <option value="../../../../es/index.html" >
+                  ES — Español
+                </option>
+              
+                <option value="../../../../tr/index.html" >
+                  TR — Türkçe
+                </option>
+              
+                <option value="../../../../pt-br/index.html" >
+                  PT-BR — Português (Brasil)
+                </option>
+              
+                <option value="../../../../pt-pt/index.html" >
+                  PT-PT — Português (Portugal)
+                </option>
+              
+                <option value="../../../../fr/index.html" >
+                  FR — Français
+                </option>
+              
+                <option value="../../../../de/index.html" >
+                  DE — Deutsch
+                </option>
+              
+            </select>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1>What did Utrecht City Council decide this week?</h1>
+    <p>Overview of Utrecht city council decisions and proposals in plain language, with direct links to official documents.</p>
+    
+    <!-- NoticeBox Component Pattern -->
+    <div class="notice-box">
+      📊 Archive: <strong>3</strong> council decisions permanently preserved
+    </div>
+  </div>
+</section>
+
+
+  <main class="main-wrapper">
+    
+<!-- Option A UX Control Panel -->
+<section class="controls-card">
+  <!-- Row 1: Prominent Human Impact Buttons -->
+  <div class="human-impact-bar">
+    <button class="human-impact-btn active" data-impact-group="all">🌐 All Decisions</button>
+    <button class="human-impact-btn" data-impact-group="casa">🏠 My House &amp; Neighborhood</button>
+    <button class="human-impact-btn" data-impact-group="bolsillo">💶 My Wallet &amp; Taxes</button>
+    <button class="human-impact-btn" data-impact-group="movilidad">🚲 My Mobility &amp; Daily Life</button>
+  </div>
+
+  <!-- Row 2: Clean Search Input -->
+  <div class="search-box">
+    <label for="search-input" class="search-label">
+      Search council documents or postal code (e.g. 3511, 3544)
+      <span class="shortcut-hint" title="Shortcut: Press '/' or Ctrl+K">/</span>
+    </label>
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" class="search-input" placeholder="Search keyword, postcode...">
+  </div>
+
+  <div id="postal-badge" class="notice-box success" style="display: none; margin-top: 0; margin-bottom: 1rem;"></div>
+
+  <!-- Row 3: Option A Smart Selectors (Wijk & Theme Dropdowns) -->
+  <div class="smart-selectors-row">
+    <!-- Wijk Selector -->
+    <select id="wijk-select" class="filter-select">
+      <option value="all">📍 All Utrecht Neighborhoods</option>
+      <option value="Binnenstad">🏰 Binnenstad</option>
+      <option value="Oost">🌳 Oost</option>
+      <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
+      <option value="Overvecht">🏢 Overvecht</option>
+      <option value="Zuid">🚉 Zuid</option>
+      <option value="Zuidwest">🚲 Zuidwest</option>
+      <option value="West">🛠️ West</option>
+      <option value="Noordwest">🏞️ Noordwest</option>
+      <option value="Vleuten-De Meern">🌾 Vleuten-De Meern</option>
+      <option value="Noordoost">🎓 Noordoost</option>
+    </select>
+
+    <!-- Specific Theme Selector -->
+    <select id="theme-select" class="filter-select">
+      <option value="all">🏷️ All Topics</option>
+      
+        
+          <option value="wonen">🏠 Housing &amp; Living</option>
+        
+      
+        
+          <option value="verkeer">🚲 Traffic &amp; Mobility</option>
+        
+      
+        
+          <option value="veiligheid">🛡️ Safety &amp; Enforcement</option>
+        
+      
+        
+          <option value="groen-klimaat">🌿 Green &amp; Climate</option>
+        
+      
+        
+          <option value="jeugd-onderwijs">🎓 Youth &amp; Education</option>
+        
+      
+        
+          <option value="zorg">❤️ Health &amp; Welfare</option>
+        
+      
+        
+          <option value="bestuur-financien">🏛️ Governance &amp; Finance</option>
+        
+      
+        
+          <option value="cultuur-evenementen">🎨 Culture &amp; Sports</option>
+        
+      
+        
+      
+    </select>
+
+    <!-- Active Filter Reset Button -->
+    <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
+      ❌ Reset filters <span class="shortcut-hint">Esc</span>
+    </button>
+  </div>
+</section>
+
+<!-- View Mode Switcher Header with Counter Badge & Shortcut Hint -->
+<div class="view-header-bar">
+  <span class="view-header-title">
+    Council Decisions
+    <span id="results-counter-badge" class="results-counter-badge"></span>
+  </span>
+  
+  <div class="view-toggle-group">
+    <button class="view-toggle-btn active" data-view-mode="cards" id="view-cards-btn" title="Press 'L' to switch view">
+      🃏 <span class="view-toggle-text">Cards</span> <span class="shortcut-hint">L</span>
+    </button>
+    <button class="view-toggle-btn" data-view-mode="list" id="view-list-btn" title="Press 'L' to switch view">
+      📋 <span class="view-toggle-text">Compact List</span>
+    </button>
+  </div>
+</div>
+
+<section class="cards-grid" id="cards-grid">
+  
+  
+  
+  
+  
+  
+  
+
+  <article class="card" data-theme="verkeer veiligheid groen-klimaat bestuur-financien" data-wijk="overig">
+    <div>
+      <div class="card-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+            ⏳ On the agenda
+          </span>
+          <span class="card-date">📅 <time datetime="2025-09-18">18 September 2025</time></span>
+        </div>
+        
+        
+          <span class="badge-impact impact-gemiddeld">Medium Impact</span>
+        
+      </div>
+
+      <!-- Title linking directly to detail page -->
+      <h2 class="card-title">
+        <a href="../../../../en/besluit/7301574/index.html">
+          Council Proposal Verordening uitvoering en handhaving omgevings...
+        </a>
+      </h2>
+
+      <!-- One-line Human Impact Highlight -->
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
+        💡 Important council decision concerning Council Proposal Verordening uitvoering en handhaving omgevings....
+      </p>
+
+      <!-- Key tags (Figure, Neighborhoods, Themes) -->
+      <div class="card-tags">
+        
+          <span class="tag" style="font-weight: 700;">
+            💶 See council document
+          </span>
+        
+        
+          <span class="tag">Traffic &amp; Mobility</span>
+        
+          <span class="tag">Safety &amp; Enforcement</span>
+        
+          <span class="tag">Green &amp; Climate</span>
+        
+          <span class="tag">Governance &amp; Finance</span>
+        
+        
+          <span class="tag">📍 City-wide</span>
+        
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Council Doc #7301574
+      </span>
+      
+      <div class="card-actions">
+        <a href="../../../../en/besluit/7301574/index.html" class="pdf-link">
+          📄 View details ➔
+        </a>
+        <button class="share-btn" data-share-title="Council Proposal Verordening uitvoering en handhaving omgevings..." data-share-url="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd2f541-2e82-4842-9f4e-77a656c42b3b">🔗 Share</button>
+      </div>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+  
+
+  <article class="card" data-theme="wonen verkeer groen-klimaat zorg bestuur-financien" data-wijk="overvecht">
+    <div>
+      <div class="card-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+            ⏳ On the agenda
+          </span>
+          <span class="card-date">📅 <time datetime="2025-09-07">7 September 2025</time></span>
+        </div>
+        
+        
+          <span class="badge-impact impact-gemiddeld">Medium Impact</span>
+        
+      </div>
+
+      <!-- Title linking directly to detail page -->
+      <h2 class="card-title">
+        <a href="../../../../en/besluit/7301466/index.html">
+          Council Proposal Vaststelling Masterplan Overvecht Centrum
+        </a>
+      </h2>
+
+      <!-- One-line Human Impact Highlight -->
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
+        💡 Important council decision concerning Council Proposal Vaststelling Masterplan Overvecht Centrum.
+      </p>
+
+      <!-- Key tags (Figure, Neighborhoods, Themes) -->
+      <div class="card-tags">
+        
+          <span class="tag" style="font-weight: 700;">
+            💶 See council document
+          </span>
+        
+        
+          <span class="tag">Housing &amp; Living</span>
+        
+          <span class="tag">Traffic &amp; Mobility</span>
+        
+          <span class="tag">Green &amp; Climate</span>
+        
+          <span class="tag">Health &amp; Welfare</span>
+        
+          <span class="tag">Governance &amp; Finance</span>
+        
+        
+          <span class="tag">📍 Overvecht</span>
+        
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Council Doc #7301466
+      </span>
+      
+      <div class="card-actions">
+        <a href="../../../../en/besluit/7301466/index.html" class="pdf-link">
+          📄 View details ➔
+        </a>
+        <button class="share-btn" data-share-title="Council Proposal Vaststelling Masterplan Overvecht Centrum" data-share-url="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=db6afc9c-84c3-4abf-bb89-87cc953af106">🔗 Share</button>
+      </div>
+    </div>
+  </article>
+  
+  
+  
+  
+  
+  
+  
+
+  <article class="card" data-theme="wonen verkeer zorg bestuur-financien" data-wijk="overig">
+    <div>
+      <div class="card-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+            ⏳ On the agenda
+          </span>
+          <span class="card-date">📅 <time datetime="2025-09-07">7 September 2025</time></span>
+        </div>
+        
+        
+          <span class="badge-impact impact-gemiddeld">Medium Impact</span>
+        
+      </div>
+
+      <!-- Title linking directly to detail page -->
+      <h2 class="card-title">
+        <a href="../../../../en/besluit/7301400/index.html">
+          Council Proposal Afwijken kaders voor Asielzoekerscentrum Europ...
+        </a>
+      </h2>
+
+      <!-- One-line Human Impact Highlight -->
+      <p class="card-summary" style="font-weight: 600; margin-bottom: 0.75rem;">
+        💡 Important council decision concerning Council Proposal Afwijken kaders voor Asielzoekerscentrum Europ....
+      </p>
+
+      <!-- Key tags (Figure, Neighborhoods, Themes) -->
+      <div class="card-tags">
+        
+          <span class="tag" style="font-weight: 700;">
+            💶 See council document
+          </span>
+        
+        
+          <span class="tag">Housing &amp; Living</span>
+        
+          <span class="tag">Traffic &amp; Mobility</span>
+        
+          <span class="tag">Health &amp; Welfare</span>
+        
+          <span class="tag">Governance &amp; Finance</span>
+        
+        
+          <span class="tag">📍 City-wide</span>
+        
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
+        📄 Council Doc #7301400
+      </span>
+      
+      <div class="card-actions">
+        <a href="../../../../en/besluit/7301400/index.html" class="pdf-link">
+          📄 View details ➔
+        </a>
+        <button class="share-btn" data-share-title="Council Proposal Afwijken kaders voor Asielzoekerscentrum Europ..." data-share-url="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=32f519e0-653f-4632-9953-ca3948a2cb9f">🔗 Share</button>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--utrecht-gris-secundario);">
+  <p>No matching decisions found for your query.</p>
+</div>
+
+  </main>
+
+  <!-- 3-Column Footer Component -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Utrecht Beslist</h3>
+        <p>Independent civic project automatically summarizing Utrecht city council documents and decisions into plain language.</p>
+        
+        <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8);">
+          The project is 100% free and open source. If you find this useful, consider buying us a coffee:
+        </p>
+
+        <!-- Ko-fi Support Button -->
+        <a href="https://ko-fi.com/I2I31CXQVM" target="_blank" rel="noopener noreferrer" class="kofi-btn" style="margin-top: 0.75rem;">
+          <span aria-hidden="true">☕</span> Buy us a coffee
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation &amp; Feeds</h3>
+        <ul>
+          <li><a href="../../../../en/index.html">Home</a></li>
+          <li><a href="../../../../en/over.html">About &amp; Transparency</a></li>
+          <li><a href="../../../../en/feed.xml">RSS Feed (EN)</a></li>
+          <li><a href="../../../../data/latest.json">JSON API</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Disclaimers &amp; Data</h3>
+        <p>Automatically summarized using AI based on Open Raadsinformatie data. No legal advice — always consult official municipal documents.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Error or suggestion?</h3>
+        <p>Let us know. We read every message and reply by email.</p>
+        <form class="report-form" data-subject="Error or suggestion for Utrecht Beslist" data-cooldown-msg="Please wait before sending again." data-wait-msg="Wait %s seconds" data-send-label="Send email">
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Type your error or suggestion here..." aria-label="Your message" required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">Send email</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Utrecht Beslist · Open source · Licence: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
+      <span>Civic Project · 100% Static &amp; Free</span>
+    </div>
+  </footer>
+
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link copied to clipboard!", "lang": "en", "postal_badge": "\ud83d\udccd Postcode {code} \u2192 district {wijk}", "results_many": "decisions", "results_one": "decision", "speech": "en-GB", "theme_to_dark": "\ud83c\udf19 Dark", "theme_to_light": "\u2600\ufe0f Light", "tts_unsupported": "Read-aloud is not supported by this browser."}</script>
+  <script src="../../../../static/js/app.js"></script>
+</body>
+</html>
