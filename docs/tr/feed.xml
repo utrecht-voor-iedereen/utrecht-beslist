@@ -6,24 +6,6 @@
     <description>Utrecht belediye meclisi kararları ve belgeleri sade bir dille açıklanmaktadır.</description>
     <language>tr</language>
     <item>
-      <title>2026 Bahar Notu'nun Kabulü</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
-      <description>Meclis, politikadan bağımsız 2026 Bahar Notu'nu kabul etti. Karar, yeni koalisyon anlaşmasının temeli olarak kaçınılmaz darboğazlarla güncellenmiş finansal tabloyu onaylıyor.</description>
-      <guid isPermaLink="false">7947071</guid>
-    </item>
-    <item>
-      <title>Çok Yıllık Mekansal Perspektif 2026'nın Kabulü</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
-      <description>Gemeenteraad, Çok Yıllık Mekansal Perspektif 2026'yı kabul etti. Karar, uygun fiyatlı konut, sürdürülebilir hareketlilik, yeşil alanlar yatırımlarını ve yeniden geliştirmeler için hazırlık kredilerinin tahsisini içeriyor.</description>
-      <guid isPermaLink="false">7912169</guid>
-    </item>
-    <item>
-      <title>İlk Yönetim Raporu 2026'nın Kabulü</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>Meclis, İlk Yönetim Raporu 2026'yı kabul etti. Bu, yatırım kredilerini 26,2 milyon avro artırmakta ve sosyal alanda kaydırmalar gerçekleştirmektedir.</description>
-      <guid isPermaLink="false">7912167</guid>
-    </item>
-    <item>
       <title>Sonuç Tahsisi 2025'in Kabulü</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
       <description>Meclis, Sonuç Tahsisi 2025'i kabul etti. Karar, devam eden projeleri tamamlamak için kalan 20,5 milyon avroluk arızi bütçelerin 2026 bütçe yılına aktarılmasını düzenliyor.</description>
@@ -34,6 +16,24 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
       <description>Meclis, 2025 Yıllık Hesaplarını kabul etti ve college'ı ibra etti. Yıl, genel karşılık rezervine eklenen 54,6 milyon avroluk bir fazla ile sona eriyor.</description>
       <guid isPermaLink="false">7903396</guid>
+    </item>
+    <item>
+      <title>Çok Yıllık Mekansal Perspektif 2026'nın Kabulü</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Gemeenteraad, Çok Yıllık Mekansal Perspektif 2026'yı kabul etti. Karar, uygun fiyatlı konut, sürdürülebilir hareketlilik, yeşil alanlar yatırımlarını ve yeniden geliştirmeler için hazırlık kredilerinin tahsisini içeriyor.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>İlk Yönetim Raporu 2026'nın Kabulü</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>Meclis, İlk Yönetim Raporu 2026'yı kabul etti. Bu, yatırım kredilerini 26,2 milyon avro artırmakta ve sosyal alanda kaydırmalar gerçekleştirmektedir.</description>
+      <guid isPermaLink="false">7825093</guid>
+    </item>
+    <item>
+      <title>2026 Bahar Notu'nun Kabulü</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>Meclis, politikadan bağımsız 2026 Bahar Notu'nu kabul etti. Karar, yeni koalisyon anlaşmasının temeli olarak kaçınılmaz darboğazlarla güncellenmiş finansal tabloyu onaylıyor.</description>
+      <guid isPermaLink="false">7756188</guid>
     </item>
     <item>
       <title>İkamet Şartı Muafiyeti</title>
@@ -48,22 +48,22 @@
       <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
-      <title>Participatiewet yeniden entegrasyon yönetmeliği değişikliği</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
-      <description>Gemeenteraad, Verordening re-integratie en tegenprestatie Participatiewet düzenlemesini güncelliyor. Bu sayede 27 yaşına kadar olan gençler okuldan işe geçişte daha iyi destek alacak ve yeni bir Ontwikkeltraject başlatılacak.</description>
-      <guid isPermaLink="false">7926270</guid>
+      <title>Ev yardımı denetim raporu</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>Rekenkamer, Utrecht'teki ev yardımı hizmetlerini araştırdı. 'Stof tot nadenken' raporu, hizmetleri iyileştirmek için yedi öneri içeriyor. Meclisten belediye yönetimine bu önerileri uygulaması isteniyor.</description>
+      <guid isPermaLink="false">7896265</guid>
     </item>
     <item>
       <title>Wmo Verordening 2027'yi kabul et</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
       <description>Belediye meclisi, yeni Verordening maatschappelijke ondersteuning 2027 hakkında karar veriyor. Kurallar sakinler ve profesyoneller için daha net ve erişilebilir hale geliyor. Net kriterler ve kendi katkısı için yeni kurallar getiriliyor.</description>
-      <guid isPermaLink="false">7926189</guid>
+      <guid isPermaLink="false">7875413</guid>
     </item>
     <item>
-      <title>Ev yardımı denetim raporu</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
-      <description>Rekenkamer, Utrecht'teki ev yardımı hizmetlerini araştırdı. 'Stof tot nadenken' raporu, hizmetleri iyileştirmek için yedi öneri içeriyor. Meclisten belediye yönetimine bu önerileri uygulaması isteniyor.</description>
-      <guid isPermaLink="false">7926175</guid>
+      <title>Participatiewet yeniden entegrasyon yönetmeliği değişikliği</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>Gemeenteraad, Verordening re-integratie en tegenprestatie Participatiewet düzenlemesini güncelliyor. Bu sayede 27 yaşına kadar olan gençler okuldan işe geçişte daha iyi destek alacak ve yeni bir Ontwikkeltraject başlatılacak.</description>
+      <guid isPermaLink="false">7817769</guid>
     </item>
     <item>
       <title>Genel Yerel Düzenleme Değişikliği</title>
@@ -78,40 +78,112 @@
       <guid isPermaLink="false">7912171</guid>
     </item>
     <item>
-      <title>Öncelikli gruplar için kayıt süresi uzatmasında değişiklik</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>College, Place2BU ve Goeie Buur sakinleri için esnek konut deneyinin çerçevesini uyarlıyor. Kayıt süresi uzatması, yeni bir eve taşınmayı sağlamak için güncel tahsis rakamlarına göre değişken olarak belirlenecektir.</description>
-      <guid isPermaLink="false">7944278</guid>
-    </item>
-    <item>
-      <title>Theo Pouw Isotopenweg genişletilmesi için itirazsızlık beyanı</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>College, meclise Isotopenweg 29'daki Theo Pouw için özel bir itirazsızlık beyanı düzenlemesini önermektedir. Bu, Utrecht Eyaleti'nin iki yeni atık işleme faaliyeti için izin vermesini sağlar.</description>
-      <guid isPermaLink="false">7944277</guid>
-    </item>
-    <item>
-      <title>Pijlsweerd, Lauwerecht, Vogelenbuurt ve Tuinwijk çevre planı güncellemesi</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
-      <description>Meclis, Utrecht çevre planının ikinci değişikliğini kabul ediyor. Bu, Noordwest ve Noordoost'taki on imar planını nihai çevre planına dönüştürür ve toprak kalitesi ile arkeoloji kurallarını ekler.</description>
-      <guid isPermaLink="false">7926275</guid>
-    </item>
-    <item>
-      <title>Klépierre zararının telafi edilmesi hakkında gizli eklerin açıklanması</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
-      <description>Bu girişim önerisi, Moreelsebrug merdivenleri ile ilgili Klépierre ile yapılan anlaşmanın eklerinin gizliliklerini kaldırarak bunları kamuoyuna açıklamaya ilişkin bir karar alınmasını amaçlamaktadır.</description>
-      <guid isPermaLink="false">7926256</guid>
-    </item>
-    <item>
       <title>Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan çevre planı</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>Gemeenteraad, Jan van Galenstraat, Huizingalaan ve Van Ginnekenlaan için TAM çevre planı hakkında karar veriyor. Bu, 102 kiralık konut, bir süpermarket, perakende birimleri ve bir yeraltı otoparkı inşasını mümkün kılıyor.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
+      <title>Öncelikli gruplar için kayıt süresi uzatmasında değişiklik</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>College, Place2BU ve Goeie Buur sakinleri için esnek konut deneyinin çerçevesini uyarlıyor. Kayıt süresi uzatması, yeni bir eve taşınmayı sağlamak için güncel tahsis rakamlarına göre değişken olarak belirlenecektir.</description>
+      <guid isPermaLink="false">7849679</guid>
+    </item>
+    <item>
+      <title>Pijlsweerd, Lauwerecht, Vogelenbuurt ve Tuinwijk çevre planı güncellemesi</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>Meclis, Utrecht çevre planının ikinci değişikliğini kabul ediyor. Bu, Noordwest ve Noordoost'taki on imar planını nihai çevre planına dönüştürür ve toprak kalitesi ile arkeoloji kurallarını ekler.</description>
+      <guid isPermaLink="false">7842627</guid>
+    </item>
+    <item>
+      <title>Theo Pouw Isotopenweg genişletilmesi için itirazsızlık beyanı</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>College, meclise Isotopenweg 29'daki Theo Pouw için özel bir itirazsızlık beyanı düzenlemesini önermektedir. Bu, Utrecht Eyaleti'nin iki yeni atık işleme faaliyeti için izin vermesini sağlar.</description>
+      <guid isPermaLink="false">7817759</guid>
+    </item>
+    <item>
+      <title>Klépierre zararının telafi edilmesi hakkında gizli eklerin açıklanması</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
+      <description>Bu girişim önerisi, Moreelsebrug merdivenleri ile ilgili Klépierre ile yapılan anlaşmanın eklerinin gizliliklerini kaldırarak bunları kamuoyuna açıklamaya ilişkin bir karar alınmasını amaçlamaktadır.</description>
+      <guid isPermaLink="false">7680201</guid>
+    </item>
+    <item>
       <title>Meclis sorularının yanıtları ve mali belge düzeltmeleri</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
       <description>College, 2025 Yıllık Hesapları ve yönetim raporlarına ilişkin yazılı soruların yanıtlarını düzeltmelerle birlikte gönderiyor. Mektup ayrıca G4 şehirlerinin hayvan refahı ve veteriner maliyetlerine ilişkin çağrısını da içeriyor.</description>
       <guid isPermaLink="false">7903412</guid>
+    </item>
+    <item>
+      <title>Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8439067a-f043-4cc5-8300-47a26950a923</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer....</description>
+      <guid isPermaLink="false">7842617</guid>
+    </item>
+    <item>
+      <title>Council Proposal zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal zienswijze ontwerpbegroting 2027-2030 GR Het U....</description>
+      <guid isPermaLink="false">7830823</guid>
+    </item>
+    <item>
+      <title>Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c8d9d15-e699-49f4-a141-dd623d075773</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025.</description>
+      <guid isPermaLink="false">7892817</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U....</description>
+      <guid isPermaLink="false">7892807</guid>
+    </item>
+    <item>
+      <title>Council Proposal Ontheffing woonplaatsvereiste voor wethoudersc...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b5ed6309-8a04-4253-b0a3-99c2930d9680</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Ontheffing woonplaatsvereiste voor wethoudersc....</description>
+      <guid isPermaLink="false">7875411</guid>
+    </item>
+    <item>
+      <title>Council Proposal herbenoeming lid RvT NUOVO</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=5791bff0-72b4-4cb4-b6de-aef8d3c88cbd</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal herbenoeming lid RvT NUOVO.</description>
+      <guid isPermaLink="false">7849697</guid>
+    </item>
+    <item>
+      <title>Council Proposal Afzien bindend advies voor twee buitenplanse a...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=77b70c06-5944-4d78-ade0-6adf35bf76fc</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Afzien bindend advies voor twee buitenplanse a....</description>
+      <guid isPermaLink="false">7842625</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dd3906a7-fb65-4d70-baa0-c22ea0a4b6f7</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027.</description>
+      <guid isPermaLink="false">7830817</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerp Programmabegroting Omgeving...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=46b828cf-687d-4569-8f7f-b1612577f5dd</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Zienswijze Ontwerp Programmabegroting Omgeving....</description>
+      <guid isPermaLink="false">7830812</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerpbegroting BghU 2027, inclusi...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=71b70940-6194-4ba7-b31b-cd20d694d0f1</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Zienswijze Ontwerpbegroting BghU 2027, inclusi....</description>
+      <guid isPermaLink="false">7817762</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze gemeenteraad Utrecht op Ontwerpbegr...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2760ae7d-5163-457e-9d15-40abe7ab1774</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Zienswijze gemeenteraad Utrecht op Ontwerpbegr....</description>
+      <guid isPermaLink="false">7786897</guid>
+    </item>
+    <item>
+      <title>Council Proposal Vaststellen TAM omgevingsplan extra woningen i...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8deaceed-b20d-4731-a544-d546ca173b99</link>
+      <description>Resmi belediye meclisi belgesi: Council Proposal Vaststellen TAM omgevingsplan extra woningen i....</description>
+      <guid isPermaLink="false">7778097</guid>
     </item>
   </channel>
 </rss>

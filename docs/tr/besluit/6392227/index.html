@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Council Proposal Kwantitatieve indicatoren Samen stad maken — Utrecht Beslist</title>
+  <meta name="description" content="Utrecht belediye meclisi kararları ve belgeleri sade bir dille açıklanmaktadır.">
+  <link rel="icon" type="image/svg+xml" href="../../../static/img/favicon.svg">
+  <link rel="stylesheet" href="../../../static/css/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="../../../tr/feed.xml">
+</head>
+<body>
+
+  <!-- Header Component: Dark Navy Slate + Vector Shield Logo -->
+  <header>
+    <div class="header-container">
+      <a href="../../../tr/index.html" class="brand" title="Utrecht Beslist">
+        <!-- Vector Shield Logo with Diagonal Red/White Split & Dual Checkmark -->
+        <svg class="brand-logo-svg" viewBox="0 0 400 80" role="img" aria-label="Utrecht Beslist — SADE DİLLE BELEDİYE MECLİSİ">
+          <defs>
+            <clipPath id="clip-top-left-hdr">
+              <polygon points="0,0 80,0 0,80" />
+            </clipPath>
+            <clipPath id="clip-bottom-right-hdr">
+              <polygon points="0,0 80,80 0,80" />
+            </clipPath>
+            <path id="shield-hdr" d="M36 4 L62 12 V42 C62 58 50 71 36 76 C22 71 10 58 10 42 V12 Z" />
+          </defs>
+
+          <!-- Red Upper-Left Half -->
+          <use href="#shield-hdr" fill="#CC0000" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- White Lower-Right Half -->
+          <use href="#shield-hdr" fill="#FFFFFF" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Black Contour Outline -->
+          <use href="#shield-hdr" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+          <!-- Checkmark on Red Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-top-left-hdr)" />
+
+          <!-- Checkmark on White Half -->
+          <polyline points="22,42 31,51 50,28" fill="none" stroke="#000000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip-bottom-right-hdr)" />
+
+          <!-- Wordmark Title -->
+          <text x="84" y="42" font-family="system-ui, Arial, sans-serif" font-size="30" font-weight="700" xml:space="preserve"><tspan fill="#FFFFFF">Utrecht </tspan><tspan fill="#CC0000">Beslist</tspan><tspan fill="#FFCC00">.</tspan></text>
+
+          <!-- Subtitle -->
+          <text x="85" y="63" font-family="system-ui, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2" fill="rgba(255,255,255,0.85)">SADE DİLLE BELEDİYE MECLİSİ</text>
+        </svg>
+      </a>
+
+      <nav class="nav-links" aria-label="Ana gezinme">
+        <a href="../../../tr/index.html" class="nav-link">Genel Bakış</a>
+        <a href="../../../tr/over.html" class="nav-link">Hakkında &amp; Şeffaflık</a>
+
+        <div class="header-tools">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" title="Koyu ve açık mod arasında geçiş yap">🌙 Koyu</button>
+
+          <!-- Native Custom-Styled Compact Language Selector -->
+          <div class="lang-select-wrapper">
+            <span class="lang-globe-icon" aria-hidden="true">🌐</span>
+            <select class="lang-select-native" aria-label="Dil seçin" onchange="window.location.href=this.value;">
+              
+                <option value="../../../nl/index.html" >
+                  NL — Nederlands
+                </option>
+              
+                <option value="../../../en/index.html" >
+                  EN — English
+                </option>
+              
+                <option value="../../../es/index.html" >
+                  ES — Español
+                </option>
+              
+                <option value="../../../tr/index.html" selected>
+                  TR — Türkçe
+                </option>
+              
+                <option value="../../../pt-br/index.html" >
+                  PT-BR — Português (Brasil)
+                </option>
+              
+                <option value="../../../pt-pt/index.html" >
+                  PT-PT — Português (Portugal)
+                </option>
+              
+                <option value="../../../fr/index.html" >
+                  FR — Français
+                </option>
+              
+                <option value="../../../de/index.html" >
+                  DE — Deutsch
+                </option>
+              
+            </select>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <main class="main-wrapper">
+    
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+  <a href="../../../tr/index.html" style="color: var(--utrecht-azul-enlace); font-weight: 600;">
+    ← Genel bakışa dön
+  </a>
+</nav>
+
+<!-- Main Detail Card Container -->
+<article class="controls-card" style="padding: 2.25rem;">
+  <!-- Header Badges & Actions (Print + Audio TTS) -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
+        ✅ Kabul edildi
+      </span>
+
+      
+        <span class="badge-impact impact-gemiddeld">Orta Etki</span>
+      
+    </div>
+
+    <!-- Audio TTS & Print-to-PDF Controls -->
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <!-- The text travels in a data attribute: inlining it in an onclick
+           broke the button on every page whose summary contained an
+           apostrophe, because the entity decoded back into a quote. -->
+      <button class="audio-btn" data-speak="Council Proposal Kwantitatieve indicatoren Samen stad maken hakkında önemli meclis kararı. Resmi belediye meclisi belgesi: Council Proposal Kwantitatieve indicatoren Samen stad maken.">
+        🔊 Dinle
+      </button>
+
+      <button class="share-btn" onclick="window.print()">
+        🖨️ Yazdır / PDF
+      </button>
+
+      <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
+        📅 Görüşülme tarihi <time datetime="2025-06-12">12 Haziran 2025</time>
+      </span>
+    </div>
+  </div>
+
+  <!-- Document Title -->
+  <h1 class="detail-title" style="font-weight: 800; color: var(--utrecht-negro); margin-bottom: 1rem; line-height: 1.25;">
+    Council Proposal Kwantitatieve indicatoren Samen stad maken
+  </h1>
+
+  <!-- One Line Key Impact Highlight NoticeBox -->
+  <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
+    💡 Council Proposal Kwantitatieve indicatoren Samen stad maken hakkında önemli meclis kararı.
+  </div>
+
+  <!-- Sections run what-happened first, then why, then what it means, then the
+       money. The page used to open on the background section, which buried the
+       decision itself below the fold.
+       Headings carry their own emoji from i18n.py, and the body fields carry
+       theirs from the model, so the paragraphs are stripped of the leading
+       icon to avoid printing it twice. -->
+  <div style="display: flex; flex-direction: column; gap: 2rem;">
+    <!-- Section 1: The decision itself -->
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        💡 Sade Dille Özet (B1)
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
+        Resmi belediye meclisi belgesi: Council Proposal Kwantitatieve indicatoren Samen stad maken.
+      </p>
+
+      <!-- Bullet list breakdown -->
+      <ul class="bullet-list" style="font-size: 0.95rem; padding: 1rem 1.25rem;">
+        <li class="bullet-item">📌 Ne: &#39;Council Proposal Kwantitatieve indicatoren Samen stad maken&#39; hakkında resmi yayın</li>
+        <li class="bullet-item">👥 Kim ve Nerede: Overig bölgesini ilgilendiriyor</li>
+        <li class="bullet-item">💶 Etki ve Bütçe: Belirli rakamlar için orijinal meclis belgesine bakınız.</li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Why it was tabled -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🎯 Gerekçe ve Arka Plan
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        Bu teklif karar alınmak üzere Utrecht belediye meclisine sunulmuştur.
+      </p>
+    </section>
+    
+
+    <!-- Section 3: Consequences for Residents -->
+    
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏘️ Şehirde Ne Değişecek?
+      </h2>
+      <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7;">
+        Karar, belirlenen belediye meclis kararına göre yürürlüğe girer.
+      </p>
+    </section>
+    
+
+    <!-- Section 4: Budget & Timeline -->
+    
+    <section style="background-color: var(--utrecht-crema-fondo); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+      <h2 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+        💶 Bütçe ve Zaman Çizelgesi
+      </h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem;">
+        
+        <div>
+          <strong>Rakam/Maliyet:</strong>
+          <span>Meclis belgesine bakınız</span>
+        </div>
+        
+        
+        <div>
+          <strong>Zaman Çizelgesi:</strong>
+          <span>Takvim: Mevcut meclis yılı</span>
+        </div>
+        
+      </div>
+    </section>
+    
+
+    <!-- Tags & Area -->
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+      
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Trafik &amp; Ulaşım</span>
+      
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">Yönetim &amp; Finans</span>
+      
+      
+        <span class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">📍 Şehir geneli</span>
+      
+    </div>
+  </div>
+
+  
+  
+  <div style="margin-top: 2rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.75rem;">
+      🗓️ Bu dosyanın seyri
+    </h3>
+    <ol class="dossier-history" style="margin: 0 0 0 1.1rem; font-size: 0.9rem; line-height: 1.9; color: var(--utrecht-gris-secundario);">
+      
+        <li>
+          <time datetime="2025-06-12">12 Haziran 2025</time>
+          — ✅ Kabul edildi
+          
+            · <a href="https://id.openraadsinformatie.nl/6392227" target="_blank" rel="noopener">ORI 6392227</a>
+          
+        </li>
+      
+        <li>
+          <time datetime="2025-06-12">12 Haziran 2025</time>
+          — ⏳ Gündemde
+          
+            · <a href="https://id.openraadsinformatie.nl/6391249" target="_blank" rel="noopener">ORI 6391249</a>
+          
+        </li>
+      
+    </ol>
+  </div>
+  
+
+  <!-- Official Source & Woo Rights Box -->
+  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
+    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
+      🏛️ Kaynak ve Woo hakları
+    </h3>
+
+    
+      <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">
+        Bu, kayda geçen karardır; aşağıdaki belgeler kararın konusu olan teklife aittir.
+      </p>
+    
+
+    
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1rem;">
+      
+        <a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b743f407-b917-4f02-9ce4-d1a5fca75de6" target="_blank" rel="noopener" class="human-impact-btn active" style="text-decoration: none; padding: 0.65rem 1.25rem;">
+          📄 Orijinal PDF Belgesi ➔
+        </a>
+      
+
+      <a href="https://utrecht.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🏛️ Utrecht Meclis Portalında Gör 🔗
+      </a>
+
+      <a href="https://id.openraadsinformatie.nl/6392227" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 Bu belgenin ORI kaydı 🔗
+      </a>
+    </div>
+
+    
+    
+      <details class="source-documents" style="margin-top: 1.25rem;">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.92rem;">
+          Dayanak belgeler (6)
+        </summary>
+        <ul style="margin: 0.75rem 0 0 1.1rem; font-size: 0.88rem; line-height: 1.8;">
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b743f407-b917-4f02-9ce4-d1a5fca75de6" target="_blank" rel="noopener">Raadsbesluit Kwantitatieve indicatoren Samen Stad Maken (toegevoegd op 19 juni 2025)</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=534adf89-6318-44c1-bbab-1c3e52c10018" target="_blank" rel="noopener">Raadsvoorstel Kwantitatieve indicatoren Samen Stad Maken</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9bee2026-0543-4a2f-8f37-724830a9c499" target="_blank" rel="noopener">Beleidsnota Samen stad maken Geen Utrecht zonder U (na verwerking amendementen) met wijzigingen indicatoren zichtbaar</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4cca867c-b752-4d7c-b46c-10c6796e1d48" target="_blank" rel="noopener">Resultaten vragenlijst Buurtbudgetten in Utrecht</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a993f06b-b5c1-4c0b-9252-c14fd319d712" target="_blank" rel="noopener">Kwantitatieve Indicatoren Samen stad maken</a></li>
+          
+            <li><a href="https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=146c33c6-31bf-4fb5-99f8-d467fdb83dc6" target="_blank" rel="noopener">Dossier 4571 voorblad.pdf</a></li>
+          
+        </ul>
+      </details>
+    
+  </div>
+
+  <!-- Transparency Footer -->
+  <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
+    <div>
+      <span>🤖 Yapay Zeka Şeffaflığı: Backfill placeholder</span>
+      <span style="margin-left: 0.75rem;">📦 Kalıcı olarak arşivlendi (Arşiv Yasası)</span>
+      <span style="margin-left: 0.75rem;">⚖️ Kamu Bilgi Edinme Hakları (Woo)</span>
+    </div>
+    
+    <div style="display: flex; gap: 1rem;">
+      <button class="share-btn" data-share-title="Council Proposal Kwantitatieve indicatoren Samen stad maken">🔗 Paylaş</button>
+      
+      <button type="button" class="share-btn"
+              data-report-title="Council Proposal Kwantitatieve indicatoren Samen stad maken"
+              data-report-doc="6392227"
+              data-report-subject="Utrecht Beslist için hata veya öneri">
+        ⚠️ Hata bildir
+      </button>
+    </div>
+  </div>
+</article>
+
+  </main>
+
+  <!-- 3-Column Footer Component -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Utrecht Beslist</h3>
+        <p>Utrecht belediye meclisi belgelerini ve kararlarını otomatik olarak toplayan ve sade bir dille özetleyen bağımsız sivil girişim.</p>
+        
+        <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8);">
+          Bu proje %100 ücretsiz ve reklamsızdır. Yararlı buluyor musunuz? Bir kahve ısmarla:
+        </p>
+
+        <!-- Ko-fi Support Button -->
+        <a href="https://ko-fi.com/I2I31CXQVM" target="_blank" rel="noopener noreferrer" class="kofi-btn" style="margin-top: 0.75rem;">
+          <span aria-hidden="true">☕</span> Bize bir kahve ısmarla
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Gezinme &amp; Beslemeler</h3>
+        <ul>
+          <li><a href="../../../tr/index.html">Ana Sayfa</a></li>
+          <li><a href="../../../tr/over.html">Hakkında &amp; Şeffaflık</a></li>
+          <li><a href="../../../tr/feed.xml">RSS Feed (TR)</a></li>
+          <li><a href="../../../data/latest.json">JSON API</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Yasal Uyarı &amp; Veri</h3>
+        <p>Open Raadsinformatie açık verileri kullanılarak yapay zeka ile otomatik özetlenmiştir. Hukuki tavsiye niteliği taşımaz; her zaman resmi belgeye başvurun.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Hata veya öneri?</h3>
+        <p>Bize bildirin. Her mesajı okuyor ve e-posta ile yanıtlıyoruz.</p>
+        <form class="report-form" data-subject="Utrecht Beslist için hata veya öneri" data-cooldown-msg="Tekrar göndermeden önce lütfen bekleyin." data-wait-msg="%s saniye bekleyin" data-send-label="E-posta gönder">
+          <textarea id="report-message" class="report-textarea" rows="4" placeholder="Hata veya önerinizi buraya yazın..." aria-label="Mesajınız" required></textarea>
+          <input type="text" name="website" class="report-honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="report-submit-btn">E-posta gönder</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Utrecht Beslist · Open source · Lisans: <a href="https://eupl.eu/1.2/en/" target="_blank" rel="noopener">EUPL-1.2</a></span>
+      <span>Sivil Girişim · %100 Statik ve Ücretsiz</span>
+    </div>
+  </footer>
+
+  <!-- Strings app.js needs at runtime. Without this the counter, the postcode
+       badge and the read-aloud voice stayed Dutch or English on every page. -->
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Ba\u011flant\u0131 panoya kopyaland\u0131!", "lang": "tr", "postal_badge": "\ud83d\udccd Posta kodu {code} \u2192 mahalle {wijk}", "results_many": "karar", "results_one": "karar", "speech": "tr-TR", "theme_to_dark": "\ud83c\udf19 Koyu", "theme_to_light": "\u2600\ufe0f A\u00e7\u0131k", "tts_unsupported": "Sesli okuma bu taray\u0131c\u0131da desteklenmiyor."}</script>
+  <script src="../../../static/js/app.js"></script>
+</body>
+</html>

@@ -6,24 +6,6 @@
     <description>Decisiones y documentos del ayuntamiento de Utrecht explicados en lenguaje claro.</description>
     <language>es</language>
     <item>
-      <title>Aprobación de la Nota de Primavera 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
-      <description>El consejo ha aprobado la Nota de Primavera 2026 sin cambios de política. La decisión confirma la imagen financiera actualizada con cuellos de botella inevitables como base para el nuevo acuerdo de coalición.</description>
-      <guid isPermaLink="false">7947071</guid>
-    </item>
-    <item>
-      <title>Aprobación de la Perspectiva Espacial de Múltiples Años 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
-      <description>El Gemeenteraad ha aprobado la Perspectiva Espacial de Múltiples Años 2026. La decisión incluye la programación de inversiones en vivienda asequible, movilidad sostenible, zonas verdes y la asignación de créditos de preparación para reurbanizaciones.</description>
-      <guid isPermaLink="false">7912169</guid>
-    </item>
-    <item>
-      <title>Aprobación del Primer Informe de Gestión 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
-      <description>El consejo ha aprobado el Primer Informe de Gestión 2026. Esto incrementa los créditos de inversión en 26,2 millones de euros y realiza ajustes en el área social.</description>
-      <guid isPermaLink="false">7912167</guid>
-    </item>
-    <item>
       <title>Aprobación del Destino del Resultado 2025</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3e3e3c2e-c218-48bb-86a8-cf1fcc0cc358</link>
       <description>El consejo ha aprobado el Destino del Resultado 2025. La decisión regula el traspaso de 20,5 millones de euros en presupuestos incidentales restantes al año presupuestario 2026 para finalizar proyectos en curso.</description>
@@ -34,6 +16,24 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=674ea077-db85-4451-a0ad-e3c4a543d6be</link>
       <description>El consejo ha aprobado las Cuentas Anuales 2025 y ha otorgado el finiquito al college. El año cierra con un superávit de 54,6 millones de euros que se suma a la reserva general.</description>
       <guid isPermaLink="false">7903396</guid>
+    </item>
+    <item>
+      <title>Aprobación de la Perspectiva Espacial de Múltiples Años 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>El Gemeenteraad ha aprobado la Perspectiva Espacial de Múltiples Años 2026. La decisión incluye la programación de inversiones en vivienda asequible, movilidad sostenible, zonas verdes y la asignación de créditos de preparación para reurbanizaciones.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>Aprobación del Primer Informe de Gestión 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>El consejo ha aprobado el Primer Informe de Gestión 2026. Esto incrementa los créditos de inversión en 26,2 millones de euros y realiza ajustes en el área social.</description>
+      <guid isPermaLink="false">7825093</guid>
+    </item>
+    <item>
+      <title>Aprobación de la Nota de Primavera 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>El consejo ha aprobado la Nota de Primavera 2026 sin cambios de política. La decisión confirma la imagen financiera actualizada con cuellos de botella inevitables como base para el nuevo acuerdo de coalición.</description>
+      <guid isPermaLink="false">7756188</guid>
     </item>
     <item>
       <title>Exención del requisito de residencia</title>
@@ -48,22 +48,22 @@
       <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
-      <title>Enmienda a la ordenanza de reintegración de la Participatiewet</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
-      <description>El Gemeenteraad adapta la Verordening re-integratie en tegenprestatie Participatiewet. Esto ofrece a los jóvenes de hasta 27 años una mejor orientación de la escuela al trabajo e introduce un nuevo Ontwikkeltraject.</description>
-      <guid isPermaLink="false">7926270</guid>
+      <title>Informe de auditoría sobre ayuda doméstica</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>La Rekenkamer investigó los servicios de ayuda doméstica en Utrecht. El informe 'Stof tot nadenken' contiene siete recomendaciones para mejorar los servicios. Se pide al ayuntamiento que solicite al ejecutivo municipal que aplique estas recomendaciones.</description>
+      <guid isPermaLink="false">7896265</guid>
     </item>
     <item>
       <title>Aprobar Verordening Wmo 2027</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
       <description>El ayuntamiento decide sobre la nueva Verordening maatschappelijke ondersteuning 2027. Las reglas se vuelven más claras y accesibles para los residentes y profesionales. Se introducen criterios claros y nuevas reglas para la contribución propia.</description>
-      <guid isPermaLink="false">7926189</guid>
+      <guid isPermaLink="false">7875413</guid>
     </item>
     <item>
-      <title>Informe de auditoría sobre ayuda doméstica</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
-      <description>La Rekenkamer investigó los servicios de ayuda doméstica en Utrecht. El informe 'Stof tot nadenken' contiene siete recomendaciones para mejorar los servicios. Se pide al ayuntamiento que solicite al ejecutivo municipal que aplique estas recomendaciones.</description>
-      <guid isPermaLink="false">7926175</guid>
+      <title>Enmienda a la ordenanza de reintegración de la Participatiewet</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>El Gemeenteraad adapta la Verordening re-integratie en tegenprestatie Participatiewet. Esto ofrece a los jóvenes de hasta 27 años una mejor orientación de la escuela al trabajo e introduce un nuevo Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7817769</guid>
     </item>
     <item>
       <title>Enmienda Reglamento Local General</title>
@@ -78,40 +78,112 @@
       <guid isPermaLink="false">7912171</guid>
     </item>
     <item>
-      <title>Ajuste en la extensión del tiempo de inscripción para grupos prioritarios</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
-      <description>El college adapta el marco del experimento de vivienda flexible para residentes de Place2BU y Goeie Buur. La extensión del tiempo de inscripción se fijará de forma variable según cifras de asignación para permitir el traslado a una nueva vivienda.</description>
-      <guid isPermaLink="false">7944278</guid>
-    </item>
-    <item>
-      <title>Declaración de no objeción para ampliación de Theo Pouw Isotopenweg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
-      <description>El college propone al consejo emitir una declaración específica de no objeción para Theo Pouw en Isotopenweg 29. Esto permite a la provincia de Utrecht otorgar un permiso para dos nuevas actividades de tratamiento de residuos.</description>
-      <guid isPermaLink="false">7944277</guid>
-    </item>
-    <item>
-      <title>Actualización del plan ambiental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
-      <description>El consejo aprueba la segunda modificación del plan ambiental de Utrecht. Esto convierte diez planes urbanísticos de Noordwest y Noordoost al plan ambiental definitivo y añade normas sobre calidad del suelo y arqueología.</description>
-      <guid isPermaLink="false">7926275</guid>
-    </item>
-    <item>
-      <title>Divulgación de anexos confidenciales sobre compensación de daños Klépierre</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
-      <description>Esta propuesta de iniciativa tiene como objetivo que el consejo decida levantar la confidencialidad de los anexos del acuerdo con Klépierre sobre las escaleras del Moreelsebrug y hacerlos públicos.</description>
-      <guid isPermaLink="false">7926256</guid>
-    </item>
-    <item>
       <title>Plan ambiental Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>El Gemeenteraad decide sobre el plan ambiental TAM para Jan van Galenstraat, Huizingalaan y Van Ginnekenlaan. Esto permite la construcción de 102 viviendas de alquiler, un supermercado, locales comerciales y un garaje subterráneo.</description>
       <guid isPermaLink="false">7912175</guid>
     </item>
     <item>
+      <title>Ajuste en la extensión del tiempo de inscripción para grupos prioritarios</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885</link>
+      <description>El college adapta el marco del experimento de vivienda flexible para residentes de Place2BU y Goeie Buur. La extensión del tiempo de inscripción se fijará de forma variable según cifras de asignación para permitir el traslado a una nueva vivienda.</description>
+      <guid isPermaLink="false">7849679</guid>
+    </item>
+    <item>
+      <title>Actualización del plan ambiental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>El consejo aprueba la segunda modificación del plan ambiental de Utrecht. Esto convierte diez planes urbanísticos de Noordwest y Noordoost al plan ambiental definitivo y añade normas sobre calidad del suelo y arqueología.</description>
+      <guid isPermaLink="false">7842627</guid>
+    </item>
+    <item>
+      <title>Declaración de no objeción para ampliación de Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>El college propone al consejo emitir una declaración específica de no objeción para Theo Pouw en Isotopenweg 29. Esto permite a la provincia de Utrecht otorgar un permiso para dos nuevas actividades de tratamiento de residuos.</description>
+      <guid isPermaLink="false">7817759</guid>
+    </item>
+    <item>
+      <title>Divulgación de anexos confidenciales sobre compensación de daños Klépierre</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
+      <description>Esta propuesta de iniciativa tiene como objetivo que el consejo decida levantar la confidencialidad de los anexos del acuerdo con Klépierre sobre las escaleras del Moreelsebrug y hacerlos públicos.</description>
+      <guid isPermaLink="false">7680201</guid>
+    </item>
+    <item>
       <title>Respuestas a preguntas del consejo y erratas de documentos financieros</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=36e393d1-1420-4506-a6cd-7eb17724dca6</link>
       <description>El college envía las respuestas a las preguntas escritas sobre las Cuentas Anuales 2025 e informes de gestión, incluyendo erratas. La carta también incluye una petición de las ciudades G4 sobre bienestar animal y costes veterinarios.</description>
       <guid isPermaLink="false">7903412</guid>
+    </item>
+    <item>
+      <title>Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8439067a-f043-4cc5-8300-47a26950a923</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer....</description>
+      <guid isPermaLink="false">7842617</guid>
+    </item>
+    <item>
+      <title>Council Proposal zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal zienswijze ontwerpbegroting 2027-2030 GR Het U....</description>
+      <guid isPermaLink="false">7830823</guid>
+    </item>
+    <item>
+      <title>Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c8d9d15-e699-49f4-a141-dd623d075773</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025.</description>
+      <guid isPermaLink="false">7892817</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U....</description>
+      <guid isPermaLink="false">7892807</guid>
+    </item>
+    <item>
+      <title>Council Proposal Ontheffing woonplaatsvereiste voor wethoudersc...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b5ed6309-8a04-4253-b0a3-99c2930d9680</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Ontheffing woonplaatsvereiste voor wethoudersc....</description>
+      <guid isPermaLink="false">7875411</guid>
+    </item>
+    <item>
+      <title>Council Proposal herbenoeming lid RvT NUOVO</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=5791bff0-72b4-4cb4-b6de-aef8d3c88cbd</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal herbenoeming lid RvT NUOVO.</description>
+      <guid isPermaLink="false">7849697</guid>
+    </item>
+    <item>
+      <title>Council Proposal Afzien bindend advies voor twee buitenplanse a...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=77b70c06-5944-4d78-ade0-6adf35bf76fc</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Afzien bindend advies voor twee buitenplanse a....</description>
+      <guid isPermaLink="false">7842625</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dd3906a7-fb65-4d70-baa0-c22ea0a4b6f7</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027.</description>
+      <guid isPermaLink="false">7830817</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerp Programmabegroting Omgeving...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=46b828cf-687d-4569-8f7f-b1612577f5dd</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Zienswijze Ontwerp Programmabegroting Omgeving....</description>
+      <guid isPermaLink="false">7830812</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze Ontwerpbegroting BghU 2027, inclusi...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=71b70940-6194-4ba7-b31b-cd20d694d0f1</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Zienswijze Ontwerpbegroting BghU 2027, inclusi....</description>
+      <guid isPermaLink="false">7817762</guid>
+    </item>
+    <item>
+      <title>Council Proposal Zienswijze gemeenteraad Utrecht op Ontwerpbegr...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2760ae7d-5163-457e-9d15-40abe7ab1774</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Zienswijze gemeenteraad Utrecht op Ontwerpbegr....</description>
+      <guid isPermaLink="false">7786897</guid>
+    </item>
+    <item>
+      <title>Council Proposal Vaststellen TAM omgevingsplan extra woningen i...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8deaceed-b20d-4731-a544-d546ca173b99</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Vaststellen TAM omgevingsplan extra woningen i....</description>
+      <guid isPermaLink="false">7778097</guid>
     </item>
   </channel>
 </rss>
