@@ -219,6 +219,39 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
         raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
         return validate_and_parse_llm_json(raw_text, "Google Gemini 1.5 Flash")
 
+
+def summarize_with_openrouter(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
+    """Try summarization using OpenRouter API (OpenAI-compatible)."""
+    # Default to a widely-available OpenRouter model. The caller can override
+    # via AI_MODEL, e.g. meta-llama/llama-3.3-70b-instruct:free
+    model_name = os.environ.get("AI_MODEL", "meta-llama/llama-3.3-70b-instruct")
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    payload = {
+        "model": model_name,
+        "temperature": 0.2,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": json.dumps({"documents": batch_docs}, ensure_ascii=False)}
+        ]
+    }
+
+    clean_key = api_key.strip().strip('"').strip("'")
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode('utf-8'),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {clean_key}",
+            "HTTP-Referer": "https://utrecht-voor-iedereen.github.io/utrecht-beslist/",
+            "X-Title": "Utrecht Beslist",
+        }
+    )
+    with urllib.request.urlopen(req, timeout=120) as res:
+        content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
+        return validate_and_parse_llm_json(content, f"OpenRouter ({model_name})")
+
+
+
 def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
     """Generates structured fallback summary when LLM services are unavailable."""
     title = doc.get("title", "Gemeentelijk Stuk")
@@ -327,7 +360,7 @@ def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
     return item.model_dump()
 
 def run_ai_chain(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Runs fallback chain: Groq -> Gemini -> Degraded Mode."""
+    """Runs fallback chain: Groq -> Gemini -> OpenRouter -> Degraded Mode."""
     groq_key = os.environ.get("GROQ_API_KEY")
     if groq_key:
         try:
@@ -343,6 +376,14 @@ def run_ai_chain(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
             return summarize_with_gemini(batch_docs, gemini_key)
         except Exception as e:  # noqa: BLE001
             logger.warning(f"Gemini failed: {e}")
+
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY")
+    if openrouter_key:
+        try:
+            logger.info("Summarizing batch with OpenRouter...")
+            return summarize_with_openrouter(batch_docs, openrouter_key)
+        except Exception as e:  # noqa: BLE001
+            logger.warning(f"OpenRouter failed: {e}")
 
     logger.info("Running in Degraded Mode (fallback without AI)...")
     return [generate_degraded_summary(doc) for doc in batch_docs]
