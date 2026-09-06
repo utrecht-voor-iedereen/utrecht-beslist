@@ -42,6 +42,9 @@
     <!-- Wijk Selector -->
     <select id="wijk-select" class="filter-select">
       <option value="all">{{ t("wijk_all", lang) }}</option>
+      {# Sin esta opción no se podían aislar ni descartar los acuerdos de ciudad,
+         que son el 82% del archivo. #}
+      <option value="Overig">{{ t("wijk_citywide", lang) }}</option>
       <option value="Binnenstad">🏰 Binnenstad</option>
       <option value="Oost">🌳 Oost</option>
       <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
@@ -63,6 +66,12 @@
         {% endif %}
       {% endfor %}
     </select>
+
+    <!-- Solo guardados. Arranca oculto: sin nada guardado no dice nada. -->
+    <button id="only-favs-btn" class="share-btn" style="display: none; padding: 0.65rem 1rem;"
+            aria-pressed="false" title="{{ t('favorites_local', lang) }}">
+      ☆ {{ t("only_favorites", lang) }} <span id="fav-count"></span>
+    </button>
 
     <!-- Active Filter Reset Button -->
     <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
@@ -119,6 +128,10 @@
           <span class="badge-impact impact-laag">{{ t("low_impact", lang) }}</span>
         {% endif %}
       </div>
+
+        <button class="fav-btn" type="button" data-fav="{{ item.doc_id }}"
+                aria-pressed="false" aria-label="{{ t('save_decision', lang) }}"
+                title="{{ t('save_decision', lang) }}">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">

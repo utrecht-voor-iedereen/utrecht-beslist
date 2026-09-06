@@ -144,6 +144,8 @@
     <!-- Wijk Selector -->
     <select id="wijk-select" class="filter-select">
       <option value="all">📍 Todos os Bairros de Utrecht</option>
+      
+      <option value="Overig">🏙️ Toda a cidade</option>
       <option value="Binnenstad">🏰 Binnenstad</option>
       <option value="Oost">🌳 Oost</option>
       <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
@@ -196,6 +198,12 @@
       
     </select>
 
+    <!-- Solo guardados. Arranca oculto: sin nada guardado no dice nada. -->
+    <button id="only-favs-btn" class="share-btn" style="display: none; padding: 0.65rem 1rem;"
+            aria-pressed="false" title="Salvo neste navegador. Não há contas.">
+      ☆ Apenas salvos <span id="fav-count"></span>
+    </button>
+
     <!-- Active Filter Reset Button -->
     <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
       ❌ Redefinir filtros <span class="shortcut-hint">Esc</span>
@@ -244,6 +252,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7903410"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -310,6 +322,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7903396"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7903396/index.html">
@@ -374,6 +390,10 @@
           <span class="badge-impact impact-hoog">Alto Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7825096"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -452,6 +472,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7825093"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7825093/index.html">
@@ -519,6 +543,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7756188"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7756188/index.html">
@@ -581,6 +609,10 @@
           <span class="badge-impact impact-laag">Baixo Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7947093"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -649,6 +681,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7947092"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7947092/index.html">
@@ -713,6 +749,10 @@
           <span class="badge-impact impact-hoog">Alto Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7896265"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -779,6 +819,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7875413"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7875413/index.html">
@@ -843,6 +887,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7817769"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -909,6 +957,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7926192"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7926192/index.html">
@@ -974,6 +1026,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7912171"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7912171/index.html">
@@ -1034,6 +1090,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7912175"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1098,6 +1158,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7849679"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7849679/index.html">
@@ -1160,6 +1224,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7842627"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1225,6 +1293,10 @@
           <span class="badge-impact impact-laag">Baixo Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7817759"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1293,6 +1365,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7680201"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7680201/index.html">
@@ -1354,6 +1430,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7903412"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7903412/index.html">
@@ -1414,6 +1494,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7842617"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1484,6 +1568,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7830823"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7830823/index.html">
@@ -1548,6 +1636,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7892817"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1620,6 +1712,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7892807"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7892807/index.html">
@@ -1684,6 +1780,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7875411"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1752,6 +1852,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7849697"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7849697/index.html">
@@ -1818,6 +1922,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7842625"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1888,6 +1996,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7830817"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7830817/index.html">
@@ -1956,6 +2068,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7830812"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2026,6 +2142,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7817762"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7817762/index.html">
@@ -2094,6 +2214,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7786897"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2164,6 +2288,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7778097"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7778097/index.html">
@@ -2230,6 +2358,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7778088"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2299,6 +2431,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7680204"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2373,6 +2509,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7778105"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7778105/index.html">
@@ -2446,6 +2586,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7700404"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7700404/index.html">
@@ -2510,6 +2654,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7892820"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2577,6 +2725,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7874745"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2647,6 +2799,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7867967"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7867967/index.html">
@@ -2714,6 +2870,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7858846"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7858846/index.html">
@@ -2780,6 +2940,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7858842"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2849,6 +3013,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7786889"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2920,6 +3088,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7778113"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -2994,6 +3166,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7778108"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7778108/index.html">
@@ -3065,6 +3241,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7762765"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7762765/index.html">
@@ -3131,6 +3311,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7563756"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3201,6 +3385,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7871355"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7871355/index.html">
@@ -3268,6 +3456,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7858850"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7858850/index.html">
@@ -3332,6 +3524,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7858849"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3398,6 +3594,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7858848"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7858848/index.html">
@@ -3462,6 +3662,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7858847"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3528,6 +3732,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7858845"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7858845/index.html">
@@ -3592,6 +3800,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7858844"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3658,6 +3870,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7858843"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7858843/index.html">
@@ -3722,6 +3938,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7719632"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3789,6 +4009,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7771084"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -3875,6 +4099,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771082"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771082/index.html">
@@ -3939,6 +4167,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7771080"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4011,6 +4243,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771078"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771078/index.html">
@@ -4075,6 +4311,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7771076"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4143,6 +4383,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771074"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771074/index.html">
@@ -4209,6 +4453,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7771072"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4279,6 +4527,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771070"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771070/index.html">
@@ -4344,6 +4596,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771068"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771068/index.html">
@@ -4408,6 +4664,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7771065"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4478,6 +4738,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7771061"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7771061/index.html">
@@ -4545,6 +4809,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7762763"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7762763/index.html">
@@ -4611,6 +4879,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7543246"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4685,6 +4957,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7535298"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7535298/index.html">
@@ -4758,6 +5034,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7508488"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7508488/index.html">
@@ -4824,6 +5104,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7692936"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -4894,6 +5178,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7674060"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7674060/index.html">
@@ -4960,6 +5248,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7674047"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5032,6 +5324,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7674042"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7674042/index.html">
@@ -5096,6 +5392,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7630855"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5164,6 +5464,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7563773"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7563773/index.html">
@@ -5229,6 +5533,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7563768"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7563768/index.html">
@@ -5293,6 +5601,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7563752"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5364,6 +5676,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7563739"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5438,6 +5754,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7547235"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7547235/index.html">
@@ -5504,6 +5824,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7535303"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5578,6 +5902,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7535295"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7535295/index.html">
@@ -5644,6 +5972,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7508507"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5720,6 +6052,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7508500"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7508500/index.html">
@@ -5789,6 +6125,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7485392"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7485392/index.html">
@@ -5853,6 +6193,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7485388"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -5919,6 +6263,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7728429"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7728429/index.html">
@@ -5983,6 +6331,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7728428"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6050,6 +6402,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7485383"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6120,6 +6476,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7463470"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7463470/index.html">
@@ -6187,6 +6547,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7563745"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7563745/index.html">
@@ -6251,6 +6615,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7547239"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6319,6 +6687,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7543258"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7543258/index.html">
@@ -6383,6 +6755,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7535292"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6453,6 +6829,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7485396"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7485396/index.html">
@@ -6517,6 +6897,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7463458"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6587,6 +6971,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7441988"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7441988/index.html">
@@ -6651,6 +7039,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7398087"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6723,6 +7115,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7398082"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7398082/index.html">
@@ -6787,6 +7183,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7377473"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6854,6 +7254,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301908"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -6930,6 +7334,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7666213"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7666213/index.html">
@@ -6995,6 +7403,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7654284"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7654284/index.html">
@@ -7059,6 +7471,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7654283"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7127,6 +7543,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7654282"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7654282/index.html">
@@ -7191,6 +7611,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7654281"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7257,6 +7681,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7654280"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7654280/index.html">
@@ -7321,6 +7749,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7630848"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7389,6 +7821,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7630842"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7630842/index.html">
@@ -7453,6 +7889,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7637900"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7519,6 +7959,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7637899"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7637899/index.html">
@@ -7583,6 +8027,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7557663"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7651,6 +8099,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7526336"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7526336/index.html">
@@ -7715,6 +8167,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7526320"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7789,6 +8245,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7485395"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7485395/index.html">
@@ -7853,6 +8313,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7477826"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7920,6 +8384,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7463467"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -7992,6 +8460,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7420829"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7420829/index.html">
@@ -8056,6 +8528,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7398099"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8124,6 +8600,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7398096"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7398096/index.html">
@@ -8190,6 +8670,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7377477"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8264,6 +8748,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7377475"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7377475/index.html">
@@ -8330,6 +8818,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7302030"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8400,6 +8892,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301903"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301903/index.html">
@@ -8468,6 +8964,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301756"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8540,6 +9040,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301741"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301741/index.html">
@@ -8604,6 +9108,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301438"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8676,6 +9184,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197559"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197559/index.html">
@@ -8746,6 +9258,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391357"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8820,6 +9336,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7719617"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7719617/index.html">
@@ -8888,6 +9408,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7535397"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -8958,6 +9482,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7526337"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7526337/index.html">
@@ -9022,6 +9550,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7498873"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9089,6 +9621,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7333029"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9163,6 +9699,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7477782"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7477782/index.html">
@@ -9227,6 +9767,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7477774"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9294,6 +9838,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7453818"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9365,6 +9913,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7453817"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9441,6 +9993,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7481887"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7481887/index.html">
@@ -9510,6 +10066,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7481886"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7481886/index.html">
@@ -9576,6 +10136,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7481885"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9644,6 +10208,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430818"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430818/index.html">
@@ -9711,6 +10279,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430753"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430753/index.html">
@@ -9775,6 +10347,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7430730"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -9845,6 +10421,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430728"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430728/index.html">
@@ -9912,6 +10492,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430726"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430726/index.html">
@@ -9978,6 +10562,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7302024"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10048,6 +10636,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301761"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301761/index.html">
@@ -10114,6 +10706,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301746"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10186,6 +10782,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301736"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301736/index.html">
@@ -10252,6 +10852,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301497"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10322,6 +10926,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301469"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301469/index.html">
@@ -10386,6 +10994,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301433"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10458,6 +11070,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301426"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301426/index.html">
@@ -10529,6 +11145,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301423"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301423/index.html">
@@ -10595,6 +11215,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197705"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10665,6 +11289,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197590"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197590/index.html">
@@ -10734,6 +11362,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197563"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197563/index.html">
@@ -10800,6 +11432,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391376"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -10868,6 +11504,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390886"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390886/index.html">
@@ -10934,6 +11574,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389147"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11004,6 +11648,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430833"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430833/index.html">
@@ -11070,6 +11718,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7430832"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11138,6 +11790,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7430831"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7430831/index.html">
@@ -11205,6 +11861,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301905"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301905/index.html">
@@ -11269,6 +11929,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7420823"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11336,6 +12000,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301753"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11405,6 +12073,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301748"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11477,6 +12149,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301740"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301740/index.html">
@@ -11541,6 +12217,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301734"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11615,6 +12295,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301730"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301730/index.html">
@@ -11680,6 +12364,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301727"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301727/index.html">
@@ -11744,6 +12432,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301724"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11816,6 +12508,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301720"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301720/index.html">
@@ -11880,6 +12576,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301709"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -11946,6 +12646,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301694"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301694/index.html">
@@ -12010,6 +12714,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301679"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12077,6 +12785,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301667"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12147,6 +12859,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7411825"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7411825/index.html">
@@ -12211,6 +12927,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7389325"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12278,6 +12998,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7340832"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12347,6 +13071,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7340838"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12423,6 +13151,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301888"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301888/index.html">
@@ -12489,6 +13221,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389763"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12561,6 +13297,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301419"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301419/index.html">
@@ -12628,6 +13368,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302220"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302220/index.html">
@@ -12692,6 +13436,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7302212"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12760,6 +13508,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302211"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302211/index.html">
@@ -12825,6 +13577,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302210"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302210/index.html">
@@ -12889,6 +13645,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7302209"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -12957,6 +13717,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302208"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302208/index.html">
@@ -13022,6 +13786,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301583"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301583/index.html">
@@ -13086,6 +13854,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301439"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13153,6 +13925,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391364"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13224,6 +14000,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391270"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13300,6 +14080,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391172"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391172/index.html">
@@ -13367,6 +14151,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390999"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390999/index.html">
@@ -13433,6 +14221,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390686"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13505,6 +14297,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302121"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302121/index.html">
@@ -13576,6 +14372,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7302116"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7302116/index.html">
@@ -13640,6 +14440,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301574"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13707,6 +14511,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301466"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13779,6 +14587,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301400"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7301400/index.html">
@@ -13845,6 +14657,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197701"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -13917,6 +14733,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197856"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197856/index.html">
@@ -13982,6 +14802,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197854"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197854/index.html">
@@ -14046,6 +14870,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197853"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14114,6 +14942,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391159"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391159/index.html">
@@ -14180,6 +15012,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390805"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14250,6 +15086,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390691"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390691/index.html">
@@ -14314,6 +15154,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390584"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14388,6 +15232,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390574"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390574/index.html">
@@ -14455,6 +15303,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390567"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390567/index.html">
@@ -14521,6 +15373,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390563"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14591,6 +15447,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197869"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197869/index.html">
@@ -14659,6 +15519,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390843"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14733,6 +15597,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390827"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390827/index.html">
@@ -14797,6 +15665,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390820"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -14867,6 +15739,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197470"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197470/index.html">
@@ -14931,6 +15807,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390836"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15001,6 +15881,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197881"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197881/index.html">
@@ -15065,6 +15949,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391062"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15135,6 +16023,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391297"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391297/index.html">
@@ -15203,6 +16095,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6392235"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15275,6 +16171,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6392227"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6392227/index.html">
@@ -15341,6 +16241,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391219"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15415,6 +16319,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390890"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390890/index.html">
@@ -15484,6 +16392,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390875"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390875/index.html">
@@ -15548,6 +16460,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390871"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15618,6 +16534,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390861"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390861/index.html">
@@ -15684,6 +16604,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390814"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15754,6 +16678,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390809"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390809/index.html">
@@ -15821,6 +16749,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390699"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390699/index.html">
@@ -15885,6 +16817,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390167"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -15952,6 +16888,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390159"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16024,6 +16964,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389960"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389960/index.html">
@@ -16093,6 +17037,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7197780"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/7197780/index.html">
@@ -16157,6 +17105,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197777"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16227,6 +17179,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6392246"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6392246/index.html">
@@ -16291,6 +17247,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6392234"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16359,6 +17319,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391975"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391975/index.html">
@@ -16426,6 +17390,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391974"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391974/index.html">
@@ -16492,6 +17460,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6391007"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16562,6 +17534,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391076"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391076/index.html">
@@ -16630,6 +17606,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390491"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16704,6 +17684,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390148"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390148/index.html">
@@ -16770,6 +17754,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390153"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16844,6 +17832,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390011"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390011/index.html">
@@ -16910,6 +17902,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389899"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -16986,6 +17982,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389775"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389775/index.html">
@@ -17056,6 +18056,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389657"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17128,6 +18132,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389562"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389562/index.html">
@@ -17192,6 +18200,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6392249"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17260,6 +18272,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6388969"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6388969/index.html">
@@ -17326,6 +18342,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390578"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17398,6 +18418,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389767"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389767/index.html">
@@ -17467,6 +18491,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6390254"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6390254/index.html">
@@ -17535,6 +18563,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390226"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17607,6 +18639,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389771"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389771/index.html">
@@ -17673,6 +18709,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389617"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17742,6 +18782,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389446"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17816,6 +18860,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389440"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389440/index.html">
@@ -17882,6 +18930,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389431"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -17954,6 +19006,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389313"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389313/index.html">
@@ -18020,6 +19076,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389302"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18094,6 +19154,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389178"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389178/index.html">
@@ -18165,6 +19229,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389017"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389017/index.html">
@@ -18229,6 +19297,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197783"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18297,6 +19369,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391983"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6391983/index.html">
@@ -18363,6 +19439,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6390022"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18435,6 +19515,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389727"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389727/index.html">
@@ -18501,6 +19585,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389704"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18575,6 +19663,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389691"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389691/index.html">
@@ -18639,6 +19731,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389629"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18705,6 +19801,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389593"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389593/index.html">
@@ -18769,6 +19869,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389480"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18838,6 +19942,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389434"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -18912,6 +20020,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389426"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389426/index.html">
@@ -18976,6 +20088,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389394"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19045,6 +20161,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389390"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19119,6 +20239,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389353"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389353/index.html">
@@ -19190,6 +20314,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389109"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389109/index.html">
@@ -19254,6 +20382,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6388963"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19324,6 +20456,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389289"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389289/index.html">
@@ -19393,6 +20529,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389275"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389275/index.html">
@@ -19460,6 +20600,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6389259"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6389259/index.html">
@@ -19524,6 +20668,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389256"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19591,6 +20739,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389148"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19663,6 +20815,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6388992"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6388992/index.html">
@@ -19730,6 +20886,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6388966"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../pt-br/besluit/6388966/index.html">
@@ -19794,6 +20954,10 @@
           <span class="badge-impact impact-gemiddeld">Médio Impacto</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="6389121"
+                aria-pressed="false" aria-label="Salvar esta decisão"
+                title="Salvar esta decisão">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -19896,7 +21060,7 @@
 
   <!-- Strings app.js needs at runtime. Without this the counter, the postcode
        badge and the read-aloud voice stayed Dutch or English on every page. -->
-  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link copiado para a \u00e1rea de transfer\u00eancia!", "lang": "pt-br", "postal_badge": "\ud83d\udccd CEP {code} \u2192 bairro {wijk}", "results_many": "decis\u00f5es", "results_one": "decis\u00e3o", "speech": "pt-BR", "theme_to_dark": "\ud83c\udf19 Escuro", "theme_to_light": "\u2600\ufe0f Claro", "tts_unsupported": "A leitura em voz alta n\u00e3o \u00e9 suportada neste navegador."}</script>
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link copiado para a \u00e1rea de transfer\u00eancia!", "lang": "pt-br", "postal_badge": "\ud83d\udccd CEP {code} \u2192 bairro {wijk}", "results_many": "decis\u00f5es", "results_one": "decis\u00e3o", "save_decision": "Salvar esta decis\u00e3o", "speech": "pt-BR", "theme_to_dark": "\ud83c\udf19 Escuro", "theme_to_light": "\u2600\ufe0f Claro", "tts_unsupported": "A leitura em voz alta n\u00e3o \u00e9 suportada neste navegador.", "unsave_decision": "Remover dos salvos"}</script>
   <script src="../static/js/app.js"></script>
 </body>
 </html>

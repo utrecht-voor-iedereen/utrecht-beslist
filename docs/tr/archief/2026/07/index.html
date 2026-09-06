@@ -144,6 +144,8 @@
     <!-- Wijk Selector -->
     <select id="wijk-select" class="filter-select">
       <option value="all">📍 Tüm Utrecht Mahalleleri</option>
+      
+      <option value="Overig">🏙️ Şehir geneli</option>
       <option value="Binnenstad">🏰 Binnenstad</option>
       <option value="Oost">🌳 Oost</option>
       <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
@@ -196,6 +198,12 @@
       
     </select>
 
+    <!-- Solo guardados. Arranca oculto: sin nada guardado no dice nada. -->
+    <button id="only-favs-btn" class="share-btn" style="display: none; padding: 0.65rem 1rem;"
+            aria-pressed="false" title="Bu tarayıcıda kayıtlı. Hesap yoktur.">
+      ☆ Yalnızca kayıtlı <span id="fav-count"></span>
+    </button>
+
     <!-- Active Filter Reset Button -->
     <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
       ❌ Filtreleri sıfırla <span class="shortcut-hint">Esc</span>
@@ -244,6 +252,10 @@
           <span class="badge-impact impact-gemiddeld">Orta Etki</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7903410"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -310,6 +322,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7903396"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../tr/besluit/7903396/index.html">
@@ -374,6 +390,10 @@
           <span class="badge-impact impact-hoog">Yüksek Etki</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7825096"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -452,6 +472,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7825093"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../tr/besluit/7825093/index.html">
@@ -519,6 +543,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7756188"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../tr/besluit/7756188/index.html">
@@ -581,6 +609,10 @@
           <span class="badge-impact impact-laag">Düşük Etki</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7947093"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -648,6 +680,10 @@
           <span class="badge-impact impact-laag">Düşük Etki</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7947092"
+                aria-pressed="false" aria-label="Bu kararı kaydet"
+                title="Bu kararı kaydet">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -750,7 +786,7 @@
 
   <!-- Strings app.js needs at runtime. Without this the counter, the postcode
        badge and the read-aloud voice stayed Dutch or English on every page. -->
-  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Ba\u011flant\u0131 panoya kopyaland\u0131!", "lang": "tr", "postal_badge": "\ud83d\udccd Posta kodu {code} \u2192 mahalle {wijk}", "results_many": "karar", "results_one": "karar", "speech": "tr-TR", "theme_to_dark": "\ud83c\udf19 Koyu", "theme_to_light": "\u2600\ufe0f A\u00e7\u0131k", "tts_unsupported": "Sesli okuma bu taray\u0131c\u0131da desteklenmiyor."}</script>
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Ba\u011flant\u0131 panoya kopyaland\u0131!", "lang": "tr", "postal_badge": "\ud83d\udccd Posta kodu {code} \u2192 mahalle {wijk}", "results_many": "karar", "results_one": "karar", "save_decision": "Bu karar\u0131 kaydet", "speech": "tr-TR", "theme_to_dark": "\ud83c\udf19 Koyu", "theme_to_light": "\u2600\ufe0f A\u00e7\u0131k", "tts_unsupported": "Sesli okuma bu taray\u0131c\u0131da desteklenmiyor.", "unsave_decision": "Kay\u0131tl\u0131lardan \u00e7\u0131kar"}</script>
   <script src="../../../../static/js/app.js"></script>
 </body>
 </html>
