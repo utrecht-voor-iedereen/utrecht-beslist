@@ -521,6 +521,73 @@ UI = {
         'fr': 'Signaler une erreur',
         'de': 'Fehler melden',
     },
+    # El resumen es de una máquina y el texto oficial es el PDF. Decirlo solo en
+    # el pie, en letra pequeña, dejaba que la síntesis se leyera como si fuera el
+    # acta; este aviso va pegado al resumen.
+    'ai_summary_notice': {
+        'nl': 'Automatische samenvatting in begrijpelijke taal. Niet de officiële tekst.',
+        'en': 'Automatic plain-language summary. Not the official text.',
+        'es': 'Resumen automático en lenguaje claro. No es el texto oficial.',
+        'tr': 'Sade dilde otomatik özet. Resmî metin değildir.',
+        'pt-br': 'Resumo automático em linguagem simples. Não é o texto oficial.',
+        'pt-pt': 'Resumo automático em linguagem simples. Não é o texto oficial.',
+        'fr': 'Résumé automatique en langage clair. Ce n\'est pas le texte officiel.',
+        'de': 'Automatische Zusammenfassung in einfacher Sprache. Nicht der amtliche Text.',
+    },
+    'ai_summary_source': {
+        'nl': 'Lees het officiële stuk',
+        'en': 'Read the official document',
+        'es': 'Leer el documento oficial',
+        'tr': 'Resmî belgeyi okuyun',
+        'pt-br': 'Ler o documento oficial',
+        'pt-pt': 'Ler o documento oficial',
+        'fr': 'Lire le document officiel',
+        'de': 'Amtliches Dokument lesen',
+    },
+    # El título corto también lo escribe el modelo. Sin el título del registro al
+    # lado no hay forma de comprobar que la ficha y el expediente son lo mismo.
+    'official_title_label': {
+        'nl': 'Titel in het register',
+        'en': 'Title in the register',
+        'es': 'Título en el registro',
+        'tr': 'Sicildeki başlık',
+        'pt-br': 'Título no registro',
+        'pt-pt': 'Título no registo',
+        'fr': 'Titre au registre',
+        'de': 'Titel im Register',
+    },
+    'doc_type_label': {
+        'nl': 'Soort stuk',
+        'en': 'Document type',
+        'es': 'Tipo de documento',
+        'tr': 'Belge türü',
+        'pt-br': 'Tipo de documento',
+        'pt-pt': 'Tipo de documento',
+        'fr': 'Type de document',
+        'de': 'Dokumentart',
+    },
+    # Una propuesta en el orden del día no está decidida, y el vecino tiene que
+    # saberlo antes de leer el resumen.
+    'phase_note_agenda': {
+        'nl': 'Nog niet besloten: dit voorstel staat op de agenda van de raad.',
+        'en': 'Not decided yet: this proposal is on the council agenda.',
+        'es': 'Todavía sin decidir: esta propuesta está en el orden del día del pleno.',
+        'tr': 'Henüz karara bağlanmadı: bu teklif meclis gündeminde.',
+        'pt-br': 'Ainda não decidido: esta proposta está na pauta da câmara.',
+        'pt-pt': 'Ainda não decidido: esta proposta está na ordem de trabalhos.',
+        'fr': "Pas encore décidé : cette proposition est à l'ordre du jour du conseil.",
+        'de': 'Noch nicht entschieden: Dieser Antrag steht auf der Tagesordnung.',
+    },
+    'phase_note_informational': {
+        'nl': 'Informatief stuk. Hier wordt niets over besloten.',
+        'en': 'Informational document. Nothing is decided here.',
+        'es': 'Documento informativo. Aquí no se decide nada.',
+        'tr': 'Bilgilendirme belgesi. Burada bir karar alınmaz.',
+        'pt-br': 'Documento informativo. Nada é decidido aqui.',
+        'pt-pt': 'Documento informativo. Nada é decidido aqui.',
+        'fr': "Document d'information. Rien n'y est décidé.",
+        'de': 'Informationsvorlage. Hier wird nichts beschlossen.',
+    },
     'ai_transparency': {
         'nl': 'AI Transparantie:',
         'en': 'AI Transparency:',

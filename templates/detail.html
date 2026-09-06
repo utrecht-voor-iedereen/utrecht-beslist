@@ -27,7 +27,10 @@
   <!-- Header Badges & Actions (Print + Audio TTS) -->
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--utrecht-borde-suave); padding-bottom: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
-      <span class="notice-box success" style="margin-top: 0; padding: 0.35rem 0.75rem; font-weight: 700;">
+      {# La clase sale del estado canónico del registro, no del texto del modelo:
+         antes todo iba en la caja verde de éxito y una propuesta sin votar se
+         leía como aprobada. #}
+      <span class="badge-state state-{{ item.state or 'agenda' }}">
         {{ status_text }}
       </span>
 
@@ -64,6 +67,14 @@
     {{ title_text }}
   </h1>
 
+  {# Un expediente en el orden del día no está decidido, y eso hay que decirlo
+     antes del resumen, no después. #}
+  {% if item.state == "agenda" %}
+    <p class="notice-box warning" style="display: block; margin-bottom: 1rem;">⏳ {{ t("phase_note_agenda", lang) }}</p>
+  {% elif item.state == "informational" %}
+    <p class="notice-box info" style="display: block; margin-bottom: 1rem;">ℹ️ {{ t("phase_note_informational", lang) }}</p>
+  {% endif %}
+
   <!-- One Line Key Impact Highlight NoticeBox -->
   <div class="notice-box info" style="display: block; margin-bottom: 2rem; font-size: 1.05rem; font-weight: 600;">
     💡 {{ impact_sentence_text }}
@@ -81,6 +92,13 @@
       <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         {{ t("summary_title", lang) }}
       </h2>
+      <p class="ai-notice">
+        <span>🤖 {{ t("ai_summary_notice", lang) }}</span>
+        {% if item.pdf_url %}
+          <a href="{{ item.pdf_url }}" target="_blank" rel="noopener">{{ t("ai_summary_source", lang) }} ➔</a>
+        {% endif %}
+      </p>
+
       <p style="font-size: 1rem; color: var(--utrecht-negro); line-height: 1.7; margin-bottom: 1rem;">
         {{ summary_text }}
       </p>
@@ -178,6 +196,20 @@
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
       🏛️ {{ t("source_title", lang) }}
     </h3>
+
+    {# El título corto de la ficha también lo escribe el modelo. Sin el del
+       registro al lado no hay forma de comprobar que ficha y expediente son lo
+       mismo. #}
+    {% if item.official_title %}
+      <dl style="margin: 0 0 1rem; font-size: 0.9rem; line-height: 1.6;">
+        <dt style="font-weight: 700; color: var(--utrecht-negro);">{{ t("official_title_label", lang) }}</dt>
+        <dd style="margin: 0 0 0.5rem; color: var(--utrecht-gris-secundario);">{{ item.official_title }}</dd>
+        {% if item.doc_type %}
+          <dt style="font-weight: 700; color: var(--utrecht-negro);">{{ t("doc_type_label", lang) }}</dt>
+          <dd style="margin: 0; color: var(--utrecht-gris-secundario);">{{ item.doc_type }}</dd>
+        {% endif %}
+      </dl>
+    {% endif %}
 
     {% if item.source_borrowed_from %}
       <p style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); margin-top: 0.5rem;">

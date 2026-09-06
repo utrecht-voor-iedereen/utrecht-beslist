@@ -98,11 +98,14 @@
   {% set status_text = get_item_lang_field(item, "status", lang) %}
   {% set key_figure_text = get_item_lang_field(item, "key_figure", lang) %}
 
-  <article class="card" data-theme="{{ item.thema | join(' ') }}" data-wijk="{{ item.wijken | join(' ') | lower }}">
+  <article class="card" data-theme="{{ item.thema | join(' ') }}" data-wijk="{{ item.wijken | join(' ') | lower }}" data-state="{{ item.state or 'agenda' }}" data-doc="{{ item.doc_id }}">
     <div>
       <div class="card-header">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span style="font-size: 0.78rem; font-weight: 700; color: var(--utrecht-azul-enlace); background: var(--utrecht-crema-fondo); padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
+          {# Misma etiqueta de fase que en la ficha: en el listado todas salían
+             con el mismo azul y no se distinguía lo aprobado de lo que aún se
+             está debatiendo. #}
+          <span class="badge-state state-{{ item.state or 'agenda' }}" style="font-size: 0.75rem; padding: 0.15rem 0.5rem;">
             {{ status_text }}
           </span>
           <span class="card-date">📅 <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time></span>
