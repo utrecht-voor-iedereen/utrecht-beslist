@@ -109,6 +109,129 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* ── Guardados y estado en la URL ──────────────────────────────────────
+     Dos cosas que van juntas: poder marcar lo que te interesa, y poder mandar
+     por WhatsApp lo que estás viendo. Sin lo segundo, un filtro solo sirve
+     mientras tienes la pestaña abierta. */
+  const FAV_KEY = 'utrecht_favorites';
+  const onlyFavsBtn = document.getElementById('only-favs-btn');
+  const favCountEl = document.getElementById('fav-count');
+  let onlyFavs = false;
+
+  function readFavs() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(FAV_KEY) || '[]');
+      return Array.isArray(raw) ? raw.map(String) : [];
+    } catch {
+      // Modo privado o almacenamiento bloqueado: la página sigue funcionando
+      // sin guardados en vez de romperse al arrancar.
+      return [];
+    }
+  }
+
+  function writeFavs(list) {
+    try {
+      localStorage.setItem(FAV_KEY, JSON.stringify(list));
+    } catch { /* sin almacenamiento: dura lo que la pestaña */ }
+  }
+
+  function paintFavs() {
+    const favs = readFavs();
+    document.querySelectorAll('[data-fav]').forEach(btn => {
+      const on = favs.includes(String(btn.dataset.fav));
+      btn.textContent = on ? '★' : '☆';
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', String(on));
+      const label = on ? UB.unsave_decision : UB.save_decision;
+      if (label) {
+        btn.setAttribute('aria-label', label);
+        btn.setAttribute('title', label);
+      }
+    });
+    if (favCountEl) favCountEl.textContent = favs.length ? `(${favs.length})` : '';
+    // El botón solo aparece cuando hay algo que enseñar.
+    if (onlyFavsBtn) onlyFavsBtn.style.display = favs.length ? 'inline-flex' : 'none';
+    if (!favs.length && onlyFavs) {
+      onlyFavs = false;
+      onlyFavsBtn?.setAttribute('aria-pressed', 'false');
+      onlyFavsBtn?.classList.remove('active');
+    }
+  }
+
+  // Delegado: las tarjetas no se repintan, pero la estrella vive dentro del
+  // enlace al detalle y hay que impedir que el click navegue.
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-fav]');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const id = String(btn.dataset.fav);
+    const favs = readFavs();
+    const i = favs.indexOf(id);
+    if (i >= 0) favs.splice(i, 1); else favs.push(id);
+    writeFavs(favs);
+    paintFavs();
+    if (onlyFavs) filterCards();
+  });
+
+  if (onlyFavsBtn) {
+    onlyFavsBtn.addEventListener('click', () => {
+      onlyFavs = !onlyFavs;
+      onlyFavsBtn.setAttribute('aria-pressed', String(onlyFavs));
+      onlyFavsBtn.classList.toggle('active', onlyFavs);
+      filterCards();
+      syncUrl();
+    });
+  }
+
+  /* El estado de los filtros viaja en la URL para que un enlace se pueda
+     compartir y para que el botón de atrás no pierda lo que estabas mirando.
+     `replaceState` y no `pushState`: teclear en el buscador crearía una entrada
+     de historial por letra. */
+  function syncUrl() {
+    const p = new URLSearchParams();
+    if (activeWijk !== 'all') p.set('wijk', activeWijk);
+    if (activeTheme !== 'all') p.set('thema', activeTheme);
+    if (activeHumanImpactGroup !== 'all') p.set('impact', activeHumanImpactGroup);
+    if (searchQuery) p.set('q', searchQuery);
+    if (onlyFavs) p.set('bewaard', '1');
+    const qs = p.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  }
+
+  function readUrl() {
+    const p = new URLSearchParams(location.search);
+    const wijk = p.get('wijk');
+    const thema = p.get('thema');
+    const impact = p.get('impact');
+    const q = p.get('q');
+
+    // Solo se aceptan valores que existen en los desplegables: un parámetro
+    // inventado dejaría la página en blanco sin decir por qué.
+    if (wijk && wijkSelect && [...wijkSelect.options].some(o => o.value === wijk)) {
+      activeWijk = wijk;
+      wijkSelect.value = wijk;
+    }
+    if (thema && themeSelect && [...themeSelect.options].some(o => o.value === thema)) {
+      activeTheme = thema;
+      themeSelect.value = thema;
+    }
+    if (impact && HUMAN_IMPACT_THEMES[impact]) {
+      activeHumanImpactGroup = impact;
+      humanImpactBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector(`.human-impact-btn[data-impact-group="${impact}"]`)?.classList.add('active');
+    }
+    if (q) {
+      searchQuery = q.toLowerCase().trim();
+      if (searchInput) searchInput.value = q;
+    }
+    if (p.get('bewaard') === '1' && readFavs().length) {
+      onlyFavs = true;
+      onlyFavsBtn?.setAttribute('aria-pressed', 'true');
+      onlyFavsBtn?.classList.add('active');
+    }
+  }
+
   // Reset Filters Function
   function resetAllFilters() {
     if (searchInput) searchInput.value = '';
@@ -126,7 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (postalBadge) postalBadge.style.display = 'none';
 
+    onlyFavs = false;
+    onlyFavsBtn?.setAttribute('aria-pressed', 'false');
+    onlyFavsBtn?.classList.remove('active');
+
     filterCards();
+    syncUrl();
   }
 
   if (resetFiltersBtn) {
@@ -160,7 +288,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Search Query Filter
       const matchesSearch = !searchQuery || titleText.includes(searchQuery) || summaryText.includes(searchQuery) || tagsText.includes(searchQuery);
 
-      if (matchesTheme && matchesHumanImpact && matchesWijk && matchesSearch) {
+      const matchesFav = !onlyFavs || readFavs().includes(String(card.dataset.doc));
+
+      if (matchesTheme && matchesHumanImpact && matchesWijk && matchesSearch && matchesFav) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
@@ -179,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Toggle Reset Button
-    const isFiltered = (activeTheme !== 'all' || activeHumanImpactGroup !== 'all' || activeWijk !== 'all' || searchQuery !== '');
+    const isFiltered = (activeTheme !== 'all' || activeHumanImpactGroup !== 'all' || activeWijk !== 'all' || searchQuery !== '' || onlyFavs);
     if (resetFiltersBtn) {
       resetFiltersBtn.style.display = isFiltered ? 'inline-flex' : 'none';
     }
@@ -191,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
       searchQuery = e.target.value.toLowerCase().trim();
       checkPostalCode(searchQuery);
       filterCards();
+      syncUrl();
     });
   }
 
@@ -201,6 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       activeHumanImpactGroup = btn.dataset.impactGroup || 'all';
       filterCards();
+      syncUrl();
     });
   });
 
@@ -209,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wijkSelect.addEventListener('change', (e) => {
       activeWijk = e.target.value;
       filterCards();
+      syncUrl();
     });
   }
 
@@ -217,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeSelect.addEventListener('change', (e) => {
       activeTheme = e.target.value;
       filterCards();
+      syncUrl();
     });
   }
 
@@ -283,7 +417,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initial filter run to populate badge count
+  // Arranque: pintar guardados, aplicar lo que venga en la URL y filtrar una
+  // vez. El orden importa: readUrl() mira si hay guardados para aceptar
+  // ?bewaard=1, así que paintFavs() va primero.
+  paintFavs();
+  readUrl();
   filterCards();
 });
 

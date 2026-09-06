@@ -644,6 +644,67 @@ header {
   border-color: rgba(96, 165, 250, 0.35);
 }
 
+/* Estrella de guardados. Va en la esquina de la tarjeta, fuera del flujo, para
+   no empujar el título ni cambiar la altura de la rejilla. */
+.card { position: relative; }
+
+.fav-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--utrecht-borde-suave);
+  border-radius: 50%;
+  background: var(--utrecht-blanco-tarjeta);
+  color: var(--utrecht-gris-secundario);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.fav-btn:hover,
+.fav-btn:focus-visible {
+  color: var(--utrecht-rood);
+  border-color: var(--utrecht-rood);
+}
+
+.fav-btn.on {
+  color: var(--utrecht-rood);
+  border-color: var(--utrecht-rood);
+  background: rgba(204, 0, 0, 0.08);
+}
+
+/* El título no puede pasar por debajo de la estrella. */
+.card-title { padding-right: 2.2rem; }
+
+/* Igual que con las etiquetas de fase: el rojo de marca no se ve sobre el fondo
+   oscuro (2,4:1). La variante clara llega a 5,3:1 sobre la tarjeta. */
+[data-theme="dark"] .fav-btn:hover,
+[data-theme="dark"] .fav-btn:focus-visible,
+[data-theme="dark"] .fav-btn.on {
+  color: #F87171;
+  border-color: #F87171;
+}
+
+[data-theme="dark"] .fav-btn.on {
+  background: rgba(248, 113, 113, 0.16);
+}
+
+[data-theme="dark"] .share-btn.active {
+  border-color: #F87171;
+  color: #F87171;
+}
+
+.share-btn.active {
+  border-color: var(--utrecht-rood);
+  color: var(--utrecht-rood);
+  font-weight: 700;
+}
+
 /* Aviso de que el resumen lo escribe una máquina. Va pegado al texto, no en el
    pie: es la confusión que más daño hace en este sitio. */
 .ai-notice {

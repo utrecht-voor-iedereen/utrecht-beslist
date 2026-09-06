@@ -211,6 +211,60 @@ UI = {
         'fr': "📍 Tous les Quartiers d'Utrecht",
         'de': '📍 Alle Stadtteile in Utrecht',
     },
+    # El 82% de los acuerdos son de ciudad y no de barrio, así que sin esta
+    # opción no había forma de aislarlos ni de descartarlos.
+    'wijk_citywide': {
+        'nl': '🏙️ Hele stad',
+        'en': '🏙️ City-wide',
+        'es': '🏙️ Toda la ciudad',
+        'tr': '🏙️ Şehir geneli',
+        'pt-br': '🏙️ Toda a cidade',
+        'pt-pt': '🏙️ Toda a cidade',
+        'fr': '🏙️ Toute la ville',
+        'de': '🏙️ Stadtweit',
+    },
+    'only_favorites': {
+        'nl': 'Alleen bewaard',
+        'en': 'Saved only',
+        'es': 'Solo guardados',
+        'tr': 'Yalnızca kayıtlı',
+        'pt-br': 'Apenas salvos',
+        'pt-pt': 'Apenas guardados',
+        'fr': 'Seulement gardés',
+        'de': 'Nur gemerkt',
+    },
+    'save_decision': {
+        'nl': 'Bewaar dit besluit',
+        'en': 'Save this decision',
+        'es': 'Guardar esta decisión',
+        'tr': 'Bu kararı kaydet',
+        'pt-br': 'Salvar esta decisão',
+        'pt-pt': 'Guardar esta decisão',
+        'fr': 'Garder cette décision',
+        'de': 'Diesen Beschluss merken',
+    },
+    'unsave_decision': {
+        'nl': 'Niet meer bewaren',
+        'en': 'Remove from saved',
+        'es': 'Quitar de guardados',
+        'tr': 'Kayıtlılardan çıkar',
+        'pt-br': 'Remover dos salvos',
+        'pt-pt': 'Remover dos guardados',
+        'fr': 'Retirer des gardés',
+        'de': 'Nicht mehr merken',
+    },
+    # La lista vive en este navegador. Decirlo evita que alguien cuente con
+    # encontrarla en el móvil después de guardarla en el ordenador.
+    'favorites_local': {
+        'nl': 'Bewaard in deze browser. Er zijn geen accounts.',
+        'en': 'Saved in this browser. There are no accounts.',
+        'es': 'Guardado en este navegador. Aquí no hay cuentas.',
+        'tr': 'Bu tarayıcıda kayıtlı. Hesap yoktur.',
+        'pt-br': 'Salvo neste navegador. Não há contas.',
+        'pt-pt': 'Guardado neste navegador. Não há contas.',
+        'fr': 'Gardé dans ce navigateur. Il n\'y a pas de comptes.',
+        'de': 'In diesem Browser gemerkt. Es gibt keine Konten.',
+    },
     'theme_all': {
         'nl': '🏷️ Alle Onderwerpen',
         'en': '🏷️ All Topics',
@@ -1022,6 +1076,8 @@ CLIENT_KEYS = [
     'tts_unsupported',
     'theme_to_dark',
     'theme_to_light',
+    'save_decision',
+    'unsave_decision',
 ]
 
 

@@ -144,6 +144,8 @@
     <!-- Wijk Selector -->
     <select id="wijk-select" class="filter-select">
       <option value="all">📍 Alle Stadtteile in Utrecht</option>
+      
+      <option value="Overig">🏙️ Stadtweit</option>
       <option value="Binnenstad">🏰 Binnenstad</option>
       <option value="Oost">🌳 Oost</option>
       <option value="Leidsche Rijn">🏡 Leidsche Rijn</option>
@@ -196,6 +198,12 @@
       
     </select>
 
+    <!-- Solo guardados. Arranca oculto: sin nada guardado no dice nada. -->
+    <button id="only-favs-btn" class="share-btn" style="display: none; padding: 0.65rem 1rem;"
+            aria-pressed="false" title="In diesem Browser gemerkt. Es gibt keine Konten.">
+      ☆ Nur gemerkt <span id="fav-count"></span>
+    </button>
+
     <!-- Active Filter Reset Button -->
     <button id="reset-filters-btn" class="share-btn" style="display: none; color: var(--utrecht-rood); border-color: var(--utrecht-rood); padding: 0.65rem 1rem;">
       ❌ Filter zurücksetzen <span class="shortcut-hint">Esc</span>
@@ -244,6 +252,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7526336"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -313,6 +325,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7526320"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -387,6 +403,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7485395"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7485395/index.html">
@@ -455,6 +475,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7477826"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -529,6 +553,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7463467"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7463467/index.html">
@@ -599,6 +627,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7420829"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -671,6 +703,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7398099"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7398099/index.html">
@@ -742,6 +778,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7398096"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7398096/index.html">
@@ -810,6 +850,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7377477"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -886,6 +930,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7377475"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7377475/index.html">
@@ -954,6 +1002,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7302030"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1030,6 +1082,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301903"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7301903/index.html">
@@ -1105,6 +1161,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301756"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7301756/index.html">
@@ -1178,6 +1238,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7301741"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7301741/index.html">
@@ -1246,6 +1310,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7301438"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1319,6 +1387,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7197559"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1395,6 +1467,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="6391357"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/6391357/index.html">
@@ -1470,6 +1546,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7719617"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7719617/index.html">
@@ -1538,6 +1618,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7535397"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1608,6 +1692,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7526337"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7526337/index.html">
@@ -1672,6 +1760,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7498873"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1739,6 +1831,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7333029"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1813,6 +1909,10 @@
         
       </div>
 
+        <button class="fav-btn" type="button" data-fav="7477782"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
+
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
         <a href="../../../../de/besluit/7477782/index.html">
@@ -1881,6 +1981,10 @@
           <span class="badge-impact impact-gemiddeld">Mittlere Wirkung</span>
         
       </div>
+
+        <button class="fav-btn" type="button" data-fav="7477774"
+                aria-pressed="false" aria-label="Diesen Beschluss merken"
+                title="Diesen Beschluss merken">☆</button>
 
       <!-- Title linking directly to detail page -->
       <h2 class="card-title">
@@ -1987,7 +2091,7 @@
 
   <!-- Strings app.js needs at runtime. Without this the counter, the postcode
        badge and the read-aloud voice stayed Dutch or English on every page. -->
-  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link in die Zwischenablage kopiert!", "lang": "de", "postal_badge": "\ud83d\udccd PLZ {code} \u2192 Stadtteil {wijk}", "results_many": "Beschl\u00fcsse", "results_one": "Beschluss", "speech": "de-DE", "theme_to_dark": "\ud83c\udf19 Dunkel", "theme_to_light": "\u2600\ufe0f Hell", "tts_unsupported": "Vorlesen wird von diesem Browser nicht unterst\u00fctzt."}</script>
+  <script id="ub-i18n" type="application/json">{"copied_to_clipboard": "Link in die Zwischenablage kopiert!", "lang": "de", "postal_badge": "\ud83d\udccd PLZ {code} \u2192 Stadtteil {wijk}", "results_many": "Beschl\u00fcsse", "results_one": "Beschluss", "save_decision": "Diesen Beschluss merken", "speech": "de-DE", "theme_to_dark": "\ud83c\udf19 Dunkel", "theme_to_light": "\u2600\ufe0f Hell", "tts_unsupported": "Vorlesen wird von diesem Browser nicht unterst\u00fctzt.", "unsave_decision": "Nicht mehr merken"}</script>
   <script src="../../../../static/js/app.js"></script>
 </body>
 </html>
