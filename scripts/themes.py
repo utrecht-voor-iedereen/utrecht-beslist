@@ -129,6 +129,56 @@ WIJKEN = [
     "Noordoost"
 ]
 
+# Los documentos del pleno casi nunca nombran el distrito oficial: nombran el
+# barrio, la plaza o la calle. Sin este mapa, un acuerdo sobre Kanaleneiland no
+# se podía filtrar por Zuidwest, que es donde el vecino lo busca.
+#
+# Solo entran topónimos que identifican un distrito sin ambigüedad. Los que
+# cruzan varios (Merwedekanaalzone toca Zuidwest y Zuid) van al distrito donde
+# cae la mayor parte, y los que no se pueden decidir se quedan fuera a propósito:
+# es mejor "toda la ciudad" que un barrio equivocado.
+BUURTEN = {
+    "kanaleneiland": "Zuidwest",
+    "transwijk": "Zuidwest",
+    "rivierenwijk": "Zuidwest",
+    "dichterswijk": "Zuidwest",
+    "merwedekanaalzone": "Zuidwest",
+    "lombok": "West",
+    "oog in al": "West",
+    "halve maan": "West",
+    "zuilen": "Noordwest",
+    "ondiep": "Noordwest",
+    "pijlsweerd": "Noordwest",
+    "tuindorp": "Noordoost",
+    "wittevrouwen": "Noordoost",
+    "voordorp": "Noordoost",
+    "tuinwijk": "Noordoost",
+    "lunetten": "Zuid",
+    "hoograven": "Zuid",
+    "rotsoord": "Zuid",
+    "wilhelminapark": "Oost",
+    "uithof": "Oost",
+    "utrecht science park": "Oost",
+    "abstede": "Oost",
+    "sterrenwijk": "Oost",
+    "vleuterweide": "Vleuten-De Meern",
+    "de meern": "Vleuten-De Meern",
+    "haarzuilens": "Vleuten-De Meern",
+    "terwijde": "Leidsche Rijn",
+    "parkwijk": "Leidsche Rijn",
+    "papendorp": "Leidsche Rijn",
+    "hoge weide": "Leidsche Rijn",
+    "maximapark": "Leidsche Rijn",
+    "domplein": "Binnenstad",
+    "neude": "Binnenstad",
+    "catharijnesingel": "Binnenstad",
+    "jaarbeurs": "Binnenstad",
+    "vredenburg": "Binnenstad",
+    "oudegracht": "Binnenstad",
+    "springweg": "Binnenstad",
+}
+
+
 def detect_theme_heuristics(title: str, text: str) -> list[str]:
     """Detect theme based on keyword occurrence when AI classification is not available."""
     content = f"{title} {text}".lower()
@@ -151,11 +201,17 @@ def detect_wijken_heuristics(title: str, text: str) -> list[str]:
     Longer names are tried first so Vleuten-De Meern is not shadowed.
     """
     content = f"{title} {text}".lower()
-    found = []
+    found = set()
     for wijk in sorted(WIJKEN, key=len, reverse=True):
         pattern = r"(?<![\w-])" + re.escape(wijk.lower()) + r"(?![\w-])"
         if re.search(pattern, content):
-            found.append(wijk)
+            found.add(wijk)
+
+    # Un stuk que nombra el barrio pero no el distrito también es del distrito.
+    for buurt, wijk in BUURTEN.items():
+        pattern = r"(?<![\w-])" + re.escape(buurt) + r"(?![\w-])"
+        if re.search(pattern, content):
+            found.add(wijk)
 
     # Keep the declared order so output does not depend on name length.
     ordered = [w for w in WIJKEN if w in found]
