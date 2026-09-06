@@ -15,9 +15,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+from .i18n import wijk_label
 from .schemas import SummaryBatchOutput, SummaryItem
 from .themes import detect_theme_heuristics, detect_wijken_heuristics
-from .i18n import wijk_label
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
