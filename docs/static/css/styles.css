@@ -576,6 +576,90 @@ header {
   font-weight: 600;
 }
 
+/* ── Fase del expediente ──
+   Cada estado con su color. Antes todos salían en la caja verde de éxito, así
+   que una propuesta en el orden del día —el 70% del archivo— se leía como una
+   decisión ya aprobada. El color nunca va solo: la etiqueta lleva su símbolo y
+   su texto, para quien no distinga los colores. */
+.badge-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.state-passed {
+  background-color: rgba(21, 128, 61, 0.10);
+  color: var(--utrecht-verde-exito);
+  border-color: rgba(21, 128, 61, 0.30);
+}
+
+.state-failed {
+  background-color: rgba(204, 0, 0, 0.10);
+  color: var(--utrecht-rood);
+  border-color: rgba(204, 0, 0, 0.30);
+}
+
+.state-agenda {
+  background-color: rgba(194, 65, 12, 0.10);
+  color: var(--utrecht-naranja-aviso);
+  border-color: rgba(194, 65, 12, 0.30);
+}
+
+.state-informational {
+  background-color: rgba(30, 58, 138, 0.10);
+  color: var(--utrecht-azul-enlace);
+  border-color: rgba(30, 58, 138, 0.30);
+}
+
+/* La paleta oscura no redefine los colores semánticos, así que el verde y el
+   rojo de marca quedaban casi ilegibles sobre el fondo oscuro. Aquí van sus
+   variantes claras, que sí llegan a AA sobre la tarjeta (#1E293B). */
+[data-theme="dark"] .state-passed {
+  color: #4ADE80;
+  background-color: rgba(74, 222, 128, 0.14);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+
+[data-theme="dark"] .state-failed {
+  color: #F87171;
+  background-color: rgba(248, 113, 113, 0.14);
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+[data-theme="dark"] .state-agenda {
+  color: #FBBF24;
+  background-color: rgba(251, 191, 36, 0.14);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+[data-theme="dark"] .state-informational {
+  color: #60A5FA;
+  background-color: rgba(96, 165, 250, 0.14);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+/* Aviso de que el resumen lo escribe una máquina. Va pegado al texto, no en el
+   pie: es la confusión que más daño hace en este sitio. */
+.ai-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px dashed var(--utrecht-borde-suave);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--utrecht-gris-secundario);
+  background-color: var(--utrecht-crema-fondo);
+}
+
 .badge-impact {
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
