@@ -17,6 +17,7 @@ load_dotenv()
 
 from .schemas import SummaryBatchOutput, SummaryItem
 from .themes import detect_theme_heuristics, detect_wijken_heuristics
+from .i18n import wijk_label
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -219,6 +220,44 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
         raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
         return validate_and_parse_llm_json(raw_text, "Google Gemini 1.5 Flash")
 
+
+def summarize_with_openrouter(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
+    """Try summarization using OpenRouter API (OpenAI-compatible)."""
+    # Default to a widely-available OpenRouter model. The caller can override
+    # via AI_MODEL, e.g. meta-llama/llama-3.3-70b-instruct:free
+    model_name = os.environ.get("AI_MODEL", "meta-llama/llama-3.3-70b-instruct")
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    payload = {
+        "model": model_name,
+        "temperature": 0.2,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": json.dumps({"documents": batch_docs}, ensure_ascii=False)}
+        ]
+    }
+
+    clean_key = api_key.strip().strip('"').strip("'")
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode('utf-8'),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {clean_key}",
+            "HTTP-Referer": "https://utrecht-voor-iedereen.github.io/utrecht-beslist/",
+            "X-Title": "Utrecht Beslist",
+        }
+    )
+    with urllib.request.urlopen(req, timeout=120) as res:
+        content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
+        return validate_and_parse_llm_json(content, f"OpenRouter ({model_name})")
+
+
+
+def wijken_label(wijken: list[str], lang: str) -> str:
+    """Lista de barrios ya traducida, para pegarla en una frase."""
+    return ", ".join(wijk_label(w, lang) for w in wijken)
+
+
 def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
     """Generates structured fallback summary when LLM services are unavailable."""
     title = doc.get("title", "Gemeentelijk Stuk")
@@ -276,14 +315,18 @@ def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
         bullet_1_what_pt_pt=f"📌 O que: Publicação oficial sobre '{title_short_en}'",
         bullet_1_what_fr=f"📌 Quoi : Publication officielle sur '{title_short_en}'",
         bullet_1_what_de=f"📌 Was: Offizielle Veröffentlichung zu '{title_short_en}'",
-        punt_2_wie_nl=f"👥 Wie & Waar: Betreft {', '.join(wijken)}",
-        bullet_2_who_en=f"👥 Who & Where: Concerns {', '.join(wijken)}",
-        bullet_2_who_es=f"👥 Quién y dónde: Afecta a {', '.join(wijken)}",
-        bullet_2_who_tr=f"👥 Kim ve Nerede: {', '.join(wijken)} bölgesini ilgilendiriyor",
-        bullet_2_who_pt_br=f"👥 Quem e Onde: Refere-se a {', '.join(wijken)}",
-        bullet_2_who_pt_pt=f"👥 Quem e Onde: Refere-se a {', '.join(wijken)}",
-        bullet_2_who_fr=f"👥 Qui & Où : Concerne {', '.join(wijken)}",
-        bullet_2_who_de=f"👥 Wer & Wo: Betrifft {', '.join(wijken)}",
+        # Cada idioma con sus barrios traducidos. Antes se pegaba la lista cruda,
+        # así que el comodín interno "Overig" salía tal cual en las ocho lenguas
+        # ("Afecta a Overig") y la pregunta de a quién afecta se respondía con
+        # una etiqueta de base de datos.
+        punt_2_wie_nl=f"👥 Wie & Waar: Betreft {wijken_label(wijken, 'nl')}",
+        bullet_2_who_en=f"👥 Who & Where: Concerns {wijken_label(wijken, 'en')}",
+        bullet_2_who_es=f"👥 Quién y dónde: Afecta a {wijken_label(wijken, 'es')}",
+        bullet_2_who_tr=f"👥 Kim ve Nerede: {wijken_label(wijken, 'tr')} bölgesini ilgilendiriyor",
+        bullet_2_who_pt_br=f"👥 Quem e Onde: Refere-se a {wijken_label(wijken, 'pt-br')}",
+        bullet_2_who_pt_pt=f"👥 Quem e Onde: Refere-se a {wijken_label(wijken, 'pt-pt')}",
+        bullet_2_who_fr=f"👥 Qui & Où : Concerne {wijken_label(wijken, 'fr')}",
+        bullet_2_who_de=f"👥 Wer & Wo: Betrifft {wijken_label(wijken, 'de')}",
         punt_3_geld_nl="💶 Impact & Kosten: Raadpleeg het originele stuk voor specifieke cijfers.",
         bullet_3_cost_en="💶 Impact & Cost: Consult the original council document for specific figures.",
         bullet_3_cost_es="💶 Impacto y presupuesto: Consulte el documento original para cifras específicas.",
@@ -327,7 +370,7 @@ def generate_degraded_summary(doc: dict[str, Any]) -> dict[str, Any]:
     return item.model_dump()
 
 def run_ai_chain(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Runs fallback chain: Groq -> Gemini -> Degraded Mode."""
+    """Runs fallback chain: Groq -> Gemini -> OpenRouter -> Degraded Mode."""
     groq_key = os.environ.get("GROQ_API_KEY")
     if groq_key:
         try:
@@ -343,6 +386,14 @@ def run_ai_chain(batch_docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
             return summarize_with_gemini(batch_docs, gemini_key)
         except Exception as e:  # noqa: BLE001
             logger.warning(f"Gemini failed: {e}")
+
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY")
+    if openrouter_key:
+        try:
+            logger.info("Summarizing batch with OpenRouter...")
+            return summarize_with_openrouter(batch_docs, openrouter_key)
+        except Exception as e:  # noqa: BLE001
+            logger.warning(f"OpenRouter failed: {e}")
 
     logger.info("Running in Degraded Mode (fallback without AI)...")
     return [generate_degraded_summary(doc) for doc in batch_docs]
