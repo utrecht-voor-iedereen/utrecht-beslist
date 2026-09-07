@@ -1,0 +1,74 @@
+# Publica el sitio en GitHub Pages desde un artefacto que construye este workflow,
+# en vez de servirlo de la carpeta docs/ del repositorio.
+#
+# Por qué: docs/ son ~2.400 archivos generados y versionarlos convertía cada
+# cambio de plantilla en un diff ilegible, hacía chocar entre sí a dos PRs que
+# tocaran plantillas, y obligaba a rebasar cada vez que el cron diario commiteaba
+# el sitio. El estado (state/processed.json) sí se sigue versionando: eso son
+# datos, no un derivado.
+name: Publicar sitio en Pages
+
+on:
+  push:
+    branches: [main]
+    # Reconstruir solo cuando cambia algo de lo que sale el sitio.
+    paths:
+      - 'scripts/**'
+      - 'templates/**'
+      - 'static/**'
+      - 'state/processed.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un despliegue a la vez. Sin esto, el commit del cron y un merge casi simultáneo
+# se pisan y gana el que termine antes, que no tiene por qué ser el más nuevo.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Construir el sitio
+        run: python -m scripts.build_site
+
+      # Si el build no escribió nada, es mejor fallar aquí que publicar un sitio
+      # vacío encima del que funciona.
+      - name: Comprobar que hay sitio que publicar
+        run: |
+          test -f docs/index.html || { echo "docs/index.html no existe"; exit 1; }
+          n=$(find docs -name index.html | wc -l)
+          echo "$n páginas construidas"
+          test "$n" -gt 100 || { echo "solo $n páginas, algo va mal"; exit 1; }
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
