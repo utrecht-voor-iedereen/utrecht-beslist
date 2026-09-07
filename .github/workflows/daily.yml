@@ -58,10 +58,8 @@ jobs:
         run: |
           python -m scripts.translate_missing
 
-      - name: Rebuild Site With Translations
-        if: always()
-        run: |
-          python -m scripts.build_site
+      # El sitio ya no se commitea: lo construye y publica pages.yml, que se
+      # dispara solo al cambiar state/processed.json en el push de abajo.
 
       # Runs even if a step above failed: a partial day of work is still worth
       # publishing, and losing it silently is how 31 July produced nothing.
@@ -70,5 +68,5 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add state/processed.json docs/
+          git add state/processed.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "update: council summaries $(date +'%Y-%m-%d')" && git push)
