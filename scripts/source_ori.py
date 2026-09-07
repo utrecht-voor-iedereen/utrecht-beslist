@@ -244,6 +244,30 @@ def fetch_attachments(ids: list[str]) -> dict[str, dict[str, Any]]:
     return found
 
 
+def fetch_documents_by_ids(ids: list[str]) -> list[dict[str, Any]]:
+    """Fetch full ORI records by their ids, including attachment text."""
+    unique = [i for i in dict.fromkeys(ids) if i]
+    all_hits: list[dict[str, Any]] = []
+
+    for start in range(0, len(unique), 100):
+        chunk = unique[start:start + 100]
+        payload = {"size": len(chunk), "query": {"ids": {"values": chunk}}}
+        req = urllib.request.Request(
+            ORI_ELASTIC_ENDPOINT,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json", "User-Agent": "UtrechtBeslistBot/1.0"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                data = json.loads(response.read().decode("utf-8"))
+        except Exception as e:  # noqa: BLE001
+            logger.error(f"Error fetching documents by id from Open Raadsinformatie: {e}")
+            continue
+        all_hits.extend(data.get("hits", {}).get("hits", []))
+
+    return filter_documents(all_hits)
+
+
 # Groq's free tier allows 12,000 tokens per minute and the summarization system
 # prompt already costs about 2,000, so a document body has to stay well under
 # that. 6,000 characters is roughly 1,800 tokens and still covers the proposal
