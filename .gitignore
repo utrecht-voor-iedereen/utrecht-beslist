@@ -6,3 +6,9 @@ __pycache__/
 
 # Regenerable hand-off material for an external model, plus its replies.
 translation-tasks/
+
+# El sitio generado. Lo construye y publica .github/workflows/pages.yml desde un
+# artefacto; versionarlo eran ~2.400 archivos por cada cambio de plantilla, con
+# conflictos entre PRs y rebases cada vez que el cron lo commiteaba.
+# El estado (state/processed.json) sí se versiona: eso son datos, no un derivado.
+docs/
