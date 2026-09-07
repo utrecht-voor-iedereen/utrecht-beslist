@@ -28,7 +28,9 @@ THEMES = {
         "fr": "Transports & Mobilité",
         "de": "Verkehr & Mobilität",
         "icon": "🚲",
-        "keywords": ["verkeer", "mobiliteit", "fiets", "parkeren", "ov", "bus", "tram", "wegen", "snelfietspad", "autoluw", "snelheid"]
+        # "ov" fuera: como prefijo casa con over, overleg, overig y overwegende,
+        # que salen en cualquier acta. Va el término entero.
+        "keywords": ["verkeer", "mobiliteit", "fiets", "parkeren", "openbaar vervoer", "ov-", "bus", "tram", "wegen", "snelfietspad", "autoluw", "snelheid"]
     },
     "veiligheid": {
         "nl": "Veiligheid & Handhaving",
@@ -88,7 +90,11 @@ THEMES = {
         "fr": "Gouvernance & Finances",
         "de": "Verwaltung & Finanzen",
         "icon": "🏛️",
-        "keywords": ["begroting", "financien", "belasting", "ozb", "voorjaarsnota", "najaarsnota", "jaarrekening", "verordening", "raadsvoorstel"]
+        # "raadsvoorstel" y "verordening" describen la forma del documento, no su
+        # asunto: casi todo lo que publica el pleno es una cosa o la otra. Con
+        # ellas dentro, este tema se disparaba en 982 de 983 stukken y dejaba de
+        # filtrar nada. Una "Verordening maatschappelijke ondersteuning" es zorg.
+        "keywords": ["begroting", "financien", "belasting", "ozb", "voorjaarsnota", "najaarsnota", "jaarrekening", "subsidieplafond", "kadernota"]
     },
     "cultuur-evenementen": {
         "nl": "Cultuur & Sport",
@@ -187,7 +193,12 @@ def detect_theme_heuristics(title: str, text: str) -> list[str]:
         if key == "overig":
             continue
         for kw in data["keywords"]:
-            if kw in content:
+            # Se ancla al principio de la palabra, no en cualquier posición: el
+            # neerlandés compone, así que "woning" tiene que seguir casando con
+            # "woningbouw", pero "ov" no puede casar dentro de "boven". El
+            # detector de barrios ya hacía esto; este se quedó con la búsqueda
+            # de subcadena.
+            if re.search(r"(?<![\w-])" + re.escape(kw), content):
                 matches.append(key)
                 break
     return matches if matches else ["overig"]

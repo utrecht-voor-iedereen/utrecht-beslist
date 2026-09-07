@@ -24,7 +24,12 @@
     "plazo_nl": "📅 2026",
     "timeline_en": "📅 2026",
     "thema": [
-      "wonen"
+      "wonen",
+      "verkeer",
+      "groen-klimaat",
+      "zorg",
+      "bestuur-financien",
+      "cultuur-evenementen"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -165,6 +170,7 @@
     "plazo_nl": "📅 14 juli 2026",
     "timeline_en": "📅 14 July 2026",
     "thema": [
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -300,6 +306,7 @@
     "plazo_nl": "📅 9 juli 2026",
     "timeline_en": "📅 9 July 2026",
     "thema": [
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -680,7 +687,8 @@
     "plazo_nl": "Verwacht jaar van start: 2026",
     "timeline_en": "Expected start year: 2026",
     "thema": [
-      "bestuur-financien"
+      "veiligheid",
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -795,6 +803,7 @@
     "plazo_nl": "📅 2026",
     "timeline_en": "📅 2026",
     "thema": [
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -1039,7 +1048,8 @@
     "plazo_nl": "Verwacht jaar van start: 2026",
     "timeline_en": "Expected start year: 2026",
     "thema": [
-      "bestuur-financien"
+      "veiligheid",
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -1154,7 +1164,9 @@
     "plazo_nl": "📅",
     "timeline_en": "📅",
     "thema": [
-      "zorg"
+      "wonen",
+      "zorg",
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -1439,7 +1451,9 @@
     "plazo_nl": "📅 1 januari 2026",
     "timeline_en": "📅 1 January 2026",
     "thema": [
-      "jeugd-onderwijs"
+      "groen-klimaat",
+      "jeugd-onderwijs",
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -1814,7 +1828,8 @@
     "plazo_nl": "",
     "timeline_en": "",
     "thema": [
-      "wonen"
+      "wonen",
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -1964,7 +1979,8 @@
     "plazo_nl": "📅 16 juli 2026",
     "timeline_en": "📅 16 July 2026",
     "thema": [
-      "wonen"
+      "wonen",
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -2094,6 +2110,9 @@
     "plazo_nl": "",
     "timeline_en": "",
     "thema": [
+      "wonen",
+      "verkeer",
+      "veiligheid",
       "groen-klimaat"
     ],
     "wijken": [
@@ -2219,7 +2238,8 @@
     "plazo_nl": "📅 2032",
     "timeline_en": "📅 2032",
     "thema": [
-      "wonen"
+      "wonen",
+      "groen-klimaat"
     ],
     "wijken": [
       "Noordwest",
@@ -2416,7 +2436,7 @@
     "consequences_de": "Die Folgen dieses Vorschlags sind, dass die Einwohner von Utrecht mehr Einblick in die Verwendung von öffentlichen Geldern erhalten.",
     "timeline_de": "Der Vorschlag soll innerhalb von 6 Monaten nach seiner Bekanntgabe umgesetzt werden.",
     "thema": [
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Centrum"
@@ -2470,6 +2490,9 @@
     "plazo_nl": "",
     "timeline_en": "",
     "thema": [
+      "wonen",
+      "verkeer",
+      "veiligheid",
       "groen-klimaat"
     ],
     "wijken": [
@@ -2595,7 +2618,8 @@
     "plazo_nl": "📅 16 juli 2026",
     "timeline_en": "📅 16 July 2026",
     "thema": [
-      "wonen"
+      "wonen",
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -2725,7 +2749,8 @@
     "plazo_nl": "📅 16 juli 2026",
     "timeline_en": "📅 16 July 2026",
     "thema": [
-      "wonen"
+      "wonen",
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -2855,7 +2880,12 @@
     "plazo_nl": "📅 2026",
     "timeline_en": "📅 2026",
     "thema": [
-      "wonen"
+      "wonen",
+      "verkeer",
+      "groen-klimaat",
+      "zorg",
+      "bestuur-financien",
+      "cultuur-evenementen"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -3121,7 +3151,8 @@
     "plazo_nl": "",
     "timeline_en": "",
     "thema": [
-      "wonen"
+      "wonen",
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -3401,6 +3432,7 @@
     "plazo_nl": "📅 9 juli 2026",
     "timeline_en": "📅 9 July 2026",
     "thema": [
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -3997,7 +4029,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -4151,7 +4182,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -4294,7 +4324,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -4437,7 +4466,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -4596,7 +4624,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -4735,7 +4762,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -4879,7 +4905,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -5027,8 +5052,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -5194,7 +5218,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -5343,8 +5366,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -5488,10 +5509,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -5635,8 +5654,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid",
@@ -5774,10 +5792,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -5900,8 +5916,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -6177,7 +6192,6 @@
       "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -6451,7 +6465,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -6583,7 +6596,6 @@
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -6710,9 +6722,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -6843,7 +6853,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -7002,7 +7011,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -7141,7 +7149,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -7285,7 +7292,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -7433,8 +7439,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -7600,7 +7605,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -7749,8 +7753,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -7894,10 +7896,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -8041,8 +8041,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid",
@@ -8180,10 +8179,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -8306,8 +8303,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -8588,7 +8584,6 @@
       "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -8714,7 +8709,6 @@
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -8841,9 +8835,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -8975,8 +8967,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -9254,9 +9245,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -9392,7 +9381,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -9546,7 +9534,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -9688,7 +9675,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -10060,10 +10046,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -10200,10 +10184,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -10329,8 +10310,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -10474,10 +10453,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -10618,11 +10595,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -10755,8 +10730,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -10910,8 +10884,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid",
@@ -11049,10 +11022,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -11175,8 +11146,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -11333,10 +11303,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -11468,9 +11435,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Noordwest",
@@ -11605,8 +11570,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -11732,7 +11696,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -11871,7 +11834,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -12126,7 +12088,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -12276,10 +12237,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -12396,9 +12355,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Noordwest",
@@ -12529,7 +12486,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -12682,11 +12638,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -12828,10 +12781,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Oost",
@@ -12969,9 +12920,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -13123,9 +13072,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -13278,10 +13225,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -13599,7 +13544,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -13752,11 +13696,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -13898,10 +13839,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Oost",
@@ -14039,9 +13978,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -14193,9 +14130,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -14348,10 +14283,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -15657,7 +15590,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -15794,7 +15726,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -15928,8 +15859,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -16215,7 +16144,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -16338,7 +16266,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -16482,11 +16409,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -16615,8 +16540,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -16741,7 +16665,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -16894,9 +16817,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -17047,7 +16968,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -17187,9 +17107,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -17339,8 +17257,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -17488,8 +17405,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -17644,7 +17560,6 @@
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -17770,7 +17685,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -17923,10 +17837,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Oost",
@@ -18059,10 +17971,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Binnenstad",
@@ -18422,9 +18331,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -19365,8 +19272,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -19483,9 +19389,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -19748,7 +19652,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -19875,7 +19778,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -20021,8 +19923,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -20164,9 +20065,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -20351,7 +20250,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -20502,8 +20400,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -20650,9 +20547,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -20864,9 +20759,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -21013,7 +20906,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -21145,7 +21037,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -21287,12 +21178,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -21429,12 +21318,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -21586,7 +21473,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
@@ -21741,9 +21627,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -22034,7 +21918,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -22172,11 +22055,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -22312,7 +22193,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg"
     ],
     "wijken": [
@@ -22460,9 +22340,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -22583,8 +22461,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -22722,7 +22598,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -22870,11 +22745,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -23017,7 +22890,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -23385,7 +23257,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -23536,7 +23407,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -23687,8 +23557,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -23838,8 +23707,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -23986,9 +23854,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -24200,9 +24066,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -24414,9 +24278,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -24564,9 +24426,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -24713,7 +24573,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -24845,7 +24704,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -24977,7 +24835,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -25119,7 +24976,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -25261,12 +25117,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -25402,12 +25256,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -25544,12 +25396,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -25702,12 +25552,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -25859,7 +25707,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
@@ -26014,9 +25861,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -26152,9 +25997,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -26291,9 +26134,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -26414,8 +26255,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -26553,7 +26392,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -26701,11 +26539,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -27179,7 +27015,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -27312,9 +27147,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -27440,7 +27273,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -27570,8 +27402,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid",
@@ -27712,7 +27543,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -27858,8 +27688,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -27996,9 +27825,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -28146,12 +27973,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -28303,9 +28128,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -28426,7 +28249,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -28553,7 +28375,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
@@ -28852,11 +28673,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -28993,10 +28812,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -29120,8 +28937,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid",
@@ -29253,7 +29069,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
@@ -29403,9 +29218,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -29522,11 +29335,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -29668,9 +29478,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -29866,7 +29674,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -29994,8 +29801,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -30133,7 +29938,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -30281,11 +30085,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -30428,7 +30230,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -30570,7 +30371,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -30697,7 +30497,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -30839,12 +30638,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -30980,7 +30777,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
@@ -31135,9 +30931,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -31418,10 +31212,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -31542,11 +31334,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -31682,11 +31472,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -31829,12 +31617,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -31965,11 +31751,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -32242,7 +32026,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg"
     ],
     "wijken": [
@@ -32526,7 +32309,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -32668,9 +32450,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -32812,10 +32592,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -32977,10 +32755,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -33142,7 +32918,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -33279,9 +33054,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -33417,10 +33190,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -33568,7 +33338,6 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -33696,10 +33465,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -33947,9 +33713,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -34394,7 +34158,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -34536,7 +34299,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -34678,9 +34440,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -34821,9 +34581,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -34964,9 +34722,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -35108,10 +34864,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -35274,10 +35028,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -35439,10 +35191,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -35599,10 +35349,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -35764,7 +35512,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -35906,7 +35653,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -36043,9 +35789,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -36181,9 +35925,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -36319,10 +36061,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -36468,10 +36207,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -36619,7 +36355,6 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -36748,7 +36483,6 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -36876,10 +36610,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -37001,10 +36732,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -37379,9 +37107,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -37532,9 +37258,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -38897,8 +38621,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -39031,9 +38753,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -39169,9 +38889,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -39317,7 +39035,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -39460,7 +39177,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -39597,7 +39313,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -39739,12 +39454,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -39875,9 +39588,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -40157,7 +39868,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg"
     ],
     "wijken": [
@@ -40290,10 +40000,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -40417,8 +40125,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -40691,7 +40398,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -40828,9 +40534,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -40966,10 +40670,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -41117,7 +40818,6 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -41465,11 +41165,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -41605,7 +41302,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -41742,12 +41438,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -41874,12 +41568,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -42026,9 +41718,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -42298,10 +41988,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -42443,9 +42130,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -42616,7 +42301,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -42744,11 +42428,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -42891,9 +42573,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -43029,10 +42709,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -43190,10 +42868,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -43441,7 +43116,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -43563,7 +43237,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -43700,7 +43373,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -43945,9 +43617,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -44087,7 +43757,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -44233,8 +43902,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -44371,9 +44039,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -44521,12 +44187,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -44664,10 +44328,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -44829,7 +44491,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -44966,9 +44627,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest"
@@ -45113,8 +44772,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuid"
@@ -45246,9 +44904,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -45364,11 +45020,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn",
@@ -45508,7 +45162,6 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -45761,10 +45414,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -45886,11 +45536,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -46019,8 +45666,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -46194,8 +45840,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -46336,7 +45981,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg"
     ],
@@ -46460,7 +46104,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -46621,11 +46264,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -46776,8 +46417,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -47033,7 +46672,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -47157,11 +46795,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -47307,8 +46942,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -47446,10 +47079,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -47596,7 +47226,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien",
@@ -47751,9 +47380,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -47874,9 +47501,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -48253,10 +47878,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -48378,10 +48000,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -48503,11 +48122,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -48634,11 +48250,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -48767,8 +48380,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -48942,8 +48554,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -49117,8 +48728,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -49262,8 +48872,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -49404,8 +49013,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -49532,8 +49139,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -49918,7 +49523,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -50041,7 +49645,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -50165,11 +49768,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -50316,11 +49916,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -50466,8 +50063,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -50605,8 +50200,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -50744,10 +50337,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -50893,10 +50483,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -51043,7 +50630,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien",
@@ -51199,7 +50785,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien",
@@ -51354,9 +50939,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -51477,9 +51060,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -51600,9 +51181,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -51718,9 +51297,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -52503,9 +52080,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -52672,9 +52247,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -52817,12 +52390,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -52955,11 +52526,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -53080,7 +52648,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -53207,7 +52774,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg"
     ],
     "wijken": [
@@ -53342,8 +52908,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -53616,7 +53181,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -53753,9 +53317,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -53891,7 +53453,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg"
     ],
@@ -54010,11 +53571,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -54165,8 +53724,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -54422,7 +53979,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -55065,7 +54621,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -55187,7 +54742,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg"
     ],
     "wijken": [
@@ -55317,8 +54871,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -55449,7 +55002,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -55586,8 +55138,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -55709,8 +55259,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -55837,7 +55385,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -55965,9 +55512,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -56103,10 +55648,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -56264,10 +55807,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -56389,10 +55929,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -56514,11 +56051,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -56640,7 +56174,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -56796,11 +56329,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -56946,8 +56476,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -57085,10 +56613,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -57366,10 +56891,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -57646,7 +57169,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -57791,7 +57313,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -57912,10 +57433,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -58075,8 +57594,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -58250,8 +57768,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -58393,7 +57910,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien",
@@ -58553,7 +58069,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -58693,8 +58208,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -58868,8 +58382,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -59043,8 +58556,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -59218,8 +58730,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -59363,8 +58874,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -59839,9 +59349,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -59973,7 +59481,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -60121,8 +59628,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -60278,11 +59784,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -60464,9 +59967,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -60610,8 +60111,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -60878,8 +60378,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -61011,8 +60510,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -61149,9 +60647,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -61287,9 +60783,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -61416,7 +60909,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -61560,10 +61052,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -61696,8 +61186,7 @@
     "thema": [
       "wonen",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -61843,10 +61332,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -62007,7 +61493,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -62146,9 +61631,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -62419,9 +61902,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -62932,8 +62413,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -63092,8 +62572,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -63249,11 +62728,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -63434,11 +62910,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -63620,9 +63093,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -63764,9 +63235,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -63910,8 +63379,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -64050,8 +63518,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -64446,8 +63913,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -64581,8 +64047,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -64714,8 +64179,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -64852,8 +64316,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -64990,9 +64453,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -65129,9 +64590,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -65267,7 +64726,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -65411,10 +64869,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -65547,8 +65003,7 @@
     "thema": [
       "wonen",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -65694,10 +65149,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -65858,7 +65310,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -66151,9 +65602,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -66617,9 +66066,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -66746,10 +66192,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -67027,7 +66470,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -67295,7 +66737,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -67431,7 +66872,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -67563,7 +67003,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -67695,9 +67134,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -67962,8 +67399,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -68095,9 +67530,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -68229,8 +67661,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -68362,11 +67792,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -68498,9 +67925,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -68637,7 +68062,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -68771,7 +68195,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -69173,7 +68596,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69305,7 +68727,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69441,7 +68862,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69577,7 +68997,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69709,7 +69128,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69841,7 +69259,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -69973,9 +69390,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -70106,9 +69521,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -70507,8 +69920,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -70640,8 +70051,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -70773,9 +70182,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -70907,9 +70313,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -71041,8 +70444,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -71174,8 +70575,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -71307,11 +70706,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -71442,11 +70838,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -71578,9 +70971,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -71718,9 +71109,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -71967,9 +71356,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -72101,10 +71488,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -72256,7 +71641,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -72379,8 +71763,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -72514,11 +71896,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -72787,8 +72167,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -72947,8 +72326,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -73212,9 +72590,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -73341,7 +72716,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg"
     ],
@@ -73605,8 +72979,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -74371,7 +73744,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg"
     ],
@@ -74490,7 +73862,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien",
@@ -74641,7 +74012,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -74889,8 +74259,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -75016,7 +74384,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -75138,9 +74505,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -75262,9 +74627,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -75509,9 +74872,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -75633,9 +74994,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -75757,7 +75115,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -75880,11 +75237,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -76006,7 +75360,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -76136,7 +75489,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -76384,8 +75736,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -76511,7 +75861,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -76633,9 +75982,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -76757,9 +76104,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -77004,9 +76349,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -77128,9 +76471,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -77252,7 +76592,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -77375,11 +76714,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -77501,7 +76837,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -77634,7 +76969,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -77757,7 +77091,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -78028,7 +77361,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
     ],
@@ -78292,11 +77624,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -78418,11 +77747,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -78568,11 +77894,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -78753,7 +78076,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -78897,10 +78219,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -79032,11 +78352,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -79183,10 +78501,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -79312,7 +78627,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -79442,8 +78756,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -79577,8 +78890,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -79711,8 +79023,7 @@
     "thema": [
       "wonen",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -79858,10 +79169,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -80022,7 +79330,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -80161,9 +79468,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -80286,9 +79591,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -80430,9 +79733,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -80574,9 +79875,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -80718,9 +80017,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -80862,11 +80159,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -81007,7 +80301,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -81147,8 +80440,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -81285,9 +80577,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -81424,10 +80714,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -81566,7 +80853,6 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -81768,11 +81054,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -81907,7 +81190,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -82056,12 +81338,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -82203,9 +81482,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -82356,9 +81633,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -82979,9 +82254,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -83225,8 +82498,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -83363,9 +82635,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -83502,10 +82772,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -83644,7 +82911,6 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -83846,11 +83112,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -83985,7 +83248,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -84134,13 +83396,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -84281,7 +83539,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -84434,9 +83691,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -85057,9 +84312,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -85640,7 +84893,6 @@
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -85763,11 +85015,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -85883,9 +85132,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -86008,10 +85254,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -86128,11 +85371,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -86263,9 +85504,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -86389,8 +85628,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -86549,8 +85787,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -86815,8 +86052,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -86953,9 +86189,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -87085,7 +86319,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -87230,8 +86463,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -87357,9 +86589,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -87478,8 +86708,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -87610,9 +86839,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -87730,9 +86957,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -87854,7 +87079,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -88102,8 +87326,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -88229,7 +87451,6 @@
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -88351,9 +87572,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -88475,9 +87694,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -88722,9 +87939,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -88846,9 +88061,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
       "bestuur-financien"
     ],
     "wijken": [
@@ -88970,7 +88182,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -89093,11 +88304,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "bestuur-financien"
     ],
     "wijken": [
       "Overig"
@@ -89219,7 +88427,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -89347,11 +88554,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -89518,9 +88722,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -89657,10 +88859,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -89791,11 +88990,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -89921,7 +89117,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -90069,9 +89264,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -90212,10 +89405,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -90347,9 +89538,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -90486,9 +89675,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -90625,9 +89812,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -90763,11 +89948,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -90901,8 +90083,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -91055,8 +90236,7 @@
     "thema": [
       "wonen",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -91197,10 +90377,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -91359,8 +90536,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -91534,8 +90710,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -91666,7 +90841,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -91816,9 +90990,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -91957,7 +91129,6 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -92130,11 +91301,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -92271,13 +91440,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien",
-      "cultuur-evenementen"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -92418,10 +91583,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -92547,7 +91710,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien"
     ],
@@ -92693,8 +91855,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -92861,9 +92022,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -93120,8 +92279,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -93248,7 +92406,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -93402,9 +92559,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuidwest"
@@ -93596,8 +92751,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -93759,10 +92913,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -94059,8 +93211,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -94191,10 +93342,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -94457,9 +93605,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -94767,9 +93913,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuidwest"
@@ -94961,8 +94105,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -95124,10 +94267,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -95434,8 +94575,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -95566,10 +94706,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -95832,9 +94969,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -96142,11 +95277,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -96272,11 +95405,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordoost"
@@ -96437,7 +95567,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -96582,9 +95711,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuid",
@@ -96767,8 +95894,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -97070,7 +96196,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -97223,8 +96348,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -97357,7 +96480,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -97661,7 +96783,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -97814,8 +96935,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -97948,7 +97067,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -98102,7 +97220,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -98380,9 +97497,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -98669,7 +97784,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -98968,7 +98082,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -99267,7 +98380,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -99416,7 +98528,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -99570,7 +98681,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -99724,7 +98834,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -99878,7 +98987,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -100032,7 +99140,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -100186,7 +99293,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -100595,7 +99701,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -100889,7 +99994,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101183,7 +100287,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101332,7 +100435,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101486,7 +100588,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101640,7 +100741,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101794,7 +100894,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -101948,7 +101047,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102102,7 +101200,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102256,7 +101353,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102410,7 +101506,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102564,7 +101659,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102718,7 +101812,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -102872,7 +101965,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -103021,7 +102113,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -103425,7 +102516,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -103714,7 +102804,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -103861,7 +102950,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -104004,10 +103092,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -104140,8 +103226,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -104269,8 +103354,7 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -104414,7 +103498,6 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -104587,11 +103670,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -104728,9 +103809,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuid",
@@ -104907,7 +103986,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -105048,9 +104126,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -105187,10 +104263,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -105321,11 +104394,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -105452,7 +104522,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -105746,9 +104815,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuidwest"
@@ -105939,7 +105006,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien",
@@ -106075,9 +105141,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -106211,7 +105275,6 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -106378,8 +105441,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -106502,7 +105563,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -106641,8 +105701,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -106770,7 +105828,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -106920,7 +105977,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -107074,7 +106130,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -107381,7 +106436,6 @@
       "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -107660,7 +106714,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -107804,10 +106857,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -107983,9 +107033,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -108120,8 +107168,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -108268,10 +107315,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -108576,12 +107621,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -108718,7 +107761,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg"
     ],
@@ -108876,7 +107918,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -109044,7 +108085,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -109198,8 +108238,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -109341,7 +108379,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -109642,7 +108679,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -109786,10 +108822,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -109965,9 +108998,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -110102,8 +109133,7 @@
       "wonen",
       "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -110250,10 +109280,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -110557,7 +109585,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -110725,7 +109752,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -110879,8 +109905,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -111022,7 +110046,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -112069,10 +111092,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -112199,9 +111219,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Zuid",
@@ -112373,7 +111391,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -112662,8 +111679,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -112791,7 +111806,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -112936,7 +111950,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -113085,8 +112098,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -113218,10 +112230,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -113354,8 +112364,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -113483,8 +112492,7 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -113625,10 +112633,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -113926,7 +112931,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -114089,8 +113093,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -114227,7 +113229,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -114381,7 +113382,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -114653,12 +113653,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -114935,7 +113933,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -115084,10 +114081,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -115239,11 +114234,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -115365,7 +114357,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -115643,10 +114634,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -115772,10 +114760,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -115902,7 +114888,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -116047,8 +115032,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -116175,7 +115159,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -116443,8 +115426,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -116567,7 +115548,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -116712,7 +115692,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -116855,7 +115834,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "zorg",
       "bestuur-financien"
@@ -116984,10 +115962,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -117280,7 +116255,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -117438,7 +116412,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
       "bestuur-financien"
@@ -117577,7 +116550,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "zorg",
       "bestuur-financien"
@@ -117727,10 +116699,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -117886,7 +116856,6 @@
       "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -118029,11 +116998,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -118164,10 +117131,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -118288,8 +117252,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -118427,11 +117389,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -118577,10 +117537,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -118873,10 +117830,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -119061,8 +118016,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -119492,9 +118446,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -119621,10 +118573,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -119898,8 +118848,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -120022,8 +118971,7 @@
     "thema": [
       "verkeer",
       "veiligheid",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -120160,10 +119108,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "verkeer",
-      "veiligheid",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -120427,12 +119373,10 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -120559,11 +119503,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -120694,10 +119636,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -121105,10 +120045,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -121264,7 +120202,6 @@
       "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -121406,10 +120343,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -121547,8 +120481,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -121712,8 +120645,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -121851,8 +120783,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -121984,10 +120915,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -122316,9 +121245,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -122444,9 +121371,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Overig"
@@ -122729,12 +121654,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -122871,7 +121794,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -123020,7 +121942,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -123173,8 +122094,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordwest"
@@ -123320,9 +122240,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Zuid"
@@ -123488,9 +122406,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "veiligheid",
       "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -123642,7 +122557,6 @@
       "wonen",
       "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -123774,11 +122688,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -123911,9 +122823,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -124273,8 +123183,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -124440,10 +123349,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -124566,10 +123473,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -124852,7 +123757,6 @@
       "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -124990,7 +123894,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -125277,12 +124180,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -125414,11 +124315,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -125707,11 +124606,9 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -125968,9 +124865,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -126096,7 +124991,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -126235,11 +125129,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -126512,7 +125404,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -126793,10 +125684,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -126934,8 +125822,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -127099,8 +125986,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -127238,8 +126124,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -127371,10 +126256,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordwest"
@@ -127517,8 +126400,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Zuid"
@@ -127677,7 +126559,6 @@
       "wonen",
       "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -127805,9 +126686,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -127939,11 +126818,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -128072,8 +126949,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -128206,8 +127082,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -128334,9 +127209,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -128466,8 +127339,6 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -128636,8 +127507,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -128808,11 +127678,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -129015,9 +127882,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "veiligheid",
-      "bestuur-financien"
+      "veiligheid"
     ],
     "wijken": [
       "Overig"
@@ -129148,8 +128013,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
@@ -129306,10 +128169,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -129466,9 +128327,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -129609,8 +128468,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -129770,8 +128628,7 @@
       "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -129899,9 +128756,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -130042,9 +128897,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -130185,7 +129038,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "bestuur-financien"
     ],
     "wijken": [
@@ -130429,10 +129281,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordwest"
@@ -130585,8 +129435,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -130743,7 +129592,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
@@ -131031,9 +129879,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "veiligheid",
       "zorg",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -131178,7 +130023,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
@@ -131324,8 +130168,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -131457,8 +130299,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -131604,8 +130445,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -131727,12 +130566,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -131864,10 +130701,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "jeugd-onderwijs",
-      "zorg",
-      "bestuur-financien"
+      "jeugd-onderwijs"
     ],
     "wijken": [
       "Overig"
@@ -131998,7 +130832,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -132137,7 +130970,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -132282,10 +131114,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -132474,9 +131302,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "jeugd-onderwijs",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Leidsche Rijn"
@@ -132612,7 +131438,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -132887,12 +131712,10 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
       "verkeer",
       "veiligheid",
       "groen-klimaat",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -133022,7 +131845,6 @@
       "wonen",
       "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -133145,7 +131967,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "jeugd-onderwijs",
@@ -133286,7 +132107,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
       "bestuur-financien"
     ],
@@ -133420,10 +132240,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordwest"
@@ -133566,8 +132384,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Zuid"
@@ -133726,8 +132543,7 @@
       "wonen",
       "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overvecht"
@@ -133885,8 +132701,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overvecht"
@@ -134017,9 +132832,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -134161,7 +132974,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "groen-klimaat",
       "bestuur-financien"
     ],
@@ -134295,7 +133107,6 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
       "jeugd-onderwijs",
       "zorg",
@@ -134435,7 +133246,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "bestuur-financien",
       "cultuur-evenementen"
@@ -134575,10 +133385,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Zuidwest"
@@ -134750,10 +133558,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -134920,10 +133726,8 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -135105,9 +133909,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -135429,9 +134231,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Zuidwest"
@@ -135582,10 +134382,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "wonen"
     ],
     "wijken": [
       "Noordwest",
@@ -135748,10 +134545,8 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "groen-klimaat",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Noordwest"
@@ -135887,7 +134682,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
       "veiligheid",
       "groen-klimaat",
       "bestuur-financien",
@@ -136017,8 +134811,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -136151,11 +134943,9 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
       "veiligheid",
       "jeugd-onderwijs",
       "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -136312,8 +135102,7 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "verkeer",
-      "bestuur-financien"
+      "verkeer"
     ],
     "wijken": [
       "Overig"
@@ -136456,8 +135245,7 @@
     "thema": [
       "wonen",
       "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Zuid"
@@ -136609,9 +135397,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "groen-klimaat",
-      "bestuur-financien"
+      "groen-klimaat"
     ],
     "wijken": [
       "Overig"
@@ -136737,10 +135523,6 @@
     "consequences_de": "Der Beschluss tritt gemäß den städtischen Bestimmungen in Kraft.",
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
-      "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien",
       "cultuur-evenementen"
     ],
     "wijken": [
@@ -136923,9 +135705,7 @@
     "timeline_de": "📅 Zeitplan: Laufendes Ratsjahr",
     "thema": [
       "wonen",
-      "verkeer",
-      "zorg",
-      "bestuur-financien"
+      "zorg"
     ],
     "wijken": [
       "Overig"
