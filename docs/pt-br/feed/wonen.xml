@@ -12,6 +12,12 @@
       <guid isPermaLink="false">7825096</guid>
     </item>
     <item>
+      <title>Relatório de auditoria sobre ajuda doméstica</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>A Rekenkamer investigou os serviços de ajuda doméstica em Utrecht. O relatório 'Stof tot nadenken' contém sete recomendações para melhorar os serviços. O conselho é solicitado a pedir ao executivo municipal que implemente essas recomendações.</description>
+      <guid isPermaLink="false">7896265</guid>
+    </item>
+    <item>
       <title>Plano ambiental Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
       <description>O Gemeenteraad está decidindo sobre o plano ambiental TAM para Jan van Galenstraat, Huizingalaan e Van Ginnekenlaan. Isso permite a construção de 102 casas de aluguel, um supermercado, unidades comerciais e uma garagem subterrânea.</description>
@@ -30,16 +36,22 @@
       <guid isPermaLink="false">7842627</guid>
     </item>
     <item>
+      <title>Declaração de não objeção para expansão da Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>O college propõe que o conselho emita uma declaração específica de não objeção para a Theo Pouw na Isotopenweg 29. Isso permite que a Província de Utrecht conceda uma licença para duas novas atividades de processamento de resíduos.</description>
+      <guid isPermaLink="false">7817759</guid>
+    </item>
+    <item>
+      <title>Divulgação de anexos confidenciais sobre compensação de danos Klépierre</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
+      <description>Esta proposta de iniciativa tem como objetivo que o conselho decida levantar a confidencialidade dos anexos do acordo com a Klépierre sobre as escadas do Moreelsebrug e torná-los públicos.</description>
+      <guid isPermaLink="false">7680201</guid>
+    </item>
+    <item>
       <title>Council Proposal Afzien bindend advies voor twee buitenplanse a...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=77b70c06-5944-4d78-ade0-6adf35bf76fc</link>
       <description>Documento oficial do conselho municipal: Council Proposal Afzien bindend advies voor twee buitenplanse a....</description>
       <guid isPermaLink="false">7842625</guid>
-    </item>
-    <item>
-      <title>Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dd3906a7-fb65-4d70-baa0-c22ea0a4b6f7</link>
-      <description>Documento oficial do conselho municipal: Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027.</description>
-      <guid isPermaLink="false">7830817</guid>
     </item>
     <item>
       <title>Council Proposal Vaststellen TAM omgevingsplan extra woningen i...</title>
@@ -132,24 +144,6 @@
       <guid isPermaLink="false">7508488</guid>
     </item>
     <item>
-      <title>Initiatiefvoorstel APV wijziging 'Beschermde zone bij medisc...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=16af2dbc-791b-4e97-aea7-11decc058268</link>
-      <description>Documento oficial do conselho municipal: Initiatiefvoorstel APV wijziging 'Beschermde zone bij medisc....</description>
-      <guid isPermaLink="false">7692936</guid>
-    </item>
-    <item>
-      <title>Council Proposal Zienswijze kaderbrief 2027 GGDrU</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9619d597-2c15-4a16-ab34-9016cce53ca0</link>
-      <description>Documento oficial do conselho municipal: Council Proposal Zienswijze kaderbrief 2027 GGDrU.</description>
-      <guid isPermaLink="false">7630855</guid>
-    </item>
-    <item>
-      <title>Council Proposal Beleidsnota Voetganger</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=45d9972f-166f-4a31-a6ee-41e2cd4d8bd8</link>
-      <description>Documento oficial do conselho municipal: Council Proposal Beleidsnota Voetganger.</description>
-      <guid isPermaLink="false">7563752</guid>
-    </item>
-    <item>
       <title>Council Proposal Pauzering Overvecht Noord aardgasvrij Regeling...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b342ef7d-87fb-4fbd-a0b8-a972c2f47e96</link>
       <description>Documento oficial do conselho municipal: Council Proposal Pauzering Overvecht Noord aardgasvrij Regeling....</description>
@@ -168,12 +162,6 @@
       <guid isPermaLink="false">7508500</guid>
     </item>
     <item>
-      <title>Initiatiefvoorstel APV wijziging ‘Verbod hinder toegang tot ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=16af2dbc-791b-4e97-aea7-11decc058268</link>
-      <description>Documento oficial do conselho municipal: Initiatiefvoorstel APV wijziging ‘Verbod hinder toegang tot ....</description>
-      <guid isPermaLink="false">7485383</guid>
-    </item>
-    <item>
       <title>Council Proposal Vaststelling Tijdelijke Alternatieve Maatregel...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c0f9466-5811-404c-a210-cac7267fad26</link>
       <description>Documento oficial do conselho municipal: Council Proposal Vaststelling Tijdelijke Alternatieve Maatregel....</description>
@@ -184,6 +172,18 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d1a85d32-40fa-47ce-bc99-7b2a4cbf82e2</link>
       <description>Documento oficial do conselho municipal: Council Proposal Vaststelling SPvE herontwikkeling Tuincentrum ....</description>
       <guid isPermaLink="false">7398087</guid>
+    </item>
+    <item>
+      <title>Council Proposal Intrekken uitvoeringsprogramma Utrecht kiest v...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=ee72e080-f1e3-4537-b301-3c65d1554d63</link>
+      <description>Documento oficial do conselho municipal: Council Proposal Intrekken uitvoeringsprogramma Utrecht kiest v....</description>
+      <guid isPermaLink="false">7377473</guid>
+    </item>
+    <item>
+      <title>Council Proposal Leidende principes Rijnenburg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b7706a9d-aeed-4483-9d96-bc0dd38b88cb</link>
+      <description>Documento oficial do conselho municipal: Council Proposal Leidende principes Rijnenburg.</description>
+      <guid isPermaLink="false">7301908</guid>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,12 @@
     <description>Decisiones y documentos del ayuntamiento de Utrecht explicados en lenguaje claro.</description>
     <language>es</language>
     <item>
+      <title>Aprobación de la Perspectiva Espacial de Múltiples Años 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>El Gemeenteraad ha aprobado la Perspectiva Espacial de Múltiples Años 2026. La decisión incluye la programación de inversiones en vivienda asequible, movilidad sostenible, zonas verdes y la asignación de créditos de preparación para reurbanizaciones.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
       <title>Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c8d9d15-e699-49f4-a141-dd623d075773</link>
       <description>Documento oficial del ayuntamiento: Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025.</description>
@@ -42,12 +48,6 @@
       <guid isPermaLink="false">7778113</guid>
     </item>
     <item>
-      <title>Council Proposal Vaststelling TAM Omgevingsplan hoogspanningsst...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f22bf636-0d31-4c76-8796-f7b8834b7c51</link>
-      <description>Documento oficial del ayuntamiento: Council Proposal Vaststelling TAM Omgevingsplan hoogspanningsst....</description>
-      <guid isPermaLink="false">7563756</guid>
-    </item>
-    <item>
       <title>Council Proposal Vaststelling SPvE Gebiedsontwikkeling Galgenwa...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a318adc0-8d66-4059-bdce-7de5c0fc8def</link>
       <description>Documento oficial del ayuntamiento: Council Proposal Vaststelling SPvE Gebiedsontwikkeling Galgenwa....</description>
@@ -70,12 +70,6 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=42a523dc-c424-4241-8e77-98ce4332927e</link>
       <description>Documento oficial del ayuntamiento: Council Proposal Vestigen Voorkeursrecht op gronden in project ....</description>
       <guid isPermaLink="false">7508500</guid>
-    </item>
-    <item>
-      <title>Council Proposal Aanpassing Verordening op de raadscommissies: ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a0f9fb26-54b0-4f85-8eb5-0af44a73fc5d</link>
-      <description>Documento oficial del ayuntamiento: Council Proposal Aanpassing Verordening op de raadscommissies: ....</description>
-      <guid isPermaLink="false">7563745</guid>
     </item>
     <item>
       <title>Council Proposal Zoekproces grote locatie voor evenementen</title>
@@ -102,12 +96,6 @@
       <guid isPermaLink="false">7377477</guid>
     </item>
     <item>
-      <title>Council Proposal TAM Omgevingsplan Warmtesysteem Beursgebied</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=e13afa41-54d4-4828-93f3-ed7723c5e528</link>
-      <description>Documento oficial del ayuntamiento: Council Proposal TAM Omgevingsplan Warmtesysteem Beursgebied.</description>
-      <guid isPermaLink="false">7302030</guid>
-    </item>
-    <item>
       <title>Initiatiefvoorstel 'Geld voor U'</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9272c2a2-3aac-4f06-9e4a-af280568ba05</link>
       <description>Documento oficial del ayuntamiento: Initiatiefvoorstel 'Geld voor U'.</description>
@@ -132,12 +120,6 @@
       <guid isPermaLink="false">7430753</guid>
     </item>
     <item>
-      <title>Council Proposal Aanpassing Mandaatregeling</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f4bcc3f8-54a8-41d1-9494-1c92ba019fc4</link>
-      <description>Documento oficial del ayuntamiento: Council Proposal Aanpassing Mandaatregeling.</description>
-      <guid isPermaLink="false">7301736</guid>
-    </item>
-    <item>
       <title>Council Proposal inzake bijdrage van fracties aan presentieverg...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b54448b8-1b2d-4fef-aa48-53a834a31833</link>
       <description>Documento oficial del ayuntamiento: Council Proposal inzake bijdrage van fracties aan presentieverg....</description>
@@ -148,12 +130,6 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=07c0eb7a-f6dd-446b-9ba9-4216a4319bf1</link>
       <description>Documento oficial del ayuntamiento: Council Proposal Intrekken diverse verouderde regelingen.</description>
       <guid isPermaLink="false">7301905</guid>
-    </item>
-    <item>
-      <title>Council Proposal Verordening Afvalstoffenheffing 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d359035a-08fb-404c-9264-ecb44ea8c18c</link>
-      <description>Documento oficial del ayuntamiento: Council Proposal Verordening Afvalstoffenheffing 2026.</description>
-      <guid isPermaLink="false">7301679</guid>
     </item>
     <item>
       <title>Council Proposal Tweede bestuursrapportage 2025</title>
@@ -184,6 +160,30 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=86b42808-5336-4602-9b39-512118f6b9c3</link>
       <description>Documento oficial del ayuntamiento: Council Proposal IPvE/FO Natuurgebied Zuilen.</description>
       <guid isPermaLink="false">6391270</guid>
+    </item>
+    <item>
+      <title>Council Proposal Multi-Year Spatial Plan 2025</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8ee61531-0965-4924-b2f0-720372e055c0</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Multi-Year Spatial Plan 2025.</description>
+      <guid isPermaLink="false">6390843</guid>
+    </item>
+    <item>
+      <title>Council Proposal Eerste wijziging van de Verordening re-integra...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f5b8c803-7e8f-4402-984e-d6b9df29f034</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Eerste wijziging van de Verordening re-integra....</description>
+      <guid isPermaLink="false">6390167</guid>
+    </item>
+    <item>
+      <title>Council Proposal Tijdelijke invulling Parkeergarage Paardenveld...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f1c7fb71-9cf8-4640-a67c-6d545429225c</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal Tijdelijke invulling Parkeergarage Paardenveld....</description>
+      <guid isPermaLink="false">6390159</guid>
+    </item>
+    <item>
+      <title>Council Proposal realisatie stationsentree (trappen) Moreelsebr...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2a8cee9e-b7a7-4be0-bf8b-e5ccc8c24d48</link>
+      <description>Documento oficial del ayuntamiento: Council Proposal realisatie stationsentree (trappen) Moreelsebr....</description>
+      <guid isPermaLink="false">6390153</guid>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,36 @@
     <description>Besluiten en raadsstukken van de gemeenteraad van Utrecht in begrijpelijke taal (B1).</description>
     <language>nl</language>
     <item>
+      <title>Vaststelling Meerjarenperspectief Ruimte 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>De Gemeenteraad heeft het Meerjarenperspectief Ruimte 2026 vastgesteld. Het besluit omvat de programmering van investeringen in betaalbaar wonen, duurzame mobiliteit, groen en de toewijzing van voorbereidingskredieten voor herontwikkelingen.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>Ontheffing woonplaatsvereiste</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=249e94b4-c7fc-47bd-9da5-df8358e82a98</link>
+      <description>De gemeenteraad bespreekt het voorstel om de woonplaatsvereiste voor wethouderschap te laten vallen.</description>
+      <guid isPermaLink="false">7947093</guid>
+    </item>
+    <item>
+      <title>Wijziging verordening Participatiewet en re-integratie</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>De Gemeenteraad past de Verordening re-integratie en tegenprestatie Participatiewet aan. Hierdoor krijgen jongeren tot 27 jaar betere begeleiding van school naar werk en komt er een nieuw Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7817769</guid>
+    </item>
+    <item>
+      <title>Omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>De Gemeenteraad besluit over het TAM-omgevingsplan voor de Jan van Galenstraat, Huizingalaan en Van Ginnekenlaan. Dit maakt de bouw mogelijk van 102 huurwoningen, een supermarkt, winkelruimtes en een ondergrondse parkeergarage.</description>
+      <guid isPermaLink="false">7912175</guid>
+    </item>
+    <item>
+      <title>Omzetting omgevingsplan Pijlsweerd, Lauwerecht, Vogelenbuurt en Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>De raad stelt de tweede wijziging van het omgevingsplan Utrecht vast. Hiermee worden tien bestemmingsplannen in Noordwest en Noordoost omgezet naar het definitieve omgevingsplan en worden regels over bodemfunctieklassen en archeologie toegevoegd.</description>
+      <guid isPermaLink="false">7842627</guid>
+    </item>
+    <item>
       <title>Verklaring van geen bedenkingen uitbreiding Theo Pouw Isotopenweg</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
       <description>Het college stelt de raad voor een specifieke verklaring van geen bedenkingen af te geven voor Theo Pouw aan de Isotopenweg 29. Dit maakt het mogelijk dat de provincie Utrecht een vergunning verleent voor twee nieuwe afvalverwerkingsactiviteiten.</description>
@@ -150,40 +180,10 @@
       <guid isPermaLink="false">7508500</guid>
     </item>
     <item>
-      <title>Raadsvoorstel Wijziging wegsleepverordening 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c7e7953c-de31-4e8c-9b64-1542c027e02d</link>
-      <description>Officieel gemeentestuk: Raadsvoorstel Wijziging wegsleepverordening 2026. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
-      <guid isPermaLink="false">7535292</guid>
-    </item>
-    <item>
       <title>Raadsvoorstel Zoekproces grote locatie voor evenementen</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f81b56c3-86c2-4ab7-935c-cdf75f8d807a</link>
       <description>Officieel gemeentestuk: Raadsvoorstel Zoekproces grote locatie voor evenementen. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
       <guid isPermaLink="false">7463458</guid>
-    </item>
-    <item>
-      <title>Raadsvoorstel Vaststelling SPvE herontwikkeling Tuincentrum ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d1a85d32-40fa-47ce-bc99-7b2a4cbf82e2</link>
-      <description>Officieel gemeentestuk: Raadsvoorstel Vaststelling SPvE herontwikkeling Tuincentrum Steck / Gageldijk 3. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
-      <guid isPermaLink="false">7398087</guid>
-    </item>
-    <item>
-      <title>Raadsvoorstel Aanpassing doelstellingen en indicatoren Belei...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=71bda5d9-669b-4dac-8191-abf4ed36e02c</link>
-      <description>Officieel gemeentestuk: Raadsvoorstel Aanpassing doelstellingen en indicatoren Beleidsnota Vastgoed. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
-      <guid isPermaLink="false">7398082</guid>
-    </item>
-    <item>
-      <title>Raadsvoorstel Intrekken uitvoeringsprogramma Utrecht kiest v...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=ee72e080-f1e3-4537-b301-3c65d1554d63</link>
-      <description>Officieel gemeentestuk: Raadsvoorstel Intrekken uitvoeringsprogramma Utrecht kiest voor gezonde lucht. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
-      <guid isPermaLink="false">7377473</guid>
-    </item>
-    <item>
-      <title>Raadsvoorstel Leidende principes Rijnenburg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b7706a9d-aeed-4483-9d96-bc0dd38b88cb</link>
-      <description>Officieel gemeentestuk: Raadsvoorstel Leidende principes Rijnenburg. Dit document is rechtstreeks afkomstig van de gemeenteraad van Utrecht.</description>
-      <guid isPermaLink="false">7301908</guid>
     </item>
   </channel>
 </rss>

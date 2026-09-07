@@ -6,6 +6,24 @@
     <description>Beschlüsse und Dokumente des Stadtrats Utrecht in verständlicher Sprache erklärt.</description>
     <language>de</language>
     <item>
+      <title>Beschluss der Mehrjährigen räumlichen Perspektive 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Der Gemeenteraad hat die Mehrjährige räumliche Perspektive 2026 beschlossen. Der Beschluss umfasst die Programmierung von Investitionen in bezahlbaren Wohnraum, nachhaltige Mobilität, Grünflächen und die Freigabe von Vorbereitungskrediten.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>Beschluss des Ersten Verwaltungsberichts 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
+      <description>Der Rat hat den Ersten Verwaltungsbericht 2026 beschlossen. Damit werden die Investitionskredite um 26,2 Millionen Euro erhöht und Verschiebungen im Sozialbereich umgesetzt.</description>
+      <guid isPermaLink="false">7825093</guid>
+    </item>
+    <item>
+      <title>Beschluss der Frühjahrsnote 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=cf7cc2ce-7a68-4131-a37b-b97651bd7171</link>
+      <description>Der Rat hat die politikneutrale Frühjahrsnote 2026 beschlossen. Der Beschluss bestätigt das aktualisierte Finanzbild mit unvermeidbaren Engpässen als Grundlage für die neue Koalitionsvereinbarung.</description>
+      <guid isPermaLink="false">7756188</guid>
+    </item>
+    <item>
       <title>Prüfungsbericht zur Haushaltshilfe</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
       <description>Die Rekenkamer untersuchte die Haushaltshilfe-Dienste in Utrecht. Der Bericht 'Stof tot nadenken' enthält sieben Empfehlungen zur Verbesserung der Dienste. Der Rat wird gebeten, die Stadtverwaltung aufzufordern, diese Empfehlungen umzusetzen.</description>
@@ -16,6 +34,12 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955</link>
       <description>Der Gemeinderat beschließt über die neue Verordening maatschappelijke ondersteuning 2027. Die Regeln werden klarer und zugänglicher für Einwohner und Fachkräfte. Klare Kriterien und neue Regeln für den Eigenanteil werden eingeführt.</description>
       <guid isPermaLink="false">7875413</guid>
+    </item>
+    <item>
+      <title>Änderung der Verordnung zur Reintegration der Participatiewet</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>Der Gemeenteraad passt die Verordening re-integratie en tegenprestatie Participatiewet an. Dadurch erhalten Jugendliche bis 27 Jahre bessere Unterstützung beim Übergang von der Schule in den Beruf und es wird ein neues Ontwikkeltraject eingeführt.</description>
+      <guid isPermaLink="false">7817769</guid>
     </item>
     <item>
       <title>Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer...</title>
@@ -160,30 +184,6 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7f79750f-2b23-41cf-9ceb-4a4322437faa</link>
       <description>Offizielles Ratsdokument: Council Proposal Vaststellen Nota van Uitgangspunten UPG Ravell....</description>
       <guid isPermaLink="false">7508507</guid>
-    </item>
-    <item>
-      <title>Initiatiefvoorstel 'Een Gemeentelijke Uitvaart Naar Wens'</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c41843c-fc67-4a61-b466-c2f71b3a81ea</link>
-      <description>Offizielles Ratsdokument: Initiatiefvoorstel 'Een Gemeentelijke Uitvaart Naar Wens'.</description>
-      <guid isPermaLink="false">7485388</guid>
-    </item>
-    <item>
-      <title>Initiatiefvoorstel APV wijziging ‘Verbod hinder toegang tot ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=16af2dbc-791b-4e97-aea7-11decc058268</link>
-      <description>Offizielles Ratsdokument: Initiatiefvoorstel APV wijziging ‘Verbod hinder toegang tot ....</description>
-      <guid isPermaLink="false">7485383</guid>
-    </item>
-    <item>
-      <title>Council Proposal Aanpassing Verordening op de raadscommissies: ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a0f9fb26-54b0-4f85-8eb5-0af44a73fc5d</link>
-      <description>Offizielles Ratsdokument: Council Proposal Aanpassing Verordening op de raadscommissies: ....</description>
-      <guid isPermaLink="false">7563745</guid>
-    </item>
-    <item>
-      <title>Council Proposal Zoekproces grote locatie voor evenementen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f81b56c3-86c2-4ab7-935c-cdf75f8d807a</link>
-      <description>Offizielles Ratsdokument: Council Proposal Zoekproces grote locatie voor evenementen.</description>
-      <guid isPermaLink="false">7463458</guid>
     </item>
   </channel>
 </rss>

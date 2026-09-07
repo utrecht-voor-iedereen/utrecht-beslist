@@ -6,10 +6,22 @@
     <description>Utrecht city council decisions and documents explained in plain language.</description>
     <language>en</language>
     <item>
+      <title>Exemption of residence requirement</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=249e94b4-c7fc-47bd-9da5-df8358e82a98</link>
+      <description>The city council discusses a proposal to exempt the residence requirement for aldermen.</description>
+      <guid isPermaLink="false">7947093</guid>
+    </item>
+    <item>
       <title>Amendment General Local Regulation</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4d2108cc-6673-4261-b4d9-b03a16b6fdab</link>
       <description>The city council is proposing an amendment to the General Local Regulation (APV).</description>
       <guid isPermaLink="false">7926192</guid>
+    </item>
+    <item>
+      <title>Declaration of no objection expansion Theo Pouw Isotopenweg</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
+      <description>The college proposes that the council issue a specific declaration of no objection for Theo Pouw at Isotopenweg 29. This enables the Province of Utrecht to grant a permit for two new waste processing activities.</description>
+      <guid isPermaLink="false">7817759</guid>
     </item>
     <item>
       <title>Council Proposal zienswijze VRU: jaarstukken '25, geactualiseer...</title>
@@ -52,12 +64,6 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f22bf636-0d31-4c76-8796-f7b8834b7c51</link>
       <description>Official council document: Council Proposal Vaststelling TAM Omgevingsplan hoogspanningsst.... Official document available via the Municipality of Utrecht.</description>
       <guid isPermaLink="false">7563756</guid>
-    </item>
-    <item>
-      <title>Council Proposal Benoeming wijkcontactpersonen</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=718d9278-3b9d-40c2-9170-9bf463e68603</link>
-      <description>Official council document: Council Proposal Benoeming wijkcontactpersonen. Official document available via the Municipality of Utrecht.</description>
-      <guid isPermaLink="false">7771084</guid>
     </item>
     <item>
       <title>Council Proposal Benoeming leden adviescommissie Controle en Fi...</title>
@@ -126,12 +132,6 @@
       <guid isPermaLink="false">7398099</guid>
     </item>
     <item>
-      <title>Council Proposal Delegatiebesluit wijzigen omgevingsplan tijdel...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=de08ecba-955b-479e-ab3b-f58a761c587e</link>
-      <description>Official council document: Council Proposal Delegatiebesluit wijzigen omgevingsplan tijdel.... Official document available via the Municipality of Utrecht.</description>
-      <guid isPermaLink="false">7301903</guid>
-    </item>
-    <item>
       <title>Initiatiefvoorstel Maatregelen om het dierenleed door hengel...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dedf3958-44e0-46b2-949b-e2b6545e5200</link>
       <description>Official council document: Initiatiefvoorstel Maatregelen om het dierenleed door hengel.... Official document available via the Municipality of Utrecht.</description>
@@ -168,12 +168,6 @@
       <guid isPermaLink="false">7301439</guid>
     </item>
     <item>
-      <title>Council Proposal Sociale Visie Utrecht 2040</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=de18ae9b-097b-434a-8b9e-9f7570eb2c10</link>
-      <description>Official council document: Council Proposal Sociale Visie Utrecht 2040. Official document available via the Municipality of Utrecht.</description>
-      <guid isPermaLink="false">6390686</guid>
-    </item>
-    <item>
       <title>Council Proposal Verordening uitvoering en handhaving omgevings...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd2f541-2e82-4842-9f4e-77a656c42b3b</link>
       <description>Official council document: Council Proposal Verordening uitvoering en handhaving omgevings.... Official document available via the Municipality of Utrecht.</description>
@@ -184,6 +178,12 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=ed7a93b4-1af8-4fbc-a79a-c076aee48438</link>
       <description>Official council document: Council Proposal rekenkamerrapport 'Gas terugnemen'. Official document available via the Municipality of Utrecht.</description>
       <guid isPermaLink="false">6390584</guid>
+    </item>
+    <item>
+      <title>Council Proposal Gemeenschappelijke Regeling Omgevingsdienst Ut...</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b0fb6fc8-0dd5-4df1-a55a-d4afd11ac845</link>
+      <description>Official council document: Council Proposal Gemeenschappelijke Regeling Omgevingsdienst Ut.... Official document available via the Municipality of Utrecht.</description>
+      <guid isPermaLink="false">7197470</guid>
     </item>
   </channel>
 </rss>

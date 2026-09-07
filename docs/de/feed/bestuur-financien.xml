@@ -18,6 +18,12 @@
       <guid isPermaLink="false">7903396</guid>
     </item>
     <item>
+      <title>Beschluss der Mehrjährigen räumlichen Perspektive 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Der Gemeenteraad hat die Mehrjährige räumliche Perspektive 2026 beschlossen. Der Beschluss umfasst die Programmierung von Investitionen in bezahlbaren Wohnraum, nachhaltige Mobilität, Grünflächen und die Freigabe von Vorbereitungskrediten.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
       <title>Beschluss des Ersten Verwaltungsberichts 2026</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c02fc1f6-a9e7-4f20-b536-00fbfe28c5bf</link>
       <description>Der Rat hat den Ersten Verwaltungsbericht 2026 beschlossen. Damit werden die Investitionskredite um 26,2 Millionen Euro erhöht und Verschiebungen im Sozialbereich umgesetzt.</description>
@@ -30,28 +36,22 @@
       <guid isPermaLink="false">7756188</guid>
     </item>
     <item>
-      <title>Ausnahme von der Wohnsitzanforderung</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=249e94b4-c7fc-47bd-9da5-df8358e82a98</link>
-      <description>Der Gemeinderat diskutiert einen Vorschlag, die Wohnsitzanforderung für Beigeordnete aufzuheben.</description>
-      <guid isPermaLink="false">7947093</guid>
-    </item>
-    <item>
       <title>Ernennung von Beigeordneten</title>
       <link></link>
       <description>Die Stadtverordnetenversammlung diskutiert die Ernennung neuer Beigeordneter.</description>
       <guid isPermaLink="false">7947092</guid>
     </item>
     <item>
+      <title>Prüfungsbericht zur Haushaltshilfe</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0</link>
+      <description>Die Rekenkamer untersuchte die Haushaltshilfe-Dienste in Utrecht. Der Bericht 'Stof tot nadenken' enthält sieben Empfehlungen zur Verbesserung der Dienste. Der Rat wird gebeten, die Stadtverwaltung aufzufordern, diese Empfehlungen umzusetzen.</description>
+      <guid isPermaLink="false">7896265</guid>
+    </item>
+    <item>
       <title>Änderung der Führungsstruktur der Steuerkooperation BghU</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401</link>
       <description>Der College bittet den Gemeenteraad um Zustimmung zur Änderung der Gemeenschappelijke Regeling BghU. Dadurch wird BghU von einer Betriebsorganisation in eine öffentlich-rechtliche Körperschaft mit Algemeen Bestuur und Dagelijks Bestuur umgewandelt.</description>
       <guid isPermaLink="false">7912171</guid>
-    </item>
-    <item>
-      <title>Offenlegung vertraulicher Anlagen über Schadensersatz Klépierre</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=2504abf9-0942-461e-bf28-c7f7a67826ee</link>
-      <description>Dieses Initiativvorschlag zielt darauf ab, dass der Rat beschließt, die Vertraulichkeit der Anlagen zum Vertrag mit Klépierre über die Treppen des Moreelsebrug aufzuheben und sie öffentlich zugänglich zu machen.</description>
-      <guid isPermaLink="false">7680201</guid>
     </item>
     <item>
       <title>Beantwortung von Ratsfragen und Errata zu Finanzdokumenten</title>
@@ -72,12 +72,6 @@
       <guid isPermaLink="false">7830823</guid>
     </item>
     <item>
-      <title>Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4c8d9d15-e699-49f4-a141-dd623d075773</link>
-      <description>Offizielles Ratsdokument: Council Proposal Vaststellen subsidie Stadsbelang Utrecht 2025.</description>
-      <guid isPermaLink="false">7892817</guid>
-    </item>
-    <item>
       <title>Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U...</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=a1904cc0-e965-43e9-8f4c-0b2230d9433e</link>
       <description>Offizielles Ratsdokument: Council Proposal Zienswijze ontwerpbegroting 2027-2030 GR Het U....</description>
@@ -88,18 +82,6 @@
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b5ed6309-8a04-4253-b0a3-99c2930d9680</link>
       <description>Offizielles Ratsdokument: Council Proposal Ontheffing woonplaatsvereiste voor wethoudersc....</description>
       <guid isPermaLink="false">7875411</guid>
-    </item>
-    <item>
-      <title>Council Proposal herbenoeming lid RvT NUOVO</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=5791bff0-72b4-4cb4-b6de-aef8d3c88cbd</link>
-      <description>Offizielles Ratsdokument: Council Proposal herbenoeming lid RvT NUOVO.</description>
-      <guid isPermaLink="false">7849697</guid>
-    </item>
-    <item>
-      <title>Council Proposal Afzien bindend advies voor twee buitenplanse a...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=77b70c06-5944-4d78-ade0-6adf35bf76fc</link>
-      <description>Offizielles Ratsdokument: Council Proposal Afzien bindend advies voor twee buitenplanse a....</description>
-      <guid isPermaLink="false">7842625</guid>
     </item>
     <item>
       <title>Council Proposal Zienswijze Ontwerpbegroting GGDrU 2027</title>
@@ -126,36 +108,6 @@
       <guid isPermaLink="false">7786897</guid>
     </item>
     <item>
-      <title>Council Proposal Vaststellen TAM omgevingsplan extra woningen i...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=8deaceed-b20d-4731-a544-d546ca173b99</link>
-      <description>Offizielles Ratsdokument: Council Proposal Vaststellen TAM omgevingsplan extra woningen i....</description>
-      <guid isPermaLink="false">7778097</guid>
-    </item>
-    <item>
-      <title>Council Proposal Vaststelling TAM omgevingsplan Wolvenplein</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=e5ba46dd-2140-4ae1-995a-caf9e7d32150</link>
-      <description>Offizielles Ratsdokument: Council Proposal Vaststelling TAM omgevingsplan Wolvenplein.</description>
-      <guid isPermaLink="false">7778088</guid>
-    </item>
-    <item>
-      <title>Council Proposal SPvE Zuidoostkwadrant, Hart van De Meern</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=6d02a6e9-1076-468d-825a-30535d0610b7</link>
-      <description>Offizielles Ratsdokument: Council Proposal SPvE Zuidoostkwadrant, Hart van De Meern.</description>
-      <guid isPermaLink="false">7680204</guid>
-    </item>
-    <item>
-      <title>Council Proposal Aanwijzingsbesluit buitenplanse omgevingsplana...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=1e25d7f8-1fb8-4e28-939d-0e416fd2799c</link>
-      <description>Offizielles Ratsdokument: Council Proposal Aanwijzingsbesluit buitenplanse omgevingsplana....</description>
-      <guid isPermaLink="false">7778105</guid>
-    </item>
-    <item>
-      <title>Council Proposal Delegatie besluiten Omgevingswet, uitbreiding ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=4fad215b-1459-49c8-a3e7-9f49af95f829</link>
-      <description>Offizielles Ratsdokument: Council Proposal Delegatie besluiten Omgevingswet, uitbreiding ....</description>
-      <guid isPermaLink="false">7700404</guid>
-    </item>
-    <item>
       <title>Council Proposal Zienswijze Ontwerpbegroting BGhU 2027, inclusi...</title>
       <link></link>
       <description>Offizielles Ratsdokument: Council Proposal Zienswijze Ontwerpbegroting BGhU 2027, inclusi....</description>
@@ -180,10 +132,58 @@
       <guid isPermaLink="false">7858846</guid>
     </item>
     <item>
-      <title>Council Proposal Vaststellen subsidies van fracties gemeenteraa...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=94f94a37-4def-4ae6-a725-c9e1cf1d7c8c</link>
-      <description>Offizielles Ratsdokument: Council Proposal Vaststellen subsidies van fracties gemeenteraa....</description>
-      <guid isPermaLink="false">7858842</guid>
+      <title>GEHEIM Council Proposal Onderwijs</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: GEHEIM Council Proposal Onderwijs.</description>
+      <guid isPermaLink="false">7871355</guid>
+    </item>
+    <item>
+      <title>Council Proposal opheffing geheimhouding 21 mei 2026</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal opheffing geheimhouding 21 mei 2026.</description>
+      <guid isPermaLink="false">7858850</guid>
+    </item>
+    <item>
+      <title>Council Proposal benoemen nestor van de raad</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal benoemen nestor van de raad.</description>
+      <guid isPermaLink="false">7858849</guid>
+    </item>
+    <item>
+      <title>Council Proposal benoemen leden adviescommissie Controle en Fin...</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal benoemen leden adviescommissie Controle en Fin....</description>
+      <guid isPermaLink="false">7858848</guid>
+    </item>
+    <item>
+      <title>Council Proposal benoemen leden adviescommissie Participatie</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal benoemen leden adviescommissie Participatie.</description>
+      <guid isPermaLink="false">7858847</guid>
+    </item>
+    <item>
+      <title>Council Proposal Benoeming (plaatsvervangend) voorzitter commis...</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal Benoeming (plaatsvervangend) voorzitter commis....</description>
+      <guid isPermaLink="false">7858845</guid>
+    </item>
+    <item>
+      <title>Council Proposal Benoeming commissieleden 21 mei 2026</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal Benoeming commissieleden 21 mei 2026.</description>
+      <guid isPermaLink="false">7858844</guid>
+    </item>
+    <item>
+      <title>Council Proposal benoemen leden Commissie van geloofsbrieven</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: Council Proposal benoemen leden Commissie van geloofsbrieven.</description>
+      <guid isPermaLink="false">7858843</guid>
+    </item>
+    <item>
+      <title>GEHEIM Council Proposal Beleidsveld Onderwijs</title>
+      <link></link>
+      <description>Offizielles Ratsdokument: GEHEIM Council Proposal Beleidsveld Onderwijs.</description>
+      <guid isPermaLink="false">7719632</guid>
     </item>
   </channel>
 </rss>

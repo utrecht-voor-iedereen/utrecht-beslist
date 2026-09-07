@@ -6,6 +6,36 @@
     <description>Décisions et documents du conseil municipal d'Utrecht expliqués en langage simple.</description>
     <language>fr</language>
     <item>
+      <title>Adoption de la Perspective spatiale pluriannuelle 2026</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=7929a332-17e5-4837-a552-2d0d1e2d63a5</link>
+      <description>Le Gemeenteraad a adopté la Perspective spatiale pluriannuelle 2026. La décision comprend la programmation d'investissements dans le logement abordable, la mobilité durable, les espaces verts et l'attribution de crédits de préparation.</description>
+      <guid isPermaLink="false">7825096</guid>
+    </item>
+    <item>
+      <title>Exemption de l'exigence de résidence</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=249e94b4-c7fc-47bd-9da5-df8358e82a98</link>
+      <description>Le conseil municipal discute d'une proposition visant à exempter l'exigence de résidence pour les échevins.</description>
+      <guid isPermaLink="false">7947093</guid>
+    </item>
+    <item>
+      <title>Modification de l'ordonnance de réintégration de la Participatiewet</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=dcd622b2-46dd-4e8d-9e16-e9be0de5c662</link>
+      <description>Le Gemeenteraad adapte la Verordening re-integratie en tegenprestatie Participatiewet. Cela offre aux jeunes jusqu'à 27 ans un meilleur accompagnement de l'école vers le travail et introduit un nouveau Ontwikkeltraject.</description>
+      <guid isPermaLink="false">7817769</guid>
+    </item>
+    <item>
+      <title>Plan environnemental Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=3ff2eccd-7d8e-48d8-9207-ec4ddc4a3174</link>
+      <description>Le Gemeenteraad se prononce sur le plan environnemental TAM pour Jan van Galenstraat, Huizingalaan et Van Ginnekenlaan. Cela permet la construction de 102 logements locatifs, un supermarché, des commerces et un garage souterrain.</description>
+      <guid isPermaLink="false">7912175</guid>
+    </item>
+    <item>
+      <title>Mise à jour du plan environnemental Pijlsweerd, Lauwerecht, Vogelenbuurt, Tuinwijk</title>
+      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=9f4955c8-456c-4e21-a6ed-4365921ef202</link>
+      <description>Le conseil adopte la deuxième modification du plan environnemental d'Utrecht. Cela convertit dix plans d'urbanisme de Noordwest et Noordoost en plan environnemental définitif et ajoute des règles sur la qualité des sols et l'archéologie.</description>
+      <guid isPermaLink="false">7842627</guid>
+    </item>
+    <item>
       <title>Déclaration de non-objection pour l'extension de Theo Pouw Isotopenweg</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c6d17a46-a9f1-451e-a5ee-d0bab4b186e8</link>
       <description>Le college propose au conseil de délivrer une déclaration spécifique de non-objection pour Theo Pouw à la Isotopenweg 29. Cela permet à la province d'Utrecht d'accorder un permis pour deux nouvelles activités de traitement des déchets.</description>
@@ -150,40 +180,10 @@
       <guid isPermaLink="false">7508500</guid>
     </item>
     <item>
-      <title>Council Proposal Wijziging wegsleepverordening 2026</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=c7e7953c-de31-4e8c-9b64-1542c027e02d</link>
-      <description>Document officiel du conseil municipal : Council Proposal Wijziging wegsleepverordening 2026.</description>
-      <guid isPermaLink="false">7535292</guid>
-    </item>
-    <item>
       <title>Council Proposal Zoekproces grote locatie voor evenementen</title>
       <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=f81b56c3-86c2-4ab7-935c-cdf75f8d807a</link>
       <description>Document officiel du conseil municipal : Council Proposal Zoekproces grote locatie voor evenementen.</description>
       <guid isPermaLink="false">7463458</guid>
-    </item>
-    <item>
-      <title>Council Proposal Vaststelling SPvE herontwikkeling Tuincentrum ...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=d1a85d32-40fa-47ce-bc99-7b2a4cbf82e2</link>
-      <description>Document officiel du conseil municipal : Council Proposal Vaststelling SPvE herontwikkeling Tuincentrum ....</description>
-      <guid isPermaLink="false">7398087</guid>
-    </item>
-    <item>
-      <title>Council Proposal Aanpassing doelstellingen en indicatoren Belei...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=71bda5d9-669b-4dac-8191-abf4ed36e02c</link>
-      <description>Document officiel du conseil municipal : Council Proposal Aanpassing doelstellingen en indicatoren Belei....</description>
-      <guid isPermaLink="false">7398082</guid>
-    </item>
-    <item>
-      <title>Council Proposal Intrekken uitvoeringsprogramma Utrecht kiest v...</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=ee72e080-f1e3-4537-b301-3c65d1554d63</link>
-      <description>Document officiel du conseil municipal : Council Proposal Intrekken uitvoeringsprogramma Utrecht kiest v....</description>
-      <guid isPermaLink="false">7377473</guid>
-    </item>
-    <item>
-      <title>Council Proposal Leidende principes Rijnenburg</title>
-      <link>https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&amp;id=b7706a9d-aeed-4483-9d96-bc0dd38b88cb</link>
-      <description>Document officiel du conseil municipal : Council Proposal Leidende principes Rijnenburg.</description>
-      <guid isPermaLink="false">7301908</guid>
     </item>
   </channel>
 </rss>
