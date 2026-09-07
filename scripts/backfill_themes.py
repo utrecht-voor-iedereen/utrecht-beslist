@@ -25,9 +25,16 @@ import argparse
 import collections
 import json
 import logging
+import urllib.request
 from pathlib import Path
+from typing import Any
 
-from .source_ori import fetch_documents_by_ids
+from .source_ori import (
+    ORI_ELASTIC_ENDPOINT,
+    enrich_with_attachments,
+    normalize_document,
+    share_text_between_siblings,
+)
 from .themes import detect_theme_heuristics
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -35,9 +42,37 @@ logger = logging.getLogger(__name__)
 
 STATE_FILE = Path(__file__).resolve().parent.parent / "state" / "processed.json"
 
-# ORI se pide de cien en cien; fetch_documents_by_ids ya trocea, pero pedir los
-# mil de golpe deja la memoria llena de adjuntos que no hacen falta a la vez.
-LOTE = 200
+# ORI acepta como mucho cien ids por consulta.
+LOTE = 100
+
+
+def fetch_by_ids(doc_ids: list[str]) -> dict[str, dict[str, Any]]:
+    """Los registros de ORI con su texto, de cien en cien.
+
+    Mismo camino que backfill_sources.py: el texto de verdad no está en el hit,
+    sino en los MediaObjects que cuelgan de él, así que hay que enriquecer antes
+    de leerlo. `share_text_between_siblings` cubre el caso de que ORI archive la
+    decisión y la propuesta por separado y solo una lleve el documento.
+    """
+    out: dict[str, dict[str, Any]] = {}
+    for start in range(0, len(doc_ids), LOTE):
+        chunk = doc_ids[start:start + LOTE]
+        payload = {"size": len(chunk), "query": {"ids": {"values": chunk}}}
+        req = urllib.request.Request(
+            ORI_ELASTIC_ENDPOINT,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json", "User-Agent": "UtrechtBeslistBot/1.0"},
+        )
+        with urllib.request.urlopen(req, timeout=40) as response:
+            data = json.loads(response.read().decode("utf-8"))
+        for hit in data.get("hits", {}).get("hits", []):
+            out[hit.get("_id", "")] = normalize_document(hit)
+        logger.info("leídos %d de %d", min(start + LOTE, len(doc_ids)), len(doc_ids))
+
+    registros = list(out.values())
+    enrich_with_attachments(registros)
+    share_text_between_siblings(registros)
+    return out
 
 
 def main() -> int:
@@ -49,17 +84,13 @@ def main() -> int:
     items = json.loads(STATE_FILE.read_text(encoding="utf-8"))
     objetivo = items[: args.limit] if args.limit else items
 
-    textos: dict[str, str] = {}
-    for inicio in range(0, len(objetivo), LOTE):
-        lote = [str(i.get("doc_id")) for i in objetivo[inicio : inicio + LOTE]]
-        for doc in fetch_documents_by_ids(lote):
-            textos[str(doc.get("id"))] = doc.get("text") or ""
-        logger.info("leídos %d de %d", min(inicio + LOTE, len(objetivo)), len(objetivo))
+    registros = fetch_by_ids([str(i.get("doc_id")) for i in objetivo if i.get("doc_id")])
+    textos: dict[str, str] = {k: (v.get("text") or "") for k, v in registros.items()}
 
     cambiados = 0
     sin_texto = 0
-    antes = collections.Counter()
-    despues = collections.Counter()
+    antes: collections.Counter[str] = collections.Counter()
+    despues: collections.Counter[str] = collections.Counter()
 
     for item in objetivo:
         previos = [t for t in (item.get("thema") or []) if t]
