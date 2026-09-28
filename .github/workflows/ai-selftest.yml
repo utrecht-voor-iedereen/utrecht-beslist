@@ -8,6 +8,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 9 * * 0'
+  # Also whenever the AI code changes, on any branch: a new model or prompt is
+  # tested against the real providers before it reaches the daily run.
+  push:
+    paths:
+      - 'scripts/ai_chain.py'
+      - 'scripts/ai_selftest.py'
+      - '.github/workflows/ai-selftest.yml'
 
 permissions:
   contents: read
