@@ -6,6 +6,10 @@ and only processes dossiers that have not been upgraded yet. It respects the
 daily token budget of the configured AI provider by stopping as soon as the
 provider returns degraded summaries.
 
+It also runs as a step of the daily workflow, on what the pipeline leaves of
+Groq's free tier (200,000 tokens a day, 8,000 a minute): UPGRADE_MAX_DOSSIERS
+and UPGRADE_MAX_SECONDS bound it so the job stays inside its timeout.
+
 The text is read from OpenBesluitvorming. The entries carry ORI ids, which the
 new register does not know, but their PDF links carry the iBabs id of each
 paper, and that is the paper's id there too.
@@ -102,9 +106,10 @@ def lead_document(title: str, group_items: list[dict[str, Any]]) -> dict[str, An
 
 
 def upgrade_backfilled(
-    batch_size: int = 2,
     save_every: int = 5,
-    pause_seconds: float = 45.0,
+    pause_seconds: float = float(os.environ.get("BATCH_PAUSE_SECONDS", "60")),
+    max_dossiers: int = int(os.environ.get("UPGRADE_MAX_DOSSIERS", "0")),
+    max_seconds: float = float(os.environ.get("UPGRADE_MAX_SECONDS", "0")),
 ):
     """Upgrade backfilled placeholder summaries to real AI summaries."""
     items = load_state()
@@ -130,23 +135,50 @@ def upgrade_backfilled(
         reverse=True,
     )
 
-    pending = [(title, docs) for title, docs in ordered if title not in upgraded]
+    # Dossiers with no readable paper at OpenBesluitvorming stay placeholders;
+    # remembering them saves asking again every day.
+    no_source = set(progress.get("no_source", []))
+    pending = [
+        (title, docs) for title, docs in ordered if title not in upgraded and title not in no_source
+    ]
     logger.info(
         f"Found {len(groups)} backfilled dossiers; {len(pending)} still need upgrading."
     )
 
     processed_this_run = 0
+    summarized = 0
+    deadline = time.monotonic() + max_seconds if max_seconds > 0 else None
 
     for title, group_items in pending:
+        if max_dossiers and summarized >= max_dossiers:
+            logger.info(f"Reached UPGRADE_MAX_DOSSIERS={max_dossiers}; the rest wait for the next run.")
+            break
+        if deadline is not None and time.monotonic() + pause_seconds > deadline:
+            logger.info("Out of time for this run; the rest wait for the next one.")
+            break
         doc_ids = [item["doc_id"] for item in group_items]
         logger.info(f"Upgrading dossier: {title[:80]} ({len(doc_ids)} records)")
 
         lead_doc = lead_document(title, group_items)
         if not lead_doc or not lead_doc.get("text", "").strip():
             logger.warning(f"No usable text for {title} at OpenBesluitvorming; skipping.")
+            no_source.add(title)
+            progress["no_source"] = sorted(no_source)
             continue
 
+        # One document per call, a minute apart: Groq's free tier refills
+        # 8,000 tokens a minute and a summary takes most of them. The first
+        # call waits too — in the daily job the pipeline has just spent the
+        # minute's tokens, and the first test run died on that 429.
+        time.sleep(pause_seconds)
+        summarized += 1
         summaries = run_ai_chain([lead_doc])
+        if not summaries or summaries[0].get("degraded"):
+            # A minute's limit clears in a minute; only a second failure in a
+            # row means the day's budget is gone.
+            logger.info(f"No summary; retrying once in {pause_seconds:.0f}s.")
+            time.sleep(pause_seconds)
+            summaries = run_ai_chain([lead_doc])
         if not summaries or summaries[0].get("degraded"):
             logger.warning(
                 "AI provider returned a degraded/empty summary. Stopping to respect "
@@ -180,9 +212,6 @@ def upgrade_backfilled(
             save_state(items)
             logger.info(f"Saved progress after {len(upgraded)} dossiers.")
 
-        if processed_this_run % batch_size == 0 and processed_this_run > 0:
-            logger.info(f"Pausing {pause_seconds}s between batches...")
-            time.sleep(pause_seconds)
 
     save_progress(progress)
     save_state(items)
