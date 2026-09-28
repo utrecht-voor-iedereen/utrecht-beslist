@@ -15,7 +15,7 @@ jobs:
     # and skipped the commit, so the tokens it had already spent summarizing were
     # thrown away. The steps below carry their own budgets and finish well inside
     # this; it is a backstop, not the schedule.
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Checkout Repository
@@ -58,6 +58,21 @@ jobs:
         run: |
           python -m scripts.translate_missing
 
+      # 953 entradas del archivo (2025 a junio de 2026) siguen con un texto
+      # provisional de backfill_range. El pipeline gasta unos 40.000 de los
+      # 200.000 tokens diarios del plan gratuito de Groq; esto usa parte del
+      # resto, un expediente por minuto, sin pasar de 20 minutos. Unos 16
+      # expedientes al día: los 281 en tres semanas largas.
+      - name: Upgrade Backfilled Placeholders
+        continue-on-error: true
+        timeout-minutes: 25
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          UPGRADE_MAX_DOSSIERS: '20'
+          UPGRADE_MAX_SECONDS: '1200'
+        run: |
+          python -m scripts.upgrade_backfilled
+
       # El sitio ya no se commitea: lo construye y publica pages.yml, que se
       # dispara solo al cambiar state/processed.json en el push de abajo.
 
@@ -69,5 +84,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           # openbesluitvorming.json is the mirror the next run syncs from.
-          git add state/processed.json state/openbesluitvorming.json
+          git add state/processed.json state/openbesluitvorming.json state/upgrade_progress.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "update: council summaries $(date +'%Y-%m-%d')" && git push)
