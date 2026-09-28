@@ -29,7 +29,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any, TypeGuard
 
-from .ai_chain import GROQ_DEFAULT_MODEL, groq_extras
+from .ai_chain import groq_extras, groq_models
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -277,7 +277,9 @@ def main() -> int:
     if not api_key:
         logger.error("GROQ_API_KEY is not set. Run with: python -m dotenv or export it first.")
         return 1
-    model = os.environ.get("AI_MODEL", GROQ_DEFAULT_MODEL)
+    # Each retry moves to the next model: Groq's limits are per model, so a
+    # 429 for a day's budget is answered by another model, not by waiting.
+    models = groq_models()
 
     done = 0
     incomplete: list[str] = []
@@ -324,6 +326,7 @@ def main() -> int:
                 if out_of_time():
                     ran_out = True
                     break
+                model = models[(attempt - 1) % len(models)]
                 try:
                     got = translate(item, suffix, api_key, model, wanted)
                 except urllib.error.HTTPError as exc:

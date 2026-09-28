@@ -176,10 +176,36 @@ def validate_and_parse_llm_json(raw_json_str: str, model_name: str) -> list[dict
 # default effort the reasoning costs more tokens than the summary itself.
 GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b"
 
+# Groq counts its free-tier limits (8,000 tokens a minute, 200,000 a day) per
+# model, so a second model is a real fallback on the same key: when one runs
+# out of its day, or is retired as llama-3.3 was, the next still answers.
+# GROQ_MODELS overrides the list, comma-separated, first choice first.
+GROQ_FALLBACK_MODELS = ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
+
+# Gemini is the fallback outside Groq. The model is configurable because
+# Google retires them often: gemini-1.5-flash, hard-coded here until now, had
+# long stopped answering, so the fallback had never worked.
+GEMINI_DEFAULT_MODEL = "gemini-3.6-flash"
+
+
+def groq_models() -> list[str]:
+    """The Groq models to try, in order."""
+    configured = os.environ.get("GROQ_MODELS", "")
+    if configured.strip():
+        return [m.strip() for m in configured.split(",") if m.strip()]
+    first = os.environ.get("AI_MODEL", GROQ_DEFAULT_MODEL)
+    return [first] + [m for m in GROQ_FALLBACK_MODELS if m != first]
+
 
 def groq_extras(model_name: str) -> dict[str, Any]:
     """Parameters only some Groq models accept."""
-    return {"reasoning_effort": "low"} if model_name.startswith("openai/gpt-oss") else {}
+    if model_name.startswith("openai/gpt-oss"):
+        return {"reasoning_effort": "low"}
+    if model_name.startswith("qwen/"):
+        # Qwen thinks out loud unless told not to, and the thinking would land
+        # in the JSON answer.
+        return {"reasoning_format": "hidden"}
+    return {}
 
 
 def describe_http_error(e: urllib.error.HTTPError) -> str:
@@ -192,8 +218,19 @@ def describe_http_error(e: urllib.error.HTTPError) -> str:
 
 
 def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
-    """Try summarization using Groq API."""
-    model_name = os.environ.get("AI_MODEL", GROQ_DEFAULT_MODEL)
+    """Try each Groq model in turn; the first valid answer wins."""
+    last_error: Exception | None = None
+    for model_name in groq_models():
+        try:
+            return summarize_with_groq_model(batch_docs, api_key, model_name)
+        except Exception as e:  # noqa: BLE001
+            logger.warning(f"Groq {model_name} failed: {e}")
+            last_error = e
+    raise RuntimeError(f"every Groq model failed; last: {last_error}")
+
+
+def summarize_with_groq_model(batch_docs: list[dict[str, Any]], api_key: str, model_name: str) -> list[dict[str, Any]]:
+    """One summarization call to one Groq model."""
     url = "https://api.groq.com/openai/v1/chat/completions"
     payload = {
         "model": model_name,
@@ -234,24 +271,29 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
     }
 
     clean_key = api_key.strip().strip('"').strip("'")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={clean_key}"
+    model_name = os.environ.get("GEMINI_MODEL", GEMINI_DEFAULT_MODEL)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
 
+    # The key goes in a header: in the query string it ends up in any log
+    # that prints the URL.
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode('utf-8'),
-        headers={"Content-Type": "application/json"}
+        headers={"Content-Type": "application/json", "x-goog-api-key": clean_key}
     )
-    with urllib.request.urlopen(req, timeout=30) as res:
-        res_data = json.loads(res.read().decode('utf-8'))
-        raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
-        return validate_and_parse_llm_json(raw_text, "Google Gemini 1.5 Flash")
+    try:
+        with urllib.request.urlopen(req, timeout=120) as res:
+            res_data = json.loads(res.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(describe_http_error(e)) from e
+    raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
+    return validate_and_parse_llm_json(raw_text, f"Google Gemini ({model_name})")
 
 
 def summarize_with_openrouter(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
     """Try summarization using OpenRouter API (OpenAI-compatible)."""
-    # Default to a widely-available OpenRouter model. The caller can override
-    # via AI_MODEL, e.g. meta-llama/llama-3.3-70b-instruct:free
-    model_name = os.environ.get("AI_MODEL", "meta-llama/llama-3.3-70b-instruct")
+    # Its own variable: AI_MODEL names a Groq model, and OpenRouter ids differ.
+    model_name = os.environ.get("OPENROUTER_MODEL", "openai/gpt-oss-120b:free")
     url = "https://openrouter.ai/api/v1/chat/completions"
     payload = {
         "model": model_name,
