@@ -16,7 +16,7 @@
 
 **Utrecht Beslist** is een open-source platform dat raadsvoorstellen, besluiten en documenten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke B1-taal (Nederlands en Engels).
 
-- **Databron:** [Open Raadsinformatie API](https://openraadsinformatie.nl/) (ElasticSearch endpoint `ori_utrecht*`)
+- **Databron:** [OpenBesluitvorming API](https://openbesluitvorming.nl/docs/api) (exportfeed van bron `utrecht`), de opvolger van Open Raadsinformatie. Items tot en met 9 juli 2026 komen nog uit ORI Classic.
 - **AI-keten:** Groq (`llama-3.3-70b-versatile`) ➔ Google Gemini 1.5 Flash ➔ Degradatiemodus (fallback)
 - **Directe transparantie:** Elk artikel linkt naar de ORI-registratie, het Utrechtse Raadsportaal en Woo-rechten (Wet open overheid). Publiceert Open Raadsinformatie PDF-bijlagen bij het stuk, dan staan die er allemaal bij; zo niet, dan zegt de pagina dat met zoveel woorden.
 - **Permanente Archivering:** In overeenstemming met de *Archiefwet 1995* worden raadsbesluiten permanent bewaard.
@@ -27,7 +27,7 @@
 
 **Utrecht Beslist** is an open-source platform providing plain-language summaries (B1 Dutch & English) of Utrecht city council decisions and official proposals.
 
-- **Data Source:** Open Raadsinformatie ElasticSearch API (`ori_utrecht*`), including the MediaObject attachments that hold the actual document text and PDFs
+- **Data Source:** [OpenBesluitvorming](https://openbesluitvorming.nl/docs/api), the successor of Open Raadsinformatie: a local mirror of Utrecht's council meetings (`state/openbesluitvorming.json`), kept current through the export snapshot + changes feed, with each paper's text read from `/api/entities/{id}`. ORI Classic stopped harvesting Utrecht in July 2026 and shuts down on 1 November 2026; entries up to 9 July 2026 still carry their ORI ids
 - **AI Resiliency:** Multi-provider fallback chain (Groq ➔ Gemini ➔ Degraded Mode)
 - **Facts come from the register, not the model:** decision state, dates, source links and attachments are read from ORI and overwrite whatever the summarizer returned
 - **UI-UX Pro Max:** Dark mode toggle, keyboard navigation shortcuts, TTS read-aloud audio narration, and printable A4 PDF dossier reports.
@@ -55,7 +55,8 @@ utrecht-beslist/
 │   └── daily.yml          # GitHub Actions cronrunner (07:47 Amsterdam time)
 ├── scripts/
 │   ├── pipeline.py        # Master pipeline orchestrator
-│   ├── source_ori.py      # Open Raadsinformatie ElasticSearch client
+│   ├── source_obv.py      # OpenBesluitvorming client: meeting mirror, papers, import status
+│   ├── source_ori.py      # Legacy ORI Classic client, still used by the backfill scripts until 1 Nov 2026
 │   ├── ai_chain.py        # Groq -> Gemini -> Degraded AI chain
 │   ├── build_site.py      # Jinja2 static HTML renderer & detail page generator
 │   ├── schemas.py         # Pydantic summary item schema

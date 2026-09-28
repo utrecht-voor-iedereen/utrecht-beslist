@@ -22,7 +22,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from .source_ori import fetch_utrecht_documents, filter_documents
+from .source_obv import enrich_with_text, fetch_utrecht_documents
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -170,10 +170,13 @@ def main() -> int:
 
     state = {item["doc_id"]: item for item in json.loads(STATE_FILE.read_text(encoding="utf-8"))}
 
-    logger.info("fetching documents and attachments from ORI...")
-    docs: dict[str, dict[str, Any]] = {
-        d["id"]: d for d in filter_documents(fetch_utrecht_documents(size=150))
-    }
+    logger.info("fetching documents from OpenBesluitvorming...")
+    docs: dict[str, dict[str, Any]] = {d["id"]: d for d in fetch_utrecht_documents()}
+    # The text costs a request per paper, so only for entries it could serve.
+    enrich_with_text(
+        [d for d in docs.values() if d["id"] in state and (args.all or state[d["id"]].get("ai_model") != EXTERNAL_MODEL_LABEL)],
+        max_text_chars=args.max_chars,
+    )
 
     usable, no_source, done = [], [], []
     for doc_id, entry in state.items():

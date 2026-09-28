@@ -68,5 +68,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add state/processed.json
+          # openbesluitvorming.json is the mirror the next run syncs from.
+          git add state/processed.json state/openbesluitvorming.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "update: council summaries $(date +'%Y-%m-%d')" && git push)

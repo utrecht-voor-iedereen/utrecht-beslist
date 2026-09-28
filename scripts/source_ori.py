@@ -1,5 +1,11 @@
 """
 Client module for Open Raadsinformatie (ORI) ElasticSearch API for Utrecht municipal documents.
+
+Legacy. ORI Classic stopped harvesting Utrecht in July 2026 and is switched off
+on 1 November 2026; the daily pipeline reads from OpenBesluitvorming through
+source_obv.py. What remains here serves the backfill scripts, which re-read
+facts for entries that still carry an ORI id, and the title rules the new
+client shares.
 """
 
 import json
