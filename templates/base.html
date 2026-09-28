@@ -10,6 +10,7 @@
   <link rel="alternate" type="application/rss+xml" title="Utrecht Beslist RSS" href="{{ root_path if root_path else '../' }}{{ lang }}/feed.xml">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">{{ t('skip_link', lang) }}</a>
 
   <!-- Header Component: Dark Navy Slate + Vector Shield Logo -->
   <header>
@@ -80,7 +81,7 @@
 
   {% block hero %}{% endblock %}
 
-  <main class="main-wrapper">
+  <main class="main-wrapper" id="main-content" tabindex="-1">
     {% block content %}{% endblock %}
   </main>
 
