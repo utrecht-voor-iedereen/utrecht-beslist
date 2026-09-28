@@ -6,8 +6,9 @@ Fetches documents -> filters -> upserts -> summarizes -> renders static site.
 import json
 import logging
 import os
+import re
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Any
 
 from dotenv import load_dotenv
@@ -19,7 +20,7 @@ from dateutil.parser import parse as parse_date
 from .ai_chain import run_ai_chain
 from .build_site import build_static_site
 from .i18n import STATUS_FIELDS, status_text
-from .source_ori import fetch_utrecht_documents, filter_documents, peer_newest_dates
+from .source_obv import enrich_with_text, fetch_utrecht_documents, source_status
 from .translate_missing import FIELDS as TRANSLATABLE_FIELDS
 from .translate_missing import TARGETS as TRANSLATION_TARGETS
 
@@ -32,8 +33,8 @@ STATE_FILE = os.path.join(PROJECT_ROOT, "state", "processed.json")
 # is long enough for the upstream harvester to stop and the site to sit frozen
 # for a quarter without anyone being told. It stays short — shorter than a
 # recess — because crossing it no longer asserts a fault: diagnose_staleness()
-# compares Utrecht against the other councils in the register and only calls it
-# a fault when they are still publishing.
+# asks OpenBesluitvorming whether its import of Utrecht is still succeeding, and
+# only calls it a fault when it is not.
 ANOMALY_THRESHOLD_DAYS = int(os.environ.get("ANOMALY_THRESHOLD_DAYS", "21"))
 
 # Seconds to wait between summarization batches, to stay inside the provider's
@@ -70,44 +71,56 @@ def save_state(items: list[dict[str, Any]]):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(items, f, indent=2, ensure_ascii=False)
 
-def diagnose_staleness(days_diff: int, peers: dict[str, Any] | None = None) -> tuple[int, str]:
+def diagnose_staleness(days_diff: int, status: dict[str, Any] | None = None) -> tuple[int, str]:
     """
     Says whether a quiet register means a recess or a broken harvest.
 
     The threshold alone cannot tell those apart, so it cried fault every day of
     a six-week summer recess and would have been ignored by the time a real
-    outage arrived. The other councils in the register answer the question:
-    Dutch councils recess together, so if Amsterdam and The Hague are just as
-    quiet the silence is the calendar, and only Utrecht falling behind while its
-    peers keep publishing is Open Raadsinformatie losing Utrecht.
+    outage arrived. ORI could not say whether it was still importing a council,
+    so this used to infer it from four peer councils. OpenBesluitvorming says it
+    outright: /api/status reports, per organization, whether last night's
+    import succeeded. A council that is quiet while the import runs is in
+    recess; one whose import is failing is the outage.
 
     Returns the log level to use and the line to log at it.
     """
-    peers = peer_newest_dates() if peers is None else peers
-    today = datetime.now(timezone.utc).date()
-    ages = {index: (today - seen).days for index, seen in peers.items() if seen}
-    detail = ", ".join(f"{index.rstrip('*')}: {age}d" for index, age in sorted(ages.items()))
+    status = source_status() if status is None else status
 
-    if not ages:
+    if not status:
         return logging.ERROR, (
             f"STALE: the newest document is {days_diff} days old (threshold "
-            f"{ANOMALY_THRESHOLD_DAYS}) and no peer register answered, so this run "
-            "cannot tell a recess from a stopped harvest. Check "
-            "https://api.openraadsinformatie.nl by hand."
+            f"{ANOMALY_THRESHOLD_DAYS}) and OpenBesluitvorming's status did not answer, "
+            "so this run cannot tell a recess from a stopped harvest. Check "
+            "https://openbesluitvorming.nl/api/status by hand."
         )
 
-    quiet = [index for index, age in ages.items() if age > ANOMALY_THRESHOLD_DAYS]
-    if len(quiet) * 2 >= len(ages):
+    state = status.get("state") or "unknown"
+    last_success = str(status.get("lastSuccessAt") or "never")[:10]
+    latest_meeting = str(status.get("latestContentDate") or "")[:10]
+    if state == "ok" and latest_meeting:
+        # The register has recent meetings and the site does not: the gap is on
+        # this side, a backlog draining MAX_NEW_PER_RUN a day or a summarizer
+        # that keeps failing. Calling that a recess would hide it.
+        age = (datetime.now(timezone.utc).date() - date.fromisoformat(latest_meeting)).days
+        if age <= ANOMALY_THRESHOLD_DAYS:
+            return logging.WARNING, (
+                f"BEHIND: the newest entry is {days_diff} days old, but OpenBesluitvorming "
+                f"holds Utrecht meetings up to {latest_meeting}. The register is current "
+                "and this site is not — look at the backlog and the summarizer above."
+            )
+    if state == "ok":
         return logging.INFO, (
-            f"Quiet for {days_diff} days, and so are {len(quiet)} of {len(ages)} peer "
-            f"councils ({detail}) — a recess, not a fault. Nothing to do; the run "
-            "picks up again when the council does."
+            f"Quiet for {days_diff} days, but OpenBesluitvorming imported Utrecht "
+            f"successfully on {last_success} — a recess, not a fault. Nothing to do; "
+            "the run picks up again when the council does."
         )
 
+    reason = status.get("lastErrorMessage") or "no reason given"
     return logging.CRITICAL, (
-        f"STALE: Utrecht is {days_diff} days behind while its peers are current "
-        f"({detail}). The council is sitting and Open Raadsinformatie is not "
-        "harvesting Utrecht — report it upstream rather than waiting it out."
+        f"STALE: Utrecht is {days_diff} days behind and OpenBesluitvorming's import "
+        f"of it is '{state}' (last success {last_success}: {reason}). Report it at "
+        "https://github.com/ontola/openbesluitvorming/issues rather than waiting it out."
     )
 
 
@@ -189,6 +202,47 @@ def apply_source_facts(summary: dict[str, Any], doc: dict[str, Any]) -> dict[str
     return summary
 
 
+# The iBabs id of a paper, as it appears in its public download link. ORI and
+# OpenBesluitvorming both publish that link, and it is the only key the two
+# share: ORI's numeric ids have no counterpart in the new register.
+IBABS_DOCUMENT_ID = re.compile(r"[?&]id=([0-9a-fA-F-]{36})")
+
+
+def published_papers(items: list[dict[str, Any]]) -> set[tuple[str, str]]:
+    """(iBabs paper id, meeting day) for every paper an entry already shows."""
+    seen = set()
+    for item in items:
+        day = str(item.get("date") or "")[:10]
+        urls = [item.get("pdf_url") or ""] + [a.get("url") or "" for a in item.get("attachments") or []]
+        for url in urls:
+            match = IBABS_DOCUMENT_ID.search(url)
+            if match:
+                seen.add((match.group(1).lower(), day))
+    return seen
+
+
+def drop_already_published(docs: list[dict[str, Any]], items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """
+    Leaves out agenda items the site already carries under their ORI id.
+
+    The switch to OpenBesluitvorming gives every document a new id, and the
+    mirror reaches back past the last ORI harvest, so without this every
+    proposal of June and early July would be summarized a second time. Any
+    shared paper on the same day identifies the item — not only the lead one,
+    which for a decided item is now the raadsbesluit ORI never had. A dossier
+    that comes back to a later meeting is new news and goes through.
+    """
+    seen = published_papers([i for i in items if str(i.get("doc_id", "")).isdigit()])
+    kept = []
+    for doc in docs:
+        if published_papers([doc]) & seen:
+            continue
+        kept.append(doc)
+    if len(kept) < len(docs):
+        logger.info("%d agenda item(s) already published under their ORI id, skipped.", len(docs) - len(kept))
+    return kept
+
+
 def run_pipeline():
     """Runs full data fetch, processing, upserting, summarization, and site build."""
     logger.info("Starting Utrecht Beslist pipeline run...")
@@ -196,9 +250,8 @@ def run_pipeline():
     existing_items = load_state()
     existing_map = {item["doc_id"]: item for item in existing_items if "doc_id" in item}
 
-    # Fetch up to 150 recent raw documents from Open Raadsinformatie API
-    raw_hits = fetch_utrecht_documents(size=150)
-    filtered_docs = filter_documents(raw_hits)
+    # Proposals on the agendas of Utrecht's recent council meetings.
+    filtered_docs = drop_already_published(fetch_utrecht_documents(), existing_items)
 
     has_ai_keys = bool(os.environ.get("GROQ_API_KEY") or os.environ.get("GEMINI_API_KEY"))
     docs_to_process = []
@@ -211,6 +264,11 @@ def run_pipeline():
         # Process if new, date changed, or upgrading from degraded mode with AI keys
         if not is_existing or date_changed or (is_degraded and has_ai_keys):
             docs_to_process.append(doc)
+        elif is_existing:
+            # The raadsbesluit is attached days after the vote. The summary does
+            # not change with it, but the state does, so the facts are
+            # refreshed without spending tokens on a new summary.
+            apply_source_facts(existing_map[doc_id], doc)
 
     logger.info(f"Discovered {len(docs_to_process)} new/updated/upgradeable documents to process.")
 
@@ -223,6 +281,9 @@ def run_pipeline():
             MAX_NEW_PER_RUN, len(docs_to_process),
         )
         docs_to_process = docs_to_process[:MAX_NEW_PER_RUN]
+
+    # Only now, and only for these: the text costs a request per paper.
+    enrich_with_text(docs_to_process)
 
     new_summaries: list[dict[str, Any]] = []
     skipped_degraded: list[str] = []
