@@ -63,7 +63,7 @@
             <span class="lang-globe-icon" aria-hidden="true">🌐</span>
             <select class="lang-select-native" aria-label="{{ t('lang_select_aria', lang) }}" onchange="window.location.href=this.value;">
               {% for l_code, l_info in LANGUAGES.items() %}
-                <option value="{{ root_path if root_path else '../' }}{{ l_code }}/index.html" {% if lang == l_code %}selected{% endif %}>
+                <option value="{{ root_path if root_path else '../' }}{{ l_code }}/{{ page_path | default('index.html') }}" {% if lang == l_code %}selected{% endif %}>
                   {{ l_info.label }} — {{ l_info.name }}
                 </option>
               {% endfor %}

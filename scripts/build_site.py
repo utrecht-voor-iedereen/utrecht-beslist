@@ -9,6 +9,7 @@ import logging
 import os
 import shutil
 import sys
+from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -50,6 +51,10 @@ env.globals["strip_leading_icon"] = strip_leading_icon
 env.globals["wijk_label"] = wijk_label
 env.globals["state_label"] = status_text
 env.globals["over_hero"] = over_hero
+# Build day, for marking meetings that have not happened yet. app.js removes
+# the mark once the day passes, so a day without a rebuild does not leave it
+# on a meeting already held.
+env.globals["today"] = datetime.now(timezone.utc).date().isoformat()
 env.globals["over_sections"] = over_sections
 
 
@@ -252,7 +257,7 @@ def build_static_site(items: list):
         with open(os.path.join(DOCS_DIR, lang, "index.html"), "w", encoding="utf-8") as f:
             f.write(index_html)
 
-        over_html = over_template.render(lang=lang, themes=THEMES, root_path="../")
+        over_html = over_template.render(lang=lang, themes=THEMES, root_path="../", page_path="over.html")
         with open(os.path.join(DOCS_DIR, lang, "over.html"), "w", encoding="utf-8") as f:
             f.write(over_html)
 
@@ -263,7 +268,8 @@ def build_static_site(items: list):
             month_dir = os.path.join(DOCS_DIR, lang, "archief", year, month)
             os.makedirs(month_dir, exist_ok=True)
             archive_html = index_template.render(
-                lang=lang, items=month_items, themes=THEMES, root_path="../../../../"
+                lang=lang, items=month_items, themes=THEMES, root_path="../../../../",
+                page_path=f"archief/{year}/{month}/index.html",
             )
             with open(os.path.join(month_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(archive_html)
@@ -289,7 +295,12 @@ def build_static_site(items: list):
             detail_dir = os.path.join(DOCS_DIR, lang, "besluit", doc_id)
             os.makedirs(detail_dir, exist_ok=True)
 
-            detail_html = detail_template.render(lang=lang, item=item, themes=THEMES, root_path="../../../")
+            # page_path lets the language switch land on this same decision in the
+            # other language instead of on that language's home page.
+            detail_html = detail_template.render(
+                lang=lang, item=item, themes=THEMES, root_path="../../../",
+                page_path=f"besluit/{doc_id}/index.html",
+            )
             with open(os.path.join(detail_dir, "index.html"), "w", encoding="utf-8") as f:
                 f.write(detail_html)
 

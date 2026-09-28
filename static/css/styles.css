@@ -991,7 +991,10 @@ footer {
 }
 
 @media print {
-  header, footer, nav, .controls-card, .view-header-bar, .card-actions, .share-btn, .report-issue-link, .lang-switch, .theme-toggle-btn, .header-tools {
+  /* Hides the chrome and the index page's filters. It used to hide every
+     .controls-card, and the detail page's article is one, so printing a
+     decision produced a blank page. */
+  header, footer, nav, .filters-card, .view-header-bar, .card-actions, .share-btn, .audio-btn, .report-issue-link, .lang-switch, .theme-toggle-btn, .header-tools, .skip-link, .unofficial-notice {
     display: none !important;
   }
   body {
@@ -1507,4 +1510,17 @@ footer {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Next to the date of a meeting still ahead. */
+.upcoming-note {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--utrecht-superficie);
+  color: var(--utrecht-negro);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
 }

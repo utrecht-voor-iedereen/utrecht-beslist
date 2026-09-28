@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     const speaker = e.target.closest('[data-speak]');
     if (speaker) {
-      speakText(speaker.dataset.speak);
+      toggleSpeech(speaker);
       return;
     }
     const sharer = e.target.closest('[data-share-title]');
@@ -442,17 +442,41 @@ function shareCard(title, url) {
 // Text-to-Speech (TTS Audio Read-Aloud) Function.
 // The voice used to be nl-NL for everything except English, so the Turkish and
 // Portuguese pages were read aloud by a Dutch voice.
-function speakText(text) {
+//
+// The button starts and stops: it used to only start, so a long summary could
+// not be silenced short of leaving the page.
+function setSpeechButton(button, playing) {
+  if (!button) return;
+  button.setAttribute('aria-pressed', playing ? 'true' : 'false');
+  const label = playing ? button.dataset.labelStop : button.dataset.labelListen;
+  if (label) button.textContent = label;
+}
+
+function toggleSpeech(button) {
   if (!('speechSynthesis' in window)) {
     alert(UB.tts_unsupported);
     return;
   }
+  if (button.getAttribute('aria-pressed') === 'true') {
+    window.speechSynthesis.cancel();
+    setSpeechButton(button, false);
+    return;
+  }
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
+  const utterance = new SpeechSynthesisUtterance(button.dataset.speak);
   utterance.lang = UB.speech;
   utterance.rate = 0.95;
+  const reset = () => setSpeechButton(button, false);
+  utterance.onend = reset;
+  utterance.onerror = reset;
+  setSpeechButton(button, true);
   window.speechSynthesis.speak(utterance);
 }
+
+// Leaving the page must not leave the voice talking.
+window.addEventListener('pagehide', () => {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+});
 
 // --- Simple feedback via the user's own email client ---
 function buildMailto(subject, body) {
@@ -532,3 +556,11 @@ function openReportMailto(title, docId, subject) {
 }
 
 document.addEventListener('DOMContentLoaded', initReportForms);
+
+// A meeting marked as upcoming at build time may have happened since.
+(() => {
+  const today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('.upcoming-note[data-date]').forEach((el) => {
+    if (el.dataset.date <= today) el.remove();
+  });
+})();
