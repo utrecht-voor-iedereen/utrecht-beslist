@@ -202,9 +202,9 @@ def groq_extras(model_name: str) -> dict[str, Any]:
     if model_name.startswith("openai/gpt-oss"):
         return {"reasoning_effort": "low"}
     if model_name.startswith("qwen/"):
-        # Qwen thinks out loud unless told not to, and the thinking would land
-        # in the JSON answer.
-        return {"reasoning_format": "hidden"}
+        # With its reasoning on, Qwen failed Groq's JSON mode
+        # (json_validate_failed) in the self-test; without it, it answers.
+        return {"reasoning_effort": "none"}
     return {}
 
 
