@@ -460,6 +460,29 @@ UI = {
         'fr': "Écouter l'Audio",
         'de': 'Vorlesen',
     },
+    'stop_audio': {
+        'nl': 'Stoppen',
+        'en': 'Stop',
+        'es': 'Detener',
+        'tr': 'Durdur',
+        'pt-br': 'Parar',
+        'pt-pt': 'Parar',
+        'fr': 'Arrêter',
+        'de': 'Stoppen',
+    },
+    # Shown next to the date of a meeting that has not happened yet. The date
+    # is the meeting's, and agendas are published a week or two ahead, which
+    # read as a decision dated in the future.
+    'meeting_upcoming': {
+        'nl': 'Vergadering nog niet geweest',
+        'en': 'Meeting not held yet',
+        'es': 'Sesión aún no celebrada',
+        'tr': 'Toplantı henüz yapılmadı',
+        'pt-br': 'Sessão ainda não realizada',
+        'pt-pt': 'Sessão ainda não realizada',
+        'fr': 'Séance pas encore tenue',
+        'de': 'Sitzung hat noch nicht stattgefunden',
+    },
     'print_pdf': {
         'nl': 'Afdrukken / PDF',
         'en': 'Print / PDF',

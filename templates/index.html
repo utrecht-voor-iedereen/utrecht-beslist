@@ -16,7 +16,7 @@
 
 {% block content %}
 <!-- Option A UX Control Panel -->
-<section class="controls-card">
+<section class="controls-card filters-card">
   <!-- Row 1: Prominent Human Impact Buttons -->
   <div class="human-impact-bar">
     <button class="human-impact-btn active" data-impact-group="all">{{ t("impact_all", lang) }}</button>
@@ -118,6 +118,7 @@
             {{ status_text }}
           </span>
           <span class="card-date">📅 <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time></span>
+          {% if item.date and item.date[:10] > today %}<span class="upcoming-note" data-date="{{ item.date[:10] }}">⏳ {{ t('meeting_upcoming', lang) }}</span>{% endif %}
         </div>
         
         {% if item.impact == "hoog" %}

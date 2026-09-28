@@ -48,9 +48,10 @@
       <!-- The text travels in a data attribute: inlining it in an onclick
            broke the button on every page whose summary contained an
            apostrophe, because the entity decoded back into a quote. -->
-      <button class="audio-btn" data-speak="{{ impact_sentence_text }} {{ summary_text }}">
-        🔊 {{ t("listen_audio", lang) }}
-      </button>
+      <button class="audio-btn" type="button" aria-pressed="false"
+              data-speak="{{ impact_sentence_text }} {{ summary_text }}"
+              data-label-listen="🔊 {{ t('listen_audio', lang) }}"
+              data-label-stop="⏹️ {{ t('stop_audio', lang) }}">🔊 {{ t("listen_audio", lang) }}</button>
 
       <button class="share-btn" onclick="window.print()">
         🖨️ {{ t("print_pdf", lang) }}
@@ -58,6 +59,7 @@
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
         📅 {{ t("published_on", lang) }} <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time>
+        {% if item.date and item.date[:10] > today %}<span class="upcoming-note" data-date="{{ item.date[:10] }}">⏳ {{ t('meeting_upcoming', lang) }}</span>{% endif %}
       </span>
     </div>
   </div>
