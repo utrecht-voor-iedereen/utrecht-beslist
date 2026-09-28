@@ -45,8 +45,10 @@ STATE_FILE = os.path.join(PROJECT_ROOT, "state", "processed.json")
 ANOMALY_THRESHOLD_DAYS = int(os.environ.get("ANOMALY_THRESHOLD_DAYS", "21"))
 
 # Seconds to wait between summarization batches, to stay inside the provider's
-# per-minute token budget. Overridable for local runs on a paid key.
-BATCH_PAUSE_SECONDS = float(os.environ.get("BATCH_PAUSE_SECONDS", "45"))
+# per-minute token budget. A whole minute: Groq's free tier refills 8,000
+# tokens a minute and one document takes most of that. Overridable for local
+# runs on a paid key.
+BATCH_PAUSE_SECONDS = float(os.environ.get("BATCH_PAUSE_SECONDS", "60"))
 
 # How many previously unseen documents one run may summarize. ORI's window
 # holds far more than a day's allowance: 46 unprocessed documents were waiting
@@ -166,7 +168,11 @@ def report_untranslated(items: list[dict[str, Any]]):
     gaps: dict[str, int] = {}
     for item in items:
         for suffix in TRANSLATION_TARGETS:
-            for base, _nl, _en in TRANSLATABLE_FIELDS:
+            for base, _nl, en in TRANSLATABLE_FIELDS:
+                # A field empty in English too is empty on purpose — a key
+                # figure for a document that states no amount — not a gap.
+                if not str(item.get(en) or "").strip():
+                    continue
                 value = item.get(f"{base}_{suffix}")
                 if not (isinstance(value, str) and value.strip()):
                     gaps[suffix] = gaps.get(suffix, 0) + 1
@@ -324,11 +330,12 @@ def run_pipeline():
     new_summaries: list[dict[str, Any]] = []
     skipped_degraded: list[str] = []
     if docs_to_process:
-        # Two documents per call, paced to the minute. Batches of five were fine
-        # while every document was an empty title, but now that attachment text
-        # is included a batch of five exceeds Groq's 12,000 tokens per minute
-        # and the whole run falls through to degraded mode.
-        batch_size = 2
+        # One document per call, paced to the minute. Batches of five were fine
+        # while every document was an empty title; with attachment text two
+        # fitted Groq's old 12,000 tokens per minute. The free tier is 8,000
+        # for every text model since llama-3.3 was retired, and two documents
+        # ask for about 10,000, which Groq refuses outright with a 413.
+        batch_size = 1
         for i in range(0, len(docs_to_process), batch_size):
             batch = docs_to_process[i:i+batch_size]
             if i:

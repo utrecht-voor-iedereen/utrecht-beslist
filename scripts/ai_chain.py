@@ -170,12 +170,34 @@ def validate_and_parse_llm_json(raw_json_str: str, model_name: str) -> list[dict
         items.append(d)
     return items
 
+# Groq retired llama-3.3-70b-versatile from the free tier on 16 August 2026
+# and answers 404 for it; every run since summarized nothing. gpt-oss-120b is
+# the replacement Groq recommends. It reasons before answering, and at the
+# default effort the reasoning costs more tokens than the summary itself.
+GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b"
+
+
+def groq_extras(model_name: str) -> dict[str, Any]:
+    """Parameters only some Groq models accept."""
+    return {"reasoning_effort": "low"} if model_name.startswith("openai/gpt-oss") else {}
+
+
+def describe_http_error(e: urllib.error.HTTPError) -> str:
+    """The provider's own reason, which a bare "HTTP Error 404" leaves out."""
+    try:
+        body = e.read().decode("utf-8", "replace")[:300]
+    except Exception:  # noqa: BLE001
+        body = ""
+    return f"HTTP {e.code}: {body}" if body else f"HTTP {e.code}"
+
+
 def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
     """Try summarization using Groq API."""
-    model_name = os.environ.get("AI_MODEL", "llama-3.3-70b-versatile")
+    model_name = os.environ.get("AI_MODEL", GROQ_DEFAULT_MODEL)
     url = "https://api.groq.com/openai/v1/chat/completions"
     payload = {
         "model": model_name,
+        **groq_extras(model_name),
         "response_format": {"type": "json_object"},
         "temperature": 0.2,
         "messages": [
@@ -194,9 +216,13 @@ def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) UtrechtBeslist/1.0"
         }
     )
-    with urllib.request.urlopen(req, timeout=30) as res:
-        content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
-        return validate_and_parse_llm_json(content, f"Groq ({model_name})")
+    # Eight languages for two documents is a long answer; 30 seconds cut some off.
+    try:
+        with urllib.request.urlopen(req, timeout=120) as res:
+            content = json.loads(res.read().decode('utf-8'))["choices"][0]["message"]["content"]
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(describe_http_error(e)) from e
+    return validate_and_parse_llm_json(content, f"Groq ({model_name})")
 
 def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
     """Try summarization using Gemini API."""
