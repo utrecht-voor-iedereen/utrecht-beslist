@@ -93,6 +93,25 @@ header {
   z-index: 100;
 }
 
+/* Says on every page that this is not the municipality's site. Quiet on
+   purpose: it has to be read, not to compete with the content. */
+.unofficial-notice {
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--utrecht-superficie);
+  color: var(--utrecht-negro);
+  border-bottom: 1px solid var(--utrecht-borde-suave);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.unofficial-notice a {
+  color: var(--utrecht-azul-enlace);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .header-container {
   max-width: 1140px;
   margin: 0 auto;

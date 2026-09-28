@@ -6,6 +6,7 @@
 </p>
 
 > Plain-language summaries (B1 Dutch + English) of official **Gemeente Utrecht** city council documents and decisions.
+> **Independent civic project — not affiliated with or run by Gemeente Utrecht.** The official record is the [council portal](https://utrecht.bestuurlijkeinformatie.nl/).
 > Open source, 0 €/month, 100% static, privacy-first & automated.
 
 ![Utrecht Beslist Web Preview](static/img/preview.png)
