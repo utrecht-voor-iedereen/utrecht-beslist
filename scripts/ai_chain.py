@@ -158,13 +158,53 @@ def chunk_text_by_words(text: str, max_words: int = 10000) -> list[str]:
         chunks.append(chunk)
     return chunks
 
+# The model is given closed lists of themes and districts but sometimes answers
+# with a word of its own — "gezondheid", "onderwijs", "Centrum" — which the site
+# then showed as a raw, untranslated tag. Near-synonyms map onto the list;
+# anything else, or ambiguous ("Noord": Noordoost or Noordwest?), is dropped.
+THEME_KEYS = [
+    "wonen", "verkeer", "groen-klimaat", "veiligheid", "bestuur-financien",
+    "zorg", "jeugd-onderwijs", "cultuur-evenementen", "overig",
+]
+THEME_SYNONYMS = {
+    "onderwijs": "jeugd-onderwijs", "jeugd": "jeugd-onderwijs",
+    "gezondheid": "zorg", "gezond": "zorg", "gezondheidszorg": "zorg", "welzijn": "zorg",
+    "klimaat": "groen-klimaat", "groen": "groen-klimaat",
+    "cultuur": "cultuur-evenementen", "financien": "bestuur-financien", "bestuur": "bestuur-financien",
+    "mobiliteit": "verkeer",
+}
+WIJK_KEYS = [
+    "Binnenstad", "Oost", "Leidsche Rijn", "Overvecht", "Zuid", "Zuidwest",
+    "West", "Noordwest", "Vleuten-De Meern", "Noordoost", "Overig",
+]
+WIJK_SYNONYMS = {"centrum": "Binnenstad", "binnenstad": "Binnenstad", "vleuten": "Vleuten-De Meern", "de meern": "Vleuten-De Meern"}
+
+
+def _closed_list(values: Any, allowed: list[str], synonyms: dict[str, str], fallback: str) -> list[str]:
+    by_lower = {a.lower(): a for a in allowed}
+    out: list[str] = []
+    for value in values if isinstance(values, list) else []:
+        key = str(value).strip().lower()
+        mapped = by_lower.get(key) or synonyms.get(key)
+        if mapped and mapped not in out:
+            out.append(mapped)
+    return out or [fallback]
+
+
+def normalize_taxonomy(item: dict[str, Any]) -> dict[str, Any]:
+    """Keeps thema and wijken inside the lists the site knows how to show."""
+    item["thema"] = _closed_list(item.get("thema"), THEME_KEYS, THEME_SYNONYMS, "overig")
+    item["wijken"] = _closed_list(item.get("wijken"), WIJK_KEYS, WIJK_SYNONYMS, "Overig")
+    return item
+
+
 def validate_and_parse_llm_json(raw_json_str: str, model_name: str) -> list[dict[str, Any]]:
     """Validates raw LLM response using Pydantic and attaches model metadata."""
     data = json.loads(raw_json_str)
     validated = SummaryBatchOutput.model_validate(data)
     items = []
     for item in validated.items:
-        d = item.model_dump()
+        d = normalize_taxonomy(item.model_dump())
         d["ai_model"] = model_name
         d["degraded"] = False
         items.append(d)

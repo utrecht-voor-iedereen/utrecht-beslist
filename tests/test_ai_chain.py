@@ -48,3 +48,13 @@ def test_validate_and_parse_llm_json():
     assert len(parsed) == 1
     assert parsed[0]["doc_id"] == "test_1"
     assert parsed[0]["impact"] == "hoog"
+
+
+def test_themes_and_districts_stay_inside_the_closed_lists():
+    from scripts.ai_chain import normalize_taxonomy
+
+    item = normalize_taxonomy({"thema": ["gezondheid", "Wonen", "onderwijs", "zorg"], "wijken": ["Centrum", "Noord"]})
+    assert item["thema"] == ["zorg", "wonen", "jeugd-onderwijs"]
+    # "Noord" could be Noordoost or Noordwest: dropped rather than guessed.
+    assert item["wijken"] == ["Binnenstad"]
+    assert normalize_taxonomy({"thema": ["iets"], "wijken": []}) == {"thema": ["overig"], "wijken": ["Overig"]}

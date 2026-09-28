@@ -1,161 +1,144 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="static/img/logo-dark-mode.svg">
-    <img src="static/img/logo-nl.svg" alt="Utrecht Beslist — Gemeenteraad in Begrijpelijke Taal" width="450">
+    <img src="static/img/logo-nl.svg" alt="Utrecht Beslist" width="420">
   </picture>
 </p>
 
-> Plain-language summaries (B1 Dutch + English) of official **Gemeente Utrecht** city council documents and decisions.
-> **Independent civic project — not affiliated with or run by Gemeente Utrecht.** The official record is the [council portal](https://utrecht.bestuurlijkeinformatie.nl/).
-> Open source, 0 €/month, 100% static, privacy-first & automated.
+<p align="center">
+  <strong>Utrecht city council decisions, explained in plain language — in eight languages.</strong>
+</p>
 
-![Utrecht Beslist Web Preview](static/img/preview.png)
+<p align="center">
+  <a href="https://utrecht-voor-iedereen.github.io/utrecht-beslist/">Website</a> ·
+  <a href="https://utrecht-voor-iedereen.github.io/utrecht-beslist/en/over.html">How it works</a> ·
+  <a href="https://github.com/utrecht-voor-iedereen/utrecht-beslist/issues/new/choose">Report an error</a>
+</p>
 
----
+<p align="center">
+  <a href="https://github.com/utrecht-voor-iedereen/utrecht-beslist/actions/workflows/ci.yml"><img src="https://github.com/utrecht-voor-iedereen/utrecht-beslist/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/utrecht-voor-iedereen/utrecht-beslist/actions/workflows/daily.yml"><img src="https://github.com/utrecht-voor-iedereen/utrecht-beslist/actions/workflows/daily.yml/badge.svg" alt="Daily update"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-EUPL--1.2-blue" alt="License: EUPL-1.2"></a>
+</p>
 
-## 🇳🇱 Nederlands
+> **Independent civic project.** Utrecht Beslist is not run by or affiliated with the Gemeente Utrecht. The official record is the [Raadsportaal](https://utrecht.bestuurlijkeinformatie.nl/).
 
-**Utrecht Beslist** is een open-source platform dat raadsvoorstellen, besluiten en documenten van de Utrechtse gemeenteraad automatisch verzamelt en samenvat in begrijpelijke B1-taal (Nederlands en Engels).
+**Nederlands —** Utrecht Beslist vat elke dag de raadsvoorstellen en raadsbesluiten van de Utrechtse gemeenteraad samen in begrijpelijke taal (B1), in acht talen. De status, datums en bronnen komen rechtstreeks uit het openbare register; alleen de uitleg wordt met AI geschreven. Gratis, zonder cookies of tracking, en open source.
 
-- **Databron:** [OpenBesluitvorming API](https://openbesluitvorming.nl/docs/api) (exportfeed van bron `utrecht`), de opvolger van Open Raadsinformatie. Items tot en met 9 juli 2026 komen nog uit ORI Classic.
-- **AI-keten:** Groq (`llama-3.3-70b-versatile`) ➔ Google Gemini 1.5 Flash ➔ Degradatiemodus (fallback)
-- **Directe transparantie:** Elk artikel linkt naar het stuk in OpenBesluitvorming, het Utrechtse Raadsportaal en Woo-rechten (Wet open overheid). Publiceert OpenBesluitvorming PDF-bijlagen bij het stuk, dan staan die er allemaal bij; zo niet, dan zegt de pagina dat met zoveel woorden.
-- **Permanente Archivering:** In overeenstemming met de *Archiefwet 1995* worden raadsbesluiten permanent bewaard.
-- **UI-UX Pro Max:** Donkere modus (`☀️/🌙`), Atataflexie snelkoppelingen (`Ctrl+K`, `L`, `Esc`), Voorlezen in voz alta (TTS Audio) en Afdrukken naar PDF.
-- **Privacy & Kosten:** 0 €/maand, 0 cookies, 100% statisch via GitHub Pages (`docs/`).
+![Utrecht Beslist — overview page](static/img/preview.png)
 
-## 🇬🇧 English
+## What it does
 
-**Utrecht Beslist** is an open-source platform providing plain-language summaries (B1 Dutch & English) of Utrecht city council decisions and official proposals.
+- Every morning (Monday to Saturday) it reads the new meetings of the Utrecht city council from [OpenBesluitvorming](https://openbesluitvorming.nl/), the public register of Dutch council information.
+- For each council proposal (*raadsvoorstel*) and initiative proposal it writes a short summary at CEFR B1 level: what is decided, who it affects, what it costs and when it happens.
+- Every summary is published in **Dutch, English, Spanish, Turkish, Brazilian and European Portuguese, French and German**.
+- Readers can filter by district (*wijk*), topic or postcode, listen to a summary, print it, and follow the link to the official documents.
 
-- **Data Source:** [OpenBesluitvorming](https://openbesluitvorming.nl/docs/api), the successor of Open Raadsinformatie: a local mirror of Utrecht's council meetings (`state/openbesluitvorming.json`), kept current through the export snapshot + changes feed, with each paper's text read from `/api/entities/{id}`. ORI Classic stopped harvesting Utrecht in July 2026 and shuts down on 1 November 2026; entries up to 9 July 2026 still carry their ORI ids
-- **AI Resiliency:** Multi-provider fallback chain (Groq ➔ Gemini ➔ Degraded Mode)
-- **Facts come from the register, not the model:** decision state, dates, source links and attachments are read from the register and overwrite whatever the summarizer returned
-- **UI-UX Pro Max:** Dark mode toggle, keyboard navigation shortcuts, TTS read-aloud audio narration, and printable A4 PDF dossier reports.
-- **100% Open Data & Woo Rights:** Sourced from official municipal registers under the Dutch Open Government Act (Woo).
+The site holds some 325 dossiers from January 2025 onwards. It is a static site on GitHub Pages: no server, no database, no cost.
 
----
+## How it works
 
-## 🎨 Identity & Vector Logo Suite
-
-Utrecht Beslist features a dedicated custom geometric shield logo inspired by the red/white diagonal mantle of Sint Maarten (the patron saint of Utrecht):
-
-- `static/img/logo.svg`: Main horizontal SVG logo (English subtitle)
-- `static/img/logo-nl.svg`: Main horizontal SVG logo (Dutch subtitle)
-- `static/img/logo-dark-mode.svg`: High-contrast variant for dark backgrounds & GitHub Dark Mode
-- `static/img/favicon.svg` & `icon.svg`: 1:1 Icon-only SVG variant
-- `static/img/logo-monochrome.svg`: Single-color printable & footer variant
-
----
-
-## 🛠️ Repository Structure
-
-```
-utrecht-beslist/
-├── .github/workflows/
-│   └── daily.yml          # GitHub Actions cronrunner (07:47 Amsterdam time)
-├── scripts/
-│   ├── pipeline.py        # Master pipeline orchestrator
-│   ├── source_obv.py      # OpenBesluitvorming client: meeting mirror, papers, import status
-│   ├── ai_chain.py        # Groq -> Gemini -> Degraded AI chain
-│   ├── build_site.py      # Jinja2 static HTML renderer & detail page generator
-│   ├── schemas.py         # Pydantic summary item schema
-│   ├── themes.py          # Themes & Utrecht neighborhood taxonomy
-│   ├── i18n.py            # UI strings, date formats & canonical status labels
-│   ├── translate_missing.py  # Fills language variants the summarizer skipped
-│   ├── backfill_range.py     # Placeholder entries for older meetings, from the export snapshot
-│   ├── upgrade_backfilled.py # Turns those placeholders into real summaries
-│   └── purge_placeholders.py # Strips values copied out of the prompt
-├── templates/
-│   ├── base.html          # Shell layout with SVG logo, Dark Mode & language switch
-│   ├── index.html         # Option A UX control panel & card grid overview
-│   ├── detail.html        # 4-section decision detail page template
-│   └── over.html          # Transparency, methodology & Woo rights page
-├── static/
-│   ├── css/styles.css     # Utrecht visual identity tokens & print stylesheet
-│   ├── js/app.js          # Filtering, shortcuts, Dark Mode, TTS & search engine
-│   └── img/               # Vector SVG logo suite & preview screenshot
-├── state/
-│   └── processed.json     # Permanent document database record
-├── docs/                  # Generated GitHub Pages production site
-├── tests/                 # Pytest test suite (100% passing)
-├── IMPECCABLE_AUDIT.md    # 360° Impeccable Audit Report (Grade: 98/100)
-├── requirements.txt
-├── LICENSE                # EUPL-1.2
-└── README.md
+```mermaid
+flowchart LR
+    OBV[OpenBesluitvorming<br/>export API] -->|meetings + agendas| Pipeline
+    OBV -->|document text| Pipeline
+    Pipeline -->|proposal text| AI[Language model<br/>Groq · Gemini]
+    AI -->|summary in 8 languages| Pipeline
+    Pipeline -->|state/processed.json| Build[Static site build]
+    Build --> Pages[GitHub Pages]
 ```
 
----
+1. **Sync.** `scripts/source_obv.py` keeps a mirror of Utrecht's council meetings (`state/openbesluitvorming.json`) up to date through the export snapshot and changes feed.
+2. **Select.** The pipeline takes every raadsvoorstel and initiatiefvoorstel on the agenda of a council meeting or the weekly proposals overview.
+3. **Summarise.** The text of the proposal is sent to a language model, one document per request. The answer is validated against a fixed schema before it is kept.
+4. **Publish.** `scripts/build_site.py` renders the pages in eight languages; `pages.yml` deploys them.
 
-## 🚀 Running Locally
+### What comes from the register, and what the AI writes
 
-1. **Clone & Install Dependencies:**
-   ```bash
-   cd utrecht-beslist
-   pip install -r requirements.txt
-   ```
+| Field | Source |
+| --- | --- |
+| Status (on the agenda, passed) | Register — *passed* once the signed raadsbesluit is published |
+| Meeting date, official title, PDFs | Register |
+| Summary, key points, key figure | Language model, from the text of the proposal |
+| Translations | Language model |
 
-2. **Execute Pipeline:**
-   ```bash
-   # Run pipeline with AI summarization keys enabled:
-   python -m scripts.pipeline
+The model is told to invent nothing, to quote amounts and dates only as the document states them, and to say nothing about the outcome of a vote. Themes and districts are kept to a closed list. A summary that fails validation is not published; the document waits for the next run.
 
-   # Run automated test suite:
-   PYTHONPATH=. pytest tests/
-   ```
+## Status and limitations
 
-3. **Preview Generated Site:**
-   ```bash
-   python -m http.server 8080 --directory docs
-   # Open http://localhost:8080/nl/index.html in your browser
-   ```
+- **AI can be wrong.** Every page links to the official document, and a summary is not legal advice.
+- **The archive is being completed.** Entries from 2025 and early 2026 were imported with a provisional text; the daily run replaces them with real summaries, about fifteen dossiers a day.
+- **Free tiers.** The site runs on the free tiers of Groq and Google Gemini. When one model is unavailable the next is tried; `ai-selftest.yml` checks every week that they still answer.
+- **Accessibility.** Automated checks with axe (WCAG 2.1 AA) pass on the main pages; a screen-reader test is still to be done.
 
-### Translations
+## Run it locally
 
-The site publishes eight languages, but the summarization step only reliably
-returns Dutch and English. When a language is missing,
-`get_item_lang_field()` falls back to English, so the page renders in English
-without any error — which is how ES, TR, PT-BR, PT-PT, FR and DE shipped
-English decision text for every entry.
-
-`python -m scripts.pipeline` now logs a warning listing how many entries fall
-back per language. To fill the gaps:
+Requires Python 3.12.
 
 ```bash
-python -m scripts.translate_missing              # only what is missing
-python -m scripts.translate_missing --dry-run    # just report the gaps
-python -m scripts.translate_missing --force      # redo every language
+git clone https://github.com/utrecht-voor-iedereen/utrecht-beslist.git
+cd utrecht-beslist
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env              # add at least GROQ_API_KEY
+
+python -m scripts.build_site      # render the site from state/ into docs/
+python -m http.server 8080 --directory docs
 ```
 
-It translates one language at a time and refuses a partial answer, retrying
-before it gives up, because accepting a short response silently is what caused
-the problem in the first place. `--recheck` additionally redoes any field the
-model handed back in English or Dutch unchanged, which is how four entries once
-shipped English prose under a Spanish, Turkish, French and German heading.
+`python -m scripts.pipeline` runs a full update: it syncs from OpenBesluitvorming, summarises what is new and rebuilds the site. Without an API key it still runs, but new documents are left unpublished until a model is available.
 
-`.github/workflows/daily.yml` runs this after every pipeline run and rebuilds
-the site afterwards, so the gaps no longer depend on someone remembering.
+### Configuration
 
-### Facts that do not come from the model
+| Variable | Purpose |
+| --- | --- |
+| `GROQ_API_KEY` | Primary provider ([Groq](https://console.groq.com/)) |
+| `GEMINI_API_KEY` | Fallback provider ([Google AI Studio](https://aistudio.google.com/apikey)) |
+| `GROQ_MODELS` | Groq models to try, in order (default `openai/gpt-oss-120b,openai/gpt-oss-20b`) |
+| `GEMINI_MODELS` | Gemini models to try, in order (default `gemini-3.6-flash,gemini-3.5-flash,gemini-3.5-flash-lite`) |
+| `MAX_NEW_PER_RUN` | New documents summarised per run (default `6`) |
 
-Decision state, publication date, source links and attachments are read from
-the register and written over whatever the summarizer produced, because the
-model was getting them wrong: six documents ORI recorded as passed were
-displayed as still under review, and twenty carried a status of nothing but an
-hourglass. The daily run refreshes these facts for every entry it still sees in
-OpenBesluitvorming, including the raadsbesluit that arrives days after a vote.
-Entries from the ORI years (up to 9 July 2026) keep the facts ORI held; only
-their register link is moved, from ORI's permalink to the same paper in
-OpenBesluitvorming.
+### Checks
 
-Amounts are only ever shown when a document states them. The prompt used to
-illustrate the key-figure field with `2,5M €`, and the model answered with the
-example on two unrelated decisions; `python -m scripts.purge_placeholders`
-cleared those, and the prompt no longer offers an amount to copy.
+```bash
+ruff check .
+mypy scripts --explicit-package-bases --ignore-missing-imports
+PYTHONPATH=. pytest tests/
+python -m scripts.ai_selftest     # does every configured model still answer?
+```
 
----
+## Automation
 
-## 📜 License
+| Workflow | When | What |
+| --- | --- | --- |
+| `daily.yml` | Mon–Sat 05:47 UTC | Sync, summarise new documents, fill translations, upgrade provisional entries, commit `state/` |
+| `pages.yml` | On changes to `state/processed.json`, `scripts/`, `templates/` or `static/` | Build and deploy the site |
+| `ci.yml` | Every push and pull request | Ruff, mypy, pytest |
+| `ai-selftest.yml` | Weekly, on AI code changes, or by hand | One tiny request to every configured model |
 
-Licensed under the **European Union Public Licence v1.2 (EUPL-1.2)**.
-Full license text available in [LICENSE](LICENSE).
+## Repository layout
+
+```
+scripts/
+  source_obv.py        OpenBesluitvorming client: meeting mirror, document text, import status
+  pipeline.py          Daily run: select, summarise, apply register facts, save state
+  ai_chain.py          Model chain (Groq → Gemini → hold back) and response validation
+  build_site.py        Static site renderer
+  translate_missing.py Fills languages the summariser left empty
+  upgrade_backfilled.py Replaces provisional archive entries with real summaries
+  i18n.py, over_content.py  Interface text and the "About" page, in eight languages
+templates/             Jinja2 templates
+static/                CSS, JavaScript, images
+state/                 processed.json (all entries) and the OpenBesluitvorming mirror
+tests/                 pytest suite
+```
+
+## Contributing
+
+Found a wrong summary or a bug? [Open an issue](https://github.com/utrecht-voor-iedereen/utrecht-beslist/issues/new/choose) or use the *Report error* button on any page. Code contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License and credits
+
+Code licensed under the [European Union Public Licence 1.2](LICENSE).
+
+Council data from [OpenBesluitvorming](https://openbesluitvorming.nl/) (VNG), and until July 2026 from Open Raadsinformatie ([Open State Foundation](https://openstate.eu/)). Documents are published by the Gemeente Utrecht through iBabs. Summaries are generated with models served by [Groq](https://groq.com/) and [Google Gemini](https://ai.google.dev/).
