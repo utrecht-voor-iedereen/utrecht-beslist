@@ -29,6 +29,8 @@ import urllib.request
 from pathlib import Path
 from typing import Any, TypeGuard
 
+from .ai_chain import GROQ_DEFAULT_MODEL, groq_extras
+
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -201,6 +203,7 @@ def translate(
     # key it saw in every source object and echoed the English straight back.
     payload = {
         "model": model,
+        **groq_extras(model),
         "response_format": {"type": "json_object"},
         "temperature": 0.2,
         "messages": [
@@ -274,7 +277,7 @@ def main() -> int:
     if not api_key:
         logger.error("GROQ_API_KEY is not set. Run with: python -m dotenv or export it first.")
         return 1
-    model = os.environ.get("AI_MODEL", "llama-3.3-70b-versatile")
+    model = os.environ.get("AI_MODEL", GROQ_DEFAULT_MODEL)
 
     done = 0
     incomplete: list[str] = []
