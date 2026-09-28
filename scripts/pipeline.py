@@ -6,7 +6,6 @@ Fetches documents -> filters -> upserts -> summarizes -> renders static site.
 import json
 import logging
 import os
-import re
 import time
 from datetime import date, datetime, timezone
 from typing import Any
@@ -20,7 +19,15 @@ from dateutil.parser import parse as parse_date
 from .ai_chain import run_ai_chain
 from .build_site import build_static_site
 from .i18n import STATUS_FIELDS, status_text
-from .source_obv import enrich_with_text, fetch_utrecht_documents, source_status
+from .source_obv import (
+    IBABS_DOCUMENT_ID,
+    enrich_with_text,
+    fetch_utrecht_documents,
+    papers_of,
+    permalink,
+    search_link,
+    source_status,
+)
 from .translate_missing import FIELDS as TRANSLATABLE_FIELDS
 from .translate_missing import TARGETS as TRANSLATION_TARGETS
 
@@ -202,12 +209,6 @@ def apply_source_facts(summary: dict[str, Any], doc: dict[str, Any]) -> dict[str
     return summary
 
 
-# The iBabs id of a paper, as it appears in its public download link. ORI and
-# OpenBesluitvorming both publish that link, and it is the only key the two
-# share: ORI's numeric ids have no counterpart in the new register.
-IBABS_DOCUMENT_ID = re.compile(r"[?&]id=([0-9a-fA-F-]{36})")
-
-
 def published_papers(items: list[dict[str, Any]]) -> set[tuple[str, str]]:
     """(iBabs paper id, meeting day) for every paper an entry already shows."""
     seen = set()
@@ -241,6 +242,41 @@ def drop_already_published(docs: list[dict[str, Any]], items: list[dict[str, Any
     if len(kept) < len(docs):
         logger.info("%d agenda item(s) already published under their ORI id, skipped.", len(docs) - len(kept))
     return kept
+
+
+ORI_PERMALINK_PREFIX = "https://id.openraadsinformatie.nl/"
+
+
+def relink_ori_entries(items: list[dict[str, Any]]) -> int:
+    """
+    Points the entries of the ORI years at OpenBesluitvorming.
+
+    Their source_url is ORI's permalink, which stops resolving when ORI Classic
+    is switched off on 1 November 2026. The same paper is in the new register
+    under its iBabs id, so the link moves to that. A record whose dossier holds
+    no paper at all — sixty of them, appointments and confidential items mostly
+    — gets a search for its official title instead of a dead link. Offline and
+    idempotent, so it simply runs every time.
+    """
+    by_title: dict[str, list[dict[str, Any]]] = {}
+    for item in items:
+        by_title.setdefault((item.get("official_title") or "").strip(), []).append(item)
+
+    moved = 0
+    for item in items:
+        if not str(item.get("source_url") or "").startswith(ORI_PERMALINK_PREFIX):
+            continue
+        # A decision filed without papers borrows the proposal's, as the page does.
+        papers = papers_of([item]) or papers_of(by_title.get((item.get("official_title") or "").strip(), []))
+        title = (item.get("official_title") or "").strip()
+        if papers:
+            item["source_url"] = permalink(papers[0]["id"])
+        else:
+            item["source_url"] = search_link(title) if title else ""
+        moved += 1
+    if moved:
+        logger.info("%d entry(ies) moved from ORI permalinks to OpenBesluitvorming.", moved)
+    return moved
 
 
 def run_pipeline():
@@ -337,6 +373,8 @@ def run_pipeline():
 
     all_items = list(existing_map.values())
     all_items.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    relink_ori_entries(all_items)
 
     # Check inactivity anomaly
     check_inactivity_anomaly(all_items)

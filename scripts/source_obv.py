@@ -23,18 +23,13 @@ to be summarized.
 import json
 import logging
 import os
+import re
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from typing import Any
-
-from .source_ori import (
-    DECISION_TITLE_PREFIXES,
-    EXCLUDE_TITLE_KEYWORDS,
-    MAX_DOC_TEXT_CHARS,
-)
 
 logger = logging.getLogger(__name__)
 
@@ -43,6 +38,39 @@ SOURCE_KEY = "utrecht"
 # The API asks for a project name and a way to reach whoever runs it.
 USER_AGENT = "UtrechtBeslistBot/2.0 (+https://utrecht-voor-iedereen.github.io/utrecht-beslist/)"
 PERMALINK = "https://openbesluitvorming.nl/?organization=" + SOURCE_KEY + "&view={entity_id}"
+
+# Titles that introduce something the council decides on. Everything else the
+# register carries — Raadsbrief, memos, B&W minutes, commitment lists — is the
+# material around a decision rather than a decision.
+DECISION_TITLE_PREFIXES = (
+    "raadsvoorstel",
+    "initiatiefvoorstel",
+    "motie",
+    "amendement",
+)
+
+EXCLUDE_TITLE_KEYWORDS = [
+    "presentielijst",
+    "besluitenlijst ter vaststelling",
+    "actielijst",
+    "incomende stukken",
+    "opening en mededelingen",
+    "sluiting",
+    "vaststelling agenda",
+]
+
+# Groq's free tier allows 12,000 tokens per minute and the summarization system
+# prompt already costs about 2,000, so a document body has to stay well under
+# that. 6,000 characters is roughly 1,800 tokens and still covers the proposal
+# itself, which is what the summary is written from.
+MAX_DOC_TEXT_CHARS = 6000
+
+# The iBabs id of a paper, as it appears in its public download link. It is
+# also the last part of the paper's id at OpenBesluitvorming, which makes it
+# the one key an entry from the ORI years shares with the new register: ORI's
+# numeric ids have no counterpart there.
+IBABS_DOCUMENT_ID = re.compile(r"[?&]id=([0-9a-fA-F-]{36})")
+IBABS_DOCUMENT_ENTITY = "document:ibabs:gemeente:" + SOURCE_KEY + ":{uuid}"
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SYNC_FILE = os.path.join(PROJECT_ROOT, "state", "openbesluitvorming.json")
@@ -120,6 +148,11 @@ def entity_suffix(entity_id: str) -> str:
 
 def permalink(entity_id: str) -> str:
     return PERMALINK.format(entity_id=urllib.parse.quote(entity_id, safe=""))
+
+
+def search_link(title: str) -> str:
+    """OpenBesluitvorming's own search for a title, for records with no paper to point at."""
+    return "https://openbesluitvorming.nl/?" + urllib.parse.urlencode({"query": title, "organization": SOURCE_KEY})
 
 
 # --- the mirror ---------------------------------------------------------------
@@ -233,6 +266,14 @@ def _snapshot_meetings() -> tuple[list[dict[str, Any]], str]:
         if len(meetings) < len(page) or headers.get("X-Has-More") != "true" or not cursor.startswith("meeting:"):
             break
     return records, changes_cursor
+
+
+def snapshot_council_meetings() -> dict[str, dict[str, Any]]:
+    """Every council meeting Utrecht has on record, however old. For backfills."""
+    records, _ = _snapshot_meetings()
+    mirror: dict[str, Any] = {"meetings": {}}
+    apply_records(mirror, records)
+    return mirror["meetings"]
 
 
 def _read_changes(cursor: str) -> tuple[list[dict[str, Any]], str]:
@@ -373,6 +414,45 @@ def fetch_text(document_id: str) -> str:
         return ""
 
 
+def papers_of(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """
+    The papers behind published entries, as OpenBesluitvorming documents.
+
+    Read from the iBabs links an entry keeps in pdf_url and attachments, so it
+    works for entries from the ORI years as well. Pass every entry of a dossier:
+    ORI filed the decision apart from the proposal, and only the proposal had
+    papers.
+    """
+    papers: dict[str, dict[str, Any]] = {}
+    for entry in entries:
+        links = [{"name": "", "url": entry.get("pdf_url") or ""}] + list(entry.get("attachments") or [])
+        for link in links:
+            match = IBABS_DOCUMENT_ID.search(link.get("url") or "")
+            if not match:
+                continue
+            uuid = match.group(1).lower()
+            known = papers.get(uuid)
+            if known is None or (link.get("name") and not known["name"]):
+                papers[uuid] = {
+                    "id": IBABS_DOCUMENT_ENTITY.format(uuid=uuid),
+                    "name": link.get("name") or "",
+                    "url": link.get("url") or "",
+                }
+    return sorted(papers.values(), key=_document_rank)
+
+
+def text_of(document_ids: list[str], max_text_chars: int = MAX_DOC_TEXT_CHARS) -> str:
+    """The text of a dossier's papers, best first, up to the budget."""
+    parts: list[str] = []
+    for document_id in document_ids[:MAX_DOCUMENTS_PER_ITEM]:
+        text = fetch_text(document_id)
+        if text:
+            parts.append(text)
+        if sum(len(p) for p in parts) >= max_text_chars:
+            break
+    return "\n\n".join(parts)[:max_text_chars]
+
+
 def enrich_with_text(docs: list[dict[str, Any]], max_text_chars: int = MAX_DOC_TEXT_CHARS) -> list[dict[str, Any]]:
     """
     Fills in each document's text from its papers, best first.
@@ -381,16 +461,8 @@ def enrich_with_text(docs: list[dict[str, Any]], max_text_chars: int = MAX_DOC_T
     paper; it is done only for what is about to be summarized.
     """
     for doc in docs:
-        if doc.get("text"):
-            continue
-        parts: list[str] = []
-        for document_id in doc.get("document_ids", [])[:MAX_DOCUMENTS_PER_ITEM]:
-            text = fetch_text(document_id)
-            if text:
-                parts.append(text)
-            if sum(len(p) for p in parts) >= max_text_chars:
-                break
-        doc["text"] = "\n\n".join(parts)[:max_text_chars]
+        if not doc.get("text"):
+            doc["text"] = text_of(doc.get("document_ids", []), max_text_chars)
     return docs
 
 

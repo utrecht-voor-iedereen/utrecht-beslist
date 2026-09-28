@@ -1,17 +1,19 @@
 """
 Backfill Utrecht Beslist with older council decisions.
 
-Fetches decision documents from Open Raadsinformatie for a date range,
-merges them into state/processed.json, and rebuilds the static site.
-By default it creates placeholder summaries so the documents appear on the
-site immediately; they can be upgraded to AI summaries later by running the
-normal pipeline or a dedicated upgrade script.
+Reads every council meeting of Utrecht from OpenBesluitvorming's export
+snapshot, keeps the proposals of the meetings in a date range, merges them into
+state/processed.json, and rebuilds the static site. By default it creates
+placeholder summaries so the documents appear on the site immediately; they can
+be upgraded to AI summaries later with upgrade_backfilled.py.
+
+    python -m scripts.backfill_range 2024-01-01 2025-01-01   # [from, to)
 """
+import argparse
 import json
 import logging
 import os
 import sys
-import urllib.request
 from collections import defaultdict
 
 from dotenv import load_dotenv
@@ -22,11 +24,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from scripts.ai_chain import generate_degraded_summary
 from scripts.build_site import build_static_site
-from scripts.i18n import STATUS_FIELDS, status_text
-from scripts.source_ori import (
-    ORI_ELASTIC_ENDPOINT,
-    filter_documents,
-)
+from scripts.pipeline import apply_source_facts, drop_already_published
+from scripts.source_obv import documents_from_meetings, snapshot_council_meetings
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -48,60 +47,15 @@ def save_state(items: list[dict]):
         json.dump(items, f, indent=2, ensure_ascii=False)
 
 
-def fetch_range(start_str: str, end_str: str, page_size: int = 500) -> list[dict]:
-    """Fetch every raw ORI hit in the requested date range, newest first."""
-    all_hits: list[dict] = []
-    search_after = None
-    while True:
-        payload = {
-            "size": page_size,
-            "query": {
-                "range": {
-                    "start_date": {"gte": start_str, "lt": end_str}
-                }
-            },
-            "sort": [
-                {"start_date": {"order": "desc", "unmapped_type": "keyword"}},
-                {"_id": {"order": "desc"}},
-            ],
-        }
-        if search_after:
-            payload["search_after"] = search_after
-
-        req = urllib.request.Request(
-            ORI_ELASTIC_ENDPOINT,
-            data=json.dumps(payload).encode("utf-8"),
-            headers={"Content-Type": "application/json", "User-Agent": "UtrechtBeslistBot/1.0"},
-        )
-        with urllib.request.urlopen(req, timeout=60) as r:
-            data = json.loads(r.read().decode())
-            hits = data["hits"]["hits"]
-
-        if not hits:
-            break
-        all_hits.extend(hits)
-        search_after = hits[-1]["sort"]
-        logger.info(f"Fetched {len(hits)} hits, total {len(all_hits)}")
-        if len(hits) < page_size:
-            break
-    return all_hits
-
-
-def apply_source_facts(summary: dict, doc: dict) -> dict:
-    """Copy ORI facts onto the summary, mirroring pipeline.apply_source_facts."""
-    summary["pdf_url"] = doc.get("pdf_url", "")
-    summary["date"] = doc.get("date", "")
-    summary["state"] = doc.get("state", "agenda")
-    summary["official_title"] = doc.get("title", "")
-    summary["doc_type"] = doc.get("doc_type", "")
-    summary["classification"] = doc.get("classification", "")
-    summary["source_url"] = doc.get("source_url", "")
-    summary["attachments"] = doc.get("attachments", [])
-    summary["source_borrowed_from"] = doc.get("source_borrowed_from", "")
-
-    for lang, field in STATUS_FIELDS.items():
-        summary[field] = status_text(summary["state"], lang)
-    return summary
+def fetch_range(start_str: str, end_str: str) -> list[dict]:
+    """The proposals of every council meeting from start (inclusive) to end."""
+    meetings = {
+        meeting_id: meeting
+        for meeting_id, meeting in snapshot_council_meetings().items()
+        if start_str <= str(meeting.get("start_date") or "")[:10] < end_str
+    }
+    logger.info(f"{len(meetings)} council meetings between {start_str} and {end_str}")
+    return documents_from_meetings(meetings)
 
 
 def backfill(
@@ -114,9 +68,11 @@ def backfill(
     existing_ids = {item["doc_id"] for item in existing_items}
     logger.info(f"Existing state has {len(existing_items)} records ({len(existing_ids)} ids)")
 
-    raw_hits = fetch_range(start_str, end_str)
-    filtered_docs = filter_documents(raw_hits)
-    logger.info(f"Filtered to {len(filtered_docs)} decision-related documents")
+    docs = fetch_range(start_str, end_str)
+    # Items already on the site under their ORI id would come back with a new
+    # id and be published twice.
+    filtered_docs = drop_already_published(docs, existing_items)
+    logger.info(f"{len(filtered_docs)} of {len(docs)} proposals are not on the site yet")
 
     # Group by official title; each group becomes one dossier/entry in the UI.
     groups: dict[str, list[dict]] = defaultdict(list)
@@ -127,12 +83,12 @@ def backfill(
     new_dossiers = 0
     summaries: list[dict] = []
 
-    for title, docs in groups.items():
-        if skip_existing and any(doc["id"] in existing_ids for doc in docs):
+    for title, group in groups.items():
+        if skip_existing and any(doc["id"] in existing_ids for doc in group):
             logger.debug(f"Skipping existing dossier: {title[:60]}")
             continue
         new_dossiers += 1
-        for doc in docs:
+        for doc in group:
             if placeholder:
                 summary = generate_degraded_summary(doc)
                 summary["degraded"] = False
@@ -165,5 +121,8 @@ def backfill(
 
 
 if __name__ == "__main__":
-    # 2025-01-01 through 2026-06-18 inclusive.
-    backfill("2025-01-01T00:00:00.000Z", "2026-06-19T00:00:00.000Z")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("start", help="first meeting day, YYYY-MM-DD")
+    parser.add_argument("end", help="day after the last meeting, YYYY-MM-DD")
+    args = parser.parse_args()
+    backfill(args.start, args.end)

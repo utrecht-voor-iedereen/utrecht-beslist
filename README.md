@@ -18,7 +18,7 @@
 
 - **Databron:** [OpenBesluitvorming API](https://openbesluitvorming.nl/docs/api) (exportfeed van bron `utrecht`), de opvolger van Open Raadsinformatie. Items tot en met 9 juli 2026 komen nog uit ORI Classic.
 - **AI-keten:** Groq (`llama-3.3-70b-versatile`) ➔ Google Gemini 1.5 Flash ➔ Degradatiemodus (fallback)
-- **Directe transparantie:** Elk artikel linkt naar de ORI-registratie, het Utrechtse Raadsportaal en Woo-rechten (Wet open overheid). Publiceert Open Raadsinformatie PDF-bijlagen bij het stuk, dan staan die er allemaal bij; zo niet, dan zegt de pagina dat met zoveel woorden.
+- **Directe transparantie:** Elk artikel linkt naar het stuk in OpenBesluitvorming, het Utrechtse Raadsportaal en Woo-rechten (Wet open overheid). Publiceert OpenBesluitvorming PDF-bijlagen bij het stuk, dan staan die er allemaal bij; zo niet, dan zegt de pagina dat met zoveel woorden.
 - **Permanente Archivering:** In overeenstemming met de *Archiefwet 1995* worden raadsbesluiten permanent bewaard.
 - **UI-UX Pro Max:** Donkere modus (`☀️/🌙`), Atataflexie snelkoppelingen (`Ctrl+K`, `L`, `Esc`), Voorlezen in voz alta (TTS Audio) en Afdrukken naar PDF.
 - **Privacy & Kosten:** 0 €/maand, 0 cookies, 100% statisch via GitHub Pages (`docs/`).
@@ -29,7 +29,7 @@
 
 - **Data Source:** [OpenBesluitvorming](https://openbesluitvorming.nl/docs/api), the successor of Open Raadsinformatie: a local mirror of Utrecht's council meetings (`state/openbesluitvorming.json`), kept current through the export snapshot + changes feed, with each paper's text read from `/api/entities/{id}`. ORI Classic stopped harvesting Utrecht in July 2026 and shuts down on 1 November 2026; entries up to 9 July 2026 still carry their ORI ids
 - **AI Resiliency:** Multi-provider fallback chain (Groq ➔ Gemini ➔ Degraded Mode)
-- **Facts come from the register, not the model:** decision state, dates, source links and attachments are read from ORI and overwrite whatever the summarizer returned
+- **Facts come from the register, not the model:** decision state, dates, source links and attachments are read from the register and overwrite whatever the summarizer returned
 - **UI-UX Pro Max:** Dark mode toggle, keyboard navigation shortcuts, TTS read-aloud audio narration, and printable A4 PDF dossier reports.
 - **100% Open Data & Woo Rights:** Sourced from official municipal registers under the Dutch Open Government Act (Woo).
 
@@ -56,14 +56,14 @@ utrecht-beslist/
 ├── scripts/
 │   ├── pipeline.py        # Master pipeline orchestrator
 │   ├── source_obv.py      # OpenBesluitvorming client: meeting mirror, papers, import status
-│   ├── source_ori.py      # Legacy ORI Classic client, still used by the backfill scripts until 1 Nov 2026
 │   ├── ai_chain.py        # Groq -> Gemini -> Degraded AI chain
 │   ├── build_site.py      # Jinja2 static HTML renderer & detail page generator
 │   ├── schemas.py         # Pydantic summary item schema
 │   ├── themes.py          # Themes & Utrecht neighborhood taxonomy
 │   ├── i18n.py            # UI strings, date formats & canonical status labels
 │   ├── translate_missing.py  # Fills language variants the summarizer skipped
-│   ├── backfill_sources.py   # Re-reads ORI facts onto existing entries
+│   ├── backfill_range.py     # Placeholder entries for older meetings, from the export snapshot
+│   ├── upgrade_backfilled.py # Turns those placeholders into real summaries
 │   └── purge_placeholders.py # Strips values copied out of the prompt
 ├── templates/
 │   ├── base.html          # Shell layout with SVG logo, Dark Mode & language switch
@@ -138,11 +138,14 @@ the site afterwards, so the gaps no longer depend on someone remembering.
 ### Facts that do not come from the model
 
 Decision state, publication date, source links and attachments are read from
-Open Raadsinformatie and written over whatever the summarizer produced, because
-the model was getting them wrong: six documents ORI records as passed were
+the register and written over whatever the summarizer produced, because the
+model was getting them wrong: six documents ORI recorded as passed were
 displayed as still under review, and twenty carried a status of nothing but an
-hourglass. `python -m scripts.backfill_sources` applies this to entries that
-predate the change; it is idempotent and `--dry-run` reports first.
+hourglass. The daily run refreshes these facts for every entry it still sees in
+OpenBesluitvorming, including the raadsbesluit that arrives days after a vote.
+Entries from the ORI years (up to 9 July 2026) keep the facts ORI held; only
+their register link is moved, from ORI's permalink to the same paper in
+OpenBesluitvorming.
 
 Amounts are only ever shown when a document states them. The prompt used to
 illustrate the key-figure field with `2,5M €`, and the model answered with the

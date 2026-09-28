@@ -5,6 +5,10 @@ The script is resumable: it keeps a progress file in state/upgrade_progress.json
 and only processes dossiers that have not been upgraded yet. It respects the
 daily token budget of the configured AI provider by stopping as soon as the
 provider returns degraded summaries.
+
+The text is read from OpenBesluitvorming. The entries carry ORI ids, which the
+new register does not know, but their PDF links carry the iBabs id of each
+paper, and that is the paper's id there too.
 """
 import json
 import logging
@@ -24,7 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.ai_chain import run_ai_chain
 from scripts.build_site import build_static_site
 from scripts.i18n import STATUS_FIELDS, status_text
-from scripts.source_ori import fetch_documents_by_ids
+from scripts.source_obv import papers_of, text_of
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -71,38 +75,30 @@ def save_progress(progress: dict[str, Any]):
         json.dump(progress, f, indent=2, ensure_ascii=False)
 
 
-def apply_source_facts(summary: dict[str, Any], doc: dict[str, Any]) -> dict[str, Any]:
-    """Copy ORI facts onto the summary, mirroring pipeline.apply_source_facts."""
-    summary["pdf_url"] = doc.get("pdf_url", "")
-    summary["date"] = doc.get("date", "")
-    summary["state"] = doc.get("state", "agenda")
-    summary["official_title"] = doc.get("title", "")
-    summary["doc_type"] = doc.get("doc_type", "")
-    summary["classification"] = doc.get("classification", "")
-    summary["source_url"] = doc.get("source_url", "")
-    summary["attachments"] = doc.get("attachments", [])
-    summary["source_borrowed_from"] = doc.get("source_borrowed_from", "")
-
+def restore_status(item: dict[str, Any]) -> None:
+    """The status line comes from the record's state, never from the summary."""
     for lang, field in STATUS_FIELDS.items():
-        summary[field] = status_text(summary["state"], lang)
-    return summary
+        item[field] = status_text(item.get("state") or "agenda", lang)
 
 
-def select_lead_doc(docs: list[dict[str, Any]]) -> dict[str, Any] | None:
-    """Pick the document with the most usable text for summarization."""
-    if not docs:
+def lead_document(title: str, group_items: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """
+    What the summarizer reads for one dossier: its title and its papers' text.
+
+    Every record of the dossier contributes its papers, because ORI filed the
+    decision apart from the proposal and only the proposal carried them.
+    """
+    papers = papers_of(group_items)
+    if not papers:
         return None
-    scored = [
-        (
-            len(d.get("text", "").strip()),
-            len(d.get("attachments", [])),
-            d.get("date", ""),
-            d,
-        )
-        for d in docs
-    ]
-    scored.sort(key=lambda x: (x[0], x[1], x[2]), reverse=True)
-    return scored[0][3]
+    newest = max(group_items, key=lambda i: i.get("date") or "")
+    return {
+        "id": newest["doc_id"],
+        "title": title,
+        "text": text_of([p["id"] for p in papers]),
+        "date": newest.get("date") or "",
+        "pdf_url": newest.get("pdf_url") or papers[0]["url"],
+    }
 
 
 def upgrade_backfilled(
@@ -145,19 +141,9 @@ def upgrade_backfilled(
         doc_ids = [item["doc_id"] for item in group_items]
         logger.info(f"Upgrading dossier: {title[:80]} ({len(doc_ids)} records)")
 
-        try:
-            ori_docs = fetch_documents_by_ids(doc_ids)
-        except Exception as e:  # noqa: BLE001
-            logger.error(f"Could not fetch ORI documents for {title}: {e}")
-            continue
-
-        if not ori_docs:
-            logger.warning(f"No ORI documents returned for {title}; skipping.")
-            continue
-
-        lead_doc = select_lead_doc(ori_docs)
+        lead_doc = lead_document(title, group_items)
         if not lead_doc or not lead_doc.get("text", "").strip():
-            logger.warning(f"No usable text for {title}; skipping.")
+            logger.warning(f"No usable text for {title} at OpenBesluitvorming; skipping.")
             continue
 
         summaries = run_ai_chain([lead_doc])
@@ -169,21 +155,18 @@ def upgrade_backfilled(
             break
 
         lead_summary = summaries[0]
-        ori_doc_map = {d["id"]: d for d in ori_docs}
 
         for item in group_items:
-            doc_id = item["doc_id"]
-            doc = ori_doc_map.get(doc_id, lead_doc)
-
             # Copy AI-generated fields from the lead summary, but keep record
-            # identity fields tied to this specific ORI record.
+            # identity fields tied to this specific record: they are the
+            # register's facts, already on the entry.
             for key, value in lead_summary.items():
                 if key in RECORD_IDENTITY_FIELDS:
                     continue
                 if value is not None:
                     item[key] = value
 
-            apply_source_facts(item, doc)
+            restore_status(item)
             item["backfilled"] = False
             processed_this_run += 1
 
