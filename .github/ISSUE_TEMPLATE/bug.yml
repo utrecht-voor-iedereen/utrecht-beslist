@@ -1,0 +1,23 @@
+name: Website bug
+description: Something on the site does not work or looks broken.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: https://utrecht-voor-iedereen.github.io/utrecht-beslist/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happens, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Browser and device
+      placeholder: e.g. Safari on iPhone, Firefox on Windows

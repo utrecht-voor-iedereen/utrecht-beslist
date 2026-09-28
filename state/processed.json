@@ -240,11 +240,10 @@
     "consequences_de": "🏘️ Folgen: Ein modernes Krankenhaus, verbesserte Erreichbarkeit, mehr Grünflächen im öffentlichen Raum und ein erweitertes Ronald‑McDonald‑Haus.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, phasenweise über mehrere Quartale.",
     "thema": [
-      "gezond",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
-      "Noord",
       "Overig"
     ],
     "impact": "hoog",
@@ -1064,7 +1063,7 @@
     "consequences_de": "🏘️ Folgen: Die drei Schulen bleiben unter einer größeren Leitung offen, was Kontinuität und Qualität sichert.",
     "timeline_de": "📅 Zeitplan: Erwarteter Start 1. Januar 2027",
     "thema": [
-      "onderwijs",
+      "jeugd-onderwijs",
       "bestuur-financien"
     ],
     "wijken": [
@@ -1632,7 +1631,7 @@
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, voraussichtlich Oktober 2027.",
     "thema": [
       "bestuur-financien",
-      "gezondheidszorg"
+      "zorg"
     ],
     "wijken": [
       "Overig"
@@ -4685,7 +4684,7 @@
     "consequences_de": "🏘️ Folgen: Die drei Schulen bleiben unter einer größeren Leitung offen, was Kontinuität und Qualität sichert.",
     "timeline_de": "📅 Zeitplan: Erwarteter Start 1. Januar 2027",
     "thema": [
-      "onderwijs",
+      "jeugd-onderwijs",
       "bestuur-financien"
     ],
     "wijken": [
@@ -6666,11 +6665,10 @@
     "consequences_de": "🏘️ Folgen: Ein modernes Krankenhaus, verbesserte Erreichbarkeit, mehr Grünflächen im öffentlichen Raum und ein erweitertes Ronald‑McDonald‑Haus.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, phasenweise über mehrere Quartale.",
     "thema": [
-      "gezond",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
-      "Noord",
       "Overig"
     ],
     "impact": "hoog",
@@ -9825,7 +9823,7 @@
       "wonen"
     ],
     "wijken": [
-      "Centrum"
+      "Binnenstad"
     ],
     "impact": "hoog",
     "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2504abf9-0942-461e-bf28-c7f7a67826ee",
@@ -12741,7 +12739,7 @@
     "consequences_de": "🏘️ Folgen: Verbesserte Finanzplanung für die Gemeinde und mögliche Anpassungen der Beiträge.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, mit Fortsetzung 2028 und danach.",
     "thema": [
-      "gezondheid",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -15106,7 +15104,7 @@
     "consequences_de": "🏘️ Folgen: Verbesserte Finanzplanung für die Gemeinde und mögliche Anpassungen der Beiträge.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, mit Fortsetzung 2028 und danach.",
     "thema": [
-      "gezondheid",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -17642,7 +17640,7 @@
     "consequences_de": "🏘️ Folgen: Verbesserte Finanzplanung für die Gemeinde und mögliche Anpassungen der Beiträge.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, mit Fortsetzung 2028 und danach.",
     "thema": [
-      "gezondheid",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [
@@ -23147,7 +23145,7 @@
     "consequences_de": "🏘️ Folgen: Verbesserte Finanzplanung für die Gemeinde und mögliche Anpassungen der Beiträge.",
     "timeline_de": "📅 Zeitplan: Geplanter Start 2027, mit Fortsetzung 2028 und danach.",
     "thema": [
-      "gezondheid",
+      "zorg",
       "bestuur-financien"
     ],
     "wijken": [

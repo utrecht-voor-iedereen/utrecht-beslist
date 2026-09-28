@@ -1,0 +1,31 @@
+name: Wrong or unclear summary
+description: A summary says something the official document does not, or is hard to understand.
+title: "[Summary] "
+labels: ["summary"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking. Summaries are written by a language model and can be wrong; the official document always wins.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Link to the decision page on the site.
+      placeholder: https://utrecht-voor-iedereen.github.io/utrecht-beslist/nl/besluit/...
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [Nederlands, English, Español, Türkçe, Português (Brasil), Português (Portugal), Français, Deutsch]
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the sentence, and say what the official document states instead (with the page number if you can).
+    validations:
+      required: true
