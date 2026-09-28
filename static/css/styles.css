@@ -18,8 +18,10 @@
   --utrecht-foco: #2563EB;          /* Keyboard Focus Ring */
 
   /* Status Colors */
-  --utrecht-verde-exito: #15803D;
-  --utrecht-naranja-aviso: #C2410C;
+  /* Darker than Tailwind's 700: on their own 12% tint the 700s measured
+     4.3-4.48:1, just under WCAG AA's 4.5. These give 5.5-6:1. */
+  --utrecht-verde-exito: #166534;
+  --utrecht-naranja-aviso: #9A3412;
 
   /* Typography */
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -41,10 +43,12 @@
   --utrecht-superficie: #334155;
   --utrecht-negro: #F8FAFC;
   --utrecht-azul-oscuro: #090E17;
-  --utrecht-gris-secundario: #94A3B8;
+  /* #94A3B8 and #60A5FA fell to 3.8-4.1:1 on the raised dark surfaces
+     (badges, notice bar, buttons); these keep 4.8:1 or more on all of them. */
+  --utrecht-gris-secundario: #A9B6C7;
   --utrecht-borde-suave: #334155;
   --utrecht-borde-medio: #475569;
-  --utrecht-azul-enlace: #60A5FA;
+  --utrecht-azul-enlace: #93C5FD;
 }
 
 * {
@@ -751,7 +755,8 @@ header {
 
 .impact-hoog {
   background-color: rgba(204, 0, 0, 0.12);
-  color: var(--utrecht-rood);
+  /* The flag red is 4.3:1 on its own tint over cream; the text needs darker. */
+  color: #A30000;
   border: 1px solid rgba(204, 0, 0, 0.25);
 }
 
@@ -962,7 +967,8 @@ footer {
   margin-bottom: 0.4rem;
 }
 
-.footer-column a {
+.footer-column a,
+.footer-bottom a {
   color: #FFFFFF;
   text-decoration: underline;
 }
@@ -1446,4 +1452,59 @@ footer {
 
 .about-section a {
   color: var(--utrecht-azul-enlace);
+}
+
+/* Impact badges had no dark-mode colours: the light-mode reds, oranges and
+   greens sat at 2.5:1 on the dark tints. */
+[data-theme="dark"] .impact-hoog {
+  color: #FCA5A5;
+}
+
+[data-theme="dark"] .impact-gemiddeld {
+  color: #FDBA74;
+}
+
+[data-theme="dark"] .impact-laag {
+  color: #86EFAC;
+}
+
+/* A link inside running text must not rely on colour alone (WCAG 1.4.1):
+   no link colour here reaches 3:1 against the body text. */
+.about-section a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Keyboard users reach the content without tabbing through the header on
+   every page (WCAG 2.4.1). Hidden until it has focus. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background-color: var(--utrecht-blanco-tarjeta);
+  color: var(--utrecht-azul-enlace);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -224,6 +224,38 @@ UI = {
         'fr': 'Rechercher mot-clé, code postal...',
         'de': 'Stichwort, PLZ suchen...',
     },
+    # Accessible names for the two filter dropdowns; without them a screen
+    # reader announces an unnamed list.
+    'skip_link': {
+        'nl': 'Naar de inhoud',
+        'en': 'Skip to content',
+        'es': 'Saltar al contenido',
+        'tr': 'İçeriğe geç',
+        'pt-br': 'Pular para o conteúdo',
+        'pt-pt': 'Saltar para o conteúdo',
+        'fr': 'Aller au contenu',
+        'de': 'Zum Inhalt springen',
+    },
+    'wijk_select_label': {
+        'nl': 'Kies een wijk',
+        'en': 'Choose a district',
+        'es': 'Elige un distrito',
+        'tr': 'Semt seçin',
+        'pt-br': 'Escolha um bairro',
+        'pt-pt': 'Escolha um bairro',
+        'fr': 'Choisir un quartier',
+        'de': 'Stadtteil wählen',
+    },
+    'theme_select_label': {
+        'nl': 'Kies een onderwerp',
+        'en': 'Choose a topic',
+        'es': 'Elige un tema',
+        'tr': 'Konu seçin',
+        'pt-br': 'Escolha um tema',
+        'pt-pt': 'Escolha um tema',
+        'fr': 'Choisir un thème',
+        'de': 'Thema wählen',
+    },
     'wijk_all': {
         'nl': '📍 Alle Wijken in Utrecht',
         'en': '📍 All Utrecht Neighborhoods',

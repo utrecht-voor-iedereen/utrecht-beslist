@@ -40,7 +40,7 @@
   <!-- Row 3: Option A Smart Selectors (Wijk & Theme Dropdowns) -->
   <div class="smart-selectors-row">
     <!-- Wijk Selector -->
-    <select id="wijk-select" class="filter-select">
+    <select id="wijk-select" class="filter-select" aria-label="{{ t('wijk_select_label', lang) }}">
       <option value="all">{{ t("wijk_all", lang) }}</option>
       {# Sin esta opción no se podían aislar ni descartar los acuerdos de ciudad,
          que son el 82% del archivo. #}
@@ -58,7 +58,7 @@
     </select>
 
     <!-- Specific Theme Selector -->
-    <select id="theme-select" class="filter-select">
+    <select id="theme-select" class="filter-select" aria-label="{{ t('theme_select_label', lang) }}">
       <option value="all">{{ t("theme_all", lang) }}</option>
       {% for key, theme_info in themes.items() %}
         {% if key != "overig" %}
