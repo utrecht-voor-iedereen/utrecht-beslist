@@ -168,7 +168,11 @@ def report_untranslated(items: list[dict[str, Any]]):
     gaps: dict[str, int] = {}
     for item in items:
         for suffix in TRANSLATION_TARGETS:
-            for base, _nl, _en in TRANSLATABLE_FIELDS:
+            for base, _nl, en in TRANSLATABLE_FIELDS:
+                # A field empty in English too is empty on purpose — a key
+                # figure for a document that states no amount — not a gap.
+                if not str(item.get(en) or "").strip():
+                    continue
                 value = item.get(f"{base}_{suffix}")
                 if not (isinstance(value, str) and value.strip()):
                     gaps[suffix] = gaps.get(suffix, 0) + 1
