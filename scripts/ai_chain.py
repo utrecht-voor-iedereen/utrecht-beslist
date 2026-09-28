@@ -180,7 +180,9 @@ GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b"
 # model, so a second model is a real fallback on the same key: when one runs
 # out of its day, or is retired as llama-3.3 was, the next still answers.
 # GROQ_MODELS overrides the list, comma-separated, first choice first.
-GROQ_FALLBACK_MODELS = ["qwen/qwen3.8-27b", "openai/gpt-oss-20b"]
+# qwen/qwen3.8-27b is also on the free tier but failed Groq's JSON mode in the
+# self-test, with and without its reasoning, so it is left out.
+GROQ_FALLBACK_MODELS = ["openai/gpt-oss-20b"]
 
 # Gemini is the fallback outside Groq. The model is configurable because
 # Google retires them often: gemini-1.5-flash, hard-coded here until now, had
@@ -201,10 +203,6 @@ def groq_extras(model_name: str) -> dict[str, Any]:
     """Parameters only some Groq models accept."""
     if model_name.startswith("openai/gpt-oss"):
         return {"reasoning_effort": "low"}
-    if model_name.startswith("qwen/"):
-        # With its reasoning on, Qwen failed Groq's JSON mode
-        # (json_validate_failed) in the self-test; without it, it answers.
-        return {"reasoning_effort": "none"}
     return {}
 
 
