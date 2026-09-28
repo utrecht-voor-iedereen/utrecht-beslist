@@ -51,8 +51,31 @@ DATE_PATTERNS = {
 }
 
 UI = {
+    # Shown under the header on every page. The name, the flag-red accent and
+    # the shield logo can read as a municipal site; this says plainly that it
+    # is not one and where the official record is.
+    'unofficial_notice': {
+        'nl': 'Onafhankelijk burgerinitiatief — geen website van de gemeente Utrecht. Officiële stukken:',
+        'en': 'Independent civic project — not a City of Utrecht website. Official documents:',
+        'es': 'Iniciativa ciudadana independiente: no es una web del Ayuntamiento de Utrecht. Documentos oficiales:',
+        'tr': "Bağımsız bir yurttaş girişimi — Utrecht Belediyesi'nin sitesi değildir. Resmi belgeler:",
+        'pt-br': 'Iniciativa cidadã independente — não é um site da Prefeitura de Utrecht. Documentos oficiais:',
+        'pt-pt': 'Iniciativa cidadã independente — não é um site do Município de Utrecht. Documentos oficiais:',
+        'fr': "Initiative citoyenne indépendante — ce n'est pas un site de la Ville d'Utrecht. Documents officiels :",
+        'de': 'Unabhängige Bürgerinitiative – keine Website der Stadt Utrecht. Offizielle Dokumente:',
+    },
+    'unofficial_link': {
+        'nl': 'Raadsportaal',
+        'en': 'council portal',
+        'es': 'portal del consejo',
+        'tr': 'meclis portalı',
+        'pt-br': 'portal da câmara',
+        'pt-pt': 'portal da assembleia',
+        'fr': 'portail du conseil',
+        'de': 'Ratsportal',
+    },
     'site_title': {
-        'nl': 'Utrecht Beslist — Gemeente Utrecht Raadsbesluiten',
+        'nl': 'Utrecht Beslist — Raadsbesluiten van Utrecht in begrijpelijke taal',
         'en': 'Utrecht Beslist — City Council Decisions',
         'es': 'Utrecht Beslist — Decisiones del Ayuntamiento de Utrecht',
         'tr': 'Utrecht Beslist — Utrecht Belediye Meclisi Kararları',
