@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  # Para lanzar pages.yml tras el commit (ver el último paso).
+  actions: write
 
 jobs:
   run-pipeline:
@@ -74,16 +76,27 @@ jobs:
         run: |
           python -m scripts.upgrade_backfilled
 
-      # El sitio ya no se commitea: lo construye y publica pages.yml, que se
-      # dispara solo al cambiar state/processed.json en el push de abajo.
+      # El sitio ya no se commitea: lo construye y publica pages.yml. Ese push
+      # NO lo dispara, porque GitHub no lanza workflows por pushes hechos con
+      # GITHUB_TOKEN; por eso el último paso lo invoca a mano.
 
       # Runs even if a step above failed: a partial day of work is still worth
       # publishing, and losing it silently is how 31 July produced nothing.
       - name: Commit and Push Changes
+        id: commit
         if: always()
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           # openbesluitvorming.json is the mirror the next run syncs from.
           git add state/processed.json state/openbesluitvorming.json state/upgrade_progress.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "update: council summaries $(date +'%Y-%m-%d')" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "update: council summaries $(date +'%Y-%m-%d')" && git push && echo "pushed=true" >> "$GITHUB_OUTPUT")
+
+      # Sin esto, lo que resumía el cron no llegaba a la web hasta que alguien
+      # mergeaba un PR (del 7 al 28 de septiembre, pages.yml nunca corrió por el
+      # cron). workflow_dispatch es la excepción que GITHUB_TOKEN sí dispara.
+      - name: Publish site
+        if: always() && steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
