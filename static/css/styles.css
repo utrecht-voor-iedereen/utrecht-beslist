@@ -1421,3 +1421,29 @@ footer {
 .report-honeypot:focus {
   min-height: 0;
 }
+
+/* About page: methodology in short sections, read top to bottom. */
+.about-page {
+  line-height: 1.8;
+}
+
+.about-section + .about-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--utrecht-borde-suave);
+}
+
+.about-section h2 {
+  color: var(--utrecht-negro);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-section p {
+  margin-bottom: 0.75rem;
+  max-width: 70ch;
+}
+
+.about-section a {
+  color: var(--utrecht-azul-enlace);
+}
