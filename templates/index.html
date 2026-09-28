@@ -110,7 +110,7 @@
   <article class="card" data-theme="{{ item.thema | join(' ') }}" data-wijk="{{ item.wijken | join(' ') | lower }}" data-state="{{ item.state or 'agenda' }}" data-doc="{{ item.doc_id }}">
     <div>
       <div class="card-header">
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
           {# Misma etiqueta de fase que en la ficha: en el listado todas salían
              con el mismo azul y no se distinguía lo aprobado de lo que aún se
              está debatiendo. #}
@@ -118,7 +118,6 @@
             {{ status_text }}
           </span>
           <span class="card-date">📅 <time datetime="{{ item.date[:10] if item.date else '' }}">{{ format_date(item.date, lang) }}</time></span>
-          {% if item.date and item.date[:10] > today %}<span class="upcoming-note" data-date="{{ item.date[:10] }}">⏳ {{ t('meeting_upcoming', lang) }}</span>{% endif %}
         </div>
         
         {% if item.impact == "hoog" %}
@@ -129,6 +128,8 @@
           <span class="badge-impact impact-laag">{{ t("low_impact", lang) }}</span>
         {% endif %}
       </div>
+      {# On its own line: squeezed into the header row it ran out of the card. #}
+      {% if item.date and item.date[:10] > today %}<p class="upcoming-note upcoming-note--card" data-date="{{ item.date[:10] }}">⏳ {{ t('meeting_upcoming', lang) }}</p>{% endif %}
 
         <button class="fav-btn" type="button" data-fav="{{ item.doc_id }}"
                 aria-pressed="false" aria-label="{{ t('save_decision', lang) }}"
