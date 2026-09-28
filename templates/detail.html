@@ -183,7 +183,7 @@
           <time datetime="{{ step.date[:10] }}">{{ format_date(step.date, lang) }}</time>
           — {{ state_label(step.state, lang) }}
           {% if step.source_url %}
-            · <a href="{{ step.source_url }}" target="_blank" rel="noopener">ORI {{ step.doc_id }}</a>
+            · <a href="{{ step.source_url }}" target="_blank" rel="noopener">OpenBesluitvorming</a>
           {% endif %}
         </li>
       {% endfor %}
@@ -235,8 +235,8 @@
         {{ t("raadsportaal_link", lang) }} 🔗
       </a>
 
-      <a href="{{ item.source_url or 'https://openraadsinformatie.nl/' }}" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
-        🌐 {{ t("ori_record", lang) }} 🔗
+      <a href="{{ item.source_url or 'https://openbesluitvorming.nl/?organization=utrecht' }}" target="_blank" rel="noopener" class="human-impact-btn" style="text-decoration: none; padding: 0.65rem 1.25rem; background: var(--utrecht-blanco-tarjeta);">
+        🌐 {{ t("register_record", lang) }} 🔗
       </a>
     </div>
 

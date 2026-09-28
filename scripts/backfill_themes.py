@@ -1,16 +1,17 @@
 """
 Re-derives the theme tags of the entries already in the state file from the full
-document text in Open Raadsinformatie, instead of trusting what the summarizer
+document text in OpenBesluitvorming, instead of trusting what the summarizer
 put there.
 
-Same doctrine as backfill_sources.py and backfill_wijken.py: the facts come from
+Same doctrine as pipeline.apply_source_facts and backfill_wijken.py: the facts come from
 the register, not from the model. Measured over the 983 entries, the summarizer
 tagged 97% of them "bestuur-financien" and 89% "verkeer", with 3,9 themes each.
 A filter where almost everything carries the same label does not filter.
 
 Classifying from the stored summary does not work either: it is ~330 characters
 of generic prose and leaves 70% of the archive with no theme at all. The real
-text is in ORI — up to 6.000 characters per stuk — and that is what this reads.
+text is in the register — up to 6.000 characters per stuk — and that is what
+this reads, one dossier at a time.
 
 Entries whose document carries no text (agenda items with no attachment) keep
 the tags they had: a worse guess is still better than none.
@@ -25,16 +26,10 @@ import argparse
 import collections
 import json
 import logging
-import urllib.request
 from pathlib import Path
 from typing import Any
 
-from .source_ori import (
-    ORI_ELASTIC_ENDPOINT,
-    enrich_with_attachments,
-    normalize_document,
-    share_text_between_siblings,
-)
+from .source_obv import papers_of, text_of
 from .themes import detect_theme_heuristics
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -42,36 +37,24 @@ logger = logging.getLogger(__name__)
 
 STATE_FILE = Path(__file__).resolve().parent.parent / "state" / "processed.json"
 
-# ORI acepta como mucho cien ids por consulta.
-LOTE = 100
+def texts_by_dossier(items: list[dict[str, Any]]) -> dict[str, str]:
+    """El texto de cada expediente, por título oficial.
 
-
-def fetch_by_ids(doc_ids: list[str]) -> dict[str, dict[str, Any]]:
-    """Los registros de ORI con su texto, de cien en cien.
-
-    Mismo camino que backfill_sources.py: el texto de verdad no está en el hit,
-    sino en los MediaObjects que cuelgan de él, así que hay que enriquecer antes
-    de leerlo. `share_text_between_siblings` cubre el caso de que ORI archive la
-    decisión y la propuesta por separado y solo una lleve el documento.
+    Se lee por expediente y no por ficha: ORI archivaba la decisión aparte de la
+    propuesta y solo la propuesta llevaba los PDF, así que la decisión toma el
+    texto de sus hermanas. Los PDF se buscan en OpenBesluitvorming por su id de
+    iBabs, el único que ambos registros comparten.
     """
-    out: dict[str, dict[str, Any]] = {}
-    for start in range(0, len(doc_ids), LOTE):
-        chunk = doc_ids[start:start + LOTE]
-        payload = {"size": len(chunk), "query": {"ids": {"values": chunk}}}
-        req = urllib.request.Request(
-            ORI_ELASTIC_ENDPOINT,
-            data=json.dumps(payload).encode("utf-8"),
-            headers={"Content-Type": "application/json", "User-Agent": "UtrechtBeslistBot/1.0"},
-        )
-        with urllib.request.urlopen(req, timeout=40) as response:
-            data = json.loads(response.read().decode("utf-8"))
-        for hit in data.get("hits", {}).get("hits", []):
-            out[hit.get("_id", "")] = normalize_document(hit)
-        logger.info("leídos %d de %d", min(start + LOTE, len(doc_ids)), len(doc_ids))
+    expedientes: dict[str, list[dict[str, Any]]] = collections.defaultdict(list)
+    for item in items:
+        expedientes[str(item.get("official_title") or "").strip()].append(item)
 
-    registros = list(out.values())
-    enrich_with_attachments(registros)
-    share_text_between_siblings(registros)
+    out: dict[str, str] = {}
+    for n, (titulo, fichas) in enumerate(expedientes.items(), start=1):
+        papeles = papers_of(fichas)
+        out[titulo] = text_of([p["id"] for p in papeles]) if papeles else ""
+        if n % 25 == 0:
+            logger.info("leídos %d de %d expedientes", n, len(expedientes))
     return out
 
 
@@ -84,8 +67,7 @@ def main() -> int:
     items = json.loads(STATE_FILE.read_text(encoding="utf-8"))
     objetivo = items[: args.limit] if args.limit else items
 
-    registros = fetch_by_ids([str(i.get("doc_id")) for i in objetivo if i.get("doc_id")])
-    textos: dict[str, str] = {k: (v.get("text") or "") for k, v in registros.items()}
+    textos = texts_by_dossier(objetivo)
 
     cambiados = 0
     sin_texto = 0
@@ -97,7 +79,7 @@ def main() -> int:
         for t in previos:
             antes[t] += 1
 
-        texto = textos.get(str(item.get("doc_id")), "")
+        texto = textos.get(str(item.get("official_title") or "").strip(), "")
         if not texto:
             sin_texto += 1
             for t in previos:
@@ -119,7 +101,7 @@ def main() -> int:
         item["thema"] = nuevos
 
     n = len(objetivo)
-    logger.info("%d entradas reclasificadas, %d sin texto en ORI, de %d", cambiados, sin_texto, n)
+    logger.info("%d entradas reclasificadas, %d sin texto en el registro, de %d", cambiados, sin_texto, n)
     logger.info("%-22s %8s %8s", "tema", "antes", "después")
     for tema in sorted(set(antes) | set(despues)):
         logger.info("%-22s %7d%% %7d%%", tema, antes[tema] * 100 // n, despues[tema] * 100 // n)

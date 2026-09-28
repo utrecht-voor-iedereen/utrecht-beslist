@@ -10,7 +10,7 @@ def dossier(doc_id, title, date, state, attachments=None):
         "date": date,
         "state": state,
         "doc_type": "AgendaItem",
-        "source_url": f"https://id.openraadsinformatie.nl/{doc_id}",
+        "source_url": f"https://openbesluitvorming.nl/?organization=utrecht&view={doc_id}",
         "attachments": attachments or [],
     }
 

@@ -139,3 +139,29 @@ def test_sync_reads_changes_after_the_snapshot(tmp_path, monkeypatch):
     monkeypatch.setattr(source_obv, "_get", fake_get)
     assert set(sync_meetings(path, now=now)) == {"meeting:new"}
     assert load_mirror(path)["cursor"] == "101"
+
+
+IBABS = "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id="
+U1 = "2ef93d5d-d9f5-408f-b58a-d9656d39b36f"
+U2 = "92c02439-2c30-42b0-879f-85a801611f2a"
+
+
+def test_papers_of_reads_ori_era_entries_by_their_ibabs_links():
+    entry = {
+        "pdf_url": IBABS + U1.upper(),
+        "attachments": [
+            {"name": "Dossier 5325 voorblad.pdf", "url": IBABS + U2},
+            {"name": "Raadsvoorstel Jaarstukken 2025", "url": IBABS + U1},
+        ],
+    }
+    papers = source_obv.papers_of([entry])
+    assert [p["id"] for p in papers] == [
+        f"document:ibabs:gemeente:utrecht:{U1}",
+        f"document:ibabs:gemeente:utrecht:{U2}",
+    ]
+    # The unnamed pdf_url link and the named attachment are one paper.
+    assert papers[0]["name"] == "Raadsvoorstel Jaarstukken 2025"
+
+
+def test_papers_of_ignores_links_without_an_ibabs_id():
+    assert source_obv.papers_of([{"pdf_url": "https://example.org/x.pdf", "attachments": []}]) == []

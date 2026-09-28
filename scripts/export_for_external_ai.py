@@ -7,11 +7,14 @@ roughly four times that. This exports the source text and the exact output
 contract instead, so the work can be done elsewhere and imported back with
 `python -m scripts.import_summaries`.
 
-Only documents whose text could be resolved from Open Raadsinformatie
-attachments are exported: with no source there is nothing to summarize, and
-inventing prose is the failure mode this whole exercise is correcting.
+Only documents whose text could be read from their papers at
+OpenBesluitvorming are exported: with no source there is nothing to summarize,
+and inventing prose is the failure mode this whole exercise is correcting. The
+papers are found by the iBabs id in each entry's PDF links, so entries from the
+ORI years work too.
 
     python -m scripts.export_for_external_ai
+    python -m scripts.export_for_external_ai --limit 30   # newest 30 entries
     python -m scripts.export_for_external_ai --per-batch 2 --max-chars 16000
 """
 from __future__ import annotations
@@ -22,7 +25,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from .source_obv import enrich_with_text, fetch_utrecht_documents
+from .source_obv import papers_of, text_of
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -166,29 +169,52 @@ def main() -> int:
         action="store_true",
         help="also re-export entries already summarized from their source",
     )
+    parser.add_argument(
+        "--limit", type=int, default=0,
+        help="only the N newest entries; reading the text costs a request per paper",
+    )
     args = parser.parse_args()
 
     state = {item["doc_id"]: item for item in json.loads(STATE_FILE.read_text(encoding="utf-8"))}
 
-    logger.info("fetching documents from OpenBesluitvorming...")
-    docs: dict[str, dict[str, Any]] = {d["id"]: d for d in fetch_utrecht_documents()}
-    # The text costs a request per paper, so only for entries it could serve.
-    enrich_with_text(
-        [d for d in docs.values() if d["id"] in state and (args.all or state[d["id"]].get("ai_model") != EXTERNAL_MODEL_LABEL)],
-        max_text_chars=args.max_chars,
+    usable: list[dict[str, Any]] = []
+    no_source: list[str] = []
+    done = [
+        doc_id for doc_id, entry in state.items()
+        if not args.all and entry.get("ai_model") == EXTERNAL_MODEL_LABEL
+    ]
+    candidates = sorted(
+        (entry for doc_id, entry in state.items() if doc_id not in done),
+        key=lambda e: e.get("date") or "",
+        reverse=True,
     )
+    if args.limit:
+        candidates = candidates[: args.limit]
 
-    usable, no_source, done = [], [], []
-    for doc_id, entry in state.items():
-        doc = docs.get(doc_id)
-        if not doc or len(doc.get("text", "")) < MIN_USABLE_CHARS:
-            no_source.append(doc_id)
-        elif not args.all and entry.get("ai_model") == EXTERNAL_MODEL_LABEL:
-            # Already written from this text; re-exporting it would spend the
-            # effort again for the same result.
-            done.append(doc_id)
-        else:
-            usable.append(doc)
+    # One dossier, one read: ORI filed the decision apart from the proposal and
+    # only the proposal had papers, so the text belongs to the title.
+    dossiers: dict[str, list[dict[str, Any]]] = {}
+    for entry in state.values():
+        dossiers.setdefault((entry.get("official_title") or "").strip(), []).append(entry)
+
+    logger.info("reading the papers of %d entries from OpenBesluitvorming...", len(candidates))
+    texts: dict[str, str] = {}
+    for entry in candidates:
+        title = (entry.get("official_title") or "").strip()
+        if title not in texts:
+            papers = papers_of(dossiers.get(title, [entry]))
+            texts[title] = text_of([p["id"] for p in papers], args.max_chars) if papers else ""
+        if len(texts[title]) < MIN_USABLE_CHARS:
+            no_source.append(entry["doc_id"])
+            continue
+        usable.append({
+            "id": entry["doc_id"],
+            "title": title or entry.get("titel_kort_nl", ""),
+            "date": entry.get("date") or "",
+            "source_url": entry.get("source_url") or "",
+            "source_borrowed_from": entry.get("source_borrowed_from") or "",
+            "text": texts[title],
+        })
 
     if done:
         logger.info("%d entry(ies) already summarized from source, skipped (--all to redo)", len(done))
@@ -226,7 +252,7 @@ def main() -> int:
             if doc.get("source_borrowed_from"):
                 parts.append(
                     "- **Note:** this is the council's recorded decision on the proposal "
-                    f"below (ORI publishes the papers under `{doc['source_borrowed_from']}`). "
+                    f"below (the register files the papers under `{doc['source_borrowed_from']}`). "
                     "Write it as a decision that was taken, not as a proposal being tabled."
                 )
             parts += [
@@ -248,7 +274,7 @@ def main() -> int:
         "# Hand-off to an external model",
         "",
         f"{len(usable)} of {len(state)} entries have source text that could be resolved",
-        "from Open Raadsinformatie attachments. Those are split across",
+        "from their papers at OpenBesluitvorming. Those are split across",
         f"`batch-01.md` … `batch-{len(batches):02d}.md`.",
         "",
         "## How to run it",
@@ -273,7 +299,7 @@ def main() -> int:
         "",
         "## Entries with no source text",
         "",
-        "Open Raadsinformatie publishes no readable attachment for these, so they",
+        "OpenBesluitvorming holds no readable paper for these, so they",
         "are not in any batch and keep their current text. Summarizing them would",
         "mean writing from the title alone, which is what produced the generic",
         "prose this hand-off exists to replace.",

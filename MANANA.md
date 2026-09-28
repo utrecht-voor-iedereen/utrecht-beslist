@@ -132,7 +132,6 @@ otras 12 cartas.
 cd ~/utrecht-beslist
 
 python -m scripts.build_site                    # reconstruir docs/
-python -m scripts.backfill_sources --dry-run    # refrescar datos de ORI
 python -m scripts.translate_missing --recheck   # rellenar idiomas
 python -m scripts.export_for_external_ai        # generar batches nuevos
 python -m scripts.import_summaries --dry-run    # validar respuestas
