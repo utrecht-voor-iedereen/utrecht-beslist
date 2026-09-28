@@ -28,6 +28,7 @@ from scripts.i18n import (
     t,
     wijk_label,
 )
+from scripts.over_content import over_hero, over_sections
 from scripts.themes import THEMES
 
 logging.basicConfig(level=logging.INFO)
@@ -48,6 +49,8 @@ env.globals["format_date"] = format_date
 env.globals["strip_leading_icon"] = strip_leading_icon
 env.globals["wijk_label"] = wijk_label
 env.globals["state_label"] = status_text
+env.globals["over_hero"] = over_hero
+env.globals["over_sections"] = over_sections
 
 
 def generate_rss_xml(items: list, lang: str, category_title: str = "") -> str:
