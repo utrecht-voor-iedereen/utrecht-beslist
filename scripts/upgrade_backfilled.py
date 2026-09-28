@@ -167,11 +167,18 @@ def upgrade_backfilled(
             continue
 
         # One document per call, a minute apart: Groq's free tier refills
-        # 8,000 tokens a minute and a summary takes most of them.
-        if summarized:
-            time.sleep(pause_seconds)
+        # 8,000 tokens a minute and a summary takes most of them. The first
+        # call waits too — in the daily job the pipeline has just spent the
+        # minute's tokens, and the first test run died on that 429.
+        time.sleep(pause_seconds)
         summarized += 1
         summaries = run_ai_chain([lead_doc])
+        if not summaries or summaries[0].get("degraded"):
+            # A minute's limit clears in a minute; only a second failure in a
+            # row means the day's budget is gone.
+            logger.info(f"No summary; retrying once in {pause_seconds:.0f}s.")
+            time.sleep(pause_seconds)
+            summaries = run_ai_chain([lead_doc])
         if not summaries or summaries[0].get("degraded"):
             logger.warning(
                 "AI provider returned a degraded/empty summary. Stopping to respect "
