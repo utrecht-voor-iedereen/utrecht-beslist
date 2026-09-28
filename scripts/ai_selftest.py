@@ -18,9 +18,9 @@ from collections.abc import Callable
 from typing import Any
 
 from .ai_chain import (
-    GEMINI_DEFAULT_MODEL,
+    gemini_models,
     groq_models,
-    summarize_with_gemini,
+    summarize_with_gemini_model,
     summarize_with_groq_model,
     summarize_with_openrouter,
 )
@@ -73,8 +73,10 @@ def main() -> int:
 
     gemini_key = os.environ.get("GEMINI_API_KEY", "")
     if gemini_key:
-        model = os.environ.get("GEMINI_MODEL", GEMINI_DEFAULT_MODEL)
-        results.append(check(f"gemini/{model}", lambda: summarize_with_gemini([SAMPLE], gemini_key)))
+        for model in gemini_models():
+            def gcall(m: str = model) -> list[dict[str, Any]]:
+                return summarize_with_gemini_model([SAMPLE], gemini_key, m)
+            results.append(check(f"gemini/{model}", gcall))
     else:
         logger.info("SKIP  gemini (no GEMINI_API_KEY)")
 

@@ -188,6 +188,19 @@ GROQ_FALLBACK_MODELS = ["openai/gpt-oss-20b"]
 # Google retires them often: gemini-1.5-flash, hard-coded here until now, had
 # long stopped answering, so the fallback had never worked.
 GEMINI_DEFAULT_MODEL = "gemini-3.6-flash"
+# Tried in order when one is busy: the first test of the key met a 503 "high
+# demand" on gemini-3.6-flash twice in a row. GEMINI_MODELS overrides the
+# list, comma-separated; GEMINI_MODEL alone still sets the first choice.
+GEMINI_FALLBACK_MODELS = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
+
+
+def gemini_models() -> list[str]:
+    """The Gemini models to try, in order."""
+    configured = os.environ.get("GEMINI_MODELS", "")
+    if configured.strip():
+        return [m.strip() for m in configured.split(",") if m.strip()]
+    first = os.environ.get("GEMINI_MODEL", GEMINI_DEFAULT_MODEL)
+    return [first] + [m for m in GEMINI_FALLBACK_MODELS if m != first]
 
 
 def groq_models() -> list[str]:
@@ -219,11 +232,17 @@ def summarize_with_groq(batch_docs: list[dict[str, Any]], api_key: str) -> list[
     """Try each Groq model in turn; the first valid answer wins."""
     last_error: Exception | None = None
     for model_name in groq_models():
-        try:
-            return summarize_with_groq_model(batch_docs, api_key, model_name)
-        except Exception as e:  # noqa: BLE001
-            logger.warning(f"Groq {model_name} failed: {e}")
-            last_error = e
+        # One retry when the model wrote invalid JSON: gpt-oss-20b does that now
+        # and then and gets it right on the next call. A 429 is not retried; the
+        # next model has its own budget.
+        for attempt in (1, 2):
+            try:
+                return summarize_with_groq_model(batch_docs, api_key, model_name)
+            except Exception as e:  # noqa: BLE001
+                logger.warning(f"Groq {model_name} failed (attempt {attempt}): {e}")
+                last_error = e
+                if "json_validate_failed" not in str(e):
+                    break
     raise RuntimeError(f"every Groq model failed; last: {last_error}")
 
 
@@ -260,7 +279,19 @@ def summarize_with_groq_model(batch_docs: list[dict[str, Any]], api_key: str, mo
     return validate_and_parse_llm_json(content, f"Groq ({model_name})")
 
 def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> list[dict[str, Any]]:
-    """Try summarization using Gemini API."""
+    """Try each Gemini model in turn; the first valid answer wins."""
+    last_error: Exception | None = None
+    for model_name in gemini_models():
+        try:
+            return summarize_with_gemini_model(batch_docs, api_key, model_name)
+        except Exception as e:  # noqa: BLE001
+            logger.warning(f"Gemini {model_name} failed: {e}")
+            last_error = e
+    raise RuntimeError(f"every Gemini model failed; last: {last_error}")
+
+
+def summarize_with_gemini_model(batch_docs: list[dict[str, Any]], api_key: str, model_name: str) -> list[dict[str, Any]]:
+    """One summarization call to one Gemini model."""
     prompt_text = f"{SYSTEM_PROMPT}\n\nDOCUMENTEN:\n{json.dumps(batch_docs, ensure_ascii=False)}"
 
     payload = {
@@ -269,7 +300,6 @@ def summarize_with_gemini(batch_docs: list[dict[str, Any]], api_key: str) -> lis
     }
 
     clean_key = api_key.strip().strip('"').strip("'")
-    model_name = os.environ.get("GEMINI_MODEL", GEMINI_DEFAULT_MODEL)
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
 
     # The key goes in a header: in the query string it ends up in any log
