@@ -1,5 +1,5 @@
 {
- "cursor": "103654",
+ "cursor": "103683",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -20,6 +20,24 @@
     {
      "agenda_items": [],
      "documents": [],
+     "id": "agenda_item:ibabs:gemeente:utrecht:cc419194-325b-4621-bfb4-58f81dfb126a",
+     "is_heading": false,
+     "title": "Beëdiging tijdelijk raadslid BIJ1"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:1bda17b0-91b2-4eab-a631-1e4c9c0f7266",
+       "name": "Tijdelijk ontslagbrief Stevie Nolten",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1bda17b0-91b2-4eab-a631-1e4c9c0f7266"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8dbcd921-9233-4092-96fe-d873c344863d",
+       "name": "Openbare LIS 1 oktober 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8dbcd921-9233-4092-96fe-d873c344863d"
+      }
+     ],
      "id": "agenda_item:ibabs:gemeente:utrecht:2a303fd3-5c03-47f9-a966-f2c49bbbcb93",
      "is_heading": false,
      "title": "Ingekomen stukken"
@@ -103,9 +121,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:fd604de9-822a-443c-bd9a-a58273b6a774",
+       "id": "document:ibabs:gemeente:utrecht:0930dd6a-9f42-4f0a-91c5-09a0e6349975",
        "name": "Dossier 5404 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=fd604de9-822a-443c-bd9a-a58273b6a774"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0930dd6a-9f42-4f0a-91c5-09a0e6349975"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d4229ba7-3ee0-4705-8620-299b3021d8ff",
@@ -222,9 +240,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:61689613-969a-4e34-990c-a9d660f83f36",
+       "id": "document:ibabs:gemeente:utrecht:0ccc0632-c3cd-493a-b33a-d818e3d33253",
        "name": "Dossier 5358 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=61689613-969a-4e34-990c-a9d660f83f36"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0ccc0632-c3cd-493a-b33a-d818e3d33253"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401",
@@ -337,10 +355,30 @@
     },
     {
      "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:675bfc5e-37bd-4550-9d66-0d33b430e0ea",
+       "name": "Raadsbrief Nadere toelichting op geheimhouding trappen Moreelsebrug",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=675bfc5e-37bd-4550-9d66-0d33b430e0ea"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:0cd0f69e-e1de-4921-bf1c-c3e02f7a2420",
+     "is_heading": false,
+     "title": "Raadsbrief Nadere toelichting op geheimhouding trappen Moreelsebrug"
+    },
+    {
+     "agenda_items": [],
      "documents": [],
      "id": "agenda_item:ibabs:gemeente:utrecht:a1ffe339-6492-4f8e-8dd1-53dd747d3ad2",
      "is_heading": false,
      "title": "GEHEIM Raadsvoorstel uit de portefeuille Grondzaken"
+    },
+    {
+     "agenda_items": [],
+     "documents": [],
+     "id": "agenda_item:ibabs:gemeente:utrecht:0905052c-6791-4d7f-9e61-b3c6379adbb5",
+     "is_heading": false,
+     "title": "GEHEIM Raadsbrief portefeuille Grondzaken"
     },
     {
      "agenda_items": [],
@@ -353,9 +391,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:661201a1-dd80-40c3-b72f-6680544b3e92",
+       "id": "document:ibabs:gemeente:utrecht:03e04d29-e669-4ebb-8a79-012c958e9428",
        "name": "Dossier 5432 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=661201a1-dd80-40c3-b72f-6680544b3e92"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=03e04d29-e669-4ebb-8a79-012c958e9428"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:402b89d0-b466-4449-8ebb-86ba48318de3",
@@ -482,9 +520,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:4b9b9b89-c678-4dcd-9852-8377902c40ef",
+       "id": "document:ibabs:gemeente:utrecht:637a0894-f494-400a-a2f2-46b54b4f1e79",
        "name": "Dossier 5357 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4b9b9b89-c678-4dcd-9852-8377902c40ef"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=637a0894-f494-400a-a2f2-46b54b4f1e79"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d1ae352d-f6f3-42e4-878e-974641e5adf3",
@@ -525,9 +563,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:6f9acaff-a76b-4e82-8b51-78d1140f999c",
+       "id": "document:ibabs:gemeente:utrecht:0469d351-58bf-4ce8-ad67-f862831be57a",
        "name": "Dossier 5396 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6f9acaff-a76b-4e82-8b51-78d1140f999c"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0469d351-58bf-4ce8-ad67-f862831be57a"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9b0de3b1-b321-4fe1-b312-c3f2b520e94b",
@@ -573,9 +611,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:4f32c059-763a-464c-b752-e821bfda6835",
+       "id": "document:ibabs:gemeente:utrecht:ae061aad-da39-44c5-b849-09782c1ed372",
        "name": "Dossier 5397 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4f32c059-763a-464c-b752-e821bfda6835"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ae061aad-da39-44c5-b849-09782c1ed372"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
@@ -611,9 +649,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:0545e065-c1fc-4e0c-8cea-d9349217cc48",
+       "id": "document:ibabs:gemeente:utrecht:dd1e5bcb-4a5d-45f1-ad15-b4843c441935",
        "name": "Dossier 5343 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0545e065-c1fc-4e0c-8cea-d9349217cc48"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dd1e5bcb-4a5d-45f1-ad15-b4843c441935"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:81c51d4a-fc63-4a01-8e66-7037cd0ab98a",
@@ -634,9 +672,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:4bbe9107-4946-4972-b2c7-40c2a88251d6",
+       "id": "document:ibabs:gemeente:utrecht:6ee1c02b-850a-4cec-b882-7e62dc51f374",
        "name": "Dossier 5394 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4bbe9107-4946-4972-b2c7-40c2a88251d6"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6ee1c02b-850a-4cec-b882-7e62dc51f374"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:076d1329-cdac-4416-9765-2e7d0a299e72",
@@ -678,9 +716,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:07c79de5-3643-4051-8bb2-e31125c83fb2",
+       "id": "document:ibabs:gemeente:utrecht:e6cf6df1-714d-4a9a-9f7b-049e8bada68f",
        "name": "Dossier 5389 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=07c79de5-3643-4051-8bb2-e31125c83fb2"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e6cf6df1-714d-4a9a-9f7b-049e8bada68f"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:8ebcee1f-f0f2-4465-a49d-4b0448872cd2",
@@ -706,9 +744,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:e3133f4a-2e8c-49a3-85b0-65e9ec349711",
+       "id": "document:ibabs:gemeente:utrecht:568f2375-6f61-4ca4-a895-c6dab2755ae6",
        "name": "Dossier 5390 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e3133f4a-2e8c-49a3-85b0-65e9ec349711"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=568f2375-6f61-4ca4-a895-c6dab2755ae6"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:3af86d59-f976-473a-a03a-91b0e69e135c",
@@ -734,9 +772,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:dd5d922c-a483-4780-aa7a-98f8e09dc394",
+       "id": "document:ibabs:gemeente:utrecht:0ef850ab-dff1-459f-ab71-f18248fc3b96",
        "name": "Dossier 5387 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dd5d922c-a483-4780-aa7a-98f8e09dc394"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0ef850ab-dff1-459f-ab71-f18248fc3b96"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:917d99ba-3da9-420e-a141-48f1b3f416f4",
@@ -3896,68 +3934,6 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-07-19T00:00:00Z"
-  },
-  "meeting:ibabs:gemeente:utrecht:d061602c-699c-49ee-8b07-100db45dbea3": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:e13a6201-a0c6-423c-b7d7-fc73939f50ab",
-       "name": "Collegevoorstel Conceptwijziging nadere regel inschrijfduurverlenging 'Experiment in kader van Huisvestingsverordening",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e13a6201-a0c6-423c-b7d7-fc73939f50ab"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2f4bb972-291a-42d6-b8e7-0cdffd8cd885",
-       "name": "Raadsvoorstel Aanpassing ‘Experiment in kader van Huisvestingsverordening inschrijfduurverlenging doorstroom na tijdelijkheid van aandachtsgroepen'",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f4bb972-291a-42d6-b8e7-0cdffd8cd885"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:36c1a559-9d8d-40f3-87b2-54797251ac42",
-       "name": "Concept Besluit tot wijziging van Nadere regel Experiment inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=36c1a559-9d8d-40f3-87b2-54797251ac42"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:902b1a58-b2c8-46ec-a4ea-7708dc95b131",
-     "is_heading": false,
-     "title": "Raadsvoorstel Aanpassing ‘Experiment in kader van Huisvestingsverordening: inschrijfduurverlenging voor doorstroom na tijdelijkheid van aandachtsgroepen’"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:c263ceff-ed98-4c29-8d9b-ae4238e7b6e1",
-       "name": "Raadsvoorstel Herbenoeming lid RvT NUOVO",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c263ceff-ed98-4c29-8d9b-ae4238e7b6e1"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:765cbc8a-393f-4d7e-9d8f-a06fd401cb5b",
-       "name": "Voordracht herbenoeming lid RvT NUOVO scholen - Hilary Richters",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=765cbc8a-393f-4d7e-9d8f-a06fd401cb5b"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:0b1ecf5b-74f8-448b-b326-39c5c52ec096",
-       "name": "Profiel herbenoeming lid RvT NUOVO",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0b1ecf5b-74f8-448b-b326-39c5c52ec096"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:b95ce2bb-e219-4978-ba26-927fe9e7a5f2",
-       "name": "Functieprofiel lid RvT 2025",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b95ce2bb-e219-4978-ba26-927fe9e7a5f2"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:baed8ebe-0c01-4116-b44d-e92234678597",
-       "name": "Rooster van aftreden per 1 januari 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=baed8ebe-0c01-4116-b44d-e92234678597"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:6c04cd41-407d-4d1b-b7ce-f3cb267905c1",
-     "is_heading": false,
-     "title": "Raadsvoorstel herbenoeming lid RvT NUOVO"
-    }
-   ],
-   "name": "Raadsvoorstellen weekoverzicht",
-   "start_date": "2026-05-31T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:d2e4c945-4575-4841-8026-bfe346b1c362": {
    "agenda": [
