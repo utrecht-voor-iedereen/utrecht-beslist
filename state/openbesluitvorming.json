@@ -1,5 +1,5 @@
 {
- "cursor": "103683",
+ "cursor": "103746",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -121,9 +121,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:0930dd6a-9f42-4f0a-91c5-09a0e6349975",
+       "id": "document:ibabs:gemeente:utrecht:474e06e6-8d55-4ff0-9c3c-3ecafa4ebf89",
        "name": "Dossier 5404 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0930dd6a-9f42-4f0a-91c5-09a0e6349975"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=474e06e6-8d55-4ff0-9c3c-3ecafa4ebf89"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d4229ba7-3ee0-4705-8620-299b3021d8ff",
@@ -240,9 +240,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:0ccc0632-c3cd-493a-b33a-d818e3d33253",
+       "id": "document:ibabs:gemeente:utrecht:f37fc729-4861-4168-8a40-9568b9e583ef",
        "name": "Dossier 5358 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0ccc0632-c3cd-493a-b33a-d818e3d33253"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f37fc729-4861-4168-8a40-9568b9e583ef"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401",
@@ -268,6 +268,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:63271002-6da2-4f2f-94a7-822fab5b497d",
+       "name": "Dossier 5450 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=63271002-6da2-4f2f-94a7-822fab5b497d"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:89649566-b786-43aa-bbb4-2cf77b57d65b",
        "name": "Raadsvoorstel Reactie aan VRU over Regionaal Risiciprofiel, beleidsplan en oprichten stichting KCR2",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=89649566-b786-43aa-bbb4-2cf77b57d65b"
@@ -278,9 +283,9 @@
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6b0402a9-d59a-4989-9963-2922576fb67d"
       },
       {
-       "id": "document:ibabs:gemeente:utrecht:33e01a71-1f77-4746-aec3-89f3d6993076",
-       "name": "Reactiebrief aan VRU over Regionaal Risiciprofiel, beleidsplan en oprichten stichting KCR2",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=33e01a71-1f77-4746-aec3-89f3d6993076"
+       "id": "document:ibabs:gemeente:utrecht:ab91b95f-5775-4ff0-9aca-34ee2bc24965",
+       "name": "Reactiebrief aan VRU over RRP 2027 bestuursagenda 2027 - 2030 en oprichting stichting KCR2 (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ab91b95f-5775-4ff0-9aca-34ee2bc24965"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:aca4fcfb-ab8e-486a-88d0-2e4fb1b09b4c",
@@ -306,9 +311,14 @@
        "id": "document:ibabs:gemeente:utrecht:bea6334f-3dd1-4683-a468-c90377122b1f",
        "name": "Modelontwerpbesluit oprichting RWT KCR2",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bea6334f-3dd1-4683-a468-c90377122b1f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:97f7a630-b015-4dc5-9a62-6516005c1411",
+       "name": "MET WIJZIGINGEN Reactiebrief aan VRU over RRP 2027 bestuursagenda 2027 - 2030 en oprichting stichting KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=97f7a630-b015-4dc5-9a62-6516005c1411"
       }
      ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:e7c4dced-6efa-44cf-afcb-97868ad206c4",
+     "id": "agenda_item:ibabs:gemeente:utrecht:b9c91a8c-ec8c-4c5d-a2b4-ab896babc46d",
      "is_heading": false,
      "title": "Raadsvoorstel VRU: Reactie ontwerp regionaal risicoprofiel (RRP) 2027, wensen bestuursagenda 2027 – 2030 en wensen en bedenkingen voor stichting Knooppunt Coördinatie Rijk-Regio’s (KCR2)"
     },
@@ -391,9 +401,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:03e04d29-e669-4ebb-8a79-012c958e9428",
+       "id": "document:ibabs:gemeente:utrecht:e1ca7978-ed34-484d-96c6-67fe72804a61",
        "name": "Dossier 5432 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=03e04d29-e669-4ebb-8a79-012c958e9428"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e1ca7978-ed34-484d-96c6-67fe72804a61"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:402b89d0-b466-4449-8ebb-86ba48318de3",
@@ -520,9 +530,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:637a0894-f494-400a-a2f2-46b54b4f1e79",
+       "id": "document:ibabs:gemeente:utrecht:deb46e0c-bb89-4f5d-890f-9655bd783810",
        "name": "Dossier 5357 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=637a0894-f494-400a-a2f2-46b54b4f1e79"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=deb46e0c-bb89-4f5d-890f-9655bd783810"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d1ae352d-f6f3-42e4-878e-974641e5adf3",
@@ -563,9 +573,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:0469d351-58bf-4ce8-ad67-f862831be57a",
+       "id": "document:ibabs:gemeente:utrecht:2b617661-1e17-4f7d-99bd-16e888af7902",
        "name": "Dossier 5396 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0469d351-58bf-4ce8-ad67-f862831be57a"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2b617661-1e17-4f7d-99bd-16e888af7902"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9b0de3b1-b321-4fe1-b312-c3f2b520e94b",
@@ -611,9 +621,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:ae061aad-da39-44c5-b849-09782c1ed372",
+       "id": "document:ibabs:gemeente:utrecht:bdd31834-b27c-4a10-aaf4-99a9c6056fee",
        "name": "Dossier 5397 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ae061aad-da39-44c5-b849-09782c1ed372"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bdd31834-b27c-4a10-aaf4-99a9c6056fee"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
@@ -626,19 +636,29 @@
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf6af614-5206-4916-9193-df2224d7d084"
       },
       {
-       "id": "document:ibabs:gemeente:utrecht:94c30e27-5495-4c5c-83db-1ca88ff97e7d",
-       "name": "Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 - DROP",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=94c30e27-5495-4c5c-83db-1ca88ff97e7d"
+       "id": "document:ibabs:gemeente:utrecht:cfd2ed04-b02e-4bce-825d-b50c786df37f",
+       "name": "Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 - DROP (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cfd2ed04-b02e-4bce-825d-b50c786df37f"
       },
       {
-       "id": "document:ibabs:gemeente:utrecht:959d2dd6-4c06-475f-a3d4-b4fa341f645b",
-       "name": "Overzicht van de wijzigingen APV (was-wordt lijst)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=959d2dd6-4c06-475f-a3d4-b4fa341f645b"
+       "id": "document:ibabs:gemeente:utrecht:4b341049-9582-4a96-9417-a5ce60f5e84f",
+       "name": "Overzicht van de wijzigingen APV (was-wordt lijst) (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4b341049-9582-4a96-9417-a5ce60f5e84f"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:913616c7-038d-4c48-9957-910eb8fe5a02",
        "name": "Evaluatierapport aanpak overlastgevende harddrugsgebruikers 30juni2026",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=913616c7-038d-4c48-9957-910eb8fe5a02"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:75e924f6-a7d0-4225-83ab-782f1b05fefd",
+       "name": "MET WIJZIGING Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 (p2)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=75e924f6-a7d0-4225-83ab-782f1b05fefd"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:3b651362-29bf-4c34-a7f1-8eba460d3d38",
+       "name": "MET WIJZIGING Overzicht van de wijzigingen APV (was-wordt lijst) (p9)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3b651362-29bf-4c34-a7f1-8eba460d3d38"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:0381f49c-cefa-44ce-a5b9-952f50f6854e",
@@ -649,9 +669,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:dd1e5bcb-4a5d-45f1-ad15-b4843c441935",
+       "id": "document:ibabs:gemeente:utrecht:efb8f122-f4f5-4619-b569-2d15e128f182",
        "name": "Dossier 5343 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dd1e5bcb-4a5d-45f1-ad15-b4843c441935"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=efb8f122-f4f5-4619-b569-2d15e128f182"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:81c51d4a-fc63-4a01-8e66-7037cd0ab98a",
@@ -672,9 +692,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:6ee1c02b-850a-4cec-b882-7e62dc51f374",
+       "id": "document:ibabs:gemeente:utrecht:4fd641be-6394-4f4b-8466-1775117b081d",
        "name": "Dossier 5394 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6ee1c02b-850a-4cec-b882-7e62dc51f374"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4fd641be-6394-4f4b-8466-1775117b081d"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:076d1329-cdac-4416-9765-2e7d0a299e72",
@@ -716,9 +736,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:e6cf6df1-714d-4a9a-9f7b-049e8bada68f",
+       "id": "document:ibabs:gemeente:utrecht:1b8dbbb8-ec17-423f-87c6-ca48b7e6b5d9",
        "name": "Dossier 5389 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e6cf6df1-714d-4a9a-9f7b-049e8bada68f"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1b8dbbb8-ec17-423f-87c6-ca48b7e6b5d9"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:8ebcee1f-f0f2-4465-a49d-4b0448872cd2",
@@ -744,9 +764,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:568f2375-6f61-4ca4-a895-c6dab2755ae6",
+       "id": "document:ibabs:gemeente:utrecht:2a5e6ebc-661d-4ad6-8de1-3deb6d6d63ec",
        "name": "Dossier 5390 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=568f2375-6f61-4ca4-a895-c6dab2755ae6"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2a5e6ebc-661d-4ad6-8de1-3deb6d6d63ec"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:3af86d59-f976-473a-a03a-91b0e69e135c",
@@ -772,9 +792,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:0ef850ab-dff1-459f-ab71-f18248fc3b96",
+       "id": "document:ibabs:gemeente:utrecht:e7baa882-61eb-4736-8a13-4c04c21d89ba",
        "name": "Dossier 5387 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0ef850ab-dff1-459f-ab71-f18248fc3b96"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e7baa882-61eb-4736-8a13-4c04c21d89ba"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:917d99ba-3da9-420e-a141-48f1b3f416f4",
@@ -3584,6 +3604,182 @@
    ],
    "name": "Gemeenteraad",
    "start_date": "2026-07-09T08:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:a3b633b1-9898-4f44-8bbd-d8ef75b9be88": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:7eee31d3-fad6-40aa-af15-0fafb8a57483",
+       "name": "Raadsvoorstel Vaststellen Omgevingsvisie Lage Weide 2040",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7eee31d3-fad6-40aa-af15-0fafb8a57483"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:681e8944-c9ee-4c00-8977-40bb30bf4e34",
+       "name": "Omgevingsvisie Lage Weide",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=681e8944-c9ee-4c00-8977-40bb30bf4e34"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e62acb7e-fb77-4215-8c0f-6740a94d946d",
+       "name": "Reactienota Omgevingsvisie Lage Weide",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e62acb7e-fb77-4215-8c0f-6740a94d946d"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:4afe2958-3c98-4e0b-a61d-4188d9888e4e",
+     "is_heading": false,
+     "title": "Raadsvoorstel Vaststelling Omgevingsvisie Lage Weide"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
+       "name": "Raadsvoorstel Wijziging van de APV Utrecht partiële herziening 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9f75d26f-a73f-4116-8426-0a9055ef397c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:cf6af614-5206-4916-9193-df2224d7d084",
+       "name": "Raadsbrief Evaluatieonderzoek harddrugsverbod",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf6af614-5206-4916-9193-df2224d7d084"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:cfd2ed04-b02e-4bce-825d-b50c786df37f",
+       "name": "Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 - DROP (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cfd2ed04-b02e-4bce-825d-b50c786df37f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:4b341049-9582-4a96-9417-a5ce60f5e84f",
+       "name": "Overzicht van de wijzigingen APV (was-wordt lijst) (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4b341049-9582-4a96-9417-a5ce60f5e84f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:913616c7-038d-4c48-9957-910eb8fe5a02",
+       "name": "Evaluatierapport aanpak overlastgevende harddrugsgebruikers 30juni2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=913616c7-038d-4c48-9957-910eb8fe5a02"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:75e924f6-a7d0-4225-83ab-782f1b05fefd",
+       "name": "MET WIJZIGING Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 (p2)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=75e924f6-a7d0-4225-83ab-782f1b05fefd"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:3b651362-29bf-4c34-a7f1-8eba460d3d38",
+       "name": "MET WIJZIGING Overzicht van de wijzigingen APV (was-wordt lijst) (p9)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3b651362-29bf-4c34-a7f1-8eba460d3d38"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:093e7692-0d9d-4c1e-acf8-f2e6d5f5d1fc",
+     "is_heading": false,
+     "title": "Raadsvoorstel partiële APV herziening 2026"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:65876996-6cb4-4ed3-8baa-5bf89574767d",
+       "name": "Raadsvoorstel Vaststellen IPvEFO Fietsverbinding Boorstraat, Kredietaanvraag Fietsverbinding Boorstraat",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=65876996-6cb4-4ed3-8baa-5bf89574767d"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:64adec56-6618-44ef-b462-30cdfba79730",
+       "name": "IPvE FO Fietsverbinding Fietsverbinding Boorstraat",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=64adec56-6618-44ef-b462-30cdfba79730"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8c1ea987-16be-4a8d-ac1a-9236d9583c62",
+       "name": "Samenwerkingsverslag Fietsverbinding Boorstraat",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8c1ea987-16be-4a8d-ac1a-9236d9583c62"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:303e9543-f6c2-4c48-9b92-d04e620cb322",
+       "name": "UOB_Documentenoverzicht Fietsverbinding Boorstraat",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=303e9543-f6c2-4c48-9b92-d04e620cb322"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:919752db-9f41-490b-8c9e-0fc2c633b57b",
+     "is_heading": false,
+     "title": "Raadsvoorstel Vaststellen IPvE/FO Fietsverbinding Boorstraat, Kredietaanvraag Fietsverbinding Boorstraat"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:a2222451-2217-4991-84eb-b94047847535",
+       "name": "Raadsvoorstel delegatiebesluit omgevingsplanwijziging tunnel Boorstraat",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a2222451-2217-4991-84eb-b94047847535"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:3a660254-f7ec-4225-863b-809e6492d12a",
+       "name": "Besluit tot wijziging van Delegatiebesluit Omgevingswet gemeente Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3a660254-f7ec-4225-863b-809e6492d12a"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:016f7e38-18c1-41fd-984b-e9175111453a",
+       "name": "Bijlage Geografische afbakening",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=016f7e38-18c1-41fd-984b-e9175111453a"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:ddcfda06-0b0e-4532-afe0-db38375c8cde",
+     "is_heading": false,
+     "title": "Raadsvoorstel Wijzigen Delegatiebesluit voor omgevingsplanwijziging langzaamverkeersverbinding (tunnel) Boorstraat"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:89649566-b786-43aa-bbb4-2cf77b57d65b",
+       "name": "Raadsvoorstel Reactie aan VRU over Regionaal Risiciprofiel, beleidsplan en oprichten stichting KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=89649566-b786-43aa-bbb4-2cf77b57d65b"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:6b0402a9-d59a-4989-9963-2922576fb67d",
+       "name": "Bijlage bij reactiebrief aan VRU over Regionaal Risiciprofiel, beleidsplan en oprichten stichting KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6b0402a9-d59a-4989-9963-2922576fb67d"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:ab91b95f-5775-4ff0-9aca-34ee2bc24965",
+       "name": "Reactiebrief aan VRU over RRP 2027 bestuursagenda 2027 - 2030 en oprichting stichting KCR2 (september 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ab91b95f-5775-4ff0-9aca-34ee2bc24965"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:aca4fcfb-ab8e-486a-88d0-2e4fb1b09b4c",
+       "name": "Aanbiedingsbrief gemeenteraden ontwerp-Regionaal Risicoprofiel 2027 (inclusief uitgangspunten beleidsagenda)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=aca4fcfb-ab8e-486a-88d0-2e4fb1b09b4c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:a61b69a6-b699-4b63-9b24-1dd6f358a117",
+       "name": "Ontwerp Regionaal Risicoprofiel VRU 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a61b69a6-b699-4b63-9b24-1dd6f358a117"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:90adbe85-38f6-4b9a-8946-c4ea6f3461b9",
+       "name": "Bijlagen Ontwerp Regionaal Risicoprofiel VRU 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=90adbe85-38f6-4b9a-8946-c4ea6f3461b9"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:83e15c48-fb9d-4cfb-8a55-489a8a532f75",
+       "name": "Aanbiedingsbrief deelname stichting KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=83e15c48-fb9d-4cfb-8a55-489a8a532f75"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:bea6334f-3dd1-4683-a468-c90377122b1f",
+       "name": "Modelontwerpbesluit oprichting RWT KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bea6334f-3dd1-4683-a468-c90377122b1f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:97f7a630-b015-4dc5-9a62-6516005c1411",
+       "name": "MET WIJZIGINGEN Reactiebrief aan VRU over RRP 2027 bestuursagenda 2027 - 2030 en oprichting stichting KCR2",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=97f7a630-b015-4dc5-9a62-6516005c1411"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:e1c31b48-f126-4957-a2c7-2672e4a9cc04",
+     "is_heading": false,
+     "title": "Raadsvoorstel VRU: Reactie ontwerp regionaal risicoprofiel (RRP) 2027, wensen bestuursagenda 2027 – 2030 en wensen en bedenkingen voor stichting Knooppunt Coördinatie Rijk-Regio’s (KCR2)"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-10-04T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:bf97c6c7-fee3-456e-b609-11cd2512ea9b": {
    "agenda": [
