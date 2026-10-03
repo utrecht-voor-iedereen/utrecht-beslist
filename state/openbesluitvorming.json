@@ -1,5 +1,5 @@
 {
- "cursor": "104196",
+ "cursor": "104296",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -826,52 +826,6 @@
    ],
    "name": "Gemeenteraad",
    "start_date": "2026-10-01T08:00:00Z"
-  },
-  "meeting:ibabs:gemeente:utrecht:054f5385-85b7-4ae3-bc97-c156095908a3": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:31135be8-039e-418c-b217-23723eb48423",
-     "is_heading": false,
-     "title": "Opening"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:250469b0-2e49-4a03-9d25-268d1fda25f0",
-     "is_heading": false,
-     "title": "Vaststellen agenda 4 juni 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:76343c43-4317-4633-897a-721fa452858e",
-       "name": "Brief gemeenteraad over vervolg formatie 28 mei 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=76343c43-4317-4633-897a-721fa452858e"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:970aafd8-b4b8-4b9d-8a3a-4660aa143a1a",
-     "is_heading": false,
-     "title": "Brief gemeenteraad over vervolg formatie 28 mei 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:7654b884-d3fb-4f1e-af03-8e10a96f5383",
-       "name": "Brief Stand van zaken formatie 20 mei 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7654b884-d3fb-4f1e-af03-8e10a96f5383"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:e8db07b7-9c9e-4ced-922f-563c2ab7deb0",
-     "is_heading": false,
-     "title": "Brief Stand van zaken formatie 20 mei 2026"
-    }
-   ],
-   "name": "Gemeenteraad",
-   "start_date": "2026-06-04T18:30:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:05c8d947-5910-43e3-a4f6-0e674a5d27f1": {
    "agenda": [
