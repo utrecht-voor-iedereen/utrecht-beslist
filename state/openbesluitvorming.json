@@ -1,5 +1,5 @@
 {
- "cursor": "104299",
+ "cursor": "104384",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -54,6 +54,11 @@
        "id": "document:ibabs:gemeente:utrecht:4ea1e55f-26bf-4248-bedf-961000849649",
        "name": "Overzicht geheimhouding - gemeenteraad 1 oktober 2026",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4ea1e55f-26bf-4248-bedf-961000849649"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:2d3954bf-157d-4019-8ed3-54a78b6b07b9",
+       "name": "Raadsbesluit Opheffing geheimhouding 1 oktober 2026 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2d3954bf-157d-4019-8ed3-54a78b6b07b9"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:9da32543-0040-41d4-9048-1e33e195a0de",
@@ -98,6 +103,11 @@
        "id": "document:ibabs:gemeente:utrecht:e3976858-c94a-4c36-9a96-6caf6ff5fb37",
        "name": "Raadsbesluit Benoeming commissieleden 1 oktober 2026",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e3976858-c94a-4c36-9a96-6caf6ff5fb37"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8f7bd083-2d30-4f56-a567-3f4e95fd6693",
+       "name": "Raadsbesluit Benoeming commissieleden 1 oktober 2026 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8f7bd083-2d30-4f56-a567-3f4e95fd6693"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:c89adb75-c074-4a6a-ac95-dc41a918c7ad",
@@ -111,6 +121,11 @@
        "id": "document:ibabs:gemeente:utrecht:7ebdd7e0-168e-4de0-b267-cf25910e6fd0",
        "name": "Raadsvoorstel benoemen lid adviescommissie participatie",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7ebdd7e0-168e-4de0-b267-cf25910e6fd0"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:26e0fc9f-e459-45a7-90ee-abaa1472429e",
+       "name": "Raadsbesluit benoeming lid Adviescommissie Participatie (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=26e0fc9f-e459-45a7-90ee-abaa1472429e"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:86fded17-5632-47cf-98e8-3dc2302698a5",
@@ -121,9 +136,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:3b4190cc-0851-4427-8875-64ebaaa535c3",
+       "id": "document:ibabs:gemeente:utrecht:71848e10-5e2d-4c42-80b3-c34d31833038",
        "name": "Dossier 5404 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3b4190cc-0851-4427-8875-64ebaaa535c3"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=71848e10-5e2d-4c42-80b3-c34d31833038"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d4229ba7-3ee0-4705-8620-299b3021d8ff",
@@ -154,6 +169,11 @@
        "id": "document:ibabs:gemeente:utrecht:d95502d1-40a4-4206-8859-2a6b9a2fa188",
        "name": "Reactiebrief college met advies voorgenomen besturenfusie SPO Utrecht en SOZKO",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d95502d1-40a4-4206-8859-2a6b9a2fa188"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:50f9b0ff-2bd4-481a-8ea8-8a336a0043ac",
+       "name": "Raadsbesluit Statutenwijziging Stichting Openbaar Primair Onderwijs Utrecht (SPO) Utrecht (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=50f9b0ff-2bd4-481a-8ea8-8a336a0043ac"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:6113e7f4-1897-4787-ada6-c730523ac554",
@@ -207,6 +227,11 @@
        "id": "document:ibabs:gemeente:utrecht:7a4ba80f-e249-42fc-9bc8-f0575ccde679",
        "name": "MET WIJZIGINGEN p 52-54 TAM-omgevingsplan Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan_Motivering wijzigingsbesluit",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7a4ba80f-e249-42fc-9bc8-f0575ccde679"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:84d8867c-337c-4547-9968-a2499ea3943c",
+       "name": "Raadsbesluit Vaststelling Tijdelijke Alternatieve Maatregel (TAM-) omgevingsplan ‘Jan van Galenstraat-Huizingalaan-Van Ginnekenlaan (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=84d8867c-337c-4547-9968-a2499ea3943c"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:9804cfd4-177c-40c3-a489-397c143b5cfe",
@@ -230,6 +255,11 @@
        "id": "document:ibabs:gemeente:utrecht:405ab03f-f522-49cc-8071-dda5b86672a1",
        "name": "Overzicht van de wijzigingen in Verordening leges gemeente Utrecht 2026 (WAS-WORDT lijst)",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=405ab03f-f522-49cc-8071-dda5b86672a1"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f126f26e-24df-49f5-8ced-16125c87894f",
+       "name": "Raadsbesluit Technische wijziging legesverordening 2026 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f126f26e-24df-49f5-8ced-16125c87894f"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:c35e3654-e249-4682-99b7-927c798d4300",
@@ -240,9 +270,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:a9530b8a-ee4a-46c6-9a3c-83538ecd294c",
+       "id": "document:ibabs:gemeente:utrecht:59e0d2d9-a7c4-48be-b563-0f332a45a066",
        "name": "Dossier 5358 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a9530b8a-ee4a-46c6-9a3c-83538ecd294c"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=59e0d2d9-a7c4-48be-b563-0f332a45a066"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401",
@@ -258,6 +288,11 @@
        "id": "document:ibabs:gemeente:utrecht:055e0058-fac0-4123-80a0-8c3f0233682f",
        "name": "Brief weging zienswijzen 30 april 2026 getekend",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=055e0058-fac0-4123-80a0-8c3f0233682f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:38fcfb44-79e3-4dc7-b514-835a04ca8733",
+       "name": "Raadsbesluit Toestemming wijziging Gemeenschappelijke Regeling Belastingsamenwerking gemeenten & hoogheemraadschap Utrecht (BghU) (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=38fcfb44-79e3-4dc7-b514-835a04ca8733"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:ad7ad669-66b3-4931-afc9-12557de2bb66",
@@ -268,9 +303,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:a6351fd2-2a3e-4ed7-a38f-245d2d89f9b9",
+       "id": "document:ibabs:gemeente:utrecht:6b4e045d-5d3e-4785-a21e-d3a1fa282758",
        "name": "Dossier 5450 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a6351fd2-2a3e-4ed7-a38f-245d2d89f9b9"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6b4e045d-5d3e-4785-a21e-d3a1fa282758"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:89649566-b786-43aa-bbb4-2cf77b57d65b",
@@ -316,6 +351,11 @@
        "id": "document:ibabs:gemeente:utrecht:97f7a630-b015-4dc5-9a62-6516005c1411",
        "name": "MET WIJZIGINGEN Reactiebrief aan VRU over RRP 2027 bestuursagenda 2027 - 2030 en oprichting stichting KCR2",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=97f7a630-b015-4dc5-9a62-6516005c1411"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:5cac0bb9-eb9e-468a-9589-12d341b89982",
+       "name": "Raadsbesluit Veiligheidsregio Utrecht Reactie ontwerp regionaal risicoprofiel (RRP) 2027, wensen bestuursagenda 2027 – 2030 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5cac0bb9-eb9e-468a-9589-12d341b89982"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:b9c91a8c-ec8c-4c5d-a2b4-ab896babc46d",
@@ -401,9 +441,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:cb0e3e9d-5ea5-4c63-b31d-5f519d661ffa",
+       "id": "document:ibabs:gemeente:utrecht:1159fab9-699f-4fd9-bcb6-5e90d742638d",
        "name": "Dossier 5432 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cb0e3e9d-5ea5-4c63-b31d-5f519d661ffa"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1159fab9-699f-4fd9-bcb6-5e90d742638d"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:402b89d0-b466-4449-8ebb-86ba48318de3",
@@ -487,6 +527,11 @@
        "id": "document:ibabs:gemeente:utrecht:87445659-88b0-40cd-8e40-3e27f4e5a181",
        "name": "concept positief bindend advies zonneveld A12 DEF",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=87445659-88b0-40cd-8e40-3e27f4e5a181"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:cd294789-89d3-48e2-9d75-f36e813944b0",
+       "name": "Positief Bindend Advies Zonnepark Geluidswal A12 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cd294789-89d3-48e2-9d75-f36e813944b0"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:d7f4fe9a-de76-458e-bc64-d700796bccb1",
@@ -520,6 +565,11 @@
        "id": "document:ibabs:gemeente:utrecht:02808f43-08f9-47e0-afaf-35673562a7bf",
        "name": "Concept Beleidsregel kwijtschelding canonverhoging bij canonherziening einde erfpachttijdvak",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=02808f43-08f9-47e0-afaf-35673562a7bf"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:611b85b9-a272-4629-acf9-8a59397b685c",
+       "name": "Raadsbesluit Vaststellen Algemene Bepalingen erfpacht 1974, herziene versie (2026) (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=611b85b9-a272-4629-acf9-8a59397b685c"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:d279871e-0d5e-4bec-9b26-7436bc880399",
@@ -530,9 +580,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:4d22bb66-8cc4-4d0e-9e40-4cbab0538933",
+       "id": "document:ibabs:gemeente:utrecht:1ac77292-9f8b-4a6b-9919-e5d4ebcdb2b0",
        "name": "Dossier 5357 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4d22bb66-8cc4-4d0e-9e40-4cbab0538933"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1ac77292-9f8b-4a6b-9919-e5d4ebcdb2b0"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d1ae352d-f6f3-42e4-878e-974641e5adf3",
@@ -563,6 +613,11 @@
        "id": "document:ibabs:gemeente:utrecht:f2401f83-4639-4023-b0bd-f6dd91da035f",
        "name": "Samenwerkingsverslag UMCU herontwikkeling noordzijde",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f2401f83-4639-4023-b0bd-f6dd91da035f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:a71a3f74-7806-46ac-b300-961695c3a5f2",
+       "name": "Raadsbesluit Vaststelling Stedenbouwkundig Programma van Eisen Herontwikkeling UMC Utrecht, noordzijde en Beleidsregel (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a71a3f74-7806-46ac-b300-961695c3a5f2"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:e3a6ccf3-fc7b-401e-8a18-480fdb0964ef",
@@ -573,9 +628,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:23dcff04-13bf-4320-b195-28c2cc57cbd9",
+       "id": "document:ibabs:gemeente:utrecht:a642331e-7e60-4cd5-a155-17d5188f40c9",
        "name": "Dossier 5396 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=23dcff04-13bf-4320-b195-28c2cc57cbd9"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a642331e-7e60-4cd5-a155-17d5188f40c9"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9b0de3b1-b321-4fe1-b312-c3f2b520e94b",
@@ -611,6 +666,11 @@
        "id": "document:ibabs:gemeente:utrecht:7dae688b-4e07-4a3e-b058-b2c068c45343",
        "name": "MET WIJZIGINGEN Raadsvoorstel Wijziging Delegatiebesluit Omgevingswet voor herontwikkeling UMC Utrecht, noordzijde",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7dae688b-4e07-4a3e-b058-b2c068c45343"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1b5c4b18-6461-4ccc-b7c4-a41248d5f9dc",
+       "name": "Raadsbesluit Wijziging Delegatiebesluit Omgevingswet voor herontwikkeling UMC Utrecht, noordzijde (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1b5c4b18-6461-4ccc-b7c4-a41248d5f9dc"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:0ea00400-569d-46e1-9979-8d1404821bb8",
@@ -621,9 +681,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:6e77a29d-c6e2-4e30-ad08-ee0ff93272cb",
+       "id": "document:ibabs:gemeente:utrecht:75651a9d-62f0-4e57-a636-080873846560",
        "name": "Dossier 5397 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6e77a29d-c6e2-4e30-ad08-ee0ff93272cb"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=75651a9d-62f0-4e57-a636-080873846560"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
@@ -659,6 +719,11 @@
        "id": "document:ibabs:gemeente:utrecht:3b651362-29bf-4c34-a7f1-8eba460d3d38",
        "name": "MET WIJZIGING Overzicht van de wijzigingen APV (was-wordt lijst) (p9)",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3b651362-29bf-4c34-a7f1-8eba460d3d38"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:556c923b-42be-422d-84f8-8f26a5e3dc12",
+       "name": "Raadsbesluit Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010, partiële herziening 2026 (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=556c923b-42be-422d-84f8-8f26a5e3dc12"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:0381f49c-cefa-44ce-a5b9-952f50f6854e",
@@ -669,9 +734,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:55ff653b-4eaa-4e2a-8942-a15501970507",
+       "id": "document:ibabs:gemeente:utrecht:11cd3893-7fcc-4d27-a3f4-307dbe7249a2",
        "name": "Dossier 5343 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=55ff653b-4eaa-4e2a-8942-a15501970507"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=11cd3893-7fcc-4d27-a3f4-307dbe7249a2"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:81c51d4a-fc63-4a01-8e66-7037cd0ab98a",
@@ -692,9 +757,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:3a12ff7c-a51f-4c8e-8ea4-d7b8102a8750",
+       "id": "document:ibabs:gemeente:utrecht:71869b17-39fa-4156-b718-15787c392d13",
        "name": "Dossier 5394 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3a12ff7c-a51f-4c8e-8ea4-d7b8102a8750"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=71869b17-39fa-4156-b718-15787c392d13"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:076d1329-cdac-4416-9765-2e7d0a299e72",
@@ -736,9 +801,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:d78b68cf-a04b-4725-910d-573c1ec416d1",
+       "id": "document:ibabs:gemeente:utrecht:14a2c4bf-b352-4a07-8074-df8d5475402f",
        "name": "Dossier 5389 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d78b68cf-a04b-4725-910d-573c1ec416d1"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=14a2c4bf-b352-4a07-8074-df8d5475402f"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:8ebcee1f-f0f2-4465-a49d-4b0448872cd2",
@@ -764,9 +829,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:ccb606da-841d-4ad4-81f0-3e4be25c66dd",
+       "id": "document:ibabs:gemeente:utrecht:a88764f6-0495-4ef4-8b9a-83459efe72f9",
        "name": "Dossier 5390 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ccb606da-841d-4ad4-81f0-3e4be25c66dd"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a88764f6-0495-4ef4-8b9a-83459efe72f9"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:3af86d59-f976-473a-a03a-91b0e69e135c",
@@ -792,9 +857,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:b6608249-7afa-43c0-9b4c-c6938b79a9ec",
+       "id": "document:ibabs:gemeente:utrecht:7a3f2d0e-063e-4b90-82bc-a819c7d867e9",
        "name": "Dossier 5387 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b6608249-7afa-43c0-9b4c-c6938b79a9ec"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7a3f2d0e-063e-4b90-82bc-a819c7d867e9"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:917d99ba-3da9-420e-a141-48f1b3f416f4",
@@ -898,116 +963,6 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-09-13T00:00:00Z"
-  },
-  "meeting:ibabs:gemeente:utrecht:11571f33-04c1-4623-99fa-c29d874b85ed": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:f291d1c4-23ec-4b4c-94d4-a408ce219a9d",
-       "name": "Raadsvoorstel Vaststellen TAM-omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6 (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f291d1c4-23ec-4b4c-94d4-a408ce219a9d"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:954774cd-13ed-47de-8beb-bf9dcb49c96f",
-       "name": "Vaststellingsrapport TAM-omgevingsplan extra woningen in Cartesiusdriehoek (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=954774cd-13ed-47de-8beb-bf9dcb49c96f"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:52718b9b-d215-4209-a5ce-69d91f5fa54d",
-       "name": "TAM-omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6 (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=52718b9b-d215-4209-a5ce-69d91f5fa54d"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:6e5c0663-c1b6-47b3-9118-d48042f5894a",
-       "name": "Verbeelding TAM-omgevingsplan meer woningen in Cartesiusdriehoek, fase 2-6",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6e5c0663-c1b6-47b3-9118-d48042f5894a"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:6751db27-7a21-4596-9b45-c69f2d75db1f",
-       "name": "Link naar digitale versie TAM-omgevingsplan extra woningen in Cartesiusdriehoek op RO-publiceer (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6751db27-7a21-4596-9b45-c69f2d75db1f"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:cf5f9fc4-23aa-4b4c-aa43-fe6a153366e3",
-       "name": "Samenwerkingsplan meer woningen Cartesius",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf5f9fc4-23aa-4b4c-aa43-fe6a153366e3"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:4c7ba5f1-1f98-4871-a1d2-31758e4d6b67",
-       "name": "Samenwerkingsverslag meer woningen Cartesius",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4c7ba5f1-1f98-4871-a1d2-31758e4d6b67"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:8deaceed-b20d-4731-a544-d546ca173b99",
-       "name": "MET WIJZIGINGEN Raadsvoorstel Vaststellen TAM-omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6 (na cie Ruimte)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8deaceed-b20d-4731-a544-d546ca173b99"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:def07884-bcad-4031-863c-0da4664b61c7",
-       "name": "MET WIJZIGINGEN Vaststellingsrapport TAM-omgevingsplan extra woningen in Cartesiusdriehoek (na cie Ruimte)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=def07884-bcad-4031-863c-0da4664b61c7"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:923f4b92-763a-49da-86c3-48229f6e5c14",
-       "name": "MET WIJZIGINGEN TAM-omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6 (na cie Ruimte)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=923f4b92-763a-49da-86c3-48229f6e5c14"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:de80ec72-ddfa-40e1-b24f-23af83b1b0da",
-     "is_heading": false,
-     "title": "Raadsvoorstel Vaststellen TAM omgevingsplan extra woningen in Cartesiusdriehoek, fase 2-6"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:b5ed6309-8a04-4253-b0a3-99c2930d9680",
-       "name": "Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juni 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b5ed6309-8a04-4253-b0a3-99c2930d9680"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:3f28de13-fbb0-448d-b012-799122fcb59e",
-     "is_heading": false,
-     "title": "Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juni 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955",
-       "name": "Raadsvoorstel Verordening maatschappelijke ondersteuning 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7512699c-be49-4135-9fc2-dcce0e58a0a0",
-       "name": "Verordening maatschappelijke ondersteuning gemeente Utrecht 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7512699c-be49-4135-9fc2-dcce0e58a0a0"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:3014a6d9-6b6c-4c12-8e25-2dc43698c8c3",
-       "name": "Bijlage Toelichting bij Verordening maatschappelijke ondersteuning gemeente Utrecht 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3014a6d9-6b6c-4c12-8e25-2dc43698c8c3"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:25b7daa3-da8b-4ef5-9f6c-d7ad3561609e",
-       "name": "Was-wordt lijst Wmo Verordening 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=25b7daa3-da8b-4ef5-9f6c-d7ad3561609e"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:c41f00c2-7c43-4094-9a83-8db36b124cb9",
-       "name": "Reactiebrief aan Wmo-cliëntenraad over Wmo Verordening 2027 (getekend)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c41f00c2-7c43-4094-9a83-8db36b124cb9"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:037c4deb-2e6e-4f06-b722-f58a3489e0fc",
-     "is_heading": false,
-     "title": "Raadsvoorstel Verordening maatschappelijke ondersteuning gemeente Utrecht 2027"
-    }
-   ],
-   "name": "Raadsvoorstellen weekoverzicht",
-   "start_date": "2026-06-07T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:128352b0-73a3-4645-8fdd-3960afcce201": {
    "agenda": [
@@ -4444,5 +4399,5 @@
    "start_date": "2026-09-20T00:00:00Z"
   }
  },
- "snapshot_at": "2026-09-28T14:53:43.351251+00:00"
+ "snapshot_at": "2026-10-06T12:14:22.337205+00:00"
 }
