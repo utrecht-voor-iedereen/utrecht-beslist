@@ -1,5 +1,5 @@
 {
- "cursor": "104384",
+ "cursor": "104531",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -3742,6 +3742,35 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-10-04T00:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:a7ca33d1-0ea3-4a21-8355-939023c40232": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:735dae90-0497-4eba-bd38-46d87bccadf3",
+       "name": "Raadsvoorstel Beleidsnota Veiligheidsagenda Utrecht 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=735dae90-0497-4eba-bd38-46d87bccadf3"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:46454970-52b9-4dba-8021-9bba1eb88cc8",
+       "name": "Raadsbrief Raadsvoorstel beleidsnota Veiligheidsagenda 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=46454970-52b9-4dba-8021-9bba1eb88cc8"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:d46cf487-ea50-48d1-bfc7-0f16cd88b676",
+       "name": "Beleidsnota Veiligheidsagenda Utrecht 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d46cf487-ea50-48d1-bfc7-0f16cd88b676"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:24ab2b83-7071-484d-84dd-5dd631a5cc2b",
+     "is_heading": false,
+     "title": "Raadsvoorstel Beleidsnota Veiligheidsagenda Utrecht 2027-2030"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-10-11T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:bf97c6c7-fee3-456e-b609-11cd2512ea9b": {
    "agenda": [
