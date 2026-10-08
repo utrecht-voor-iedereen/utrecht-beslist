@@ -1,5 +1,5 @@
 {
- "cursor": "104531",
+ "cursor": "104682",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -136,9 +136,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:71848e10-5e2d-4c42-80b3-c34d31833038",
+       "id": "document:ibabs:gemeente:utrecht:67952e9a-3658-4ff9-8d3b-f2dacf0fc35e",
        "name": "Dossier 5404 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=71848e10-5e2d-4c42-80b3-c34d31833038"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=67952e9a-3658-4ff9-8d3b-f2dacf0fc35e"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d4229ba7-3ee0-4705-8620-299b3021d8ff",
@@ -270,9 +270,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:59e0d2d9-a7c4-48be-b563-0f332a45a066",
+       "id": "document:ibabs:gemeente:utrecht:2a82ca28-b810-428a-9460-e7094ab01d12",
        "name": "Dossier 5358 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=59e0d2d9-a7c4-48be-b563-0f332a45a066"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2a82ca28-b810-428a-9460-e7094ab01d12"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:4a8d7808-9f1f-44dd-aa4e-89fdf3ccb401",
@@ -303,9 +303,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:6b4e045d-5d3e-4785-a21e-d3a1fa282758",
+       "id": "document:ibabs:gemeente:utrecht:1244f9ef-b2af-4956-8b98-2061ec3e2784",
        "name": "Dossier 5450 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6b4e045d-5d3e-4785-a21e-d3a1fa282758"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1244f9ef-b2af-4956-8b98-2061ec3e2784"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:89649566-b786-43aa-bbb4-2cf77b57d65b",
@@ -432,18 +432,39 @@
     },
     {
      "agenda_items": [],
-     "documents": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:d1cf80c6-a9d7-4c9b-9570-5f4ff1181c71",
+       "name": "Raadsvoorstel Voorbereidingsbesluit Dakkapellen zijkant en achterkant van woningen (1)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d1cf80c6-a9d7-4c9b-9570-5f4ff1181c71"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e4c30ba6-a8eb-4728-bd82-6117efd8f727",
+       "name": "Concept-voorbereidingsbesluit Dakkapellen zijkant en achterkant, bekendmaking gemeenteblad",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e4c30ba6-a8eb-4728-bd82-6117efd8f727"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:df2c6536-a58f-484f-ac02-c93e9f38f8e1",
+       "name": "Link naar voorbereidingsbesluit in Rx.Base",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=df2c6536-a58f-484f-ac02-c93e9f38f8e1"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:907d2122-f9f7-4ca4-8e99-d44ffe86f38a",
+       "name": "Raadsbesluit Voorbereidingsbesluit Dakkapellen zijkant en achterkant van woningen (toegevoegd op 5 oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=907d2122-f9f7-4ca4-8e99-d44ffe86f38a"
+      }
+     ],
      "id": "agenda_item:ibabs:gemeente:utrecht:253873ca-fa50-40dc-8fbe-bf6db0ae0492",
      "is_heading": false,
-     "title": "GEHEIM Raadsvoorstel uit de portefeuille Ruimtelijke Ontwikkeling"
+     "title": "Raadsvoorstel Voorbereidingsbesluit Dakkapellen zijkant en achterkant van woningen"
     },
     {
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:1159fab9-699f-4fd9-bcb6-5e90d742638d",
+       "id": "document:ibabs:gemeente:utrecht:c32f2ea9-bab3-4b63-9acf-d52c56f01615",
        "name": "Dossier 5432 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1159fab9-699f-4fd9-bcb6-5e90d742638d"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c32f2ea9-bab3-4b63-9acf-d52c56f01615"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:402b89d0-b466-4449-8ebb-86ba48318de3",
@@ -580,9 +601,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:1ac77292-9f8b-4a6b-9919-e5d4ebcdb2b0",
+       "id": "document:ibabs:gemeente:utrecht:882581f2-bb29-44a5-a1e8-513e774cc325",
        "name": "Dossier 5357 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1ac77292-9f8b-4a6b-9919-e5d4ebcdb2b0"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=882581f2-bb29-44a5-a1e8-513e774cc325"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:d1ae352d-f6f3-42e4-878e-974641e5adf3",
@@ -628,9 +649,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:a642331e-7e60-4cd5-a155-17d5188f40c9",
+       "id": "document:ibabs:gemeente:utrecht:6708abc6-9634-45b6-8992-64061f71e8f8",
        "name": "Dossier 5396 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a642331e-7e60-4cd5-a155-17d5188f40c9"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6708abc6-9634-45b6-8992-64061f71e8f8"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9b0de3b1-b321-4fe1-b312-c3f2b520e94b",
@@ -681,9 +702,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:75651a9d-62f0-4e57-a636-080873846560",
+       "id": "document:ibabs:gemeente:utrecht:5ae68e0a-d474-48e8-896a-7f4a7ae4259a",
        "name": "Dossier 5397 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=75651a9d-62f0-4e57-a636-080873846560"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5ae68e0a-d474-48e8-896a-7f4a7ae4259a"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
@@ -734,9 +755,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:11cd3893-7fcc-4d27-a3f4-307dbe7249a2",
+       "id": "document:ibabs:gemeente:utrecht:8a698325-1f55-4271-9f47-f29a8ff23224",
        "name": "Dossier 5343 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=11cd3893-7fcc-4d27-a3f4-307dbe7249a2"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8a698325-1f55-4271-9f47-f29a8ff23224"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:81c51d4a-fc63-4a01-8e66-7037cd0ab98a",
@@ -757,9 +778,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:71869b17-39fa-4156-b718-15787c392d13",
+       "id": "document:ibabs:gemeente:utrecht:f29b434c-70fa-4b25-a056-a34ff14b7490",
        "name": "Dossier 5394 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=71869b17-39fa-4156-b718-15787c392d13"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f29b434c-70fa-4b25-a056-a34ff14b7490"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:076d1329-cdac-4416-9765-2e7d0a299e72",
@@ -801,9 +822,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:14a2c4bf-b352-4a07-8074-df8d5475402f",
+       "id": "document:ibabs:gemeente:utrecht:a0418f7f-9cb7-44d7-8fe2-f82ab76d833f",
        "name": "Dossier 5389 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=14a2c4bf-b352-4a07-8074-df8d5475402f"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a0418f7f-9cb7-44d7-8fe2-f82ab76d833f"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:8ebcee1f-f0f2-4465-a49d-4b0448872cd2",
@@ -829,9 +850,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:a88764f6-0495-4ef4-8b9a-83459efe72f9",
+       "id": "document:ibabs:gemeente:utrecht:485cc953-64d0-4f0a-a7a4-a020df2b1f30",
        "name": "Dossier 5390 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a88764f6-0495-4ef4-8b9a-83459efe72f9"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=485cc953-64d0-4f0a-a7a4-a020df2b1f30"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:3af86d59-f976-473a-a03a-91b0e69e135c",
@@ -857,9 +878,9 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:7a3f2d0e-063e-4b90-82bc-a819c7d867e9",
+       "id": "document:ibabs:gemeente:utrecht:8b7cc074-77b4-4752-aa59-c2bf508ef537",
        "name": "Dossier 5387 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7a3f2d0e-063e-4b90-82bc-a819c7d867e9"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8b7cc074-77b4-4752-aa59-c2bf508ef537"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:917d99ba-3da9-420e-a141-48f1b3f416f4",
