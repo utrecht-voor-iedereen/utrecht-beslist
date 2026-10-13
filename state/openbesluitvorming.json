@@ -1,5 +1,5 @@
 {
- "cursor": "105238",
+ "cursor": "105305",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -1095,136 +1095,6 @@
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-07-12T00:00:00Z"
   },
-  "meeting:ibabs:gemeente:utrecht:13a4f847-22f6-4899-b8be-3dc03d8b35ce": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0",
-       "name": "Raadsvoorstel rekenkamerrapport 'Stof tot nadenken'",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:d5110695-98d0-4d17-aa00-6fdd307f33aa",
-       "name": "Rekenkamerrapport 'Stof tot nadenken'",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d5110695-98d0-4d17-aa00-6fdd307f33aa"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:57c55b3b-9a26-475e-ad6d-600b58311eb4",
-       "name": "Persbericht Stof tot nadenken",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=57c55b3b-9a26-475e-ad6d-600b58311eb4"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:78a154c2-d4e6-4fa5-9a89-72af5104f7e7",
-       "name": "Publiekssamenvatting Stof tot nadenken",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=78a154c2-d4e6-4fa5-9a89-72af5104f7e7"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:0092e419-4089-4451-b13e-170f7503fb73",
-       "name": "Infographic Stof tot nadenken",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0092e419-4089-4451-b13e-170f7503fb73"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:1cf6ede5-4eec-4e24-981e-ad97aca19d0e",
-       "name": "Tabellenboek telefonische enquête Stof tot nadenken",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1cf6ede5-4eec-4e24-981e-ad97aca19d0e"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:5b04d1a3-bcfa-456c-b0bc-d3ed4541d4a9",
-     "is_heading": false,
-     "title": "Raadsvoorstel Rekenkamerrapport 'Stof tot nadenken'"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:a1904cc0-e965-43e9-8f4c-0b2230d9433e",
-       "name": "Raadsvoorstel Zienswijze ontwerpbegroting 2027-2030 Het Utrechts Archief (HUA)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a1904cc0-e965-43e9-8f4c-0b2230d9433e"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:33a610c6-4ba9-4c27-8640-c1957afe11fa",
-       "name": "Reactiebrief zienswijze ontwerpbegroting 2027-2030 van Het Utrechts Archief (HUA) (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=33a610c6-4ba9-4c27-8640-c1957afe11fa"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2d5db105-be58-4c64-9f5b-eb8c4084f3a7",
-       "name": "HUA - Jaarverslag 2025",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2d5db105-be58-4c64-9f5b-eb8c4084f3a7"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:0d416837-d2f9-4570-8d26-4054edda6cff",
-       "name": "HUA - Kaderbrief 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0d416837-d2f9-4570-8d26-4054edda6cff"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:c6bc2eed-64c7-45dd-9acb-3c72a18654da",
-       "name": "HUA - Ontwerp Programmabegroting 2027 - 2030",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c6bc2eed-64c7-45dd-9acb-3c72a18654da"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7b1ff2e4-be73-4962-a962-57feb436af9d",
-       "name": "MET WIJZIGINGEN Reactiebrief zienswijze ontwerpbegroting 2027-2030 HUA (na cie Bestuur)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7b1ff2e4-be73-4962-a962-57feb436af9d"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:5dffa571-b5c5-430b-bf2d-1359ddde5a09",
-     "is_heading": false,
-     "title": "Raadsvoorstel zienswijze ontwerpbegroting 2027-2030 GR Het Utrechts Archief (HUA)"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:8439067a-f043-4cc5-8300-47a26950a923",
-       "name": "Raadsvoorstel Zienswijze jaarstukken 2025, geactualiseerde begroting 2026 en ontwerpbegroting 2027 VRU",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8439067a-f043-4cc5-8300-47a26950a923"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:fb7a32b7-353e-48b0-a60c-84ec435abc09",
-       "name": "Zienswijzebrief financiele stukken VRU (juni 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=fb7a32b7-353e-48b0-a60c-84ec435abc09"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:1a97fba5-eef3-43f9-8d96-0d32d8f996e6",
-       "name": "Aanbiedingsbrief voorlopige jaarstukken VRU 2025, ontwerpbegroting VRU 2027 en geactualiseerde begroting VRU 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1a97fba5-eef3-43f9-8d96-0d32d8f996e6"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7effd0ab-b466-4a86-bb0e-c8e3eea1794d",
-       "name": "Bijlage A - Voorlopige jaarstukken VRU 2025",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7effd0ab-b466-4a86-bb0e-c8e3eea1794d"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:5743f836-ff3e-46da-864a-2f1e491caa1d",
-       "name": "Bijlage B - Ontwerpbegroting VRU 2027 en geactualiseerde begroting VRU 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5743f836-ff3e-46da-864a-2f1e491caa1d"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:34f612d3-4f4b-406c-ac2f-b01ec490c0ef",
-       "name": "Bijlage C - Overzicht zienswijzen toekomstscenario's en kadernota VRU 2027",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=34f612d3-4f4b-406c-ac2f-b01ec490c0ef"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:b8b2bbcd-b962-4b4a-b49f-f5e418b853a7",
-       "name": "Bijlage D - Infographic jaaroverzicht VRU 2025",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b8b2bbcd-b962-4b4a-b49f-f5e418b853a7"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:c840130c-f650-4ce0-aaea-26dcf391b387",
-       "name": "MET WIJZIGINGEN Zienswijzebrief financiele stukken VRU (na commissie Bestuur)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c840130c-f650-4ce0-aaea-26dcf391b387"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:d7e3bd26-351d-4a6a-9696-a0adb1b034a9",
-     "is_heading": false,
-     "title": "Raadsvoorstel zienswijze VRU: jaarstukken '25, geactualiseerde begroting '26, ontwerpbegroting '27"
-    }
-   ],
-   "name": "Raadsvoorstellen weekoverzicht",
-   "start_date": "2026-06-14T00:00:00Z"
-  },
   "meeting:ibabs:gemeente:utrecht:1b568907-dc7d-4b64-927c-bb427595bcf1": {
    "agenda": [
     {
@@ -2103,6 +1973,50 @@
    ],
    "name": "Gemeenteraad",
    "start_date": "2026-07-16T08:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:4c3045ec-51ef-4376-b54e-bfaed393c673": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:3a0d44bf-22a5-44a8-a1b9-e04ca6067434",
+       "name": "Raadsvoorstel zienswijze begrotingswijziging 2026-1 GGDrU",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3a0d44bf-22a5-44a8-a1b9-e04ca6067434"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:dc31dd73-96e4-4aa5-b2a0-ee51ca1d4dba",
+       "name": "Zienswijzebrief begrotingswijzing GGDrU 2026-1",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dc31dd73-96e4-4aa5-b2a0-ee51ca1d4dba"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:ac0386a5-3031-469f-96f3-87719c6f6f22",
+       "name": "Brief GGDrU aan Raad Begrotingswijziging 2026-1",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ac0386a5-3031-469f-96f3-87719c6f6f22"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:14c09ad3-7577-4072-951f-1589b3f4a26c",
+       "name": "Ontwerp Begrotingswijziging GGDrU 2026-1",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=14c09ad3-7577-4072-951f-1589b3f4a26c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:684a3f8d-f569-45c5-a4ca-8b04443d3e81",
+       "name": "Bijlage bij (ontwerp)Begrotingswijziging GGDrU 2026-1 Gemeentebladen",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=684a3f8d-f569-45c5-a4ca-8b04443d3e81"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:9d4eb620-c32c-41b5-9abb-711e343ed180",
+       "name": "Samenwerkingsovereenkomst GGDrU en gemeente Utrecht 2026-2029",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9d4eb620-c32c-41b5-9abb-711e343ed180"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:cf7b97dc-aa29-4414-a7f0-e81a63bfae0b",
+     "is_heading": false,
+     "title": "Raadsvoorstel Zienswijze begrotingswijziging 2026-1 GGDrU"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-10-18T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:791887fe-4344-49f4-92d3-4200f9ce0685": {
    "agenda": [
@@ -3793,5 +3707,5 @@
    "start_date": "2026-09-20T00:00:00Z"
   }
  },
- "snapshot_at": "2026-10-06T12:14:22.337205+00:00"
+ "snapshot_at": "2026-10-13T12:58:17.073991+00:00"
 }
