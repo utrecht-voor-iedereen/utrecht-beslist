@@ -1,5 +1,5 @@
 {
- "cursor": "105374",
+ "cursor": "105418",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -1976,6 +1976,44 @@
   },
   "meeting:ibabs:gemeente:utrecht:4c3045ec-51ef-4376-b54e-bfaed393c673": {
    "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:133be2dc-9cd5-4626-bf18-ed2e584ca9ae",
+       "name": "Raadsvoorstel rekenkamerrapport Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=133be2dc-9cd5-4626-bf18-ed2e584ca9ae"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:64fa8c3f-3552-4a50-bfe4-ee114d5674be",
+       "name": "Rekenkamerrapport Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=64fa8c3f-3552-4a50-bfe4-ee114d5674be"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:179dd17e-e561-4e14-ae42-fc1c5c3e7401",
+       "name": "Aanbiedingsbrief gemeenteraad raadsvoorstel Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=179dd17e-e561-4e14-ae42-fc1c5c3e7401"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:493b0d63-2435-4caa-9e4d-1c53fa515992",
+       "name": "Publiekssamenvatting rapport Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=493b0d63-2435-4caa-9e4d-1c53fa515992"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f53391e7-9f77-4093-b737-729722598fbd",
+       "name": "Infographic Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f53391e7-9f77-4093-b737-729722598fbd"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e8865818-d78c-4f75-b645-8d8007b666f6",
+       "name": "Persbericht rapport Richting aangeven",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e8865818-d78c-4f75-b645-8d8007b666f6"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:376097e2-14bb-4058-ac56-635673a8e2e0",
+     "is_heading": false,
+     "title": "Raadsvoorstel Rekenkamerrapport 'Richting aangeven'"
+    },
     {
      "agenda_items": [],
      "documents": [
