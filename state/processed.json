@@ -1541,7 +1541,7 @@
       },
       {
         "name": "Dossier 5357 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=882581f2-bb29-44a5-a1e8-513e774cc325",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0d7d277b-e213-424f-aa7c-5c9f6901f67e",
         "size": 0
       }
     ],
@@ -1946,7 +1946,7 @@
       },
       {
         "name": "Dossier 5358 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2a82ca28-b810-428a-9460-e7094ab01d12",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b3eda8eb-b7ca-4ed4-88cd-d6b0017cc752",
         "size": 0
       }
     ],
@@ -2389,7 +2389,7 @@
       },
       {
         "name": "Dossier 5404 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=67952e9a-3658-4ff9-8d3b-f2dacf0fc35e",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6e73102f-381e-4a66-a515-753b619e0b28",
         "size": 0
       }
     ],
@@ -2544,7 +2544,7 @@
       },
       {
         "name": "Dossier 5396 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6708abc6-9634-45b6-8992-64061f71e8f8",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=99d16f78-10e6-4da4-a9af-052cc6a95279",
         "size": 0
       }
     ],
@@ -2699,8 +2699,13 @@
         "size": 0
       },
       {
+        "name": "Besluit tot wijziging van de APV Utrecht 2010 partiële herziening 2026 - DROP (september na verwerking amendement)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b4c59cd9-d8df-4c73-9437-d9d467a33f94",
+        "size": 0
+      },
+      {
         "name": "Dossier 5397 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5ae68e0a-d474-48e8-896a-7f4a7ae4259a",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a953670e-a51e-4366-ae0d-d0e77e455e3d",
         "size": 0
       }
     ],
@@ -2865,7 +2870,7 @@
       },
       {
         "name": "Dossier 5450 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1244f9ef-b2af-4956-8b98-2061ec3e2784",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c15de459-5394-4738-a753-837ba83211e1",
         "size": 0
       }
     ],
