@@ -1,5 +1,5 @@
 {
- "cursor": "105676",
+ "cursor": "105718",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -3464,6 +3464,40 @@
    "name": "Gemeenteraad",
    "start_date": "2026-07-02T08:15:00Z"
   },
+  "meeting:ibabs:gemeente:utrecht:de71df5a-96f1-42ee-854e-974009287f0c": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:1f513124-2ad5-4197-a2f4-7b49cdfec1a0",
+       "name": "Raadsvoorstel Programmabegroting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1f513124-2ad5-4197-a2f4-7b49cdfec1a0"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f80f3d23-c959-4b0b-abdc-0572f71e7d3a",
+       "name": "Programmabegroting 2027 (inclusief erratum oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f80f3d23-c959-4b0b-abdc-0572f71e7d3a"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:31fd1a8d-8340-4c66-be53-36dda9467dd2",
+       "name": "Subsidiestaat 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=31fd1a8d-8340-4c66-be53-36dda9467dd2"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:46274dac-5b3b-469d-8df5-c3d12acf8ee2",
+       "name": "Subsidiestaat 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=46274dac-5b3b-469d-8df5-c3d12acf8ee2"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:0bc28036-0f85-456d-9480-14349b45194a",
+     "is_heading": false,
+     "title": "Raadsvoorstel Programmabegroting 2027"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-10-25T00:00:00Z"
+  },
   "meeting:ibabs:gemeente:utrecht:e631034f-f86b-4d5a-a5f6-14c2ef8ed2c3": {
    "agenda": [
     {
@@ -3589,5 +3623,5 @@
    "start_date": "2026-09-20T00:00:00Z"
   }
  },
- "snapshot_at": "2026-10-13T12:58:17.073991+00:00"
+ "snapshot_at": "2026-10-21T10:37:18.349527+00:00"
 }
