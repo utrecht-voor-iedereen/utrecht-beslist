@@ -3,13 +3,13 @@ Unit tests for the pipeline's staleness diagnosis.
 """
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from scripts.pipeline import diagnose_staleness, drop_already_published
 
 
 def _today():
-    return datetime.now(timezone.utc).date().isoformat()
+    return datetime.now(UTC).date().isoformat()
 
 
 def test_quiet_council_with_a_working_import_is_a_recess():
