@@ -272,8 +272,8 @@ header {
 /* NoticeBox Component Pattern */
 .notice-box {
   background-color: var(--utrecht-blanco-tarjeta);
-  border: 1px solid var(--utrecht-borde-suave);
-  border-left: 4px solid var(--utrecht-rood);
+  /* Borde completo tintado de rood, sin franja lateral (patrón de plantilla). */
+  border: 1px solid color-mix(in srgb, var(--utrecht-rood) 35%, var(--utrecht-borde-suave));
   border-radius: var(--radius-sm);
   padding: 0.85rem 1.15rem;
   margin-top: 1.25rem;
@@ -578,6 +578,11 @@ header {
   justify-content: space-between;
   transition: var(--transition);
   animation: fadeInCard 0.25s ease-out forwards;
+  /* 333 tarjetas en la portada (7.100 nodos): el navegador se salta el pintado
+     de las que están fuera de pantalla. Siguen en el DOM, así que los filtros,
+     la búsqueda y el contador no cambian. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 340px;
 }
 
 .card:hover {
@@ -800,7 +805,6 @@ header {
 .bullet-list {
   background-color: var(--utrecht-crema-fondo);
   border: 1px solid var(--utrecht-borde-suave);
-  border-left: 3px solid var(--utrecht-rood);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
