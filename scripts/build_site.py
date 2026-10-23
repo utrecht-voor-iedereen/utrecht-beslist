@@ -9,7 +9,7 @@ import logging
 import os
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from xml.sax.saxutils import escape
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -54,7 +54,7 @@ env.globals["over_hero"] = over_hero
 # Build day, for marking meetings that have not happened yet. app.js removes
 # the mark once the day passes, so a day without a rebuild does not leave it
 # on a meeting already held.
-env.globals["today"] = datetime.now(timezone.utc).date().isoformat()
+env.globals["today"] = datetime.now(UTC).date().isoformat()
 env.globals["over_sections"] = over_sections
 
 
