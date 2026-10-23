@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon %}
 
 {% block hero %}
 <section class="hero-banner">
@@ -165,14 +166,14 @@
 
     <div class="card-footer">
       <span style="font-size: 0.82rem; font-weight: 600; color: var(--utrecht-gris-secundario);">
-        📄 {{ t("council_doc", lang) }} #{{ item.doc_id }}
+        {{ icon("file") }} {{ t("council_doc", lang) }} #{{ item.doc_id }}
       </span>
       
       <div class="card-actions">
         <a href="{{ detail_link }}" class="pdf-link">
-          📄 {{ t("view_details", lang) }} ➔
+          {{ icon("file") }} {{ t("view_details", lang) }} {{ icon("arrow-right") }}
         </a>
-        <button class="share-btn" data-share-title="{{ title_text }}" data-share-url="{{ item.pdf_url or '' }}">🔗 {{ t("share", lang) }}</button>
+        <button class="share-btn" data-share-title="{{ title_text }}" data-share-url="{{ item.pdf_url or '' }}">{{ icon("share") }} {{ t("share", lang) }}</button>
       </div>
     </div>
   </article>
