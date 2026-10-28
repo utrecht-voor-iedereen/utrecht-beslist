@@ -1,5 +1,5 @@
 {
- "cursor": "105886",
+ "cursor": "105917",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -3623,5 +3623,5 @@
    "start_date": "2026-09-20T00:00:00Z"
   }
  },
- "snapshot_at": "2026-10-21T10:37:18.349527+00:00"
+ "snapshot_at": "2026-10-28T11:40:07.464058+00:00"
 }
