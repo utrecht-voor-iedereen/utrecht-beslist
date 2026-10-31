@@ -4004,7 +4004,7 @@
       "Overig"
     ],
     "impact": "hoog",
-    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a7e1eb40-35c5-4542-b785-7ad2e05fd0ee",
+    "pdf_url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=44203d21-da16-40ab-8886-de16c32c920b",
     "date": "2026-09-24T00:00:00Z",
     "degraded": false,
     "ai_model": "Groq (openai/gpt-oss-120b)",
@@ -4016,12 +4016,17 @@
     "attachments": [
       {
         "name": "Raadsvoorstel Tweede Bestuursrapportage 2026",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a7e1eb40-35c5-4542-b785-7ad2e05fd0ee",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=44203d21-da16-40ab-8886-de16c32c920b",
         "size": 0
       },
       {
         "name": "Tweede Bestuursrapportage 2026",
         "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e5f429fa-6218-4e22-95e7-629533a9151a",
+        "size": 0
+      },
+      {
+        "name": "Toelichting grondexploitatie Einsteindreef 101 Deel A (Openbaar)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8d7e120c-ef5f-4a52-bb1a-231050fc3412",
         "size": 0
       }
     ],

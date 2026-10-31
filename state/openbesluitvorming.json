@@ -1,5 +1,5 @@
 {
- "cursor": "106084",
+ "cursor": "106193",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -2189,149 +2189,6 @@
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-07-05T00:00:00Z"
   },
-  "meeting:ibabs:gemeente:utrecht:83cd4fb2-4c1d-4a09-b045-cc43e54edc8d": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:e6484ab4-4ff7-4d88-8420-0f2f991320c7",
-     "is_heading": false,
-     "title": "Opening"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:1d4c66cd-9273-4d7d-9471-0731cc4b14bb",
-     "is_heading": false,
-     "title": "Vaststellen agenda raadsvergadering 2 juli 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:249e94b4-c7fc-47bd-9da5-df8358e82a98",
-       "name": "Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juli 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=249e94b4-c7fc-47bd-9da5-df8358e82a98"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:6ad056d4-cc23-46d6-83e2-f8e736eedba9",
-       "name": "Raadsbesluit Ontheffing woonplaatsvereiste voor wethouderschap juli 2026 (gepubliceerd op 8 juli 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6ad056d4-cc23-46d6-83e2-f8e736eedba9"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:61c891ab-1038-4726-be23-c7190b73ac52",
-     "is_heading": false,
-     "title": "Raadsvoorstel Ontheffing woonplaatsvereiste voor wethouderschap juli 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:6c95f681-a230-47e3-b59d-b2ac1433b700",
-       "name": "Raadsvoorstel Benoeming Wethouders na raadsverkiezingen 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6c95f681-a230-47e3-b59d-b2ac1433b700"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2875c1eb-c8eb-42e7-a0be-23c9095e58f8",
-       "name": "Afspraken kandidaat-wethouders in het kader van integriteit (collegewissel 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2875c1eb-c8eb-42e7-a0be-23c9095e58f8"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:a1db35b8-d66d-455f-8110-c38e9c422993",
-       "name": "Brief burgemeester aan Cie Geloofsbrieven over Bevindingen en afspraken kandidaat-wethouders risiscoanalyse integriteit",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a1db35b8-d66d-455f-8110-c38e9c422993"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7ac054e0-0255-45eb-a4f2-6eaae356e086",
-       "name": "BING Risicoanalyse integriteit verslag van bevindingen gemeente Utrecht_260619",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7ac054e0-0255-45eb-a4f2-6eaae356e086"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:ffb98223-b54c-481f-8850-8d81d71c4142",
-       "name": "Raadsbesluit Benoeming Wethouders na raadsverkiezingen 2026 (gepubliceerd op 8 juli 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ffb98223-b54c-481f-8850-8d81d71c4142"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:17ef222a-b946-445f-99f1-cbb5a24f5058",
-     "is_heading": false,
-     "title": "Benoeming wethouders"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:da313791-b421-45b9-9000-37a0de201f26",
-     "is_heading": false,
-     "title": "Benoeming raadsleden"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:234cefbd-6fb4-42ce-8c9b-3d4a6841deae",
-     "is_heading": false,
-     "title": "Algemene Beschouwingen coalitieakkoord en voorjaarsnota"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:b48d7f7b-9e39-410e-b634-a502955fd41e",
-       "name": "Dossier 5245 voorblad.pdf",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b48d7f7b-9e39-410e-b634-a502955fd41e"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:cf7cc2ce-7a68-4131-a37b-b97651bd7171",
-       "name": "Raadsvoorstel Voorjaarsnota 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf7cc2ce-7a68-4131-a37b-b97651bd7171"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:779bcccf-8fcb-485a-8e73-248aeeb8e9f1",
-       "name": "Voorjaarsnota 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=779bcccf-8fcb-485a-8e73-248aeeb8e9f1"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:3d7e3fb1-8583-4d3f-b490-b108b3b1232e",
-       "name": "Subsidiestaat 2026 gemeente Utrecht",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3d7e3fb1-8583-4d3f-b490-b108b3b1232e"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:5411263b-65eb-44c5-9d4e-857b95aa8a9d",
-       "name": "Subsidiestaat 2027 gemeente Utrecht",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5411263b-65eb-44c5-9d4e-857b95aa8a9d"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:7ff2d1f9-e70b-4ecb-83a4-ad856a4dac12",
-     "is_heading": false,
-     "title": "Raadsvoorstel Voorjaarsnota 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:bb6bbdfa-faf4-4ad0-9a9d-e1164a2a0b02",
-       "name": "Coalitieakkoord 'Voor Uuuu' 2026-2030, gemeente Utrecht",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bb6bbdfa-faf4-4ad0-9a9d-e1164a2a0b02"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2d307d39-4161-49aa-a14f-43c978d37bd4",
-       "name": "Raadsbrief coalitieakkoord 'Voor Uuuu' en samenwerken met de raad",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2d307d39-4161-49aa-a14f-43c978d37bd4"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:637df781-d05d-4f8f-b558-7ebcba50be23",
-     "is_heading": false,
-     "title": "Coalitieakkoord 'Voor Uuuu' 2026-2030, gemeente Utrecht"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:3ac94fc9-e3e7-40a4-ba72-887e0cba2ae6",
-     "is_heading": false,
-     "title": "Afscheid vertrekkende collegeleden"
-    }
-   ],
-   "name": "Gemeenteraad",
-   "start_date": "2026-07-02T09:30:00Z"
-  },
   "meeting:ibabs:gemeente:utrecht:8a3baafd-17bb-4b7c-9730-57e6a1321732": {
    "agenda": [
     {
@@ -3105,14 +2962,19 @@
      "agenda_items": [],
      "documents": [
       {
-       "id": "document:ibabs:gemeente:utrecht:a7e1eb40-35c5-4542-b785-7ad2e05fd0ee",
+       "id": "document:ibabs:gemeente:utrecht:44203d21-da16-40ab-8886-de16c32c920b",
        "name": "Raadsvoorstel Tweede Bestuursrapportage 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a7e1eb40-35c5-4542-b785-7ad2e05fd0ee"
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=44203d21-da16-40ab-8886-de16c32c920b"
       },
       {
        "id": "document:ibabs:gemeente:utrecht:e5f429fa-6218-4e22-95e7-629533a9151a",
        "name": "Tweede Bestuursrapportage 2026",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e5f429fa-6218-4e22-95e7-629533a9151a"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8d7e120c-ef5f-4a52-bb1a-231050fc3412",
+       "name": "Toelichting grondexploitatie Einsteindreef 101 Deel A (Openbaar)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8d7e120c-ef5f-4a52-bb1a-231050fc3412"
       }
      ],
      "id": "agenda_item:ibabs:gemeente:utrecht:d2454203-7517-4fe6-9956-56b40eb1eecd",
@@ -3420,49 +3282,6 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-07-19T00:00:00Z"
-  },
-  "meeting:ibabs:gemeente:utrecht:da701f8c-d152-41d4-b5bc-586cb0a00605": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:22ed5280-dfcc-4ee7-92ce-b795c7ae176a",
-     "is_heading": false,
-     "title": "Opening"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:25d97a5f-c344-49e5-a7dc-ef1d42031512",
-       "name": "Afspraken kandidaat-wethouders in het kader van integriteit (collegewissel 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=25d97a5f-c344-49e5-a7dc-ef1d42031512"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:b2dc4f26-0d96-4f97-9a17-2022ec0124ee",
-       "name": "Brief burgemeester aan Cie Geloofsbrieven over Bevindingen en afspraken kandidaat-wethouders risiscoanalyse integriteit",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b2dc4f26-0d96-4f97-9a17-2022ec0124ee"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:80bf2878-0aec-4dfc-8fd9-c9a135114d9c",
-       "name": "BING Risicoanalyse integriteit verslag van bevindingen gemeente Utrecht_260619",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=80bf2878-0aec-4dfc-8fd9-c9a135114d9c"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:f09b5c25-d6e6-4039-b185-3f953f1e6200",
-     "is_heading": false,
-     "title": "Pitches kandidaat-wethouders"
-    },
-    {
-     "agenda_items": [],
-     "documents": [],
-     "id": "agenda_item:ibabs:gemeente:utrecht:46383c56-8d4d-4e4e-8419-d29b2b24a41a",
-     "is_heading": false,
-     "title": "Gelegenheid voor vragen"
-    }
-   ],
-   "name": "Gemeenteraad",
-   "start_date": "2026-07-02T08:15:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:de71df5a-96f1-42ee-854e-974009287f0c": {
    "agenda": [
