@@ -1,5 +1,5 @@
 {
- "cursor": "106247",
+ "cursor": "106280",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -2061,134 +2061,6 @@
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-10-18T00:00:00Z"
   },
-  "meeting:ibabs:gemeente:utrecht:791887fe-4344-49f4-92d3-4200f9ce0685": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:790c86b7-1e50-45a6-8cbd-9d0e9e3c1ff5",
-       "name": "Raadsvoorstel Aanwijzing Leden AB Gemeenschappelijke Regeling Stichtse Groenlanden 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=790c86b7-1e50-45a6-8cbd-9d0e9e3c1ff5"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:0edd9dde-7a47-4feb-9c3d-3614fa386777",
-     "is_heading": false,
-     "title": "Raadsvoorstel Aanwijzen lid Algemeen Bestuur gemeenschappelijke regeling Stichtse Groenlanden"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:bec2e24b-afab-48a4-a459-1715c686c118",
-       "name": "Raadsvoorstel Vaststelling TAM omgevingsplan Livingstonelaan 609",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bec2e24b-afab-48a4-a459-1715c686c118"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:bbc3496e-4d9f-4ab7-9547-8fe12c290ba3",
-       "name": "Vaststellingsrapport Omgevingplan Livingstonelaan",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bbc3496e-4d9f-4ab7-9547-8fe12c290ba3"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:1347baf3-4647-43ad-80c4-a1c12ded7765",
-       "name": "TAM-omgevingsplan Livingstonelaan 609, Kanaleneiland-Zuid_Motivering",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1347baf3-4647-43ad-80c4-a1c12ded7765"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:d2398017-be49-4e6a-8ca0-a5787379ce06",
-       "name": "TAM-omgevingsplan Livingstonelaan 609, Kanaleneiland-Zuid_Regels",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d2398017-be49-4e6a-8ca0-a5787379ce06"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7981f963-1e92-4ec5-a97e-6fa3c898cd74",
-       "name": "NL.IMRO.0344.BPTAMLIVLAAN609KAZ-VA01-Kader_01-0000",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7981f963-1e92-4ec5-a97e-6fa3c898cd74"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2c73c5db-347f-498b-9b45-3556726185dc",
-       "name": "Link RO-publiceer TAM omgevingsplan Livingstonelaan 609",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2c73c5db-347f-498b-9b45-3556726185dc"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:51ecb376-418f-4b37-8966-a43064e1b963",
-     "is_heading": false,
-     "title": "Raadsvoorstel Vaststelling TAM omgevingsplan Livingstonelaan 609"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:86773994-e835-48d1-b6f8-2b2eea1ece6b",
-       "name": "Raadsvoorstel Ontwerp verklaring geen bedenkingen kavel D4-E4",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=86773994-e835-48d1-b6f8-2b2eea1ece6b"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:0298482d-8cf8-40ae-b048-1fb61eab9cd6",
-       "name": "Ontwerp specifieke verklaring van geen bedenkingen kavel D4-E4",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0298482d-8cf8-40ae-b048-1fb61eab9cd6"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:30bc0247-d723-4397-860d-342a4fca0391",
-       "name": "Ruimtelijke Onderbouwing Kavel D4E4, mei 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=30bc0247-d723-4397-860d-342a4fca0391"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:82efe0c8-786c-4408-84d0-cc4a82c11fd5",
-       "name": "Getekende afsprakenbrief januari 26",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=82efe0c8-786c-4408-84d0-cc4a82c11fd5"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2da56f72-6ec6-4c05-8823-969ea511065e",
-       "name": "Aanmeldnotitie mer kavel D4E4 mei 2026_Zwartgemaakt",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2da56f72-6ec6-4c05-8823-969ea511065e"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:3031fd56-47e7-4027-b5a4-95c47ccff0b0",
-       "name": "Brief m.e.r.-beoordelingsbesluit D4 E4 LRC, geanonimiseerd",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3031fd56-47e7-4027-b5a4-95c47ccff0b0"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:2f1dcaf7-ca33-4fe6-a329-e819bfbe55a9",
-       "name": "Artist impressions D4E4",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2f1dcaf7-ca33-4fe6-a329-e819bfbe55a9"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:8769c889-e650-4ee0-b42d-e57f0d752efe",
-     "is_heading": false,
-     "title": "Raadsvoorstel Verklaring van geen bedenkingen (Vvgb) bouwplan D4/E4 Leidsche Rijn Centrum"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:7b8a9b81-2517-4be9-8000-dbeda60c3a38",
-       "name": "Raadsvoorstel Aanwijzingsbesluit buitenplanse omgevingsplanactiviteiten met verplichte participatie (juli 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7b8a9b81-2517-4be9-8000-dbeda60c3a38"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:1a455925-c30b-4460-b037-f066b19cff14",
-       "name": "Lijst met gevallen verplichte participatie bij een omgevingsvergunningaanvraag buitenplanse omgevingsplanactiviteit (juli 2026)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1a455925-c30b-4460-b037-f066b19cff14"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:19a9f88d-5c40-4779-b140-325003b4a2f6",
-       "name": "MET WIJZINGEN Raadsvoorstel Aanwijzingsbesluit buitenplanse omgevingsplanactiviteiten met verplichte participatie (na cie Ruimte)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=19a9f88d-5c40-4779-b140-325003b4a2f6"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:799cfcc2-a36b-4123-9932-45b6b0bf9653",
-       "name": "MET WIJZIGINGEN Lijst met gevallen verplichte participatie bij een omgevingsvergunningaanvraag buitenplanse omgevingsplanactiviteit",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=799cfcc2-a36b-4123-9932-45b6b0bf9653"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:bdf05e89-86e1-4387-98a5-fe97cbd609e5",
-     "is_heading": false,
-     "title": "Raadsvoorstel Aanwijzingsbesluit buitenplanse omgevingsplanactiviteiten met verplichte participatie"
-    }
-   ],
-   "name": "Raadsvoorstellen weekoverzicht",
-   "start_date": "2026-07-05T00:00:00Z"
-  },
   "meeting:ibabs:gemeente:utrecht:8a3baafd-17bb-4b7c-9730-57e6a1321732": {
    "agenda": [
     {
@@ -2334,6 +2206,11 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-09-27T00:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:952c1019-7325-414d-aa57-9adb81e70b69": {
+   "agenda": [],
+   "name": "Gemeenteraad",
+   "start_date": "2026-11-19T09:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:987ade3f-0034-4599-b3e3-c6b2fa9be7db": {
    "agenda": [
@@ -2669,6 +2546,11 @@
    ],
    "name": "Gemeenteraad",
    "start_date": "2026-07-09T08:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:a0b2e694-a359-499d-aabd-9f675237c1f0": {
+   "agenda": [],
+   "name": "Gemeenteraad",
+   "start_date": "2026-11-12T09:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:a3b633b1-9898-4f44-8bbd-d8ef75b9be88": {
    "agenda": [
