@@ -1,5 +1,5 @@
 {
- "cursor": "106280",
+ "cursor": "106391",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -1978,6 +1978,11 @@
    ],
    "name": "Gemeenteraad",
    "start_date": "2026-07-16T08:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:4581f02b-2921-4364-b829-72e1c60a431e": {
+   "agenda": [],
+   "name": "Gemeenteraad",
+   "start_date": "2026-11-12T09:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:4c3045ec-51ef-4376-b54e-bfaed393c673": {
    "agenda": [
