@@ -1,5 +1,5 @@
 {
- "cursor": "106391",
+ "cursor": "153468",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -1980,7 +1980,376 @@
    "start_date": "2026-07-16T08:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:4581f02b-2921-4364-b829-72e1c60a431e": {
-   "agenda": [],
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [],
+     "id": "agenda_item:ibabs:gemeente:utrecht:fbad256a-8342-4d24-9470-0e5afc1dd0ee",
+     "is_heading": false,
+     "title": "Opening en mededeling"
+    },
+    {
+     "agenda_items": [],
+     "documents": [],
+     "id": "agenda_item:ibabs:gemeente:utrecht:37bccc8b-6f27-426a-b29f-81a326dc465f",
+     "is_heading": false,
+     "title": "Vaststellen agenda"
+    },
+    {
+     "agenda_items": [],
+     "documents": [],
+     "id": "agenda_item:ibabs:gemeente:utrecht:319bb94e-5a17-4bfd-86b3-c85bea7e4b85",
+     "is_heading": false,
+     "title": "Opheffing geheimhouding"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:81a5b23a-e257-47d8-be7a-c4f31e80b0bb",
+       "name": "Dossier 5492 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=81a5b23a-e257-47d8-be7a-c4f31e80b0bb"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1f513124-2ad5-4197-a2f4-7b49cdfec1a0",
+       "name": "Raadsvoorstel Programmabegroting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1f513124-2ad5-4197-a2f4-7b49cdfec1a0"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f80f3d23-c959-4b0b-abdc-0572f71e7d3a",
+       "name": "Programmabegroting 2027 (inclusief erratum oktober 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f80f3d23-c959-4b0b-abdc-0572f71e7d3a"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:31fd1a8d-8340-4c66-be53-36dda9467dd2",
+       "name": "Subsidiestaat 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=31fd1a8d-8340-4c66-be53-36dda9467dd2"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:46274dac-5b3b-469d-8df5-c3d12acf8ee2",
+       "name": "Subsidiestaat 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=46274dac-5b3b-469d-8df5-c3d12acf8ee2"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:73a22760-17e2-401c-96a9-6fab1bdcb17e",
+       "name": "Advies adviescommissie Controle en Financiën Programmabegroting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=73a22760-17e2-401c-96a9-6fab1bdcb17e"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:ae9327f3-92a3-462d-ae61-eafe49b98bc5",
+     "is_heading": false,
+     "title": "Raadsvoorstel Programmabegroting 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:20dca1bb-edac-4872-b6f3-cb6b46f58e55",
+       "name": "Raadsbrief Beantwoording schriftelijke raadsvragen Programmabegroting 2027 en Tweede berap 2026 en Erratum",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=20dca1bb-edac-4872-b6f3-cb6b46f58e55"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:87a075ee-c693-4fec-947e-5f922c23aa55",
+       "name": "Beantwoording schriftelijke raadsvragen Programmabegroting 2027 en Tweede bestuursrapportage 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=87a075ee-c693-4fec-947e-5f922c23aa55"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:b3d98fc4-fd74-4342-8429-a30c00cb469c",
+       "name": "Erratum Programmabegroting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b3d98fc4-fd74-4342-8429-a30c00cb469c"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:ff33209a-56bf-46e1-8069-ef430f8e1e82",
+     "is_heading": false,
+     "title": "Raadsbrief Beantwoording schriftelijke raadsvragen Programmabegroting 2027 en Tweede berap 2026 en Erratum"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:20b79178-63e3-4c97-b76d-9ac9067b1455",
+       "name": "Dossier 5470 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=20b79178-63e3-4c97-b76d-9ac9067b1455"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:44203d21-da16-40ab-8886-de16c32c920b",
+       "name": "Raadsvoorstel Tweede Bestuursrapportage 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=44203d21-da16-40ab-8886-de16c32c920b"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e5f429fa-6218-4e22-95e7-629533a9151a",
+       "name": "Tweede Bestuursrapportage 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e5f429fa-6218-4e22-95e7-629533a9151a"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8d7e120c-ef5f-4a52-bb1a-231050fc3412",
+       "name": "Toelichting grondexploitatie Einsteindreef 101 Deel A (Openbaar)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8d7e120c-ef5f-4a52-bb1a-231050fc3412"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:bb007dff-f70c-4e6d-9ff6-d05d729addb3",
+     "is_heading": false,
+     "title": "Raadsvoorstel Tweede bestuursrapportage 2026"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:dc86c5d8-7cae-4cf7-9e46-82e3fe8db2f1",
+       "name": "Dossier 5489 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dc86c5d8-7cae-4cf7-9e46-82e3fe8db2f1"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:7b9b1d86-fb5a-494d-9a5c-036fd6783cb9",
+       "name": "Raadsvoorstel Intrekken verordening hondenbelasting en Wijzigingsbesluit verordening kwijtschelding",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7b9b1d86-fb5a-494d-9a5c-036fd6783cb9"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e55912e4-3e41-454b-bab3-d2a9ef1bfbbb",
+       "name": "Intrekkingsbesluit Verordening hondenbelasting",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e55912e4-3e41-454b-bab3-d2a9ef1bfbbb"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:5dbd2b1e-10d0-492e-9f16-ca4555e326b6",
+       "name": "Wijzigingsbesluit Verordening kwijtschelding",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5dbd2b1e-10d0-492e-9f16-ca4555e326b6"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:fbb54b86-76a0-45de-b98a-0356c4997d31",
+     "is_heading": false,
+     "title": "Raadsvoorstel Intrekken verordening hondenbelasting en Wijzigingsbesluit verordening kwijtschelding"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:dc6c4734-a85a-4ea0-a633-2ebe3019faa0",
+       "name": "Dossier 5490 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dc6c4734-a85a-4ea0-a633-2ebe3019faa0"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:77316f99-e323-451f-8ac4-f7b9b7c63f86",
+       "name": "Raadsvoorstel Verordening Afvalstoffenheffing 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=77316f99-e323-451f-8ac4-f7b9b7c63f86"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:d7f27231-8877-48b4-bf42-afe2eab5343e",
+       "name": "Verordening afvalstoffenheffing gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d7f27231-8877-48b4-bf42-afe2eab5343e"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:751e4947-7620-4510-8e3a-1da29695f5e2",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Afvalstoffenheffing 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:8dec3da6-110a-43f9-8fee-5a0af8265af9",
+       "name": "Dossier 5478 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8dec3da6-110a-43f9-8fee-5a0af8265af9"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:768e30c9-ba60-4aee-85c6-fc0d60162424",
+       "name": "Raadsvoorstel Verordening Begraafplaatsrechten 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=768e30c9-ba60-4aee-85c6-fc0d60162424"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:722e1f1a-63de-41a7-8b6a-1a208bf707ab",
+       "name": "Verordening begraafplaatsrechten gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=722e1f1a-63de-41a7-8b6a-1a208bf707ab"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:c81c961c-1603-4244-a348-599765d71fd3",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Begraafplaatsrechten 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:dcbd0108-1936-4dc9-afe4-1e294c93822b",
+       "name": "Dossier 5479 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=dcbd0108-1936-4dc9-afe4-1e294c93822b"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:9ed33d40-998d-4883-ad0d-2530a7e2a9c6",
+       "name": "Raadsvoorstel Verordening Brug- schut- en havengelden 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9ed33d40-998d-4883-ad0d-2530a7e2a9c6"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:d075a7eb-6f1f-45f0-a7e5-a79ac8737f42",
+       "name": "Verordening brug- schut- en havengelden gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d075a7eb-6f1f-45f0-a7e5-a79ac8737f42"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:225ae712-85fc-46ab-ad2b-a4e34f494161",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Brug-, schut- en havengelden 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:2b9a3f37-321b-42a5-a7d2-61a7d04a7b54",
+       "name": "Dossier 5480 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2b9a3f37-321b-42a5-a7d2-61a7d04a7b54"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1c04ac4f-cb4f-4d19-ae11-81e922f43709",
+       "name": "Raadsvoorstel Verordening Leges 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1c04ac4f-cb4f-4d19-ae11-81e922f43709"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1dfd5fd2-87a1-45bc-a954-f006c30a1a09",
+       "name": "Verordening Leges gemeente Utrecht 2027 (3)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1dfd5fd2-87a1-45bc-a954-f006c30a1a09"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:5957f654-41ca-4210-b237-ab0503f8eb77",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Leges 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:e69296ce-0c6f-4286-9b3b-cccb930ac257",
+       "name": "Dossier 5481 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e69296ce-0c6f-4286-9b3b-cccb930ac257"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e17d632b-f4f2-43d3-893a-45b5d0dae5c6",
+       "name": "Raadsvoorstel Verordening Leges omgevingsvergunning gemeente utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e17d632b-f4f2-43d3-893a-45b5d0dae5c6"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:655485e8-ef0a-45e1-9cc7-925de9c325f4",
+       "name": "Verordening leges omgevingsvergunning gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=655485e8-ef0a-45e1-9cc7-925de9c325f4"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:5528752a-3ce7-4063-a8b9-0c6185af04b9",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Leges omgevingsvergunning 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:6a64a696-2a25-4b94-954a-7b9b2d8f72cf",
+       "name": "Dossier 5482 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6a64a696-2a25-4b94-954a-7b9b2d8f72cf"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:4c934e16-1efe-41e0-88f0-9134c0613fe1",
+       "name": "Raadsvoorstel Verordening Marktgelden 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4c934e16-1efe-41e0-88f0-9134c0613fe1"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:054a58ba-8097-4982-b016-388e913f666b",
+       "name": "Verordening marktgelden gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=054a58ba-8097-4982-b016-388e913f666b"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:6fac876c-368d-4e66-9157-450d97dd5a5a",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Marktgelden 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:02bb084c-3a0e-4ff1-869a-86b9fe8e44a7",
+       "name": "Dossier 5483 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=02bb084c-3a0e-4ff1-869a-86b9fe8e44a7"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:d1122e07-dfb3-4203-a9c5-a7b9bd957f6f",
+       "name": "Raadsvoorstel Verordening Parkeerbelastingen 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d1122e07-dfb3-4203-a9c5-a7b9bd957f6f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:5c84f154-3af4-4453-8587-687d7172db02",
+       "name": "Verordening parkeerbelastingen gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=5c84f154-3af4-4453-8587-687d7172db02"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:61f85898-3722-4c0a-9b66-4b0a469e70b3",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Parkeerbelastingen 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:14db9ef6-d62d-40aa-81d4-0416b76f5ad6",
+       "name": "Dossier 5486 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=14db9ef6-d62d-40aa-81d4-0416b76f5ad6"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:050e4727-569b-4bfe-a453-9be6fed9fa6c",
+       "name": "Raadsvoorstel Verordening Precariobelasting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=050e4727-569b-4bfe-a453-9be6fed9fa6c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1495f315-d884-43f9-a49c-4a5bf5cff1b4",
+       "name": "Verordening precariobelasting gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1495f315-d884-43f9-a49c-4a5bf5cff1b4"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:c7dbce57-f54f-408e-a5bf-a0b98b2cab11",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Precariobelasting 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:a7cd7444-d541-4a72-8458-be3665496258",
+       "name": "Dossier 5484 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a7cd7444-d541-4a72-8458-be3665496258"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:29f5be2f-db5f-4d3c-80ed-37b068a6794d",
+       "name": "Raadsvoorstel Verordening Rioolheffing 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=29f5be2f-db5f-4d3c-80ed-37b068a6794d"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:383562e3-a106-4d9b-9833-11778aa6b6fe",
+       "name": "Verordening rioolheffing gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=383562e3-a106-4d9b-9833-11778aa6b6fe"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:951bad3b-9838-42d3-9e1f-966a1269e489",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Rioolheffing 2027"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:d55b6357-b4e6-4bf0-9408-27ffeef43ddc",
+       "name": "Dossier 5485 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d55b6357-b4e6-4bf0-9408-27ffeef43ddc"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:710449ee-97cc-499d-bdf0-826773ba0d85",
+       "name": "Raadsvoorstel Verordening Toeristenbelasting 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=710449ee-97cc-499d-bdf0-826773ba0d85"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1ad6450c-4548-4b53-8461-e809ed58f80a",
+       "name": "Verordening toeristenbelasting gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1ad6450c-4548-4b53-8461-e809ed58f80a"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:4bd6659d-d717-4a52-be8d-bdad67995f62",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Toeristenbelasting 2027"
+    }
+   ],
    "name": "Gemeenteraad",
    "start_date": "2026-11-12T09:00:00Z"
   },
