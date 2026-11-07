@@ -20,7 +20,7 @@ import os
 import sys
 import time
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from dotenv import load_dotenv
@@ -205,7 +205,7 @@ def upgrade_backfilled(
         upgraded.add(title)
         progress["upgraded"] = sorted(upgraded)
         progress["last_upgraded"] = title
-        progress["last_run"] = datetime.now(timezone.utc).isoformat()
+        progress["last_run"] = datetime.now(UTC).isoformat()
 
         if len(upgraded) % save_every == 0:
             save_progress(progress)

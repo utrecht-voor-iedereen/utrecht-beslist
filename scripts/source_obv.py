@@ -28,7 +28,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date, datetime, timedelta, timezone
+from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -304,7 +304,7 @@ def sync_meetings(path: str = SYNC_FILE, now: datetime | None = None) -> dict[st
     A failed request leaves the mirror as it was, so a bad night at the API
     costs one day's news rather than the window.
     """
-    now = now or datetime.now(timezone.utc)
+    now = now or datetime.now(UTC)
     mirror = load_mirror(path)
 
     try:

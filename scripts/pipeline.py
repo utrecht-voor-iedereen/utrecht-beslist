@@ -7,7 +7,7 @@ import json
 import logging
 import os
 import time
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from typing import Any
 
 from dotenv import load_dotenv
@@ -111,7 +111,7 @@ def diagnose_staleness(days_diff: int, status: dict[str, Any] | None = None) -> 
         # The register has recent meetings and the site does not: the gap is on
         # this side, a backlog draining MAX_NEW_PER_RUN a day or a summarizer
         # that keeps failing. Calling that a recess would hide it.
-        age = (datetime.now(timezone.utc).date() - date.fromisoformat(latest_meeting)).days
+        age = (datetime.now(UTC).date() - date.fromisoformat(latest_meeting)).days
         if age <= ANOMALY_THRESHOLD_DAYS:
             return logging.WARNING, (
                 f"BEHIND: the newest entry is {days_diff} days old, but OpenBesluitvorming "
@@ -144,9 +144,9 @@ def check_inactivity_anomaly(items: list[dict[str, Any]]):
 
     try:
         latest_dt = parse_date(latest_date_str)
-        now_dt = datetime.now(timezone.utc)
+        now_dt = datetime.now(UTC)
         if latest_dt.tzinfo is None:
-            latest_dt = latest_dt.replace(tzinfo=timezone.utc)
+            latest_dt = latest_dt.replace(tzinfo=UTC)
 
         days_diff = (now_dt - latest_dt).days
         if days_diff > ANOMALY_THRESHOLD_DAYS:

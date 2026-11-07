@@ -1,0 +1,20 @@
+{# Iconos SVG en línea (trazo de Lucide, 24×24, currentColor) para los botones
+   que antes llevaban emoji. Un emoji se pinta distinto en cada sistema y en
+   cada tarjeta se repetían tres: 📄, ➔ y 🔗, más de 600 por página. #}
+{% macro icon(name) -%}
+<svg class="icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+{%- if name == "file" -%}
+<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>
+{%- elif name == "arrow-right" -%}
+<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+{%- elif name == "share" -%}
+<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/>
+{%- elif name == "printer" -%}
+<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/>
+{%- elif name == "alert" -%}
+<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+{%- elif name == "archive" -%}
+<rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/>
+{%- endif -%}
+</svg>
+{%- endmacro %}

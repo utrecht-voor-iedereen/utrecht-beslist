@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon %}
 
 {% set title_text = get_item_lang_field(item, "title_short", lang) %}
 {% set summary_text = get_item_lang_field(item, "summary", lang) %}
@@ -54,7 +55,7 @@
               data-label-stop="⏹️ {{ t('stop_audio', lang) }}">🔊 {{ t("listen_audio", lang) }}</button>
 
       <button class="share-btn" onclick="window.print()">
-        🖨️ {{ t("print_pdf", lang) }}
+        {{ icon("printer") }} {{ t("print_pdf", lang) }}
       </button>
 
       <span style="font-size: 0.9rem; color: var(--utrecht-gris-secundario); font-weight: 600; margin-left: 0.5rem;">
@@ -194,7 +195,7 @@
   {% endif %}
 
   <!-- Official Source & Woo Rights Box -->
-  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border-left: 4px solid var(--utrecht-rood);">
+  <div style="margin-top: 2.5rem; padding: 1.5rem; background-color: var(--utrecht-crema-fondo); border-radius: var(--radius-sm); border: 1px solid var(--utrecht-borde-suave);">
     <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--utrecht-negro); margin-bottom: 0.5rem;">
       🏛️ {{ t("source_title", lang) }}
     </h3>
@@ -262,12 +263,12 @@
   <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--utrecht-borde-suave); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; font-size: 0.82rem; color: var(--utrecht-gris-secundario);">
     <div>
       <span>🤖 {{ t("ai_transparency", lang) }} {{ item.ai_model if item.ai_model else "Degraded Mode" }}</span>
-      <span style="margin-left: 0.75rem;">📦 {{ t("permanent_archive", lang) }}</span>
+      <span style="margin-left: 0.75rem;">{{ icon("archive") }} {{ t("permanent_archive", lang) }}</span>
       <span style="margin-left: 0.75rem;">{{ t("woo_rights_link", lang) }}</span>
     </div>
     
     <div style="display: flex; gap: 1rem;">
-      <button class="share-btn" data-share-title="{{ title_text }}">🔗 {{ t("share", lang) }}</button>
+      <button class="share-btn" data-share-title="{{ title_text }}">{{ icon("share") }} {{ t("share", lang) }}</button>
       {# Both buttons carry their text in data attributes rather than in an
          onclick: an apostrophe in a title used to decode back into a quote and
          break the handler on every page whose summary contained one. #}
@@ -275,7 +276,7 @@
               data-report-title="{{ title_text }}"
               data-report-doc="{{ item.doc_id }}"
               data-report-subject="{{ t('report_error_subject', lang) }}">
-        ⚠️ {{ t("report_error", lang) }}
+        {{ icon("alert") }} {{ t("report_error", lang) }}
       </button>
     </div>
   </div>

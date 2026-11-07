@@ -2,7 +2,7 @@
 Unit tests for the OpenBesluitvorming mirror and the documents read from it.
 """
 
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 
 from scripts import source_obv
 from scripts.source_obv import (
@@ -110,7 +110,7 @@ def test_letters_and_procedure_are_not_published():
 
 def test_sync_keeps_the_mirror_when_the_api_fails(tmp_path, monkeypatch):
     path = str(tmp_path / "obv.json")
-    now = datetime(2026, 9, 28, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 28, tzinfo=UTC)
     kept = _mirror(_record("meeting:x", _meeting(start="2026-09-24T08:00:00Z")))
     kept.update(cursor="100", snapshot_at=now.isoformat())
     source_obv.save_mirror(kept, path)
@@ -125,7 +125,7 @@ def test_sync_keeps_the_mirror_when_the_api_fails(tmp_path, monkeypatch):
 
 def test_sync_reads_changes_after_the_snapshot(tmp_path, monkeypatch):
     path = str(tmp_path / "obv.json")
-    now = datetime(2026, 9, 28, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 28, tzinfo=UTC)
     mirror = {"cursor": "100", "snapshot_at": now.isoformat(), "meetings": {}}
     source_obv.save_mirror(mirror, path)
 
