@@ -1,5 +1,5 @@
 {
- "cursor": "157809",
+ "cursor": "157813",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -989,116 +989,6 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-09-13T00:00:00Z"
-  },
-  "meeting:ibabs:gemeente:utrecht:128352b0-73a3-4645-8fdd-3960afcce201": {
-   "agenda": [
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:9f75d26f-a73f-4116-8426-0a9055ef397c",
-       "name": "Raadsvoorstel Wijziging van de APV Utrecht partiële herziening 2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9f75d26f-a73f-4116-8426-0a9055ef397c"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:cf6af614-5206-4916-9193-df2224d7d084",
-       "name": "Raadsbrief Evaluatieonderzoek harddrugsverbod",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cf6af614-5206-4916-9193-df2224d7d084"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:94c30e27-5495-4c5c-83db-1ca88ff97e7d",
-       "name": "VERVALLEN Besluit tot wijziging van de Algemene plaatselijke verordening Utrecht 2010 partiële herziening 2026 - DROP",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=94c30e27-5495-4c5c-83db-1ca88ff97e7d"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:959d2dd6-4c06-475f-a3d4-b4fa341f645b",
-       "name": "VERVALLEN Overzicht van de wijzigingen APV (was-wordt lijst)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=959d2dd6-4c06-475f-a3d4-b4fa341f645b"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:913616c7-038d-4c48-9957-910eb8fe5a02",
-       "name": "Evaluatierapport aanpak overlastgevende harddrugsgebruikers 30juni2026",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=913616c7-038d-4c48-9957-910eb8fe5a02"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:30411052-2231-41d3-b72d-02e529107c26",
-     "is_heading": false,
-     "title": "Raadsvoorstel partiële APV herziening 2026"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:a1439bfe-9ad4-417d-9af2-4b3b12d30f59",
-       "name": "VERVALLEN Raadsvoorstel Wijziging Delegatiebesluit Omgevingswet voor herontwikkeling UMC Utrecht, noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a1439bfe-9ad4-417d-9af2-4b3b12d30f59"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:7b843f67-21e9-4c25-b9af-7da36b1d97fb",
-       "name": "Besluit tot wijziging Delegatiebesluit Omgevingswet Utrecht",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7b843f67-21e9-4c25-b9af-7da36b1d97fb"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:8cb177c8-1eac-4d82-b3c0-faf5da8a26a2",
-       "name": "Delegatiebesluit Omgevingswet (VERSIE MET WIJZIGINGEN ZICHTBAAR)",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8cb177c8-1eac-4d82-b3c0-faf5da8a26a2"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:55fa1e6e-0355-4ef2-add1-d1dd7f9f8fa8",
-       "name": "Samenwerkingsplan UMCU herontwikkeling noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=55fa1e6e-0355-4ef2-add1-d1dd7f9f8fa8"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:699ee404-55f1-43bd-9366-bebbe3973ec2",
-       "name": "Samenwerkingsverslag UMCU herontwikkeling noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=699ee404-55f1-43bd-9366-bebbe3973ec2"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:bcad1388-b98a-4e6e-b709-edacd44a7100",
-     "is_heading": false,
-     "title": "Raadsvoorstel Wijziging Delegatiebesluit Omgevingswet voor herontwikkeling UMC Utrecht, noordzijde"
-    },
-    {
-     "agenda_items": [],
-     "documents": [
-      {
-       "id": "document:ibabs:gemeente:utrecht:d1ae352d-f6f3-42e4-878e-974641e5adf3",
-       "name": "Raadsvoorstel SPvE en Beeldkwaliteitsplan Herontwikkeling UMC Utrecht, noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=d1ae352d-f6f3-42e4-878e-974641e5adf3"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:207494c0-04f1-414d-945c-27861c9263ff",
-       "name": "Stedenbouwkundig Programma van Eisen (SPvE) USP UMCU Noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=207494c0-04f1-414d-945c-27861c9263ff"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:20e0073b-d095-4f16-b794-3bfcf0b27098",
-       "name": "Beleidsregel Beeldkwaliteitsplan UMC Utrecht, noordzijde, gemeente Utrecht",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=20e0073b-d095-4f16-b794-3bfcf0b27098"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:4fba4440-8503-4361-b7f7-54e0f7a79505",
-       "name": "Beeldkwaliteitsplan UMC Utrecht Noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4fba4440-8503-4361-b7f7-54e0f7a79505"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:df539cca-0619-4a79-8421-7e9f0daaa0cc",
-       "name": "Samenwerkingsplan UMCU herontwikkeling noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=df539cca-0619-4a79-8421-7e9f0daaa0cc"
-      },
-      {
-       "id": "document:ibabs:gemeente:utrecht:cafdfb30-f402-4da9-bc3e-93519a5a8349",
-       "name": "Samenwerkingsverslag UMCU herontwikkeling noordzijde",
-       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=cafdfb30-f402-4da9-bc3e-93519a5a8349"
-      }
-     ],
-     "id": "agenda_item:ibabs:gemeente:utrecht:528efc7a-8289-46de-a6dc-9e05a10c622b",
-     "is_heading": false,
-     "title": "Raadsvoorstel SPvE Herontwikkeling UMC Utrecht, noordzijde en Beleidsregel Beeldkwaliteitsplan UMC Utrecht, noordzijde"
-    }
-   ],
-   "name": "Raadsvoorstellen weekoverzicht",
-   "start_date": "2026-07-12T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:1b568907-dc7d-4b64-927c-bb427595bcf1": {
    "agenda": [
