@@ -1,5 +1,5 @@
 {
- "cursor": "157813",
+ "cursor": "157845",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -2709,6 +2709,96 @@
    ],
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-10-04T00:00:00Z"
+  },
+  "meeting:ibabs:gemeente:utrecht:a56e730b-813f-45c4-a69c-c83a6ccc6420": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:9b7cb25c-924e-4e02-8273-1dac40481ed8",
+       "name": "Raadsvoorstel Meerjarenstrategie Regionale Ontwikkelingsmaatschappij (ROM) 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9b7cb25c-924e-4e02-8273-1dac40481ed8"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f73bb0e5-b1a1-4f7b-8066-07b6f97365d2",
+       "name": "Inzet gemeente Utrecht Meerjarenstrategie Meerjarenstrategie Regionale Ontwikkelingsmaatschappij (ROM) 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f73bb0e5-b1a1-4f7b-8066-07b6f97365d2"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:1934672b-4642-47df-a26a-88d8932bd71c",
+       "name": "ROM-Utrecht Meerjarenstrategie Regionale Ontwikkelingsmaatschappij (ROM) 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1934672b-4642-47df-a26a-88d8932bd71c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:3e95b6d9-4fc3-4a3d-9bfb-01e2b4c6210b",
+       "name": "Aanbiedingsbrief ROM aan aandeelhouders over Meerjarenstrategie 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3e95b6d9-4fc3-4a3d-9bfb-01e2b4c6210b"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:21e9581b-83e4-4c9b-8819-34205ca2e9b8",
+       "name": "Factsheet Meerjarenstrategie ROM 2027-2030",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=21e9581b-83e4-4c9b-8819-34205ca2e9b8"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:a3458f75-802f-4844-b6a2-3a453f7a9080",
+     "is_heading": false,
+     "title": "Raadsvoorstel inzet Meerjarenstrategie Regionale Ontwikkelingsmaatschappij (ROM) 2027-2030"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:91652a56-bcbe-480e-8ca0-12a54d716014",
+       "name": "Raadsvoorstel Verordening onroerende-zaakbelasting 2027 gemeente Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=91652a56-bcbe-480e-8ca0-12a54d716014"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:85d9cee4-5f47-47f5-bf4b-ae7aec22098b",
+       "name": "Verordening onroerende-zaakbelasting 2027 gemeente Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=85d9cee4-5f47-47f5-bf4b-ae7aec22098b"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:85df2c58-0b62-46cf-b8c9-a20bb20716bb",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening onroerende-zaakbelasting 2027 gemeente Utrecht"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:f1ebeffc-aa52-4e95-8453-bc6c63ee6575",
+       "name": "Raadsvoorstel Verordening Jeugdwet gemeente Utrecht 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f1ebeffc-aa52-4e95-8453-bc6c63ee6575"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:b08832ed-6a7e-445a-be42-05db5093b48d",
+       "name": "Verordening Jeugdwet Gemeente Utrecht 2027 (november 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b08832ed-6a7e-445a-be42-05db5093b48d"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:6afea9f8-a2c6-4cef-8b31-98d2796b4002",
+       "name": "Was-wordt-lijst Verordening Jeugdwet 2027",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6afea9f8-a2c6-4cef-8b31-98d2796b4002"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:ffadd72a-5037-4bd3-8001-3d9484910186",
+       "name": "Verordening Jeugdwet 2027 (VERSIE MET WIJZIGINGEN ZICHTBAAR) (november 2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ffadd72a-5037-4bd3-8001-3d9484910186"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:609eb563-2738-4e97-b247-a4c07c5cbf0f",
+       "name": "MET WIJZIGINGEN  Verordening Jeugdwet Gemeente Utrecht 2027 (pagina 26)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=609eb563-2738-4e97-b247-a4c07c5cbf0f"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:d4d95b59-c445-42e5-ab85-579c15a7be22",
+     "is_heading": false,
+     "title": "Raadsvoorstel Verordening Jeugdwet gemeente Utrecht 2027"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-11-15T00:00:00Z"
   },
   "meeting:ibabs:gemeente:utrecht:a7ca33d1-0ea3-4a21-8355-939023c40232": {
    "agenda": [
