@@ -230,8 +230,17 @@ def build_static_site(items: list):
     root_redirect = """<!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=nl/index.html">
   <title>Utrecht Beslist</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Utrecht Beslist">
+  <meta property="og:description" content="Raadsbesluiten van Utrecht in begrijpelijke taal.">
+  <meta property="og:url" content="https://utrecht-voor-iedereen.github.io/utrecht-beslist/">
+  <meta property="og:image" content="https://utrecht-voor-iedereen.github.io/utrecht-beslist/static/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <p>Redirecting to <a href="nl/index.html">Utrecht Beslist (Nederlands)</a>...</p>
