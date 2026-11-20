@@ -1,5 +1,5 @@
 {
- "cursor": "159025",
+ "cursor": "159295",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -1662,6 +1662,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:1e6fc9e0-ba97-4ecc-81c1-a3f4b25fb3cc",
+       "name": "Dossier 5382 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1e6fc9e0-ba97-4ecc-81c1-a3f4b25fb3cc"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:bec2e24b-afab-48a4-a459-1715c686c118",
        "name": "Raadsvoorstel Vaststelling TAM omgevingsplan Livingstonelaan 609",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bec2e24b-afab-48a4-a459-1715c686c118"
@@ -1700,6 +1705,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:0c362552-ae9b-4fd7-94d8-bf757b1c556b",
+       "name": "Dossier 5468 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0c362552-ae9b-4fd7-94d8-bf757b1c556b"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:0396b26a-287d-48ce-b02e-714a8a1e849d",
        "name": "Raadsvoorstel Toestemming wijziging gemeenschappelijke regeling  HUA",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0396b26a-287d-48ce-b02e-714a8a1e849d"
@@ -1722,6 +1732,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:8d9e97c1-b5be-4993-b301-81a4af2ba9bb",
+       "name": "Dossier 5511 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8d9e97c1-b5be-4993-b301-81a4af2ba9bb"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:3a0d44bf-22a5-44a8-a1b9-e04ca6067434",
        "name": "Raadsvoorstel zienswijze begrotingswijziging 2026-1 GGDrU",
@@ -1779,6 +1794,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:bab5e0f4-0777-4012-92bd-33a6e3a34653",
+       "name": "Dossier 5368 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bab5e0f4-0777-4012-92bd-33a6e3a34653"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:9680e217-8843-404e-a3cb-834d0171dc26",
        "name": "Raadsvoorstel verordening huisvesting scholen gemeente Utrecht",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9680e217-8843-404e-a3cb-834d0171dc26"
@@ -1801,6 +1821,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:bb6e1d10-8253-4d02-9781-fec6dff32020",
+       "name": "Dossier 5398 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bb6e1d10-8253-4d02-9781-fec6dff32020"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:f1ebeffc-aa52-4e95-8453-bc6c63ee6575",
        "name": "Raadsvoorstel Verordening Jeugdwet gemeente Utrecht 2027",
@@ -1829,6 +1854,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:0636956c-1b79-4a51-bc0a-429c5db6be01",
+       "name": "Dossier 5176 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0636956c-1b79-4a51-bc0a-429c5db6be01"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:86773994-e835-48d1-b6f8-2b2eea1ece6b",
        "name": "Raadsvoorstel Ontwerp verklaring geen bedenkingen kavel D4-E4",
@@ -1886,6 +1916,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:be9c0f75-e464-48e5-a422-e7fb94fcacdf",
+       "name": "Dossier 5340 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=be9c0f75-e464-48e5-a422-e7fb94fcacdf"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955",
        "name": "Raadsvoorstel Verordening maatschappelijke ondersteuning 2027",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2c5ea523-f3f0-4c41-b1a5-5ab05e1fb955"
@@ -1918,6 +1953,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:284002b8-c04b-494f-9d71-f063aa05f7d1",
+       "name": "Dossier 5361 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=284002b8-c04b-494f-9d71-f063aa05f7d1"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:d9674a4f-9e88-4777-85f6-9a8ceb2dcfc0",
        "name": "Raadsvoorstel rekenkamerrapport 'Stof tot nadenken'",
@@ -1956,6 +1996,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:6a0ee0df-3c24-4847-b6b8-28213fd14bcd",
+       "name": "Dossier 5454 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=6a0ee0df-3c24-4847-b6b8-28213fd14bcd"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:b335f803-e5b9-41e6-9eed-b99ea4aeace9",
        "name": "Raadsbrief Uitslag vierjarige subsidies sociale basis 2027-2030",
@@ -2046,6 +2091,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:4365fe71-26e5-42e3-98e9-da2bed6e4da1",
+       "name": "Dossier 5417 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4365fe71-26e5-42e3-98e9-da2bed6e4da1"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:fe17b026-8292-47a5-a21f-f8d676efa395",
        "name": "Raadsbrief Programmatische Verkenning Stadseiland Zuid",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=fe17b026-8292-47a5-a21f-f8d676efa395"
@@ -2115,6 +2165,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:c21b1909-0ed5-414d-b59b-cde9b93961d9",
+       "name": "Dossier 5379 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c21b1909-0ed5-414d-b59b-cde9b93961d9"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:f7ad5e2c-6030-4946-b534-91a75027ae77",
        "name": "Raadsmemo Toezegging variant De Pagter Meernbrug",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f7ad5e2c-6030-4946-b534-91a75027ae77"
@@ -2142,6 +2197,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:4975e0e2-1b30-4934-aa10-7da03ce0437f",
+       "name": "Dossier 5463 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=4975e0e2-1b30-4934-aa10-7da03ce0437f"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:d3d23719-c714-46d9-9fb9-827e6bbe250c",
        "name": "Raadsbrief monitor mobiliteitsplan 2026 - cijfers over 2025",
@@ -2227,6 +2287,11 @@
      "agenda_items": [],
      "documents": [
       {
+       "id": "document:ibabs:gemeente:utrecht:939513a7-6a4d-405a-bad5-c3ca32d40be2",
+       "name": "Dossier 5456 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=939513a7-6a4d-405a-bad5-c3ca32d40be2"
+      },
+      {
        "id": "document:ibabs:gemeente:utrecht:a9aa3904-a5dc-41ec-8332-d236e647dab6",
        "name": "Beantwoording SV2026 nr 76 over Regeren is vooruit kijken - drinkwatertekort 2030",
        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=a9aa3904-a5dc-41ec-8332-d236e647dab6"
@@ -2239,6 +2304,11 @@
     {
      "agenda_items": [],
      "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:9a88913d-2502-47cc-bb9c-9bb12d693801",
+       "name": "Dossier 5457 voorblad.pdf",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9a88913d-2502-47cc-bb9c-9bb12d693801"
+      },
       {
        "id": "document:ibabs:gemeente:utrecht:1acc6d22-5ebf-47d2-99cf-0dc7da668d83",
        "name": "Beantwoording SV 2026 nr. 79 over de Europese natuurherstelverordening",
