@@ -232,8 +232,8 @@
         "size": 0
       },
       {
-        "name": "Verordening Jeugdwet Gemeente Utrecht 2027",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=28aeb7c1-14a6-4e79-bd60-38b5aa2f6aae",
+        "name": "Verordening Jeugdwet Gemeente Utrecht 2027 (november 2026)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=b08832ed-6a7e-445a-be42-05db5093b48d",
         "size": 0
       },
       {
@@ -242,13 +242,18 @@
         "size": 0
       },
       {
-        "name": "Verordening Jeugdwet 2027 (VERSIE MET WIJZIGINGEN ZICHTBAAR)",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=65640d2e-37af-46f5-8bd2-25032c9bfb3f",
+        "name": "Verordening Jeugdwet 2027 (VERSIE MET WIJZIGINGEN ZICHTBAAR) (november 2026)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ffadd72a-5037-4bd3-8001-3d9484910186",
+        "size": 0
+      },
+      {
+        "name": "MET WIJZIGINGEN  Verordening Jeugdwet Gemeente Utrecht 2027 (pagina 26)",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=609eb563-2738-4e97-b247-a4c07c5cbf0f",
         "size": 0
       },
       {
         "name": "Dossier 5398 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bb6e1d10-8253-4d02-9781-fec6dff32020",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=171daeeb-8abb-45d9-90c9-7cd2ac9ef555",
         "size": 0
       }
     ],
@@ -378,7 +383,7 @@
       },
       {
         "name": "Dossier 5468 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0c362552-ae9b-4fd7-94d8-bf757b1c556b",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=00e43c8f-4e3e-4e2f-b854-7e2a06a24da1",
         "size": 0
       }
     ],
@@ -524,7 +529,7 @@
       },
       {
         "name": "Dossier 5361 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=284002b8-c04b-494f-9d71-f063aa05f7d1",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f0143b22-df18-4877-a2ce-34eeb4eed9a3",
         "size": 0
       }
     ],
@@ -676,7 +681,7 @@
       },
       {
         "name": "Dossier 5176 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0636956c-1b79-4a51-bc0a-429c5db6be01",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8327318f-696b-4e76-91a4-09397cfaf5e3",
         "size": 0
       }
     ],
@@ -822,7 +827,7 @@
       },
       {
         "name": "Dossier 5511 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8d9e97c1-b5be-4993-b301-81a4af2ba9bb",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=584466ee-69e6-4a74-b517-c66c3bf8381f",
         "size": 0
       }
     ],
@@ -1083,7 +1088,7 @@
       },
       {
         "name": "Dossier 5382 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=1e6fc9e0-ba97-4ecc-81c1-a3f4b25fb3cc",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9f3e1f58-74b2-4117-bc13-9bc5a03f273b",
         "size": 0
       }
     ],
@@ -1343,7 +1348,7 @@
       },
       {
         "name": "Dossier 5340 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=be9c0f75-e464-48e5-a422-e7fb94fcacdf",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=35db28b4-b955-4a4a-bb14-aab4bf8d7375",
         "size": 0
       }
     ],
@@ -1473,7 +1478,7 @@
       },
       {
         "name": "Dossier 5368 voorblad.pdf",
-        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=bab5e0f4-0777-4012-92bd-33a6e3a34653",
+        "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=7b1b2bf7-c0cf-489a-b4e6-cd48069ae8fe",
         "size": 0
       }
     ],
