@@ -1,5 +1,5 @@
 {
- "cursor": "160049",
+ "cursor": "160246",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -3331,6 +3331,63 @@
    "name": "Raadsvoorstellen weekoverzicht",
    "start_date": "2026-09-06T00:00:00Z"
   },
+  "meeting:ibabs:gemeente:utrecht:e8ab7f54-64f2-48aa-ba8a-0299481966ab": {
+   "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:241792f8-dc1d-4839-86c0-33368cf88fe3",
+       "name": "Raadsvoorstel Beleidsregel omgevingsplan, Handboek omgevingskwaliteit Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=241792f8-dc1d-4839-86c0-33368cf88fe3"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:e955ca6d-c3fb-4de7-a2c2-5dcef116d297",
+       "name": "Beleidsregel omgevingsplan gemeente Utrecht, Handboek omgevingskwaliteit",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=e955ca6d-c3fb-4de7-a2c2-5dcef116d297"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:ee32a44a-5e22-40c0-a0fc-a3375249bb6d",
+       "name": "Handboek Omgevingskwaliteit 'Het karakter van Utrecht’",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=ee32a44a-5e22-40c0-a0fc-a3375249bb6d"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:0a57d7a3-6f01-4d12-8e53-0697d6daa6d2",
+       "name": "Verslag voor samenwerking met Utrechters Handboek omgevingskwaliteit",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0a57d7a3-6f01-4d12-8e53-0697d6daa6d2"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8670405c-5dd2-4903-807b-d0544ebd3788",
+       "name": "Samenwerkingsplan Handboek omgevingskwaliteit",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8670405c-5dd2-4903-807b-d0544ebd3788"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:48621936-ce90-497e-b724-cbc9162ef38b",
+     "is_heading": false,
+     "title": "Raadsvoorstel Beleidsregel omgevingsplan, Handboek omgevingskwaliteit Utrecht"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:9c7ba2f7-2df7-4788-b189-b59459cec9cf",
+       "name": "Raadsvoorstel Eindejaarswijziging Programmabegroting 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=9c7ba2f7-2df7-4788-b189-b59459cec9cf"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:f42b5f3d-5798-4588-8ddb-d624a7cdf4fb",
+       "name": "Eindejaarswijziging Programmabegroting 2026",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=f42b5f3d-5798-4588-8ddb-d624a7cdf4fb"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:4d1862e4-9829-4538-88a8-4c8183c71a91",
+     "is_heading": false,
+     "title": "Raadsvoorstel Eindejaarswijziging Programmabegroting 2026"
+    }
+   ],
+   "name": "Raadsvoorstellen weekoverzicht",
+   "start_date": "2026-11-29T00:00:00Z"
+  },
   "meeting:ibabs:gemeente:utrecht:f7cde6ea-38ae-4fcb-bf53-336ea39ef302": {
    "agenda": [
     {
@@ -3371,5 +3428,5 @@
    "start_date": "2026-09-20T00:00:00Z"
   }
  },
- "snapshot_at": "2026-11-19T14:42:40.677878+00:00"
+ "snapshot_at": "2026-11-26T15:49:19.231377+00:00"
 }
