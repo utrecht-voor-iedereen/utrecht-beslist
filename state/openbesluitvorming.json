@@ -1,5 +1,5 @@
 {
- "cursor": "160246",
+ "cursor": "160370",
  "meetings": {
   "meeting:ibabs:gemeente:utrecht:023515a7-cdfc-4eaf-a82e-e7a8ec29e829": {
    "agenda": [
@@ -3333,6 +3333,75 @@
   },
   "meeting:ibabs:gemeente:utrecht:e8ab7f54-64f2-48aa-ba8a-0299481966ab": {
    "agenda": [
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:28eaa020-22c6-408e-b59e-7ef9d0d779cd",
+       "name": "Raadsvoorstel Doorontwikkeling inwonersagendering en inwonersmotie (2026)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=28eaa020-22c6-408e-b59e-7ef9d0d779cd"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:c2cc0544-6dc2-48bd-b07e-54ee2c320be7",
+       "name": "DEF Verordening inwonersagendering en inwonersmotie gemeenteraad Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=c2cc0544-6dc2-48bd-b07e-54ee2c320be7"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8b85d788-e028-48d1-94c1-ebbc7f3df18c",
+       "name": "MW Verordening inwonersagendering en inwonersmotie gemeenteraad Utrecht (met wijzigingen)",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8b85d788-e028-48d1-94c1-ebbc7f3df18c"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:82ea56d0-f5c5-4a6b-9d4a-0558514b7e9f",
+       "name": "Toelichting bij Verordening inwonersagendering en inwonersmotie gemeenteraad Utrecht",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=82ea56d0-f5c5-4a6b-9d4a-0558514b7e9f"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:68d862b9-c488-4837-a5d3-a3e064683fad",
+       "name": "Onderzoeksresultaten 'Jouw contact met de lokale politiek'",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=68d862b9-c488-4837-a5d3-a3e064683fad"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:2fd621fe-32b4-4ee4-bfff-2342dd527066",
+       "name": "Informatie over de procedure petitie, inwonersagendering en inwonersmotie",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=2fd621fe-32b4-4ee4-bfff-2342dd527066"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:501c6fa3-8a37-4365-86ef-3735669d7a94",
+     "is_heading": false,
+     "title": "Raadsvoorstel Doorontwikkeling inwonersagendering en inwonersmotie (2026)"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:0f888708-69a4-4d9c-84d2-95e3e64c52b8",
+       "name": "Initiatiefvoorstel Utrecht uit de Kast",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=0f888708-69a4-4d9c-84d2-95e3e64c52b8"
+      },
+      {
+       "id": "document:ibabs:gemeente:utrecht:8c602986-e95e-4061-a8e5-274980a57774",
+       "name": "Actieplan Utrecht uit de kast",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=8c602986-e95e-4061-a8e5-274980a57774"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:5fc2afb4-d67a-470c-b3e2-e620cacce11c",
+     "is_heading": false,
+     "title": "Initiatiefvoorstel Utrecht uit de kast"
+    },
+    {
+     "agenda_items": [],
+     "documents": [
+      {
+       "id": "document:ibabs:gemeente:utrecht:3f98acbc-3233-4a06-9c98-a3a8785e6ce4",
+       "name": "Initiatiefvoorstel De inwoner aan het woord Praat met de Raad",
+       "url": "https://api1.ibabs.eu/publicdownload.aspx?site=Utrecht&id=3f98acbc-3233-4a06-9c98-a3a8785e6ce4"
+      }
+     ],
+     "id": "agenda_item:ibabs:gemeente:utrecht:e2c980df-cb83-4766-a3e2-a5300e6d0f7f",
+     "is_heading": false,
+     "title": "Initiatiefvoorstel De inwoner aan het woord: Praat met de Raad"
+    },
     {
      "agenda_items": [],
      "documents": [
